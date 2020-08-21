@@ -1,0 +1,19 @@
+---
+title: "Lesson Title"
+linktitle: "1: Link Title"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  lesson:
+    parent: Lessons
+    weight: 1
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+## Lesson
+
+This week please complete the **Introduction to R** course on [Data Camp](https://www.datacamp.com/) which includes

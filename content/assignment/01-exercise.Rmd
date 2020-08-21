@@ -1,0 +1,21 @@
+---
+title: "Exercise Title"
+linktitle: "1: Link Title"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  assignment:
+    parent: Exercises
+    weight: 1
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+## Exercise
+
+blah blah blah
+
+:::
