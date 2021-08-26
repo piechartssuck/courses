@@ -16,6 +16,3 @@ design:
 ---
 
 {{< courseinfo >}}
-
-
-{{< figure src="/img/palmer.png" alt="Palmer Penguins Jitter Plot" >}}

@@ -17,7 +17,9 @@ design:
     gradient_end: '#533747'
 
     # Text color (true=light or false=dark).
-    text_color_light: true
+    text_color_light: false
+
+    image: penguins.png
 
 cta_note:
   label: Fall 2020<br>Counseling & Learning Sciences<br>West Virginia University
