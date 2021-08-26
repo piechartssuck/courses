@@ -94,7 +94,7 @@ author: Abhik Roy
 course:
   number: "EDP 617"
   semester: "Spring 2021"
-  days: "Forever (for the next 15 weeks)"
+  days: "Forever (for the next 16 weeks)"
   time: "You pick!"
   location: "Online"
   dates: "January 19 - May 8"
@@ -105,13 +105,13 @@ course:
 instructor:
   name: Dr. Abhik Roy
   email: Abhik.Roy@mail.wvu.edu
-  url: "https://lshd.wvu.edu/faculty-staff/roy"
-  twitter: DrTheoreticalPE
+  url: "https://counselingandlearningsci.wvu.edu/faculty-staff/abhik-roy"
+  twitter: asocialdatasci
   github: piechartssuck
   office: "Allen Hall 504O"
   contact_policy: >-
     Slack is the best way to get in contact with me. Response times are typically much quicker than the standard 24-48 hours given to emails. Please remember that life is still chaotic at this time!
-  appointment_url: "https://calendly.com/nopiecharts/short30"
+  appointment_url: "https://calendly.com/nopiecharts/short15"
 
 school:
   name: Counseling & Learning Sciences
@@ -130,7 +130,7 @@ university:
 sharing_image: "course_info.png"
 
 # Twitter username (without @). Used when a visitor shares your site on Twitter.
-twitter: "piechartssuck"
+twitter: "asocialdatasci"
 
 
 ############################

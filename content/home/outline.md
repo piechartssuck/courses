@@ -18,4 +18,4 @@ design:
 {{< courseinfo >}}
 
 
-{{< figure src="/img/scatter.png" alt="Scatterish Plot" >}}
+{{< figure src="/img/palmer.png" alt="Palmer Penguins Jitter Plot" >}}

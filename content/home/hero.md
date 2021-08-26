@@ -23,4 +23,4 @@ cta_note:
   label: Fall 2020<br>Counseling & Learning Sciences<br>West Virginia University
 ---
 
-**An introductory course in all things program evaluation**
+**An introductory course in many things program evaluation**
