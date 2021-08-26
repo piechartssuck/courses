@@ -42,7 +42,7 @@ ggsave("penguins.pdf",
        height = 210,
        units = "mm")
 
-png(file = "publication choropleth facet map by state.png",
+png(file = "penguins.png",
     bg = "transparent",
     res = 300,
     width = 11.694, 
