@@ -37,11 +37,6 @@ penguins_plot <-
 
 penguins_plot
 
-ggsave("penguins.pdf",
-       width = 297, 
-       height = 210,
-       units = "mm")
-
 png(file = "penguins.png",
     bg = "transparent",
     res = 300,
