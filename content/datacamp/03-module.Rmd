@@ -1,0 +1,18 @@
+---
+title: "Evaluation Networks"
+linktitle: "Week 3: Evaluation Networks"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  datacamp:
+    parent: Modules
+    weight: 1
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+## Data Camp
+This week please begin the **Intermediate R** course on [Data Camp](https://www.datacamp.com/){target="_blank"}. 
