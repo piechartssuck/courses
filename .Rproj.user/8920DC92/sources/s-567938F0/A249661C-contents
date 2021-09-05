@@ -1,0 +1,4 @@
+# Set the working directory as source ----
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+
+pagedown::chrome_print("Intro to PE.Rmd")
