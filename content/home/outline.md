@@ -16,6 +16,10 @@ design:
 ---
 
 {{< courseinfo >}}
+<<<<<<< HEAD
 
 
 {{< figure src="/img/gapminder_plot.png" alt="Gapminder Plot" >}}
+=======
+<!-- {{< figure src="/img/scatter.png" alt="Cascading curves" >}} -->
+>>>>>>> 545caff0 (edp693g)

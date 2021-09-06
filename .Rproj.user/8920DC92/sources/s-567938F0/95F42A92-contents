@@ -51,10 +51,19 @@ wk_post <- tibble(
             "Begin the *Intermediate R* module on Data Camp",
             "Watch and follow walkthroughs on the converting from and edgelist to adjacency matrix and back again"),
 
+<<<<<<< HEAD:.Rproj.user/8920DC92/sources/s-567938F0/95F42A92-contents
 Location = c("[Link](/materials/03-walkthrough/#what-is-program-evaluation){target='_blank'}",
              "[Link](/readings/03-reading/#literature)",
              "[Link](https://www.datacamp.com/){target='_blank'}",
              "[Link](/materials/03-walkthrough/#snippets){target='_blank'}")
+=======
+Location = c("[Link](/syllabus/)",
+             "[Link](/tasks/01-tasks/#class-software)",
+             "[Link](/readings/01-reading/#read-things)",
+             "[Link](/tasks/01-tasks/#class-slack-account-access)",
+             "[Link](/tasks/01-tasks/#post)",
+             "[Link](https://www.datacamp.com/){target='_blank'}")
+>>>>>>> 545caff0 (edp693g):content/due/01-due.Rmd
 )
 ```
 

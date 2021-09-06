@@ -94,9 +94,15 @@ author: Abhik Roy
 instructor:
   name: Dr. Abhik Roy
   email: Abhik.Roy@mail.wvu.edu
+<<<<<<< HEAD
   url: "https://lshd.wvu.edu/faculty-staff/roy"
   twitter: DrTheoreticalPE
   github: piechartssuck
+=======
+  url: "https://counselingandlearningsci.wvu.edu/faculty-staff/abhik-roy"
+  twitter: asocialdatasci
+  github: asocialdatascientist
+>>>>>>> 545caff0 (edp693g)
   office: "Allen Hall 504O"
   contact_policy: >-
     Slack is the best way to get in contact with me. Response times are typically much quicker than the standard 24-48 hours given to emails. Please remember that life is somewhat chaotic at this time!
