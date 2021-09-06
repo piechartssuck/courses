@@ -8,49 +8,70 @@ main:
   - name: Readings
     url: /readings/
     weight: 3
-  - name: Lessons
-    url: /lesson/
+  - name: Data Camp
+    url: /datacamp/
     weight: 4
-  - name: Examples
-    url: /example/
+  - name: Materials
+    url: /materials/
     weight: 5
-  - name: Assignments
-    url: /assignment/
+  - name: Tasks
+    url: /tasks/
     weight: 6
-  - name: Resources
-    url: /resource/
+  - name: To Do List
+    url: /due/
     weight: 7
-  - name: '<i class="fab fa-slack"></i>'
-    url: "https://YEARedpXXX.slack.com"
+  - name: Resources
+    url: /resources/
     weight: 8
+  - name: Professor
+    url: /professor/
+    weight: 9
+  - name: '<i class="fab fa-slack"></i>'
+    url: "https://2021edp693g.slack.com"
+    weight: 10
   - name: '<i class="fab fa-r-project"></i>'
     url: "https://rstudio.cloud/"
-    weight: 9
+    weight: 11
 
-content:
+readings:
   - name: Overview
     weight: 1
-  - name: Course content
+  - name: Print
     weight: 2
-lesson:
+datacamp:
   - name: Overview
     weight: 1
-  - name: Lessons
+  - name: Modules
     weight: 2
-example:
+materials:
   - name: Overview
     weight: 1
-  - name: Examples
+  - name: Content
     weight: 2
-assignment:
-  - name: Overview
-    weight: 1
-  - name: Projects
-    weight: 2
-  - name: Exercises
+  - name: Walkthroughs
     weight: 3
-resource:
-  - name: Resources
+  - name: Examples
+    weight: 4
+tasks:
+  - name: Overview
+    weight: 1
+  - name: R Projects
+    weight: 2
+  - name: Final Proposal
+    weight: 3
+  - name: Final Project
+    weight: 4
+due:
+  - name: Overview
+    weight: 1
+  - name: Short-term
+    weight: 2
+  - name: Long-term
+    weight: 3
+resources:
+  - name: Overview
     weight: 1
   - name: Guides
     weight: 2
+  - name: References
+    weight: 3

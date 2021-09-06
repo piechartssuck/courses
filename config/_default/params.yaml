@@ -37,7 +37,7 @@ font_size: "L"
 site_type: "Course"
 
 # Description for social sharing and search engines. If undefined, superuser role is used in place.
-description: "SHORT COURSE DESCRIPTION"
+description: "A foundational course in social network analysis and its applications within the data sciences"
 
 # Display a logo in navigation bar rather than title (optional).
 #   To enable, place an image in `static/img/` and reference its filename below. To disable, set the value to "".
@@ -74,7 +74,7 @@ privacy_pack: false
 # Enable visitors to edit pages?
 #   `repo` defines the repository URL. `editable` defines which page types can be edited.
 edit_page:
-  repo_url: 'https://github.com/piechartssuck/theoreticalphysed.com'
+  repo_url: 'https://github.com/asocialdatascientist/Courses/edp693g'
   content_dir: ''
   repo_branch: master
   editable:
@@ -91,41 +91,35 @@ edit_page:
 
 author: Abhik Roy
 
+course:
+  number: "EDP 693g"
+  semester: "Spring 2021"
+  days: "Forever aka for the next 16 weeks"
+  time: "Anytime"
+  location: "Everywhere"
+  dates: "August 18 - December 17"
+  github: asocialdatascientist/Courses/tree/edp693g
+  copyrightYear: "2021"
+  slack: "https://2021edp693g.slack.com"
+
 instructor:
   name: Dr. Abhik Roy
   email: Abhik.Roy@mail.wvu.edu
-<<<<<<< HEAD
-  url: "https://lshd.wvu.edu/faculty-staff/roy"
-  twitter: DrTheoreticalPE
-  github: piechartssuck
-=======
   url: "https://counselingandlearningsci.wvu.edu/faculty-staff/abhik-roy"
   twitter: asocialdatasci
   github: asocialdatascientist
->>>>>>> 545caff0 (edp693g)
   office: "Allen Hall 504O"
   contact_policy: >-
-    Slack is the best way to get in contact with me. Response times are typically much quicker than the standard 24-48 hours given to emails. Please remember that life is somewhat chaotic at this time!
+    Slack is the best way to get in contact with me. Response times are typically much quicker than the standard 24-48 hours given to emails. Please remember that life is still chaotic at this time!
   appointment_url: "https://calendly.com/nopiecharts/short30"
 
-course:
-  number: "EDP THINGS"
-  semester: "TERM WHATNOT"
-  days: "Forever (for the next XXX weeks)"
-  time: "You pick!"
-  location: "Online"
-  dates: "DATES"
-  github: "site"
-  copyrightYear: "YEAR"
-  slack: "https://YEARedpXXX.slack.com"
+school:
+  name: Counseling & Learning Sciences
+  url: "https://counselingandlearningsci.wvu.edu/"
 
 university:
   name: West Virginia University
   url: "https://www.wvu.edu"
-
-school:
-  name: Counseling & Learning Sciences
-  url: "https://lshd.wvu.edu/"
 
 
 ############################
@@ -133,10 +127,10 @@ school:
 ############################
 
 # Default image for social sharing and search engines. Place image in `static/img/` folder and specify image name here.
-sharing_image: "social-image.png"
+sharing_image: "course_info.png"
 
 # Twitter username (without @). Used when a visitor shares your site on Twitter.
-twitter: "piechartssuck"
+twitter: "asocialdatascientist"
 
 
 ############################

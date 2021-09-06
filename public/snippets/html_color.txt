@@ -1,5 +1,0 @@
-<span style="font-size:16px;">
-<span style="color:#d9534f;">
-Good
-</span>
-</span>

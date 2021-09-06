@@ -1,0 +1,137 @@
+---
+title: "Evaluation Networks"
+linktitle: "Week 3: Evaluation Networks"
+menu:
+  materials:
+    parent: Walkthroughs
+    weight: 3
+type: docs
+weight: 1
+output:
+  blogdown::html_page:
+    toc: true
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+<script src="/rmarkdown-libs/font-awesome/js/script.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#what-is-program-evaluation">What is Program Evaluation?</a></li>
+<li><a href="#snippets">Snippets!</a>
+<ul>
+<li><a href="#script">Script</a></li>
+<li><a href="#walkthrough">Walkthrough</a></li>
+</ul></li>
+</ul>
+</div>
+
+<style>
+.hvr-sweep-to-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+}
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #175676;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+</style>
+<div id="what-is-program-evaluation" class="section level3">
+<h3>What is Program Evaluation?</h3>
+<ul>
+<li><p>Directions: Click on the presentation itself and then you may</p>
+<ul>
+<li>Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.</li>
+<li>Press the letter <strong>O</strong> at any point to see see a tile view of the slideshow.</li>
+<li>Use this <a href="/slides/Intro%20to%20PE/Intro-to-PE.html" target="_blank">link</a> to view a larger version of slideshow in a new window.</li>
+</ul></li>
+</ul>
+<iframe src="/slides/Intro to PE/Intro-to-PE.html" width="672" height="400px">
+</iframe>
+<p>You can download</p>
+<ul>
+<li>a <a href="/slides//Intro%20to%20PE/Intro-to-PE.pdf" target="_blank">PDF</a> of the presentation.</li>
+</ul>
+</div>
+<div id="snippets" class="section level2">
+<h2>Snippets!</h2>
+<p>First please go ahead and down a copy of the script which will which you can use to follow along.</p>
+<div id="script" class="section level3">
+<h3>Script</h3>
+<a href="data:application/zip;base64,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" download="Load a csv Walkthrough.zip">
+<button class="btn btn-default hvr-sweep-to-left"><i class="fa fa-save"></i> Download the Scripts and Files</button>
+</a>
+</div>
+<div id="walkthrough" class="section level3">
+<h3>Walkthrough</h3>
+<div id="part-i-introduction-and-outline-of-some-utilizable-formats" class="section level4">
+<h4>Part I: Introduction and Outline of (Some) Utilizable Formats</h4>
+<center>
+<iframe class="smart-player-embed-container-iframe" id="embeddedSmartPlayerInstance" src="/walkthroughs/videos/loadacsv/1intro/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance" width="640" height="360" frameborder="0" scrolling="no" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen>
+</iframe>
+</center>
+</div>
+<div id="part-ii-graph-an-edge-list" class="section level4">
+<h4>Part II: Graph an Edge List</h4>
+<center>
+<iframe class="smart-player-embed-container-iframe" id="embeddedSmartPlayerInstance" src="/walkthroughs/videos/loadacsv/2edgelist/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance" width="640" height="360" frameborder="0" scrolling="no" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen>
+</iframe>
+</center>
+</div>
+<div id="part-iii-convert-an-edge-list-to-an-adjacency-matrix" class="section level4">
+<h4>Part III: Convert an Edge List to an Adjacency Matrix</h4>
+<center>
+<iframe class="smart-player-embed-container-iframe" id="embeddedSmartPlayerInstance" src="/walkthroughs/videos/loadacsv/3convertto/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance" width="640" height="360" frameborder="0" scrolling="no" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen>
+</iframe>
+</center>
+</div>
+<div id="part-iv-graph-an-adjacency-matrix" class="section level4">
+<h4>Part IV: Graph an Adjacency Matrix</h4>
+<center>
+<iframe class="smart-player-embed-container-iframe" id="embeddedSmartPlayerInstance" src="/walkthroughs/videos/loadacsv/4adjacency/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance" width="640" height="360" frameborder="0" scrolling="no" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen>
+</iframe>
+</center>
+</div>
+<div id="part-v-convert-an-adjacency-matrix-to-an-edge-list" class="section level4">
+<h4>Part V: Convert an Adjacency Matrix to an Edge List</h4>
+<center>
+<iframe class="smart-player-embed-container-iframe" id="embeddedSmartPlayerInstance" src="/walkthroughs/videos/loadacsv/5convertfrom/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance" width="640" height="360" frameborder="0" scrolling="no" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen>
+</iframe>
+</center>
+</div>
+</div>
+</div>

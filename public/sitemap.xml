@@ -1,123 +1,99 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
-    <loc>/resource/</loc>
+    <loc>https://www.theoreticalphysed.com/resource/</loc>
     <lastmod>2020-07-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/assignment/01-exercise/</loc>
-  </url>
-  
-  <url>
-    <loc>/example/01-example/</loc>
-  </url>
-  
-  <url>
-    <loc>/lesson/01-lesson/</loc>
-  </url>
-  
-  <url>
-    <loc>/resource/citations/</loc>
-  </url>
-  
-  <url>
-    <loc>/assignment/</loc>
-  </url>
-  
-  <url>
-    <loc>/example/</loc>
-  </url>
-  
-  <url>
-    <loc>/lesson/</loc>
-  </url>
-  
-  <url>
-    <loc>/readings/</loc>
-  </url>
-  
-  <url>
-    <loc>/resource/data/</loc>
-  </url>
-  
-  <url>
-    <loc>/resource/design/</loc>
-  </url>
-  
-  <url>
-    <loc>/resource/install/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/assignment/01-exercise/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/example/01-example/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/lesson/01-lesson/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/datacamp/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/materials/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/readings/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/resource/citations/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/assignment/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/example/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/lesson/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/due/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/datacamp/01-module/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/due/01-due/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/readings/01-reading/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/datacamp/02-module/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/due/02-due/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/materials/02-walkthrough/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/readings/02-reading/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/datacamp/03-module/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/due/03-due/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/materials/03-walkthrough/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/readings/03-reading/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/resource/data/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/resource/design/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/resource/install/</loc>
     <lastmod>2020-07-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/resource/markdown/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/resources/install/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/resource/markdown/</loc>
     <lastmod>2020-07-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/resource/r/</loc>
-  </url>
-  
-  <url>
-    <loc>/resource/rmarkdown/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/resource/r/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/resource/rmarkdown/</loc>
     <lastmod>2020-07-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/resource/style/</loc>
-  </url>
-  
-  <url>
-    <loc>/resource/visualization/</loc>
-  </url>
-  
-  <url>
-    <loc>/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/resource/style/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/resource/visualization/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/</loc>
     <lastmod>2020-07-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/resource/unzipping/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/resource/unzipping/</loc>
     <lastmod>2020-05-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/authors/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/categories/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/author/dr.-abhik-roy/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/author/dr.-abhik-roy/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/professor/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/publication_types/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/resources/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/schedule/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/syllabus/</loc>
+  </url><url>
+    <loc>https://www.theoreticalphysed.com/tags/</loc>
   </url>
-  
-  <url>
-    <loc>/readings/01-content/</loc>
-  </url>
-  
-  <url>
-    <loc>/authors/</loc>
-  </url>
-  
-  <url>
-    <loc>/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>/author/dr.-abhik-roy/</loc>
-  </url>
-  
-  <url>
-    <loc>/author/dr.-abhik-roy/</loc>
-  </url>
-  
-  <url>
-    <loc>/publication_types/</loc>
-  </url>
-  
-  <url>
-    <loc>/schedule/</loc>
-  </url>
-  
-  <url>
-    <loc>/syllabus/</loc>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-  </url>
-  
 </urlset>
