@@ -1,0 +1,88 @@
+---
+title: "The Basics"
+linktitle: "Week 1: The Basics"
+menu:
+  tasks:
+    parent: Homeworks
+    weight: 1
+type: docs
+weight: 2
+editor_options: 
+  chunk_output_type: console
+---
+
+<style>
+  .hvr-sweep-to-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+  }
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #175676;
+    -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+</style>
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE}
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+## Class Related
+
+### Slack Account Access
+Please sign up for Slack!
+
+1. You will receive an invite for the class [Slack](2021edp693g.slack.com){target="_blank"} account
+2. Register if you already do not have an account. Note that you do not have to use your WVU account, but its not a bad idea.
+3. Head to to the channel `#introduce-yourself` and well introduce yourself by tell everyone about yourself, what you hope to achieve out of this course, and something about you that really defines who you are. For example, here is something about me:<br>
+<br>
+*I teach data visualization BUT I am also about 40% colorblind^[You just need to know a little math to distinguish colors without ever seeing them]*<br><br>
+4. (optional) Provide a picture if you are willing. I am a very visual person as are many other people so pictures help a great deal. However, you are not mandated to do so!
+
+### Software with a Choice
+Decide whether to sign up for [RStudio.cloud](/resources/install/#rstudio-cloud){target="_blank"} or install a [local copy](/resources/install/#rstudio-on-your-computer){target="_blank"}.
+
+## Postings
+People who conduct social network analysis (SNA) are often tasked to describe complex methodologies applied to highly connected data and any corresponding results in layman's terms. This is further compounded by the idea that networks are neither quantitative nor quantitative by design which makes it fairly unique. In fact, to steal a term from Physics, a given network constructed only of data is in **methodological superposition**, in that until a measurement is taken it is both quantitative and qualitative at the same time and we don't have to consider if a cat is alive or dead or both. However unlike physics we can get information about both.^[Here's an example that makes me feel old. Remember [sentence diagrams](https://en.wikipedia.org/wiki/Sentence_diagram){target="_blank"}? The outcomes from these are social networks and variants now form a basis for many text mining approaches. We'll actually explore some of these later in the term.]
+
+In the spirit of visualizations, the purpose of constructing social networks is to picture the complexity of relationships and to convey information about measures taken on those relationships. And that brings us to your first task:
+
+Please create a computer generated or a hand drawn image of the *purpose(s) of social network analysis* ***without using any additional explanation or descriptions***^[You can label the network itself with text, but please keep it to a minimum.] and post it on Slack on the [#pictures-of-sna](https://2021edp693g.slack.com/archives/C02C22SUKED){target="_blank"} channel. 
+
+While there are no right or wrong answers here, submissions that are able to describing the purpose(s) of SNAs visually will earn additional extra credit points that can be used on anything except the final exam. So please try to be creative, put some thought into it and maybe you'll start the term off with up to five (5) extra credit points! When is the last tine you started a class in the blue, if ever?

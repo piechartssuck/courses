@@ -9261,7 +9261,7 @@ footer p {
   line-height: 1.3; }
 
 .fake-header-table, td.mid-table-header {
-  font-family: "Fira Sans Condensed", sans-serif;
+  font-family: "Jost", sans-serif;
   font-weight: 700; }
 
 .fake-header-table {
@@ -9359,6 +9359,13 @@ div.warning:before {
   height: auto;
   max-width: 100%;
   margin: 0 !important; }
+
+li.menu-item {
+  margin: 0 0 3px 0; }
+
+td a i {
+  padding-left: 3px;
+  padding-right: 3px; }
 
 /* Space after plotly widgets */
 .widgetframe {

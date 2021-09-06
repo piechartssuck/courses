@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Authors | EDP 123</title>
-    <link>https://www.theoreticalphysed.com/authors/</link>
-      <atom:link href="https://www.theoreticalphysed.com/authors/index.xml" rel="self" type="application/rss+xml" />
+    <title>Authors | Social Network Analysis</title>
+    <link>https://edp693g.asocialdatascientist.com/authors/</link>
+      <atom:link href="https://edp693g.asocialdatascientist.com/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>https://www.theoreticalphysed.com/img/course_info.png</url>
+      <url>https://edp693g.asocialdatascientist.com/img/course_info.png</url>
       <title>Authors</title>
-      <link>https://www.theoreticalphysed.com/authors/</link>
+      <link>https://edp693g.asocialdatascientist.com/authors/</link>
     </image>
     
   </channel>

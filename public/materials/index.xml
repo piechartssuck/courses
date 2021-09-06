@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>About the Materials | EDP 123</title>
-    <link>https://www.theoreticalphysed.com/materials/</link>
-      <atom:link href="https://www.theoreticalphysed.com/materials/index.xml" rel="self" type="application/rss+xml" />
+    <title>About the Materials | Social Network Analysis</title>
+    <link>https://edp693g.asocialdatascientist.com/materials/</link>
+      <atom:link href="https://edp693g.asocialdatascientist.com/materials/index.xml" rel="self" type="application/rss+xml" />
     <description>About the Materials</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>https://www.theoreticalphysed.com/img/course_info.png</url>
+      <url>https://edp693g.asocialdatascientist.com/img/course_info.png</url>
       <title>About the Materials</title>
-      <link>https://www.theoreticalphysed.com/materials/</link>
+      <link>https://edp693g.asocialdatascientist.com/materials/</link>
     </image>
     
     <item>
       <title>The Social Network</title>
-      <link>https://www.theoreticalphysed.com/materials/02-walkthrough/</link>
+      <link>https://edp693g.asocialdatascientist.com/materials/02-walkthrough/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.theoreticalphysed.com/materials/02-walkthrough/</guid>
+      <guid>https://edp693g.asocialdatascientist.com/materials/02-walkthrough/</guid>
       <description>
-&lt;script src=&#34;https://www.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://www.theoreticalphysed.com/rmarkdown-libs/font-awesome/js/script.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp693g.asocialdatascientist.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp693g.asocialdatascientist.com/rmarkdown-libs/font-awesome/js/script.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -88,7 +88,7 @@
 &lt;div id=&#34;walkthrough&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Walkthrough&lt;/h3&gt;
 &lt;center&gt;
-&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;https://www.theoreticalphysed.com/walkthroughs/videos/plotagraph/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
+&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;https://edp693g.asocialdatascientist.com/walkthroughs/videos/plotagraph/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
 &lt;/iframe&gt;
 &lt;/center&gt;
 &lt;/div&gt;
@@ -98,12 +98,12 @@
     
     <item>
       <title>Evaluation Networks</title>
-      <link>https://www.theoreticalphysed.com/materials/03-walkthrough/</link>
+      <link>https://edp693g.asocialdatascientist.com/materials/03-walkthrough/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.theoreticalphysed.com/materials/03-walkthrough/</guid>
+      <guid>https://edp693g.asocialdatascientist.com/materials/03-walkthrough/</guid>
       <description>
-&lt;script src=&#34;https://www.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://www.theoreticalphysed.com/rmarkdown-libs/font-awesome/js/script.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp693g.asocialdatascientist.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp693g.asocialdatascientist.com/rmarkdown-libs/font-awesome/js/script.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -167,14 +167,14 @@
 &lt;ul&gt;
 &lt;li&gt;Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.&lt;/li&gt;
 &lt;li&gt;Press the letter &lt;strong&gt;O&lt;/strong&gt; at any point to see see a tile view of the slideshow.&lt;/li&gt;
-&lt;li&gt;Use this &lt;a href=&#34;https://www.theoreticalphysed.com/slides/Intro%20to%20PE/Intro-to-PE.html&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt; to view a larger version of slideshow in a new window.&lt;/li&gt;
+&lt;li&gt;Use this &lt;a href=&#34;https://edp693g.asocialdatascientist.com/slides/Intro%20to%20PE/Intro-to-PE.html&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt; to view a larger version of slideshow in a new window.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;iframe src=&#34;https://www.theoreticalphysed.com/slides/Intro to PE/Intro-to-PE.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;
+&lt;iframe src=&#34;https://edp693g.asocialdatascientist.com/slides/Intro to PE/Intro-to-PE.html&#34; width=&#34;672&#34; height=&#34;400px&#34;&gt;
 &lt;/iframe&gt;
 &lt;p&gt;You can download&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;a &lt;a href=&#34;https://www.theoreticalphysed.com/slides//Intro%20to%20PE/Intro-to-PE.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; of the presentation.&lt;/li&gt;
+&lt;li&gt;a &lt;a href=&#34;https://edp693g.asocialdatascientist.com/slides//Intro%20to%20PE/Intro-to-PE.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; of the presentation.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;snippets&#34; class=&#34;section level2&#34;&gt;
@@ -191,35 +191,35 @@
 &lt;div id=&#34;part-i-introduction-and-outline-of-some-utilizable-formats&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Part I: Introduction and Outline of (Some) Utilizable Formats&lt;/h4&gt;
 &lt;center&gt;
-&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;https://www.theoreticalphysed.com/walkthroughs/videos/loadacsv/1intro/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
+&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;https://edp693g.asocialdatascientist.com/walkthroughs/videos/loadacsv/1intro/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
 &lt;/iframe&gt;
 &lt;/center&gt;
 &lt;/div&gt;
 &lt;div id=&#34;part-ii-graph-an-edge-list&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Part II: Graph an Edge List&lt;/h4&gt;
 &lt;center&gt;
-&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;https://www.theoreticalphysed.com/walkthroughs/videos/loadacsv/2edgelist/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
+&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;https://edp693g.asocialdatascientist.com/walkthroughs/videos/loadacsv/2edgelist/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
 &lt;/iframe&gt;
 &lt;/center&gt;
 &lt;/div&gt;
 &lt;div id=&#34;part-iii-convert-an-edge-list-to-an-adjacency-matrix&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Part III: Convert an Edge List to an Adjacency Matrix&lt;/h4&gt;
 &lt;center&gt;
-&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;https://www.theoreticalphysed.com/walkthroughs/videos/loadacsv/3convertto/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
+&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;https://edp693g.asocialdatascientist.com/walkthroughs/videos/loadacsv/3convertto/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
 &lt;/iframe&gt;
 &lt;/center&gt;
 &lt;/div&gt;
 &lt;div id=&#34;part-iv-graph-an-adjacency-matrix&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Part IV: Graph an Adjacency Matrix&lt;/h4&gt;
 &lt;center&gt;
-&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;https://www.theoreticalphysed.com/walkthroughs/videos/loadacsv/4adjacency/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
+&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;https://edp693g.asocialdatascientist.com/walkthroughs/videos/loadacsv/4adjacency/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
 &lt;/iframe&gt;
 &lt;/center&gt;
 &lt;/div&gt;
 &lt;div id=&#34;part-v-convert-an-adjacency-matrix-to-an-edge-list&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Part V: Convert an Adjacency Matrix to an Edge List&lt;/h4&gt;
 &lt;center&gt;
-&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;https://www.theoreticalphysed.com/walkthroughs/videos/loadacsv/5convertfrom/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
+&lt;iframe class=&#34;smart-player-embed-container-iframe&#34; id=&#34;embeddedSmartPlayerInstance&#34; src=&#34;https://edp693g.asocialdatascientist.com/walkthroughs/videos/loadacsv/5convertfrom/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;
 &lt;/iframe&gt;
 &lt;/center&gt;
 &lt;/div&gt;

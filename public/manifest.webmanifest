@@ -1,15 +1,15 @@
 {
-  "name": "EDP 123",
-  "short_name": "EDP 123",
+  "name": "Social Network Analysis",
+  "short_name": "Social Network Analysis",
   "lang": "",
   "theme_color": "#4974a5",
   "background_color": "#4974a5",
   "icons": [{
-    "src": "/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png",
+    "src": "/images/icon_hu29515218505dc85cf61f89ace5487d22_195246_192x192_fill_lanczos_center_3.png",
     "sizes": "192x192",
     "type": "image/png"
     }, {
-    "src": "/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png",
+    "src": "/images/icon_hu29515218505dc85cf61f89ace5487d22_195246_512x512_fill_lanczos_center_3.png",
     "sizes": "512x512",
     "type": "image/png"
      }],

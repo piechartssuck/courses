@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>About the Readings | EDP 123</title>
-    <link>https://www.theoreticalphysed.com/readings/</link>
-      <atom:link href="https://www.theoreticalphysed.com/readings/index.xml" rel="self" type="application/rss+xml" />
+    <title>About the Readings | Social Network Analysis</title>
+    <link>https://edp693g.asocialdatascientist.com/readings/</link>
+      <atom:link href="https://edp693g.asocialdatascientist.com/readings/index.xml" rel="self" type="application/rss+xml" />
     <description>About the Readings</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>https://www.theoreticalphysed.com/img/course_info.png</url>
+      <url>https://edp693g.asocialdatascientist.com/img/course_info.png</url>
       <title>About the Readings</title>
-      <link>https://www.theoreticalphysed.com/readings/</link>
+      <link>https://edp693g.asocialdatascientist.com/readings/</link>
     </image>
     
     <item>
       <title>The Basics</title>
-      <link>https://www.theoreticalphysed.com/readings/01-reading/</link>
+      <link>https://edp693g.asocialdatascientist.com/readings/01-reading/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.theoreticalphysed.com/readings/01-reading/</guid>
+      <guid>https://edp693g.asocialdatascientist.com/readings/01-reading/</guid>
       <description>
-&lt;script src=&#34;https://www.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://www.theoreticalphysed.com/rmarkdown-libs/font-awesome/js/script.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://www.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://www.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp693g.asocialdatascientist.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp693g.asocialdatascientist.com/rmarkdown-libs/font-awesome/js/script.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp693g.asocialdatascientist.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp693g.asocialdatascientist.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -83,9 +83,9 @@
 &lt;p&gt;First things first:
 &lt;br&gt;
 &lt;br&gt;
-&lt;iframe src=&#34;https://www.theoreticalphysed.com/videos/snoop_syllabus.mp4&#34; width=&#34;320&#34; height=&#34;480&#34; frameBorder=&#34;0&#34;&gt;Read the syllabus.&lt;/iframe&gt;
+&lt;iframe src=&#34;https://edp693g.asocialdatascientist.com/videos/snoop_syllabus.mp4&#34; width=&#34;320&#34; height=&#34;480&#34; frameBorder=&#34;0&#34;&gt;Read the syllabus.&lt;/iframe&gt;
 &lt;br&gt;
-&lt;br&gt;Far be it from us to disagree with Snoop, so you should probably go read the &lt;a href=&#34;https://www.theoreticalphysed.com/syllabus/&#34;&gt;syllabus&lt;/a&gt; as soon as possible! While you’re there, take a look the other areas as well, in particular the &lt;a href=&#34;https://www.theoreticalphysed.com/readings/&#34;&gt;readings&lt;/a&gt;, &lt;a href=&#34;https://www.theoreticalphysed.com/datacamp/&#34;&gt;data camp&lt;/a&gt;, &lt;a href=&#34;https://www.theoreticalphysed.com/materials/&#34;&gt;materials&lt;/a&gt;, &lt;a href=&#34;https://www.theoreticalphysed.com/tasks/&#34;&gt;tasks&lt;/a&gt;, &lt;a href=&#34;https://www.theoreticalphysed.com/due/&#34;&gt;to do list&lt;/a&gt;, and &lt;a href=&#34;https://www.theoreticalphysed.com/resources/&#34;&gt;resources&lt;/a&gt; pages.&lt;/p&gt;
+&lt;br&gt;Far be it from us to disagree with Snoop, so you should probably go read the &lt;a href=&#34;https://edp693g.asocialdatascientist.com/syllabus/&#34;&gt;syllabus&lt;/a&gt; as soon as possible! While you’re there, take a look the other areas as well, in particular the &lt;a href=&#34;https://edp693g.asocialdatascientist.com/readings/&#34;&gt;readings&lt;/a&gt;, &lt;a href=&#34;https://edp693g.asocialdatascientist.com/datacamp/&#34;&gt;data camp&lt;/a&gt;, &lt;a href=&#34;https://edp693g.asocialdatascientist.com/materials/&#34;&gt;materials&lt;/a&gt;, &lt;a href=&#34;https://edp693g.asocialdatascientist.com/tasks/&#34;&gt;tasks&lt;/a&gt;, &lt;a href=&#34;https://edp693g.asocialdatascientist.com/due/&#34;&gt;to do list&lt;/a&gt;, and &lt;a href=&#34;https://edp693g.asocialdatascientist.com/resources/&#34;&gt;resources&lt;/a&gt; pages.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;literature&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Literature&lt;/h2&gt;
@@ -176,14 +176,14 @@ Scott, J. (2017) The History of Social Network Analysis. &lt;em&gt;Social networ
     
     <item>
       <title>The Social Network</title>
-      <link>https://www.theoreticalphysed.com/readings/02-reading/</link>
+      <link>https://edp693g.asocialdatascientist.com/readings/02-reading/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.theoreticalphysed.com/readings/02-reading/</guid>
+      <guid>https://edp693g.asocialdatascientist.com/readings/02-reading/</guid>
       <description>
-&lt;script src=&#34;https://www.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://www.theoreticalphysed.com/rmarkdown-libs/font-awesome/js/script.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://www.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://www.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp693g.asocialdatascientist.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp693g.asocialdatascientist.com/rmarkdown-libs/font-awesome/js/script.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp693g.asocialdatascientist.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp693g.asocialdatascientist.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 
 &lt;style&gt;
@@ -312,14 +312,14 @@ Scott, J. (2017) The History of Social Network Analysis. &lt;em&gt;Social networ
     
     <item>
       <title>Evaluation Networks</title>
-      <link>https://www.theoreticalphysed.com/readings/03-reading/</link>
+      <link>https://edp693g.asocialdatascientist.com/readings/03-reading/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.theoreticalphysed.com/readings/03-reading/</guid>
+      <guid>https://edp693g.asocialdatascientist.com/readings/03-reading/</guid>
       <description>
-&lt;script src=&#34;https://www.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://www.theoreticalphysed.com/rmarkdown-libs/font-awesome/js/script.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://www.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://www.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp693g.asocialdatascientist.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp693g.asocialdatascientist.com/rmarkdown-libs/font-awesome/js/script.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp693g.asocialdatascientist.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp693g.asocialdatascientist.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 
 &lt;style&gt;

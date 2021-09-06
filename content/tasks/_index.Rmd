@@ -1,0 +1,38 @@
+---
+title: "About the Tasks"
+menu:
+  tasks:
+    parent: Overview
+    weight: 1
+type: docs
+weight: 1
+---
+
+You will get the most of out this class if you:
+
+1. engage with the readings and materials,
+2. use R to complete any [data wrangling](https://en.wikipedia.org/wiki/Data_wrangling){target="_blank"} or analysis,
+3. ask for help immediately after giving **it** (whatever it is) a good faith effort, and
+4. keep an open and honest line of communication with me and your peers if possible.
+
+Below is a list of items considered to be class related tasks.
+
+## R Training
+Details on training modules can be found on the [Data Camp](/datacamp/) page.
+
+## R Projects
+You will need to complete two R projects to be submitted in [Rmarkdown](/resources/rmarkdown/). Details about these projects will post approximately three weeks before the due date.
+
+## R Tasks
+On most weeks, you will be asked to submit an R related task. These must be turned in by Wednesday at 11:59 PM on the [ecampus](https://ecampus.wvu.edu/){target="_blank"} Submission Portal.
+
+## Meetings
+Starting after the fourth week, we will need to meet on a biweekly basis to discuss project parameters and to give you an opportunity to ask questions. These sessions are scheduled for 15 minutes but can typically be adjusted if needed.
+
+## Final Proposal and Project
+Details about the final project will post within two weeks.
+
+<hr />
+
+### Need Help?
+I always prefer a face to face meeting if possible but since that's not possible, you can schedule a Zoom via the [Calendar](https://calendly.com/nopiecharts/short30){target="_blank"} or contact me within [Slack](https://2021edp693g.slack.com){target="_blank"} by tagging my name `@Dr. Abhik Roy` in a text box along with your message.

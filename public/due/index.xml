@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>So What&#39;s Due? | EDP 123</title>
-    <link>https://www.theoreticalphysed.com/due/</link>
-      <atom:link href="https://www.theoreticalphysed.com/due/index.xml" rel="self" type="application/rss+xml" />
+    <title>So What&#39;s Due? | Social Network Analysis</title>
+    <link>https://edp693g.asocialdatascientist.com/due/</link>
+      <atom:link href="https://edp693g.asocialdatascientist.com/due/index.xml" rel="self" type="application/rss+xml" />
     <description>So What&#39;s Due?</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <image>
-      <url>https://www.theoreticalphysed.com/img/course_info.png</url>
+      <url>https://edp693g.asocialdatascientist.com/img/course_info.png</url>
       <title>So What&#39;s Due?</title>
-      <link>https://www.theoreticalphysed.com/due/</link>
+      <link>https://edp693g.asocialdatascientist.com/due/</link>
     </image>
     
     <item>
       <title>The Basics</title>
-      <link>https://www.theoreticalphysed.com/due/01-due/</link>
+      <link>https://edp693g.asocialdatascientist.com/due/01-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.theoreticalphysed.com/due/01-due/</guid>
+      <guid>https://edp693g.asocialdatascientist.com/due/01-due/</guid>
       <description>
-&lt;script src=&#34;https://www.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://www.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://www.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp693g.asocialdatascientist.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp693g.asocialdatascientist.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp693g.asocialdatascientist.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 
 &lt;div id=&#34;whats-due&#34; class=&#34;section level3&#34;&gt;
@@ -75,7 +75,7 @@ Location
 Look over the syllabus
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;vertical-align: middle !important;&#34;&gt;
-&lt;a href=&#34;https://www.theoreticalphysed.com/syllabus/&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp693g.asocialdatascientist.com/syllabus/&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -103,7 +103,7 @@ Look over the syllabus
 Sign up for RStudio.cloud or download and install both R and RStudio
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;vertical-align: middle !important;&#34;&gt;
-&lt;a href=&#34;https://www.theoreticalphysed.com/tasks/01-tasks/#class-software&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp693g.asocialdatascientist.com/tasks/01-tasks/#class-software&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -131,7 +131,7 @@ Sign up for RStudio.cloud or download and install both R and RStudio
 Read Borgatti, Mehra, Brass, &amp;amp; Labianca (2009) and both Chapters 1 and 2 in Scott (2017)
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;vertical-align: middle !important;&#34;&gt;
-&lt;a href=&#34;https://www.theoreticalphysed.com/readings/01-reading/#literature&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp693g.asocialdatascientist.com/readings/01-reading/#literature&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -159,7 +159,7 @@ Read Borgatti, Mehra, Brass, &amp;amp; Labianca (2009) and both Chapters 1 and 2
 Join the class Slack channel after recieving an invite
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;vertical-align: middle !important;&#34;&gt;
-&lt;a href=&#34;https://www.theoreticalphysed.com/tasks/01-tasks/#class-slack-account-access&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp693g.asocialdatascientist.com/tasks/01-tasks/#class-slack-account-access&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -187,7 +187,7 @@ Join the class Slack channel after recieving an invite
 Define a social network.
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;vertical-align: middle !important;&#34;&gt;
-&lt;a href=&#34;https://www.theoreticalphysed.com/01-tasks/#postings&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp693g.asocialdatascientist.com/01-tasks/#postings&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -228,13 +228,13 @@ Begin the &lt;em&gt;Introduction to R&lt;/em&gt; module on Data Camp
     
     <item>
       <title>The Social Network</title>
-      <link>https://www.theoreticalphysed.com/due/02-due/</link>
+      <link>https://edp693g.asocialdatascientist.com/due/02-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.theoreticalphysed.com/due/02-due/</guid>
+      <guid>https://edp693g.asocialdatascientist.com/due/02-due/</guid>
       <description>
-&lt;script src=&#34;https://www.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://www.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://www.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp693g.asocialdatascientist.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp693g.asocialdatascientist.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp693g.asocialdatascientist.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 
 &lt;center&gt;
@@ -287,7 +287,7 @@ Location
 Read Chapters 3 and 4 in Scott (2017)
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;vertical-align: middle !important;&#34;&gt;
-&lt;a href=&#34;https://www.theoreticalphysed.com/readings/02-reading/#literature&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp693g.asocialdatascientist.com/readings/02-reading/#literature&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -343,7 +343,7 @@ Complete the &lt;em&gt;Introduction to R&lt;/em&gt; module on Data Camp
 Watch a video on the fundamentals of network analysis using the R package &lt;code&gt;igraph&lt;/code&gt;
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;vertical-align: middle !important;&#34;&gt;
-&lt;a href=&#34;https://www.theoreticalphysed.com/materials/02-walkthrough/#snippets&#34; target=&#34;_blank&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp693g.asocialdatascientist.com/materials/02-walkthrough/#snippets&#34; target=&#34;_blank&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -355,13 +355,13 @@ Watch a video on the fundamentals of network analysis using the R package &lt;co
     
     <item>
       <title>Evaluation Networks</title>
-      <link>https://www.theoreticalphysed.com/due/03-due/</link>
+      <link>https://edp693g.asocialdatascientist.com/due/03-due/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.theoreticalphysed.com/due/03-due/</guid>
+      <guid>https://edp693g.asocialdatascientist.com/due/03-due/</guid>
       <description>
-&lt;script src=&#34;https://www.theoreticalphysed.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://www.theoreticalphysed.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://www.theoreticalphysed.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://edp693g.asocialdatascientist.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://edp693g.asocialdatascientist.com/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://edp693g.asocialdatascientist.com/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 
 &lt;center&gt;
@@ -414,7 +414,7 @@ Location
 If you are unfamiliar with program evalutaion, review this basic introduction
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;vertical-align: middle !important;&#34;&gt;
-&lt;a href=&#34;https://www.theoreticalphysed.com/materials/03-walkthrough/#what-is-program-evaluation&#34; target=&#34;_blank&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp693g.asocialdatascientist.com/materials/03-walkthrough/#what-is-program-evaluation&#34; target=&#34;_blank&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -442,7 +442,7 @@ If you are unfamiliar with program evalutaion, review this basic introduction
 Read papers on networks in evaluations
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;vertical-align: middle !important;&#34;&gt;
-&lt;a href=&#34;https://www.theoreticalphysed.com/readings/03-reading/#literature&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp693g.asocialdatascientist.com/readings/03-reading/#literature&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -498,7 +498,7 @@ Begin the &lt;em&gt;Intermediate R&lt;/em&gt; module on Data Camp
 Watch and follow walkthroughs on the converting from and edgelist to adjacency matrix and back again
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;&#34;&gt;
-&lt;a href=&#34;https://www.theoreticalphysed.com/materials/03-walkthrough/#snippets&#34; target=&#34;_blank&#34;&gt;Link&lt;/a&gt;
+&lt;a href=&#34;https://edp693g.asocialdatascientist.com/materials/03-walkthrough/#snippets&#34; target=&#34;_blank&#34;&gt;Link&lt;/a&gt;
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
