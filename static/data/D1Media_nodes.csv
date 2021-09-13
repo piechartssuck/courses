@@ -1,0 +1,18 @@
+id.number,media.name,media.type,type.label,audience.size
+s01,NY Times,1,Newspaper,55959540
+s02,San Jose Mercury News,1,Newspaper,15827040
+s03,Wall Street Journal,1,Newspaper,71364810
+s04,USA Today,1,Newspaper,50229180
+s05,LA Times,1,Newspaper,19616040
+s06,New York Daily News,1,Newspaper,15484950
+s07,CNN,2,Cable,34530000
+s08,MSNBC,2,Cable,41220000
+s09,FOX News,2,Cable,61110000
+s10,NBC,3,Network,36480000
+s11,ABC,3,Network,36480000
+s12,CBS,3,Network,26580000
+s13,Huffington Post.com,4,Online,110000000
+s14,Yahoo News.com,4,Online,175000000
+s15,Google News.com,4,Online,150000000
+s16,NY Times.com,4,Online,42000000
+s17,CNN.com,4,Online,95000000

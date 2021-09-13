@@ -57,8 +57,8 @@ wk_post <- tibble(
 "To Do" = c("Look over the syllabus",
             "Sign up for RStudio.cloud or download and install both R and RStudio",
             "Read Borgatti, Mehra, Brass, & Labianca (2009) and both Chapters 1 and 2 in Scott (2017)",
-                "Join the class Slack channel after recieving an invite",
-                "Define a social network.",
+                "Join the class Slack channel after recieving an invite and introduce yourself",
+                "Define a social network",
                 "Begin the *Introduction to R* module on Data Camp"),
 
 Location = c("[Link](/syllabus/)",

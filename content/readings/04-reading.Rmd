@@ -1,0 +1,137 @@
+---
+title: "A Methods Based Social Network"
+linktitle: "Week 4: A Methods Based Social Network"
+menu:
+  readings:
+    parent: Print
+    weight: 4
+type: docs
+weight: 1
+output:
+  blogdown::html_page
+---
+
+<style>
+.hvr-sweep-to-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+}
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #175676;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+</style>
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(downloadthis)
+library(here)
+library(knitr)
+library(kableExtra)
+```
+
+## Literature
+
+### Download Digital Copies
+Please download and go through this weeks readings. 
+
+```{r echo=FALSE}
+slackico <- as.character("/logos/slack-ico.png{width=20px}")
+
+readings <- tibble(
+  
+  paper <- c(
+   "Kochan, S., & Teddlie, C. (2005). An Evaluation of Communication Among High School Faculty Using Network Analysis. *New Directions for Evaluation, 2005*(107), 5-13. [https://doi.org/10.1002/ev.160]( https://doi.org/10.1002/ev.160)",
+    "Yousefi Nooraie, R., Khan, S., Gutberg, J., & Baker, G. R. (2019). A Network Analysis Perspective to Implementation: The Example of Health Links to Promote Coordinated Care. *Eval Health Prof, 42*(4), 395–421. [https://doi.org/10.1177/0163278718772887
+](https://doi.org/10.1177/0163278718772887)",
+   "Popelier, L. (2018). A scoping review on the current and potential use of social network analysis for evaluation purposes. *Evaluation, 24*(3), 325–352. https://doi.org/10.1177/1356389018782219](https://doi.org/10.1177/1356389018782219)"
+  ),
+  
+  post <- c("*nothing this week*",
+            "*nothing this week*",
+            "*nothing this week*"
+            ),
+  
+  channel <- c(
+    "*not applicable*",
+    "*not applicable*",
+    "*not applicable*"
+    ),
+
+  link <- c(
+    "*none*",
+    "*none*",
+    "*none*"
+  ),
+  
+  .name_repair = "minimal"
+  
+)
+```
+
+```{r echo=FALSE,eval=TRUE}
+downloadthis::download_file(
+  path = here::here("static", "readings", "EDP693gWeek4Readings.zip"),
+  output_name = "Week 4 Readings",
+  button_label = "Download the Readings",
+  button_type = "default",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+
+### Postings 
+
+<center>
+```{r, echo=FALSE}
+readings %>%
+  kbl(col.names = c("Reading", "Post About", "Slack Channel", "Link"), 
+      "html", 
+      escape = FALSE,
+      align = 'llcc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "50em") %>%
+  column_spec(2, width = "20em") %>%
+  column_spec(3, width = "20em") %>%
+  column_spec(4, width = "5em") %>%
+  row_spec(0, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(1, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(2, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(3, extra_css = 'vertical-align: middle !important;') 
+```
+</center>
+

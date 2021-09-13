@@ -20,16 +20,20 @@ lessons:
   - title: 'Evaluation Networks'
     session: 3
     date: "September 2, 2021"
-    readings: "02-reading"
-    datacamp: "02-module"
-    materials: "02-walkthrough"
-    due: "02-due"
-  #
-  # - title: 'Tidy Themes'
-  #   session: 4
-  #   date: "February 11, 2021"
-  #   example: "04-example"
-  #
+    readings: "03-reading"
+    datacamp: "03-module"
+    materials: "03-walkthrough"
+    due: "03-due"
+
+  - title: 'A Methods Based Social Network'
+    session: 4
+    date: "September 9, 2021"
+    readings: "04-reading"
+    datacamp: "04-module"
+    materials: "04-walkthrough"
+    tasks: "04-tasks"
+    due: "04-due"
+
   # - title: 'Making Copies'
   #   session: 5
   #   date: "February 18, 2021"

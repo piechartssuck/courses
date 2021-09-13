@@ -75,8 +75,8 @@ readings <- tibble(
   
   paper <- c(
    "Durland, M. M., & Fredericks, K. A. (2005). An introduction to social network analysis. *New Directions for Evaluation, 2005*(107), 5-13. [https://doi.org/https://doi.org/10.1002/ev.157](https://doi.org/https://doi.org/10.1002/ev.157){target='_blank'}",
-    "Fredericks, K. A., & Durland, M. M. (2005). The historical evolution and basic concepts of social network analysis. *New Directions for Evaluation, 2005*107), 15-23. [https://doi.org/https://doi.org/10.1002/ev.158](https://doi.org/https://doi.org/10.1002/ev.158){target='_blank'}",
-   "Durland, M. M. (2005). Exploring and understanding relationships. *New Directions for Evaluation, 2005*(107), 25-40. [https://doi.org/https://doi.org/10.1002/ev.159](https://doi.org/https://doi.org/10.1002/ev.159){target='_blank'}"
+    "Fredericks, K. A., & Durland, M. M. (2005). The historical evolution and basic concepts of social network analysis. *New Directions for Evaluation, 2005*107), 15-23. [https://doi.org/10.1002/ev.158](https://doi.org/10.1002/ev.158){target='_blank'}",
+   "Durland, M. M. (2005). Exploring and understanding relationships. *New Directions for Evaluation, 2005*(107), 25-40. [https://doi.org/10.1002/ev.159](https://doi.org/10.1002/ev.159){target='_blank'}"
   ),
   
   post <- c("*nothing this week*",

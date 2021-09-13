@@ -68,19 +68,27 @@ library(downloadthis)
 
 ### What is Program Evaluation?
 
-- Directions: Click on the presentation itself and then you may
+First please go ahead and down a copy of everything you'll need to follow along with the walkthrough this week
 
-  + Move back and forth through the slideshow using the ⬅ and ⮕ buttons on your keyboard.
-  + Press the letter **O** at any point to see see a tile view of the slideshow.
-  + Use this [link](/slides/Intro to PE/Intro-to-PE.html){target="_blank"} to view a larger version of slideshow in a new window.
+### Materials
 
-```{r echo = FALSE}
-knitr::include_url("/slides/Intro to PE/Intro-to-PE.html")
+```{r echo=FALSE,eval=TRUE}
+downloadthis::download_file(
+  path = here::here("static", "walkthroughs", "scripts", "EDP693gWeek3Walkthrough.zip"),
+  output_name = "Better Visuals Walkthrough",
+  button_label = "Download the Scripts and Files",
+  button_type = "default",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
 ```
 
-You can download 
+You can move back and forth using <kbd>←</kbd> and <kbd>→</kbd> and toggle fullscreen by pressing <kbd>F</kbd>. Just press <kbd>O</kbd>^[For **O**verview] at any point in your slideshow and a display of all slides, called tile view, will appear. Click on a slide to go there or press <kbd>O</kbd> to exit tile view. For more options, press <kbd>H</kbd> for help.
 
-- a [PDF](/slides//Intro to PE/Intro-to-PE.pdf){target="_blank"} of the presentation.
+> Want to see a larger version of the presentation? Click [here](/slides/Intro to PE/Intro-to-PE.html){target="_blank"}.
+
+> Want a PDF you can use offline? Click [here](/slides/Intro to PE/Intro-to-PE.pdf){target="_blank"} of the presentation.
 
 ## Snippets!
 First please go ahead and down a copy of the script which will which you can use to follow along.

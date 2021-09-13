@@ -1,0 +1,79 @@
+---
+title: "A Methods Based Social Network"
+linktitle: "Week 4: A Methods Based Social Network"
+menu:
+  tasks:
+    parent: Homeworks
+    weight: 4
+type: docs
+weight: 2
+editor_options: 
+  chunk_output_type: console
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+<script src="/rmarkdown-libs/font-awesome/js/script.js"></script>
+
+
+<style>
+  .hvr-sweep-to-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+  }
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #175676;
+    -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+</style>
+<div id="r-task" class="section level2">
+<h2>R Task</h2>
+<p>First please go ahead and down a copy of everything you’ll need to complete this week’s task</p>
+<div id="materials" class="section level3">
+<h3>Materials</h3>
+<a href="data:application/zip;base64,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" download="Better Visuals Walkthrough.zip">
+<button class="btn btn-default hvr-sweep-to-left"><i class="fa fa-save"></i> Download the Scripts</button>
+</a>
+</div>
+<div id="directions" class="section level3">
+<h3>Directions</h3>
+<ol style="list-style-type: decimal">
+<li><p>Use the files <code>D2Media_nodes.csv</code> and <code>D2Media_edges.csv</code> to create a social network map</p></li>
+<li><p>Make adjustments to the map to make it visually appealing by giving it your best shot</p></li>
+<li><p>Post a copy of your script and output as a <code>pdf</code> or <code>png</code> file to <a href="https://2021edp693g.slack.com/archives/C02E74LKT19" target="_blank">#r-media-task</a> no later than September 19 at 11:59 PM.</p></li>
+</ol>
+</div>
+</div>

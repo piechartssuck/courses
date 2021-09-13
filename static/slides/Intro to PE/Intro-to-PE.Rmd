@@ -161,7 +161,8 @@ tibble(
              "<span style='color:#e07a5f'>the extent to which the measurements remain consistent over repeated tests of the same subject under identical conditions</span>")
     
   )  %>%
-  kbl(col.names = c("standards associated with", "<i>with the intent to uncover</i>"),
+  kbl(col.names = c("standards associated with", 
+                    "<i>with the intent to uncover</i>"),
       "html", 
       escape = FALSE,
       align = "ll") 
