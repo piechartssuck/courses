@@ -1,9 +1,6 @@
 ---
 title: "The Basics"
 linktitle: "Week 1: The Basics"
-output:
-  blogdown::html_page:
-    toc: true
 menu:
   datacamp:
     parent: Modules

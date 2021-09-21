@@ -1,0 +1,86 @@
+---
+title: "The In-Crowd"
+linktitle: "Week 5: The In-Crowd"
+menu:
+  due:
+    parent: Short-term
+    weight: 5
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+```{r eval = TRUE, echo = FALSE}
+unchecked <- as.character(fontawesome::fa("circle", fill = "#e4e4e4", height = "15px"))
+
+checked <- as.character(fontawesome::fa("check-circle", fill = "#428bca", height = "15px"))
+
+wk_post <- tibble(
+  
+
+"Data Camp" = c(unchecked,
+                checked,
+                unchecked,
+                unchecked,
+                unchecked),
+
+"eCampus" = c(unchecked,
+              unchecked,
+              unchecked,
+              unchecked,
+              unchecked),
+
+"R" = c(checked,
+        checked,
+        checked,
+        checked,
+        unchecked),
+
+"Slack" = c(unchecked,
+            unchecked, 
+            unchecked, 
+            checked,
+            unchecked),
+
+"To Do" = c("Take a look at a repositpry of varios network commands an options in R",
+            "Complete the *Intermediate R* module on Data Camp",
+            "Watch and follow walkthroughs on communities and cliques",
+            "Complete this week's network task that uses flight data",
+            "Schedule a one-on-one meeting with me for this or next week^[You can use the appointment calendar on the course website]"
+            ),
+
+Location = c("[Link](/readings/05-reading/#literature)",
+             "[Link](https://www.datacamp.com/){target='_blank'}",
+             "[Link](/materials/05-walkthrough/#snippets){target='_blank'}",
+             "[Link](/tasks/05-tasks/#r-task)",
+             "[Link](https://edp693g.asocialdatascientist.com/){target='_blank'}")
+)
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(wk_post, 
+      escape = FALSE,
+      align = 'cccclc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "10em") %>%
+  column_spec(4, width = "10em") %>%
+  column_spec(5, width = "15em") %>% 
+  row_spec(0, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(1, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(2, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(3, extra_css = 'vertical-align: middle !important;') 
+```
+</center>
+
+*Note: These tasks are provided in a recommended order.*

@@ -1,0 +1,15 @@
+---
+title: "The In-Crowd"
+linktitle: "Week 5: The In-Crowd"
+menu:
+  datacamp:
+    parent: Modules
+    weight: 5
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+## Data Camp
+This week please complete the **Intermediate R** course on [Data Camp](https://www.datacamp.com/){target="_blank"}. 

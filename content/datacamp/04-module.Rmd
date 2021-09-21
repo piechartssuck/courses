@@ -1,9 +1,6 @@
 ---
 title: "A Methods Based Social Network"
 linktitle: "Week 4: A Methods Based Social Network"
-output:
-  blogdown::html_page:
-    toc: true
 menu:
   datacamp:
     parent: Modules

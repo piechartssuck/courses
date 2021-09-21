@@ -1,9 +1,6 @@
 ---
 title: "The Social Network"
 linktitle: "Week 2: The Social Network"
-output:
-  blogdown::html_page:
-    toc: true
 menu:
   datacamp:
     parent: Modules

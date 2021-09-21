@@ -1,0 +1,105 @@
+---
+title: "The In-Crowd"
+linktitle: "Week 5: The In-Crowd"
+menu:
+  tasks:
+    parent: Homeworks
+    weight: 5
+type: docs
+weight: 2
+editor_options: 
+  chunk_output_type: console
+---
+
+<style>
+  .hvr-sweep-to-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+  }
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #175676;
+    -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+</style>
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE}
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+## R Task
+
+First please go ahead and down a copy of everything you'll need to complete this week's task
+
+### Materials
+
+```{r echo=FALSE,eval=TRUE}
+downloadthis::download_file(
+  path = here::here("static", "data", "EDP693gWeek4Task.zip"),
+  output_name = "Better Visuals Walkthrough",
+  button_label = "Download the Scripts",
+  button_type = "default",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+
+### Directions
+
+1. Load up the `flights.csv` file which is a collection of the airports with the most traffic and smaller airports (given by Other) in the United States. Create a chord diagram such that the following criteria are met:
+
+a. Cities are colored differently by their time zone. (Eastern Time, Central Time, Mountain Time, Pacific Time, Alaskan Time, Hawaiian Time). However, color choices are left up to you.
+
+b. The thickness of links between cities implies the relative frequency of flights between two cities (i.e. the thicker links represent more frequent flights).
+
+c. The links are directed, in that when the color of a link matches the outer band, it is a point of origin (departure).
+Consequentially this implies that when the color of a link does not match the outer band, it is a point of destination
+(arrival).
+
+d. There is a legend with the colors and corresponding time zones clearly marked.
+
+e. Make adjustments to the map to make it visually appealing.
+
+2. Please post both
+
+- a copy of your script as a `.R` or `.Rmd` file
+- the output as a `pdf` or `png` file to
+
+[#r-flights](https://2021edp613.slack.com/archives/C02F3G9JPSN){target='_blank'} no later than September 26 at 11:59 PM.

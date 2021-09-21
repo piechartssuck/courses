@@ -1,9 +1,6 @@
 ---
 title: "Evaluation Networks"
 linktitle: "Week 3: Evaluation Networks"
-output:
-  blogdown::html_page:
-    toc: true
 menu:
   datacamp:
     parent: Modules
