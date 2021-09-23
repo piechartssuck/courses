@@ -71,8 +71,8 @@ First please go ahead and down a copy of everything you'll need to complete this
 
 ```{r echo=FALSE,eval=TRUE}
 downloadthis::download_file(
-  path = here::here("static", "data", "flights.csv"),
-  output_name = "flights",
+  path = here::here("static", "data", "EDP693gWeek5Task.zip"),
+  output_name = "flightsandchords",
   button_label = "Download the Data",
   button_type = "default",
   has_icon = TRUE,
