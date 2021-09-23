@@ -83,19 +83,12 @@ downloadthis::download_file(
 
 ### Directions
 
-1. Load up the `flights.csv` file which is a collection of the airports with the most traffic and smaller airports (given by Other) in the United States. Create a chord diagram such that the following criteria are met:
-
-a. Cities are colored differently by their time zone. (Eastern Time, Central Time, Mountain Time, Pacific Time, Alaskan Time, Hawaiian Time). However, color choices are left up to you.
-
-b. The thickness of links between cities implies the relative frequency of flights between two cities (i.e. the thicker links represent more frequent flights).
-
-c. The links are directed, in that when the color of a link matches the outer band, it is a point of origin (departure).
-Consequentially this implies that when the color of a link does not match the outer band, it is a point of destination
-(arrival).
-
-d. There is a legend with the colors and corresponding time zones clearly marked.
-
-e. Make adjustments to the map to make it visually appealing.
+1. Load up the `flights.csv` file which is a collection of the airports with the most traffic and smaller airports (given by Other) in the United States. Create a chord diagram such that the following criteria are met:<br><br>
+    a. Cities are colored differently by their time zone. (Eastern Time, Central Time, Mountain Time, Pacific Time, Alaskan Time, Hawaiian Time). However, color choices are left up to you<br><br>
+    b. The thickness of links between cities implies the relative frequency of flights between two cities (i.e. the thicker links represent more frequent flights).<br><br>
+    c. The links are directed, in that when the color of a link matches the outer band, it is a point of origin (departure). Consequentially this implies that when the color of a link does not match the outer band, it is a point of destination (arrival).<br><br>
+    d. There is a legend with the colors and corresponding time zones clearly marked.<br><br>
+    e. Make adjustments to the map to make it visually appealing (do.
 
 2. Please post both
 
