@@ -71,9 +71,9 @@ First please go ahead and down a copy of everything you'll need to complete this
 
 ```{r echo=FALSE,eval=TRUE}
 downloadthis::download_file(
-  path = here::here("static", "data", "EDP693gWeek4Task.zip"),
-  output_name = "Better Visuals Walkthrough",
-  button_label = "Download the Scripts",
+  path = here::here("static", "data", "flights.csv"),
+  output_name = "flights",
+  button_label = "Download the Data",
   button_type = "default",
   has_icon = TRUE,
   icon = "fa fa-save",
