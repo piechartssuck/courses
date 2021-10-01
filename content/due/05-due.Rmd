@@ -50,10 +50,10 @@ wk_post <- tibble(
             checked,
             unchecked),
 
-"To Do" = c("Take a look at a repositpry of varios network commands an options in R",
+"To Do" = c("Take a look at a repository of various network commands an options in R",
             "Complete the *Intermediate R* module on Data Camp",
             "Watch and follow walkthroughs on communities and cliques",
-            "Complete this week's network task that uses flight data",
+            "Begin this week's network task that uses flight data^[Due in two weeks.]",
             "Schedule a one-on-one meeting with me for this or next week^[You can use the appointment calendar on the course website]"
             ),
 

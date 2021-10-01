@@ -95,4 +95,4 @@ downloadthis::download_file(
 - a copy of your script as a `.R` or `.Rmd` file
 - the output as a `pdf` or `png` file to
 
-[#r-flights](https://2021edp613.slack.com/archives/C02F3G9JPSN){target='_blank'} no later than September 26 at 11:59 PM.
+[#r-flights](https://2021edp693g.slack.com/archives/C02FLL86H4M){target='_blank'} no later than October 6 at 11:59 PM.

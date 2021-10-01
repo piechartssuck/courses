@@ -119,10 +119,11 @@ downloadthis::download_file(
 
 #### Part II: Wrangling Data
 <center>
-<iframe class="smart-player-embed-container-iframe" id="embeddedSmartPlayerInstance" src="/walkthroughs/videos/cliques/2communitydetection/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance" width="640" height="360" frameborder="0" scrolling="no" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+<iframe class="smart-player-embed-container-iframe" id="embeddedSmartPlayerInstance" src="/walkthroughs/videos/chords/censusdata2/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance" width="640" height="360" frameborder="0" scrolling="no" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 </center>
 
 #### Part III: Tidy Chord Diagrams
+*Posting today!*
 <!--
 <center>
 <iframe class="smart-player-embed-container-iframe" id="embeddedSmartPlayerInstance" src="/walkthroughs/videos/cliques/2communitydetection/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance" width="640" height="360" frameborder="0" scrolling="no" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
