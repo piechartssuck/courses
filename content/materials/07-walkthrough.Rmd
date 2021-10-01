@@ -132,7 +132,7 @@ downloadthis::download_file(
 
 ### Sites
 
-- [2019 ACS Flows Codebook]
+- [2019 ACS Flows Codebook](https://api.census.gov/data/2019/acs/flows/variables.html){target="_blank"}
 - [Census Available APIs](https://www.census.gov/data/developers/data-sets.html){target="_blank"}
 - [County-to-County Migration Flows](https://www.census.gov/topics/population/migration/guidance/county-to-county-migration-flows.html){target="_blank"}
 - [The Global Flow of People](http://download.gsb.bund.de/BIB/global_flow/){target="_blank"}
