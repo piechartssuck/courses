@@ -3,7 +3,7 @@ title: "The Social Network"
 linktitle: "Week 2: The Social Network"
 menu:
   due:
-    parent: Short-term
+    parent: "To Do"
     weight: 2
 type: docs
 weight: 1

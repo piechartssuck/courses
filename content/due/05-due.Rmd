@@ -3,7 +3,7 @@ title: "The In-Crowd"
 linktitle: "Week 5: The In-Crowd"
 menu:
   due:
-    parent: Short-term
+    parent: "To Do"
     weight: 5
 type: docs
 weight: 1

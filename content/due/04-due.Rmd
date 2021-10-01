@@ -3,7 +3,7 @@ title: "A Methods Based Social Network"
 linktitle: "Week 4: A Methods Based Social Network"
 menu:
   due:
-    parent: Short-term
+    parent: "To Do"
     weight: 4
 type: docs
 weight: 1

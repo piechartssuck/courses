@@ -64,10 +64,8 @@ tasks:
 due:
   - name: Overview
     weight: 1
-  - name: Short-term
+  - name: To Do
     weight: 2
-  - name: Long-term
-    weight: 3
 resources:
   - name: Overview
     weight: 1

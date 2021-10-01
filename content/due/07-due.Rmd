@@ -3,7 +3,7 @@ title: "Interactive Chords"
 linktitle: "Week 6: Interactive Chords"
 menu:
   due:
-    parent: Short-term
+    parent: "To Do"
     weight: 6
 type: docs
 weight: 1

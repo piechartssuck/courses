@@ -3,7 +3,7 @@ title: "The Basics"
 linktitle: "Week 1: The Basics"
 menu:
   due:
-    parent: Short-term
+    parent: "To Do"
     weight: 1
 type: docs
 weight: 1
