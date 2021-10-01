@@ -43,14 +43,15 @@ lessons:
     tasks: "05-tasks"
     due: "05-due"
 
-  # - title: "I'm the Map"
-  #   session: 6
-  #   date: "February 25, 2021"
-  #   lesson: "06-lesson"
-  #   example: "06-example"
-  #   assignment: "06-assignment"
-  #   solutions: "06-solutions"
-  #   due: "06-due"
+  - title: "Interactive Chords"
+    session: 6
+    date: "September 26, 2021"
+    readings: "06-reading"
+    datacamp: "06-module"
+    materials: "06-walkthrough"
+    tasks: "06-tasks"
+    due: "06-due"
+
   #
   # - title: 'A Map to the Past'
   #   session: 7
