@@ -65,7 +65,7 @@ library(kableExtra)
 
 ## Literature
 
-Please download and go through this weeks reading which will help with this week's task that introduces *chord diagrams*. You will likely need `ggplot2` to complete this task. The other part of the bundle includes a nice repository of `R` commands. 
+Please download and go through this weeks reading which will help with this week's task that introduces *chord diagrams*. 
 
 ```{r echo=FALSE}
 slackico <- as.character("/logos/slack-ico.png{width=20px}")

@@ -122,19 +122,20 @@ downloadthis::download_file(
 <iframe class="smart-player-embed-container-iframe" id="embeddedSmartPlayerInstance" src="/walkthroughs/videos/chords/censusdata2/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance" width="640" height="360" frameborder="0" scrolling="no" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 </center>
 
-#### Part III: Tidy Chord Diagrams
-*Posting today!*
-<!--
+#### Part III: A Tidy Chord Diagram
 <center>
-<iframe class="smart-player-embed-container-iframe" id="embeddedSmartPlayerInstance" src="/walkthroughs/videos/cliques/2communitydetection/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance" width="640" height="360" frameborder="0" scrolling="no" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+<iframe class="smart-player-embed-container-iframe" id="embeddedSmartPlayerInstance" src="/walkthroughs/videos/chords/chordiag/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance" width="640" height="360" frameborder="0" scrolling="no" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 </center>
--->
 
 ### Sites
 
 - [2019 ACS Flows Codebook](https://api.census.gov/data/2019/acs/flows/variables.html){target="_blank"}
 - [Census Available APIs](https://www.census.gov/data/developers/data-sets.html){target="_blank"}
+- [Circlize Documentation](https://jokergoo.github.io/circlize_book/book/){target="_blank"}
+- [Coolors](https://coolors.co){target="_blank"}
 - [County-to-County Migration Flows](https://www.census.gov/topics/population/migration/guidance/county-to-county-migration-flows.html){target="_blank"}
 - [The Global Flow of People](http://download.gsb.bund.de/BIB/global_flow/){target="_blank"}
+- [Color-hex](https://www.color-hex.com/){target="_blank"}
 - [Joins Cheatsheet](https://stat545.com/join-cheatsheet.html){target="_blank"}
 - [`tidycensus`: Install a CENSUS API Key](https://walker-data.com/tidycensus/reference/census_api_key.html){target="_blank"}
+- [Unicode Character Table](https://unicode-table.com/en/261E/){target="_blank"}

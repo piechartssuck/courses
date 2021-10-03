@@ -61,7 +61,7 @@ Location = c("[Link](/readings/05-reading/#literature)",
              "[Link](https://www.datacamp.com/){target='_blank'}",
              "[Link](/materials/05-walkthrough/#snippets){target='_blank'}",
              "[Link](/tasks/05-tasks/#r-task)",
-             "[Link](https://edp693g.asocialdatascientist.com/){target='_blank'}")
+             "[Link](https://calendly.com/nopiecharts){target='_blank'}")
 )
 ```
 
