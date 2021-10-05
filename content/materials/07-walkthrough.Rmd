@@ -122,9 +122,14 @@ downloadthis::download_file(
 <iframe class="smart-player-embed-container-iframe" id="embeddedSmartPlayerInstance" src="/walkthroughs/videos/chords/censusdata2/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance" width="640" height="360" frameborder="0" scrolling="no" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 </center>
 
-#### Part III: A Tidy Chord Diagram
+#### Part III: A Tidy Setup
 <center>
-<iframe class="smart-player-embed-container-iframe" id="embeddedSmartPlayerInstance" src="/walkthroughs/videos/chords/chordiag/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance" width="640" height="360" frameborder="0" scrolling="no" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+<iframe class="smart-player-embed-container-iframe" id="embeddedSmartPlayerInstance" src="/walkthroughs/videos/chords/chordiag1/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance" width="640" height="360" frameborder="0" scrolling="no" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+</center>
+
+#### Part IV: Chord Diagrams
+<center>
+<iframe class="smart-player-embed-container-iframe" id="embeddedSmartPlayerInstance" src="/walkthroughs/videos/chords/chordiag1/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance" width="640" height="360" frameborder="0" scrolling="no" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 </center>
 
 ### Sites
