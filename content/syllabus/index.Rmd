@@ -162,9 +162,7 @@ You probably know people who have lost their jobs, tested positive for COVID-19,
 
 **I am fully committed to making sure that you learn everything you were hoping to learn from this class!** 
 
-I will make whatever reasonable and feasible accommodations I can to help you learn the course material, finish your tasks, and to understand what areas you may need to concentrate on. Under pandemic conditions, I am flexible and lenient with grading and course expectations when students face difficult challenges provided that *you keep an open line of communication!* Furthermore, if you feel like you are behind or not understanding everything, **do not suffer in silence!** Please talk to me! 
-
-I selfishly want you to learn lots of things from this class (design! analysis! R! creating visualizations!, proving that $0.99999\ldots = 1$ - ok maybe not that last one but its true!). With all of that said, I first want you to stay healthy, balanced, and grounded during this crisis. 
+I will make whatever reasonable and feasible accommodations I can to help you learn the course material, finish your tasks, and to understand what areas you may need to concentrate on. Under pandemic conditions, I am flexible and lenient with grading and course expectations when students face difficult challenges provided that *you keep an open line of communication!* Furthermore, if you feel like you are behind or not understanding everything, **do not suffer in silence!** Please talk to me! I selfishly want you to learn lots of things from this class (design! analysis! R! creating visualizations!).  
 
 ## Course policies
 
