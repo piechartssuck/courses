@@ -90,9 +90,9 @@ knitr::include_url("/slides/Intro to PE/Intro-to-PE.html")
 
 You can move back and forth using <kbd>←</kbd> and <kbd>→</kbd> and toggle fullscreen by pressing <kbd>F</kbd>. Just press <kbd>O</kbd>^[For **O**verview] at any point in your slideshow and a display of all slides, called tile view, will appear. Click on a slide to go there or press <kbd>O</kbd> to exit tile view. For more options, press <kbd>H</kbd> for help.
 
-> Want to see a larger version of the presentation? Click [here](/slides/Intro to PE/Intro-to-PE.html){target="_blank"}.
+> Click [here](/slides/Intro to PE/Intro-to-PE.html){target="_blank"} for a larger version of the presentation.
 
-> Want a PDF you can use offline? Click [here](/slides/Intro to PE/Intro-to-PE.pdf){target="_blank"} of the presentation.
+> Click [here](/slides/Intro to PE/Intro-to-PE.pdf){target="_blank"} here for a PDF of the presentation.
 
 ## Snippets!
 First please go ahead and down a copy of the script which will which you can use to follow along.
