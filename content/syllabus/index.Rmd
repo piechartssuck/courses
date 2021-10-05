@@ -69,9 +69,13 @@ If you use Twitter, post R-related questions and content with [#rstats](https://
 
 Searching for help with R on Google (or another indexed search site) can sometimes be tricky because the program name is,for a lack of a better explanation, a single letter. 
 
-You can email me with questions about content or R (after giving it an effort of course). Please include the subject header **EDP XXX "the title of your email"** where the title of your email is given without the quotes. I have a mail filter that will automatically bring your email to a top priority status. In this new normal, I receive an overwhelming number of emails per day and may miss yours if the header is not formatted properly. 
+You can email me with questions about content or R (after giving it an effort of course). Please include the subject header **EDP 693g "the title of your email"** where the title of your email is given without the quotes. I have a mail filter that will automatically bring your email to a top priority status. Please make sure to attach 
 
-Finally, we have a class chatroom at [Slack](YEARedpXXX.slack.com) where you can poise a question. **I will monitor Slack regularly and will respond quickly.** (This is a rare Slack work space where I readily keep notifications on!) Ask questions about the readings, exercises, and mini projects. You'll likely have similar questions as your peers, and you'll likely be able to answer other peoples' questions too.
+- A brief description of your attempt 
+- Where you are stuck
+- A copy of your R script or Rmarkdown file
+
+Finally, we have a class chatroom at [Slack](2021edp693g.slack.com) where you can poise a question. **I will monitor Slack regularly and will respond quickly.** (This is a rare Slack work space where I readily keep notifications on!) Ask questions about the readings, exercises, and mini projects. You'll likely have similar questions as your peers, and you'll likely be able to answer other peoples' questions too.
 
 ## Assignments and grades
 
