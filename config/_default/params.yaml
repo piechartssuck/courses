@@ -74,7 +74,7 @@ privacy_pack: false
 # Enable visitors to edit pages?
 #   `repo` defines the repository URL. `editable` defines which page types can be edited.
 edit_page:
-  repo_url: 'https://github.com/asocialdatascientist/Courses/edp693g'
+  repo_url: 'https://github.com/drabhikroy/Courses/edp693g'
   content_dir: ''
   repo_branch: master
   editable:
@@ -98,7 +98,7 @@ course:
   time: "Anytime"
   location: "Everywhere"
   dates: "August 18 - December 17"
-  github: asocialdatascientist/Courses/tree/edp693g
+  github: drabhikroy/Courses/tree/edp693g
   copyrightYear: "2021"
   slack: "https://2021edp693g.slack.com"
 
@@ -107,7 +107,7 @@ instructor:
   email: Abhik.Roy@mail.wvu.edu
   url: "https://counselingandlearningsci.wvu.edu/faculty-staff/abhik-roy"
   twitter: asocialdatasci
-  github: asocialdatascientist
+  github: drabhikroy
   office: "Allen Hall 504O"
   contact_policy: >-
     Slack is the best way to get in contact with me. Response times are typically much quicker than the standard 24-48 hours given to emails. Please remember that life is still chaotic at this time!
@@ -130,7 +130,7 @@ university:
 sharing_image: "course_info.png"
 
 # Twitter username (without @). Used when a visitor shares your site on Twitter.
-twitter: "asocialdatascientist"
+twitter: "asocialdatasci"
 
 
 ############################
