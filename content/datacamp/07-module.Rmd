@@ -1,0 +1,15 @@
+---
+title: "Interactive Chords"
+linktitle: "Week 6: Interactive Chords"
+menu:
+  datacamp:
+    parent: Modules
+    weight: 5
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+## Data Camp
+This week please complete the **Supervised Learning in R: Classification** course on [Data Camp](https://www.datacamp.com/){target="_blank"}. 

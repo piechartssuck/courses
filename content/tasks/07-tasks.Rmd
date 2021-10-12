@@ -1,0 +1,93 @@
+---
+title: "Finding Feelings"
+linktitle: "Week 7: Finding Feelings"
+menu:
+  tasks:
+    parent: Homeworks
+    weight: 7
+type: docs
+weight: 2
+editor_options: 
+  chunk_output_type: console
+---
+
+<style>
+  .hvr-sweep-to-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+  }
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #175676;
+    -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+</style>
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE}
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+## R Task
+
+First please go ahead and down a copy of everything you'll need to complete this week's task
+
+### Materials
+
+```{r echo=FALSE,eval=TRUE}
+downloadthis::download_file(
+  path = here::here("static", "data", "EDP693gWeek7Task.zip"),
+  output_name = "flightsandchords",
+  button_label = "Download the Data",
+  button_type = "default",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+
+### Directions
+
+1. There are multiple data sets this week, each consisting of twitter data collected in 2015. Pick one of the data sets that hopefully interests you and conduct a sentiment analysis and network plot of the connected terms. 
+
+2. Please post both
+
+- a copy of your script as a `.R` or `.Rmd` file
+- both outputs as  `pdf` or `png` files to
+
+[#r-sentiments](https://2021edp693g.slack.com/archives/r-sentiments){target='_blank'} no later than October 20 at 11:59 PM.

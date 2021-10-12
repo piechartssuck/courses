@@ -1,10 +1,10 @@
 ---
-title: "Interactive Chords"
-linktitle: "Week 6: Interactive Chords"
+title: "Finding Feelings"
+linktitle: "Week 7: Finding Feelings"
 menu:
   readings:
     parent: Print
-    weight: 6
+    weight: 7
 type: docs
 weight: 1
 output:
@@ -57,6 +57,7 @@ output:
 </style>
 
 ```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(tidyverse)
 library(downloadthis)
 library(here)
 library(knitr)
@@ -72,18 +73,18 @@ slackico <- as.character("/logos/slack-ico.png{width=20px}")
 
 readings <- tibble(
   
-  paper <- c(
-   "Abel, G. J., &amp; Sander, N. (2014). *Quantifying global international migration flows. Science, 343*(6178), 1520–1522."
+  text <- c(
+    "Pozzi, F. A., Fersini, E., Messina, E., & Liu, B. (Eds.). (2017). *Sentiment analysis in social networks*. Morgan Kaufmann." 
   ),
   
-  post <- c("*nothing this week*"),
+  chapters <- c("1: Challenges of Sentiment Analysis in Social Networks & 2: How Social Network Analytics Can Enhance Opinion Mining and Sentiment Analysis"),
   
   channel <- c(
     "*not applicable*"
     ),
 
   link <- c(
-    "*none*"
+    "[Link](https://www.datacamp.com/){target='_blank'}"
   ),
   
   .name_repair = "minimal"
@@ -91,6 +92,9 @@ readings <- tibble(
 )
 ```
 
+
+
+<!--
 ```{r echo=FALSE,eval=TRUE}
 downloadthis::download_file(
   path = here::here("static", "readings", "EDP693gWeek6Readings.zip"),
@@ -102,6 +106,7 @@ downloadthis::download_file(
   class = "hvr-sweep-to-left"
   )
 ```
+-->
 
 ### Postings 
 

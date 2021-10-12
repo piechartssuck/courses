@@ -1,10 +1,10 @@
 ---
-title: "Interactive Chords"
-linktitle: "Week 6: Interactive Chords"
+title: "Finding Feelings"
+linktitle: "Week 7: Finding Feelings"
 menu:
   due:
     parent: "To Do"
-    weight: 6
+    weight: 7
 type: docs
 weight: 1
 editor_options: 
@@ -50,17 +50,17 @@ wk_post <- tibble(
             checked,
             unchecked),
 
-"To Do" = c("Read the article on chord diagrams associated with this week's walkthrough",
-            "Complete the *Introduction to Networks in R* module on Data Camp",
-            "Watch and follow walkthroughs on chord diagrams",
-            "Complete this week's network task that uses flight data",
-            "If you have not done so, schedule a one-on-one meeting with me for this week^[You can use the appointment calendar on the course website]"
+"To Do" = c("Read the first two chapters in the text *Sentiment Analysis in Social Networks*^[You will have to login to WVU libraries]",
+            "Complete the *Supervised Learning in R: Classification* module on Data Camp",
+            "Watch and follow walkthroughs on social media data",
+            "Complete this week's network task that uses Twitter data",
+            "Schedule a one-on-one meeting with me fto be held once over the next two weeks^[You can use the appointment calendar on the course website]"
             ),
 
-Location = c("[Link](/readings/07-reading/#literature)",
+Location = c("[Link](https://libwvu.on.worldcat.org/v2/oclc/960458243){target='_blank'}",
              "[Link](https://www.datacamp.com/){target='_blank'}",
              "[Link](/materials/07-walkthrough/#snippets)",
-             "[Link](/tasks/05-tasks/#r-task)",
+             "[Link](/tasks/07-tasks/#r-task)",
              "[Link](https://calendly.com/nopiecharts){target='_blank'}")
 )
 ```

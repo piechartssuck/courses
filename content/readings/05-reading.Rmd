@@ -57,6 +57,7 @@ output:
 </style>
 
 ```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(tidyverse)
 library(downloadthis)
 library(here)
 library(knitr)
@@ -73,8 +74,8 @@ slackico <- as.character("/logos/slack-ico.png{width=20px}")
 readings <- tibble(
   
   paper <- c(
-   "Luke, D.A. (2015). Advanced Network Graphics. *A user's guide to network analysis in R* (1st ed., pp. 73-87). Springer. [10.1007/978-3-319-23883-8](http://dx.doi.org/10.1007/978-3-319-23883-8)",
-   "Ognyanova, K. (2021) Network visualization with R. Retrieved from [www.kateto.net/network-visualization](www.kateto.net/network-visualization)"
+   "Luke, D.A. (2015). Advanced Network Graphics. *A user's guide to network analysis in R* (1st ed., pp. 73-87). Springer. [10.1007/978-3-319-23883-8](http://dx.doi.org/10.1007/978-3-319-23883-8){target='_blank'}",
+   "Ognyanova, K. (2021) Network visualization with R. Retrieved from [www.kateto.net/network-visualization](www.kateto.net/network-visualization){target='_blank'}"
   ),
   
   post <- c("*nothing this week*",

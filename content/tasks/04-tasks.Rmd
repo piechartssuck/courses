@@ -87,4 +87,4 @@ downloadthis::download_file(
 
 2. Make adjustments to the map to make it visually appealing by giving it your best shot
 
-3. Post a copy of your script and output as a `pdf` or `png` file to [#r-media-task](https://2021edp693g.slack.com/archives/C02E74LKT19){target='_blank'} no later than September 19 at 11:59 PM.
+3. Post a copy of your script and output as a `pdf` or `png` file to [#r-media-task](https://2021edp693g.slack.com/archives/r-media-task){target='_blank'} no later than September 19 at 11:59 PM.

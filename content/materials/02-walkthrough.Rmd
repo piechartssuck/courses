@@ -13,7 +13,7 @@ output:
 ---
 
 ```{r load_packages, message=FALSE, warning=FALSE, echo=FALSE}
-library(dplyr)
+library(tidyverse)
 library(fontawesome)
 library(knitr)
 library(kableExtra)
@@ -69,14 +69,14 @@ library(fontawesome)
 ## Snippets!
 This is the first of many short walkthroughs created to get you familiar with R and the environment we'll be using. In this session we'll cover how to use start engaging with the end all be all package `igraph` which serves as a foundation for most other network analysis packages. 
 
-First please go ahead and down a copy of the script which will which you can use to follow along.
+First please go ahead and down a copy of everything you'll need to follow along with the walkthrough this week
 
-### Script
+### Materials
 
 ```{r echo=FALSE,eval=TRUE}
 downloadthis::download_file(
-  path = here::here("static", "walkthroughs", "scripts", "plotagraph.R"),
-  output_name = "Plot a Graph Walkthrough",
+  path = here::here("static", "walkthroughs", "scripts", "EDP693gWeek2Walkthrough.zip"),
+  output_name = "Plot a Graph",
   button_label = "Download the Script",
   button_type = "default",
   has_icon = TRUE,

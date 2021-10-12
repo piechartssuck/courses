@@ -1,0 +1,146 @@
+---
+title: "Interactive Chords"
+linktitle: "Week 6: Interactive Chords"
+menu:
+  materials:
+    parent: Walkthroughs
+    weight: 6
+type: docs
+weight: 1
+output:
+  blogdown::html_page:
+    toc: true
+---
+
+```{r load_packages, message=FALSE, warning=FALSE, echo=FALSE}
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+library(here)
+library(downloadthis)
+```
+
+<style>
+.hvr-sweep-to-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+}
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #175676;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}ZD
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+</style>
+
+<!--
+## What is Program Evaluation?
+
+First please go ahead and down a copy of everything you'll need to follow along with the walkthrough this week
+
+### Materials
+
+```{r echo=FALSE,eval=TRUE}
+downloadthis::download_file(
+  path = here::here("static", "walkthroughs", "scripts", "EDP693gWeek3Walkthrough.zip"),
+  output_name = "Better Visuals Walkthrough",
+  button_label = "Download the Scripts and Files",
+  button_type = "default",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+
+You can move back and forth using <kbd>←</kbd> and <kbd>→</kbd> and toggle fullscreen by pressing <kbd>F</kbd>. Just press <kbd>O</kbd>^[For **O**verview] at any point in your slideshow and a display of all slides, called tile view, will appear. Click on a slide to go there or press <kbd>O</kbd> to exit tile view. For more options, press <kbd>H</kbd> for help.
+
+> Want to see a larger version of the presentation? Click [here](/slides/Intro to PE/Intro-to-PE.html){target="_blank"}.
+
+> Want a PDF you can use offline? Click [here](/slides/Intro to PE/Intro-to-PE.pdf){target="_blank"} of the presentation.
+-->
+
+## Snippets!
+
+### Materials
+
+First please go ahead and down a copy of everything you'll need to follow along with the walkthrough this week which covers communities and cliques
+
+```{r echo=FALSE,eval=TRUE}
+downloadthis::download_file(
+  path = here::here("static", "walkthroughs", "scripts", "EDP693gWeek6Walkthrough.zip"),
+  output_name = "Chord Diagrams",
+  button_label = "Download the Scripts and Files",
+  button_type = "default",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+
+### Walkthrough
+
+#### Part I: Census API
+<center>
+<iframe class="smart-player-embed-container-iframe" id="embeddedSmartPlayerInstance" src="/walkthroughs/videos/chords/censusdata1/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance" width="640" height="360" frameborder="0" scrolling="no" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+</center>
+
+#### Part II: Wrangling Data
+<center>
+<iframe class="smart-player-embed-container-iframe" id="embeddedSmartPlayerInstance" src="/walkthroughs/videos/chords/censusdata2/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance" width="640" height="360" frameborder="0" scrolling="no" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+</center>
+
+#### Part III: A Tidy Setup
+<center>
+<iframe class="smart-player-embed-container-iframe" id="embeddedSmartPlayerInstance" src="/walkthroughs/videos/chords/chordiag1/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance" width="640" height="360" frameborder="0" scrolling="no" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+</center>
+
+#### Part IV: Chord Diagrams
+<center>
+<iframe class="smart-player-embed-container-iframe" id="embeddedSmartPlayerInstance" src="/walkthroughs/videos/chords/chordiag2/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance" width="640" height="360" frameborder="0" scrolling="no" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+</center>
+
+### Sites
+
+- [2019 ACS Flows Codebook](https://api.census.gov/data/2019/acs/flows/variables.html){target="_blank"}
+- [Census Available APIs](https://www.census.gov/data/developers/data-sets.html){target="_blank"}
+- [Circlize Documentation](https://jokergoo.github.io/circlize_book/book/){target="_blank"}
+- [Coolors](https://coolors.co){target="_blank"}
+- [County-to-County Migration Flows](https://www.census.gov/topics/population/migration/guidance/county-to-county-migration-flows.html){target="_blank"}
+- [The Global Flow of People](http://download.gsb.bund.de/BIB/global_flow/){target="_blank"}
+- [Color-hex](https://www.color-hex.com/){target="_blank"}
+- [Joins Cheatsheet](https://stat545.com/join-cheatsheet.html){target="_blank"}
+- [`tidycensus`: Install a CENSUS API Key](https://walker-data.com/tidycensus/reference/census_api_key.html){target="_blank"}
+- [Unicode Character Table](https://unicode-table.com/en/261E/){target="_blank"}

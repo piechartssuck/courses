@@ -1,10 +1,10 @@
 ---
-title: "Interactive Chords"
-linktitle: "Week 6: Interactive Chords"
+title: "Finding Feelings"
+linktitle: "Week 7: Finding Feelings"
 menu:
   materials:
     parent: Walkthroughs
-    weight: 6
+    weight: 7
 type: docs
 weight: 1
 output:
@@ -101,7 +101,7 @@ First please go ahead and down a copy of everything you'll need to follow along 
 ```{r echo=FALSE,eval=TRUE}
 downloadthis::download_file(
   path = here::here("static", "walkthroughs", "scripts", "EDP693gWeek7Walkthrough.zip"),
-  output_name = "Better Visuals Walkthrough",
+  output_name = "Sentiment Analysis",
   button_label = "Download the Scripts and Files",
   button_type = "default",
   has_icon = TRUE,
@@ -112,35 +112,18 @@ downloadthis::download_file(
 
 ### Walkthrough
 
-#### Part I: Census API
+#### Part I: Extracting and Cleaning text
 <center>
-<iframe class="smart-player-embed-container-iframe" id="embeddedSmartPlayerInstance" src="/walkthroughs/videos/chords/censusdata1/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance" width="640" height="360" frameborder="0" scrolling="no" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+<iframe class="smart-player-embed-container-iframe" id="embeddedSmartPlayerInstance" src="/walkthroughs/videos/socialmedia/1Extractingandcleaningtext/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance" width="640" height="360" frameborder="0" scrolling="no" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 </center>
 
-#### Part II: Wrangling Data
+#### Part II: Descriptives
 <center>
-<iframe class="smart-player-embed-container-iframe" id="embeddedSmartPlayerInstance" src="/walkthroughs/videos/chords/censusdata2/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance" width="640" height="360" frameborder="0" scrolling="no" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+<iframe class="smart-player-embed-container-iframe" id="embeddedSmartPlayerInstance" src="/walkthroughs/videos/socialmedia/2Descriptives/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance" width="640" height="360" frameborder="0" scrolling="no" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 </center>
 
-#### Part III: A Tidy Setup
+#### Part III: Sentiment Analysis
 <center>
-<iframe class="smart-player-embed-container-iframe" id="embeddedSmartPlayerInstance" src="/walkthroughs/videos/chords/chordiag1/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance" width="640" height="360" frameborder="0" scrolling="no" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+<iframe class="smart-player-embed-container-iframe" id="embeddedSmartPlayerInstance" src="/walkthroughs/videos/socialmedia/3SentimentAnalysis/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance" width="640" height="360" frameborder="0" scrolling="no" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 </center>
 
-#### Part IV: Chord Diagrams
-<center>
-<iframe class="smart-player-embed-container-iframe" id="embeddedSmartPlayerInstance" src="/walkthroughs/videos/chords/chordiag2/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance" width="640" height="360" frameborder="0" scrolling="no" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-</center>
-
-### Sites
-
-- [2019 ACS Flows Codebook](https://api.census.gov/data/2019/acs/flows/variables.html){target="_blank"}
-- [Census Available APIs](https://www.census.gov/data/developers/data-sets.html){target="_blank"}
-- [Circlize Documentation](https://jokergoo.github.io/circlize_book/book/){target="_blank"}
-- [Coolors](https://coolors.co){target="_blank"}
-- [County-to-County Migration Flows](https://www.census.gov/topics/population/migration/guidance/county-to-county-migration-flows.html){target="_blank"}
-- [The Global Flow of People](http://download.gsb.bund.de/BIB/global_flow/){target="_blank"}
-- [Color-hex](https://www.color-hex.com/){target="_blank"}
-- [Joins Cheatsheet](https://stat545.com/join-cheatsheet.html){target="_blank"}
-- [`tidycensus`: Install a CENSUS API Key](https://walker-data.com/tidycensus/reference/census_api_key.html){target="_blank"}
-- [Unicode Character Table](https://unicode-table.com/en/261E/){target="_blank"}

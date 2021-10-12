@@ -101,7 +101,7 @@ First please go ahead and down a copy of everything you'll need to follow along 
 ```{r echo=FALSE,eval=TRUE}
 downloadthis::download_file(
   path = here::here("static", "walkthroughs", "scripts", "EDP693gWeek5Walkthrough.zip"),
-  output_name = "Better Visuals Walkthrough",
+  output_name = "Communities and Cliques",
   button_label = "Download the Scripts and Files",
   button_type = "default",
   has_icon = TRUE,
