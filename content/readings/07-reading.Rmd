@@ -77,7 +77,7 @@ readings <- tibble(
     "Pozzi, F. A., Fersini, E., Messina, E., & Liu, B. (Eds.). (2017). *Sentiment analysis in social networks*. Morgan Kaufmann." 
   ),
   
-  chapters <- c("1: Challenges of Sentiment Analysis in Social Networks & 2: How Social Network Analytics Can Enhance Opinion Mining and Sentiment Analysis"),
+  chapters <- c("Chapters 1: Challenges of Sentiment Analysis in Social Networks & 2: How Social Network Analytics Can Enhance Opinion Mining and Sentiment Analysis"),
   
   channel <- c(
     "*not applicable*"
@@ -113,7 +113,7 @@ downloadthis::download_file(
 <center>
 ```{r, echo=FALSE}
 readings %>%
-  kbl(col.names = c("Reading", "Post About", "Slack Channel", "Link"), 
+  kbl(col.names = c("Source", "Read", "Slack Channel", "Link"), 
       "html", 
       escape = FALSE,
       align = 'llcc') %>%
