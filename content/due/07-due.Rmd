@@ -54,7 +54,7 @@ wk_post <- tibble(
             "Complete the *Supervised Learning in R: Classification* module on Data Camp",
             "Watch and follow walkthroughs on social media data",
             "Complete this week's network task that uses Twitter data",
-            "Schedule a one-on-one meeting with me fto be held once over the next two weeks^[You can use the appointment calendar on the course website]"
+            "Schedule a one-on-one meeting with me to be held once over the next two weeks^[You can use the appointment calendar on the course website]"
             ),
 
 Location = c("[Link](https://libwvu.on.worldcat.org/v2/oclc/960458243){target='_blank'}",
