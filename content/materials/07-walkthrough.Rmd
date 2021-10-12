@@ -13,7 +13,7 @@ output:
 ---
 
 ```{r load_packages, message=FALSE, warning=FALSE, echo=FALSE}
-library(dplyr)
+library(tidyverse)
 library(fontawesome)
 library(knitr)
 library(kableExtra)
