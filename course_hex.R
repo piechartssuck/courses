@@ -15,14 +15,8 @@ library(tidyverse)
 library(patchwork)
 library(sankeyD3)
 library(showtext)
-font_add_google("Bebas Neue", "babas")
 font_add(family = "Neon", 
          regular = "NeonTubes2.otf")
-font_add(family = "Roboto Condensed", 
-         regular = "RobotoCondensed-Regular.ttf",
-         bold = "RobotoCondensed-Bold.ttf",
-         italic = "RobotoCondensed-Italic.ttf")
-font_add("Futura", "Futura-CondensedMedium.ttf")
 showtext_auto()
 library(hexSticker)
 library(ggfx)
