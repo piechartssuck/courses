@@ -1,0 +1,15 @@
+---
+title: "Centralities and Egos"
+linktitle: "Week 9: Centralities and Egos"
+menu:
+  datacamp:
+    parent: Modules
+    weight: 9
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+## Data Camp
+This week please begin the ***Network Analysis in the Tidyverse*** module course on [Data Camp](https://www.datacamp.com/){target="_blank"}. 

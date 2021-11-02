@@ -50,12 +50,10 @@ materials:
     weight: 2
   - name: Walkthroughs
     weight: 3
-  - name: Examples
-    weight: 4
 tasks:
   - name: Overview
     weight: 1
-  - name: R Projects
+  - name: Homeworks
     weight: 2
   - name: Final Proposal
     weight: 3

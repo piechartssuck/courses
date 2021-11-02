@@ -30,38 +30,44 @@ wk_post <- tibble(
                 checked,
                 unchecked,
                 unchecked,
+                unchecked,
                 unchecked),
 
 "eCampus" = c(unchecked,
               unchecked,
               unchecked,
               unchecked,
-              unchecked),
+              unchecked,
+              checked),
 
 "R" = c(unchecked,
         checked,
         checked,
         checked,
+        unchecked,
         unchecked),
 
 "Slack" = c(unchecked,
             unchecked, 
             unchecked, 
             checked,
+            unchecked,
             unchecked),
 
 "To Do" = c("Read the first three chapters in the text *Social network analysis for ego-nets*",
             "Begin the *Network Analysis in the Tidyverse* module",
             "Watch and follow walkthroughs on mmeasuring and plotting centralities and ego networks",
             "Begin next week's network task that requires scraping a relational data from a table on the web",
-            "Schedule a one-on-one meeting with me to be held once over this weeks^[You can use the appointment calendar on the course website]"
+            "Schedule a one-on-one meeting with me to be held once over this weeks^[You can use the appointment calendar on the course website]",
+            "Check the requirements for the **Final Proposal**"
             ),
 
 Location = c("[Link](/readings/09-reading/#literature){target='_blank'}",
              "[Link](https://www.datacamp.com/){target='_blank'}",
              "[Link](/materials/09-walkthrough/#snippets)",
              "[Link](/tasks/09-tasks/#r-task)",
-             "[Link](https://calendly.com/nopiecharts){target='_blank'}")
+             "[Link](https://calendly.com/nopiecharts){target='_blank'}",
+             "[Link](/tasks/proposal-tasks)")
 )
 ```
 
@@ -79,7 +85,8 @@ kable(wk_post,
   row_spec(0, extra_css = 'vertical-align: middle !important;') %>%
   row_spec(1, extra_css = 'vertical-align: middle !important;') %>%
   row_spec(2, extra_css = 'vertical-align: middle !important;') %>%
-  row_spec(3, extra_css = 'vertical-align: middle !important;') 
+  row_spec(3, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(4, extra_css = 'vertical-align: middle !important;') 
 ```
 </center>
 
