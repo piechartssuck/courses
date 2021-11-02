@@ -66,7 +66,7 @@ library(kableExtra)
 
 ## Literature
 
-Please download and go through this weeks reading which will help with this week's task that introduces *chord diagrams*. 
+Please download and go through this weeks reading which will help with this week's task that introduces *ego networks*. 
 
 ```{r echo=FALSE}
 slackico <- as.character("/logos/slack-ico.png{width=20px}")
@@ -74,17 +74,17 @@ slackico <- as.character("/logos/slack-ico.png{width=20px}")
 readings <- tibble(
   
   text <- c(
-    "Pozzi, F. A., Fersini, E., Messina, E., & Liu, B. (Eds.). (2017). *Sentiment analysis in social networks*. Morgan Kaufmann." 
+    "Crossley, N., Bellotti, E., Edwards, G., Everett, M. G., Koskinen, J., & Tranmer, M. (2015). *Social network analysis for ego-nets : social network analysis for actor-centred networks*. SAGE Publications." 
   ),
   
-  chapters <- c("Chapters 1: Challenges of Sentiment Analysis in Social Networks & 2: How Social Network Analytics Can Enhance Opinion Mining and Sentiment Analysis"),
+  chapters <- c("Chapters 1: Introduction, 2: Social Capital and Small Worlds - A Primer & 3: \ Getting Ego-Nets"),
   
   channel <- c(
     "*not applicable*"
     ),
 
   link <- c(
-    "[Link](https://www.datacamp.com/){target='_blank'}"
+    "*not applicable*"
   ),
   
   .name_repair = "minimal"
@@ -94,10 +94,9 @@ readings <- tibble(
 
 
 
-<!--
 ```{r echo=FALSE,eval=TRUE}
 downloadthis::download_file(
-  path = here::here("static", "readings", "EDP693gWeek6Readings.zip"),
+  path = here::here("static", "readings", "EDP693gWeek9Readings.zip"),
   output_name = "Week 6 Readings",
   button_label = "Download the Readings",
   button_type = "default",
@@ -106,7 +105,6 @@ downloadthis::download_file(
   class = "hvr-sweep-to-left"
   )
 ```
--->
 
 ### Postings 
 
