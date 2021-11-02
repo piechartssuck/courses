@@ -64,6 +64,13 @@ library(downloadthis)
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
+
+hr {
+    margin: 30px 0;
+    height: 1px;
+    border: none;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, black));
+}
 </style>
 
 <!--
@@ -137,4 +144,40 @@ downloadthis::download_file(
 <iframe class="smart-player-embed-container-iframe" id="embeddedSmartPlayerInstance" src="/walkthroughs/videos/centrality/centrality2d_egographs/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance" width="640" height="360" frameborder="0" scrolling="no" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 </center>
 
+<hr>
 
+#### Links
+1. Aesthetics
+    a. [hex colors](https://www.color-hex.com/){target="_blank"}
+    b. [r-color-palettes](https://github.com/EmilHvitfeldt/r-color-palettes){target="_blank"}
+    c. [`showtext`](https://cran.rstudio.com/web/packages/showtext/vignettes/introduction.html){target="_blank"}
+    d. [`wesanderson`](https://github.com/karthik/wesanderson){target="_blank"}
+    
+2. Layouts
+    a. [ graphlayouts](http://graphlayouts.schochastics.net/){target="_blank"}
+    b. [Introduction to ggraph: Layouts](https://www.data-imaginist.com/2017/ggraph-introduction-layouts/){target="_blank"}
+  
+3. Centrality
+    a. [Network analysis of Game of Thrones](https://datascienceplus.com/network-analysis-of-game-of-thrones/){target="_blank"}
+  
+4. MCU Data
+    a. [Which Marvel Characters and Movies are the Most Central?](https://felixluginbuhl.com/blog/posts/2018-01-26-network/){target="_blank"}^[Inspiration for this walkthrough]
+   b. [Liste des films de l'univers cinématographique Marvel](https://fr.wikipedia.org/w/index.php?title=Liste_des_films_de_l%27univers_cin%C3%A9matographique_Marvel&oldid=144793972#Personnages){target="_blank"}   
+   c. [Marvel Cinematic Universe: Phase One](https://en.wikipedia.org/wiki/Marvel_Cinematic_Universe:_Phase_One){target="_blank"}
+   d. [Marvel Cinematic Universe: Phase Two](https://en.wikipedia.org/wiki/Marvel_Cinematic_Universe:_Phase_Two){target="_blank"}
+   e. [Marvel Cinematic Universe: Phase Three](https://en.wikipedia.org/wiki/Marvel_Cinematic_Universe:_Phase_Three){target="_blank"}
+  
+5. [R for Data Science](https://r4ds.had.co.nz/){target="_blank"}
+    a. [14: Strings](https://r4ds.had.co.nz/strings.html){target="_blank"}
+    b. [16: Dates and times](https://r4ds.had.co.nz/dates-and-times.html){target="_blank"}
+
+6. `vizNetwork`
+    a. [Example](https://www.nagraj.net/notes/visnetwork/){target="_blank"}
+    b. [Example](https://rpubs.com/a_pear_9/visNetwork){target="_blank"}
+    c. [`vizNetwork` documentation](https://datastorm-open.github.io/visNetwork/){target="_blank"}
+    
+7. Wrangling
+    a. [Data Imaginist](https://www.data-imaginist.com/2017/introducing-tidygraph/){target="_blank"}
+    b. [Example](http://users.dimi.uniud.it/~massimo.franceschet/ns/syllabus/make/tidygraph/tidygraph.html){target="_blank"}
+    c. [Example](https://rstudio-pubs-static.s3.amazonaws.com/307087_0a7a54f46d5d44b5829c6452484db638.html){target="_blank"}
+    

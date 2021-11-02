@@ -52,16 +52,15 @@ lessons:
     tasks: "06-tasks"
     due: "06-due"
 
-  #
-  # - title: 'A Map to the Past'
-  #   session: 7
-  #   date: "March 4, 2021"
-  #   lesson: "07-lesson"
-  #   example: "07-example"
-  #   assignment: "07-assignment"
-  #   solutions: "07-solutions"
-  #   due: "07-due"
-  #
+  - title: 'Finding Feelings'
+    session: 7
+    date: "October 6, 2021"
+    readings: "07-reading"
+    datacamp: "07-module"
+    materials: "07-walkthrough"
+    tasks: "07-tasks"
+    due: "07-due"
+
   # - title: 'Hooked on Feelings'
   #   session: 8
   #   date: "March 11, 2021"
@@ -71,14 +70,15 @@ lessons:
   #   solutions: "08-solutions"
   #   due: "08-due"
   #
-  # - title: 'The Social Network'
-  #   session: 9
-  #   date: "March 18, 2021"
-  #   lesson: "09-lesson"
-  #   example: "09-example"
-  #   assignment: "09-assignment"
-  #   due: "09-due"
-  #
+  - title: 'Centralities and Egos'
+    session: 9
+    date: "October 31, 2021"
+    readings: "09-reading"
+    datacamp: "09-module"
+    materials: "09-walkthrough"
+    tasks: "09-tasks"
+    due: "09-due"
+
   # # - title: 'Thinking About Mixing Your Methods Up'
   # #   session: 10
   # #   date: "October 25, 2020"

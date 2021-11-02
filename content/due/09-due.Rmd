@@ -1,0 +1,86 @@
+---
+title: "Centralities and Egos"
+linktitle: "Week 9: Centralities and Egos"
+menu:
+  due:
+    parent: "To Do"
+    weight: 9
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(tidyverse)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+```{r eval = TRUE, echo = FALSE}
+unchecked <- as.character(fontawesome::fa("circle", fill = "#e4e4e4", height = "15px"))
+
+checked <- as.character(fontawesome::fa("check-circle", fill = "#428bca", height = "15px"))
+
+wk_post <- tibble(
+  
+
+"Data Camp" = c(unchecked,
+                checked,
+                unchecked,
+                unchecked,
+                unchecked),
+
+"eCampus" = c(unchecked,
+              unchecked,
+              unchecked,
+              unchecked,
+              unchecked),
+
+"R" = c(unchecked,
+        checked,
+        checked,
+        checked,
+        unchecked),
+
+"Slack" = c(unchecked,
+            unchecked, 
+            unchecked, 
+            checked,
+            unchecked),
+
+"To Do" = c("Read the first three chapters in the text *Social network analysis for ego-nets*",
+            "Begin the *Network Analysis in the Tidyverse* module",
+            "Watch and follow walkthroughs on mmeasuring and plotting centralities and ego networks",
+            "Begin next week's network task that requires scraping a relational data from a table on the web",
+            "Schedule a one-on-one meeting with me to be held once over this weeks^[You can use the appointment calendar on the course website]"
+            ),
+
+Location = c("[Link](/readings/09-reading/#literature){target='_blank'}",
+             "[Link](https://www.datacamp.com/){target='_blank'}",
+             "[Link](/materials/09-walkthrough/#snippets)",
+             "[Link](/tasks/09-tasks/#r-task)",
+             "[Link](https://calendly.com/nopiecharts){target='_blank'}")
+)
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(wk_post, 
+      escape = FALSE,
+      align = 'cccclc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "10em") %>%
+  column_spec(4, width = "10em") %>%
+  column_spec(5, width = "15em") %>% 
+  row_spec(0, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(1, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(2, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(3, extra_css = 'vertical-align: middle !important;') 
+```
+</center>
+
+*Note: These tasks are provided in a recommended order.*
