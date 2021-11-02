@@ -100,4 +100,6 @@ c. convert one pick into a `Viznetwork`^[have some fun with this!]
 - a copy of your script as a `.R` or `.Rmd` file
 - a brief paragraph describing the comparisons any any conclusions that were drawn
 
+in a **single thread**
+
 [#r-sentiments](https://2021edp693g.slack.com/archives/r-centrality_egos){target='_blank'} no later than November 14 at 11:59 PM.
