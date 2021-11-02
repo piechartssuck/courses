@@ -172,12 +172,12 @@ downloadthis::download_file(
     b. [16: Dates and times](https://r4ds.had.co.nz/dates-and-times.html){target="_blank"}
 
 6. `vizNetwork`
-    a. [Example](https://www.nagraj.net/notes/visnetwork/){target="_blank"}
-    b. [Example](https://rpubs.com/a_pear_9/visNetwork){target="_blank"}
+    a. [*example*](https://www.nagraj.net/notes/visnetwork/){target="_blank"}
+    b. [*example*](https://rpubs.com/a_pear_9/visNetwork){target="_blank"}
     c. [`vizNetwork` documentation](https://datastorm-open.github.io/visNetwork/){target="_blank"}
     
 7. Wrangling
     a. [Data Imaginist](https://www.data-imaginist.com/2017/introducing-tidygraph/){target="_blank"}
-    b. [Example](http://users.dimi.uniud.it/~massimo.franceschet/ns/syllabus/make/tidygraph/tidygraph.html){target="_blank"}
-    c. [Example](https://rstudio-pubs-static.s3.amazonaws.com/307087_0a7a54f46d5d44b5829c6452484db638.html){target="_blank"}
+    b. [*example*](http://users.dimi.uniud.it/~massimo.franceschet/ns/syllabus/make/tidygraph/tidygraph.html){target="_blank"}
+    c. [*example*](https://rstudio-pubs-static.s3.amazonaws.com/307087_0a7a54f46d5d44b5829c6452484db638.html){target="_blank"}
     
