@@ -58,7 +58,7 @@ wk_post <- tibble(
             "Begin the *Network Analysis in the Tidyverse* module",
             "Watch and follow walkthroughs on mmeasuring and plotting centralities and ego networks",
             "Begin next week's network task that requires scraping a relational data from a table on the web",
-            "Schedule a one-on-one meeting with me to be held once over this weeks^[You can use the appointment calendar on the course website]",
+            "Schedule a **one-on-one meeting** with me to be held once over **this week**^[You can use the appointment calendar on the course website]",
             "Check the requirements for the **Final Proposal**"
             ),
 
