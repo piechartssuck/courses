@@ -1,9 +1,9 @@
 ---
-title: "Centralities and Egos"
-linktitle: "Week 9: Centralities and Egos"
+title: "Proposal"
+linktitle: "Proposal"
 menu:
   tasks:
-    parent: "Final Proposal"
+    parent: "Final"
     weight: 1
 type: docs
 weight: 3
@@ -63,7 +63,15 @@ library(knitr)
 library(kableExtra)
 ```
 
-*Construct a one paragraph case for a population^[A population does not necessarily refer to people.] that needs to be researched or evaluated, why it should be be studied, how the data is a good fit for a network analysis.*
+## Final Proposal
+
+Construct a one paragraph case for a population^[A population does not necessarily refer to people.] 
+
+1. that needs to be researched or evaluated, 
+
+2. why it should be be studied, and 
+
+3. how the data is a good fit for a network analysis
 
 Please submit this to 
 [#eCampus](https://ecampus.wvu.edu/){target='_blank'} no later than November 14 at 11:59 PM.^[Late proposals will immediately receive a 50% reduction in score and will only be accepted up to 24 hours past the deadline.]

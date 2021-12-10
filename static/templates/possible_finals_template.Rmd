@@ -1,0 +1,33 @@
+---
+title: "YOUR TITLE HERE"
+author: YOUR NAME HERE
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r libraries, warning=FALSE}
+# LIST YOUR LIBRARIES HERE
+```
+
+## Introduction
+WRITE AS YOU NORMALLY WOULD
+
+## Methodology
+WRITE AS YOU NORMALLY WOULD
+
+## Analyses
+WRITE AS YOU NORMALLY WOULD
+
+```{r EXAMPLE_CODE_CHUNK, echo=TRUE}
+# DROP YOUR NORMAL R CODE INTO HERE
+```
+
+## Results
+WRITE AS YOU NORMALLY WOULD
+
+## Limitations
+WRITE AS YOU NORMALLY WOULD
+

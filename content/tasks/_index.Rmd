@@ -29,8 +29,11 @@ On most weeks, you will be asked to submit an R related task. These must be turn
 ## Meetings
 Starting after the fourth week, we will need to meet on a biweekly basis to discuss project parameters and to give you an opportunity to ask questions. These sessions are scheduled for 15 minutes but can typically be adjusted if needed.
 
-## Final Proposal and Project
-Details about the final project will post within two weeks.
+## Final
+
+- Details about the final proposal may be found [here](/tasks/proposal-tasks/)
+
+- Details about the final project may be found [here](/tasks/project-tasks/)
 
 <hr />
 

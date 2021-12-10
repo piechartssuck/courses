@@ -1,0 +1,218 @@
+---
+title: "Project"
+linktitle: "Project"
+menu:
+  tasks:
+    parent: "Final"
+    weight: 2
+type: docs
+weight: 3
+editor_options: 
+  chunk_output_type: console
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+<link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
+
+
+<style>
+  .hvr-sweep-to-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+  }
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #175676;
+    -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+</style>
+<div id="r-markdown-formatting" class="section level2">
+<h2>R markdown formatting</h2>
+<p>The final report will only be accepted as a PDF output created from an R markdown file. You are free to use the template provided by clicking on the icon below or to create your own custom version. In either case, you are required to submit two variants of this task in differing areas.</p>
+<center>
+<a href="/templates/possible_finals_template.zip">
+<img src="/logos/rmd-pdf-logo.png" alt=".Rmd and PDF file logos" style="width: 150px;"/>
+</a>
+</center>
+<center>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;vertical-align: middle !important;">
+Type of Submission
+</th>
+<th style="text-align:left;vertical-align: middle !important;">
+Description of Reporting Style
+</th>
+<th style="text-align:left;vertical-align: middle !important;">
+What to Provide
+</th>
+<th style="text-align:center;vertical-align: middle !important;">
+Where to Submit<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 10em; vertical-align: middle !important;">
+Detailed Report
+</td>
+<td style="text-align:left;width: 50em; vertical-align: middle !important;">
+The entire report with all code chunks, syntax, and corresponding explanations <span style="color:#ac58ff;">shown</span> as a single PDF
+</td>
+<td style="text-align:left;width: 30em; vertical-align: middle !important;">
+PDF as described
+</td>
+<td style="text-align:center;width: 10em; vertical-align: middle !important;">
+<a href="https://ecampus.wvu.edu" target="_blank"><img src="/logos/wvu-blue-ico.png" title="WVU Blue Icon" width="30" alt="/logos/wvu-blue-ico.png{width=20px}" /></a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; vertical-align: middle !important;">
+Cleaned Report
+</td>
+<td style="text-align:left;width: 50em; vertical-align: middle !important;">
+The entire report with all code chunks, syntax and explanations <span style="color:#ff4040;">hidden</span> as a single PDF
+</td>
+<td style="text-align:left;width: 30em; vertical-align: middle !important;">
+PDF as descxribed, <code>.Rmd</code> file, &amp; applicable data set(s)<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>
+</td>
+<td style="text-align:center;width: 10em; vertical-align: middle !important;">
+<a href="https://2021edp693g.slack.com/final-project" target="_blank"><img src="/logos/slack-ico.png" title="Slack Icon" width="30" alt="/logos/slack-ico.png{width=20px}" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+<p>Please note that there is no need to denote the variant in your submission as it will become obvious simply by looking at it. For further information about the R markdown framework and options, some resources are provided below:</p>
+<ol style="list-style-type: decimal">
+<li><p>go through the <em>optional extra credit</em> R markdown module on <a href="https://datacamp.com/">data.camp</a></p></li>
+<li><p>check out the course section on R markdown in the <a href="/resources/Rmarkdown/">Guides</a> section</p></li>
+<li><p>review over the R markdown section in <a href="https://r4ds.had.co.nz/r-markdown.html">R for Data Science</a>. For a comprehensive guide to R markdown, take a look at the <a href="https://bookdown.org/yihui/Rmarkdown-cookbook/">R markdown Cookbook</a></p></li>
+<li><p>use an external resource like <a href="https://stackoverflow.com/questions/47710427/how-to-show-code-but-hide-output-in-Rmarkdown">StackOverflow</a></p></li>
+<li><p>reach out for assistance over our course <a href="https://2021edp693g.slack.com">Slack</a> site</p></li>
+</ol>
+<div id="note" class="section level3">
+<h3>Note</h3>
+<p>I highly recommend that you consider performing all of your analyses in a script first and then transfer the appropriate code over to an Rmarkdown file which is generally used for reporting.</p>
+</div>
+</div>
+<div id="final-paper" class="section level2">
+<h2>Final Paper</h2>
+<p>The final paper parallels a miniaturized article involving the parts below. Depending on the level of detail in your proposal, parts from that may be included. This should be written in a third party voice.</p>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:center;">
+</th>
+<th style="text-align:left;">
+Section
+</th>
+<th style="text-align:left;">
+Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;width: 10em; ">
+1
+</td>
+<td style="text-align:left;width: 10em; ">
+Introduction
+</td>
+<td style="text-align:left;width: 50em; ">
+<em>A</em> <strong><em>brief narrative</em></strong> <em>of your data set including but not limited to its sampling frame, context, history if feasible, and network structure. Please end this section indicating your research question(s).</em>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;width: 10em; ">
+2
+</td>
+<td style="text-align:left;width: 10em; ">
+Methods
+</td>
+<td style="text-align:left;width: 50em; ">
+<em>A</em> <strong><em>detailed narrative</em></strong> <em>outlining the unique need for an SNA and what approach(es) you took to address those. Please do not simply repeat or rehash SNA content such as definitions, methods, etc.; rather describe how each were applied in context, what they were intended to accomplish and why you chose to use them.</em>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;width: 10em; ">
+3
+</td>
+<td style="text-align:left;width: 10em; ">
+Analyses
+</td>
+<td style="text-align:left;width: 50em; ">
+<em>A</em> <strong><em>detailed narrative</em></strong> <em>showing the work you’ve performed explicitly shown in the code chunks. Each chunk should be preceded by an explanation of what is going on and why you chose to pursue.</em>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;width: 10em; ">
+4
+</td>
+<td style="text-align:left;width: 10em; ">
+Results
+</td>
+<td style="text-align:left;width: 50em; ">
+<em>A</em> <strong><em>general narrative</em></strong> <em>describing the study outcomes and any conclusions drawn. You need to be specific and tie the results back into the reseasrch question(s)</em>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;width: 10em; ">
+5
+</td>
+<td style="text-align:left;width: 10em; ">
+Limitations
+</td>
+<td style="text-align:left;width: 50em; ">
+<em>A</em> <strong><em>brief narrative</em></strong> <em>describing possible next steps in conducting a future SNA predicated on what you have done and found thus far.</em>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Please submit this to
+<a href="https://ecampus.wvu.edu/" target="_blank">#eCampus</a> no later than December 16 at 11:59 PM.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>You may click on the icons to get connected<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>If you have a protected data set that has been discussed with me, then this can and should be excluded<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>Due to the short turnaround between finals week and the end of the univeristy grading period, late projects <strong>cannot</strong> be accepted.<a href="#fnref3" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>

@@ -55,10 +55,8 @@ tasks:
     weight: 1
   - name: Homeworks
     weight: 2
-  - name: Final Proposal
+  - name: Final
     weight: 3
-  - name: Final Project
-    weight: 4
 due:
   - name: Overview
     weight: 1
