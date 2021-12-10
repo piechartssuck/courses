@@ -4,16 +4,80 @@ slug: syllabus
 citeproc: true
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-syllabus-no-bib.csl
+toc: true
 output:
   blogdown::html_page:
     toc: true
-    fig_caption: false
 ---
 
+```{css,echo=FALSE}
+.article-container {
+  max-width: 960px;
+}
+
+h5 {
+  font-style: italic;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+iframe {
+  width: 1px;
+  min-width: 100%;
+  border:0;
+}
+
+.btn {
+  background-color: #4682b4;
+  border: none;
+  color: #FFFFFF;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#TableOfContents, .docs-toc-title {
+  border-left: 1px solid $sta-primary;
+}
+
+button.btn.collapsed:before
+{
+    content:'+' ;
+    display:block;
+    width:15px;
+}
+
+button.btn:before
+{
+    content:'-' ;
+    display:block;
+    width:15px;
+  }
+}
+```
+ 
+```{r echo = FALSE}
+df_to_js <- function(x, var_name = "data", ...){
+  
+  json_data <- jsonlite::toJSON(x, ...)
+  
+  htmltools::tags$script(paste0("var ",var_name," = ", json_data, ";"))
+}
+```
+
+```{r echo = FALSE}
+htmltools::tagList(
+  htmltools::tags$script(src = "https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.min.js", integrity="sha512-dnvR4Aebv5bAtJxDunq3eE8puKAJrY9GBJYl9GC6lTOEC76s1dbDfJFcL9GyzpaDW4vlI/UjR8sKbc1j6Ynx6w==", crossorigin="anonymous", referrerpolicy="no-referrer"),
+  htmltools::tags$script(src = "https://cdnjs.cloudflare.com/ajax/libs/dimple/2.3.0/dimple.latest.min.js")
+)
+```
+
 ```{r setup, message=FALSE, warning=FALSE, include=FALSE}
-library(dplyr)
-library(tibble)
+library(tidyverse)
 library(pander)
+library(knitr)
+library(kableExtra)
+library(here)
 ```
 
 `r blogdown::shortcode("courseinfo")`
@@ -79,23 +143,23 @@ Finally, we have a class chatroom at [Slack](2021edp693g.slack.com) where you ca
 
 ## Assignments and grades
 
-You can find descriptions for all the assignments on the [assignments page](/assignment/).
+You can find descriptions for all the assignments on the [tasks page](/tasks/).
+
+<center>
 
 ```{r assignments-grades, include=FALSE}
 assignments <- tribble(
-  ~Points,  ~Assignment,
-  6 * 20 , "Things (6 × 20)",
-  6 * 20 , "Other Things (6 × 20)",
-  60      , "Project Thing 1",
-  60      , "Project Thing 2",
-  140     , "Final Thing Project"
-) %>%
-  mutate(Percent = Points / sum(Points),
-         Percent = scales::percent(Percent, accuracy = 1))
+  ~Percent,  ~Assessment, ~Location,
+  10, "R Training", "Data Camp",
+  40, "R Tasks", "Tasks",
+  10, "Meetings", "*(Zoom)*",
+  10, "Proposal", "Tasks", 
+  30, "Paper", "Tasks"
+) 
 
 grading <- tribble(
   ~Grade, ~Range,
-  "A",  "90–100%",
+  "A",  "> 90%",
   "B",  "80%-89%",  
   "C",  "70–79%",
   "D",  "60–69%", 
@@ -103,30 +167,49 @@ grading <- tribble(
 )
 ```
 
-
-<div class="centered-table">
-
 ```{r show-assignments-table, echo=FALSE, results="asis"}
-assignments_total <- tibble(Assignment = "Total",
-                            Points = sum(assignments$Points),
-                            Percent = NA)
-
-bind_rows(assignments, assignments_total) %>% 
-  select(Assignment, Points, Percent) %>% 
-  pandoc.table(justify = "lcc", missing = "—")
+assignments %>%
+  kableExtra::kable(align='cl',
+                    col.names = c("Percent", "Task", "Location"),
+  ) %>%
+  kable_styling(position = "center",
+                bootstrap_options = c("striped", 
+                                      "hover", 
+                                      "condensed", 
+                                      "responsive"),
+                full_width = FALSE) %>%
+  column_spec(1, width = "5em") %>%
+  column_spec(2, width = "12em") %>%
+  column_spec(3, width = "12em") %>%
+  row_spec(0, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(1, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(2, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(3, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(4, extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(5, extra_css = 'vertical-align: middle !important;') 
 ```
-</div>
+
+</center>
 
 <br />
-<div class="centered-table">
+
+<center>
 
 ```{r show-grades-table, echo=FALSE, results="asis"}
 grading %>%
-  pandoc.table(justify = "lc", 
-               col.names = c("Grade", "Range"))
+  kableExtra::kable(align='cl',
+               col.names = c("Grade", "Range")) %>%
+   kable_styling(position = "center",
+                bootstrap_options = c("striped", 
+                                      "hover", 
+                                      "condensed", 
+                                      "responsive"),
+                full_width = FALSE) %>%
+  column_spec(1, width = "5em") %>%
+  column_spec(2, width = "12em")
 ```
 
-<div>
+</center>
 
 ### Your hours
 

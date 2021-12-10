@@ -20,20 +20,14 @@ Below is a list of items considered to be class related tasks.
 ## R Training
 Details on training modules can be found on the [Data Camp](/datacamp/) page.
 
-## R Projects
-You will need to complete two R projects to be submitted in [Rmarkdown](/resources/rmarkdown/). Details about these projects will post approximately three weeks before the due date.
-
 ## R Tasks
-On most weeks, you will be asked to submit an R related task. These must be turned in by Wednesday at 11:59 PM on the [ecampus](https://ecampus.wvu.edu/){target="_blank"} Submission Portal.
+On most weeks, you will be asked to submit an R related task. These must be turned in on the course [Slack](https://2021edp613.slack.com) channel.
 
 ## Meetings
-Starting after the fourth week, we will need to meet on a biweekly basis to discuss project parameters and to give you an opportunity to ask questions. These sessions are scheduled for 15 minutes but can typically be adjusted if needed.
+Starting after the fourth week, we will need to meet on a biweekly basis to discuss project parameters and to give you an opportunity to ask questions, though this will vary depending on need. The sessions are scheduled for 15 minutes but can typically be adjusted if needed.
 
-## Final
-
-- Details about the final proposal may be found [here](/tasks/proposal-tasks/)
-
-- Details about the final project may be found [here](/tasks/project-tasks/)
+## Final Project
+The final will consist of a project [proposal](/tasks/proposal-tasks/) and [paper](/tasks/project-tasks/) due several weeks apart. More information can be found by click on the appropriate deliverable. 
 
 <hr />
 
