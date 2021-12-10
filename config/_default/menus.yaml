@@ -55,7 +55,7 @@ tasks:
     weight: 1
   - name: Homeworks
     weight: 2
-  - name: Final
+  - name: Final Project
     weight: 3
 due:
   - name: Overview

@@ -1,9 +1,9 @@
 ---
-title: "Project"
-linktitle: "Project"
+title: "Paper"
+linktitle: "Paper"
 menu:
   tasks:
-    parent: "Final"
+    parent: "Final Project"
     weight: 2
 type: docs
 weight: 3
@@ -68,13 +68,30 @@ showtext_auto()
 
 ## R markdown formatting
 
-The final report will only be accepted as a PDF output created from an R markdown file. You are free to use the template provided by clicking on the icon below or to  create your own custom version. In either case, you are required to submit two variants of this task in differing areas. 
+The final report will only be accepted as a PDF output created from an R markdown file. You are free to use the template provided by clicking on the icon below or to  create your own custom version.
 
 <center>
-<a href="/templates/possible_finals_template.zip">
+<a href="/templates/possible_final_paper_template.zip">
 <img src="/logos/rmd-pdf-logo.png" alt=".Rmd and PDF file logos" style="width: 150px;"/>
 </a>
 </center>
+
+Please note that there is no need to denote the variant in your submission as it will become obvious simply by looking at it. For further information about the R markdown framework and options, some resources are provided below:
+
+1. go through the *optional extra credit* R markdown module on [data.camp](https://datacamp.com/)
+
+2. check out the course section on R markdown in the [Guides](/resources/Rmarkdown/) section
+
+3. review over the R markdown section in [R for Data Science](https://r4ds.had.co.nz/r-markdown.html). For a comprehensive guide to R markdown, take a look at the [R markdown Cookbook](https://bookdown.org/yihui/Rmarkdown-cookbook/)
+
+4. use an external resource like [StackOverflow](https://stackoverflow.com/questions/47710427/how-to-show-code-but-hide-output-in-Rmarkdown)
+
+5. reach out for assistance over our course [Slack](https://2021edp693g.slack.com) site
+
+
+## Paper Submissions
+
+You are required to submit two variants of this task to different outlets. Please read the following carefully and ask questions if needed.
 
 <center>
 ```{r sub_tab, echo=FALSE}
@@ -96,7 +113,7 @@ tibble(
   
   submit <- c(
     "PDF as described",
-    "PDF as descxribed, `.Rmd` file, & applicable data set(s)^[If you have a protected data set that has been discussed with me, then this can and should be excluded]"
+    "PDF as described, `.Rmd` file, & applicable data set(s)^[If you have a protected data set that has been discussed with me, then this can and should be excluded]"
   ),
 
   link <- c(
@@ -120,33 +137,16 @@ tibble(
   column_spec(1, width = "10em") %>%
   column_spec(2, width = "50em") %>%
   column_spec(3, width = "30em") %>%
-  column_spec(4, width = "10em") %>%
-  row_spec(0, extra_css = 'vertical-align: middle !important;') %>%
-  row_spec(1, extra_css = 'vertical-align: middle !important;') %>%
-  row_spec(2, extra_css = 'vertical-align: middle !important;') 
+  column_spec(4, 
+              width = "10em",
+              extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(0, extra_css = 'vertical-align: middle !important;') 
 ```
 </center>
 
-Please note that there is no need to denote the variant in your submission as it will become obvious simply by looking at it. For further information about the R markdown framework and options, some resources are provided below:
+### Structure
 
-1. go through the *optional extra credit* R markdown module on [data.camp](https://datacamp.com/)
-
-2. check out the course section on R markdown in the [Guides](/resources/Rmarkdown/) section
-
-3. review over the R markdown section in [R for Data Science](https://r4ds.had.co.nz/r-markdown.html). For a comprehensive guide to R markdown, take a look at the [R markdown Cookbook](https://bookdown.org/yihui/Rmarkdown-cookbook/)
-
-4. use an external resource like [StackOverflow](https://stackoverflow.com/questions/47710427/how-to-show-code-but-hide-output-in-Rmarkdown)
-
-5. reach out for assistance over our course [Slack](https://2021edp693g.slack.com) site
-
-### Note
-
-I highly recommend that you consider performing all of your analyses in a script first and then transfer the appropriate code over to an Rmarkdown file which is generally used for reporting. 
-
-
-## Final Paper
-
-The final paper parallels a miniaturized article involving the parts below. Depending on the level of detail in your proposal, parts from that may be included. This should be written in a third party voice.
+The paper parallels a miniaturized article involving the parts below. Depending on the level of detail in your proposal, parts from that may be directly copied over. This should be written in a third party voice.
 
 ```{r paper_parts, echo=FALSE}
 
@@ -181,5 +181,10 @@ tibble(
   column_spec(3, width = "50em")
 ```
 
-Please submit this to 
-[#eCampus](https://ecampus.wvu.edu/){target='_blank'} no later than December 16 at 11:59 PM.^[Due to the short turnaround between finals week and the end of the univeristy grading period, late projects **cannot** be accepted.]
+There is a hard submission deadline on December 16 at 11:59 PM due to the short turnaround between finals week and the end of the university grading period. This implies that **late submissions cannot be accepted**.
+
+### Notes
+
+- There is no need to denote the variant in your submission as it will become obvious simply by looking at it
+
+- I highly recommend that you consider performing all of your analyses in a script first and then transferring the appropriate code over to an Rmarkdown file which is generally used for reporting

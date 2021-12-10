@@ -3,7 +3,7 @@ title: "Proposal"
 linktitle: "Proposal"
 menu:
   tasks:
-    parent: "Final"
+    parent: "Final Project"
     weight: 1
 type: docs
 weight: 3
@@ -63,15 +63,86 @@ library(knitr)
 library(kableExtra)
 ```
 
-## Final Proposal
+## R markdown formatting
 
-Construct a one paragraph case for a population^[A population does not necessarily refer to people.] 
+The final proposal will only be accepted as a Word output created from an R markdown file. Please use the template provided by clicking on the icon below.
 
+<center>
+<a href="/templates/final_proposal_template.zip">
+<img src="/logos/rmd-word-logo.png" alt=".Rmd and PDF file logos" style="width: 150px;"/>
+</a>
+</center>
+
+For further information about the R markdown framework and options, some resources are provided below:
+
+1. go through the *optional extra credit* R markdown module on [data.camp](https://datacamp.com/)
+
+2. check out the course section on R markdown in the [Guides](/resources/Rmarkdown/) section
+
+3. review over the R markdown section in [R for Data Science](https://r4ds.had.co.nz/r-markdown.html). For a comprehensive guide to R markdown, take a look at the [R markdown Cookbook](https://bookdown.org/yihui/Rmarkdown-cookbook/)
+
+4. use an external resource like [StackOverflow](https://stackoverflow.com/questions/47710427/how-to-show-code-but-hide-output-in-Rmarkdown)
+
+5. reach out for assistance over our course [Slack](https://2021edp693g.slack.com) site
+
+### Structure
+
+The proposal parallels a mixture between a prospectus and formal declaration of intent. A greater level of detail here will likely make it easier to complete your final paper.
+
+<center>
+```{r sub_tab, echo=FALSE}
+
+slackico <- as.character("/logos/slack-ico.png{width=20px}")
+
+wvuico <- as.character("/logos/wvu-blue-ico.png{width=20px}")
+
+tibble(
+  
+   description <- c("Construct a one paragraph case for a population^[Note that a population does not necessarily imply people]. The narrative must address
+                    
 1. that needs to be researched or evaluated, 
 
 2. why it should be be studied, and 
 
-3. how the data is a good fit for a network analysis
+3. how the data is a good fit for a network analysis"),
+  
+  limitation <- c(
+    "The entire body should be short and succinct not exceeding a single paragraph. Please refrain from rehasing definitions, methoidologies, etc.; rather address them and discuss the underlying reason to why you are use them and what you expect to occur."
+  ),
+  
+  submit <- c(
+    "Word as described preferably in a `docx` format."
+  ),
 
-Please submit this to 
-[#eCampus](https://ecampus.wvu.edu/){target='_blank'} no later than November 14 at 11:59 PM.^[Late proposals will immediately receive a 50% reduction in score and will only be accepted up to 24 hours past the deadline.]
+  link <- c(
+    paste0("[![",wvuico,"](/logos/wvu-blue-ico.png 'WVU Blue Icon'){width=30px}]",
+    "(https://ecampus.wvu.edu){target='_blank'}"
+    )
+  ),
+  
+  .name_repair = "minimal"
+  
+) %>%
+  kbl(col.names = c("Description", "Limitations", "What to Provide", "Where to Submit^[You may click on the icon to get connected]"), 
+      "html", 
+      escape = FALSE,
+      align = 'lllc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "50em") %>%
+  column_spec(2, width = "30em") %>%
+  column_spec(3, width = "30em") %>%
+  column_spec(4, 
+              width = "10em",
+              extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(0, extra_css = 'vertical-align: middle !important;') 
+```
+</center>
+
+There is a soft limited submission deadline on November 14 at 11:59 PM. A 24 hour grace period is given but that allowance implies that late submissions will receive a 50% reduction. All submissions after 24 hours will effectively be given a 0%. 
+
+### Notes
+
+- If you would like to submit more than a paragraph, please contact me to discuss
+
+- Turnaround time for late submissions may limit the amount of time you have to complete the final paper
+

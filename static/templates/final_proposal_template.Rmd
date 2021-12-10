@@ -1,0 +1,21 @@
+---
+title: "YOUR TITLE HERE"
+author: YOUR NAME HERE
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r libraries, warning=FALSE}
+# LIST YOUR LIBRARIES HERE (if applicable)
+```
+
+## Proposal
+WRITE AS YOU NORMALLY WOULD. 
+
+- Code chunks are welcome, but not necessary! 
+
+- Please make sure to knit any code chunk with `echo=FALSE` and any other options that suporess anything but the intended output.
+
