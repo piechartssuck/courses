@@ -188,3 +188,6 @@ There is a hard submission deadline on December 16 at 11:59 PM due to the short 
 - There is no need to denote the variant in your submission as it will become obvious simply by looking at it
 
 - I highly recommend that you consider performing all of your analyses in a script first and then transferring the appropriate code over to an Rmarkdown file which is generally used for reporting
+
+- These are based on networks, so make sure to include ***multiple visualizations*** to assist with your narrative. These should be include in both variants.
+
