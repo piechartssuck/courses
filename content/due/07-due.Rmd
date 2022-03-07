@@ -1,0 +1,126 @@
+---
+title: "Making Sense and Interpreting Nonsense"
+linktitle: "Week 7: Making Sense and Interpreting Nonsense"
+output:
+  rmarkdown::html_document
+menu:
+  due:
+    parent: "To Do List"
+    weight: 7
+type: docs
+weight: 2
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r load_packages, echo = FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+```{r eval = TRUE, echo = FALSE}
+
+wk_post <- 
+  
+  tibble(
+    
+    Description = c("Respond to two posts on <a style='color:#ff8384;'>#important-criteria</a>",
+                    "Respond to two posts on <a style='color:#ff8384;'>#merit-disagreement</a>",
+                    'Read <i>Synthesis Methodology</i> in Davidson (2004)',
+                     "Post on <a style='color:#ff8384;'>#views-on-synthesis</a>",
+                    'Read <i>Putting it All Together</i> in Davidson (2004)',
+                    "Post on <a style='color:#ff8384;'>#including-kec-parts</a>",
+                    "Read <i>Theory Driven Evaluations</i> by Chen (2012)",
+                    "Post on <a style='color:#ff8384;'>#tde</a>",
+                    "Plan on meeting this week via Zoom",
+                    "Take a look at a simplistic breakdown of multiple evaluation approaches in <i>Collaborative, Participatory, & Empowerment Evaluation</i>",
+                    "The review evaluations that are stakeholder indpenedent or dependent in <i>Goal-Free Evaluation and Goal-Based
+Evaluation</i>",
+                    "Go through the slideshow <span style='color:#6ac4cd;font-weight:bold'>A Short Course on Evaluation Models</span>",
+                    "Go through the slideshow <span style='color:#6ac4cd;font-weight:bold'>Data Collection</span>",
+                    "Review criteria for the <i>Evaluation Proposal</i> due in <i><b>this week</b></i>",
+                    "Take a look at the <i>Checklist of Key Considerations for Development of Program Logic Models</i>"
+    ),
+    
+    
+    Details = c("<a href='/readings/07-readings/#respond-to-posts'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+                "<a href='/readings/07-readings/#respond-to-posts'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+                "<a href='/readings/07-readings/#read-the-book'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+                "<a href='/readings/07-readings/#read-the-book'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+                "<a href='/readings/07-readings/#read-the-book'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+                "<a href='/readings/07-readings/#read-the-book'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+                "<a href='/readings/07-readings/#read-a-paper'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+                "<a href='/readings/07-readings/#read-a-paper'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+                "<a href='/materials/07-materials/#meeting'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+                "<a href='/materials/07-materials/#collaborative-participatory--empowerment-evaluation'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+                "<a href='/materials/07-materials/#goal-free-versus-goal-based'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+                "<a href='/materials/07-materials/#span-stylecolor6ac4cdfont-weightbolda-short-course-on-evaluation-modelsspan'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+                "<a href='/materials/07-materials/#span-stylecolor6ac4cdfont-weightbolddata-collectionspan'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+               "<a href='/deliverables/03-evaluation-proposal/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+                "<a href='/extras/07-extras/#logic-model-checklist'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
+                ),
+    
+    Icon = c("slack", 
+             "slack",
+             "library", 
+             "slack",
+             "library",
+             "slack",
+             "",
+             "slack",
+             "",
+             "",
+             "",
+             "",
+             "",
+             "ecampus",
+             ""),
+    
+    Site = c("https://2022edp617.slack.com/archives/C032T8GK5EZ",
+             "https://2022edp617.slack.com/archives/C032FH7QLRM",
+             "https://methods-sagepub-com.wvu.idm.oclc.org/book/evaluation-methodology-basics/n9.xml",
+             "https://2022edp617.slack.com/archives/C0346A5MQFP",
+             "https://methods-sagepub-com.wvu.idm.oclc.org/book/evaluation-methodology-basics/n10.xml",
+             "https://2022edp617.slack.com/archives/C0342HMFXB8",
+             "",
+             "https://2022edp617.slack.com/archives/C033UKWRQB1",
+             "",
+             "",
+             "",
+             "",
+             "",
+             "https://ecampus.wvu.edu",
+             "")
+  )
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+wk_post %>%
+  mutate(Icon = case_when(
+    str_detect(`Icon`, "slack") ~ '<img src="/logos/slack-ico.png" alt="Slack icon" width="25">',
+    str_detect(`Icon`, "ecampus") ~ '<img src="/logos/wvu-gold-ico.png" alt="Slack icon" width="25">',
+    str_detect(`Icon`, "library") ~ '<img src="/logos/library-ico.png" alt="Slack icon" width="25">',
+    TRUE ~ NA_character_
+  )
+  ) %>%
+  mutate(Site = na_if(Site, "")) %>%
+  mutate(Link = case_when(
+    !is.na(Icon) ~ paste0("<a href=",Site," target='_blank'>",Icon,"</a>"),
+    TRUE ~ NA_character_
+  )
+  ) %>%
+  select(-Icon, -Site) %>% 
+  mutate_all(replace_na,"") %>%
+  kbl("html",
+      escape = FALSE,
+      align = 'lcc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "25em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>%
+  column_spec(2:3, width = "5em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(0, extra_css = 'vertical-align: middle !important;', color = "#f7f7f7") %>%
+  row_spec(1:9, extra_css = 'vertical-align: middle !important;') 
+```
+</center>

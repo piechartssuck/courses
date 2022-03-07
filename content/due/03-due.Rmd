@@ -1,0 +1,117 @@
+---
+title: "Aims, Scope, and Sequencing"
+linktitle: "Week 3: Aims, Scope, and Sequencing"
+output:
+  rmarkdown::html_document
+menu:
+  due:
+    parent: "To Do List"
+    weight: 3
+type: docs
+weight: 2
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r load_packages, echo = FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+```{r eval = TRUE, echo = FALSE}
+
+wk_post <- 
+  
+  tibble(
+
+Description = c("Respond to two posts on <a style='color:#ff8384;'>#davidson</a>",
+                "Respond to two posts on <a style='color:#ff8384;'>#mathison</a>",
+                "Respond to one post on <a style='color:#ff8384;'>#evaluation-definitions</a>",
+                "Read <i>What is Evaluation?</i> in Davidson (2004)",
+                "Read <i>Defining the Purpose of Evaluation</i> in Davidson (2004)",
+                "Read <i>Identifying Evaluative Criteria</i> in Davidson (2004)",
+                "Go through the slideshow <span style='color:#6ac4cd;font-weight:bold'>Evaluative Criteria: Keys to Merit, Worth, and Significance</span>",
+                "Post on evaluation <a style='color:#ff8384;'>#criteria</a>",
+                "Take a look at some popular evaluation approaches courtesy of the CDC",
+                "Finalize your teams over on <a style='color:#ff8384;'>#talk-about-logistics</a> and submit your evaluation teams via e-mail",
+                "Take a look at the criteria needed for an <i>Evaluation Prospectus</i> due at the <i><b>end of next week!</b></i>",
+                "Preview criteria for the <i>Needs Assessment</i> task due in <i><b>three weeks.</b></i>",
+                "Discuss ideas and possible programs to evaluate at <a style='color:#ff8384;'>#lets-talk-about-an-evaluation</a>"
+                ),
+
+
+Details = c("<a href='/readings/03-readings/#respond-to-posts'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/readings/03-readings/#respond-to-posts'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/materials/03-materials/#respond-to-posts'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/readings/03-readings/#read-the-book'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/readings/03-readings/#read-the-book'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/readings/03-readings/#read-the-book'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/materials/03-materials/#span-stylecolor6ac4cdfont-weightboldevaluative-criteriaspan'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/materials/03-materials/#post-about-criteria'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+             "<a href='/materials/03-materials/#view-evaluation-approaches'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/materials/03-materials/#create-an-evaluation-team'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/deliverables/01-evaluation-prospectus'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/deliverables/02-needs-assessment'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/tasks/03-tasks/#evaluation-prospectus-prospects'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
+            ),
+
+Icon = c("slack", 
+         "slack", 
+         "slack",
+         "library",
+         "library",
+         "library",
+         "",
+         "slack",
+         "",
+         "slack",
+         "ecampus",
+         "",
+         "slack"),
+
+Site = c("https://2022edp617.slack.com/archives/C02UBC12PC5",
+         "https://2022edp617.slack.com/archives/C02UEAF6135",
+         "https://2022edp617.slack.com/archives/C02V4BM9VQQ",
+         "https://methods-sagepub-com.wvu.idm.oclc.org/book/evaluation-methodology-basics/n1.xml",
+         "https://methods-sagepub-com.wvu.idm.oclc.org/book/evaluation-methodology-basics/n2.xml",
+         "https://methods-sagepub-com.wvu.idm.oclc.org/book/evaluation-methodology-basics/n3.xml",
+         "",
+         "https://2022edp617.slack.com/archives/C03015N4NSF",
+         "https://2022edp617.slack.com/archives/C02UE9ZSD6X",
+         "",
+         "https://ecampus.wvu.edu",
+         "",
+         "https://2022edp617.slack.com/archives/C02V0FDHACX")
+)
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+wk_post %>%
+  mutate(Icon = case_when(
+    str_detect(`Icon`, "slack") ~ '<img src="/logos/slack-ico.png" alt="Slack icon" width="25">',
+    str_detect(`Icon`, "ecampus") ~ '<img src="/logos/wvu-gold-ico.png" alt="Slack icon" width="25">',
+    str_detect(`Icon`, "library") ~ '<img src="/logos/library-ico.png" alt="Slack icon" width="25">',
+    TRUE ~ NA_character_
+      )
+    ) %>%
+  mutate(Site = na_if(Site, "")) %>%
+  mutate(Link = case_when(
+    !is.na(Icon) ~ paste0("<a href=",Site," target='_blank'>",Icon,"</a>"),
+    TRUE ~ NA_character_
+      )
+    ) %>%
+  select(-Icon, -Site) %>% 
+  mutate_all(replace_na,"") %>%
+kbl("html",
+    escape = FALSE,
+    align = 'lcc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "25em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>%
+  column_spec(2:3, width = "5em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(0, extra_css = 'vertical-align: middle !important;', color = "#f7f7f7") %>%
+  row_spec(1:8, extra_css = 'vertical-align: middle !important;') 
+```
+</center>

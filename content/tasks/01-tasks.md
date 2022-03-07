@@ -1,0 +1,63 @@
+---
+title: "Who Are You Really?"
+linktitle: "Week 1: Who Are You Really?"
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  tasks:
+    parent: Tasks
+    weight: 1
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+<style type="text/css">
+.article-container {
+  max-width: 960px;
+}
+
+iframe {
+  width: 1px;
+  min-width: 100%;
+  border:0;
+}
+
+#TableOfContents, .docs-toc-title {
+  border-left: 1px solid $sta-primary;
+}
+
+#rounded_corners {
+  border-radius: 25px;
+  border: 2px solid #80FFDB;
+  padding: 20px; 
+  width: 400px;
+  height: 115px;  
+}
+
+</style>
+
+### Class Slack Account Access
+
+Please sign up for Slack!
+
+1.  You will receive an invite for the class [Slack](https://2022edp617.slack.com) account
+2.  Register if you already do not have an account. Note that you do not have to use your WVU account, but its not a bad idea.
+3.  Head to to the channel <font face="Arial Narrow" size="4px">[#introduce-yourself](https://2022edp617.slack.com/archives/C02T2G0AWLE)</font> and well introduce yourself by tell everyone about yourself, what you hope to achieve out of this course, and something about you that really defines who you are. For example, here is something about me:<br>
+    <br>
+    *I teach data visualization BUT I am also about 40% colorblind[^1]*<br><br>
+4.  (optional) Provide a picture if you are willing. I am a very visual person as are many other people so pictures help a great deal. However, you are not mandated to do so!
+
+### Verify Qualtrics Account Login
+
+You may end up using a survey in this course so its a good idea to go to the [WVU Qualtrics login page](https://wvu.qualtrics.com) and simply make sure you can login. If you are unable to do so, please submit a [ticket to IT](https://wvu.teamdynamix.com/TDClient/1976/Portal/Requests/ServiceDet?ID=9102) or give them a ring at <a href="tel:3042934444">304-293-4444</a> as soon as possible.
+<br>
+
+### Drawing Evaluations
+
+Get a blank piece of paper and writing utensil or use a computer program to draw a picture of the first thing that comes to your mind when you hear the word “Evaluation”. Think about what that picture means to you and then write a post describing the picture you drew and explaining why you think that was the picture that first came to your mind in relation to “Evaluation”. If you drew a picture, scan your picture and attach it to your post. Post on the <font face="Arial Narrow" size="4px">[#pictures-of-evaluation](https://2022edp617.slack.com/archives/C02U0V36SQY)</font> discussion board on Slack.
+
+[^1]: You just need to know a little math to distinguish colors without ever seeing them

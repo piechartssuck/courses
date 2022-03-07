@@ -1,0 +1,31 @@
+---
+title: "About the Materials"
+menu:
+  materials:
+    parent: Overview
+    weight: 1
+output:
+  rmarkdown::html_document
+type: docs
+weight: 1
+shiny: true
+---
+
+```{r load_packages, message=FALSE, warning=FALSE, echo=FALSE}
+library(tidyverse)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+
+Materials are used to both introduce content not covered in the text and to supplement items already addressed. 
+
+<center>
+`r fa("clock", fill = "#ff4e50")` &nbsp <i>Posted weekly</i> 
+</center>
+
+
+### Need Help?
+
+`r blogdown::shortcode("meetings")`

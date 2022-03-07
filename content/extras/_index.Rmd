@@ -1,0 +1,26 @@
+---
+title: "About the Extras"
+menu:
+  extras:
+    parent: Overview
+    weight: 1
+type: docs
+weight: 1
+---
+
+```{r load_packages, message=FALSE, warning=FALSE, echo=FALSE}
+library(tidyverse)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+There's no such thing as visual learner or any other kind of learner ([e.g. Rogowsky, Calhoun & Tallal, 2015](https://www.apa.org/pubs/journals/features/edu-a0037478.pdf)). With that said, reinforcement using different mediums such as presentations, videos, visualizations, walkthroughs, and so forth can help and will be provided in this part of the site.
+
+<center>
+`r fa("clock", fill = "#fc913a")` &nbsp <i>Posted frequently</i> 
+</center>
+
+### Need Help?
+
+`r blogdown::shortcode("meetings")`

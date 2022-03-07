@@ -1,0 +1,107 @@
+---
+title: "Causation and Criteria"
+linktitle: "Week 4: Causation and Criteria"
+output:
+  rmarkdown::html_document
+menu:
+  extras:
+    parent: Extras
+    weight: 4
+type: docs
+weight: 2
+editor_options: 
+  chunk_output_type: console
+---
+
+<style>
+td, th, tr, table {
+    border: 0 !important;
+    border-spacing:0 !important;
+  }
+</style>
+
+```{r load_packages, echo = FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+## Evaluation Phase
+We are currently in the pre-evaluation phase. This involves
+
+```{r echo = FALSE}
+
+unchecked <- as.character(fontawesome::fa("circle", fill = "#e4e4e4", height = "15px"))
+
+checked <- as.character(fontawesome::fa("check-circle", fill = "#428bca", height = "15px"))
+
+pre <- tibble(
+  
+  phase = c("Pre-Evaluation",
+            "",
+            ""),
+  
+  task = c("Gathering a team",
+           "Thinking about potential programs",
+           "Submitting a prospectus"),
+  
+  current <- c(unchecked,
+               checked,
+               unchecked)
+  
+)
+
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+  pre %>%
+  kbl(col.names = c("Phase", "Task", "Current"),
+      "html",
+      escape = FALSE,
+      align = 'llc')  %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "20em") %>% 
+  row_spec(0:3, extra_css = 'vertical-align: middle !important;', color = "#ffffff", background = "transparent") 
+```
+</center>
+
+## Causal Models in Evaluation
+
+Take a look at the following resources below to learn about *causal models*
+
+1. Read a basic overview
+```{r echo=FALSE}
+pdf_link <- function() {
+ paste0("<a href='/readings/Rogers%20(2000).pdf' target='blank'>", "<img src='/logos/pdf-ico.png'  alt='Rogers (2000)' width='35'>", "</a>")
+}
+
+textitems <- tibble(
+  
+  pdf <- c(pdf_link(),
+           "Rogers (2000)"
+            )
+  )
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(textitems, 
+      col.names = c(""),
+      escape = FALSE,
+      align = 'cc') %>%
+  kable_paper(full_width = FALSE) %>%
+  column_spec(1, width = "20em", color = "#ffffff", extra_css = 'vertical-align: middle !important;', background = "transparent")
+```
+</center>
+
+2. Take a look at a guide from UNICEF [Overview: Strategies for Causal Attribution](https://web.archive.org/web/20150424163020/http://devinfolive.info/impact_evaluation/img/downloads/Overview_Strategies_for_Causal_Attribution_ENG.pdf)
+
+3. View an explanation of the process 
+
+<p align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4lv3DJFBLqI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>

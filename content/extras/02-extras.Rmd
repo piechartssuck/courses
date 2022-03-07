@@ -1,0 +1,77 @@
+---
+title: "Rethinking the Way You Think"
+linktitle: "Week 2: Rethinking the Way You Think"
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  extras:
+    parent: Extras
+    weight: 2
+type: docs
+weight: 2
+editor_options: 
+  chunk_output_type: console
+---
+
+
+<style>
+td, th, tr, table {
+    border: 0 !important;
+    border-spacing:0 !important;
+  }
+</style>
+
+```{r load_packages, echo = FALSE, message=FALSE, warning=FALSE}
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+## Evaluation Phase
+
+We are currently in the pre-evaluation phase. This involves
+
+```{r echo = FALSE}
+
+unchecked <- as.character(fontawesome::fa("circle", fill = "#e4e4e4", height = "15px"))
+
+checked <- as.character(fontawesome::fa("check-circle", fill = "#428bca", height = "15px"))
+
+pre <- tibble(
+  
+  phase = c("Pre-Evaluation",
+            "",
+            ""),
+  
+  task = c("Gathering a team",
+           "Thinking about potential programs",
+           "Submitting a prospectus"),
+  
+  completed <- c(unchecked,
+               unchecked,
+               unchecked)
+  
+)
+
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+  pre %>%
+  kbl(col.names = c("Phase", "Task", "Current"),
+      "html",
+      escape = FALSE,
+      align = 'llc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em", color = "#ffffff") %>%
+  column_spec(2, width = "10em", color = "#ffffff") %>%
+  column_spec(3, width = "20em", color = "#ffffff") %>% 
+  row_spec(0:3, extra_css = 'vertical-align: middle !important;', color = "#ffffff", background = "transparent") 
+```
+</center>
+
+## Recommended Materials
+For a look at what to consider when choosing teammates, take a look at [a] [Manager's guide to evaluation](https://www.betterevaluation.org/en/managers_guide) by *Jane Davidson*.

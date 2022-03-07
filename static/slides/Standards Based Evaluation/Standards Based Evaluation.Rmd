@@ -1,0 +1,383 @@
+---
+title: 'Standards Based Evaluation'
+subtitle: 'Benchmarking and Costs'
+author: Dr. Abhik Roy
+output: 
+ xaringan::moon_reader:
+   css: ['xaringan-themer.css', 'custom.css']
+---
+
+```{r load_packages, echo = FALSE, message=FALSE, warning=FALSE}
+library(dplyr)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+library(here)
+library(xaringanthemer)
+```
+
+```{r echo = FALSE}
+xaringanthemer::style_duo(
+  primary_color = "#212121",
+  secondary_color = "#6ac4cd",
+  header_font_google = xaringanthemer::google_font("Jost", "600"),
+  text_font_google   = xaringanthemer::google_font("Jost", "400")
+)
+
+xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "tachyons"))
+```
+
+
+#  Welcome
+
+As usual, I've tried to channel Morgan Freeman but he's having none of it. Hopefully my voice won't put you to sleep.
+
+---
+
+#  Things to Evaluate
+
+>- Evaluation criteria
+
+>- Evaluation standards
+
+>- Performance
+
+>- Program costs
+
+>- Program goals
+
+<br>
+<center>
+<audio controls preload="auto">
+  <source src="audio/standards/S1 Things to Evaluate.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+
+---
+
+# Things to Consider 
+
+>- Everything on the [JCSEE](https://evaluationstandards.org/program/)!
+
+>- Location
+
+>- Stakeholder Needs
+
+>- Sponsor Needs
+
+>- Your costs
+
+<br>
+<center>
+<audio controls preload="auto">
+  <source src="audio/standards/S2 Things to Consider.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+
+---
+
+# Goals Include
+
+>- Preparatory conditions
+  + What does it take to be ready to target a goal? 
+  + Progress toward that state is a goal.
+
+>- Intended operations
+  + What a program tries to implement to achieve a goal is a type of goal.
+
+>- Targeted outcomes
+  + Short-term (initial)
+  + Medium-term (intermediate)
+  + Long-term (distant)
+
+<br>
+<center>
+<audio controls preload="auto">
+  <source src="audio/standards/S3 Goals.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+
+---
+
+#  Whose Goals are Important? 
+
+It's not so clear cut!
+
+<br>
+<center>
+<audio controls preload="auto">
+  <source src="audio/standards/S4 Whose Goals.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+
+---
+
+#  How to Decide Which Goals Matter Most? 
+
+>- Talk to stakeholders/sponsors; explicitly ask their perspective on recipient needs, program goals, and evaluation goals.
+
+>- Figure out other ways to find needs.
+
+>- Read all available program documentation.
+
+>- Develop a logic model connecting needs through program activities, outputs and outcomes associated with goals.
+
+<br>
+<center>
+<audio controls preload="auto">
+  <source src="audio/standards/S5 Deciding on Goals.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+
+---
+
+# Logic Model Parts
+
++ **Inputs**. what resources go into a program (aka investments)
+
++ **Outputs**. what is produced through those activities
+  + **Activities**. what activities the program assumes (what actually occurs)
+  + **Participation**. who is part of the program and how are they served (who is served like stakeholders and sponsors and what engagement they have)
+
++ **Outcomes**. changes or benefits that result from the program
+  + **Short**. Learning (awareness, knowledge, attitudes, skills, opinions, aspirations, motivations)
+  + **Medium** *or* **Intermediate**. Action (behavior, practice, decisions, policies)
+  + **Long**. Consequences (civic, economic, environmental, political, professional, social, etc.)
+
+<br>
+<center>
+<audio controls preload="auto">
+  <source src="audio/standards/S6 Logic Model Parts.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+
+---
+
+##  Basic Logic Model
+
+<center>
+<img src="img/Blank Logic Model_transparent.png" width="70%" height="70%" style="background-color:#212121;"/>
+</center>
+
+<br>
+<center>
+<audio controls preload="auto">
+  <source src="audio/standards/S7 Blank Logic Model.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+<br>
+
+.pull-left[
+*Download a [high quality PDF](docs/Blank Logic Model.pdf){target='_blank'}!*
+]
+
+.pull-right[
+*More [types of logic models](https://fyi.extension.wisc.edu/programdevelopment/logic-models/)!*
+]
+
+---
+
+##  Example Logic Model 
+
+<center>
+<img src="img/Example Logic Model_transparent.png" width="70%" height="70%" style="background-color:#212121;"/>
+</center>
+<br>
+<center>
+<audio controls preload="auto">
+  <source src="audio/standards/S8 Example Logic Model.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+<br>
+
+.pull-left[
+*Download a [high quality PDF](docs/Example Logic Model.pdf)!*
+]
+
+.pull-right[
+*More [examples of logic models](https://fyi.extension.wisc.edu/programdevelopment/logic-models/bibliography/)!*
+]
+
+---
+
+## Identifying Criteria 
+
+What matters enough to measure given what you know about all the other factors? Especially,
+
++ Any relevant past performance data
+
++ Costs
+
++ Existing literature and standards
+
++ Needs and Goals
+
+<br>
+<center>
+<audio controls preload="auto">
+  <source src="audio/standards/S9 Identifying Criteria.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+
+---
+
+## Estimating Cost
+
++ Often very hard to do well
+
++ Almost always addressed in a relative way
+  
+  + Relative resource intensity of alternative programs (including development and/or retraining costs)
+  + Proportion of resources allocated to different program activities (logic modeling can be very helpful for thinking about this)
+
+<br>
+<center>
+<audio controls preload="auto">
+  <source src="audio/standards/S10 Cost Analysis.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+
+<br>
+
+---
+
+## Measuring Performances
+
+>- Sponsor perception
+
+>- Staff performance / perception
+
+>- Stakeholder performance / perception
+
+<br>
+In a nutshell
+
++ Who is best positioned to really know???
+
++ Multiple times, multiple perspectives
+
+<br>
+<center>
+<audio controls preload="auto">
+  <source src="audio/standards/S11 Measuring Performance.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+
+---
+
+### Develop an Evaluation Purpose Statement
+
+*Step 1*. Critique sample evaluation purpose statements (see following slides) to better understand what might go into crafting a good one.
+
+*Step 2*. Write preliminary evaluation statement for the program you'll evaluate.
+
+*Step 3*. Write 3 - 7 potential evaluation questions relevant to the evaluation purpose statement you wrote for step 2.
+
+<br>
+<center>
+<audio controls preload="auto">
+  <source src="audio/standards/S12 Evaluation Purpose Activity.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+
+---
+
+## Thinking About Evaluation Statements
+
+In the next two slides, take a look at the sample evaluation purpose statements and *for each* try to identify:
+
++ What is being evaluated?
+
++ How will results be used?
+
++ What kind of evaluation (developmental, formative, or summative)?
+
++ How could the purpose statement be improved?
+
+<br>
+<center>
+<audio controls preload="auto">
+  <source src="audio/standards/S13 Evaluation Purpose Questions.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+
+---
+
+## Sample Evaluation Statements (1/2)
+
+<br>
+<center>
+<img src="img/Purposes of Evaluation 1.png" width="80%" height="80%"/>
+</center>
+<br>
+<center>
+<img src="img/Purposes of Evaluation Copyright.png" width="80%" height="80%"/>
+</center>
+
+---
+
+## Sample Evaluation Statements (2/2)
+
+<br>
+<center>
+<img src="img/Purposes of Evaluation 2.png" width="80%" height="80%"/>
+</center>
+<br>
+<center>
+<img src="img/Purposes of Evaluation Copyright.png" width="80%" height="80%"/>
+</center>
+
+---
+
+# Tips
+
++ Be clear
+
++ Be concise 
+
++ Be truthful
+
++ Get buy in
+
++ Be confident but **never** demeaning or overpowering
+
++ Don’t overpromise and underdeliver!
+
++ Write in a way that's meaningful to your sponsor(s)/stakeholder(s)
+
+<br>
+<center>
+<audio controls preload="auto">
+  <source src="audio/standards/S14 Tips.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+
+---
+
+# And That's It
+
+Remember that logic models may seem unnecessary but its one clear way to visually show what a program looks like before and after an evaluation. If you have any questions, please feel free to reach out.
+
+<center>
+<br><br>
+<div class="fade_rule"></div>  
+<br><br>
+</center>
+<br><br><br><br><br><br><br><br><br>
+<center>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><br />This work is licensed under a <br /><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>
+</center>

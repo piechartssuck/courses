@@ -1,0 +1,72 @@
+---
+title: "The Importance of Knowing What's Important"
+linktitle: "Week 6: The Importance of Knowing What's Important"
+output:
+  rmarkdown::html_document
+menu:
+  extras:
+    parent: Extras
+    weight: 6
+type: docs
+weight: 2
+editor_options: 
+  chunk_output_type: console
+---
+
+<style>
+td, th, tr, table {
+    border: 0 !important;
+    border-spacing:0 !important;
+  }
+</style>
+
+```{r load_packages, echo = FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+## Evaluation Phase
+
+We are currently in the evaluation planning phase. This involves
+
+```{r echo = FALSE}
+
+unchecked <- as.character(fontawesome::fa("circle", fill = "#e4e4e4", height = "15px"))
+
+checked <- as.character(fontawesome::fa("check-circle", fill = "#428bca", height = "15px"))
+
+plan <- tibble(
+  
+  phase = c("Planning",
+            ""),
+  
+  task = c("Discovering needs",
+           "Suggesting a course of action"),
+  
+  current <- c(checked,
+               unchecked)
+  
+)
+
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+  plan %>%
+  kbl(col.names = c("Phase", "Task", "Current"),
+      "html",
+      escape = FALSE,
+      align = 'llc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "20em") %>% 
+  row_spec(0:2, extra_css = 'vertical-align: middle !important;', color = "#ffffff", background = "transparent")
+```
+</center>
+
+## More Logic Models
+
+As you begin to think about a logic model, you do not have to use the one provided. Please look around for others. For example, you may want to consider the comprehensive [logic models](https://fyi.extension.wisc.edu/programdevelopment/logic-models/) repository in the [Division of Extension @ The University of Wisconsin](https://fyi.extension.wisc.edu/programdevelopment/). 

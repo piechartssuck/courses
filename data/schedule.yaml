@@ -1,0 +1,119 @@
+lessons:
+
+  - title: 'Who Are You Really?'
+    session: 1
+    date: 'Jan 11, 2022'
+    readings: "01-readings"
+  #  materials: "01-materials"
+  #  extras: "01-extras"
+    tasks: "01-tasks"
+    due: "01-due"
+
+  - title: 'Rethinking the Way You Think'
+    session: 2
+    date: "Jan 18, 2022"
+    readings: "02-readings"
+    materials: "02-materials"
+    extras: "02-extras"
+    tasks: "02-tasks"
+    due: "02-due"
+
+  - title: 'Aims, Scope, and Sequencing'
+    session: 3
+    date: "Jan 25, 2022"
+    readings: "03-readings"
+    materials: "03-materials"
+    extras: "03-extras"
+    tasks: "03-tasks"
+    due: "03-due"
+
+  - title: 'Causation and Criteria'
+    session: 4
+    date: "February 1, 2022"
+    readings: "04-readings"
+    materials: "04-materials"
+    extras: "04-extras"
+    tasks: "04-tasks"
+    due: "04-due"
+
+  - title: "Who's Values Are Valuable?"
+    session: 5
+    date: "February 8, 2022"
+    readings: "05-readings"
+    materials: "05-materials"
+    extras: "05-extras"
+    tasks: "05-tasks"
+    due: "05-due"
+
+  - title: "The Importance of Knowing What's Important"
+    session: 6
+    date: "February 15, 2022"
+    readings: "06-readings"
+    materials: "06-materials"
+    extras: "06-extras"
+    tasks: "06-tasks"
+    due: "06-due"
+
+  - title: 'Making Sense and Interpreting Nonsense'
+    session: 7
+    date: "Febuary 22, 2022"
+    readings: "07-readings"
+    materials: "07-materials"
+    extras: "07-extras"
+    tasks: "07-tasks"
+    due: "07-due"
+
+  # - title: 'Propose This!'
+  #   session: 8
+  #   date: "March 9, 2021"
+  #   due: "08-due"
+  #   tasks: "08-tasks"
+  #
+  # - title: 'Whose Side Are You on Anyway?'
+  #   session: 9
+  #   date: "March 16, 2021"
+  #   readings: "09-readings"
+  #   materials: "09-materials"
+  #   extras: "09-extras"
+  #   due: "09-due"
+  #
+  # - title: 'Onboarding'
+  #   session: 10
+  #   date: "March 23, 2021"
+  #   materials: "10-materials"
+  #   due: "10-due"
+  #
+  # - title: 'All Mixed Up'
+  #   session: 11
+  #   date: "March 30, 2021"
+  #   readings: "11-readings"
+  #   materials: "11-materials"
+  #   due: "11-due"
+  #
+  # - title: 'Fine Tuning Instruments'
+  #   session: 12
+  #   date: "April 6, 2021"
+  #   tasks: "12-materials"
+  #   due: "12-due"
+  #
+  # - title: 'The Short Road Ahead'
+  #   session: 13
+  #   readings: "13-readings"
+  #   materials: "13-materials"
+  #   extras: "13-extras"
+  #   tasks: "13-tasks"
+  #   due: "13-due"
+  #
+  # - title: 'Finals'
+  #   session: 14
+  #   date: "November 22, 2021"
+  #   tasks: "13-tasks"
+  #   due: "13-due"
+  #
+  # - title: 'Presentations'
+  #   session: 15
+  #   date: "November 22, 2021"
+  #   tasks: "13-tasks"
+  #   due: "13-due"
+
+# command + /

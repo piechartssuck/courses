@@ -1,0 +1,96 @@
+---
+title: "Making Sense and Interpreting Nonsense"
+linktitle: "Week 7: Making Sense and Interpreting Nonsense"
+output:
+  rmarkdown::html_document
+menu:
+  extras:
+    parent: Extras
+    weight: 7
+type: docs
+weight: 2
+editor_options: 
+  chunk_output_type: console
+---
+
+<style>
+td, th, tr, table {
+    border: 0 !important;
+    border-spacing:0 !important;
+  }
+</style>
+
+```{r load_packages, echo = FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+## Evaluation Phase
+
+We are currently in the evaluation planning phase. This involves
+
+```{r echo = FALSE}
+
+unchecked <- as.character(fontawesome::fa("circle", fill = "#e4e4e4", height = "15px"))
+
+checked <- as.character(fontawesome::fa("check-circle", fill = "#428bca", height = "15px"))
+
+plan <- tibble(
+  
+  phase = c("Planning",
+            ""),
+  
+  task = c("Discovering needs",
+           "Suggesting a course of action"),
+  
+  current <- c(unchecked,
+               checked)
+  
+)
+
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+  plan %>%
+  kbl(col.names = c("Phase", "Task", "Current"),
+      "html",
+      escape = FALSE,
+      align = 'llc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "20em") %>% 
+  row_spec(0:2, extra_css = 'vertical-align: middle !important;', color = "#ffffff", background = "transparent")
+```
+</center>
+
+## Logic Model Checklist
+
+If you like checklists or a review of items that should be included in a logic model, take a look at the <span style="color:#6ac4cd;font-weight:italic">Checklist of Key Considerations for Development of Program Logic Models</span>
+
+```{r echo=FALSE}
+pdf_link <- function() {
+ paste0("<a href='/handouts/MacDonald%20(2018).pdf' target='blank'>", "<img src='/logos/pdf-ico.png'  alt='MacDonald (2018)' width='35'>", "</a>")
+}
+
+textitems <- tibble(
+  
+  pdf <- c(pdf_link(),
+           "MacDonald (2018)"
+            )
+  )
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(textitems, 
+      col.names = c(""),
+      escape = FALSE,
+      align = 'cc') %>%
+  kable_paper(full_width = FALSE) %>%
+  column_spec(1, width = "20em", color = "#ffffff", extra_css = 'vertical-align: middle !important;', background = "transparent")
+```
+</center>
