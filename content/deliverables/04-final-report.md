@@ -196,9 +196,9 @@ Create and disseminate an evaluation report[^APA] using the criteria outlined be
 <i>It is highly unlikely that a score will be changed unless there is an egregious error on my end so please check your entire document over prior to submission.</i>
 
 [^writing]: Keep in mind that evaluation is 10% reporting and 90% politics! You may find yourself walking a fine line in reporting findings while attempting to utilize a welcoming tone and readable narrative in your writeup. If you would like hints or suggestions, please feel free to reach out.
-<br>
+
 [^consistency]:For example, all tables should follow the same structure and aesthetic, color palettes should remain the same for the same variable throughout, etc.
-<br>
+
 [^datavis]: If you are unsure how to write an executive summary, try <a href="https://betterevaluation.org/en/evaluation-options/executive_summaries">Dr. Davidson’s site</a> for some hints.
-<br>
+
 [^APA]: Please note that APA 7th edition formatting is not required.
