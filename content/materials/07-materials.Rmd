@@ -172,8 +172,7 @@ library(knitr)
 library(kableExtra)
 ```
 
-
-We continue with the third week of meetings. This week we'll
+We continue with the fourth week of meetings. This week we'll
 
 <div style="padding-left: 60px;">
 
@@ -214,7 +213,7 @@ kable(textitems,
 </center>
 
 ## Goal Free versus Goal Based
-Go through this excellent [slideshow](/handouts/GFEvsGFB.pdf){target="_blank"} assessing the differences between a goal-based evaluation (GBE) versus a goal-free evaluation (GFE) created by Dr. Brandon Youker. While it is fantastic and well worth reviewing, please excuse the few instances of Comic Sans^[*Hint: Whether you love it, hate it, or don't have an opinion, just don't use Comic Sans. It is generally* [*less believable*](https://opinionator.blogs.nytimes.com/2012/08/08/hear-all-ye-people-hearken-o-earth/) *than other standard fonts*.]
+Go through this excellent [slideshow](/handouts/GFEvsGFB.pdf) assessing the differences between a goal-based evaluation (GBE) versus a goal-free evaluation (GFE) created by Dr. Brandon Youker. While it is fantastic and well worth reviewing, please excuse the few instances of Comic Sans^[*Hint: Whether you love it, hate it, or don't have an opinion, just don't use Comic Sans. It is generally* [*less believable*](https://opinionator.blogs.nytimes.com/2012/08/08/hear-all-ye-people-hearken-o-earth/) *than other standard fonts*.]
 
 
 ```{r echo=FALSE}

@@ -69,14 +69,15 @@ lessons:
   #   due: "08-due"
   #   tasks: "08-tasks"
   #
-  # - title: 'Whose Side Are You on Anyway?'
-  #   session: 9
-  #   date: "March 16, 2021"
-  #   readings: "09-readings"
-  #   materials: "09-materials"
-  #   extras: "09-extras"
-  #   due: "09-due"
-  #
+  - title: 'Whose Side Are You on Anyway?'
+    session: 9
+    date: "March 8, 2022"
+    readings: "09-readings"
+    materials: "09-materials"
+    extras: "09-extras"
+    tasks: "09-tasks"
+    due: "09-due"
+
   # - title: 'Onboarding'
   #   session: 10
   #   date: "March 23, 2021"

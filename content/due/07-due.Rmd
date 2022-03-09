@@ -29,14 +29,14 @@ wk_post <-
     Description = c("Respond to two posts on <a style='color:#ff8384;'>#important-criteria</a>",
                     "Respond to two posts on <a style='color:#ff8384;'>#merit-disagreement</a>",
                     'Read <i>Synthesis Methodology</i> in Davidson (2004)',
-                     "Post on <a style='color:#ff8384;'>#views-on-synthesis</a>",
+                    "Post on <a style='color:#ff8384;'>#views-on-synthesis</a>",
                     'Read <i>Putting it All Together</i> in Davidson (2004)',
                     "Post on <a style='color:#ff8384;'>#including-kec-parts</a>",
                     "Read <i>Theory Driven Evaluations</i> by Chen (2012)",
                     "Post on <a style='color:#ff8384;'>#tde</a>",
                     "Plan on meeting this week via Zoom",
                     "Take a look at a simplistic breakdown of multiple evaluation approaches in <i>Collaborative, Participatory, & Empowerment Evaluation</i>",
-                    "The review evaluations that are stakeholder indpenedent or dependent in <i>Goal-Free Evaluation and Goal-Based
+                    "Review evaluations that are stakeholder indpenedent or dependent in <i>Goal-Free Evaluation and Goal-Based
 Evaluation</i>",
                     "Go through the slideshow <span style='color:#6ac4cd;font-weight:bold'>A Short Course on Evaluation Models</span>",
                     "Go through the slideshow <span style='color:#6ac4cd;font-weight:bold'>Data Collection</span>",

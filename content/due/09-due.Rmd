@@ -1,0 +1,97 @@
+---
+title: "Whose Side Are You on Anyway?"
+linktitle: "Week 9: Whose Side Are You on Anyway?"
+output:
+  rmarkdown::html_document
+menu:
+  due:
+    parent: "To Do List"
+    weight: 9
+type: docs
+weight: 2
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r load_packages, echo = FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+```{r eval = TRUE, echo = FALSE}
+
+wk_post <- 
+  
+  tibble(
+    
+    Description = c("Respond to two posts on <a style='color:#ff8384;'>#including-kec-parts</a>",
+                    "Respond to two posts on <a style='color:#ff8384;'>#tde</a>",
+                    "Respond to two posts on <a style='color:#ff8384;'>#views-on-synthesis</a>",
+                    "Get a refreresher on <i>participatory evaluation</i>",
+                    "Post on <a style='color:#ff8384;'>#reasoning-participatory-evaluations</a>",
+                    "Take a look at most of the publicly availible checklists at the <i>Evauation Checklist Project</i>",
+                    "Preview criteria for the <i>Final Report</i>",
+                    "Preview criteria for the <i>Presentation of Results</i>"
+                    ),
+    
+    
+    Details = c("<a href='/readings/09-readings/#respond-to-posts'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+                "<a href='/readings/09-readings/#respond-to-posts'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+                "<a href='/readings/09-readings/#respond-to-posts'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+                "<a href='/materials/09-materials/#a-refresher'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+                "<a href='/materials/09-materials/#post'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+                "<a href='/extras/09-extras/#evaluation-checklists'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+               "<a href='/deliverables/04-final-report/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+                "<a href='/deliverables/05-presentation-of-results/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
+               ),
+    
+    Icon = c("slack", 
+             "slack",
+             "slack",
+             "", 
+             "slack",
+             "",
+             "ecampus",
+             "ecampus"),
+    
+    Site = c("https://2022edp617.slack.com/archives/C0342HMFXB8",
+             "https://2022edp617.slack.com/archives/C033UKWRQB1",
+             "https://2022edp617.slack.com/archives/C0346A5MQFP",
+             "",
+             "https://2022edp617.slack.com/archives/C03656YDVS9",
+             "",
+             "https://ecampus.wvu.edu",
+             "https://ecampus.wvu.edu")
+  )
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+wk_post %>%
+  mutate(Icon = case_when(
+    str_detect(`Icon`, "slack") ~ '<img src="/logos/slack-ico.png" alt="Slack icon" width="25">',
+    str_detect(`Icon`, "ecampus") ~ '<img src="/logos/wvu-gold-ico.png" alt="Slack icon" width="25">',
+    str_detect(`Icon`, "library") ~ '<img src="/logos/library-ico.png" alt="Slack icon" width="25">',
+    TRUE ~ NA_character_
+  )
+  ) %>%
+  mutate(Site = na_if(Site, "")) %>%
+  mutate(Link = case_when(
+    !is.na(Icon) ~ paste0("<a href=",Site," target='_blank'>",Icon,"</a>"),
+    TRUE ~ NA_character_
+  )
+  ) %>%
+  select(-Icon, -Site) %>% 
+  mutate_all(replace_na,"") %>%
+  kbl("html",
+      escape = FALSE,
+      align = 'lcc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "25em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>%
+  column_spec(2:3, width = "5em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(0, extra_css = 'vertical-align: middle !important;', color = "#f7f7f7") %>%
+  row_spec(1:7, extra_css = 'vertical-align: middle !important;') 
+```
+</center>

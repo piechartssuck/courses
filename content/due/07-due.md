@@ -80,7 +80,7 @@ editor_options:
    <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;">  </td>
   </tr>
   <tr>
-   <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;"> The review evaluations that are stakeholder indpenedent or dependent in <i>Goal-Free Evaluation and Goal-Based
+   <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;"> Review evaluations that are stakeholder indpenedent or dependent in <i>Goal-Free Evaluation and Goal-Based
 Evaluation</i> </td>
    <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;"> <a href="/materials/07-materials/#goal-free-versus-goal-based"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a> </td>
    <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;">  </td>

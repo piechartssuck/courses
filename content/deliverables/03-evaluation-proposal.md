@@ -33,15 +33,15 @@ ul {
 
 <div style="padding-left: 60px;">
 
-> <span style="color:#eaeaea">At the earliest right after the stakeholder interview, focus group, etc.</span>
+> <span style="color:#eaeaea">at the earliest right after the stakeholder interview, focus group, etc.</span>
 
-> <span style="color:#eaeaea">At the latest as soon as your team has submitted the [Needs Assessment](/deliverables/02-needs-assessment/)</span> 
+> <span style="color:#eaeaea">at the latest as soon as your team has submitted the [Needs Assessment](/deliverables/02-needs-assessment/)</span> 
 
 </div>
 
 ### <span style="color:#97ebf4">Criteria</span>
 
-Much of the information from the previous task will help provide a context for the proposal, but the narrative should be written to address both (1) the need for your evaluation and (2) details on how the team intends to accomplish the entire process. To accomplish this, keep in mind the following must be addressed in your writing 
+Much of the information from the previous task will help provide a context for the proposal, but the narrative should be written to address both (1) the need for your evaluation and (2) details on how the team intends to administer the evaluation itself. To accomplish this, keep in mind the following must be addressed in your writing 
 
 <div style="padding-left: 60px;">
 
@@ -65,7 +65,7 @@ Much of the information from the previous task will help provide a context for t
 
 This submission is due in <b>one week</b> following the [Needs Assessment](/deliverables/02-needs-assessment/) submission date. For an exact timeframe, please check [eCampus](https://ecampus.wvu.edu/). 
 
-The following components are required for your submission in the order listed below and must be uploaded as a single cohesive document. Barring items 1 and 2, all other criteria must be in standard APA 7th edition formatting. The following components are required for your submission in order and must be submitted as a single document. 
+Barring items 1 and 2, all other criteria must be in standard APA 7th edition formatting. The following components are required for your submission in order and must be attached as a single document. 
 
 1. A cover page with your name
 
@@ -82,7 +82,7 @@ The following components are required for your submission in the order listed be
 
 6. Any additional  materials you believe will help in ensuring that your proposal is complete and valid. Classify these by type and separate them into differing Appendices. There is no limit to the number of Appendices.
 
-6. Filename in *either* of the following formats
+7. Filename in *either* of the following formats
 
 <div style="padding-left: 60px;">
 

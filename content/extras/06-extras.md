@@ -25,6 +25,7 @@ td, th, tr, table {
 
 
 ## Evaluation Phase
+
 We are currently in the evaluation planning phase. This involves
 
 

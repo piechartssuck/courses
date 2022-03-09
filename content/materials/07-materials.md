@@ -175,7 +175,7 @@ $(document).ready(function(){
 });
 </script>
 
-We continue with the third week of meetings. This week we’ll
+We continue with the fourth week of meetings. This week we’ll
 
 <div style="padding-left: 60px;">
 
@@ -216,7 +216,7 @@ Lipsey (2000)
 
 ## Goal Free versus Goal Based
 
-Go through this excellent <a href="/handouts/GFEvsGFB.pdf" target="_blank">slideshow</a> assessing the differences between a goal-based evaluation (GBE) versus a goal-free evaluation (GFE) created by Dr. Brandon Youker. While it is fantastic and well worth reviewing, please excuse the few instances of Comic Sans[^1]
+Go through this excellent [slideshow](/handouts/GFEvsGFB.pdf) assessing the differences between a goal-based evaluation (GBE) versus a goal-free evaluation (GFE) created by Dr. Brandon Youker. While it is fantastic and well worth reviewing, please excuse the few instances of Comic Sans[^1]
 
 <center>
 <table class=" lightable-paper" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;">
