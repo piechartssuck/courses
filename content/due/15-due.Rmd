@@ -1,0 +1,142 @@
+---
+title: "Endgame"
+linktitle: "Week 15: Endgame"
+output:
+  rmarkdown::html_document
+menu:
+  due:
+    parent: "To Do List"
+    weight: 15
+type: docs
+weight: 2
+editor_options: 
+  chunk_output_type: console
+---
+
+`r blogdown::shortcode("aes-header")`
+
+```{r load_packages, echo = FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+```{r eval = TRUE, echo = FALSE}
+
+wk_post <- 
+  
+  tibble(
+    
+    Description = c("Review criteria for the <i>Presentation of Results</i> due this week",
+                    "Comment on every team's evaluation report at <a style='color:#5eb0e5;'>\\ #evaluation-report</a>",
+                    "Look through and view every team's evaluation presentation at <a style='color:#5eb0e5;'>\\ #presentation-of-results</a>",
+                    "Take the <i>Reflecting on Program Evaluation</i> survey using the unique link sent to your WVU Mix e-mail account",
+                    "Submit a copy of your submission reciept via e-mail"
+                    ),
+    
+    Details = c("<a href='/deliverables/05-presentation-of-results/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+                "<a href='/materials/15-materials/#post-and-look-through-evaluationspresentations'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+                                "<a href='/materials/15-materials/#post-and-look-through-evaluationspresentations'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+                "<a href='/materials/15-materials/#reflecting-on-program-evaluation'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+                "<a href='/materials/15-materials/#acknowledgement'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
+               ),
+    
+    Icon_e = c("ecampus",
+               "",
+               "",
+               "",
+               ""),
+    
+    Icon_s = c("slack",
+               "slack",
+               "slack",
+               "",
+               ""),
+    
+    Icon_q = c("",
+               "",
+               "",
+               "qualtrics",
+               ""),
+    
+    Icon_m = c("",
+               "",
+               "",
+               "",
+               "email"),
+    
+    Site_e = c("https://ecampus.wvu.edu",
+               "",
+               "",
+               "",
+               ""),
+    
+    Site_s = c("https://2022edp617.slack.com/archives/C03DLHDTQTX",
+               "https://2022edp617.slack.com/archives/C03DLHDTQTX",
+               "https://2022edp617.slack.com/archives/C03DLHDTQTX",
+               "",
+               ""),
+    
+    Site_q = c("",
+               "",
+               "",
+               "https://wvu.qualtrics.com",
+               "")
+  )
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+wk_post %>%
+  mutate(Icon_e = case_when(
+    str_detect(`Icon_e`, "ecampus") ~ '<img src="/logos/wvu-gold-ico.png" alt="Slack icon" width="25">',
+    TRUE ~ NA_character_
+    )
+  ) %>%
+  mutate(Icon_s = case_when(
+    str_detect(`Icon_s`, "slack") ~ '<img src="/logos/slack-ico.png" alt="Slack icon" width="25">',
+    TRUE ~ NA_character_
+    )
+  ) %>%
+  mutate(Icon_q = case_when(
+    str_detect(`Icon_q`, "qualtrics") ~ '<img src="/logos/qualtrics-ico.png" alt="Qualtrics icon" width="27">',
+    TRUE ~ NA_character_
+    )
+  ) %>%
+  mutate(Icon_m = case_when(
+    str_detect(`Icon_m`, "email") ~ '<img src="/logos/email-ico.png" alt="Email icon" width="27">',
+    TRUE ~ NA_character_
+    )
+  ) %>%
+  mutate(Site_e = na_if(Site_e, "")) %>%
+  mutate(Site_s = na_if(Site_s, "")) %>%
+  mutate(Site_q = na_if(Site_q, "")) %>%
+  mutate(Link_e = case_when(
+    !is.na(Icon_e) ~ paste0("<a href=",Site_e," target='_blank'>",Icon_e,"</a>"),
+    TRUE ~ NA_character_
+    )
+  ) %>%
+  mutate(Link_s = case_when(
+    !is.na(Icon_s) ~ paste0("<a href=",Site_s," target='_blank'>",Icon_s,"</a>"),
+    TRUE ~ NA_character_
+    )
+  ) %>%
+  mutate(Link_q = case_when(
+    !is.na(Icon_q) ~ paste0("<a href=",Site_q," target='_blank'>",Icon_q,"</a>"),
+    TRUE ~ NA_character_
+    )
+  ) %>%
+  select(-Icon_e, -Icon_s,  -Icon_q, -Site_e, -Site_s, -Site_q) %>% 
+  select(Description, Details, Link_e, Link_s, Link_q, Icon_m) %>%
+  mutate_all(replace_na,"") %>%
+  kbl(col.names = c("Description", "Details", "eCampus", "Slack", "Qualtrics", "Email"),
+      "html",
+      escape = FALSE,
+      align = 'lcc') %>%
+  kable_paper(full_width = FALSE) %>%
+  column_spec(1, width = "25em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>%
+  column_spec(2:3, width = "5em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(0:3, extra_css = 'vertical-align: middle !important;', color = "#f7f7f7", background = "transparent")
+```
+</center>

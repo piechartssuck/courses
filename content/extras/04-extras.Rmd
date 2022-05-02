@@ -13,12 +13,7 @@ editor_options:
   chunk_output_type: console
 ---
 
-<style>
-td, th, tr, table {
-    border: 0 !important;
-    border-spacing:0 !important;
-  }
-</style>
+`r blogdown::shortcode("aes-header")`
 
 ```{r load_packages, echo = FALSE, message=FALSE, warning=FALSE}
 library(tidyverse)
@@ -65,7 +60,7 @@ pre <- tibble(
   column_spec(1, width = "10em") %>%
   column_spec(2, width = "10em") %>%
   column_spec(3, width = "20em") %>% 
-  row_spec(0:3, extra_css = 'vertical-align: middle !important;', color = "#ffffff", background = "transparent") 
+  row_spec(0:3, extra_css = 'vertical-align: middle !important;', color = "#f7f7f7", background = "transparent") 
 ```
 </center>
 

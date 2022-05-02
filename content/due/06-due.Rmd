@@ -13,6 +13,8 @@ editor_options:
   chunk_output_type: console
 ---
 
+`r blogdown::shortcode("aes-header")`
+
 ```{r load_packages, echo = FALSE, message=FALSE, warning=FALSE}
 library(tidyverse)
 library(fontawesome)
@@ -26,12 +28,12 @@ wk_post <-
   
   tibble(
     
-    Description = c("Respond to two posts on <a style='color:#ff8384;'>#evaluation-politicization</a>",
-                    "Respond to two posts on <a style='color:#ff8384;'>#which-values</a>",
+    Description = c("Respond to two posts on <a style='color:#ff8384;'>\\ #evaluation-politicization</a>",
+                    "Respond to two posts on <a style='color:#ff8384;'>\\ #which-values</a>",
                     'Read <i>Determining Importance</i> in Davidson (2004)',
-                    "Post on <a style='color:#ff8384;'>#important-criteria</a>",
+                    "Post on <a style='color:#ff8384;'>\\ #important-criteria</a>",
                     "Read <i>The Merit Determination Step</i> in Davidson (2004)",
-                    "Post on <a style='color:#ff8384;'>#merit-disagreement</a>",
+                    "Post on <a style='color:#ff8384;'>\\ #merit-disagreement</a>",
                     "Plan on meeting this week via Zoom",
                     "Get an idea of the <i>Program Evaluation Standards</i>",
                     "Take a look at some example evaluation reports",
@@ -39,7 +41,7 @@ wk_post <-
                     "Go through the slideshow <span style='color:#6ac4cd;font-weight:bold'>Standards Based Evaluation: Benchmarking and Costs</span>",
                     "Review criteria for the <i>Needs Assessment</i> task due in <i><b>one week</b></i>",
                     "Preview the requirements for an <i>Evaluation Proposal</i> due in <i><b>two weeks</b></i>",
-                    "Ask any questions about possible programs to evaluate at <a style='color:#ff8384;'>#lets-talk-about-an-evaluation</a>",
+                    "Ask any questions about possible programs to evaluate at <a style='color:#ff8384;'>\\ #lets-talk-about-an-evaluation</a>",
                     "Find more resources on logic models"
     ),
     
@@ -116,10 +118,9 @@ wk_post %>%
   kbl("html",
       escape = FALSE,
       align = 'lcc') %>%
-  kable_styling(full_width = FALSE) %>%
+  kable_paper(full_width = FALSE) %>%
   column_spec(1, width = "25em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>%
   column_spec(2:3, width = "5em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>%
-  row_spec(0, extra_css = 'vertical-align: middle !important;', color = "#f7f7f7") %>%
-  row_spec(1:9, extra_css = 'vertical-align: middle !important;') 
+  row_spec(0:15, extra_css = 'vertical-align: middle !important;', background = "transparent", color = "#f7f7f7") 
 ```
 </center>

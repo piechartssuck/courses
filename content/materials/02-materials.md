@@ -17,7 +17,7 @@ editor_options:
 
 ## Responses
 
-Read through posts on <font face="Arial Narrow" size="4px">[#pictures-of-evaluation](https://2022edp617.slack.com/archives/C02U0V36SQY)</font> and comment on at least one posting.
+Read through posts on <a href='https://2022edp617.slack.com/archives/C02U0V36SQY' target='_blank' style='color: #ff8384;'><font size='4px'>\#pictures-of-evaluation</font></a> and comment on at least one posting.
 
 ## Evaluation Definitions
 

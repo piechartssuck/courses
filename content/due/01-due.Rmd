@@ -13,6 +13,8 @@ editor_options:
   chunk_output_type: console
 ---
 
+`r blogdown::shortcode("aes-header")`
+
 ```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
 library(tidyverse)
 library(fontawesome)
@@ -27,9 +29,9 @@ wk_post <-
   tibble(
   
 Description = c("Review the website",
-                  "Verify your Qualtrics account",
-                  "Introduce yourself in <a style='color:#ff8384;'>#introduce-yourself</a>",
-                  "Draw an Evaluation and post to <a style='color:#ff8384;'>#pictures-of-evaluation</a>"),
+                "Verify your Qualtrics account",
+                "Introduce yourself in <a style='color:#5eb0e5;'>\\ #introduce-yourself</a>",
+                "Draw an Evaluation and post to <a style='color:#5eb0e5;'>\\ #pictures-of-evaluation</a>"),
 
 "Details" = c("<a href='/readings/01-readings/#review-the-rest'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
               "<a href='/tasks/01-task/#verify-qualtrics-account-login'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
@@ -37,12 +39,12 @@ Description = c("Review the website",
              "<a href='/tasks/01-tasks/#drawing-evaluations'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"),
 
 Icon = c("", 
-         "", 
+         "qualtrics", 
          "slack",
          "slack"),
 
 Site = c("",
-         "",
+         "https://wvu.qualtrics.com",
          "https://2022edp617.slack.com/archives/C02T2G0AWLE",
          "https://2022edp617.slack.com/archives/C02U0V36SQY")
 )
@@ -54,6 +56,7 @@ wk_post %>%
   mutate(Icon = case_when(
     str_detect(`Icon`, "slack") ~ '<img src="/logos/slack-ico.png" alt="Slack icon" width="25">',
     str_detect(`Icon`, "ecampus") ~ '<img src="/logos/wvu-gold-ico.png" alt="Slack icon" width="25">',
+    str_detect(`Icon`, "qualtrics") ~ '<img src="/logos/qualtrics-ico.png" alt="Qualtrics icon" width="27">',
     TRUE ~ NA_character_
       )
     ) %>%
@@ -68,10 +71,9 @@ wk_post %>%
 kbl("html",
     escape = FALSE,
     align = 'lcc') %>%
-  kable_styling(full_width = FALSE) %>%
+  kable_paper(full_width = FALSE) %>%
   column_spec(1, width = "20em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>%
   column_spec(2:3, width = "5em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>%
-  row_spec(0, extra_css = 'vertical-align: middle !important;', color = "#f7f7f7") %>%
-  row_spec(1:4, extra_css = 'vertical-align: middle !important;') 
+  row_spec(0:4, extra_css = 'vertical-align: middle !important;', background = "transparent", color = "#f7f7f7") 
 ```
 </center>

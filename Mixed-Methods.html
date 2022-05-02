@@ -4,7 +4,7 @@
     <title>Someone Help, I’ve Mixed My Methods</title>
     <meta charset="utf-8" />
     <meta name="author" content="Dr. Abhik Roy" />
-    <script src="Mixed-Methods_files/header-attrs-2.12/header-attrs.js"></script>
+    <script src="Mixed-Methods_files/header-attrs-2.14/header-attrs.js"></script>
     <link href="Mixed-Methods_files/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
     <script src="Mixed-Methods_files/tile-view-0.2.6/tile-view.js"></script>
     <link href="Mixed-Methods_files/animate.css-3.7.2/animate.xaringan.css" rel="stylesheet" />
@@ -16,8 +16,12 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
+.title[
 # Someone Help, I’ve Mixed My Methods
+]
+.author[
 ### Dr. Abhik Roy
+]
 
 ---
 
@@ -313,6 +317,19 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
 (function() {
   "use strict"
   // Replace <script> tags in slides area to make them executable

@@ -13,6 +13,8 @@ editor_options:
   chunk_output_type: console
 ---
 
+`r blogdown::shortcode("aes-header")`
+
 ```{r load_packages, echo = FALSE, message=FALSE, warning=FALSE}
 library(tidyverse)
 library(fontawesome)
@@ -27,11 +29,11 @@ wk_post <-
   tibble(
 
 Description = c("Take the <i>Considering Program Evaluation</i> survey using the unique link sent to your WVU Mix e-mail account",
-                "Read <i>What is the difference between evaluation and research - and why do we care?</i> and post to <a style='color:#ff8384;'>#mathison</a>",
-                "Read <i>Unlearning some of our social scientist habits</i> and post to <a style='color:#ff8384;'>#davidson</a>",
-                "Respond to a <a style='color:#ff8384;'>#pictures-of-evaluation</a> post",
-                "Describe a definition of evaluation you identify with at <a style='color:#ff8384;'>#evaluation-definitions</a>",
-                "Begin looking for evaluation team members on <a style='color:#ff8384;'>#talk-about-logistics</a>",
+                "Read <i>What is the difference between evaluation and research - and why do we care?</i> and post to <a style='color:#ff8384;'>\\ #mathison</a>",
+                "Read <i>Unlearning some of our social scientist habits</i> and post to <a style='color:#ff8384;'>\\ #davidson</a>",
+                "Respond to a <a style='color:#ff8384;'>\\ #pictures-of-evaluation</a> post",
+                "Describe a definition of evaluation you identify with at <a style='color:#ff8384;'>\\ #evaluation-definitions</a>",
+                "Begin looking for evaluation team members on <a style='color:#ff8384;'>\\ #talk-about-logistics</a>",
                 "Take a look at where we are in the course",
                 "Read over what qualtities to look for when trying to choose a possible evaluation teammate"),
 
@@ -45,7 +47,7 @@ Details = c("<a href='/tasks/02-tasks/#evaluation-teams'><span style='font-size:
             "<a href='/extras/02-extras/#evaluation-phase'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/extras/02-extras/#recommended-materials'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"),
 
-Icon = c("", 
+Icon = c("qualtrics", 
          "slack", 
          "slack",
          "slack",
@@ -54,7 +56,7 @@ Icon = c("",
          "",
          ""),
 
-Site = c("",
+Site = c("https://wvu.qualtrics.com",
          "https://2022edp617.slack.com/archives/C02UBC12PC5",
          "https://2022edp617.slack.com/archives/C02UEAF6135",
          "https://2022edp617.slack.com/archives/C02U0V36SQY",
@@ -71,6 +73,7 @@ wk_post %>%
   mutate(Icon = case_when(
     str_detect(`Icon`, "slack") ~ '<img src="/logos/slack-ico.png" alt="Slack icon" width="25">',
     str_detect(`Icon`, "ecampus") ~ '<img src="/logos/wvu-gold-ico.png" alt="Slack icon" width="25">',
+    str_detect(`Icon`, "qualtrics") ~ '<img src="/logos/qualtrics-ico.png" alt="Qualtrics icon" width="27">',
     TRUE ~ NA_character_
       )
     ) %>%
@@ -85,10 +88,10 @@ wk_post %>%
 kbl("html",
     escape = FALSE,
     align = 'lcc') %>%
-  kable_styling(full_width = FALSE) %>%
+  kable_paper(full_width = FALSE) %>%
   column_spec(1, width = "25em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>%
   column_spec(2:3, width = "5em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>%
   row_spec(0, extra_css = 'vertical-align: middle !important;', color = "#f7f7f7") %>%
-  row_spec(1:8, extra_css = 'vertical-align: middle !important;') 
+  row_spec(1:8, extra_css = 'vertical-align: middle !important;', background = "transparent") 
 ```
 </center>

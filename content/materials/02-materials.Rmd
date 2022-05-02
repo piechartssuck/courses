@@ -16,7 +16,7 @@ editor_options:
 ---
 
 ## Responses
-Read through posts on <font face="Arial Narrow" size="4px">[`#pictures-of-evaluation`{=html}](https://2022edp617.slack.com/archives/C02U0V36SQY)</font> and comment on at least one posting.
+Read through posts on <a href='https://2022edp617.slack.com/archives/C02U0V36SQY' target='_blank' style='color: #ff8384;'><font size='4px'>#pictures-of-evaluation</font></a> and comment on at least one posting.
 
 ## Evaluation Definitions
 Look through the [evaluation definitions](/handouts/Evaluation%20Definitions.pdf) document. Think about which of those definitions fits best with your own view of evaluation, or if there are components of your view that are not addressed by any of those definitions. Then write a single post on <font face="Arial Narrow" size="4px">[`#evaluation-definitions`{=html}](https://2022edp617.slack.com/archives/C02V4BM9VQQ)</font> describing your view of evaluation and how it connects with any, all, or none of the definitions described.

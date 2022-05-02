@@ -72,49 +72,40 @@ lessons:
   - title: 'Whose Side Are You on Anyway?'
     session: 9
     date: "March 8, 2022"
-    readings: "09-readings"
-    materials: "09-materials"
     extras: "09-extras"
-    tasks: "09-tasks"
-    due: "09-due"
 
-  # - title: 'Onboarding'
-  #   session: 10
-  #   date: "March 23, 2021"
-  #   materials: "10-materials"
-  #   due: "10-due"
-  #
-  # - title: 'All Mixed Up'
-  #   session: 11
-  #   date: "March 30, 2021"
-  #   readings: "11-readings"
-  #   materials: "11-materials"
-  #   due: "11-due"
-  #
-  # - title: 'Fine Tuning Instruments'
-  #   session: 12
-  #   date: "April 6, 2021"
-  #   tasks: "12-materials"
-  #   due: "12-due"
-  #
-  # - title: 'The Short Road Ahead'
-  #   session: 13
-  #   readings: "13-readings"
-  #   materials: "13-materials"
-  #   extras: "13-extras"
-  #   tasks: "13-tasks"
-  #   due: "13-due"
-  #
-  # - title: 'Finals'
-  #   session: 14
-  #   date: "November 22, 2021"
-  #   tasks: "13-tasks"
-  #   due: "13-due"
-  #
-  # - title: 'Presentations'
-  #   session: 15
-  #   date: "November 22, 2021"
-  #   tasks: "13-tasks"
-  #   due: "13-due"
+  - title: 'Onboarding'
+    session: 10
+    date: "March 22, 2022"
+    extras: "10-extras"
+
+  - title: 'Time to Evaluate'
+    session: 11
+    date: "April 5, 2022"
+    extras: "11-extras"
+
+  - title: '...and On'
+    session: 12
+    date: "April 12, 2022"
+    extras: "12-extras"
+
+  - title: 'Any Minute Now'
+    session: 13
+    date: "April 19, 2022"
+    extras: "13-extras"
+
+  - title: 'Any Minute Now'
+    session: 14
+    date: "April 26, 2022"
+    extras: "14-extras"
+    tasks: "14-tasks"
+    due: "14-due"
+
+  - title: 'Endgame'
+    session: 15
+    date: "May 3, 2022"
+    extras: "15-extras"
+    tasks: "15-tasks"
+    due: "15-due"
 
 # command + /

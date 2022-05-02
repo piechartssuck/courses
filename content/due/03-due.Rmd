@@ -13,6 +13,8 @@ editor_options:
   chunk_output_type: console
 ---
 
+`r blogdown::shortcode("aes-header")`
+
 ```{r load_packages, echo = FALSE, message=FALSE, warning=FALSE}
 library(tidyverse)
 library(fontawesome)
@@ -26,19 +28,19 @@ wk_post <-
   
   tibble(
 
-Description = c("Respond to two posts on <a style='color:#ff8384;'>#davidson</a>",
-                "Respond to two posts on <a style='color:#ff8384;'>#mathison</a>",
-                "Respond to one post on <a style='color:#ff8384;'>#evaluation-definitions</a>",
+Description = c("Respond to two posts on <a style='color:#ff8384;'>\\ #davidson</a>",
+                "Respond to two posts on <a style='color:#ff8384;'>\\ #mathison</a>",
+                "Respond to one post on <a style='color:#ff8384;'>\\ #evaluation-definitions</a>",
                 "Read <i>What is Evaluation?</i> in Davidson (2004)",
                 "Read <i>Defining the Purpose of Evaluation</i> in Davidson (2004)",
                 "Read <i>Identifying Evaluative Criteria</i> in Davidson (2004)",
                 "Go through the slideshow <span style='color:#6ac4cd;font-weight:bold'>Evaluative Criteria: Keys to Merit, Worth, and Significance</span>",
-                "Post on evaluation <a style='color:#ff8384;'>#criteria</a>",
+                "Post on evaluation <a style='color:#ff8384;'>\\ #criteria</a>",
                 "Take a look at some popular evaluation approaches courtesy of the CDC",
-                "Finalize your teams over on <a style='color:#ff8384;'>#talk-about-logistics</a> and submit your evaluation teams via e-mail",
+                "Finalize your teams over on <a style='color:#ff8384;'>\\ #talk-about-logistics</a> and submit your evaluation teams via e-mail",
                 "Take a look at the criteria needed for an <i>Evaluation Prospectus</i> due at the <i><b>end of next week!</b></i>",
                 "Preview criteria for the <i>Needs Assessment</i> task due in <i><b>three weeks.</b></i>",
-                "Discuss ideas and possible programs to evaluate at <a style='color:#ff8384;'>#lets-talk-about-an-evaluation</a>"
+                "Discuss ideas and possible programs to evaluate at <a style='color:#ff8384;'>\\ #lets-talk-about-an-evaluation</a>"
                 ),
 
 
@@ -108,10 +110,9 @@ wk_post %>%
 kbl("html",
     escape = FALSE,
     align = 'lcc') %>%
-  kable_styling(full_width = FALSE) %>%
+  kable_paper(full_width = FALSE) %>%
   column_spec(1, width = "25em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>%
   column_spec(2:3, width = "5em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>%
-  row_spec(0, extra_css = 'vertical-align: middle !important;', color = "#f7f7f7") %>%
-  row_spec(1:8, extra_css = 'vertical-align: middle !important;') 
+  row_spec(0:13, extra_css = 'vertical-align: middle !important;', background = "transparent", color = "#f7f7f7") 
 ```
 </center>

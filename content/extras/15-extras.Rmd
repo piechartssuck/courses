@@ -1,0 +1,68 @@
+---
+title: "Endgame"
+linktitle: "Week 15: Endgame"
+output:
+  rmarkdown::html_document
+menu:
+  extras:
+    parent: Extras
+    weight: 15
+type: docs
+weight: 2
+editor_options: 
+  chunk_output_type: console
+---
+
+`r blogdown::shortcode("aes-header")`
+
+```{r load_packages, echo = FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+`r blogdown::shortcode("aes-header")`
+
+## Evaluation Phase
+
+We are currently in the post-evaluation phase. This involves
+
+```{r echo = FALSE}
+
+unchecked <- as.character(fontawesome::fa("circle", fill = "#e4e4e4", height = "15px"))
+
+checked <- as.character(fontawesome::fa("check-circle", fill = "#428bca", height = "15px"))
+  
+  post <- tibble(
+  
+  phase = c("Post-Evaluation",
+            "",
+            ""),
+  
+  task = c("Conducting analyses",
+           "Writing a report",
+           "Presenting results"),
+  
+  current <- c(unchecked,
+               unchecked,
+               checked)
+  
+)
+
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+  post %>%
+  kbl(col.names = c("Phase", "Task", "Current"),
+      "html",
+      escape = FALSE,
+      align = 'llc')  %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "20em") %>% 
+  row_spec(0:3, extra_css = 'vertical-align: middle !important;', color = "#f7f7f7", background = "transparent") 
+```
+</center>
