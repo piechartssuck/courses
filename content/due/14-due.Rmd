@@ -28,7 +28,7 @@ wk_post <-
   
   tibble(
     
-    Description = c("Review criteria for the <i>Final Report</i> due this week",
+    Description = c("Review criteria for the <i>Final Report</i> due this week - make sure to post your report to both eCampus and Slack!",
                     "Preview criteria for the <i>Presentation of Results</i> due next week"
                     ),
     
