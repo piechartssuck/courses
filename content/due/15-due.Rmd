@@ -29,8 +29,8 @@ wk_post <-
   tibble(
     
     Description = c("Review criteria for the <i>Presentation of Results</i> due this week",
-                    "Comment on every team's evaluation report at <a style='color:#5eb0e5;'>\\ #evaluation-report</a>",
-                    "Look through and view every team's evaluation presentation at <a style='color:#5eb0e5;'>\\ #presentation-of-results</a>",
+                    "Comment on every team's evaluation report at <a style='color:#ff8384;'>\\ #evaluation-report</a>",
+                    "Look through and view every team's evaluation presentation at <a style='color:#ff8384;'>\\ #presentation-of-results</a>",
                     "Take the <i>Reflecting on Program Evaluation</i> survey using the unique link sent to your WVU Mix e-mail account",
                     "Submit a copy of your submission reciept via e-mail"
                     ),

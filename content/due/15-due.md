@@ -64,7 +64,7 @@ Review criteria for the <i>Presentation of Results</i> due this week
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Comment on every team’s evaluation report at <a style="color:#5eb0e5;"> #evaluation-report</a>
+Comment on every team’s evaluation report at <a style="color:#ff8384;"> #evaluation-report</a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/materials/15-materials/#post-and-look-through-evaluationspresentations"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
@@ -81,7 +81,7 @@ Comment on every team’s evaluation report at <a style="color:#5eb0e5;"> #eval
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Look through and view every team’s evaluation presentation at <a style="color:#5eb0e5;"> #presentation-of-results</a>
+Look through and view every team’s evaluation presentation at <a style="color:#ff8384;"> #presentation-of-results</a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/materials/15-materials/#post-and-look-through-evaluationspresentations"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
