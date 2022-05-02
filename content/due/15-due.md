@@ -97,36 +97,36 @@ Look through and view every team’s evaluation presentation at <a style="color:
 </td>
 </tr>
 <tr>
-<td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 Take the <i>Reflecting on Program Evaluation</i> survey using the unique link sent to your WVU Mix e-mail account
 </td>
-<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/materials/15-materials/#reflecting-on-program-evaluation"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
-<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
-<td style="text-align:left;">
+<td style="text-align:left;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
-<td style="text-align:center;">
+<td style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://wvu.qualtrics.com" target="_blank"><img src="/logos/qualtrics-ico.png" alt="Qualtrics icon" width="27"></a>
 </td>
-<td style="text-align:center;">
+<td style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
 </tr>
 <tr>
-<td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 Submit a copy of your submission reciept via e-mail
 </td>
-<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/materials/15-materials/#acknowledgement"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
-<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
-<td style="text-align:left;">
+<td style="text-align:left;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
-<td style="text-align:center;">
+<td style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
-<td style="text-align:center;">
+<td style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <img src="/logos/email-ico.png" alt="Email icon" width="27">
 </td>
 </tr>
