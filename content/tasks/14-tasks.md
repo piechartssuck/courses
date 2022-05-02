@@ -1,6 +1,6 @@
 ---
 title: "Prelude"
-linktitle: "Prelude"
+linktitle: "Week 14: Prelude"
 output:
   blogdown::html_page
 menu:

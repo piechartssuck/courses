@@ -1,6 +1,6 @@
 ---
 title: "Endgame"
-linktitle: "Endgame"
+linktitle: "Week 15: Endgame"
 output:
   blogdown::html_page
 menu:
