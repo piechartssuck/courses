@@ -1,9 +1,9 @@
 ---
-title: "About the Tasks"
+title: "About the Deliverables"
 menu:
   tasks:
     parent: Overview
-    weight: 1
+    weight: 2
 toc: true
 output:
   rmarkdown::html_document:
@@ -12,28 +12,7 @@ type: docs
 weight: 1
 ---
 
-<style type="text/css">
-.article-container {
-  max-width: 960px;
-}
-
-iframe {
-  width: 1px;
-  min-width: 100%;
-  border:0;
-}
-
-#TableOfContents, .docs-toc-title {
-  border-left: 1px solid $sta-primary;
-}
-
-td, th, tr, table {
-    border: 0 !important;
-    border-spacing:0 !important;
-  }
-  
-</style>
-</style>
+{{% aes-header %}}
 
 This section contains descriptions of course tasks. Materials will be posted on a weekly basis. Please note that these pages populate information about course related tasks on the left hand side **when they are assigned**. Due dates are given with the description of each task.
 

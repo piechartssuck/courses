@@ -1,9 +1,9 @@
 ---
-title: "About the Deliverables"
+title: "About the Tasks"
 menu:
   tasks:
     parent: Overview
-    weight: 2
+    weight: 1
 toc: true
 output:
   rmarkdown::html_document:
