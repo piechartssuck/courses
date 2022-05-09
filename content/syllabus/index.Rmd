@@ -201,7 +201,8 @@ grading %>%
 All materials are due on a weekly basis by <i>Sunday at 11:59 PM</i> unless otherwise noted. New material will be posted on the course website by <i>Tuesday afternoon at 12:00 PM</i>. 
 <br>
 <br>
-Grades are determined on an individual basis. Each person will receive the same score for the [deliverables](/deliverables/) unless there is an issue with a team member which has been brought to my attention prior to the end of the term. In that case, the student(s) in question will be assessed through an arbitration process conducted by me. In cases where the accused are found to be at fault, they will receive an independent separate score which nay differ from other teammates. The most common type of incident to fall under this category is a lack of effort with the team environment. In cases where university statues are broken, the student(s) may also be referred to the [Office of Academic Integrity](https://academicintegrity.wvu.edu/).
+
+Grades are determined on an individual basis. Each person will receive the same score for the [deliverables](/deliverables/) unless there is an issue with a team member which has been brought to my attention prior to the end of the term. In that case, the student(s) in question will be assessed through an investigation and arbitration process conducted by me. In cases where the accused are found to be at fault, they will receive an independent separate score which nay differ from other teammates. The most common type of incident to fall under this category is a lack of effort with the team environment. In cases where university statues are broken, the student(s) may also be referred to the [Office of Academic Integrity](https://academicintegrity.wvu.edu/).
 
 
 ### Contact
