@@ -45,7 +45,10 @@ ul {
 ### <span style="color:#97ebf4">Criteria</span>
 
 Create and disseminate an evaluation report[^APA] using the criteria outlined below. This submission is due in <b>two weeks</b> prior to the final week of the term. For an exact date, please check [eCampus](https://ecampus.wvu.edu/). 
-
+<br>
+<br>
+<i>It is assumed that your report will not be returned. If anyone wants feedback on the final report, please send an email or Slack requesting it by the end of the week. The document will be returned with comments to the entire team unless otherwise requested.</i>
+<br>
 <details>
 
 <summary> 

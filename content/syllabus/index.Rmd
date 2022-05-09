@@ -15,21 +15,9 @@ library(kableExtra)
 library(here)
 ```
 
+`r blogdown::shortcode("aes-header")`
+
 ```{css,echo=FALSE}
-.article-container {
-  max-width: 960px;
-}
-
-iframe {
-  width: 1px;
-  min-width: 100%;
-  border:0;
-}
-
-#TableOfContents, .docs-toc-title {
-  border-left: 1px solid $sta-primary;
-}
-
 #rounded_corners {
   border-radius: 25px;
   border: 2px solid #80FFDB;
@@ -37,7 +25,6 @@ iframe {
   width: 400px;
   height: 115px;  
 }
-
 ```
 
 
@@ -181,17 +168,12 @@ assignments %>%
   kableExtra::kable(align='cl',
                col.names = c("Percent", "Assignment"),
       ) %>%
-  kable_paper(html_font = "Roboto Condensed") %>%
-  kable_styling(position = "center",
-                bootstrap_options = c("striped", 
-                                      "hover", 
-                                      "condensed", 
-                                      "responsive"),
-                full_width = FALSE) %>%
+  kable_paper(position = "center",
+              full_width = F) %>%
   column_spec(1, width = "5em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>%
   column_spec(2, width = "12em", color = "#ffffff",
               extra_css = 'vertical-align: middle !important;') %>%
-  row_spec(0, color = "#f7f7f7")
+  row_spec(0, extra_css = 'vertical-align: middle !important;', color = "#ffffff", background = "transparent")
 ```
 
 </center>
@@ -204,24 +186,23 @@ assignments %>%
 grading %>%
   kableExtra::kable(align='cl',
                col.names = c("Grade", "Range")) %>%
-   kable_paper(html_font = "Roboto Condensed") %>%
-   kable_styling(position = "center",
-                bootstrap_options = c("striped", 
-                                      "hover", 
-                                      "condensed", 
-                                      "responsive"),
-                full_width = FALSE) %>%
+   kable_paper(position = "center",
+               full_width = F) %>%
   column_spec(1, width = "5em") %>%
   column_spec(1, width = "5em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>%
   column_spec(2, width = "12em", color = "#ffffff",
               extra_css = 'vertical-align: middle !important;') %>%
-  row_spec(0, color = "#f7f7f7")
+  row_spec(0, extra_css = 'vertical-align: middle !important;', color = "#ffffff", background = "transparent")
 ```
 
 </center>
 
 <br>
 All materials are due on a weekly basis by <i>Sunday at 11:59 PM</i> unless otherwise noted. New material will be posted on the course website by <i>Tuesday afternoon at 12:00 PM</i>. 
+<br>
+<br>
+Grades are determined on an individual basis. Each person will receive the same score for the [deliverables](/deliverables/) unless there is an issue with a team member which has been brought to my attention prior to the end of the term. In that case, the student(s) in question will be assessed through an arbitration process conducted by me. In cases where the accused are found to be at fault, they will receive an independent separate score which nay differ from other teammates. The most common type of incident to fall under this category is a lack of effort with the team environment. In cases where university statues are broken, the student(s) may also be referred to the [Office of Academic Integrity](https://academicintegrity.wvu.edu/).
+
 
 ### Contact
 

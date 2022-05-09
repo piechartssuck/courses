@@ -1,0 +1,170 @@
+---
+title: "About the Deliverables"
+menu:
+  tasks:
+    parent: Overview
+    weight: 2
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+type: docs
+weight: 1
+---
+
+```{r load_packages, message=FALSE, warning=FALSE, echo=FALSE}
+library(tidyverse)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+```{css,echo=FALSE}
+.article-container {
+  max-width: 960px;
+}
+
+iframe {
+  width: 1px;
+  min-width: 100%;
+  border:0;
+}
+
+#TableOfContents, .docs-toc-title {
+  border-left: 1px solid $sta-primary;
+}
+
+td, th, tr, table {
+    border: 0 !important;
+    border-spacing:0 !important;
+  }
+  
+```
+
+</style>
+
+This section contains descriptions of course deliverables. Materials will be posted as needed. Please note that these pages populate information about course related deliverables on the left hand side **when they are assigned**. Due dates are given with the description of each task.
+
+<center>
+`r fa("clock", fill = "#ff4e50")` &nbsp <i>Posted Monthly</i> 
+</center>
+
+
+## Keeping Up
+
+There are a lot of moving parts to this class. Students who gain the most out of the course generally follow these general notions:
+
+1. Engaging with the readings and materials;
+2. Putting in a good faith effort but also asking for help when needed; 
+3. Keeping a respectful, open, and honest line of communication with me and your peers if possible.
+
+## General Task Makeup
+
+### Weekly Postings
+I will create discussion boards for a variety of purposes including discussing general course questions / logistics, getting to know each other, getting organized into groups, discussing each assignment, etc. You will need to participate actively on each board and your postings should be meaningful and incorporate depth. Responses without any additional information and/or justifications will be considered to be incomplete and will reflect on your final earned point value. For further information, please take a look at the description below.
+
+#### Writing on Slack
+**Remember this is a graduate level class and your writing should reflect that**. Moreover, these postings should be in APA 7th Edition formatting unless otherwise noted. The following general idea will be used when assessing your *initial posts*, but this is not a rubric. 
+
+```{r echo=FALSE}
+
+plus <- as.character(fa("plus", fill = "#5cb85c", height = "25px"))
+
+check <- as.character(fa("check", fill = "#0275d8", height = "25px"))
+
+minus <- as.character(fa("minus", fill = "#f0ad4e", height = "25px"))
+
+not <- as.character(fa("exclamation", fill = "#d9534f", height = "25px"))
+
+empty <- as.character(fa("times", fill = "#8d818f", height = "25px"))
+
+initials <- tibble(
+  
+  range <- c(plus, 
+             check,
+             minus, 
+             not,
+             empty
+  ),
+  
+  worth <- c("<b>11.5</b>",
+             "<b>10</b>",
+             "<b>5</b>",
+             "<b>0</b>",
+             "<b>0</b>"),
+  
+  criteria <- c(
+    
+    "Posts are well defined that fully address and develop all aspects of the prompt such that they
+
+advance the discussion,<br>
+are factually correct,<br>
+are cited correctly when necessary, *and*<br>
+provide a clear, concise, reflective and substantive contribution",
+
+"Posts are mostly well defined that tend to address all aspects of the prompt such that they
+
+generally advance the discussion,<br>
+are factually correct,<br>
+are cited correctly when applicable, *but*<br>
+lack clarity or full development of the concept(s)",
+
+"Posts are undertsandable but are not cohesive such that they do lack 
+
+clarity *or*<br>
+depth *or*<br>
+non-repetitiveness *or*<br>
+preparedness *or*<br>
+justification",
+
+"Posts are generally incoherant or superficial such that they are
+
+repeated *or*<br>
+incorrect *or*<br>
+irrelevant *or*<br>
+off-topic",
+
+"Posts are nonexistent or lack merit"
+
+  ),
+
+.name_repair = "minimal"
+
+)
+
+```
+
+<center>
+```{r, echo=FALSE, eval=TRUE}
+initials %>%
+  kbl(
+    col.names = c("Marker", "Point Value", "Criteria"), 
+    "html", 
+    escape = FALSE,
+    align = 'ccl'
+  ) %>%
+  kable_paper(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "30em") %>% 
+  column_spec(1:3, color = "#ffffff") %>%
+  row_spec(0:5, extra_css = 'vertical-align: middle !important;', color = "#ffffff", background = "transparent") 
+```
+</center>
+
+#### Responding on Slack
+To keep track of what responses go to which post and to receive credit for your responses, use the option pictured below: ![](/img/lesson/slack_pop_menu.png) For further information, please read over [Reply in thread](https://slack.com/help/articles/115000769927-Use-threads-to-organize-discussions-).
+
+### Synchronous Meetings
+There are two types of meetings in this class: *ongoing* and *check-in*. Please see the details below for an explanation of each.
+
+#### Ongoing
+You will need to meet weekly in the chat room to discuss your understanding, questions, and challenges with the readings, upcoming assignments, etc. I will provide prompts and scaffolding for your discussions. A one page summary consisting of who attended the meeting, content and general synopsis must submitted to eCampus unless otherwise noted.
+
+#### Check-in
+We will need to meet at least six (6) times over the course of term. the primary purpose of this is not just to get to know you, but also to answer any questions you may have and to get an idea of what areas need to be addressed. My job is to serve as a mentor during your evaluation but that requires you to ask questions and be up to date on the course material. I will be using terminology that has been covered and without a frame of reference, the conversation may be difficult.
+
+
+### Need Help?
+
+`r blogdown::shortcode("meetings")`

@@ -13,21 +13,9 @@ output:
 
 <link href="{{< blogdown/postref >}}index_files/lightable/lightable.css" rel="stylesheet" />
 
+{{% aes-header %}}
+
 <style type="text/css">
-.article-container {
-  max-width: 960px;
-}
-
-iframe {
-  width: 1px;
-  min-width: 100%;
-  border:0;
-}
-
-#TableOfContents, .docs-toc-title {
-  border-left: 1px solid $sta-primary;
-}
-
 #rounded_corners {
   border-radius: 25px;
   border: 2px solid #80FFDB;
@@ -35,7 +23,6 @@ iframe {
   width: 400px;
   height: 115px;  
 }
-
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.min.js" integrity="sha512-dnvR4Aebv5bAtJxDunq3eE8puKAJrY9GBJYl9GC6lTOEC76s1dbDfJFcL9GyzpaDW4vlI/UjR8sKbc1j6Ynx6w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/dimple/2.3.0/dimple.latest.min.js"></script>
@@ -152,13 +139,13 @@ You should absolutely expect to struggle at times, but there is no better and mo
 You can find descriptions for all posted assignments on the [tasks page](/tasks/)
 
 <center>
-<table class=" lightable-paper table table-striped table-hover table-condensed table-responsive" style="font-family: Roboto Condensed; margin-left: auto; margin-right: auto; width: auto !important; margin-left: auto; margin-right: auto;">
+<table class=" lightable-paper" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
-<th style="text-align:center;color: #f7f7f7 !important;">
+<th style="text-align:center;color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
 Percent
 </th>
-<th style="text-align:left;color: #f7f7f7 !important;">
+<th style="text-align:left;color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
 Assignment
 </th>
 </tr>
@@ -227,13 +214,13 @@ Presentation of Results
 <br />
 
 <center>
-<table class=" lightable-paper table table-striped table-hover table-condensed table-responsive" style="font-family: Roboto Condensed; margin-left: auto; margin-right: auto; width: auto !important; margin-left: auto; margin-right: auto;">
+<table class=" lightable-paper" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
-<th style="text-align:center;color: #f7f7f7 !important;">
+<th style="text-align:center;color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
 Grade
 </th>
-<th style="text-align:left;color: #f7f7f7 !important;">
+<th style="text-align:left;color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
 Range
 </th>
 </tr>
@@ -285,6 +272,9 @@ F
 
 <br>
 All materials are due on a weekly basis by <i>Sunday at 11:59 PM</i> unless otherwise noted. New material will be posted on the course website by <i>Tuesday afternoon at 12:00 PM</i>.
+<br>
+<br>
+Grades are determined on an individual basis. Each person will receive the same score for the [deliverables](/deliverables/) unless there is an issue with a team member which has been brought to my attention prior to the end of the term. In that case, the student(s) in question will be assessed through an arbitration process conducted by me. In cases where the accused are found to be at fault, they will receive an independent separate score which nay differ from other teammates. The most common type of incident to fall under this category is a lack of effort with the team environment. In cases where university statues are broken, the student(s) may also be referred to the [Office of Academic Integrity](https://academicintegrity.wvu.edu/).
 
 ### Contact
 
