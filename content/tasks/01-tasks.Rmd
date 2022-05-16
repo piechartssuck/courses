@@ -106,3 +106,11 @@ tibble(
 Since your final product for the course is a proposal grounded in proper and effective measures, we will work on a weekly basis to get you there. For this week, please construct a one paragraph case for a population that needs to be researched, why it should be be studied, and how the data would be quantitatively driven. Submit this document using APA 7th Edition formatting to [eCampus]("https://ecampus.wvu.edu/").
 
 The entire sequence leading up to the final proposal can be found on the [main Tasks page](/tasks/#final-proposal). 
+
+## First Meetup
+
+We will meet on a weekly basis throughout the entirety of the course. While there is always a certain amount of assessment within each meeting, the purpose of each session is not to trap you in a corner, but rather to address the weekly tasks, answer any content or R related questions, or just to give you the space to vent. If you come to every meeting having gone through the material and with questions/reflections, these short one-on-ones will be engaging and likely helpful. With that said, you are free to schedule a session with either of the instructors:
+
+> [Dr. Roy's calendar](https://calendly.com/nopiecharts/short15)
+
+> [Carinna Ferguson's calendar](https://calendly.com/carinna-ferguson/611)

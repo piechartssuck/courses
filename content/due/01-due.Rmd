@@ -42,7 +42,7 @@ Description = c("Read <i>Psychopathic Sims: Testing the Cheater-Hawk Hypothesis 
                 
                 "Verify your Qualtrics account",
                 "Go through the slideshow <span style='color:#6ac4cd;font-weight:bold'>Criterial and Interpretive Evaluation: Keys to Merit, Worth, and Significance</span>",
-                "Schedule your first meeting with Cari or I",
+                "Schedule your <span style='color:#da90ae;font-style:italic;'>first meeting</span> with Cari or I",
                 "Submit your first main task: <span style='color:#6acda5;font-weight:bold'>Think about assessment</span>"
                 ),
 
@@ -61,7 +61,7 @@ Details = c("<a href='/readings/01-readings/#read-some-papers'><span style='font
              "<a href='/tasks/01-tasks/#class-slack-account-access'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/tasks/01-tasks/#verify-qualtrics-account-login'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/tasks/01-tasks/#learn-about-program-evaluation'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
-            "",
+            "<a href='/tasks/01-tasks/#first-meetup'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/tasks/01-tasks/#think-about-assessment'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
             ),
 
