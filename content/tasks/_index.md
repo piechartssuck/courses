@@ -166,11 +166,11 @@ You will need to meet weekly in the chat room to discuss your understanding, que
 
 #### Check-in
 
-We will need to meet at least six (6) times over the course of term. the primary purpose of this is not just to get to know you, but also to answer any questions you may have and to get an idea of what areas need to be addressed. My job is to serve as a mentor during your evaluation but that requires you to ask questions and be up to date on the course material. I will be using terminology that has been covered and without a frame of reference, the conversation may be difficult.
+We will need to meet at least once a week over the course of term. the primary purpose of this is not just to get to know you, but also to answer any questions you may have and to get an idea of what areas need to be addressed. My job is to address questions and provide feedback but that also requires you to ask questions and be up to date on the material. I will be using terminology that has been covered and without a frame of reference, the conversation may be difficult.
 
 ## Proposal
 
-Throughout the course, you will have weekly opportunities to expand and refine your skill set culminating in the development of an instrument which will serve as a final project[^1]. Please include your name and submit all documents in either a `.docx{=html}` or `.pdf` format.
+Throughout the course, you will have weekly opportunities to expand and refine your skill set culminating in the development of an instrument which will serve as a final project[^1]. Please include your name and submit all documents in either a <span style="color:#12b8ff;font-weight: bold;">.docx</span> or <span style="color:#f47a7b;font-weight: bold;">.pdf</span> format.
 
 <div id="anchorwk1">
 
