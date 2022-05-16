@@ -191,12 +191,21 @@ Go through the slideshow <span style="color:#6ac4cd;font-weight:bold">Criterial 
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+Schedule your first meeting with Cari or I
+</td>
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+</td>
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;">
 Submit your first main task: <span style="color:#6acda5;font-weight:bold">Think about assessment</span>
 </td>
-<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;">
 <a href="/tasks/01-tasks/#think-about-assessment"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
-<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;">
 <a href="https://ecampus.wvu.edu/" target="_blank"><img src="/logos/wvu-gold-ico.png" alt="WVU icon" width="25"></a>
 </td>
 </tr>
