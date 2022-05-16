@@ -126,3 +126,14 @@ We will meet on a weekly basis throughout the entirety of the course. While ther
 > [Dr. Roy’s calendar](https://calendly.com/nopiecharts/short15)
 
 > [Carinna Ferguson’s calendar](https://calendly.com/carinna-ferguson/611)
+
+<center>
+<span class="fa-stack fa-2x">
+<i class="fab fa-twitter fa-stack-1x fa-inverse" style="--fa-stack-z-index: 2;"></i>
+<i class="fa-solid fa-square fa-stack-2x" style="--fa-stack-z-index: 1;"></i>
+</span>
+<span class="fa-stack fa-2x" style="--fa-inverse: #1da1f2;">
+<i class="fa-solid fa-square fa-stack-2x"></i>
+<i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+</span>
+</center>
