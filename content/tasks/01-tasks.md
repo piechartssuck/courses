@@ -146,9 +146,3 @@ We will meet on a weekly basis throughout the entirety of the course. While ther
 </div>
 
 </div>
-
-<div class="clear">
-
-</div>
-
-</center>
