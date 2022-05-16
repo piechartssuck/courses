@@ -1,0 +1,87 @@
+---
+title: "Schedule"
+slug: schedule
+output:
+  blogdown::html_page:
+    toc: false
+---
+
+`r blogdown::shortcode("aes-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+## Legend
+
+```{r icontibble, echo=FALSE, message=FALSE}
+faread <-  as.character(fa("book", fill = "#74d86f", height = "17px"))
+famaterials <-  as.character(fa("chalkboard", fill = "#a484d3", height = "17px"))
+fatraining <-  as.character(fa("r-project", fill = "#6cb3dc", height = "17px"))
+fatasks <- as.character(fa("tasks", fill = "#d86f74", height = "17px"))
+fadue <- as.character(fa("folder-open", fill = "#6fd8d3", height = "17px"))
+
+
+tableofcontent <- tibble(
+  
+  type <- c("Readings", 
+            "Materials",
+            "Training",
+            "Tasks",
+            "To Do"),
+  
+  location <- c("<a href='/readings/'>Go</a>",
+                "<a href='/materials/'>Go</a>",
+                "<a href='/training/'>Go</a>",
+                "<a href='/tasks/'>Go</a>",
+                "<a href='/due/'>Go</a>"),
+  
+  icon <- c(faread,
+            famaterials,
+            fatraining,
+            fatasks,
+            fadue),
+  
+  descr <- c("Weekly readings",
+             "Course items and other required content",
+             "R Training modules",
+             "Weekly tasks and deliverables",
+             "Weekly submission information"
+             ),
+  
+  .name_repair = "minimal"
+
+  ) 
+```
+
+<center>
+```{r, echo=FALSE}
+tableofcontent %>%
+  kbl(col.names = NULL, 
+      "html", 
+      escape = FALSE,
+      align = 'lccl') %>%
+  column_spec(1, bold = TRUE)  %>% 
+  row_spec(1:5, extra_css = 'vertical-align: middle !important;', color = "#f7f7f7", background = "transparent") 
+```
+</center>
+
+<center>
+<span style="font-size:17px"><i>Note: tasks are due by <b>Sunday at 11:59 PM</b> unless otherwise noted.</i></span>
+</center>
+<br>
+<br>
+
+<hr style"width:50%; margin-left:25% !important; margin-right:25% !important;" />
+
+## Weekly Overview 
+
+`r blogdown::shortcode("schedule")` 
+<!-- .date and .title are #ffffff in schedule.html --> 
+<br>
+
+<hr style"width:50%; margin-left:25% !important; margin-right:25% !important;" />
+
+### Need Help?
+
+`r blogdown::shortcode("meetings")`

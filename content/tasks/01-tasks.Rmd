@@ -1,0 +1,108 @@
+---
+title: "Does it Work and Why Does it Work?"
+linktitle: "Week 1: Checks"
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  tasks:
+    parent: Tasks
+    weight: 1
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+`r blogdown::shortcode("aes-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+### Class Slack Account Access
+
+  1. Go to the course [Slack](https://edp611summer2022.slack.com) account 
+  2. Register if you already do not have an account. Note that you do not have to use your WVU email, but its not a bad idea just in case any future classes use the platform.
+  3. Head to to the channel <span style="font-size:20px">[`#wk1-introduce-yourself`{=html}](https://edp611summer2022.slack.com/archives/C03FC1NUW0N)</span> and well introduce yourself by tell everyone about you, what you hope to achieve out of this course, and something about you that really defines who you are. For example, here is something about me:<br><br>
+*I teach course on data visualization BUT I am also 40% colorblind and getting worse!* <br><br>
+  4. (optional) Provide a picture if you are willing. I am a very visual person as are many other people so pictures help a great deal. However, you are not mandated to do so!
+<br>
+
+### Verify Qualtrics Account Login
+
+You may end up using a survey in this course so its a good idea to go to the [WVU Qualtrics login page](https://wvu.qualtrics.com) and simply make sure you can login. If you are unable to do so, please submit a [ticket to IT](https://wvu.atlassian.net/servicedesk/customer/portals) or give them a ring at <a href="tel:3042934444">304-293-4444</a> as soon as possible.
+<br>
+
+## Learn about Program Evaluation
+
+```{=html}
+<center>
+<div class="wrapper">
+    <div class="icon leftright">
+      <div class="tooltip"><span style=width:200px;>Move back and forth using <kbd>←</kbd> and <kbd>→</kbd></span></div>
+      <span><i class="fas fa-map-signs"></i></span></div>
+    <div class="icon info">
+      <div class="tooltip"><span style=width:200px;>Toggle fullscreen by pressing <kbd>F</kbd></span></div>
+      <span><i class="fas fa-expand-alt"></i></span>
+    </div><div class="icon github">
+      <div class="tooltip"><span style=width:200px;>Press <kbd>O</kbd> for and overview of all slides</span></div>
+      <span><i class="far fa-images"></i></span>
+    </div><div class="icon youtube">
+      <div class="tooltip"><span style=width:200px;>Discover more shortcuts by pressing <kbd>H</kbd></span></div>
+      <span><i class="fas fa-info-circle"></i></span>
+    </div>
+</div>
+</center>
+<br>
+```
+
+<center>
+<div class="holder">
+
+<div class="bigcol">
+```{r echo = FALSE, out.width="140%", fig.align='left'}
+knitr::include_url("/slides/Criterial%20and%20Interpretive%20Evaluation/Criterial-and-Interpretive-Eval.html")
+```
+</div>
+
+<div class="smallcol">
+```{r echo = FALSE, fig.align='right'}
+html_link <- function() {
+  paste0("<a href='/slides/Criterial%20and%20Interpretive%20Evaluation/Criterial-and-Interpretive-Eval.html'>", "<img src='/logos/web-ico.png' alt='Survey Design Page' width='35'>", "</a>")
+}
+
+pdf_link <- function() {
+ paste0("<a href='/slides/Criterial%20and%20Interpretive%20Evaluation/Criterial-and-Interpretive-Eval.pdf'>", "<img src='/logos/pdf-ico.png' alt='Survey Design PDF' width='35'>", "</a>")
+}
+
+tibble(
+  
+  html <- c(html_link(),
+            "Larger version of the presentation",
+            "",
+            pdf_link(),
+            "PDF of the presentation")
+  ) %>%
+  kbl(col.names = c(""),
+      "html",
+      escape = FALSE,
+      align = 'c') %>%
+  kable_paper(full_width = FALSE) %>%
+  column_spec(1, width = "25em", extra_css = "padding-left: 200px;") %>%
+  row_spec(1:5, extra_css = 'vertical-align: middle !important;', color = "#ffffff", background = "transparent")
+```
+</div>
+
+</div>
+
+<div class="clear">
+</div>
+</center>
+
+## Think about assessment
+
+Since your final product for the course is a proposal grounded in proper and effective measures, we will work on a weekly basis to get you there. For this week, please construct a one paragraph case for a population that needs to be researched, why it should be be studied, and how the data would be quantitatively driven. Submit this document using APA 7th Edition formatting to [eCampus]("https://ecampus.wvu.edu/").
+
+The entire sequence leading up to the final proposal can be found on the [main Tasks page](/tasks/#final-proposal). 

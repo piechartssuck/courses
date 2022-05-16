@@ -1,0 +1,95 @@
+---
+title: Carinna Ferguson
+slug: ga
+toc: true
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  people:
+    parent: People
+    weight: 2
+type: docs
+weight: 2
+---
+
+```{r setup, message=FALSE, warning=FALSE, include=FALSE}
+library(tidyverse)
+library(pander)
+library(knitr)
+library(kableExtra)
+library(here)
+library(fontawesome)
+```
+
+```{css,echo=FALSE}
+.article-container {
+  max-width: 960px;
+}
+
+iframe {
+  width: 1px;
+  min-width: 100%;
+  border:0;
+}
+
+#TableOfContents, .docs-toc-title {
+  border-left: 1px solid $sta-primary;
+}
+```
+
+</style>
+
+### This is me
+
+<center>
+
+<img src="/img/people/cari.png" alt="Me" style="width: 350px;"/>
+
+</center>
+
+### This is what I am
+
+Doctoral Student in [Learning Sciences](https://counselingandlearningsci.wvu.edu/academics/lshd-phd)
+
+### This is where I come from
+
+- MA in Educational Psychology from West Virginia University
+- BA in Psychology from West Virginia University
+
+### This is what I research
+
+- Experiences of art and humanities students engaging in undergraduate research
+
+You can check out more about what I do here:
+<br>
+<p>
+<span style="font-size: 1.0em; color: #A6CE39;">
+<i class="fab fa-orcid fa-fw"></i>&nbsp;
+</span>
+<a href="https://orcid.org/0000-0001-5036-9103" target="_blank">ORCID</a>
+<br>
+<span style="font-size: 1.0em; color: #ff8000;">
+&hairsp;&hairsp;<i class="ai ai-researcherid ai-1x"></i>  &hairsp;&hairsp;
+</span>
+<a href="https://publons.com/researcher/4243335/carinna-ferguson/" target="_blank">ResearcherID</a>
+<br>
+<span style="font-size: 1.0em; color: #ffffff;">
+<i class="fab fa-github fa-fw"></i>&nbsp;
+</span>
+<a href="https://github.com/cfferguson" target="_blank">GitHub</a>
+<br>
+<span style="font-size: 1.0em; color: #60D1AE;">
+<i class="fab fa-researchgate fa-fw"></i>&nbsp;
+</span>
+<a href="https://www.researchgate.net/profile/Carinna_Ferguson" target="_blank">ResearchGate</a>
+</p>
+
+### This is how you can contact me
+
+<p>
+<span style="font-size: 1.0em; color: #b5aab8;">
+<i class="far fa-envelope fa-fw"></i></i>&nbsp;
+</span>
+<a href="mailto: cfferguson@mail.wvu.edu">cfferguson</a>
+</p>

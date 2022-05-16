@@ -1,0 +1,16 @@
+---
+title: "About the People"
+menu:
+  people:
+    parent: Overview
+    weight: 1
+type: docs
+weight: 1
+shiny: true
+---
+
+There are two teachers in charge of this course. Please select the titles on the left to see more about us. 
+
+### Need Help?
+
+`r blogdown::shortcode("meetings")`

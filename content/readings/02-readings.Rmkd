@@ -1,0 +1,143 @@
+---
+title: "The Basics"
+linktitle: "Week 2: The Basics"
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  readings:
+    parent: Readings
+    weight: 2
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+`r blogdown::shortcode("aes-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+## Literature
+
+### Download Digital Copies
+
+```{r echo=FALSE,eval=TRUE,message=FALSE}
+loc <- here::here("static", "readings", "EDP611Week2Readings.zip")
+
+downloadthis::download_file(
+  path = loc,
+  output_name = "Week 2 Readings",
+  button_label = "&nbsp;&nbsp;&nbsp;<span style='color:#ffffff'>Download</span>",
+  button_type = "primary",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+
+### Read Some Papers
+There are no posts based on the readings this week.
+
+```{r echo=FALSE}
+
+slackico <- as.character("/readings/01-readings_files/slack-ico.png{width=20px}")
+
+
+readings <- tibble(
+  
+  paper <- c(
+    "Desjardins, C. D., & Bulut, O. (2018). Classical Test Theory. In <i>Handbook of educational measurement and psychometrics using R</i>. essay, CRC Press.",
+   "Bardhoshi, G. & Erford, B.T. (2017) Processes and Procedures for Estimating Score Reliability and Precision, <i>Measurement and Evaluation in Counseling and Development, 50</i>, 4, 256-263.",
+    "Tate, K.A., Bloom, M.L., Tassara, M.H. & Caperton, W. (2014) Counselor Competence, Performance Assessment, and Program Evaluation, <i>Measurement and Evaluation in
+Counseling and Development, 4</i>, 291-306."
+  ),
+  
+  post <- c("<i>none</i>",
+            "<i>none</i>",
+            "<i>none</i>"
+            ),
+  
+  channel <- c(
+    "<i>not applicable</i>",
+    "<i>not applicable</i>",
+    "<i>not applicable</i>"
+    ),
+
+  link <- c(
+    "<i>none</i>",
+    "<i>none</i>",
+    "<i>none</i>"
+  ),
+  
+  .name_repair = "minimal"
+  
+)
+
+```
+
+
+<center>
+```{r, echo=FALSE}
+readings %>%
+  kbl(col.names = c("Reading", "Post", "Slack Channel", "Link"), 
+      "html", 
+      escape = FALSE,
+      align = 'llcc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "50em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "10em") %>%
+  column_spec(4, width = "5em") %>% 
+  row_spec(0:3, extra_css = 'vertical-align: middle !important;', color = "#f7f7f7", background = "transparent") 
+```
+</center>
+
+### Review Some Materials
+
+```{r echo=FALSE}
+
+document <- as.character(fa("file", fill = "#e86af0", height = "20px"))
+
+book <- as.character(fa("book", fill = "#f06ab5", height = "20px"))
+
+site <- as.character(fa("link", fill = "	#a56af0", height = "20px"))
+
+review <- tibble(
+  
+  source <- c("Part II: Quantitative Research Designs covering Chapters 5-6 in Balkin & Kleist",
+              "Chapter II: Measurement, Scales, and Scoring in Albano"
+  ),
+  
+  link <- c(
+    paste0("[",site,"]",
+    "(https://library.wvu.edu/){target='_blank'}"
+    ),
+    paste0("[",book,"]",
+    "(https://www.thetaminusb.com/intro-measurement-r/measurement.html){target='_blank'}"
+    )
+    
+  ),
+  
+  .name_repair = "minimal"
+  
+)
+
+```
+
+<center>
+```{r, echo=FALSE}
+review %>%
+  kbl(col.names = c("Review", "Link"), 
+      "html", 
+      escape = FALSE,
+      align = 'lc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "30em") %>%
+  column_spec(2, width = "10em") %>% 
+  row_spec(0:2, extra_css = 'vertical-align: middle !important;', color = "#f7f7f7", background = "transparent") 
+```
+</center>

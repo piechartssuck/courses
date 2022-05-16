@@ -1,0 +1,82 @@
+---
+title: "Does it Work and Why Does it Work?"
+linktitle: "Week 1: Onboarding"
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  trainings:
+    parent: Modules
+    weight: 1
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+`r blogdown::shortcode("aes-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+## Notes
+
+### for previous participants
+If you have participated in Data Camp before and would like to receive credit for assigned modules you have previously completed, make sure to login with the associated username. Please note that you must do this to qualify. 
+
+### for new participants
+Take your time with these modules. I suggest setting 8-10 hours for this initial set and to spread the walkthroughs out over the week if possible and it is conducive to your learning style. The first module gives you an understand of the R environment while the second deals with data wrangling and reshaping, namely making sure data is in a "tidy" format. We'll be using this idea moving forward in the course. Please reach out if you need help!
+
+## Installing R and RStudio
+Go to the [Installing R, RStudio, and tidyverse](/resources/install/) page under Resources to get both R and RStudio installed on your system.
+
+## Data Camp
+
+```{r eval = TRUE, echo = FALSE, message=FALSE}
+unchecked <- as.character(fontawesome::fa("square", fill = "steelblue"))
+
+checked <- as.character(fontawesome::fa("check-square", fill = "steelblue"))
+
+dcico <- as.character("/logos/dc_small.png{width=20px}")
+
+dc_schedule <-  
+  read_csv("dc.csv",
+           show_col_types = FALSE) %>%
+  as_tibble() %>%
+                mutate(Required = case_when(
+                Required == "checked" ~ as.character(fontawesome::fa("check-circle", fill = "#428bca", height = "15px")),
+                Required == "unchecked" ~ as.character(fontawesome::fa("times-circle", fill = "#d9534f", height = "15px"))
+              )) %>%
+            mutate(across(everything(), as.character)) %>%
+              filter(Group == 1) %>% #CHANGE HERE
+              select(-Group, -Chapters_wide, -`Due by_short`) %>%
+              rename(`Due by` = `Due by_long`) %>%
+              rename(Chapters = Chapters_long)  %>%
+            filter_all(any_vars(!is.na(.))) %>% 
+            mutate(
+              across(everything(), ~replace_na(.x, ""))
+            ) %>%
+  select_if(~!all(is.na(.))) %>%
+  mutate(Link = str_replace_all(Link, "hyper", paste0("[![",dcico,"](/logos/dc-ico.png 'Slack Icon'){width=20px}]",
+                           "(https://www.datacamp.com/){target='_blank'}"
+  ))) %>%
+  select(-Exploration, -Link)
+  
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(dc_schedule, 
+      "html", 
+      escape = FALSE,
+      align = 'ccll') %>%
+  kable_paper(full_width = TRUE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "25em") %>%
+  column_spec(4, width = "30em") %>%
+  row_spec(0:10, extra_css = 'vertical-align: middle !important;', color = "#f7f7f7", background = "transparent")
+```
+</center>

@@ -1,0 +1,59 @@
+main:
+  - name: Syllabus
+    url: /syllabus/
+    weight: 1
+  - name: Schedule
+    url: /schedule/
+    weight: 2
+  - name: Readings
+    url: /readings/
+    weight: 3
+  - name: Trainings
+    url: /trainings/
+    weight: 4
+  - name: Tasks
+    url: /tasks/
+    weight: 5
+  - name: Due
+    url: /due/
+    weight: 6
+  - name: Resources
+    url: /resources/
+    weight: 7
+  - name: People
+    url: /people/
+    weight: 8
+  - name: '<i class="fab fa-slack"></i>'
+    url: "https://2022edp611.slack.com"
+    weight: 9
+  - name: '<i class="fab fa-r-project"></i>'
+    url: "https://www.rstudio.com/"
+    weight: 10
+
+readings:
+  - name: Overview
+    weight: 1
+  - name: Readings
+    weight: 2
+trainings:
+  - name: Overview
+    weight: 1
+  - name: Modules
+    weight: 2
+  - name: Walkthroughs
+    weight: 3
+tasks:
+  - name: Overview
+    weight: 1
+  - name: Tasks
+    weight: 2
+due:
+  - name: Overview
+    weight: 1
+  - name: To Do List
+    weight: 2
+resources:
+  - name: Resources
+    weight: 1
+  - name: Guides
+    weight: 2
