@@ -21,6 +21,11 @@ editor_options:
 source(here::here("content", "com_libs.R"))
 ```
 
+<style>
+img {
+max-width:100%;
+}
+</style>
 
 ### Class Slack Account Access
 
@@ -113,13 +118,13 @@ The entire sequence leading up to the final proposal can be found on the [main T
 We will meet on a weekly basis throughout the entirety of the course. While there is always a certain amount of assessment within each meeting, the purpose of each session is not to trap you in a corner, but rather to address the weekly tasks, answer any content or [`r fa("r-project", fill = "steelblue")`](https://cran.r-project.org/) related questions, or just to give you the space to vent. If you come to every meeting having gone through the material and with questions/reflections, these short one-on-ones will be engaging and likely helpful. With that said, you are free to schedule a session with either of the instructors
 
 <center>
-<div class="holder">
+<div class="evener">
 
-<div class="bigcol">
+<div class="row">
 <a href='https://calendly.com/nopiecharts/short15' target="_blank"><img src='/logos/calendar-dr-roy.png' alt='Booking with Dr. Roy' width='250'></a>
 </div>
 
-<div class="bigcol">
+<div class="row">
 <a href='https://calendly.com/carinna-ferguson/611' target="_blank"><img src='/logos/calendar-cari.png' alt='Booking with Carinna Ferguson' width='350'></a>
 </div>
 

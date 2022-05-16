@@ -21,6 +21,12 @@ editor_options:
 
 {{% aes-header %}}
 
+<style>
+img {
+max-width:100%;
+}
+</style>
+
 ### Class Slack Account Access
 
 1.  Go to the course [Slack](https://edp611summer2022.slack.com) account
@@ -125,15 +131,15 @@ We will meet on a weekly basis throughout the entirety of the course. While ther
 
 <center>
 
-<div class="holder">
+<div class="evener">
 
-<div class="bigcol">
+<div class="row">
 
 <a href='https://calendly.com/nopiecharts/short15' target="_blank"><img src='/logos/calendar-dr-roy.png' alt='Booking with Dr. Roy' width='250'></a>
 
 </div>
 
-<div class="bigcol">
+<div class="row">
 
 <a href='https://calendly.com/carinna-ferguson/611' target="_blank"><img src='/logos/calendar-cari.png' alt='Booking with Carinna Ferguson' width='350'></a>
 
