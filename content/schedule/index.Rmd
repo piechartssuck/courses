@@ -15,38 +15,42 @@ source(here::here("content", "com_libs.R"))
 ## Legend
 
 ```{r icontibble, echo=FALSE, message=FALSE}
+famod <- as.character(fa("cubes", fill = "#6fd8d3", height = "17px"))
 faread <-  as.character(fa("book", fill = "#74d86f", height = "17px"))
-famaterials <-  as.character(fa("chalkboard", fill = "#a484d3", height = "17px"))
-fatraining <-  as.character(fa("r-project", fill = "#6cb3dc", height = "17px"))
-fatasks <- as.character(fa("tasks", fill = "#d86f74", height = "17px"))
-fadue <- as.character(fa("folder-open", fill = "#6fd8d3", height = "17px"))
-
+faresources <-  as.character(fa("laptop-code", fill = "#848fd3", height = "17px"))
+fatasks <- as.character(fa("tasks", fill = "#d86f9e", height = "17px"))
+fadue <- as.character(fa("folder-open", fill = "#ffa700", height = "17px"))
+fawalk <- as.character(fa("map", fill = "#c0bfbb", height = "17px"))
 
 tableofcontent <- tibble(
   
-  type <- c("Readings", 
-            "Materials",
-            "Training",
+  type <- c("Modules",
+            "Readings", 
+            "Resources",
             "Tasks",
-            "To Do"),
+            "To Do",
+            "Walkthroughs"),
   
-  location <- c("<a href='/readings/'>Go</a>",
-                "<a href='/materials/'>Go</a>",
-                "<a href='/training/'>Go</a>",
+  location <- c("<a href='/modules/'>Go</a>",
+                "<a href='/readings/'>Go</a>",
+                "<a href='/resources/'>Go</a>",
                 "<a href='/tasks/'>Go</a>",
-                "<a href='/due/'>Go</a>"),
+                "<a href='/due/'>Go</a>",
+                "<a href='/walkthroughs/'>Go</a>"),
   
-  icon <- c(faread,
-            famaterials,
-            fatraining,
+  icon <- c(famod,
+            faread,
+            faresources,
             fatasks,
-            fadue),
+            fadue,
+            fawalk),
   
-  descr <- c("Weekly readings",
-             "Course items and other required content",
-             "R Training modules",
-             "Weekly tasks and deliverables",
-             "Weekly submission information"
+  descr <- c("DataCamp modules",
+             "Weekly readings",
+             "Curated list of R related resources",
+             "Tasks and deliverables",
+             "Submission information",
+             "Custom walkthroughs focused on content"
              ),
   
   .name_repair = "minimal"
@@ -62,7 +66,7 @@ tableofcontent %>%
       escape = FALSE,
       align = 'lccl') %>%
   column_spec(1, bold = TRUE)  %>% 
-  row_spec(1:5, extra_css = 'vertical-align: middle !important;', color = "#f7f7f7", background = "transparent") 
+  row_spec(1:6, extra_css = 'vertical-align: middle !important;', color = "#f7f7f7", background = "transparent") 
 ```
 </center>
 

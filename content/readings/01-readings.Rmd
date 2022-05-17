@@ -45,11 +45,11 @@ I'm sorry but your browser doesn't support embedded videos. You can however <a h
 
 ###  Items
 - This week and only this week please complete the R [training modules](/datacamp/) before reading the Albano text.
-- Please makes sure to review the [criteria for posts](/paper/#note-about-corresponding-posts-on-slack).
+- Please make sure to look over the [Writing on Slack](/tasks/#writing-on-slack) and [Responding on Slack](/tasks/#responding-on-slack) prior to posting.
 
 ### Review Website
 
-Far be it from us to disagree with Snoop, so you should probably go read the [syllabus](/syllabus/) as soon as possible! Additionally look over the other areas on this site: [paper](/paper/), [materials](/materials/), [extras](/extras/), [tasks](/tasks/), [to do list](/due/), and [resources](/resources/) pages for this class.
+Far be it from us to disagree with Snoop, so you should probably go read the [syllabus](/syllabus/) as soon as possible! Additionally look over the other areas on this site: [modules](/modules/), [tasks](/tasks/), [trainings](/trainings/), [walkthroughs](/walkthroughs/), [to do list](/due/), and [resources](/resources/) pages for this class.
 
 ## Literature
 

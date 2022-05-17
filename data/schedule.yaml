@@ -4,8 +4,8 @@ lessons:
     session: 1
     date: "May 16, 2022"
     readings: "01-readings"
-    datacamp: "01-module"
-    walkthroughs: "01-walkthrough"
+    modules: "01-modules"
+    walkthroughs: "01-walkthroughs"
     tasks: "01-tasks"
     due: "01-due"
 

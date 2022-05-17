@@ -37,7 +37,7 @@ font_size: "L"
 site_type: "Course"
 
 # Description for social sharing and search engines. If undefined, superuser role is used in place.
-description: "A foundational course adressing how evaluation and measurement are used to assess tests and programs."
+description: "A foundational course adressing how evaluation and measurement are used to assess tests and programs"
 
 # Display a logo in navigation bar rather than title (optional).
 #   To enable, place an image in `static/img/` and reference its filename below. To disable, set the value to "".
@@ -100,7 +100,7 @@ course:
   dates: "May 16–June 24, 2022"
   github: drabhikroy/Courses/tree/edp611
   copyrightYear: "2022"
-  slack: "https://2022edp611.slack.com"
+  slack: "https://edp611summer2022.slack.com"
 
 instructor:
   name: Dr. Abhik Roy
@@ -110,7 +110,7 @@ instructor:
   github: drabhikroy
   office: "Allen Hall 504O"
   contact_policy: >-
-    Slack is the best way to get in contact with me. Response times are typically much quicker than the standard 24-48 hours given to emails. Hopefully life will back to normal soon!
+    Slack is the best way to get in contact with me. Response times are typically much quicker than the standard 24-48 hours given to emails.
   appointment_url: "https://calendly.com/nopiecharts/short15"
   office_hours: "By appointment only"
 
@@ -215,7 +215,7 @@ search:
   #   0: No search engine
   #   1: Academic (built-in)
   #   2: Algolia (https://www.algolia.com)
-  engine: 0
+  engine: 1
 
   # Configuration of Algolia search engine.
   # Paste the values from your Algolia dashboard.

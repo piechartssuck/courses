@@ -1,4 +1,9 @@
-<table class="table schedule" style="max-width:100%">
+<style>
+table {background-color: transparent; border-style: none;}
+tr:nth-child(even) {background-color: transparent;}
+</style>
+
+<table>
     <tbody>
 
         {{- range .Site.Data.schedule }}
@@ -9,13 +14,29 @@
 
             {{- if .header }}
 
-            <td style="width:8%;text-align:center;font-weight:bold">Readings</td>
-            <td style="width:8%;text-align:center;font-weight:bold">Materials</td>
-            <td style="width:8%;text-align:center;font-weight:bold">Training</td>
-            <td style="width:8%;text-align:center;font-weight:bold">Tasks</td>
-            <td style="width:8%;text-align:center;font-weight:bold">Due</td>
+            <td style="width:8%;text-align:center;font-weight:bold">readings</td>
+            <td style="width:8%;text-align:center;font-weight:bold">resources</td>
+            <td style="width:8%;text-align:center;font-weight:bold">trainings</td>
+            <td style="width:8%;text-align:center;font-weight:bold">tasks</td>
+            <td style="width:8%;text-align:center;font-weight:bold">due</td>
 
             {{- else }}
+
+            {{- if .modules }}
+            <td align="center" style="width:10%;text-align:center">
+              <a href="{{ .Site.baseurl }}/modules/{{ .modules }}/">
+                <font color="#6fd8d3">
+                    <i class="fa-solid fa-cubes fa-lg fa-fw"></i>
+                </font>
+              </a>
+            </td>
+            {{- else }}
+            <td align="center" style="width:10%;text-align:center">
+                <font color="#3e464a">
+                    <i class="fas fa-folder-open fa-lg fa-fw"></i>
+                </font>
+            </td>
+            {{- end }}
 
             {{- if .readings }}
             <td align="center" style="width:10%;text-align:center">
@@ -33,42 +54,10 @@
             </td>
             {{- end }}
 
-            {{- if .materials }}
-            <td align="center" style="width:10%;text-align:center">
-              <a href="{{ .Site.baseurl }}/materials/{{ .materials }}/">
-                <font color="#a484d3">
-                    <i class="fas fa-chalkboard fa-lg fa-fw"></i>
-                </font>
-              </a>
-            </td>
-            {{- else }}
-            <td align="center" style="width:10%;text-align:center">
-                <font color="#3e464a">
-                    <i class="fas fa-chalkboard fa-lg fa-fw"></i>
-                </font>
-            </td>
-            {{- end }}
-
-            {{- if .Training }}
-            <td align="center" style="width:10%;text-align:center">
-              <a href="{{ .Site.baseurl }}/Training/{{ .Training }}/">
-                <font color="#ffa162">
-                    <i class="fas fa-lightbulb fa-lg fa-fw"></i>
-                </font>
-              </a>
-            </td>
-            {{- else }}
-            <td align="center" style="width:10%;text-align:center">
-                <font color="#3e464a">
-                    <i class="fas fa-lightbulb fa-lg fa-fw"></i>
-                </font>
-            </td>
-            {{- end }}
-
             {{- if .tasks }}
             <td align="center" style="width:10%;text-align:center">
               <a href="{{ .Site.baseurl }}/tasks/{{ .tasks }}/">
-                <font color="#d86f74">
+                <font color="#d86f9e">
                     <i class="fas fa-tasks fa-lg fa-fw"></i>
                 </font>
               </a>
@@ -83,7 +72,7 @@
             {{- if .due }}
             <td align="center" style="width:10%;text-align:center">
               <a href="{{ .Site.baseurl }}/due/{{ .due }}/">
-                <font color="#6fd8d3">
+                <font color="#ffa700">
                     <i class="fas fa-folder-open fa-lg fa-fw"></i>
                 </font>
               </a>
@@ -92,6 +81,22 @@
             <td align="center" style="width:10%;text-align:center">
                 <font color="#3e464a">
                     <i class="fas fa-folder-open fa-lg fa-fw"></i>
+                </font>
+            </td>
+            {{- end }}
+
+            {{- if .walkthroughs }}
+            <td align="center" style="width:10%;text-align:center">
+              <a href="{{ .Site.baseurl }}/walkthroughs/{{ .walkthroughs }}/">
+                <font color="#c0bfbb">
+                    <i class="fa-solid fa-map fa-lg fa-fw"></i>
+                </font>
+              </a>
+            </td>
+            {{- else }}
+            <td align="center" style="width:10%;text-align:center">
+                <font color="#3e464a">
+                    <i class="ffa-solid fa-map fa-lg fa-fw"></i>
                 </font>
             </td>
             {{- end }}
