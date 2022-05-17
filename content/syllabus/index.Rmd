@@ -7,6 +7,8 @@ output:
     toc: true
 ---
 
+`r blogdown::shortcode("aes-header")`
+
 ```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
 source(here::here("content", "com_libs.R"))
 ```

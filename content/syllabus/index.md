@@ -17,6 +17,8 @@ output:
 
 <link href="{{< blogdown/postref >}}index_files/lightable/lightable.css" rel="stylesheet" />
 
+{{% aes-header %}}
+
 <!--- `{{% courseinfo %}}`{=html} --->
 
 ## Course Objectives
