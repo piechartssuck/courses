@@ -6,7 +6,7 @@ output:
     toc: true
 menu:
   due:
-    parent: Due?
+    parent: 'To Do List'
     weight: 1
 type: docs
 weight: 1
