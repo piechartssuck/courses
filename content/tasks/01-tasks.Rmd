@@ -51,7 +51,7 @@ Please sign up for Slack!
 4. (optional) Provide a picture if you are willing. I am a very visual person as are many other people so pictures help a great deal. However, you are not mandated to do so!
 
 ### Verify Qualtrics Account Login
-You may end up using a survey in this course so its a good idea to go to the [WVU Qualtrics login page](https://wvu.qualtrics.com) and simply make sure you can login. If you are unable to do so, please submit a [ticket to IT](https://wvu.teamdynamix.com/TDClient/1976/Portal/Requests/ServiceDet?ID=9102) or give them a ring at <a href="tel:3042934444">304-293-4444</a> as soon as possible.
+You may end up using a survey in this course so its a good idea to go to the [WVU Qualtrics login page](https://wvu.qualtrics.com) and simply make sure you can login. If you are unable to do so, please submit a [ticket to IT](https://wvu.atlassian.net/servicedesk/customer/portals) or give them a ring at <a href="tel:3042934444">304-293-4444</a> as soon as possible.
 <br>
 
 ### Drawing Evaluations

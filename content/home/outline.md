@@ -9,7 +9,7 @@ weight: 15
 design:
   columns: "1"
   background:
-    color: "#282A36"
+    color: "#212121"
   spacing:
     padding: [10px, 0, 10px, 0]
 ---

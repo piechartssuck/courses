@@ -19,27 +19,7 @@ library(knitr)
 library(kableExtra)
 ```
 
-```{css,echo=FALSE}
-.article-container {
-  max-width: 960px;
-}
-
-iframe {
-  width: 1px;
-  min-width: 100%;
-  border:0;
-}
-
-#TableOfContents, .docs-toc-title {
-  border-left: 1px solid $sta-primary;
-}
-
-td, th, tr, table {
-    border: 0 !important;
-    border-spacing:0 !important;
-  }
-  
-```
+r blogdown::shortcode("aes-header")
 
 </style>
 
