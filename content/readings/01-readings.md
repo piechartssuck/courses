@@ -200,4 +200,4 @@ Chapter 1
 </center>
 
 <br>
-<span style="font-size:16px; font-style:italic; color:#bae1ff;">Note: It is absolutely fine if you cannot understand some of what is presented, especially the syntax. Copy and paste the code into your R console to follow along.</span>
+<span style="font-size:16px; font-style:italic; color:#bae1ff;">Note: It is absolutely fine if you cannot understand some of what is presented, especially with the syntax which can be overwhelming right now. You won’t benefit much at this point (or ever) by reinventing the wheel, rather you learn by <b>copying</b>, <b>pasting</b>, and <b>tweaking</b>. Its not stealing - this is how open source works!</span>
