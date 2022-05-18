@@ -188,7 +188,7 @@ Go through the slideshow <span style="color:#6ac4cd;font-weight:bold">Criterial 
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Schedule your <span style="color:#da90ae;font-style:italic;">first meeting</span> with Cari or I
+Schedule your <span style="color:#da90ae;font-style:italic;">first meeting</span> with Cari or I to take place this week
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/tasks/01-tasks/#first-meetup"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>

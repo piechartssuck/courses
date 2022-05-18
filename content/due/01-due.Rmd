@@ -39,7 +39,7 @@ Description = c("Read <i>Psychopathic Sims: Testing the Cheater-Hawk Hypothesis 
                 
                 "Verify your Qualtrics account",
                 "Go through the slideshow <span style='color:#6ac4cd;font-weight:bold'>Criterial and Interpretive Evaluation: Keys to Merit, Worth, and Significance</span>",
-                "Schedule your <span style='color:#da90ae;font-style:italic;'>first meeting</span> with Cari or I",
+                "Schedule your <span style='color:#da90ae;font-style:italic;'>first meeting</span> with Cari or I to take place this week",
                 "Submit your first main task: <span style='color:#6acda5;font-weight:bold'>Think about assessment</span>"
                 ),
 
