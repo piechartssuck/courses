@@ -92,6 +92,16 @@ Types of visualizations
 </tr>
 <tr>
 <td style="text-align:center;width: 10em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+</td>
+<td style="text-align:center;width: 10em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+</td>
+<td style="text-align:left;width: 25em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+</td>
+<td style="text-align:left;width: 30em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;width: 10em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 5/29/22
 </td>
 <td style="text-align:center;width: 10em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">

@@ -34,18 +34,19 @@ unchecked <- as.character(fontawesome::fa("square", fill = "steelblue"))
 
 checked <- as.character(fontawesome::fa("check-square", fill = "steelblue"))
 
-
-dc_schedule <- read_csv("dc.csv") %>% 
-                  as_tibble() %>%
-              mutate(Required = case_when(
-                Required == "checked" ~ as.character(fontawesome::fa("check-circle", fill = "#428bca", height = "15px")),
-                Required == "unchecked" ~ as.character(fontawesome::fa("times-circle", fill = "#d9534f", height = "15px"))
+dc_schedule <- 
+  read_csv(here::here("content", "dc.csv"),
+           show_col_types = FALSE) %>%
+  as_tibble() %>%
+  mutate(Required = case_when(
+    Required == "checked" ~ as.character(fontawesome::fa("check-circle", fill = "#428bca", height = "15px")),
+    Required == "unchecked" ~ as.character(fontawesome::fa("times-circle", fill = "#d9534f", height = "15px"))
               )) %>%
-              select(-Group, -Chapters_long, -`Due by_short`) %>%
-              rename(`Due by` = `Due by_long`) %>%
-              rename(`Chapters covered` = Chapters_wide) %>%
-            filter_all(any_vars(!is.na(.))) %>%
-              replace(., is.na(.), "")
+  select(-Group, -Chapters_long, -`Due by_short`) %>%
+  rename(`Due by` = `Due by_long`) %>%
+  rename(`Chapters covered` = Chapters_wide) %>%
+  filter_all(any_vars(!is.na(.))) %>%
+  replace(., is.na(.), "")
 ```
 
 
