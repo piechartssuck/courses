@@ -170,7 +170,7 @@ We will need to meet at least once a week over the course of term. the primary p
 
 ## Proposal
 
-Throughout the course, you will have weekly opportunities to expand and refine your skill set culminating in the development of an instrument which will serve as a final project[^1]. Please include your name and submit all documents in either a <span style="color:#12b8ff;font-weight: bold;">.docx</span> or <span style="color:#f47a7b;font-weight: bold;">.pdf</span> format.
+Throughout the course, you will have weekly opportunities to expand and refine your skill set culminating in the development of an instrument which will serve as a final product[^1]. Please include your name and submit all documents in either a <span style="color:#12b8ff;font-weight: bold;">.docx</span> or <span style="color:#f47a7b;font-weight: bold;">.pdf</span> format.
 
 <div id="anchorwk1">
 
@@ -180,7 +180,10 @@ Week 1: Think about assessment.
 </summary>
 <br>
 <p>
-Construct a one paragraph case for a population[^2] that needs to be researched, why it should be be studied, and how the data would be quantitative.
+Construct a one paragraph case for a population that needs to be researched, why it should be be studied, and how the data would be quantitative.
+<br>
+<br>
+<i>Note: A population does not necessarily refer to people.</i>
 </p>
 </details>
 
@@ -212,7 +215,10 @@ Week 3. Develop a draft.
 </summary>
 <br>
 <p>
-Create a draft of your instrument[^3] by whatever medium you choose. Map the measures directly to the items and group them if possible.
+Create a draft of your instrument by whatever medium you choose. Map the measures directly to the items and group them if possible.
+<br>
+<br>
+<i>Note: If the instrument is housed elsewhere (e.g. Qualtrics), then simply provide a link and ensure that access is granted to me.</i>
 </p>
 </details>
 
@@ -244,7 +250,7 @@ Week 5. Test for validity and reliability.
 </summary>
 <br>
 <p>
-Simulate data and then conduct an EFA to assess validity and a reliability analysis.
+Simulate or use collected data to conduct an EFA to assess instrument validity and reliability.
 </p>
 </details>
 
@@ -270,8 +276,4 @@ After amending, create an elevator pitch, supplemental abstract and a final vers
 
 {{% meetings %}}
 
-[^1]: These will ***not*** be graded using a check system. If you’ve engaged with the course content and completed the exercises and mini projects throughout the course, you should do just fine with the final project.
-
-[^2]: A population does not necessarily refer to people.
-
-[^3]: If the instrument is housed elsewhere (e.g. Qualtrics), then simply provide a link and ensure that access is granted to me.
+[^1]: These will ***not*** be graded using a check system. If you’ve engaged with the course content and completed the exercises and mini projects throughout the course, you should do just fine with the final task.

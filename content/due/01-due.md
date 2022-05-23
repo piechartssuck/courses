@@ -1,6 +1,6 @@
 ---
 title: "Does it Work and Why Does it Work?"
-linktitle: "Week 1: Introductions"
+linktitle: "Week 1: Evaluations"
 output:
   rmarkdown::html_document:
     toc: true
@@ -42,7 +42,7 @@ Read <i>Psychopathic Sims: Testing the Cheater-Hawk Hypothesis in a Video Game</
 <a href="/readings/01-readings/#read-some-papers"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="NA" target="_blank"><img src="/logos/slack-ico.png" alt="Slack icon" width="25"></a>
+<a href="https://edp611summer2022.slack.com/archives/C03FB9D0EPQ" target="_blank"><img src="/logos/slack-ico.png" alt="Slack icon" width="25"></a>
 </td>
 </tr>
 <tr>
@@ -53,7 +53,7 @@ Read <i>What is the difference between evaluation and research - and why do we c
 <a href="/readings/01-readings/#read-some-papers"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="NA" target="_blank"><img src="/logos/slack-ico.png" alt="Slack icon" width="25"></a>
+<a href="https://edp611summer2022.slack.com/archives/C03G45YDD7S" target="_blank"><img src="/logos/slack-ico.png" alt="Slack icon" width="25"></a>
 </td>
 </tr>
 <tr>
@@ -64,7 +64,7 @@ Read <i>What is Evaluation?</i> in Davidson (2004) and post on <a style="color:#
 <a href="/readings/01-readings/#read-some-papers"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="NA" target="_blank"><img src="/logos/slack-ico.png" alt="Slack icon" width="25"></a>
+<a href="https://edp611summer2022.slack.com/archives/C03FHU1ACHG" target="_blank"><img src="/logos/slack-ico.png" alt="Slack icon" width="25"></a>
 </td>
 </tr>
 <tr>
@@ -80,7 +80,7 @@ Read <i>CDC’s Introduction to Evaluation With a Focus on Public Health</i>
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Read <i>The Essence of Research in the Counseling Profession </i> in Balkin & Kleist (2017)
+Read <i>The Essence of Research in the Counseling Profession</i> in Balkin & Kleist (2017)
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/readings/01-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>

@@ -1,6 +1,6 @@
 ---
 title: "Does it Work and Why Does it Work?"
-linktitle: "Week 1: Onboarding"
+linktitle: "Week 1: Evaluations"
 toc: true
 output:
   rmarkdown::html_document:
@@ -11,8 +11,6 @@ menu:
     weight: 1
 type: docs
 weight: 1
-editor_options: 
-  chunk_output_type: console
 ---
 
 <script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
@@ -36,6 +34,8 @@ Take your time with these modules. I suggest setting 8-10 hours for this initial
 Go to the [Installing R, RStudio, and tidyverse](/resources/install/) page under Resources to get both R and RStudio installed on your system.
 
 ## Data Camp
+
+Please go through and complete the following modules
 
 <center>
 <table class=" lightable-paper" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">

@@ -25,7 +25,7 @@ Carve out some time everyday to go through these. If you try to complete everyth
 
 ### Grading
 
-The ultimate point of Data Camp is to get you familiarized with an environment that you likely have never seen or been exposed to. While you should absolutely go through each module, there is certainly no expectation that you will get everything right. In fact, the points that you incur don’t mean anything as far as how you are assessed so please use hints as needed! As with any things data science, you’ll learn by doing. If you are a polar personality type when it comes to work (i.e. primarily a perfectionist or mostly careless), then the modules will likely prove to be a challenge. It is highly unlikely that you will be able to comprehend everything by going beyond your limit or that it will just come to you so please work hard but also take breaks, swear[^2], and ask peers or me for help. Your [score](/lesson/gradingish/) is predicated on putting in a solid effort, rather than getting it right because there is no such thing in data science.
+The ultimate point of Data Camp is to get you familiarized with an environment that you likely have never seen or been exposed to. While you should absolutely go through each module, there is certainly no expectation that you will get everything right. In fact, the points that you incur don’t mean anything as far as how you are assessed so please use hints as needed! As with any things data science, you’ll learn by doing. If you are a polar personality type when it comes to work (i.e. primarily a perfectionist or mostly careless), then the modules will likely prove to be a challenge. It is highly unlikely that you will be able to comprehend everything by going beyond your limit or that it will just come to you so please work hard but also take breaks, swear[^2], and ask peers or me for help. Your [score](/lesson/gradingish/) is predicated on putting in a solid effort, rather than getting it perfect because everything is probabilistic and nothing is for certain.
 
 ### Data Camp Schedule
 
@@ -60,7 +60,7 @@ Chapters covered
 1
 </td>
 <td style="text-align:left;width: 15em; color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/trainings/01-module/">Week 1</a>
+<a href="/modules/01-module/">Week 1</a>
 </td>
 <td style="text-align:center;width: 10em; color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
 5/22/22
@@ -102,7 +102,7 @@ Explore your data, Tame your data, Tidy your data, Transform your data
 2
 </td>
 <td style="text-align:left;width: 15em; color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/trainings/02-module/">Week 2</a>
+<a href="/modules/02-module/">Week 2</a>
 </td>
 <td style="text-align:center;width: 10em; color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
 5/29/22
@@ -144,7 +144,7 @@ Introduction to ideas of inference, Completing a randomization test: gender disc
 3
 </td>
 <td style="text-align:left;width: 15em; color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/trainings/03-module/">Week 3</a>
+<a href="/modules/03-module/">Week 3</a>
 </td>
 <td style="text-align:center;width: 10em; color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
 6/5/22
@@ -186,7 +186,7 @@ Summary Statistics, Random Numbers and Probability, More Distributions and the C
 4
 </td>
 <td style="text-align:left;width: 15em; color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/trainings/04-module/">Week 4</a>
+<a href="/modules/04-module/">Week 4</a>
 </td>
 <td style="text-align:center;width: 10em; color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
 6/12/22
@@ -208,7 +208,7 @@ Simple Linear Regression, Predictions and model objects, Assessing model fit, Si
 5
 </td>
 <td style="text-align:left;width: 15em; color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/trainings/05-module/">Week 5</a>
+<a href="/modules/05-module/">Week 5</a>
 </td>
 <td style="text-align:center;width: 10em; color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
 6/19/22
@@ -230,7 +230,7 @@ Preparing to analyze survey data, Exploratory factor analysis & survey developme
 6
 </td>
 <td style="text-align:left;width: 15em; color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/trainings/06-module/">Week 6</a>
+<a href="/modules/06-module/">Week 6</a>
 </td>
 <td style="text-align:center;width: 10em; color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
 6/26/22
@@ -254,7 +254,7 @@ EC1
 <td style="text-align:left;width: 15em; color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
 <td style="text-align:center;width: 10em; color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
-6/27/22
+6/26/22
 </td>
 <td style="text-align:center;width: 10em; color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
 <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:15px;width:15px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#d9534f;overflow:visible;position:relative;">

@@ -1,6 +1,6 @@
 ---
 title: "Does it Work and Why Does it Work?"
-linktitle: "Week 1: Introductions"
+linktitle: "Week 1: Evaluations"
 output:
   rmarkdown::html_document:
     toc: true
@@ -28,7 +28,7 @@ Description = c("Read <i>Psychopathic Sims: Testing the Cheater-Hawk Hypothesis 
                 "Read <i>What is the difference between evaluation and research - and why do we care?</i> in Mathison (2006) and post on <a style='color:#ff8384;'>\\ #wk1-#evaluation-views</a>",
                 "Read <i>What is Evaluation?</i> in Davidson (2004) and post on <a style='color:#ff8384;'>\\ #wk1-#evaluation-definition</a>",
                 "Read <i>CDC’s Introduction to Evaluation With a Focus on Public Health</i>",
-                "Read <i>The Essence of Research in the Counseling Profession </i> in Balkin & Kleist (2017)",
+                "Read <i>The Essence of Research in the Counseling Profession</i> in Balkin & Kleist (2017)",
                 "Read <i>Introduction to Educational and Psychological Measurement Using R</i> in Albano (2020)",
                 "Install both <b>R</b> and <b>RStudio</b>",
                 "Complete modules <span style='color:#ffc787;font-weight:bold'><i>Introduction to R</i></span> and <span style='color:#ffc787;font-weight:bold'><i>Working with Data in the Tidyverse</i></span> on <b>Data Camp</b>",
@@ -79,9 +79,9 @@ Icon = c("slack",
          "",
          "ecampus"),
 
-Site = c("",
-         "",
-         "",
+Site = c("https://edp611summer2022.slack.com/archives/C03FB9D0EPQ",
+    "https://edp611summer2022.slack.com/archives/C03G45YDD7S",
+    "https://edp611summer2022.slack.com/archives/C03FHU1ACHG",
          "https://www.cdc.gov/eval/guide/introduction/index.htm",
          "https://ebookcentral.proquest.com/lib/wvu/detail.action?docID=4722459",
          "https://www.thetaminusb.com/intro-measurement-r/introduction.html",

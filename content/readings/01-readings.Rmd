@@ -11,8 +11,6 @@ menu:
     weight: 1
 type: docs
 weight: 1
-editor_options: 
-  chunk_output_type: console
 ---
 
 `r blogdown::shortcode("aes-header")`
@@ -29,8 +27,6 @@ source(here::here("content", "com_libs.R"))
 }
 </style>
 
-## Class Notes
-
 ### Get Some Advice
 <center>
 <div class="videoContainer">
@@ -44,14 +40,12 @@ I'm sorry but your browser doesn't support embedded videos. You can however <a h
 </center>
 
 ###  Items
-- This week and only this week please complete the R [training modules](/datacamp/) before reading the Albano text.
+- This week and only this week please complete the R [training modules](/trainings/) before reading the Albano text.
 - Please make sure to look over the [Writing on Slack](/tasks/#writing-on-slack) and [Responding on Slack](/tasks/#responding-on-slack) prior to posting.
 
 ### Review Website
 
 Far be it from us to disagree with Snoop, so you should probably go read the [syllabus](/syllabus/) as soon as possible! Additionally look over the other areas on this site: [modules](/modules/), [tasks](/tasks/), [trainings](/trainings/), [walkthroughs](/walkthroughs/), [to do list](/due/), and [resources](/resources/) pages for this class.
-
-## Literature
 
 ### Download Literature
 
@@ -136,7 +130,7 @@ paper %>%
     TRUE ~ NA_character_
     )
   ) %>%
-  mutate(Channel = paste0("<span style='font-size:20px'>",Channel,"</span></a>")) %>%
+  mutate(Channel = paste0("<span style='font-size:18px'>",Channel,"</span></a>")) %>%
   select(-Icon, -Site, -Arrow) %>% 
   mutate_all(replace_na,"") %>%
   kbl(col.names = c("Title", "Paper", "Question", "Post", "Link"), 
@@ -171,10 +165,10 @@ review <- tibble(
   
   section = c(NA,
               "Chapters 1-4 (Part I)",
-              "Chapter 1"),
+              "Chapter I"),
   
   link <- c(
-    paste0("[",book,"]",
+    paste0("[",site,"]",
     "(https://www.cdc.gov/eval/guide/introduction/index.htm){target='_blank'}"
     ),
     paste0("[",site,"]",
@@ -210,4 +204,4 @@ review %>%
 </center>
 
 <br>
-<span style='font-size:16px; font-style:italic; color:#bae1ff;' >Note: It is absolutely fine if you cannot understand some of what is presented,   especially with the syntax which can be overwhelming right now. You won't benefit much at this point (or ever) by reinventing the wheel, rather you learn by <b>copying</b>, <b>pasting</b>, and <b>tweaking</b>. Its not stealing - this is how open source works!</span>
+<span style='font-size:16px; font-style:italic; color:#bae1ff;'>Note: It is absolutely fine if you cannot understand some of what is presented, especially with the syntax which can be overwhelming right now. You won't benefit much at this point (or ever) by reinventing the wheel, rather you learn by <b>copying</b>, <b>pasting</b>, and <b>tweaking</b>. Its not stealing - this is how open source works!</span>

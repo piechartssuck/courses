@@ -9,15 +9,15 @@ lessons:
     tasks: "01-tasks"
     due: "01-due"
 
-  # - title: 'The Basics'
-  #   session: 2
-  #   date: "May 23, 2022"
-  #   readings: "02-readings"
-  #   datacamp: "02-lesson"
-  #   walkthroughs: "02-walkthrough"
-  #   tasks: "02-tasks"
-  #   due: "02-due"
-  #
+  - title: 'The Basics'
+    session: 2
+    date: "May 23, 2022"
+    readings: "02-readings"
+    modules: "02-modules"
+    walkthroughs: "02-walkthroughs"
+    tasks: "02-tasks"
+    due: "02-due"
+
   # - title: 'Personality Tests'
   #   session: 3
   #   date: "May 30, 2022"

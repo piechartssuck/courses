@@ -1,0 +1,187 @@
+---
+title: "The Basics"
+linktitle: "Week 2: The Basics"
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  readings:
+    parent: Readings
+    weight: 2
+type: docs
+weight: 1
+---
+
+`r blogdown::shortcode("aes-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+### Respond to Posts
+Please create **two responses** for each of the posts below on Slack[^respond]. 
+
+> <a href="https://edp611summer2022.slack.com/archives/C03FB9D0EPQ" style='color:#ff8384;'>#wk1-psychopathic-sims</a> 
+
+> <a href="https://edp611summer2022.slack.com/archives/C03G45YDD7S" style='color:#ff8384;'>#wk1-#evaluation-views</a> 
+
+> <a href="https://2022edp617.slack.com/archives/C02UEAF6135" style='color:#ff8384;'>#wk1-#evaluation-definition</a> 
+
+### Download Literature
+
+```{r echo=FALSE,eval=TRUE,message=FALSE}
+loc <- here::here("static", "readings", "EDP611Week2Readings.zip")
+
+downloadthis::download_file(
+  path = loc,
+  output_name = "Week 2 Readings",
+  button_label = "&nbsp;&nbsp;&nbsp;<span style='color:#ffffff'>Download</span>",
+  button_type = "primary",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+
+### Read Some Papers
+
+For the readings below, <b>no posts</b> are required:
+
+```{r echo=FALSE}
+
+paper <- tibble(
+  
+  title = c("<i>Classical Test Theory</i>",
+             "<i>Processes and Procedures for Estimating Score Reliability and Precision</i>",
+             "<i>Counselor Competence, Performance Assessment, and Program Evaluation</i>"
+  ),
+  
+  Source = c("Desjardins & Bulut (2018)",
+             "Bardhoshi & Erford (2017)",
+             "Tate, Bloom, Tassara & Caperton (2014)"),
+  
+  Arrow = c("internal",
+            "internal",
+            "internal"),
+  
+  Post = c("<i>none</i>",
+          "<i>none</i>",
+          "<i>none</i>"
+          ),
+  
+  Channel = c("<i>not applicable</i>",
+              "<i>not applicable</i>",
+              "<i>not applicable</i>"
+              ),
+  
+  Icon = c(NA, 
+           NA,
+           NA),
+
+  Site = c(
+    "",
+    "",
+    ""
+  ),
+  
+  .name_repair = "minimal"
+  
+)
+
+```
+
+<center>
+```{r, echo=FALSE}
+paper %>%
+  mutate(Icon = case_when(
+    str_detect(`Icon`, "slack") ~ '<img src="/logos/slack-ico.png" alt="Slack icon" width="25px">',
+    str_detect(`Icon`, "ecampus") ~ '<img src="/logos/wvu-gold-ico.png" alt="WVU icon" width="25px">',
+    str_detect(`Icon`, "library") ~ '<img src="/logos/library-ico.png" alt="Library icon" width="25px">',
+    TRUE ~ NA_character_
+    )
+  ) %>%
+  mutate(Arrow = case_when(
+    str_detect(`Arrow`, "external") ~ '<div style="font-size: 0.5rem;"><i class="fa fa-external-link fa-2x" aria-hidden="true" style="color:#559977"></i></div>',
+    TRUE ~ NA_character_
+    )
+  ) %>%
+  mutate(Site = na_if(Site, "")) %>%
+  mutate(Link = case_when(
+    !is.na(Icon) ~ paste0("<a href=",Site," target='_blank'>",Icon,"</a>"),
+    is.na(Icon) ~ '<img src="/logos/none-ico.png" alt="Library icon" width="25px">',
+    TRUE ~ NA_character_
+    )
+  ) %>%
+  mutate(Channel = paste0("<span style='font-size:18px'>",Channel,"</span></a>")) %>%
+  select(-Icon, -Site, -Arrow) %>% 
+  mutate_all(replace_na,"") %>%
+  kbl(col.names = c("Title", "Paper", "Question", "Post", "Link"), 
+      "html", 
+      escape = FALSE,
+      align = 'llccc') %>%
+  kable_paper(full_width = TRUE) %>%
+  column_spec(1, width = "20em") %>%
+  column_spec(2, width = "15em") %>%
+  column_spec(3, width = "10em") %>%
+  column_spec(4, width = "10em") %>% 
+  column_spec(5, width = "5em") %>% 
+  row_spec(0:3, extra_css = 'vertical-align: middle !important;', color = "#f7f7f7", background = "transparent") %>%
+  column_spec(4, width = "10em", color = "#ff8384") 
+```
+</center>
+
+### Read Some Text
+
+```{r echo=FALSE}
+
+document <- as.character(fa("file", fill = "#e86af0", height = "25px"))
+
+book <- as.character(fa("book", fill = "#f06ab5", height = "25px"))
+
+site <- as.character(fa("link", fill = "	#a56af0", height = "25px"))
+
+review <- tibble(
+  
+  source <- c("<i>Quantitative Research Designs</i>",
+              "<i>Measurement, Scales, and Scoring</i>"
+              ),
+  
+  section = c("Chapters 5-6 (Part II)",
+              "Chapter II"),
+  
+  link <- c(
+    paste0("[",site,"]",
+    "(https://www.thetaminusb.com/intro-measurement-r/measurement.html){target='_blank'}"
+    ),
+    paste0("[",book,"]",
+    "(https://ebookcentral.proquest.com/lib/wvu/detail.action?docID=4722459){target='_blank'}"
+    )
+
+  ),
+  
+  .name_repair = "minimal"
+  
+)
+
+```
+
+<center>
+```{r, echo=FALSE}
+review %>%
+  mutate_all(replace_na,"") %>%
+  kbl(col.names = c("Title", 
+                    "Section",
+                    "Link"), 
+      "html", 
+      escape = FALSE,
+      align = 'llc') %>%
+   kable_paper(full_width = TRUE) %>%
+  column_spec(1, width = "15em") %>%
+  column_spec(2, width = "10em") %>% 
+  column_spec(3, width = "5em") %>%
+  row_spec(0:2, extra_css = 'vertical-align: middle !important;', color = "#f7f7f7", background = "transparent") 
+```
+</center>
+
+[^respond]: Your responses to postings should follow the same [basic criteria](/tasks/#weekly-postings) outlined in the original post. Remember to use the [`Reply in thread`{=html}](/tasks/#responding-on-slack) option when responding to receive credit.</font>

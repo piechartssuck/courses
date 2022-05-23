@@ -1,6 +1,6 @@
 ---
 title: "Does it Work and Why Does it Work?"
-linktitle: "Week 1: Extras"
+linktitle: "Week 1: Evaluations "
 toc: true
 output:
   rmarkdown::html_document:
