@@ -18,15 +18,15 @@ lessons:
     tasks: "02-tasks"
     due: "02-due"
 
-  # - title: 'Personality Tests'
-  #   session: 3
-  #   date: "May 30, 2022"
-  #   readings: "03-readings"
-  #   datacamp: "03-lesson"
-  #   walkthroughs: "03-walkthrough"
-  #   tasks: "03-tasks"
-  #   due: "03-due"
-  #
+  - title: 'Personality Tests'
+    session: 3
+    date: "May 30, 2022"
+    readings: "03-readings"
+    modules: "03-modules"
+    walkthroughs: "03-walkthroughs"
+    tasks: "03-tasks"
+    due: "03-due"
+
   # - title: 'Conspiracy Theories'
   #   session: 4
   #   date: "June 6, 2022"
