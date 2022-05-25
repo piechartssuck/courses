@@ -53,8 +53,8 @@ For the readings below, <b>no posts</b> are required:
 paper <- tibble(
   
   title = c("<i>Classical Test Theory</i>",
-             "<i>Processes and Procedures for Estimating Score Reliability and Precision</i>",
-             "<i>Counselor Competence, Performance Assessment, and Program Evaluation</i>"
+            "<i>Processes and Procedures for Estimating Score Reliability and Precision</i>",
+            "<i>Counselor Competence, Performance Assessment, and Program Evaluation</i>"
   ),
   
   Source = c("Desjardins & Bulut (2018)",

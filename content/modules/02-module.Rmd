@@ -55,7 +55,6 @@ dc_schedule <-
   
 ```
 
-
 <center>
 ```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
 kable(dc_schedule, 

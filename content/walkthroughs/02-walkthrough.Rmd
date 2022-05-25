@@ -177,7 +177,6 @@ dplyr::tibble(
     escape = FALSE
     )
 ```
-</center>
 
 ```{r, echo=FALSE}
  data("drinks", package = "fivethirtyeight")

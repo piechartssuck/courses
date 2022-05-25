@@ -75,7 +75,7 @@ Read <i>Classical Test Theory</i> in Desjardins & Bulut (2018)
 <a href="/readings/02-readings/#read-some-papers"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/readings/02-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="WVU icon" width="25"></a>
+<a href="/readings/02-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="WVU icon" width="30"></a>
 </td>
 </tr>
 <tr>
@@ -86,7 +86,7 @@ Read <i>Processes and Procedures for Estimating Score Reliability and Precision<
 <a href="/readings/02-readings/#read-some-papers"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/readings/02-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="WVU icon" width="25"></a>
+<a href="/readings/02-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="WVU icon" width="30"></a>
 </td>
 </tr>
 <tr>
@@ -97,7 +97,7 @@ Read <i>Counselor Competence, Performance Assessment, and Program Evaluation</i>
 <a href="/readings/02-readings/#read-some-papers"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/readings/02-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="WVU icon" width="25"></a>
+<a href="/readings/02-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="WVU icon" width="30"></a>
 </td>
 </tr>
 <tr>
@@ -108,7 +108,7 @@ Read <i>Quantitative Research Designs</i> in Albano (2020)
 <a href="/readings/02-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://ebookcentral.proquest.com/lib/wvu/detail.action?docID=4722459" target="_blank"><img src="/logos/web-ico.png" alt="Web icon" width="25"></a>
+<a href="https://ebookcentral.proquest.com/lib/wvu/detail.action?docID=4722459" target="_blank"><img src="/logos/web-ico.png" alt="Web icon" width="26"></a>
 </td>
 </tr>
 <tr>
@@ -130,7 +130,7 @@ Complete modules <span style="color:#ffc787;font-weight:bold"><i> Introduction t
 <a href="/modules/02-module/#data-camp"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://www.datacamp.com" target="_blank"><img src="/logos/dc-ico.png" alt="DataCamp icon" width="25"></a>
+<a href="https://www.datacamp.com" target="_blank"><img src="/logos/dc-ico.png" alt="DataCamp icon" width="24"></a>
 </td>
 </tr>
 <tr>
@@ -138,7 +138,7 @@ Complete modules <span style="color:#ffc787;font-weight:bold"><i> Introduction t
 Go through the first <i class="fa-brands fa-r-project" style="font-size:16px;"></i> walkthrough on the basics of tidy wrangling
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="1/walkthroughs/02-walkthrough/"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
+<a href="/walkthroughs/02-walkthrough/"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
@@ -151,6 +151,7 @@ Schedule your <span style="color:#da90ae;font-style:italic;">second meeting</spa
 <a href="/tasks/02-tasks/#second-meetup"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<a href="/tasks/02-tasks/#second-meetup" target="_blank"><img src="/logos/calendar-clock.png" alt="Calendar clock icon" width="27"></a>
 </td>
 </tr>
 <tr>

@@ -158,9 +158,9 @@ site <- as.character(fa("link", fill = "	#a56af0", height = "25px"))
 
 review <- tibble(
   
-  source <- c("<i>CDC's Introduction to Evaluation With a Focus on Public Health</i>",
-                "<i>The Essence of Research in the Counseling Profession</i>",
-                "<i>Introduction to Educational and Psychological Measurement Using R</i>"
+  title <- c("<i>CDC's Introduction to Evaluation With a Focus on Public Health</i>",
+             "<i>The Essence of Research in the Counseling Profession</i>",
+             "<i>Introduction to Educational and Psychological Measurement Using R</i>"
   ),
   
   section = c(NA,

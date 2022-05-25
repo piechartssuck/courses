@@ -58,7 +58,10 @@ iframe {
   height: 115px;
 }
 
-td, th, tr, table {
+td,
+th,
+tr,
+table {
     border: 0 !important;
     border-spacing:0 !important;
   }
@@ -291,11 +294,16 @@ color:#ffffff;
 
 .lightable-paper {
 color: #f7f7f7;
-text-align: left;
+margin-bottom: 20px;
 }
 
 tfoot {
   font-size: 80%;
+}
+
+.footnotes {
+  font-size: 80%;
+  text-align: left;
 }
 
 div.rounded pre {
@@ -335,7 +343,8 @@ span.footnote {
    color: #dfc0fa;
 }
 
-.dark pre, .dark code {
+.dark pre,
+.dark code {
   color: #dfc0fa;
   font-size: 14pt;
   background-color: transparent;
@@ -347,27 +356,45 @@ span.footnote {
  background-color: transparent;
 }
 
-.hljs-string, .hljs-title, .hljs-name, .hljs-type, .hljs-attribute, .hljs-symbol, .hljs-bullet, .hljs-addition, .hljs-variable, .hljs-template-tag, .hljs-template-variable {
+.hljs-addition,
+.hljs-attribute,
+.hljs-bullet,
+.hljs-name,
+.hljs-string,
+.hljs-symbol,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-title,
+.hljs-type,
+.hljs-variable {
 color: #7CDAB8;
 }
 
-.hljs-keyword, .hljs-selector-tag, .hljs-literal, .hljs-section, .hljs-link {
+.hljs-keyword,
+.hljs-link,
+.hljs-literal,
+.hljs-section,
+.hljs-selector-tag {
 color: #da7c9e;
 }
 
-.hljs-comment, .hljs-quote, .hljs-deletion, .hljs-meta {
+.hljs-meta,
+.hljs-comment,
+.hljs.css,
+.hljs-deletion,
+.hljs-quote,
+.hljs.xml {
 color: #fdf7b1;
 font-size: 12pt;
 }
 
-.language-r.hljs,
-.hljs.cpp {
+.course-info,
+.hljs.cpp,
+.hljs.shell,
+.language-r.hljs {
  font-size: 12pt;
 }
 
-.course-info {
-  font-size: 12pt;
-}
 </style>
 
 <script>
@@ -375,3 +402,8 @@ $(document).ready(function(){
      $('[data-toggle="tooltip"]').tooltip();
 });
 </script>
+
+<script defer src="//yihui.org/js/math-code.js"></script>
+<script defer src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<script defer src="//yihui.org/js/center-img.js"></script>

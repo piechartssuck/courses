@@ -75,7 +75,7 @@ Read <i>CDC’s Introduction to Evaluation With a Focus on Public Health</i>
 <a href="/readings/01-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://www.cdc.gov/eval/guide/introduction/index.htm" target="_blank"><img src="/logos/web-ico.png" alt="Web icon" width="25"></a>
+<a href="https://www.cdc.gov/eval/guide/introduction/index.htm" target="_blank"><img src="/logos/web-ico.png" alt="Web icon" width="26"></a>
 </td>
 </tr>
 <tr>
@@ -97,7 +97,7 @@ Read <i>Introduction to Educational and Psychological Measurement Using R</i> in
 <a href="/readings/01-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://www.thetaminusb.com/intro-measurement-r/introduction.html" target="_blank"><img src="/logos/web-ico.png" alt="Web icon" width="25"></a>
+<a href="https://www.thetaminusb.com/intro-measurement-r/introduction.html" target="_blank"><img src="/logos/web-ico.png" alt="Web icon" width="26"></a>
 </td>
 </tr>
 <tr>
@@ -118,7 +118,7 @@ Complete modules <span style="color:#ffc787;font-weight:bold"><i>Introduction to
 <a href="/modules/01-module/#data-camp"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://www.datacamp.com" target="_blank"><img src="/logos/dc-ico.png" alt="DataCamp icon" width="25"></a>
+<a href="https://www.datacamp.com" target="_blank"><img src="/logos/dc-ico.png" alt="DataCamp icon" width="24"></a>
 </td>
 </tr>
 <tr>
@@ -129,7 +129,7 @@ Take a look at some evaluation checklists at <i>Western Michigan University</i>
 <a href="/walkthroughs/01-walkthrough/#evaluation-checklists"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://wmich.edu/evaluation/checklists" target="_blank"><img src="/logos/web-ico.png" alt="Web icon" width="25"></a>
+<a href="https://wmich.edu/evaluation/checklists" target="_blank"><img src="/logos/web-ico.png" alt="Web icon" width="26"></a>
 </td>
 </tr>
 <tr>
@@ -140,7 +140,7 @@ Look over some logic models at the <i>University of Wisconsin Extension Program<
 <a href="/walkthroughs/01-walkthrough/#logic-models"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://fyi.extension.wisc.edu/programdevelopment/logic-models/" target="_blank"><img src="/logos/web-ico.png" alt="Web icon" width="25"></a>
+<a href="https://fyi.extension.wisc.edu/programdevelopment/logic-models/" target="_blank"><img src="/logos/web-ico.png" alt="Web icon" width="26"></a>
 </td>
 </tr>
 <tr>
@@ -151,7 +151,7 @@ Get a better idea of progran evaluation at <i>Better Evaluation</i>
 <a href="/walkthroughs/01-walkthrough/#a-whole-bunch-of-methods"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://www.betterevaluation.org/en" target="_blank"><img src="/logos/web-ico.png" alt="Web icon" width="25"></a>
+<a href="https://www.betterevaluation.org/en" target="_blank"><img src="/logos/web-ico.png" alt="Web icon" width="26"></a>
 </td>
 </tr>
 <tr>
@@ -173,7 +173,7 @@ Verify your Qualtrics account
 <a href="/tasks/01-tasks/#verify-qualtrics-account-login"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="htts://wvu.qualtrics.com" target="_blank"><img src="/logos/qualtrics-ico.png" alt="Qualtrics icon" width="25"></a>
+<a href="htts://wvu.qualtrics.com" target="_blank"><img src="/logos/qualtrics-ico.png" alt="Qualtrics icon" width="29"></a>
 </td>
 </tr>
 <tr>

@@ -1,0 +1,179 @@
+---
+title: "Personality Tests"
+linktitle: "Week 3: Personality Tests"
+toc: true
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  readings:
+    parent: Readings
+    weight: 3
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+`r blogdown::shortcode("aes-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+### Download Literature
+
+```{r echo=FALSE,eval=TRUE,message=FALSE}
+loc <- here::here("static", "readings", "EDP611Week3Readings.zip")
+
+downloadthis::download_file(
+  path = loc,
+  output_name = "Week 3 Readings",
+  button_label = "&nbsp;&nbsp;&nbsp;<span style='color:#ffffff'>Download</span>",
+  button_type = "primary",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+
+### Read Some Papers
+
+For the readings below, <b>no posts</b> are required:
+
+```{r echo=FALSE}
+
+paper <- tibble(
+  
+  title = c("<i>The Utility of the Myers-Briggs Type Indicator</i>",
+            "<i>Using the Myers-Briggs Type Indicator to Study Managers: A Literature Review and Research Agenda</i>"
+  ),
+  
+  Source = c("Pittenger (1993)",
+             "William & Mark (1996)"),
+  
+  Arrow = c("internal",
+            ""),
+  
+  Post = c("Locate at least one journal article on the <i>Big Five Inventory</i> and <i>Myers-Briggs</i> apiece that addresses both the validity and reliability of each test separately. Then compare and contrast the studies between one another. Finally discuss any outcomes you discovered and describe if you were suprised by the findings. Please attach a copy of all articles used in your assessment and remember to provide references in APA 7th Edition formatting.",
+           "Locate at least one journal article on the <i>Big Five Inventory</i> and <i>Myers-Briggs</i> apiece that addresses both the validity and reliability of each test separately. Then compare and contrast the studies between one another. Finally discuss any outcomes you discovered and describe if you were suprised by the findings. Please attach a copy of all articles used in your assessment and remember to provide references in APA 7th Edition formatting."
+          ),
+  
+  Channel = c("<span style='color:#ff8384'>`#wk3-personality-tests`{=markdown}</span>",
+              "<span style='color:#ff8384'>`#wk3-personality-tests`{=markdown}</span>"
+              ),
+  
+  Icon = c("slack", 
+           "nada"),
+
+  Site = c(
+    "https://edp611summer2022.slack.com/archives/C03G9JGHMLP",
+    ""
+  ),
+  
+  .name_repair = "minimal"
+  
+)
+
+```
+
+<center>
+```{r, echo=FALSE}
+paper %>%
+  mutate(Icon = case_when(
+    str_detect(`Icon`, "slack") ~ '<img src="/logos/slack-ico.png" alt="Slack icon" width="25px">',
+    str_detect(`Icon`, "ecampus") ~ '<img src="/logos/wvu-gold-ico.png" alt="WVU icon" width="25px">',
+    str_detect(`Icon`, "library") ~ '<img src="/logos/library-ico.png" alt="Library icon" width="25px">',
+    str_detect(`Icon`, "nada") ~ ' ',
+    TRUE ~ NA_character_
+    )
+  ) %>%
+  mutate(Arrow = case_when(
+    str_detect(`Arrow`, "external") ~ '<div style="font-size: 0.5rem;"><i class="fa fa-external-link fa-2x" aria-hidden="true" style="color:#559977"></i></div>',
+    TRUE ~ NA_character_
+    )
+  ) %>%
+  mutate(Site = na_if(Site, "")) %>%
+  mutate(Link = case_when(
+    !is.na(Icon) ~ paste0("<a href=",Site," target='_blank'>",Icon,"</a>"),
+    is.na(Icon) ~ '<img src="/logos/none-ico.png" alt="Library icon" width="25px">',
+    TRUE ~ NA_character_
+    )
+  ) %>%
+  mutate(Channel = paste0("<span style='font-size:18px'>",Channel,"</span></a>")) %>%
+  select(-Icon, -Site, -Arrow) %>% 
+  mutate_all(replace_na,"") %>%
+  kbl(col.names = c("Title", "Paper", "Question", "Post", "Link"), 
+      "html", 
+      escape = FALSE,
+      align = 'lllcc') %>%
+  kable_paper(full_width = TRUE) %>%
+  column_spec(1, width = "20em", extra_css = 'vertical-align: middle !important;') %>%
+  column_spec(2, width = "10em", extra_css = 'vertical-align: middle !important;') %>%
+  column_spec(3, width = "40em", extra_css = 'vertical-align: middle !important;') %>% 
+  column_spec(4, width = "10em", extra_css = 'vertical-align: middle !important;') %>%
+    column_spec(5, width = "5em", extra_css = 'position: relative; top: 34.3%; transform: translate(2.5%,82%);') %>% 
+  row_spec(0:2, color = "#f7f7f7", background = "transparent") %>%
+  collapse_rows(columns = 3:5,
+                valign = "middle")
+```
+</center>
+
+### Read Some Text
+
+```{r echo=FALSE}
+
+filefa <- as.character(fa("file", fill = "#e86af0", height = "25px"))
+
+bookfa <- as.character(fa("book", fill = "#f06ab5", height = "25px"))
+
+linkfa <- as.character(fa("link", fill = "#a56af0", height = "25px"))
+
+review <- tibble(
+  
+  title <- c("<i>Quantitative Research Designs</i>",
+             "<i>Testing Applications</i>",
+             "<i>Test Development</i>",
+             "<i>Getting it Right Every Time: Reliability and Its Importance</i>"),
+  
+  section = c("Chapters 7-8 (Part II)",
+              "Chapter III",
+              "Chapter IV",
+              "Chapter 3"),
+  
+  link <- c(
+    paste0("[",bookfa,"]",
+    "(https://ebookfacentral.proquest.com/lib/wvu/detail.action?docID=4722459){target='_blank'}"
+    ),
+    paste0("[",linkfa,"]",
+    "(https://www.thetaminusb.com/intro-measurement-r/applications.html){target='_blank'}"
+    ),
+    paste0("[",linkfa,"]",
+    "(https://www.thetaminusb.com/intro-measurement-r/applications.html){target='_blank'}"
+    ),
+    paste0("<a href='https://edp611summer2022.slack.com/archives/C03FGLRF6DA/p1653418767286549'><img src='/logos/slack-ico.png' alt='Slack icon' width='25px' target='_blank'></a>"
+    )
+  ),
+  .name_repair = "minimal"
+  
+)
+
+```
+
+<center>
+```{r, echo=FALSE}
+review %>%
+  mutate_all(replace_na,"") %>%
+  kbl(col.names = c("Title", 
+                    "Section",
+                    "Link"), 
+      "html", 
+      escape = FALSE,
+      align = 'llc') %>%
+   kable_paper(full_width = TRUE) %>%
+  column_spec(1, width = "15em") %>%
+  column_spec(2, width = "10em") %>% 
+  column_spec(3, width = "5em") %>%
+  row_spec(0:4, extra_css = 'vertical-align: middle !important;', color = "#f7f7f7", background = "transparent") 
+```
+</center>

@@ -192,7 +192,6 @@ drinks data
 </tr>
 </tfoot>
 </table>
-</center>
 
 In any case, type the following into your console and you should the following output regardless of approach taken
 

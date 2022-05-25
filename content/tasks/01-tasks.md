@@ -121,7 +121,13 @@ PDF of the presentation
 
 Since your final product for the course is a proposal grounded in proper and effective measures, we will work on a weekly basis to get you there. For this week, please construct a one paragraph case for a population that needs to be researched, why it should be be studied, and how the data would be quantitatively driven. Submit this document using APA 7th Edition formatting to [eCampus](%22https://ecampus.wvu.edu/%22).
 
-The entire sequence leading up to the final proposal can be found on the [main Tasks page](/tasks/#proposal).
+<br />
+
+<center>
+<p id="rounded_corners">
+All submissions leading up to the proposal can be found on the main <a href="/tasks/#proposal">Tasks</a> page
+<p>
+</center>
 
 ## First Meetup
 

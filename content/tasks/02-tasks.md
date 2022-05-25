@@ -19,11 +19,17 @@ weight: 1
 
 Submit a one to three page proposal outlining specific questions that you would like to assess and then describe an instrument that would be used to assess those items. Include general details on what measures would be used. Submit this document using APA 7th Edition formatting to <a href="%22https://ecampus.wvu.edu/%22" target="_blank">eCampus</a>.
 
-The entire sequence leading up to the final proposal can be found on the [main Tasks page](/tasks/#proposal).
+<br />
+
+<center>
+<p id="rounded_corners">
+All submissions leading up to the proposal can be found on the main <a href="/tasks/#proposal">Tasks</a> page
+<p>
+</center>
 
 ## Second Meetup
 
-Unless advised not to do so, please sign up with the instructor you did not meet with last week.
+Unless advised not to do so, please sign up with the instructor that you did not meet with during the prior week.
 
 <center>
 
@@ -42,3 +48,5 @@ Unless advised not to do so, please sign up with the instructor you did not meet
 </div>
 
 </div>
+
+</center>
