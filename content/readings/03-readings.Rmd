@@ -39,7 +39,7 @@ downloadthis::download_file(
 
 ### Read Some Papers
 
-For the readings below, <b>no posts</b> are required:
+For the readings below, write a single post on Slack addressing the task:
 
 ```{r echo=FALSE}
 
@@ -103,7 +103,7 @@ paper %>%
   mutate(Channel = paste0("<span style='font-size:18px'>",Channel,"</span></a>")) %>%
   select(-Icon, -Site, -Arrow) %>% 
   mutate_all(replace_na,"") %>%
-  kbl(col.names = c("Title", "Paper", "Question", "Post", "Link"), 
+  kbl(col.names = c("Title", "Paper", "Task", "Post", "Link"), 
       "html", 
       escape = FALSE,
       align = 'lllcc') %>%

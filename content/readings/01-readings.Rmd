@@ -63,6 +63,10 @@ downloadthis::download_file(
   )
 ```
 
+### Download Text
+
+Optionally you can download 
+
 ### Read Some Papers
 For the readings below, write a **single post** on Slack addressing each question:
 
