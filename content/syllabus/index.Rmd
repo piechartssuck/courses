@@ -127,7 +127,7 @@ To help minimize costs, there is no formal text. We'll rely on the text below wh
   <br>
   <br>
 - Albano, T. (2020). Introduction to Educational and Psychological Measurement Using R.
-  - Free: [https://thetaminusb.com/intro-measurement-r/ ](https://thetaminusb.com/intro-measurement-r/) 
+  - Free: [https://thetaminusb.com/intro-measurement-r/ ](https://thetaminusb.com/intro-measurement-r/)
   <br>
   <br>
 - American Psychological Association. (2020). *Publication manual of the American Psychological Association* (7th ed.).
