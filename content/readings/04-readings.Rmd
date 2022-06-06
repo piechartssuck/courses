@@ -1,0 +1,184 @@
+---
+title: "Conspiracies"
+linktitle: "Week 4: Conspiracies"
+toc: true
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  readings:
+    parent: Readings
+    weight: 4
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+`r blogdown::shortcode("aes-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+### Respond to Posts
+Please create **two responses** for the post below on Slack[^respond]. 
+
+> <a href="https://edp611summer2022.slack.com/archives/C03G9JGHMLP" style='color:#ff8384;'>#wk3-personality-tests</a> 
+
+### Download Literature
+
+```{r echo=FALSE,eval=TRUE,message=FALSE}
+loc <- here::here("static", "readings", "EDP611Week4Readings.zip")
+
+downloadthis::download_file(
+  path = loc,
+  output_name = "Week 4 Readings",
+  button_label = "&nbsp;&nbsp;&nbsp;<span style='color:#ffffff'>Download</span>",
+  button_type = "primary",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+
+### Read Some Papers
+
+For the readings below, write a single post on Slack addressing the task:
+
+```{r echo=FALSE}
+
+paper <- tibble(
+  
+  title = c("<i>Looking under the tinfoil hat: Clarifying the personological and psychopathological correlates of conspiracy beliefs</i>",
+            "<i>Measuring belief in conspiracy theories: The generic conspiracist beliefs scale</i>",
+            "<i>On the measurement of conspiracy beliefs</i>"
+  ),
+  
+  Source = c("Bowes, Costello, Ma & Lilienfeld (2021)",
+             "Brotherton, French & Pickering (2013)",
+             "Enders & Smallpage (2018)"),
+  
+  Arrow = c("internal",
+            "",
+            ""),
+  
+  Post = c("This week is a bit of an exploration. First choose an existing conspiracy or if you wish, make one up. Then develop a 7-15 item instrument in a Word document or PDF with the purpose of determining the level of belief that a person may exhibit in that conspiracy. Finally please post the following: (1) A brief description of your conspiracy, (2) your instrument, and (3) a few paragraphs describing how you would go about assessing the validity and reliability of your instrument.",
+           "This week is a bit of an exploration. First choose an existing conspiracy or if you wish, make one up. Then develop a 7-15 item instrument in a Word document or PDF with the purpose of determining the level of belief that a person may exhibit in that conspiracy. Finally please post the following: (1) A brief description of your conspiracy, (2) your instrument, and (3) a few paragraphs describing how you would go about assessing the validity and reliability of your instrument.",
+           "This week is a bit of an exploration. First choose an existing conspiracy or if you wish, make one up. Then develop a 7-15 item instrument in a Word document or PDF with the purpose of determining the level of belief that a person may exhibit in that conspiracy. Finally please post the following: (1) A brief description of your conspiracy, (2) your instrument, and (3) a few paragraphs describing how you would go about assessing the validity and reliability of your instrument."
+          ),
+  
+  Channel = c("<span style='color:#ff8384'>`#wk4-conspiracy`{=markdown}</span>",
+              "<span style='color:#ff8384'>`#wk4-conspiracy`{=markdown}</span>",
+              "<span style='color:#ff8384'>`#wk4-conspiracy`{=markdown}</span>"
+              ),
+  
+  Icon = c("slack", 
+           "nada",
+           "nada"),
+
+  Site = c(
+    "https://edp611summer2022.slack.com/archives/C03JCS82RD0",
+    "",
+    ""
+  ),
+  
+  .name_repair = "minimal"
+  
+)
+
+```
+
+<center>
+```{r, echo=FALSE}
+paper %>%
+  mutate(Icon = case_when(
+    str_detect(`Icon`, "slack") ~ '<img src="/logos/slack-ico.png" alt="Slack icon" width="25px">',
+    str_detect(`Icon`, "ecampus") ~ '<img src="/logos/wvu-gold-ico.png" alt="WVU icon" width="25px">',
+    str_detect(`Icon`, "library") ~ '<img src="/logos/library-ico.png" alt="Library icon" width="25px">',
+    str_detect(`Icon`, "nada") ~ ' ',
+    TRUE ~ NA_character_
+    )
+  ) %>%
+  mutate(Arrow = case_when(
+    str_detect(`Arrow`, "external") ~ '<div style="font-size: 0.5rem;"><i class="fa fa-external-link fa-2x" aria-hidden="true" style="color:#559977"></i></div>',
+    TRUE ~ NA_character_
+    )
+  ) %>%
+  mutate(Site = na_if(Site, "")) %>%
+  mutate(Link = case_when(
+    !is.na(Icon) ~ paste0("<a href=",Site," target='_blank'>",Icon,"</a>"),
+    is.na(Icon) ~ '<img src="/logos/none-ico.png" alt="Library icon" width="25px">',
+    TRUE ~ NA_character_
+    )
+  ) %>%
+  mutate(Channel = paste0("<span style='font-size:18px'>",Channel,"</span></a>")) %>%
+  select(-Icon, -Site, -Arrow) %>% 
+  mutate_all(replace_na,"") %>%
+  kbl(col.names = c("Title", "Paper", "Task", "Post", "Link"), 
+      "html", 
+      escape = FALSE,
+      align = 'lllcc') %>%
+  kable_paper(full_width = TRUE) %>%
+  column_spec(1, width = "20em", extra_css = 'vertical-align: middle !important;') %>%
+  column_spec(2, width = "10em", extra_css = 'vertical-align: middle !important;') %>%
+  column_spec(3, width = "40em", extra_css = 'vertical-align: middle !important;') %>% 
+  column_spec(4, width = "10em", extra_css = 'vertical-align: middle !important;') %>%
+  column_spec(5, width = "5em", extra_css = 'position: relative; top: 29.3%; transform: translate(2.5%,73%);') %>% 
+  row_spec(0:3, color = "#f7f7f7", background = "transparent") %>%
+  collapse_rows(columns = 3:5,
+                valign = "middle")
+```
+</center>
+
+### Read Some Text
+
+```{r echo=FALSE}
+
+filefa <- as.character(fa("file", fill = "#e86af0", height = "25px"))
+
+bookfa <- as.character(fa("book", fill = "#f06ab5", height = "25px"))
+
+linkfa <- as.character(fa("link", fill = "#a56af0", height = "25px"))
+
+review <- tibble(
+  
+  title <- c("<i>Practice-Based Research</i>",
+             "<i>Reliability</i>"),
+  
+  section = c("Chapters 12-13 (Part IV)",
+              "Chapter V"),
+  
+  link <- c(
+    paste0("[",bookfa,"]",
+    "(https://ebookfacentral.proquest.com/lib/wvu/detail.action?docID=4722459){target='_blank'}"
+    ),
+    paste0("[",linkfa,"]",
+    "(https://www.thetaminusb.com/intro-measurement-r/reliability.html){target='_blank'}"
+    )),
+    
+  .name_repair = "minimal"
+  
+)
+
+```
+
+<center>
+```{r, echo=FALSE}
+review %>%
+  mutate_all(replace_na,"") %>%
+  kbl(col.names = c("Title", 
+                    "Section",
+                    "Link"), 
+      "html", 
+      escape = FALSE,
+      align = 'llc') %>%
+  kable_paper(full_width = TRUE) %>%
+  column_spec(1, width = "15em") %>%
+  column_spec(2, width = "10em") %>% 
+  column_spec(3, width = "5em") %>%
+  row_spec(0:2, extra_css = 'vertical-align: middle !important;', color = "#f7f7f7", background = "transparent") 
+```
+</center>
+
+[^respond]: Your responses to postings should follow the same [basic criteria](/tasks/#weekly-postings) outlined in the original post. Remember to use the [`Reply in thread`{=html}](/tasks/#responding-on-slack) option when responding to receive credit.</font>
