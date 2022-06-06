@@ -1,6 +1,6 @@
 ---
 title: "Conspiracies"
-linktitle: "Week 4: Conspiracies"
+linktitle: "Week 4: Conspiracies "
 output:
   rmarkdown::html_document:
     toc: true
