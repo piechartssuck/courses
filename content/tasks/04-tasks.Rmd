@@ -78,7 +78,7 @@ This task involves a multi-step process to update your instrument^[In the case w
       
       d. <span style="font-weight:600; color:#f7f7f7; text-decoration:underline;font_size = 22;">group</span> is the associated group of items, if applicable
       
-      e. <span style="font-weight:600; color:#f7f7f7; text-decoration:underline;font_size = 22;">group</span> is a brief description of any alterations performed, if applicable<br><br>
+      e. <span style="font-weight:600; color:#f7f7f7; text-decoration:underline;font_size = 22;">changes</span> is a brief description of any alterations performed, if applicable<br><br>
 
 3. Submit this document to <a target="_blank" href="https://ecampus.wvu.edu/">eCampus</a>.
 
@@ -92,7 +92,7 @@ All submissions leading up to the proposal can be found on the main <a href="/ta
 
 [^sharing]: If the instrument is housed elsewhere (e.g. Qualtrics), then simply share it with me (e.g. by using the <a target="_blank" href="https://www.qualtrics.com/support/survey-platform/my-projects/sharing-a-project/">Collaborate</a> functionality.)
 
-## Third Meetup
+## Fourth Meetup
 
 Please sign up with the instructor that you did not meet with during the prior week.
 

@@ -15,20 +15,29 @@ source(here::here("content", "com_libs.R"))
 
 <!--- `r blogdown::shortcode("courseinfo")` --->
 
-## Course Objectives
+## Assessing Measures and Measuring Assessments
 
-**You can measure many things** Measurement is a principle trait and whether it is hard wired, learned, or some combination of both, its absence makes quantitative data impossible to classify. Even in cases where measures are available, how can we know if they are consistent and accurate? Without these checks, instruments such as surveys could never be constructed, much less yield results that could be generalized. 
+Measurement is a principle trait and whether it is hard wired, learned, or some combination of both, its absence makes quantitative data impossible to classify. Even in cases where measures are available, how can we know if they are consistent and accurate? Without these checks, instruments such as surveys could never be constructed, much less yield results that could be generalized. 
 
 When assessing existing programs, having an ability to test a hypothesis is key in understanding its goals. While evaluation tells us whether a program is producing results or having an effect/impact, (performance) measurement tells us what a program did and how well it did it. In particular, the latter is a necessity and involves collecting and reporting data that can be used to compartmentalize the way a program is being implemented.
 
-Specifically, you should be able to:
+## Course Objectives
 
-1. assess the credibility and ethics of measurement practices
-2. confidently determining valid and reliable measures
-3. interpret and report psychometric properties of tests
-4. recognize measurement in the evaluative process
+The overall purpose of this course is to empower you to
 
-By the end of this course, you will hopefully become (1) literate in the connection between data and measurement principles, and (2) a skeptic of every research question or purpose that you come across. 
+- <span style="color:#ffffff">understand the connect data and measurement principles</span>
+    
+- <span style="color:#ffffff">be skeptical of every research question or purpose that you come across</span>
+
+By the end of the course you should ideally be able to
+  
+- <span style="color:#ffffff">address differing types of measures and variables</span><br>
+  
+- <span style="color:#ffffff">determine the validity and reliability of tests</span>
+  
+- <span style="color:#ffffff">derive measures from items</span>
+  
+- <span style="color:#ffffff">interpret and report psychometric properties of assessments</span>
 
 Additionally, this class will expose you to [`r fa("r-project", fill = "steelblue")`](https://cran.r-project.org/) — one of the most popular and in-demand statistical languages. Armed with the foundation of R skills you'll learn in this class, you'll know enough to be able to find how to analyze and visualize many outputs based on measures.
 
@@ -208,7 +217,7 @@ pdf_link <- function() {
 textitems <- tibble(
   
   html <- c("Larger version of the presentation",
-               html_link()),
+            html_link()),
   
   pdf <- c("PDF of the helpfile",
             pdf_link())
@@ -237,18 +246,18 @@ assignments <- tribble(
   ~Percent,  ~Task, ~Location,
   15, "R Training", "Data Camp",
   15, "Reflections", "Slack",
-  15, "R Measurement EDA", "eCampus/Slack",
+  15, "R Measurement EDA", "eCampus",
   15, "Check-ins", "Zoom",
   30, "Proposal", "eCampus/Slack", 
   10, "Elevator Pitch", "eCampus/Slack"
 ) 
 grading <- tribble(
   ~Grade, ~Range,
-  "A",  "90–100%",
-  "B",  "80%-89%",  
-  "C",  "70–79%",
-  "D",  "60–69%", 
-  "F",  "\\< 60%"
+  "A",  "90 &#150; 100%",
+  "B",  "80 &#150; 89%",  
+  "C",  "70 &#150; 79%",
+  "D",  "60 &#150; 69%", 
+  "F",  "&#60; 60%"
 )
 ```
 
@@ -363,7 +372,7 @@ WVU is committed to maintaining a safe learning environment for all students, fa
 
 In a face-to-face environment, our commitment to safety requires students, staff, and instructors to observe the social distancing and personal protective equipment (PPE) guidelines set by the University at all times. While in class, students will sit in assigned seats when applicable and wear the required PPE. Should a student forget to bring the required PPE, PPE will be available in the building for students to acquire. Students who fail to comply will be dismissed from the classroom for the class period and may be referred to the Office of Student Conduct for further sanctions.
 
-If a student becomes sick or is required to quarantine during the semester, they should notify the instructor. The student should work with the instructor to develop a plan to receive the necessary course content, activities, and assessments to complete the course learning outcomes. 
+If a student becxomes sick or is required to quarantine during the semester, they should notify the instructor. The student should work with the instructor to develop a plan to receive the necessary course content, activities, and assessments to complete the course learning outcomes. 
 
 ### Psychological and Psychiatric Services
 

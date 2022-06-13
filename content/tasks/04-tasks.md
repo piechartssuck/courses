@@ -91,7 +91,7 @@ This task involves a multi-step process to update your instrument[^1] If you do 
 
     4.  <span style="font-weight:600; color:#f7f7f7; text-decoration:underline;font_size = 22;">group</span> is the associated group of items, if applicable
 
-    5.  <span style="font-weight:600; color:#f7f7f7; text-decoration:underline;font_size = 22;">group</span> is a brief description of any alterations performed, if applicable<br><br>
+    5.  <span style="font-weight:600; color:#f7f7f7; text-decoration:underline;font_size = 22;">changes</span> is a brief description of any alterations performed, if applicable<br><br>
 
 3.  Submit this document to <a target="_blank" href="https://ecampus.wvu.edu/">eCampus</a>.
 
@@ -103,7 +103,7 @@ All submissions leading up to the proposal can be found on the main <a href="/ta
 <p>
 </center>
 
-## Third Meetup
+## Fourth Meetup
 
 Please sign up with the instructor that you did not meet with during the prior week.
 

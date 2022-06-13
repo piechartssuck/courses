@@ -38,7 +38,6 @@ Description = c("Create two responses to <i>Psychopathic Sims: Testing the Cheat
                 "Submit your second main task: <span style='color:#6acda5;font-weight:bold'>Creating an Argument</span>"
                 ),
 
-
 Details = c("<a href='/readings/02-readings/#respond-to-posts'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/readings/02-readings/#respond-to-posts'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/readings/02-readings/#respond-to-posts'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",

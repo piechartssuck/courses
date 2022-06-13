@@ -1,0 +1,221 @@
+---
+title: "Nerds"
+linktitle: "Week 5: Nerds"
+toc: true
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  readings:
+    parent: Readings
+    weight: 5
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+`r blogdown::shortcode("aes-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+### Respond to Posts
+Take a look at **two separate instruments** provided by your peers on
+
+> <a href="https://edp611summer2022.slack.com/archives/C03JCS82RD0" style='color:#ff8384;'>#wk4-conspiracy</a> 
+
+Without contacting them, try to interpret what is being measured and provide feedback where you think they could improve. Please use the the column table layout[^respond] below. 
+
+1. Open a blank copy of the following <img src="/logos/word-ico.png" alt="Word icon" width="50">
+
+2. Create a four column table with the following headers
+    ```{r eval = TRUE, echo = FALSE}
+    ex <- tibble(
+      
+      index = c(NA),
+      
+      measure = c(NA),
+      
+      group = c(NA),
+      
+      changes = c(NA)
+       
+    ) 
+    ```
+    
+    <center>
+    ```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+    ex %>%
+      drop_na() %>%
+      kbl("html", 
+      escape = FALSE) %>%
+      kable_styling(full_width = FALSE, 
+                    font_size = 22,
+                    html_font = "roboto condensed") %>% 
+      row_spec(0, extra_css = 'vertical-align: middle !important;font-weight: 600;text-decoration:underline', color = "#f7f7f7", background = "transparent") 
+    ```
+    </center>
+    where the<br><br>
+    
+      a. <span style="font-weight:600; color:#f7f7f7; text-decoration:underline;font_size = 22;">index</span> is an item number given in order of appearance
+      
+      b. <span style="font-weight:600; color:#f7f7f7; text-decoration:underline;font_size = 22;">measure</span> is your guess about the associated measure
+      
+      c. <span style="font-weight:600; color:#f7f7f7; text-decoration:underline;font_size = 22;">group</span> is your guess about the associated group of items, if applicable
+      
+      d. <span style="font-weight:600; color:#f7f7f7; text-decoration:underline;font_size = 22;">changes</span> is a brief description of all recommended alterations, if applicable<br><br>
+
+3. Include any general feedback within the body of the post
+
+### Download Literature
+
+```{r echo=FALSE,eval=TRUE,message=FALSE}
+loc <- here::here("static", "readings", "EDP611Week5Readings.zip")
+
+downloadthis::download_file(
+  path = loc,
+  output_name = "Week 5 Readings",
+  button_label = "&nbsp;&nbsp;&nbsp;<span style='color:#ffffff'>Download</span>",
+  button_type = "primary",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+
+### Read Some Papers
+
+For the readings below, write a single post on Slack addressing the task:
+
+```{r echo=FALSE}
+
+paper <- tibble(
+  
+  title = c("<i>An Exploratory Factor Analysis of the Nerdy Personality Attributes Scale in a Sample of Self-identified Nerds/geeks</i>",
+            "<i>A Psychological Exploration of Engagement in Geek Culture</i>"
+  ),
+  
+  Source = c("Finister, C., Pollet, T. V., & Neave, N. (2021)",
+             "McCain, J., Gentile, B., & Campbell, W. K. (2015)"
+  ),
+  
+  Arrow = c("internal",
+            ""),
+  
+  Post = c("This week is related to critiquing. First read both articles and then pick one to critique, in particular scrutinize the measures used and use what we've covered in the required readings for your justifications. Please remember to cite your sources.",
+           "This week is related to critiquing. First read both articles and then pick one to critique, in particular scrutinize the measures used and use what we've covered in the required readings for your justifications. Please remember to cite your sources."
+          ),
+  
+  Channel = c("<span style='color:#ff8384'>`#wk5-nerds`{=markdown}</span>",
+              "<span style='color:#ff8384'>`#wk5-nerds`{=markdown}</span>"
+              ),
+  
+  Icon = c("slack", 
+           "nada"),
+
+  Site = c(
+    "https://edp611summer2022.slack.com/archives/C03JWNF6ZT9",
+    ""
+  ),
+  
+  .name_repair = "minimal"
+  
+)
+
+```
+
+<center>
+```{r, echo=FALSE}
+paper %>%
+  mutate(Icon = case_when(
+    str_detect(`Icon`, "slack") ~ '<img src="/logos/slack-ico.png" alt="Slack icon" width="25px">',
+    str_detect(`Icon`, "ecampus") ~ '<img src="/logos/wvu-gold-ico.png" alt="WVU icon" width="25px">',
+    str_detect(`Icon`, "library") ~ '<img src="/logos/library-ico.png" alt="Library icon" width="25px">',
+    str_detect(`Icon`, "nada") ~ ' ',
+    TRUE ~ NA_character_
+    )
+  ) %>%
+  mutate(Arrow = case_when(
+    str_detect(`Arrow`, "external") ~ '<div style="font-size: 0.5rem;"><i class="fa fa-external-link fa-2x" aria-hidden="true" style="color:#559977"></i></div>',
+    TRUE ~ NA_character_
+    )
+  ) %>%
+  mutate(Site = na_if(Site, "")) %>%
+  mutate(Link = case_when(
+    !is.na(Icon) ~ paste0("<a href=",Site," target='_blank'>",Icon,"</a>"),
+    is.na(Icon) ~ '<img src="/logos/none-ico.png" alt="Library icon" width="25px">',
+    TRUE ~ NA_character_
+    )
+  ) %>%
+  mutate(Channel = paste0("<span style='font-size:18px'>",Channel,"</span></a>")) %>%
+  select(-Icon, -Site, -Arrow) %>% 
+  mutate_all(replace_na,"") %>%
+  kbl(col.names = c("Title", "Paper", "Task", "Post", "Link"), 
+      "html", 
+      escape = FALSE,
+      align = 'lllcc') %>%
+  kable_paper(full_width = TRUE) %>%
+  column_spec(1, width = "20em", extra_css = 'vertical-align: middle !important;') %>%
+  column_spec(2, width = "10em", extra_css = 'vertical-align: middle !important;') %>%
+  column_spec(3, width = "40em", extra_css = 'vertical-align: middle !important;') %>% 
+  column_spec(4, width = "10em", extra_css = 'vertical-align: middle !important;') %>%
+  column_spec(5, width = "5em", extra_css = 'position: relative; top: 29.3%; transform: translate(2.5%,50%);') %>% 
+  row_spec(0:2, color = "#f7f7f7", background = "transparent") %>%
+  collapse_rows(columns = 3:5,
+                valign = "middle")
+```
+</center>
+
+### Read Some Text
+
+```{r echo=FALSE}
+
+filefa <- as.character(fa("file", fill = "#e86af0", height = "25px"))
+
+bookfa <- as.character(fa("book", fill = "#f06ab5", height = "25px"))
+
+linkfa <- as.character(fa("link", fill = "#a56af0", height = "25px"))
+
+review <- tibble(
+  
+  title <- c("<i>Item Analysis</i>",
+             "<i>Validity</i>"),
+  
+  section = c("Chapter VI",
+              "Chapter IX"),
+  
+  link <- c(
+    paste0("[",linkfa,"]",
+    "(https://www.thetaminusb.com/intro-measurement-r/itemanalysis.html){target='_blank'}"
+    ),
+    paste0("[",linkfa,"]",
+    "(https://www.thetaminusb.com/intro-measurement-r/validity.html){target='_blank'}"
+    )),
+    
+  .name_repair = "minimal"
+  
+)
+
+```
+
+<center>
+```{r, echo=FALSE}
+review %>%
+  mutate_all(replace_na,"") %>%
+  kbl(col.names = c("Title", 
+                    "Section",
+                    "Link"), 
+      "html", 
+      escape = FALSE,
+      align = 'llc') %>%
+  kable_paper(full_width = TRUE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>% 
+  column_spec(3, width = "5em") %>%
+  row_spec(0:2, extra_css = 'vertical-align: middle !important;', color = "#f7f7f7", background = "transparent") 
+```
+</center>
+
+[^respond]: Your responses to postings should follow the same [basic criteria](/tasks/#weekly-postings) outlined in the original post. Remember to use the [`Reply in thread`{=html}](/tasks/#responding-on-slack) option when responding to receive credit.</font>

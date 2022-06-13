@@ -24,7 +24,7 @@ wk_post <-
   
   tibble(
 
-Description = c("Read <i>The Utility of the Myers-Briggs Type Indicator</i> in Pittenger (1993) and <i>Using the Myers-Briggs Type Indicator to Study Managers: A Literature Review and Research Agenda</i> and post on <a style='color:#ff8384;'>\\ #wk3-personality-tests</a>",
+Description = c("Read <i>The Utility of the Myers-Briggs Type Indicator</i> in Pittenger (1993) and <i>Using the Myers-Briggs Type Indicator to Study Managers: A Literature Review and Research Agenda</i>; then post on <a style='color:#ff8384;'>\\ #wk3-personality-tests</a>",
                 "Read <i>Quantitative Research Designs</i> in Balkin & Kleist (2017)",
                 "Read <i>Testing Applications</i> in Albano (2020)",
                 "Read <i>Test Development</i> in Albano (2020)",

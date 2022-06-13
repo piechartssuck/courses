@@ -25,7 +25,7 @@ wk_post <-
   tibble(
 
 Description = c("Create two responses to the personality test comparisons and post on <a style='color:#ff8384;'>\\ #wk3-personality-tests</a>",
-                "Read <i>Looking under the tinfoil hat: Clarifying the personological and psychopathological correlates of conspiracy beliefs</i> in Bowes, Costello, Ma & Lilienfeld (2021 and <i>Measuring belief in conspiracy theories: The generic conspiracist beliefs scale</i> in Brotherton, French & Pickering (2013), <i>On the measurement of conspiracy beliefs</i> in Enders & Smallpage (2018) and post on <a style='color:#ff8384;'>\\ #wk4-conspiracy</a>",
+                "Read <i>Looking under the tinfoil hat: Clarifying the personological and psychopathological correlates of conspiracy beliefs</i> by Bowes, Costello, Ma and Lilienfeld (2021), <i>Measuring belief in conspiracy theories: The generic conspiracist beliefs scale</i> by Brotherton, French & Pickering (2013), and <i>On the measurement of conspiracy beliefs</i> in Enders & Smallpage (2018); then post on <a style='color:#ff8384;'>\\ #wk4-conspiracy</a>",
                 "Read <i>Practice-Based Research</i> in Balkin & Kleist (2017)",
                 "Read <i>Reliability</i> in Albano (2020)",
                 "Complete the module <span style='color:#ffc787;font-weight:bold'><i>Introduction to Regression in R</i></span> </i></span> on <b>Data Camp</b>",
@@ -40,7 +40,7 @@ Details = c("<a href='/readings/04-readings/#respond-to-posts'><span style='font
             "<a href='/readings/04-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/modules/04-module/#data-camp'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/walkthroughs/04-walkthrough/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
-            "<a href='/tasks/04-tasks/#third-meetup'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/tasks/04-tasks/#fourth-meetup'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/tasks/04-tasks/#refine-the-draft'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
             ),
 
@@ -59,7 +59,7 @@ Site = c("https://edp611summer2022.slack.com/archives/C03G9JGHMLP",
          "https://www.thetaminusb.com/intro-measurement-r/reliability.html",
          "https://www.datacamp.com",
          "",
-         "/tasks/04-tasks/#third-meetup",
+         "/tasks/04-tasks/#fourth-meetup",
          "https://ecampus.wvu.edu/")
 )
 ```

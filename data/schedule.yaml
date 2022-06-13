@@ -27,24 +27,24 @@ lessons:
     tasks: "03-tasks"
     due: "03-due"
 
-  # - title: 'Conspiracy Theories'
-  #   session: 4
-  #   date: "June 6, 2022"
-  #   readings: "04-readings"
-  #   datacamp: "04-lesson"
-  #   walkthroughs: "04-walkthrough"
-  #   tasks: "04-tasks"
-  #   due: "04-due"
-  #
-  # - title: 'Nerds'
-  #   session: 5
-  #   date: "June 13, 2022"
-  #   readings: "05-readings"
-  #   datacamp: "05-lesson"
-  #   walkthroughs: "05-walkthrough"
-  #   tasks: "05-tasks"
-  #   due: "05-due"
-  #
+  - title: 'Conspiracy Theories'
+    session: 4
+    date: "June 6, 2022"
+    readings: "04-readings"
+    modules: "04-modules"
+    walkthroughs: "04-walkthroughs"
+    tasks: "04-tasks"
+    due: "04-due"
+
+  - title: 'Nerds'
+    session: 5
+    date: "June 13, 2022"
+    readings: "05-readings"
+    modules: "05-modules"
+    walkthroughs: "05-walkthroughs"
+    tasks: "05-tasks"
+    due: "05-due"
+
   # - title: 'Now You Know'
   #   session: 6
   #   date: "June 20, 2020"

@@ -31,20 +31,20 @@
 3,,,,,,,More Distributions and the Central Limit Theorem,
 3,,,,,,,Correlation and Experimental Design,
 ,,,,,,,,
-4,4,<a href='/modules/04-module/'>Week 4</a>,6/12/22,6/12/22,checked,Introduction to Regression in R,Simple Linear Regression,"Simple Linear Regression, Predictions and model objects, Assessing model fit, Simple logistic regression"
-4,,,,,,,Predictions and model objects,
-4,,,,,,,Assessing model fit,
-4,,,,,,,Simple logistic regression,
+4,4,<a href='/modules/04-module/'>Week 4</a>,6/12/22,6/12/22,checked,Introduction to Regression in R,Simple Linear Regression,"Simple Linear Regression, Predictions and Model Objects, Assessing Model Fit, Simple Logistic Regression"
+4,,,,,,,Predictions and Model Objects,
+4,,,,,,,Assessing Model Fit,
+4,,,,,,,SimpleLlogistic Regression,
 ,,,,,,,,
-5,5,<a href='/modules/05-module/'>Week 5</a>,6/19/22,6/19/22,checked,Survey and Measurement Development in R,Preparing to analyze survey data,"Preparing to analyze survey data, Exploratory factor analysis & survey development, Confirmatory factor analysis & construct validation, "
-5,,,,,,,Exploratory factor analysis & survey development,
-5,,,,,,,Confirmatory factor analysis & construct validation,
-5,,,,,,,Criterion validity & replication,
+5,5,<a href='/modules/05-module/'>Week 5</a>,6/19/22,6/19/22,checked,Survey and Measurement Development in R,Preparing to Analyze Survey Data,"Preparing to Analyze Survey Data, Exploratory Factor Analysis & Survey Development, Confirmatory Factor Analysis & Construct Validation, Criterion Validity & Replication"
+5,,,,,,,Exploratory Factor Analysis & Survey Development,
+5,,,,,,,Confirmatory Factor Analysis & Construct Validation,
+5,,,,,,,Criterion Validity & Replication,
 ,,,,,,,,
-6,6,<a href='/modules/06-module/'>Week 6</a>,6/26/22,6/26/22,checked,Analyzing Survey Data in R,Introduction to survey data,"Introduction to survey data, Exploring categorical data, Exploring quantitative data, Modeling quantitative data"
-6,,,,,,,Exploring categorical data,
-6,,,,,,,Exploring quantitative data,
-6,,,,,,,Modeling quantitative data,
+6,6,<a href='/modules/06-module/'>Week 6</a>,6/26/22,6/26/22,checked,Analyzing Survey Data in R,Introduction to Survey Data,"Introduction to Survey Data, Exploring Categorical Data, Exploring Quantitative Data, Modeling Quantitative Data"
+6,,,,,,,Exploring Categorical Data,
+6,,,,,,,Exploring Quantitative Data,
+6,,,,,,,Modeling Quantitative Data,
 ,,,,,,,,
 EC1,EC1,,6/26/22,6/26/21,unchecked,Introduction to Data Visualization with ggplot2,Introduction,"Introduction, Aesthetics, Geometries, Themes"
 EC1,,,,,,,Aesthetics,

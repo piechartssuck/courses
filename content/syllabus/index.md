@@ -21,20 +21,29 @@ output:
 
 <!--- `{{% courseinfo %}}`{=html} --->
 
-## Course Objectives
+## Assessing Measures and Measuring Assessments
 
-**You can measure many things** Measurement is a principle trait and whether it is hard wired, learned, or some combination of both, its absence makes quantitative data impossible to classify. Even in cases where measures are available, how can we know if they are consistent and accurate? Without these checks, instruments such as surveys could never be constructed, much less yield results that could be generalized.
+Measurement is a principle trait and whether it is hard wired, learned, or some combination of both, its absence makes quantitative data impossible to classify. Even in cases where measures are available, how can we know if they are consistent and accurate? Without these checks, instruments such as surveys could never be constructed, much less yield results that could be generalized.
 
 When assessing existing programs, having an ability to test a hypothesis is key in understanding its goals. While evaluation tells us whether a program is producing results or having an effect/impact, (performance) measurement tells us what a program did and how well it did it. In particular, the latter is a necessity and involves collecting and reporting data that can be used to compartmentalize the way a program is being implemented.
 
-Specifically, you should be able to:
+## Course Objectives
 
-1.  assess the credibility and ethics of measurement practices
-2.  confidently determining valid and reliable measures
-3.  interpret and report psychometric properties of tests
-4.  recognize measurement in the evaluative process
+The overall purpose of this course is to empower you to
 
-By the end of this course, you will hopefully become (1) literate in the connection between data and measurement principles, and (2) a skeptic of every research question or purpose that you come across.
+-   <span style="color:#ffffff">understand the connect data and measurement principles</span>
+
+-   <span style="color:#ffffff">be skeptical of every research question or purpose that you come across</span>
+
+By the end of the course you should ideally be able to
+
+-   <span style="color:#ffffff">address differing types of measures and variables</span><br>
+
+-   <span style="color:#ffffff">determine the validity and reliability of tests</span>
+
+-   <span style="color:#ffffff">derive measures from items</span>
+
+-   <span style="color:#ffffff">interpret and report psychometric properties of assessments</span>
 
 Additionally, this class will expose you to [<svg aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:steelblue;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>](https://cran.r-project.org/) — one of the most popular and in-demand statistical languages. Armed with the foundation of R skills you’ll learn in this class, you’ll know enough to be able to find how to analyze and visualize many outputs based on measures.
 
@@ -278,7 +287,7 @@ Slack
 R Measurement EDA
 </td>
 <td style="text-align:left;width: 9em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
-eCampus/Slack
+eCampus
 </td>
 </tr>
 <tr>
@@ -338,7 +347,7 @@ Range
 A
 </td>
 <td style="text-align:left;width: 6.5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
-90–100%
+90 &#150; 100%
 </td>
 </tr>
 <tr>
@@ -346,7 +355,7 @@ A
 B
 </td>
 <td style="text-align:left;width: 6.5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
-80%-89%
+80 &#150; 89%
 </td>
 </tr>
 <tr>
@@ -354,7 +363,7 @@ B
 C
 </td>
 <td style="text-align:left;width: 6.5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
-70–79%
+70 &#150; 79%
 </td>
 </tr>
 <tr>
@@ -362,7 +371,7 @@ C
 D
 </td>
 <td style="text-align:left;width: 6.5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
-60–69%
+60 &#150; 69%
 </td>
 </tr>
 <tr>
@@ -370,7 +379,7 @@ D
 F
 </td>
 <td style="text-align:left;width: 6.5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
-&lt; 60%
+&#60; 60%
 </td>
 </tr>
 </tbody>
@@ -440,7 +449,7 @@ WVU is committed to maintaining a safe learning environment for all students, fa
 
 In a face-to-face environment, our commitment to safety requires students, staff, and instructors to observe the social distancing and personal protective equipment (PPE) guidelines set by the University at all times. While in class, students will sit in assigned seats when applicable and wear the required PPE. Should a student forget to bring the required PPE, PPE will be available in the building for students to acquire. Students who fail to comply will be dismissed from the classroom for the class period and may be referred to the Office of Student Conduct for further sanctions.
 
-If a student becomes sick or is required to quarantine during the semester, they should notify the instructor. The student should work with the instructor to develop a plan to receive the necessary course content, activities, and assessments to complete the course learning outcomes.
+If a student becxomes sick or is required to quarantine during the semester, they should notify the instructor. The student should work with the instructor to develop a plan to receive the necessary course content, activities, and assessments to complete the course learning outcomes.
 
 ### Psychological and Psychiatric Services
 

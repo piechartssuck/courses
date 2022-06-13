@@ -47,7 +47,7 @@ Create two responses to the personality test comparisons and post on <a style="c
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Read <i>Looking under the tinfoil hat: Clarifying the personological and psychopathological correlates of conspiracy beliefs</i> in Bowes, Costello, Ma & Lilienfeld (2021 and <i>Measuring belief in conspiracy theories: The generic conspiracist beliefs scale</i> in Brotherton, French & Pickering (2013), <i>On the measurement of conspiracy beliefs</i> in Enders & Smallpage (2018) and post on <a style="color:#ff8384;"> #wk4-conspiracy</a>
+Read <i>Looking under the tinfoil hat: Clarifying the personological and psychopathological correlates of conspiracy beliefs</i> by Bowes, Costello, Ma and Lilienfeld (2021), <i>Measuring belief in conspiracy theories: The generic conspiracist beliefs scale</i> by Brotherton, French & Pickering (2013), and <i>On the measurement of conspiracy beliefs</i> in Enders & Smallpage (2018); then post on <a style="color:#ff8384;"> #wk4-conspiracy</a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/readings/04-readings/#read-some-papers"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
@@ -104,10 +104,10 @@ Go through the third <i class="fa-brands fa-r-project" style="font-size:16px;"><
 Schedule your <span style="color:#da90ae;font-style:italic;">fourth meeting</span> with the instructor you did not meet with.
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/tasks/04-tasks/#third-meetup"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
+<a href="/tasks/04-tasks/#fourth-meetup"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/tasks/04-tasks/#third-meetup" target="_blank"><img src="/logos/calendar-clock.png" alt="Calendar clock icon" width="27"></a>
+<a href="/tasks/04-tasks/#fourth-meetup" target="_blank"><img src="/logos/calendar-clock.png" alt="Calendar clock icon" width="27"></a>
 </td>
 </tr>
 <tr>

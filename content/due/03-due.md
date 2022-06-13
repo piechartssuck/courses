@@ -36,7 +36,7 @@ Link
 <tbody>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Read <i>The Utility of the Myers-Briggs Type Indicator</i> in Pittenger (1993) and <i>Using the Myers-Briggs Type Indicator to Study Managers: A Literature Review and Research Agenda</i> and post on <a style="color:#ff8384;"> #wk3-personality-tests</a>
+Read <i>The Utility of the Myers-Briggs Type Indicator</i> in Pittenger (1993) and <i>Using the Myers-Briggs Type Indicator to Study Managers: A Literature Review and Research Agenda</i>; then post on <a style="color:#ff8384;"> #wk3-personality-tests</a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/readings/03-readings/#read-some-papers"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
