@@ -54,21 +54,21 @@ weight: 1
 
 ## Test for Validity and Reliability
 
-This task involves that you use existing or simulated data.
+This task involves that you use existing or simulated data[^2].
 
-1.  Simulate a “large” data set[^2] using whatever software package you prefer. Below are some links to help you out[^3]
+1.  Simulate a “large” data set[^3] using whatever software package you prefer. Below are some links to help you out[^4]
 
     -   <a href="https://support.microsoft.com/en-us/office/randbetween-function-4cc7f0d1-87dc-4eb7-987f-a469ab381685" target="_blank">Excel</a>
 
     -   <a href="https://www.qualtrics.com/support/survey-platform/survey-module/survey-tools/generating-test-responses/" target="_blank">Qualtrics</a>
 
-    -   R (there are many ways to accomplish like <a href="https://www.crumplab.com/programmingforpsych/simulating-and-analyzing-data-in-r.html" target="_blank">this</a> or [that](https://github.com/markolalovic/responsesR))[^4]
+    -   R (there are many ways to accomplish like <a href="https://www.crumplab.com/programmingforpsych/simulating-and-analyzing-data-in-r.html" target="_blank">this</a> or [that](https://github.com/markolalovic/responsesR))[^5]
 
 2.  To assess *validity*, use whatever software you wish to conduct an exploratory factor analysis of your data. For those who use R, take a look at the [EFA walkthrough](/walkthroughs/04-walkthrough/#method-explanatory-factor-analysis).
 
 3.  To assess *reliability*, use whatever software you wish to perform a reliability analysis. For those who use R, take a look at the [Internal Consistency walkthrough](/walkthroughs/03-walkthrough/#computing-the-internal-consistency).
 
-4.  In a single page, describe the purpose of your instrument and what methods you used to assess both validity[^5] and reliability. Use details and specific language in your narrative.
+4.  In a single page, describe the purpose of your instrument and what methods you used to assess both validity[^6] and reliability. Use details and specific language in your narrative.
 
 5.  Submit this document to <a target="_blank" href="https://ecampus.wvu.edu/">eCampus</a>.
 
@@ -104,10 +104,12 @@ Please sign up with the instructor that you did not meet with during the prior w
 
 [^1]: <img src='/img/tweets/annoyword.png' alt='Word Shifting Tweet' width='200'>
 
-[^2]: So how big is a large data set exactly? If you have an idea of what your population numbers might look like. then use that. Otherwise, I suggest starting at 100 cases per item.
+[^2]: While you are indeed free to use any software to complete this task, please note that only R related questions are supported in this course. This includes assistance regarding details, interpretation, reporting, etc.
 
-[^3]: It is suggested that you attempt this early and to reach out if issues arise. Please note that last minute or weekend assistance is unlikely.
+[^3]: So how big is a large data set exactly? If you have an idea of what your population numbers might look like. then use that. Otherwise, I suggest starting at 100 cases per item.
 
-[^4]: Reach out if you would like to simulate data in R but are not able to do so.
+[^4]: It is suggested that you attempt this early and to reach out if issues arise. Please note that last minute or weekend assistance is unlikely.
 
-[^5]: Yes this may be obvious given its an EFA but for completeness, please go ahead and note it in the submission.
+[^5]: Reach out if you would like to simulate data in R but are not able to do so.
+
+[^6]: Yes this may be obvious given its an EFA but for completeness, please go ahead and note it in the submission.

@@ -64,7 +64,7 @@ source(here::here("content", "com_libs.R"))
 
 ## Test for Validity and Reliability
 
-This task involves that you use existing or simulated data.
+This task involves that you use existing or simulated data[^support].
 
 1. Simulate a "large" data set[^simulation] using whatever software package you prefer. Below are some links to help you out[^reach]
 
@@ -99,6 +99,8 @@ All submissions leading up to the proposal can be found on the main <a href="/ta
 [^efa]: Yes this may be obvious given its an EFA but for completeness, please go ahead and note it in the submission.
 
 [^out]: Reach out if you would like to simulate data in R but are not able to do so. 
+
+[^support]: While you are indeed free to use any software to complete this task, please note that only R related questions are supported in this course. This includes assistance regarding details, interpretation, reporting, etc.
 
 ## Fifth Meetup
 
