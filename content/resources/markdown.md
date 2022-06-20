@@ -8,7 +8,7 @@ output:
   rmarkdown::html_document:
     toc: true
 type: docs
-weight: 6
+weight: 3
 ---
 
 

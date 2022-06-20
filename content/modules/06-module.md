@@ -1,13 +1,13 @@
 ---
-title: "Nerds"
-linktitle: "Week 5: Nerds"
+title: "Now You Know"
+linktitle: "Week 6: Now You Know"
 output:
   rmarkdown::html_document:
     toc: true
 menu:
   trainings:
     parent: Modules
-    weight: 5
+    weight: 6
 type: docs
 weight: 1
 ---
@@ -43,7 +43,7 @@ Chapters
 <tbody>
 <tr>
 <td style="text-align:center;width: 10em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-6/19/22
+6/26/22
 </td>
 <td style="text-align:center;width: 10em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:15px;width:15px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#428bca;overflow:visible;position:relative;">
@@ -51,10 +51,10 @@ Chapters
 </svg>
 </td>
 <td style="text-align:left;width: 25em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Survey and Measurement Development in R
+Analyzing Survey Data in R
 </td>
 <td style="text-align:left;width: 30em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Preparing to Analyze Survey Data
+Introduction to Survey Data
 </td>
 </tr>
 <tr>
@@ -65,7 +65,7 @@ Preparing to Analyze Survey Data
 <td style="text-align:left;width: 25em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
 <td style="text-align:left;width: 30em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Exploratory Factor Analysis & Survey Development
+Exploring Categorical Data
 </td>
 </tr>
 <tr>
@@ -76,7 +76,7 @@ Exploratory Factor Analysis & Survey Development
 <td style="text-align:left;width: 25em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
 <td style="text-align:left;width: 30em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Confirmatory Factor Analysis & Construct Validation
+Exploring Quantitative Data
 </td>
 </tr>
 <tr>
@@ -87,7 +87,7 @@ Confirmatory Factor Analysis & Construct Validation
 <td style="text-align:left;width: 25em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
 <td style="text-align:left;width: 30em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Criterion Validity & Replication
+Modeling Quantitative Data
 </td>
 </tr>
 </tbody>

@@ -1,0 +1,111 @@
+---
+title: "R Project"
+author: "NAME" # Erase this comment and please change NAME to your name
+output: pdf_document
+---
+
+```{r libraries, warning=FALSE, message=FALSE}
+library("tidyverse")
+library("psych")
+library("corrr")
+library("surveytools2")
+library("naniar")
+library("mice")
+```
+
+
+```{r load_your_data_and_codebook}
+# erase this comment and paste your syntax here 
+```
+
+```{r load_your_data_results}
+# erase this comment and put the variable name used above for the data set here 
+```
+
+```{r load_your_codebook_results}
+# erase this comment and put the variable name used above for the codebook here 
+```
+
+
+# Possible Reverse Coding
+
+```{r items_that_need_reverse_coded}
+# If any items needs reverse coded, (1) erase this comment and first paste the syntax used to determine which item(s)
+```
+
+DELETE THIS AND DESCRIBE WHICH ITEMS NEED TO BE REVERSE CODED AND WHY.
+
+```{r reverse_coding}
+# (2) erase this comment and then paste the syntax used to perform the reverse coding
+```
+
+```{r reverse_coding_results}
+# erase this comment and put the variable name used above here 
+```
+
+
+# Test for MCAR and Possible Imputation
+
+```{r test_for_mcar}
+# erase this comment and paste your syntax here 
+```
+
+DELETE THIS AND DESCRIBE IF THE IF YOU WILL BE IMPUTING THE DATA OR NOT. PLEASE PROVIDE A JUSTIFICATION.
+
+```{r imputation, results='hide'}
+# if you concluded that imputation is needed, erase this comment and paste your syntax here
+```
+
+```{r imputation_results}
+# erase this comment and display the first six rows of the imputed data set using the variable name used above
+```
+
+```{r missing_values_comparison}
+# erase this comment and include syntax comparing the number of missing values in the original data set versus the imputed one
+```
+
+DELETE THIS AND DESCRIBE THE NUMBER OF MISSING VALUES IN THE ORGINAL DATA SET IN COMPARISON TO THE IMPUTED ONE.
+
+
+# Test of Validity
+
+```{r scree}
+# erase this comment and then paste the syntax used to plot a scree plot
+```
+
+DELETE THIS AND DESCRIBE THE NUMBER OF LIKELY FACTORS NEEDED.
+
+```{r efa}
+# erase this comment and then paste the syntax used to conduct an EFA
+```
+
+```{r efa_loadings_results}
+# erase this comment and then paste the syntax used to see the loadings
+```
+
+```{r efa_diagram}
+# erase this comment and then paste the syntax used to plot the FA diagram
+```
+
+DELETE THIS AND DESCRIBE (1) WHETHER THE ORIGINAL GROUP DESCRIBED IN THE CODEBOOK ARE LIKELY CORRECT AND (2) IF NOT, CREATE INTERPRETATIONS OF THE NEW GROUPS. 
+
+
+# Reliability 
+
+```{r relibility}
+# erase this comment and then paste the syntax used to conduct a test for reliability
+```
+
+```{r internal_consistency}
+# erase this comment and then paste the syntax used to present a table that arranges survey items by descending internal consistency measures
+```
+
+```{r internal_consistency_results}
+# erase this comment and put the variable name used above here 
+```
+
+DELETE THIS AND INTERPRET THE RELIABILITY OF THE INSTRUMENT
+
+# Conclusion
+
+DELETE THIS AND DESCRIBE IF THE INSTRUMENT IS LIKELY BOTH VALID AND RELIABLE. PLEASE PROVIDE JUSTIFICATIONS FROM YOUR WORK ABOVE. IF THE INSTRUMENT IS NOT EITHER/OR, PLEASE DESCRIBE HOW YOU WOULD AMEND THE INSTRUMENT BEFORE IT IS ADMINISTERED AGAIN.

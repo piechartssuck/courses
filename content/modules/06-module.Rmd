@@ -1,13 +1,13 @@
 ---
-title: "Nerds"
-linktitle: "Week 5: Nerds"
+title: "Now You Know"
+linktitle: "Week 6: Now You Know"
 output:
   rmarkdown::html_document:
     toc: true
 menu:
   trainings:
     parent: Modules
-    weight: 5
+    weight: 6
 type: docs
 weight: 1
 ---
@@ -38,7 +38,7 @@ dc_schedule <-
     Required == "unchecked" ~ as.character(fontawesome::fa("times-circle", fill = "#d9534f", height = "15px"))
               )) %>%
   mutate(across(everything(), as.character)) %>%
-  filter(Group == 5) %>% #CHANGE HERE
+  filter(Group == 6) %>% #CHANGE HERE
   select(-Group, -Chapters_wide, -`Due by_short`) %>%
   rename(`Due by` = `Due by_long`) %>%
   rename(Chapters = Chapters_long)  %>%

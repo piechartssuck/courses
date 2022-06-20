@@ -3,12 +3,12 @@ title: Installing R, RStudio, and tidyverse
 menu:
   resources:
     parent: Guides
-toc:
+toc: true
 output:
-  blogdown::html_page:
-      toc: TRUE
+  rmarkdown::html_document:
+    toc: true
 type: docs
-weight: 4
+weight: 2
 ---
 
 
@@ -53,18 +53,18 @@ First you need to install R itself (the engine).
 </center>
 
 2. Click on "Download R for `XXX`", where `XXX` is either Mac, Windows, or Linux:
-<img src="/img/install/install-r-links.png" width="40%" />
+<img src="../../../../../../../../../img/install/install-r-links.png" width="40%" />
     >- <span style="color:#ffffff">If you use</span> <b><span style="color:#5eb0e5">macOS</span></b> 
     >>- <span style="color:#ffffff">scroll down to the `.pkg` file that corresponds to your architecture (Intel or ARM). As of this writing, the  version for each is is `R-4.1.1.pkg` but download the most current variant</span>
-    <img src="/img/install/install-r-mac1.png" width="100%" />
+    <img src="../../../../../../../../../img/install/install-r-mac1.png" width="100%" />
     >>- <span style="color:#ffffff">download and install `XQuartz`</span>
-    <img src="/img/install/install-r-mac2.png" width="100%" />
+    <img src="../../../../../../../../../img/install/install-r-mac2.png" width="100%" />
     
     >- <span style="color:#ffffff">If you use</span> <b><span style="color:#7fbc00">Windows</span></b>
     >>- <span style="color:#ffffff">click `base` (or click on the bolded "install R for the first time" link) and download it</span>
-    <img src="/img/install/install-r-windows1.png" width="100%" />
+    <img src="../../../../../../../../../img/install/install-r-windows1.png" width="100%" />
     >>- <span style="color:#ffffff">download and install `Rtools`</span>
-    <img src="/img/install/install-r-windows2.png" width="100%" />
+    <img src="../../../../../../../../../img/install/install-r-windows2.png" width="100%" />
     
 3. Double click on the downloaded files (check your `Downloads` folder). Click yes through all the prompts to install like any other program.
 
@@ -77,13 +77,13 @@ Next, you need to install RStudio, the nicer graphical user interface (GUI) for 
 
 2. The website should automatically detect your operating system (macOS, Windows, Linux, etc.) and will display a big download button for it:
 
-    <img src="/img/install/install-r-rstudio-mac.png" width="75%" />
+    <img src="../../../../../../../../../img/install/install-r-rstudio-mac.png" width="75%" />
     
-    <img src="/img/install/install-r-rstudio-windows.png" width="75%" />
+    <img src="../../../../../../../../../img/install/install-r-rstudio-windows.png" width="75%" />
 
     If not, scroll down a little to the large table and choose the version of RStudio that matches your operating system.
     
-    <img src="/img/install/install-r-rstudio-options.png" width="85%" />
+    <img src="../../../../../../../../../img/install/install-r-rstudio-options.png" width="85%" />
 
 3. Double click on the downloaded file (again, check your `Downloads` folder). Click yes through all the prompts to install like any other program.
 
@@ -94,13 +94,13 @@ Next, you need to install RStudio, the nicer graphical user interface (GUI) for 
 
 R packages are easy to install with RStudio. Select the packages panel, click on `Install`, type the name of the package you want to install, and press enter.
 
-<img src="/img/install/install-r-package-panel.png" width="30%" />
+<img src="../../../../../../../../../img/install/install-r-package-panel.png" width="30%" />
 This can sometimes be tedious when you're installing lots of packages, though. [The tidyverse](https://www.tidyverse.org/), for instance, consists of dozens of packages (including **ggplot2**) that all work together. Rather than install each individually, you can install a single magical package and get them all at the same time.
 
 Go to the packages panel in RStudio, click on `Install`, type `tidyverse`, and press enter. You'll see a bunch of output in the RStudio console as all the tidyverse packages are installed.
 
-<img src="/img/install/install-r-tidyverse.png" width="50%" />
+<img src="../../../../../../../../../img/install/install-r-tidyverse.png" width="50%" />
 
 Notice also that RStudio will generate a line of code for you and run it: `install.packages("tidyverse")`. You can also just paste and run this instead of using the packages panel.
 
-<img src="/img/install/installtidy_console.png" width="90%" />
+<img src="../../../../../../../../../img/install/installtidy_console.png" width="90%" />

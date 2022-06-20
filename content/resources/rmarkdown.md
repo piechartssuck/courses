@@ -8,7 +8,7 @@ output:
   rmarkdown::html_document:
     toc: true
 type: docs
-weight: 8
+weight: 4
 ---
 
 
@@ -53,7 +53,7 @@ Here are the most important things you'll need to know about R Markdown in this 
 
     You can knit by clicking on the "Knit" button at the top of the editor window, or by pressing `⌘⇧K` on macOS or `control + shift + K` on Windows.
 
-    <img src="/img/assignments/knit-button.png" width="30%" />
+    <img src="../../../../../../../../../img/assignments/knit-button.png" width="30%" />
 
 
 ## Add chunks
@@ -64,7 +64,7 @@ There are three ways to insert chunks:
 
 - Click on the "Insert" button at the top of the editor window
 
-    <img src="/img/reference/insert-chunk.png" width="30%" />
+    <img src="../../../../../../../../../img/reference/insert-chunk.png" width="30%" />
 
 - Manually type all the backticks and curly braces (don't do this)
 
@@ -73,7 +73,7 @@ There are three ways to insert chunks:
 
 You can add names to chunks to make it easier to navigate your document. If you click on the little dropdown menu at the bottom of your editor in RStudio, you can see a table of contents that shows all the headings and chunks. If you name chunks, they'll appear in the list. If you don't include a name, the chunk will still show up, but you won't know what it does.
 
-<img src="/img/reference/chunk-toc.png" width="40%" />
+<img src="../../../../../../../../../img/reference/chunk-toc.png" width="40%" />
 
 To add a name, include it immediately after the `{r` in the first line of the chunk. Names cannot contain spaces, but they can contain underscores and dashes. **All chunk names in your document must be unique.**
 
@@ -106,7 +106,7 @@ The most common chunk options are these:
 
 You can also set chunk options by clicking on the little gear icon in the top right corner of any chunk:
 
-<img src="/img/reference/chunk-options.png" width="70%" />
+<img src="../../../../../../../../../img/reference/chunk-options.png" width="70%" />
 
 ## Inline chunks
 
@@ -140,7 +140,7 @@ output:
 
 You can also click on the down arrow on the "Knit" button to choose the output *and* generate the appropriate YAML. If you click on the gear icon next to the "Knit" button and choose "Output options", you change settings for each specific output type, like default figure dimensions or whether or not a table of contents is included.
 
-<img src="/img/reference/output-options.png" width="35%" />
+<img src="../../../../../../../../../img/reference/output-options.png" width="35%" />
 
 The first output type listed under `output:` will be what is generated when you click on the "Knit" button or press the keyboard shortcut (`⌘⇧K` on macOS; `control + shift + K` on Windows). If you choose a different output with the "Knit" button menu, that output will be moved to the top of the `output` section.
 

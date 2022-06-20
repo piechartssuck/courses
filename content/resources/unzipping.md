@@ -8,7 +8,7 @@ output:
   rmarkdown::html_document:
     toc: true
 type: docs
-weight: 0
+weight: 6
 ---
 
 
@@ -38,7 +38,7 @@ Unzipping files on macOS is trivial, but unzipping files on Windows can mess you
 
 Double click on the downloaded `.zip` file. macOS will automatically create a new folder with the same name as the `.zip` file, and all the file's contents will be inside. If applicable, click on the RStudio Project file (`.Rproj`) to get started.
 
-<img src="/img/unzipping/unzip-mac.png" width="60%" />
+<img src="../../../../../../../../../img/unzipping/unzip-mac.png" width="60%" />
 
 
 ## Unzipping files on Windows
@@ -47,22 +47,22 @@ Double click on the downloaded `.zip` file. macOS will automatically create a ne
 
 Unlike macOS, Windows does *not* automatically unzip things for you. If you double click on the `.zip` file, Windows will show you what's inside, but it will do so without actually extracting anything. This ~~can be~~ is incredibly confusing! Here's what it looks like—the only clues that this folder is really a `.zip` file are that there's a "Compressed Folder Tools" tab at the top, and there's a "Ratio" column that shows how much each file is compressed. 
 
-<img src="/img/unzipping/inside-zip-windows.png" width="80%" />
+<img src="../../../../../../../../../img/unzipping/inside-zip-windows.png" width="80%" />
 
 It is very tempting to try to open files from this view. However, if you do, things will break and you won't be able to correctly work with any of the files in the zipped folder. If you open the R Project file, for instance, RStudio will point to a bizarre working directory buried deep in some temporary folder:
 
-<img src="/img/unzipping/temp-wd-windows.png" width="60%" />
+<img src="../../../../../../../../../img/unzipping/temp-wd-windows.png" width="60%" />
 
 You most likely won't be able to open any data files or save anything, which will be frustrating.
 
 Instead, you need to right click on the `.zip` file and select "Extract All…":
 
-<img src="/img/unzipping/extract-windows-1.png" width="60%" />
+<img src="../../../../../../../../../img/unzipping/extract-windows-1.png" width="60%" />
 
 Then choose where you want to unzip all the files and click on "Extract"
 
-<img src="/img/unzipping/extract-windows-2.png" width="60%" />
+<img src="../../../../../../../../../img/unzipping/extract-windows-2.png" width="60%" />
 
 You should then finally have a real folder with all the contents of the zipped file. Open the R Project file and RStudio will point to the correct working directory and everything will work.
 
-<img src="/img/unzipping/extract-windows-3.png" width="60%" />
+<img src="../../../../../../../../../img/unzipping/extract-windows-3.png" width="60%" />

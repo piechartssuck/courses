@@ -8,7 +8,7 @@ output:
 menu:
   tasks:
     parent: Tasks
-    weight: 4
+    weight: 5
 type: docs
 weight: 1
 ---

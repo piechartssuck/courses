@@ -1,0 +1,73 @@
+---
+title: "Now You Know"
+linktitle: "Week 6: Now You Know"
+toc: true
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  readings:
+    parent: Readings
+    weight: 6
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+`r blogdown::shortcode("aes-header")`
+
+<style>
+.article-style img, 
+.article-style video {
+  margin-left: 0;
+  margin-right: auto;
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+  vertical-align: text-top;
+  padding: 0;
+  bottom: 0px;
+  display: inline;
+}
+</style>
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+### Respond to Posts
+
+If you have not yet done so, read the article you chose not to talk about last week from
+
+> <a href="https://edp611summer2022.slack.com/archives/C03JWNF6ZT9" style='color:#ff8384;'>#wk5-nerds</a> 
+
+Pick *one* post where the your peer discusses that paper and provide a critique of their narrative. Specifically point out areas of agreement and disagreement and cite evidence from said article as support.
+
+### Watch a Video
+
+You've probably noticed that this page doesn't have any required readings. That's not a mistake, rather we're going to take a look at a technique called the *Principle Component Analysis (PCA)*. To start off, take a look at the aptly named video *Principle Component Analysis (PCA) Concepts in 5 Minutes* by Josh Starmer. He provides a fantastic breakdown of this high level concept being explored this week 
+
+<p align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HMOI_lkzW08" title="StatQuest PCA in 5 Minutes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+
+### Play with PCA
+
+Now go learn about PCAs interactively via 
+[Principal Component Analysis Explained Visually](https://setosa.io/ev/principal-component-analysis/)
+
+### See PCA Applied
+
+To get an idea of how PCAs are applied outside of academic circles, please follow along below. The first and third steps below come courtesy of [Dr. Julia Silge](https://juliasilge.com/about/) who works at RStudio. Just keep in mind that the point is not to understand everything, but rather to gain exposure to the benefits of PCAs viewed through the lens of an example.
+
+1. First learn a bit about [*dimensionality reduction*](https://www.tmwr.org/dimensionality.html) (Section 16.1) from the excellent[^bias] text *Tidy Modeling with R*. 
+
+2. Take a look at [PCA with tidyverse](https://bjnnowak.netlify.app/2021/09/15/r-pca-with-tidyverse/) where a PCA is used to explore the evolution of songs’ from the 1970's onward. If you don't care how it was done - ergo the R code, then just look at the visualizations to get a feel for what a PCA can do.
+
+3. If you're interested in the original concept and possibly getting your hands dirty, head over to Dr. Silge's walkthrough and screencast [*Dimensionality Reduction for #TidyTuesday Billboard Top 100 songs*](https://juliasilge.com/blog/billboard-100/)[^tidytuesday].
+
+[^respond]: Your responses to postings should follow the same [basic criteria](/tasks/#weekly-postings) outlined in the original post. Remember to use the [`Reply in thread`{=html}](/tasks/#responding-on-slack) option when responding to receive credit.</font>
+
+[^bias]: An extremely biased point of view.
+
+[^tidytuesday]: <img src='/logos/tidytuesday.png' alt='#TidyTuesday logo' width='250'><br> Are you interested in data visualization? Would you rather not pay hundreds or thousands of dollars to be locked into a software package? Do you like having a huge community that is willing to help out? Well then consider checking out  [#TidyTuesday](https://github.com/rfordatascience/tidytuesday)! The  event is an extremely warm, friendly, and welcoming place for anyone interested in R, in particular to create data visuzliations within the every growing tidyverse using curated data sets which are released every Tuesday - ergo the name #TidyTuesday, and ranges in expertise from the very beginner to advanced. Community members provide helpful feedback and you - yes you reading this - will NEVER be berated or made to feel inadequate. In fact your greatest critic will probably be you as it can be intimidating to look at others' visualizations. Just remember everyone was once where you are now and you'll never get better without trying and support, both which #TidyTuesday provides. The experience can get pretty addictive, but your skills will shoot through the roof in a short amount of time and there's nothing quite like the sense of accomplishment earned from figuring something out. Plus, and I cannot stress this enough, there's always a pretty picture that you created! In the spirit of the open source world, everyone shares their codes and are freely available for anyone to use and manipulate. *You don't learn R by reinventing the wheel, but by taking others' work and playing around with it!* If you are interested in getting involved and are unable to figure out how, feel free to reach out or take a look at the current postings for [#TidyTuesday](https://twitter.com/search?q=%23tidytuesday) on `r fa("twitter", fill = "#1DA1F2")`.

@@ -1,0 +1,20 @@
+﻿ID,Item,Group,Scale
+Q1,Which of these options most resembles your self-identity as a scientist,Identity,1 - I am definitely NOT a scientist; 2 - I do NOT consider myself a scientist for the most part; 3 - I am not sure if I am a scientist or not; 4 -  consider myself a scientist for the most part; 5 - I am definitely a scientist
+,,,
+Q2,Please indicate your level of confidence in successfully completing the following tasks,,
+Q2_1,Identify usable data,Ability,1 - Not confident at all; 2 - Somewhat confident; 3 - About 50/50; 4 - Mostly confident; 5 - Extremely confident
+Q2_2,Collect data,Ability,2 - Not confident at all; 2 - Somewhat confident; 3 - About 50/50; 4 - Mostly confident; 5 - Extremely confident
+Q2_3,Clean data,Ability,3 - Not confident at all; 2 - Somewhat confident; 3 - About 50/50; 4 - Mostly confident; 5 - Extremely confident
+Q2_4,Analyze data,Ability,4 - Not confident at all; 2 - Somewhat confident; 3 - About 50/50; 4 - Mostly confident; 5 - Extremely confident
+Q2_5,Interpret data,Ability,5 - Not confident at all; 2 - Somewhat confident; 3 - About 50/50; 4 - Mostly confident; 5 - Extremely confident
+Q2_6,Report data,Ability,6 - Not confident at all; 2 - Somewhat confident; 3 - About 50/50; 4 - Mostly confident; 5 - Extremely confident
+Q2_7,Develop theories from data,Ability,7 - Not confident at all; 2 - Somewhat confident; 3 - About 50/50; 4 - Mostly confident; 5 - Extremely confident
+Q2_8,Understand the ethics of data collection / management,Ability,8 - Not confident at all; 2 - Somewhat confident; 3 - About 50/50; 4 - Mostly confident; 5 - Extremely confident
+,,,
+Q3,Please select your agreement or disagreement with the following statements,,
+Q3_1,I consider myself an effective leader,Leadership,1 - Strongly disagree; 2 - Disagree; 3 - Neither agree nor disagree; 4 - Agree; 5 - Strongly agree
+Q3_2,I believe that I can be most effective by not leading,Leadership,2 - Strongly disagree; 2 - Disagree; 3 - Neither agree nor disagree; 4 - Agree; 5 - Strongly agree
+Q3_3,I am able to identify strength and weaknesses of team members,Leadership,3 - Strongly disagree; 2 - Disagree; 3 - Neither agree nor disagree; 4 - Agree; 5 - Strongly agree
+Q3_4,I am able to mitigate friction between team members,Leadership,4 - Strongly disagree; 2 - Disagree; 3 - Neither agree nor disagree; 4 - Agree; 5 - Strongly agree
+Q3_5,I believe that my best work is done individually and not in a team based environment,Leadership,5 - Strongly disagree; 2 - Disagree; 3 - Neither agree nor disagree; 4 - Agree; 5 - Strongly agree
+Q3_6,I believe that a team based environment is necessary to produce outcomes,Leadership,6 - Strongly disagree; 2 - Disagree; 3 - Neither agree nor disagree; 4 - Agree; 5 - Strongly agree
