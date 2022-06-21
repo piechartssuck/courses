@@ -101,22 +101,51 @@ Some information about the audio files. Firstly and importantly, I'm no Morgan F
 
 ---
 
-# Correlations
+# Prerequisites
 
+This slideshow assumes that you have a basic understanding of variance and correlations. For a refresher, please take a look at both reviews below
+
+--
+
+.pull-left[
 .bg-washed.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
-**Correlations** gives you an idea of the strength or weakness of the relationship between two variables. In a survey where each item is set to measure a single construct, these are essentially the applicable questions
+**Variance** is essentially a measure of the spread between points in a data set. Specifically it tells us how far each data point in a set is from the mean and by proxy from every other data point in that set.<br><br>
+<center>
+<img src="img/variance_card.png" height="500px" style="background-color:#212121;"/>
+</center><br><br>
+
+<p align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SzZ6GpcfoQY" title="StatQuest Pearson's Correlation, Clearly Explained!!!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
 ]
+
+.pull-right[
+.bg-washed.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
+**Correlations** gives you an idea of the strength or weakness of the relationship between two variables. In a survey where each item is set to measure a single construct, these are essentially the applicable questions.<br><br>
+
+<img src="img/correlation_card.png" height="500px" style="background-color:#212121;"/>
+</center><br><br>
+
+<p align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xZ_z8KWkhXE" title="StatQuest Pearson's Correlation, Clearly Explained!!!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+]
+
+---
+
+# From Basic to Better
 
 --
 
 <center>
-correlations are great but...
+correlations are great but they don't...
 </center>
 
 --
 
-they don't tell you how every question is related to every other question. This is especially troublesome when you have large data sets!
+1. tell you how every question is related to every other question 
 
+2. differentiate between relevant data and noise
 
 --
 
@@ -134,59 +163,55 @@ Enter a method called **Principle Component Analysis**
 
 ---
 
-# Explaining it to Everyone Else 
+# Principle Component Analysis (PCA) - Steps in a Nutshell
 
-<center>
-.bg-washed.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
-**Evaluation** answers ***if it works?*** and ***why does it work?***
-]
-</center>
-<br>
-<br>
+The basic idea of a PCA can be broken into two steps
 
 --
 
-We typically leave the ***if it works?*** to people with grounded knowledge in a particular area - aka *content experts*. 
+1. Locate the directions, or *components*, in a data set with high variance<br>
+<center>
+<img src="img/pc_card.png" height="500px" style="background-color:#212121;"/>
+</center>
+
+--
+
+2. Find a limited number of components with high variance that in aggregate can explain most of the overall variance in the data set<br>
+<center>
+<img src="img/pca_card.png" height="500px" style="background-color:#212121;"/>
+</center>
 
 ---
 
-# Merit, Worth & Significance 
+# Principle Component Analysis (PCA)
 
-First consider these questions
-+ What do ***merit***, ***worth***,and ***significance*** mean to you both separately and combined?
+---
 
-+ Can you think of real world examples of each?
-<br>
+## Reducing Complexity
 
-Now listen to these
+--
 
+First an overview of some terms: 
+
+--
+
+.pull-left[
+***Dimensionality*** - The number of input variables, or *features* in a dataset. In a spreadsheet, you can think of these as the column names.<br>
 <center>
-<audio controls preload="auto">
-  <source src="audio/criteria/S3a_Merit_Worth_Significance.mp3" type="audio/mpeg">
-  Your browser does not support embedded audio.
-</audio>
+<img src="img/dimensionality_spreadsheet.png" height="500px" style="background-color:#212121;"/>
 </center>
-<br>
+]
+
+--
+
+.pull-right[
++ ***Dimensionality Reduction*** - Statistical techniques used to reduce the number of input variables.<br>
 <center>
-<audio controls preload="auto">
-  <source src="audio/criteria/S3c_Merit.mp3" type="audio/mpeg">
-  Your browser does not support embedded audio.
-</audio>
+<img src="img/dimensionality_spreadsheet.png" height="500px" style="background-color:#212121;"/>
 </center>
-<br>
-<center>
-<audio controls preload="auto">
-  <source src="audio/criteria/S3d_Worth.mp3" type="audio/mpeg">
-  Your browser does not support embedded audio.
-</audio>
-</center>
-<br>
-<center>
-<audio controls preload="auto">
-  <source src="audio/criteria/S3e_Significance.mp3" type="audio/mpeg">
-  Your browser does not support embedded audio.
-</audio>
-</center>
+]
+
+
 
 ---
 

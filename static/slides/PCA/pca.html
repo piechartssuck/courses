@@ -126,22 +126,51 @@ Some information about the audio files. Firstly and importantly, I'm no Morgan F
 
 ---
 
-# Correlations
+# Prerequisites
 
+This slideshow assumes that you have a basic understanding of variance and correlations. For a refresher, please take a look at both reviews below
+
+--
+
+.pull-left[
 .bg-washed.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
-**Correlations** gives you an idea of the strength or weakness of the relationship between two variables. In a survey where each item is set to measure a single construct, these are essentially the applicable questions
+**Variance** is essentially a measure of the spread between points in a data set. Specifically it tells us how far each data point in a set is from the mean and by proxy from every other data point in that set.&lt;br&gt;&lt;br&gt;
+&lt;center&gt;
+&lt;img src="img/variance_card.png" height="500px" style="background-color:#212121;"/&gt;
+&lt;/center&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;p align="center"&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/SzZ6GpcfoQY" title="StatQuest Pearson's Correlation, Clearly Explained!!!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/p&gt;
 ]
+
+.pull-right[
+.bg-washed.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
+**Correlations** gives you an idea of the strength or weakness of the relationship between two variables. In a survey where each item is set to measure a single construct, these are essentially the applicable questions.&lt;br&gt;&lt;br&gt;
+
+&lt;img src="img/correlation_card.png" height="500px" style="background-color:#212121;"/&gt;
+&lt;/center&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;p align="center"&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/xZ_z8KWkhXE" title="StatQuest Pearson's Correlation, Clearly Explained!!!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/p&gt;
+]
+
+---
+
+# From Basic to Better
 
 --
 
 &lt;center&gt;
-correlations are great but...
+correlations are great but they don't...
 &lt;/center&gt;
 
 --
 
-they don't tell you how every question is related to every other question. This is especially troublesome when you have large data sets!
+1. tell you how every question is related to every other question 
 
+2. differentiate between relevant data and noise
 
 --
 
@@ -159,59 +188,55 @@ Enter a method called **Principle Component Analysis**
 
 ---
 
-# Explaining it to Everyone Else 
+# Principle Component Analysis (PCA) - Steps in a Nutshell
 
-&lt;center&gt;
-.bg-washed.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
-**Evaluation** answers ***if it works?*** and ***why does it work?***
-]
-&lt;/center&gt;
-&lt;br&gt;
-&lt;br&gt;
+The basic idea of a PCA can be broken into two steps
 
 --
 
-We typically leave the ***if it works?*** to people with grounded knowledge in a particular area - aka *content experts*. 
+1. Locate the directions, or *components*, in a data set with high variance&lt;br&gt;
+&lt;center&gt;
+&lt;img src="img/pc_card.png" height="500px" style="background-color:#212121;"/&gt;
+&lt;/center&gt;
+
+--
+
+2. Find a limited number of components with high variance that in aggregate can explain most of the overall variance in the data set&lt;br&gt;
+&lt;center&gt;
+&lt;img src="img/pca_card.png" height="500px" style="background-color:#212121;"/&gt;
+&lt;/center&gt;
 
 ---
 
-# Merit, Worth &amp; Significance 
+# Principle Component Analysis (PCA)
 
-First consider these questions
-+ What do ***merit***, ***worth***,and ***significance*** mean to you both separately and combined?
+---
 
-+ Can you think of real world examples of each?
-&lt;br&gt;
+## Reducing Complexity
 
-Now listen to these
+--
 
+First an overview of some terms: 
+
+--
+
+.pull-left[
+***Dimensionality*** - The number of input variables, or *features* in a dataset. In a spreadsheet, you can think of these as the column names.&lt;br&gt;
 &lt;center&gt;
-&lt;audio controls preload="auto"&gt;
-  &lt;source src="audio/criteria/S3a_Merit_Worth_Significance.mp3" type="audio/mpeg"&gt;
-  Your browser does not support embedded audio.
-&lt;/audio&gt;
+&lt;img src="img/dimensionality_spreadsheet.png" height="500px" style="background-color:#212121;"/&gt;
 &lt;/center&gt;
-&lt;br&gt;
+]
+
+--
+
+.pull-right[
++ ***Dimensionality Reduction*** - Statistical techniques used to reduce the number of input variables.&lt;br&gt;
 &lt;center&gt;
-&lt;audio controls preload="auto"&gt;
-  &lt;source src="audio/criteria/S3c_Merit.mp3" type="audio/mpeg"&gt;
-  Your browser does not support embedded audio.
-&lt;/audio&gt;
+&lt;img src="img/dimensionality_spreadsheet.png" height="500px" style="background-color:#212121;"/&gt;
 &lt;/center&gt;
-&lt;br&gt;
-&lt;center&gt;
-&lt;audio controls preload="auto"&gt;
-  &lt;source src="audio/criteria/S3d_Worth.mp3" type="audio/mpeg"&gt;
-  Your browser does not support embedded audio.
-&lt;/audio&gt;
-&lt;/center&gt;
-&lt;br&gt;
-&lt;center&gt;
-&lt;audio controls preload="auto"&gt;
-  &lt;source src="audio/criteria/S3e_Significance.mp3" type="audio/mpeg"&gt;
-  Your browser does not support embedded audio.
-&lt;/audio&gt;
-&lt;/center&gt;
+]
+
+
 
 ---
 
