@@ -17,7 +17,7 @@ command = "hugo -F -b --buildFuture -b $DEPLOY_PRIME_URL"
 
 [context.deploy-preview.environment]
 HUGO_VERSION = "0.101.0"
-hugo -F -b $DEPLOY_PRIME_URL
+
 [context.branch-deploy]
 command = "hugo -F -b $DEPLOY_PRIME_URL"
 
