@@ -1,15 +1,11 @@
 {
-  // ...
   "scripts": {
-    "build": "hugo",
-    "build:preview": "hugo --baseURL \"${DEPLOY_PRIME_URL:-/}\" --buildDrafts --buildFuture",
-    "start": "hugo server"
+    "build": "npm install -g postcss postcss-cli autoprefixer && cd exampleSite && hugo --gc --minify -t ../.. -d ../docs -v -b https://hugo-introduction.netlify.app/",
+    "dev": "cd exampleSite && ENVIRONMENT=development hugo -t ../.. server"
   },
   "devDependencies": {
-    "autoprefixer": "^10.3.4",
-    "hugo-extended": "^0.88.1",
-    "postcss": "^8.3.6",
-    "postcss-cli": "^8.3.1"
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.6",
+    "postcss-cli": "^9.1.0"
   }
-  // ...
 }

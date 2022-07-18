@@ -1,16 +1,16 @@
+# Global settings applied to the whole site.
 [build]
-command = 'hugo -F -b $DEPLOY_PRIME_URL'
-publish = 'public'
-[build.environment]
-HUGO_VERSION = '0.101.0'
+  publish = "public"
+    command = "hugo"
 
-[context]
+    [context.production.environment]
+      HUGO_ENV = "production"
+
+      [context.deploy-preview]
+        command = "hugo --baseURL $DEPLOY_PRIME_URL"
+#  --buildDrafts --buildFuture might be useful one day?
+
+# Branch Deploy context: All deploys that are not in
+# an active Deploy Preview will inherit these settings.
 [context.branch-deploy]
-command = 'hugo -F -b $DEPLOY_PRIME_URL'
-
-[context.deploy-preview]
-command = 'hugo -F -b $DEPLOY_PRIME_URL'
-
-[context.production]
-[context.production.environment]
-HUGO_ENV = 'production'
+  command = "hugo --baseURL $DEPLOY_PRIME_URL"
