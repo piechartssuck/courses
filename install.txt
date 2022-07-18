@@ -1,0 +1,5 @@
+Install
+
+blogdown::new_site(theme = "victoriadrake/hugo-theme-introduction", format = "toml")
+
+# https://github.com/rstudio/blogdown/issues/536

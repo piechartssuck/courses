@@ -1,0 +1,32 @@
+---
+title: "Abhik Ranjan Roy"
+author: Abhik Ranjan Roy
+date: "`r Sys.Date()`"
+---
+
+```{r}
+source_rmd <- function(file, local = FALSE, ...){
+  options(knitr.duplicate.label = 'allow')
+
+  tempR <- tempfile(tmpdir = ".", fileext = ".R")
+  on.exit(unlink(tempR))
+  knitr::purl(file, output=tempR, quiet = TRUE)
+
+  envir <- globalenv()
+  source(tempR, local = envir, ...)
+}
+```
+
+```{r, include=FALSE}
+source_rmd("cv-html.Rmd")
+```
+
+```{r, include=FALSE}
+source_rmd("cv-pdf.Rmd")
+```
+
+```{r, include=FALSE}
+source("convert2html.R")
+pagedown::chrome_print("cv-pdf.Rmd", output = "cv.pdf")
+file.remove('cv-pdf.html')
+```

@@ -1,0 +1,9 @@
+git add . && git commit iam && git checkout iam && git push https://github.com/drabhikroy/Courses.git iam:iam
+
+# echo "# personal-promotion" >> README.md
+# git init
+# git checkout -b iam
+# git add README.md
+# git commit -m iam
+# git branch -M iam
+# git remote add origin https://github.com/drabhikroy/Courses.git 

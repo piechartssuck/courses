@@ -1,0 +1,847 @@
+---
+title: "Abhik Ranjan Roy"
+author: Abhik Ranjan Roy
+date: "`r Sys.Date()`"
+output:
+  pagedown::html_resume:
+    self_contained: true
+    paged-footnotes: true
+    css: ["updatedaes.css", "resume"]
+weight: NULL 
+---
+
+<script src="//yihui.org/js/math-code.js" defer></script>
+<!-- Just one possible MathJax CDN below. You may use others. -->
+<script defer
+  src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+```{css echo=FALSE}
+
+.holder {
+    width: 100%;
+    display: flex;
+    overflow:hidden;
+}
+
+.left, .right{
+    width:50%;
+    height:inherit;
+    float:left;
+}
+
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(magrittr)
+library(tidyverse)
+library(fontawesome)
+```
+
+```{css, echo=FALSE}
+.pagedjs_page:not(:first-of-type) {
+  --sidebar-width: 0rem;
+  --sidebar-background-color: #36454f;
+  --main-width: calc(var(--content-width) - var(--sidebar-width));
+  --decorator-horizontal-margin: 0.2in;
+}
+```
+
+
+Aside
+================================================================================
+
+<center>
+<img src='img/me_rb.png' alt='CV' width='65%'>
+<br>
+<br>
+<a href='cv.pdf' target='_blank'><img src='img/vita-dl-icon.png' alt='Resume' width='20%'></a>
+<center>
+
+
+Contact Information {#contact}
+--------------------------------------------------------------------------------
+
+- `r fontawesome::fa("fas fa-at", fill = "#e7c9a9")`&nbsp;&nbsp;&nbsp;&nbsp;abhik.roy@mail.wvu.edu
+- `r fontawesome::fa("fab fa-github", fill = "#4183c4")`&nbsp;&nbsp;&nbsp;&nbsp;[github.com/drabhikroy](https://github.com/drabhikroy)
+- `r fontawesome::fa("far fa-window-maximize", fill = "#5cb2b8")`&nbsp;&nbsp;&nbsp;&nbsp;[iam.adatasocialscientist.com](https://iam.asocialdatascientist.com/)
+- `r fontawesome::fa("fas fa-mobile-alt", fill = "#c4becf", margin_left = "2.1px")` &nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:+1 269-615-8771">+1 269-615-8771</a>
+- `r fontawesome::fa("fab fa-orcid", fill = "#aecc54")`&nbsp;&nbsp;&nbsp;&nbsp;[0000-0002-7085-8964](https://orcid.org/0000-0002-7085-8964)
+
+
+Expertise {#skills}
+--------------------------------------------------------------------------------
+
+- <b>Data visualization</b> 
+
+- <b>Cluster analysis</b>
+
+- <b>Machine learning models, Bayesian statistical methods, and social network analysis</b>
+
+- <b>Planning and administering program evaluations</b> 
+
+- <b>Text mining, analytics, and content analysis</b>
+
+- <b>Programming in</b><i style="color:#3365B3;" class="fab fa-r-project"></i>
+
+- <b>Reporting in</b> $\LaTeX$
+
+
+Main
+================================================================================
+
+Dr. Abhik Roy {#title}
+--------------------------------------------------------------------------------
+
+
+Education {data-icon=graduation-cap data-concise=true}
+--------------------------------------------------------------------------------
+
+### Western Michigan University
+
+Ph.D. in Program Evaluation
+
+&nbsp;&nbsp;Kalamazoo, MI
+
+2016
+
+*Dissertation*. Building an Evaluation Model of Academic Advising’s Impact on Progression, Persistence, and Retention Within University Settings
+
+### Michigan Technological University
+
+M.S. in Mathematics
+
+&nbsp;&nbsp;Houghton, MI
+
+2007
+
+*Thesis*. Quotient Rings of the Eisenstein Integers
+
+### West Virginia Wesleyan College
+
+B.S. in Mathematics
+
+&nbsp;&nbsp;Buckhannon, WV
+
+2001
+
+*Terminal Study*. 4-Cell Embedding on a $n$-genus Torus
+
+Professional Experience {data-icon=suitcase}
+--------------------------------------------------------------------------------
+
+### Assistant Professor
+
+West Virginia University
+
+&nbsp;&nbsp;Morgantown, WV
+
+Current - 2016
+
+::: concise
+- Advising masters and doctoral students.
+- Evaluating various projects and grants.
+- Submitting papers for peer review publications.
+- Teaching evaluation and methods based classes with a focus on data science. 
+- Writing and enabling data pulls from APIs, creating visualizations, and building Shiny apps all within R.
+:::
+
+### Data Analyst
+
+University of Kansas
+
+&nbsp;&nbsp;Lawrence, KS
+
+2016 - 2014
+
+::: concise
+- Created scripts to pull data from the organization's Oracle database.
+- Prepared evaluation reports for various stakeholders. 
+- Led and presented findings from small and large scale qualitative, quantitative and mixed-methods studies.
+:::
+
+
+Publications {data-icon=file-text-o}
+--------------------------------------------------------------------------------
+
+### There’s So Much to Do and Not Enough Time to Do It! A Case for Sentiment Analysis to Derive Meaning From Open Text Using Student Reflections of Engineering Activities.
+
+*American Journal of Evaluation, 42* (4), 559–576.
+
+N/A
+
+2021 
+
+<b>Roy, A.</b>, & Rambo-Hernandez, K.E. https://doi.org/10.1177/1098214020962576
+
+### To design or to integrate? Instructional design versus technology integration in developing learning interventions.
+
+*Education Tech Research Dev 68*, 2473–2504.
+
+N/A
+
+2020
+
+Kale, U., <b>Roy, A.</b> & Yuan, J. [https://doi.org/10.1007/s11423&ndash;020&ndash;09771&ndash;8](https://doi.org/10.1007/s11423-020-09771-8)
+
+### Using Interactive Theater to Promote Inclusive Behaviors in Teams for First-year Engineering Students: A Sustainable Approach.
+
+*Development of A Holistic Cross-Disciplinary Project Course Experience as a Research Platform for the Professional Formation of Engineers.*
+
+N/A
+
+2020
+
+Dey, K.C., & Rahman, M.T., & Pyrialakou, V.D., & Martinelli, D., & Rambo-Hernandez, K.E., & Fraustino, J.D., & Deskins, J., & Plein, L.C., & <b>Roy, A.R.</b> [https://doi.org/10.18260/1&ndash;2&ndash;&ndash;34446](https://doi.org/10.18260/1-2--34446)
+
+### General chemistry student attitudes and success with use of online homework: Traditional-Responsive versus Adaptive-Responsive.
+
+*Journal of Chemical Education, 95* (5), 691-699.
+
+N/A
+
+2018
+
+Richard-Babb, M., Curtis, R., Ratcliff, B., <b>Roy, A.R.</b>, & Mikalik, T. https://doi.org/10.1021/acs.jchemed.7b00829 
+
+### To go virtual or not to go virtual, that is the question: A comparative study of face-to-face versus virtual laboratories in a physical science course.
+
+*Journal of College Science Teaching, 48* (2), 59-67.
+
+N/A
+
+2018
+
+Miller, T.A., Carver, J.S., & <b>Roy, A.R.</b> https://www.jstor.org/stable/26616271
+
+
+### Reasoning-and-proving in algebra: The case of two reform-oriented U.S. textbooks.
+
+*International Journal of Educational Research 64.*, 92-106
+
+N/A
+
+2014
+
+Davis, J.D., Smith, D.O., <b>Roy, A.R.</b>, & Bilgic, Y. K. https://doi.org/10.1016/j.ijer.2013.06.012
+
+
+### What’s in a Scriven number?
+
+*Journal of MultiDisciplinary Evaluation, 8* (19), 41-45.
+
+N/A
+
+2012
+
+<b>Roy, A.R.</b>, Hobson, K.A., & Coryn, C.L.S. https://journals.sfu.ca/jmde/index.php/jmde_1/article/view/372/358
+
+
+Book Chapters {data-icon=book}
+--------------------------------------------------------------------------------
+
+### Social network analysis: Finding meaning in connections.
+
+*Nova Science Publishers, Inc.*
+
+N/A
+
+2014
+
+<b>Roy, A.R.</b> 978-1-53612-734-8
+
+
+Invited Contributions {data-icon=file-text-o}
+--------------------------------------------------------------------------------
+
+### What is a Scriven number?
+
+*The American Evaluation Association Newsletter*
+
+N/A
+
+2012
+
+<b>Roy, A.R.</b>, Hobson, K.A., & Coryn, C.L.S.
+
+
+Active Grants {data-icon=toggle-on}
+--------------------------------------------------------------------------------
+
+### WVCTSI: West Virginia Clinical and Translational Science Institute
+
+West Virginia University
+
+&nbsp;&nbsp;Morgantown, WV
+
+2017
+
+- Analyzing large data sets using frequentist and Bayesian methods.
+- Conducting local and multi-site mutli-cluster evaluation studies.
+- Pulling, wrangling, and visualizing secondary data in R.
+- Mentoring future graduate social data scientists.
+- *$20,000,000*
+- *2017-NIH 2U54GM104942-02*
+
+Inactive Grants {data-icon=toggle-off}
+--------------------------------------------------------------------------------
+
+### Appalachian Gerontology Experiences - Advancing Diversity in Aging Research
+
+West Virginia University
+
+&nbsp;&nbsp;Morgantown, WV
+
+2020
+
+- Developing and distributing customized Qualtrics surveys built with CSS and Javascript.
+- Performing various evaluative studies addressing program efficacy and engagement.
+- *$678,000*
+- *2020-1R25AG059558-01A1*
+
+### Research Initiative: A Holistic Cross-Disciplinary Project Experience as a Platform to Advance the Professional Formation of Engineers
+
+West Virginia University
+
+&nbsp;&nbsp;Morgantown, WV
+
+2020
+
+- Advising engineering faculty and graduate students on implementation of study methods.
+- Conducting quantitative and qualitative studies on undergraduate student experiences within grant related programs.
+- *$200,000*
+- *2019-NSF-EEC 1927232*
+
+### Stepping UP with Avenue: Progress Monitoring: A Software Suite Helping Teachers Improve Literacy Progress For Deaf/Hard Of Hearing Students
+
+Pennsylvania State University
+
+&nbsp;&nbsp;State College, PA
+
+2018 - 2017
+
+- *$2,470,440*
+- *2017-ED H327S170012*
+
+### Research Initiative: A Holistic Cross-Disciplinary Project Experience as a Platform to Advance the Professional Formation of Engineers
+
+West Virginia University
+
+&nbsp;&nbsp;Morgantown, WV
+
+2018 - 2017
+
+- *$2,000,000*
+- *2017-NSF 1725880*
+
+### GAUSSI: Generating, Analyzing, and Understanding Sensory and Sequencing Information: A Trans-Disciplinary Graduate Training Program in Biosensing and Computational Biology
+
+Colorado State University
+
+&nbsp;&nbsp;Fort Collins, CO
+
+2020 - 2017
+
+- *$3,013,779*
+- *2017-NSF: NRT-DESE*
+
+
+Presentations {data-icon=chalkboard-user}
+--------------------------------------------------------------------------------
+
+### Best of Both Worlds: Affordances of Mixing Machine Learning and Qualitative Content Analysis
+
+*American Educational Research Association Annual Meeting*
+
+&nbsp;&nbsp;San Diego, CA
+
+2022
+
+Roy, A.R., Ferguson, C.F., Curtis, R., & Babb-Richards, M.
+
+### These Aren’t Random Words Just Strung Together?: Using Machine Learning and Pretty Visualizations to Discover Topics in Articles.
+
+*American Evaluation Association Annual Conference*
+
+*virtual*
+
+2020 
+
+<b>Roy, A.R.</b>
+
+
+### Little Fish in a Big Pond, Only Fish in a Little Pond: How Roles Shape our Identities as Evaluators.
+
+*American Evaluation Association Annual Conference*
+
+&nbsp;&nbsp;Minneapolis, MN
+
+2019
+
+M, Loomis, D.L., Mikalik, T.L., Curtis, R., <b>Roy, A.R.</b>, & Bernstein, M.
+
+
+### Evolving Program Logic Models to Meet Shifting Program Needs: The Case of WV Clinical Translational Science Institute.
+
+*American Evaluation Association Annual Conference*
+
+&nbsp;&nbsp;Minneapolis, MN
+
+2019
+
+Curtis, R., <b>Roy, A.R.</b>, Bernstein, M, Loomis, D.L., & Mikalik, T.L.
+
+
+### The Value of External Evaluators When Building Clinical Translational Research Infrastructure.
+
+*American Evaluation Association Annual Conference*
+
+&nbsp;&nbsp;Minneapolis, MN
+
+2019
+
+Curtis, R., <b>Roy, A.R.</b>, Bernstein, M, Loomis, D.L., & Mikalik, T.L.
+
+
+### Using Associated Networks to Evaluate Content within Courses.
+
+*American Evaluation Association Annual Conference*
+
+&nbsp;&nbsp;Minneapolis, MN
+
+2019
+
+<b>Roy, A.R.</b>, Kale, U, & Yuan, J.
+
+
+### Why Is It That Writers Write but Fingers Don’t Fing? Using Machine Learning and Lexemes to Make Sense of Nonsense.
+
+*American Evaluation Association Annual Conference*
+
+&nbsp;&nbsp;Minneapolis, MN
+
+2019
+
+<b>Roy, A.R.</b>, Curtis, R., Mikalik, T.L., Loomis, D.L., & Bernstein, M.
+
+
+### Discovering the Underlying Meaning Behind Get Me Off Your F***ing Mailing List? and Most Other Narratives.
+
+*American Evaluation Association Annual Conference*
+
+&nbsp;&nbsp;Minneapolis, MN
+
+2019
+
+<b>Roy, A.R.</b>, Curtis, R., Mikalik, T.L., Loomis, D.L., & Bernstein, M.
+
+
+### Assessing for Improvement: The Use of Artificial Intelligence to Uncover Potential Differential Impact of Assignments.
+
+*American Evaluation Association Annual Conference*
+
+&nbsp;&nbsp;Toronto, CN
+
+2019
+
+<b>Roy, A.R.</b> & Rambo-Hernandez, K.
+
+
+### That's a Pretty Picture of Dots and Lines but What Does it Mean?: A Q&A Session with the Social Network Analysis TIG Leaders.
+
+*American Evaluation Association Annual Conference*
+
+&nbsp;&nbsp;Cleveland, OH
+
+2018
+
+<b>Roy, A.R.</b>, Durland, M.M., Woodland, R., & Phillips, G.
+
+
+### Navigating Buy-in and Shifting Evaluation Needs Over Time in NIH Clinical Translational Research Award.
+
+*American Evaluation Association Annual Conference*
+
+&nbsp;&nbsp;Cleveland, OH
+
+2018
+
+Curtis, R., & <b>Roy, A.R.</b>, Mikalik, T.L.
+
+
+
+### Using a Mixed Methods Evaluation to Discover How an Interactive Theater Based Model Stimulates Inclusive Behaviors in Engineering.
+
+*American Evaluation Association Annual Conference*
+
+&nbsp;&nbsp;Cleveland, OH
+
+2018
+
+<b>Roy, A.R.</b>, Rambo-Hernandez, K., Hensel, R.A., & Morris, M.L.
+
+
+### Collaboration Evaluation: Using Social Network Analysis to Reveal an Active Undiscovered Network.
+
+*American Evaluation Association Annual Conference*
+
+&nbsp;&nbsp;Cleveland, OH
+
+2018
+
+<b>Roy, A.R.</b>, Curtis, R., & Mikalik, T.L.
+
+
+### Examining the Past and Looking Forward: The Future of Evaluation Theory and Use.
+
+*American Evaluation Association Annual Conference*
+
+&nbsp;&nbsp;Cleveland, OH
+
+2018
+
+<b>Roy, A.R.</b> & Hobson, K.A.
+
+
+### Transforming Graduate STEM Education: A Theory-Driven Evaluation of the GAUSSI National Science Foundation Research Training (NRT) Program.
+
+*American Evaluation Association Annual Conference*
+
+&nbsp;&nbsp;Washington, DC
+
+2017
+
+<b>Roy, A.R.</b>, Hernandez, P.A., Chen, T., & Paguyo, C.
+
+
+### Program Evaluation for Everyone! - Constructing an Online Foundational Course for Capacity Building using Theorists as a Focus.
+
+*American Evaluation Association Annual Conference*
+
+&nbsp;&nbsp;Washington, DC
+
+2017
+
+<b>Roy, A.R.</b> & Curtis, R.P.
+
+
+### Three Stages Down! Exploring the Criteria for the Next Generation of Evaluation Theorists through Social Network Analysis.
+
+*Hawaii-Pacific Evaluation Association Annual Conference*
+
+&nbsp;&nbsp;Kane’ohe, HI
+
+2017
+
+<b>Roy, A.R.</b> & Hobson, K.A.
+
+
+### Content in the Background: Using Evaluation Theorists as the Principal Motivator for Foundational Evaluation Courses.
+
+*Hawaii-Pacific Evaluation Association Annual Conference*
+
+&nbsp;&nbsp;Kane’ohe, HI
+
+2017
+
+<b>Roy, A.R.</b> & Curtis, R.P.
+
+
+### Survey Says! Students Getting Tired of Surveys.
+
+*National Academic Advising Association Annual Conference*
+
+&nbsp;&nbsp;Las Vegas, NV
+
+2015
+
+<b>Roy, A.R.</b> & Goetz, H.L.
+
+
+### Influences of Hierarchical Linear Modeling in Evaluation.
+
+*Aotearoa New Zealand Evaluation Association Annual Conference*
+
+&nbsp;&nbsp;Auckland, NZ
+
+2013
+
+<b>Roy, A.R.</b> & Goetz, H.L.
+
+
+### Survey sample methods: Evaluators’ toolbox refreshment.
+
+*American Evaluation Association Annual Conference*
+
+&nbsp;&nbsp;Minneapolis, MN
+
+2012
+
+<b>Roy, A.R.</b> & Hobson, K.A.
+
+
+Teaching Experience in Evaluation and Methodology (2016 - ) {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+### Data Visualization
+
+West Virginia University
+
+&nbsp;&nbsp;Morgantown, WV
+
+2020 - 2018
+
+2020, 2018
+
+
+### Educational Psychology
+
+West Virginia University
+
+&nbsp;&nbsp;Morgantown, WV
+
+2017
+
+2017
+
+
+### Educational Research
+
+West Virginia University
+
+&nbsp;&nbsp;Morgantown, WV
+
+2016
+
+
+### Introduction to Research
+
+West Virginia University
+
+&nbsp;&nbsp;Morgantown, WV
+
+2022 - 2016
+
+2022, 2018, 2017, 2016
+
+
+### Measurement/Evaluation in Educational Psychology
+
+West Virginia University
+
+&nbsp;&nbsp;Morgantown, WV
+
+2020 - 2018
+
+2022, 2020, 2018
+
+
+### Mixing Research Methodologies
+
+West Virginia University
+
+&nbsp;&nbsp;Morgantown, WV
+
+2019 - 2017
+
+2022, 2019, 2018, 2017
+
+
+### Program Evaluation
+
+West Virginia University
+
+&nbsp;&nbsp;Morgantown, WV
+
+2022 - 2017
+
+2022, 2021, 2020, 2019, 2018, 2017
+
+
+### Social Network Analysis
+
+West Virginia University
+
+&nbsp;&nbsp;Morgantown, WV
+
+2021 - 2017
+
+2021, 2017 
+
+
+### Statistical Methods 1
+
+West Virginia University
+
+&nbsp;&nbsp;Morgantown, WV
+
+2021 - 2017
+
+2021, 2020, 2019, 2018, 2017
+
+
+### Survey Design
+
+West Virginia University
+
+&nbsp;&nbsp;Morgantown, WV
+
+2020 - 2022
+
+2022, 2020
+
+
+
+Teaching Experience in Mathematics (2005 - 2015) {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+### Business Calculus
+
+Central Michigan University
+
+&nbsp;&nbsp;Mount Pleasant, MI
+
+2008
+
+
+### College Algebra
+
+Central Michigan University
+
+&nbsp;&nbsp;Mount Pleasant, MI
+
+2009
+
+
+### Discrete Mathematics
+
+Pittsburgh State University
+
+&nbsp;&nbsp;Pittsburgh, KS
+
+2012
+
+
+### Elementary Statistics
+
+Pittsburgh State University
+
+&nbsp;&nbsp;Pittsburgh, KS
+
+2014
+
+
+### Foundations of Statistics
+
+Pittsburgh State University
+
+&nbsp;&nbsp;Pittsburgh, KS
+
+2010 - 2009
+
+2009, 2010
+
+
+### Intermediate Algebra
+
+Central Michigan University
+
+&nbsp;&nbsp;Mount Pleasant, MI
+
+2008 - 2007
+
+2007, 2008
+
+
+### Integral Calculus
+
+Michigan Technological University
+
+&nbsp;&nbsp;Houghton, MI
+
+2007
+
+
+### Linear Algebra
+
+University of Kansas
+
+&nbsp;&nbsp;Lawrence, KS
+
+2015 - 2014
+
+2014, 2015
+
+
+### Mathematical Thinking Grades 6-12
+
+Western Michigan University
+
+&nbsp;&nbsp;Kalamazoo, MI
+
+2013
+
+
+### Mathematics Curriculum Grades 6-12
+
+Western Michigan University
+
+&nbsp;&nbsp;Kalamazoo, MI
+
+2014 - 2013
+
+2013, 2014
+
+
+### Multivariable Calculus
+
+Michigan Technological University
+
+&nbsp;&nbsp;Houghton, MI
+
+2005
+
+
+### Single Variable Calculus
+
+Michigan Technological University
+
+&nbsp;&nbsp;Houghton, MI
+
+2007 - 2006
+
+2006, 2007
+
+
+
+Service {data-icon=paragraph}
+--------------------------------------------------------------------------------
+
+### Associate Editor
+
+[*Journal of MultiDisciplinary Evaluation*](https://journals.sfu.ca/jmde/index.php/jmde_1/about/editorialTeam)
+
+N/A
+
+2022 - 2013
+
+
+Memberships {data-icon=users}
+--------------------------------------------------------------------------------
+
+### American Evaluation Association
+
+N/A
+
+N/A
+
+2022 - 2012
+
+
+Disclaimer {#disclaimer style="width: calc(var(--content-width) - var(--sidebar-width)); padding-left: var(--sidebar-horizontal-padding);"}
+--------------------------------------------------------------------------------
+
+Made in <i style="color:#3365B3;" class="fab fa-r-project"></i>: [Source code](https://github.com/nstrayer/cv)
+
+Last updated on `r Sys.Date()`

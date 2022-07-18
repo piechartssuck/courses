@@ -1,0 +1,62 @@
+---
+title: "About Me"
+image: "img/me.png"
+weight: 1
+---
+
+<script src="//yihui.org/js/math-code.js" defer></script>
+<!-- Just one possible MathJax CDN below. You may use others. -->
+<script defer
+  src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+<style type="text/css">
+
+.holder {
+    width: 100%;
+    display: flex;
+    overflow:hidden;
+}
+
+.left, .right{
+    width:50%;
+    height:inherit;
+    float:left;
+}
+
+</style>
+
+
+
+### Expertise {#myskills}
+
+<div style="padding-left: 55px;">
+
+> Data visualization 
+
+> Cluster analysis
+
+> Machine learning models,  
+Bayesian statistical methods, and  
+social network analysis
+
+> Programming in <i style="color:#3365B3;" class="fab fa-r-project"></i>
+
+> Text mining  
+analytics, and  
+content analysis
+
+> Reporting in `$\LaTeX$`
+                              
+</div>
+<br>
+
+
+
+<div style="padding-right: 30px;">
+<a href="#experience"><i class="fa-solid fa-file-arrow-down"></i> &nbsp;&nbsp; Please jump to the Experience section for access to both my curriculum vitae or resume</a>
+</div>
