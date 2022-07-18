@@ -1,16 +1,14 @@
-# Global settings applied to the whole site.
 [build]
+  command = "hugo --gc --minify"
+#  base    = "exampleSite"
   publish = "public"
-    command = "hugo"
 
-    [context.production.environment]
-      HUGO_ENV = "production"
+[build.environment]
+  HUGO_VERSION = "0.101.0"
+  HUGO_ENABLEGITINFO = "true"
 
-      [context.deploy-preview]
-        command = "hugo --baseURL $DEPLOY_PRIME_URL"
-#  --buildDrafts --buildFuture might be useful one day?
+[context.branch-deploy.environment]
+    HUGO_VERSION = "0.101.0" # if older, use format: 0.53 (no trailing zero)
 
-# Branch Deploy context: All deploys that are not in
-# an active Deploy Preview will inherit these settings.
-[context.branch-deploy]
-  command = "hugo --baseURL $DEPLOY_PRIME_URL"
+[context.deploy-preview.environment]
+    HUGO_VERSION = "0.101.0"
