@@ -1,4 +1,4 @@
-git add . && git commit iam && git checkout iam && git push https://github.com/drabhikroy/Courses.git iam:iam
+git add . && git commit -m iam && git checkout iam && git push https://github.com/drabhikroy/Courses.git iam:iam
 
 # echo "# personal-promotion" >> README.md
 # git init
