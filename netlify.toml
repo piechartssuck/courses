@@ -32,4 +32,5 @@
 
 [build.environment]
   HUGO_VERSION = "0.101.0"
+  NODE_VERSION = "14"
   NPM_VERSION = "8.15.0"
