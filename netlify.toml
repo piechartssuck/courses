@@ -1,14 +1,16 @@
+[Settings]
+
+# Settings in the [build] context are global and are applied to all contexts
+# unless otherwise overridden by more specific contexts.
 [build]
 command = "hugo --gc --minify"
 #  base    = "exampleSite"
 publish = "public"
 
+# Default build command.
+command = "npm run build"
+
 [build.environment]
 HUGO_VERSION = "0.101.0"
-HUGO_ENABLEGITINFO = "true"
-
-[context.branch-deploy.environment]
-HUGO_VERSION = "0.101.0" # if older, use format: 0.53 (no trailing zero)
-
-[context.deploy-preview.environment]
-HUGO_VERSION = "0.101.0"
+NODE_VERSION = "18.6.0"
+NPM_VERSION = "8.14.0"
