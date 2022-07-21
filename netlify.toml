@@ -28,3 +28,8 @@
 
 [context.next.environment]
   HUGO_ENABLEGITINFO = "true"
+
+[build.environment]
+  HUGO_VERSION = "0.101.0"
+  NODE_VERSION = "16.6.0"
+  NPM_VERSION = "8.15.0"
