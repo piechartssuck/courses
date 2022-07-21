@@ -1,13 +1,4 @@
-[Settings]
-
-# Settings in the [build] context are global and are applied to all contexts
-# unless otherwise overridden by more specific contexts.
 [build]
-  base = "iam/"
-  publish = "iam/content/en/"
-  command = "npm run build"
-
-[build.environment]
-  HUGO_VERSION = "0.101.0"
-  NODE_VERSION = "18.6.0"
-  NPM_VERSION = "8.13.2"
+  base = "/"
+  publish = "/"
+  command = ""
