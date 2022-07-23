@@ -68,7 +68,7 @@ date: "2022-07-23"
 ```
 
 ```
-## /Applications/RStudio.app/Contents/MacOS/quarto/bin/pandoc +RTS -K512m -RTS cv-html.knit.md~ --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash-implicit_figures --output cv.html --lua-filter /Library/Frameworks/R.framework/Versions/4.2/Resources/library/bookdown/rmarkdown/lua/custom-environment.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.2/Resources/library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.2/Resources/library/rmarkdown/rmarkdown/lua/latex-div.lua --self-contained --wrap preserve '--mathjax=https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --metadata newpage_html_class="page-break-after" --standalone --section-divs --template /Library/Frameworks/R.framework/Versions/4.2/Resources/library/pagedown/resources/html/resume.html --highlight-style pygments --css updatedaes.css --include-in-header /var/folders/_6/pylhf38x3c728ks3ngjbxsbw0000gn/T//Rtmp5QZTmN/rmarkdown-stredc314069199.html
+## /Applications/RStudio.app/Contents/MacOS/quarto/bin/pandoc +RTS -K512m -RTS cv-html.knit.md~ --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash-implicit_figures --output cv.html --lua-filter /Library/Frameworks/R.framework/Versions/4.2/Resources/library/bookdown/rmarkdown/lua/custom-environment.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.2/Resources/library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.2/Resources/library/rmarkdown/rmarkdown/lua/latex-div.lua --self-contained --wrap preserve '--mathjax=https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --metadata newpage_html_class="page-break-after" --standalone --section-divs --template /Library/Frameworks/R.framework/Versions/4.2/Resources/library/pagedown/resources/html/resume.html --highlight-style pygments --css updatedaes.css --include-in-header /var/folders/_6/pylhf38x3c728ks3ngjbxsbw0000gn/T//RtmpQI9gO0/rmarkdown-strf353608d4cb6.html
 ```
 
 ```
@@ -121,7 +121,7 @@ date: "2022-07-23"
 ```
 
 ```
-## /Applications/RStudio.app/Contents/MacOS/quarto/bin/pandoc +RTS -K512m -RTS resume-html.knit.md~ --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash-implicit_figures --output resume.html --lua-filter /Library/Frameworks/R.framework/Versions/4.2/Resources/library/bookdown/rmarkdown/lua/custom-environment.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.2/Resources/library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.2/Resources/library/rmarkdown/rmarkdown/lua/latex-div.lua --self-contained --wrap preserve '--mathjax=https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --metadata newpage_html_class="page-break-after" --standalone --section-divs --template /Library/Frameworks/R.framework/Versions/4.2/Resources/library/pagedown/resources/html/resume.html --highlight-style pygments --css updatedaes.css --include-in-header /var/folders/_6/pylhf38x3c728ks3ngjbxsbw0000gn/T//Rtmp5QZTmN/rmarkdown-stredc31fb41170.html
+## /Applications/RStudio.app/Contents/MacOS/quarto/bin/pandoc +RTS -K512m -RTS resume-html.knit.md~ --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash-implicit_figures --output resume.html --lua-filter /Library/Frameworks/R.framework/Versions/4.2/Resources/library/bookdown/rmarkdown/lua/custom-environment.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.2/Resources/library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.2/Resources/library/rmarkdown/rmarkdown/lua/latex-div.lua --self-contained --wrap preserve '--mathjax=https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --metadata newpage_html_class="page-break-after" --standalone --section-divs --template /Library/Frameworks/R.framework/Versions/4.2/Resources/library/pagedown/resources/html/resume.html --highlight-style pygments --css updatedaes.css --include-in-header /var/folders/_6/pylhf38x3c728ks3ngjbxsbw0000gn/T//RtmpQI9gO0/rmarkdown-strf353753db59e.html
 ```
 
 ```
@@ -140,12 +140,25 @@ date: "2022-07-23"
   |                                                                            
   |                                                                      |   0%
   |                                                                            
-  |.......................                                               |  33%
+  |..............                                                        |  20%
 ##    inline R code fragments
 ## 
 ## 
   |                                                                            
-  |...............................................                       |  67%
+  |............................                                          |  40%
+## label: unnamed-chunk-1-2 (with options) 
+## List of 2
+##  $ echo  : logi FALSE
+##  $ engine: chr "css"
+## 
+## 
+  |                                                                            
+  |..........................................                            |  60%
+##   ordinary text without R code
+## 
+## 
+  |                                                                            
+  |........................................................              |  80%
 ## label: setup (with options) 
 ## List of 1
 ##  $ include: logi FALSE
@@ -161,7 +174,7 @@ date: "2022-07-23"
 ```
 
 ```
-## /Applications/RStudio.app/Contents/MacOS/quarto/bin/pandoc +RTS -K512m -RTS cv-pdf.knit.md~ --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash-implicit_figures --output cv-pdf.html --lua-filter /Library/Frameworks/R.framework/Versions/4.2/Resources/library/bookdown/rmarkdown/lua/custom-environment.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.2/Resources/library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.2/Resources/library/rmarkdown/rmarkdown/lua/latex-div.lua --self-contained --wrap preserve '--mathjax=https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --metadata newpage_html_class="page-break-after" --standalone --section-divs --template /Library/Frameworks/R.framework/Versions/4.2/Resources/library/pagedown/resources/html/resume.html --highlight-style pygments --css updatedaes.css --include-in-header /var/folders/_6/pylhf38x3c728ks3ngjbxsbw0000gn/T//Rtmp5QZTmN/rmarkdown-stredc36a5e9344.html
+## /Applications/RStudio.app/Contents/MacOS/quarto/bin/pandoc +RTS -K512m -RTS cv-pdf.knit.md~ --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash-implicit_figures --output cv-pdf.html --lua-filter /Library/Frameworks/R.framework/Versions/4.2/Resources/library/bookdown/rmarkdown/lua/custom-environment.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.2/Resources/library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.2/Resources/library/rmarkdown/rmarkdown/lua/latex-div.lua --self-contained --wrap preserve '--mathjax=https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --metadata newpage_html_class="page-break-after" --standalone --section-divs --template /Library/Frameworks/R.framework/Versions/4.2/Resources/library/pagedown/resources/html/resume.html --highlight-style pygments --css updatedaes.css --include-in-header /var/folders/_6/pylhf38x3c728ks3ngjbxsbw0000gn/T//RtmpQI9gO0/rmarkdown-strf35343dd9fb0.html
 ```
 
 ```
@@ -180,12 +193,25 @@ date: "2022-07-23"
   |                                                                            
   |                                                                      |   0%
   |                                                                            
-  |.......................                                               |  33%
+  |..............                                                        |  20%
 ##    inline R code fragments
 ## 
 ## 
   |                                                                            
-  |...............................................                       |  67%
+  |............................                                          |  40%
+## label: unnamed-chunk-1-2 (with options) 
+## List of 2
+##  $ echo  : logi FALSE
+##  $ engine: chr "css"
+## 
+## 
+  |                                                                            
+  |..........................................                            |  60%
+##   ordinary text without R code
+## 
+## 
+  |                                                                            
+  |........................................................              |  80%
 ## label: setup (with options) 
 ## List of 1
 ##  $ include: logi FALSE
@@ -201,7 +227,7 @@ date: "2022-07-23"
 ```
 
 ```
-## /Applications/RStudio.app/Contents/MacOS/quarto/bin/pandoc +RTS -K512m -RTS resume-pdf.knit.md~ --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash-implicit_figures --output resume-pdf.html --lua-filter /Library/Frameworks/R.framework/Versions/4.2/Resources/library/bookdown/rmarkdown/lua/custom-environment.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.2/Resources/library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.2/Resources/library/rmarkdown/rmarkdown/lua/latex-div.lua --self-contained --wrap preserve '--mathjax=https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --metadata newpage_html_class="page-break-after" --standalone --section-divs --template /Library/Frameworks/R.framework/Versions/4.2/Resources/library/pagedown/resources/html/resume.html --highlight-style pygments --css updatedaes.css --include-in-header /var/folders/_6/pylhf38x3c728ks3ngjbxsbw0000gn/T//Rtmp5QZTmN/rmarkdown-stredc34b1815f1.html
+## /Applications/RStudio.app/Contents/MacOS/quarto/bin/pandoc +RTS -K512m -RTS resume-pdf.knit.md~ --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash-implicit_figures --output resume-pdf.html --lua-filter /Library/Frameworks/R.framework/Versions/4.2/Resources/library/bookdown/rmarkdown/lua/custom-environment.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.2/Resources/library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.2/Resources/library/rmarkdown/rmarkdown/lua/latex-div.lua --self-contained --wrap preserve '--mathjax=https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --metadata newpage_html_class="page-break-after" --standalone --section-divs --template /Library/Frameworks/R.framework/Versions/4.2/Resources/library/pagedown/resources/html/resume.html --highlight-style pygments --css updatedaes.css --include-in-header /var/folders/_6/pylhf38x3c728ks3ngjbxsbw0000gn/T//RtmpQI9gO0/rmarkdown-strf353483e3673.html
 ```
 
 ```
