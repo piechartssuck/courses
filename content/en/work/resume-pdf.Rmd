@@ -267,7 +267,7 @@ Selected Talks {data-icon=chalkboard-user}
 Disclaimer {#disclaimer style="width: calc(var(--content-width) - var(--sidebar-width)); padding-left: var(--sidebar-horizontal-padding);"}
 --------------------------------------------------------------------------------
 
-Made in <i style="color:#3365B3;" class="fab fa-r-project"></i>: [Source code](https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-pdf.)
+Made in <i style="color:#3365B3;" class="fab fa-r-project"></i>: [Source code](https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-pdf.Rmd){target='_blank}
 
 Last updated on `r format(Sys.Date(), format="%B %d, %Y")`
 

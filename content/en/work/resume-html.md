@@ -249,6 +249,6 @@ West Virginia University
 
 ## Disclaimer
 
-Made in <i style="color:#3365B3;" class="fab fa-r-project"></i>: [Source code](https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-html.Rmd)
+Made in <i style="color:#3365B3;" class="fab fa-r-project"></i>: <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-html.Rmd" target="&#39;_blank">Source code</a>
 
 Last updated on July 23, 2022

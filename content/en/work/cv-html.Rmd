@@ -7,7 +7,7 @@ output:
     self_contained: true
     paged-footnotes: true
     css: ["updatedaes.css", "resume"]
-weight: NULL g
+weight: NULL
 ---
 
 <script src="//yihui.org/js/math-code.js" defer></script>
@@ -73,11 +73,11 @@ Expertise {#skills}
 <div class="holder">
 
 <div class="left">
-<img src='img/shiny-logo-bw.png' alt='Shiny hex' width='85%'> 
+<img src='img/shiny-logo.png' alt='Shiny hex' width='85%'> 
 </div>
 
 <div class="right">
-<img src='img/rmarkdown-bw.png' alt='Rmarkdown hex' width='85%'>
+<img src='img/rmarkdown.png' alt='Rmarkdown hex' width='85%'>
 </div>
 
 </div>
@@ -836,6 +836,6 @@ N/A
 Disclaimer {#disclaimer style="width: calc(var(--content-width) - var(--sidebar-width)); padding-left: var(--sidebar-horizontal-padding);"}
 --------------------------------------------------------------------------------
 
-Made in <i style="color:#3365B3;" class="fab fa-r-project"></i>: [Source code](https://github.com/drabhikroy/Courses/blob/iam/content/en/work/cv-html.Rmd)
+Made in <i style="color:#3365B3;" class="fab fa-r-project"></i>: [Source code](https://github.com/drabhikroy/Courses/blob/iam/content/en/work/cv-html.Rmd){target='_blank}
 
 Last updated on `r format(Sys.Date(), format="%B %d, %Y")`

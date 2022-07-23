@@ -7,7 +7,7 @@ output:
     self_contained: true
     paged-footnotes: true
     css: ["updatedaes.css", "resume"]
-weight: NULL g
+weight: NULL
 ---
 
 <script src="//yihui.org/js/math-code.js" defer></script>
@@ -63,13 +63,13 @@ weight: NULL g
 
 <div class="left">
 
-<img src='img/shiny-logo-bw.png' alt='Shiny hex' width='85%'>
+<img src='img/shiny-logo.png' alt='Shiny hex' width='85%'>
 
 </div>
 
 <div class="right">
 
-<img src='img/rmarkdown-bw.png' alt='Rmarkdown hex' width='85%'>
+<img src='img/rmarkdown.png' alt='Rmarkdown hex' width='85%'>
 
 </div>
 
@@ -763,6 +763,6 @@ N/A
 
 ## Disclaimer
 
-Made in <i style="color:#3365B3;" class="fab fa-r-project"></i>: [Source code](https://github.com/drabhikroy/Courses/blob/iam/content/en/work/cv-html.Rmd)
+Made in <i style="color:#3365B3;" class="fab fa-r-project"></i>: <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/cv-html.Rmd" target="&#39;_blank">Source code</a>
 
 Last updated on July 23, 2022
