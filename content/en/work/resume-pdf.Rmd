@@ -1,0 +1,264 @@
+---
+title: "Abhik Ranjan Roy"
+author: Abhik Ranjan Roy
+date: "`r Sys.Date()`"
+output:
+  pagedown::html_resume:
+    self_contained: true
+    paged-footnotes: true
+    css: ["updatedaes.css", "resume"]
+knit: pagedown::chrome_print
+weight: NULL 
+---
+
+<script src="//yihui.org/js/math-code.js" defer></script>
+
+<script defer
+  src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(magrittr)
+library(tidyverse)
+library(fontawesome)
+```
+
+
+Aside
+================================================================================
+
+<center>
+<img src='img/me_rb.png' alt='Me' width='65%'>
+<br>
+<br>
+<a href='https://iam.asocialdatascientist.com/' target='_blank'><img src='img/www-cursor-icon.png' alt='Resume' width='35%'></a>
+</center>
+
+
+Contact Information {#contact}
+--------------------------------------------------------------------------------
+
+- `r fontawesome::fa("fas fa-at", fill = "#161618")`&nbsp;&nbsp;&nbsp;&nbsp;abhikroy@tutanota.com
+- `r fontawesome::fa("fab fa-github", fill = "#161618")`&nbsp;&nbsp;&nbsp;&nbsp;[github.com/drabhikroy](https://github.com/drabhikroy)
+- `r fontawesome::fa("far fa-window-maximize", fill = "#161618")`&nbsp;&nbsp;&nbsp;&nbsp;[iam.adatasocialscientist.com](https://iam.asocialdatascientist.com/)
+- `r fontawesome::fa("fas fa-mobile", fill = "#161618", margin_left = "2.1px")` &nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:+1 269-615-8771">+1 269-615-8771</a>
+- `r fontawesome::fa("fab fa-orcid", fill = "#161618")`&nbsp;&nbsp;&nbsp;&nbsp;[0000-0002-7085-8964](https://orcid.org/0000-0002-7085-8964)
+
+
+Expertise {#skills}
+--------------------------------------------------------------------------------
+
+- <b>Data visualization</b> 
+
+- <b>Content, cluster, and social network analysis</b>
+
+- <b>Modeling using statistics and machine learning</b>
+
+- <b>Text mining</b>
+
+- <b>Planning and conducting program evaluations</b> 
+
+- <b>Designing and administering small- and large-scale surveys</b>
+
+- <b>Programming and analysis in</b><i style="color:#161618;" class="fab fa-r-project fa-lg"></i> <b>with markup using</b> $\LaTeX$
+
+- <b>App development and dynamic reporting using</b>
+<div class="holder">
+
+<div class="left">
+<img src='img/shiny-logo.png' alt='Shiny hex' width='85%'> 
+</div>
+
+<div class="right">
+<img src='img/rmarkdown.png' alt='Rmarkdown hex' width='85%'>
+</div>
+
+</div>
+
+Main
+================================================================================
+
+Dr. Abhik Roy {#title}
+--------------------------------------------------------------------------------
+
+<!--
+knitr::asis_output(htmltools::htmlPreserve("
+<input type='checkbox' id='switch'>
+<div class='app'>
+  <div class='body'>
+    <div class='main-circle'></div>
+      <div class='content'>
+        <div class='circle'>
+          <div class='crescent'></div>
+        </div>
+        <label for='switch'>
+          <div class='toggle'></div>
+          <div class='names'>
+            <p class='light'>Light</p>
+            <p class='dark'>Dark</p>
+          </div>
+        </label>
+  </div>
+</div>
+"))
+-->
+
+Education {data-icon=graduation-cap data-concise=true}
+--------------------------------------------------------------------------------
+
+### Western Michigan University
+
+Ph.D. in Program Evaluation
+
+&nbsp;&nbsp;Kalamazoo, MI
+
+2016
+
+### Michigan Technological University
+
+M.S. in Mathematics
+
+&nbsp;&nbsp;Houghton, MI
+
+2007
+
+### West Virginia Wesleyan College
+
+B.S. in Mathematics
+
+&nbsp;&nbsp;Buckhannon, WV
+
+2001
+
+Professional Experience {data-icon=suitcase}
+--------------------------------------------------------------------------------
+
+### <i>Assistant Professor</i>
+
+West Virginia University
+
+&nbsp;&nbsp;Morgantown, WV
+
+Current - 2016
+
+::: concise
+- Advising masters and doctoral students.
+- Evaluating various projects and grants.
+- Submitting papers for peer review publications.
+- Teaching evaluation and methods based classes with a focus on data science. 
+- Survey development in Qualtrics with HTML, CSS, & Javascipt.
+- Building and pulling data from multiple APIs, creating visualizations, creating static and interactive reports, and building apps within the R/RStudio environment.
+:::
+
+### <i>Data Analyst</i>
+
+University of Kansas
+
+&nbsp;&nbsp;Lawrence, KS
+
+2016 - 2014
+
+::: concise
+- Created scripts to pull data from the organization's Oracle database.
+- Prepared evaluation reports for various stakeholders. 
+- Led and presented findings from small and large scale qualitative, quantitative and mixed-methods studies.
+:::
+
+
+Selected Projects {data-icon=toggle-on}
+--------------------------------------------------------------------------------
+
+### <i>Data Scientist</i><br>WVCTSI: West Virginia Clinical and Translational Science Institute
+
+West Virginia University
+
+&nbsp;&nbsp;Morgantown, WV
+
+2017
+
+- Analyzing large data sets using frequentist and Bayesian methods.
+- Conducting local and multi-site mutli-cluster evaluation studies.
+- Developing and distributing customized Qualtrics surveys built with CSS and Javascript.
+- Pulling, wrangling, and visualizing secondary data in R.
+- Mentoring future graduate social data scientists.
+- Total Amount: *$20,000,000*
+- Website: [PERC](https://percwv.com/)
+
+### <i>Program Evaluator</i><br>Research Initiative: A Holistic Cross-Disciplinary Project Experience as a Platform to Advance the Professional Formation of Engineers
+
+West Virginia University
+
+&nbsp;&nbsp;Morgantown, WV
+
+2020
+
+- Advising engineering faculty and graduate students on implementation of study methods.
+- Conducting quantitative and qualitative studies on undergraduate student experiences within grant related programs.
+- Total Amount: *$200,000*
+
+### <i>Program Evaluator</i><br>GAUSSI: Generating, Analyzing, and Understanding Sensory and Sequencing Information: A Trans-Disciplinary Graduate Training Program in Biosensing and Computational Biology
+
+Colorado State University
+
+&nbsp;&nbsp;Fort Collins, CO
+
+2020 - 2017
+
+- Conducting biannual evaluations of multiple grant related programs.
+- Developing and distributing customized Qualtrics surveys built with CSS and Javascript.
+- Pulling, wrangling, and visualizing secondary data in R.
+- Writing annual program and National Science Foundation reports.
+- Total Amount: *$3,013,779*
+
+### <i>Program Evaluator</i><br>Cultivating Inclusive Identities of Engineers and Computer Scientists: Expanding Efforts to Infuse Inclusive Excellence in Undergraduate Curricula
+
+West Virginia University
+
+&nbsp;&nbsp;Morgantown, WV
+
+2018 - 2017
+
+- Conducting formative evaluations of multiple grant related programs.
+- Developing and distributing customized Qualtrics surveys built with CSS and Javascript.
+- Pulling, wrangling, and visualizing secondary data in R.
+- Writing annual program and National Science Foundation reports.
+- Total Amount: *$2,000,000*
+
+
+Selected Talks {data-icon=chalkboard-user}
+--------------------------------------------------------------------------------
+
+### Best of Both Worlds: Affordances of Mixing Machine Learning and Qualitative Content Analysis
+
+*American Educational Research Association Annual Meeting*
+
+&nbsp;&nbsp;San Diego, CA
+
+2022
+
+### These Aren’t Random Words Just Strung Together?: Using Machine Learning and Pretty Visualizations to Discover Topics in Articles.
+
+*American Evaluation Association Annual Conference*
+
+*virtual*
+
+2020
+
+
+### Why Is It That Writers Write but Fingers Don’t Fing? Using Machine Learning and Lexemes to Make Sense of Nonsense.
+
+*American Evaluation Association Annual Conference*
+
+&nbsp;&nbsp;Minneapolis, MN
+
+2019
+
+
+Disclaimer {#disclaimer style="width: calc(var(--content-width) - var(--sidebar-width)); padding-left: var(--sidebar-horizontal-padding);"}
+--------------------------------------------------------------------------------
+
+Made in <i style="color:#3365B3;" class="fab fa-r-project"></i>: [Source code](https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-pdf.)
+
+Last updated on `r format(Sys.Date(), format="%B %d, %Y")`
+

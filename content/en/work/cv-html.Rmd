@@ -7,7 +7,7 @@ output:
     self_contained: true
     paged-footnotes: true
     css: ["updatedaes.css", "resume"]
-weight: NULL 
+weight: NULL g
 ---
 
 <script src="//yihui.org/js/math-code.js" defer></script>
@@ -16,20 +16,13 @@ weight: NULL
   src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
-```{css echo=FALSE}
-
-.holder {
-    width: 100%;
-    display: flex;
-    overflow:hidden;
+```{css, echo=FALSE}
+.pagedjs_page:not(:first-of-type) {
+  --sidebar-width: 0rem;
+  --sidebar-background-color: #ffffff;
+  --main-width: calc(var(--content-width) - var(--sidebar-width));
+  --decorator-horizontal-margin: 0.2in;
 }
-
-.left, .right{
-    width:50%;
-    height:inherit;
-    float:left;
-}
-
 ```
 
 ```{r setup, include=FALSE}
@@ -39,25 +32,14 @@ library(tidyverse)
 library(fontawesome)
 ```
 
-```{css, echo=FALSE}
-.pagedjs_page:not(:first-of-type) {
-  --sidebar-width: 0rem;
-  --sidebar-background-color: #36454f;
-  --main-width: calc(var(--content-width) - var(--sidebar-width));
-  --decorator-horizontal-margin: 0.2in;
-}
-```
-
 
 Aside
 ================================================================================
 
-<center>
-<img src='img/me_rb.png' alt='CV' width='65%'>
-<br>
-<br>
-<a href='cv.pdf' target='_blank'><img src='img/vita-dl-icon.png' alt='Resume' width='20%'></a>
-<center>
+<div class="parent">
+<img class="imbehind" src='img/me_rb.png' alt='Me' width='65%' class='center'>
+<a href='cv.pdf' target='_blank'><img class="imontop" src='img/vita-dl-icon.png' alt='CV' width='20%' class='center'></a>
+</div>
 
 
 Contact Information {#contact}
@@ -66,7 +48,7 @@ Contact Information {#contact}
 - `r fontawesome::fa("fas fa-at", fill = "#e7c9a9")`&nbsp;&nbsp;&nbsp;&nbsp;abhik.roy@mail.wvu.edu
 - `r fontawesome::fa("fab fa-github", fill = "#4183c4")`&nbsp;&nbsp;&nbsp;&nbsp;[github.com/drabhikroy](https://github.com/drabhikroy)
 - `r fontawesome::fa("far fa-window-maximize", fill = "#5cb2b8")`&nbsp;&nbsp;&nbsp;&nbsp;[iam.adatasocialscientist.com](https://iam.asocialdatascientist.com/)
-- `r fontawesome::fa("fas fa-mobile-alt", fill = "#c4becf", margin_left = "2.1px")` &nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:+1 269-615-8771">+1 269-615-8771</a>
+- `r fontawesome::fa("fas fa-mobile", fill = "#c4becf", margin_left = "2.1px")` &nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:+1 269-615-8771">+1 269-615-8771</a>
 - `r fontawesome::fa("fab fa-orcid", fill = "#aecc54")`&nbsp;&nbsp;&nbsp;&nbsp;[0000-0002-7085-8964](https://orcid.org/0000-0002-7085-8964)
 
 
@@ -75,18 +57,30 @@ Expertise {#skills}
 
 - <b>Data visualization</b> 
 
-- <b>Cluster analysis</b>
+- <b>Content, cluster, and social network analysis</b>
 
-- <b>Machine learning models, Bayesian statistical methods, and social network analysis</b>
+- <b>Modeling using statistics and machine learning</b>
 
-- <b>Planning and administering program evaluations</b> 
+- <b>Text mining</b>
 
-- <b>Text mining, analytics, and content analysis</b>
+- <b>Planning and conducting program evaluations</b> 
 
-- <b>Programming in</b><i style="color:#3365B3;" class="fab fa-r-project"></i>
+- <b>Designing and administering small- and large-scale surveys</b>
 
-- <b>Reporting in</b> $\LaTeX$
+- <b>Programming and analysis in</b><i style="color:#3365B3;" class="fab fa-r-project fa-lg"></i> <b>with markup using</b> $\LaTeX$
 
+- <b>App development and dynamic reporting using</b>
+<div class="holder">
+
+<div class="left">
+<img src='img/shiny-logo-bw.png' alt='Shiny hex' width='85%'> 
+</div>
+
+<div class="right">
+<img src='img/rmarkdown-bw.png' alt='Rmarkdown hex' width='85%'>
+</div>
+
+</div>
 
 Main
 ================================================================================
@@ -324,7 +318,7 @@ Pennsylvania State University
 - *$2,470,440*
 - *2017-ED H327S170012*
 
-### Research Initiative: A Holistic Cross-Disciplinary Project Experience as a Platform to Advance the Professional Formation of Engineers
+### Cultivating Inclusive Identities of Engineers and Computer Scientists: Expanding Efforts to Infuse Inclusive Excellence in Undergraduate Curricula
 
 West Virginia University
 
@@ -842,6 +836,6 @@ N/A
 Disclaimer {#disclaimer style="width: calc(var(--content-width) - var(--sidebar-width)); padding-left: var(--sidebar-horizontal-padding);"}
 --------------------------------------------------------------------------------
 
-Made in <i style="color:#3365B3;" class="fab fa-r-project"></i>: [Source code](https://github.com/nstrayer/cv)
+Made in <i style="color:#3365B3;" class="fab fa-r-project"></i>: [Source code](https://github.com/drabhikroy/Courses/blob/iam/content/en/work/cv-html.Rmd)
 
-Last updated on `r Sys.Date()`
+Last updated on `r format(Sys.Date(), format="%B %d, %Y")`

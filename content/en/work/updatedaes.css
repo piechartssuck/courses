@@ -70,3 +70,44 @@ aside{
 .aside i::before {
     padding: 0.5em;
 }
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.details, .date {
+  break-inside: avoid-column;
+}
+
+.parent {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.imbehind {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.imontop {
+  position: absolute;
+  top: 100px;
+  right: 46px;
+}
+
+.holder {
+    width: 100%;
+    display: flex;
+    overflow:hidden;
+    margin-top: -15%;
+}
+
+.left, .right{
+    width: 30%;
+    height:inherit;
+    float:left;
+}

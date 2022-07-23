@@ -12,7 +12,7 @@ weight: NULL
 ---
 
 <script src="//yihui.org/js/math-code.js" defer></script>
-<!-- Just one possible MathJax CDN below. You may use others. -->
+
 <script defer
   src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
@@ -29,21 +29,21 @@ Aside
 ================================================================================
 
 <center>
-<img src='img/me_rb.png' alt='CV' width='65%'>
+<img src='img/me_rb.png' alt='Me' width='65%'>
 <br>
 <br>
-<a href='https://iam.asocialdatascientist.com/' target='_blank'><img src='img/www-cursor-icon.png' alt='Resume' width='40%'></a>
+<a href='https://iam.asocialdatascientist.com/' target='_blank'><img src='img/www-cursor-icon.png' alt='Resume' width='35%'></a>
 </center>
 
 
 Contact Information {#contact}
 --------------------------------------------------------------------------------
 
-- `r fontawesome::fa("fas fa-at", fill = "#e7c9a9")`&nbsp;&nbsp;&nbsp;&nbsp;abhik.roy@mail.wvu.edu
-- `r fontawesome::fa("fab fa-github", fill = "#4183c4")`&nbsp;&nbsp;&nbsp;&nbsp;[github.com/drabhikroy](https://github.com/drabhikroy)
-- `r fontawesome::fa("far fa-window-maximize", fill = "#5cb2b8")`&nbsp;&nbsp;&nbsp;&nbsp;[iam.adatasocialscientist.com](https://iam.asocialdatascientist.com/)
-- `r fontawesome::fa("fas fa-mobile-alt", fill = "#c4becf", margin_left = "2.1px")` &nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:+1 269-615-8771">+1 269-615-8771</a>
-- `r fontawesome::fa("fab fa-orcid", fill = "#aecc54")`&nbsp;&nbsp;&nbsp;&nbsp;[0000-0002-7085-8964](https://orcid.org/0000-0002-7085-8964)
+- `r fontawesome::fa("fas fa-at", fill = "#161618")`&nbsp;&nbsp;&nbsp;&nbsp;abhikroy@tutanota.com
+- `r fontawesome::fa("fab fa-github", fill = "#161618")`&nbsp;&nbsp;&nbsp;&nbsp;[github.com/drabhikroy](https://github.com/drabhikroy)
+- `r fontawesome::fa("far fa-window-maximize", fill = "#161618")`&nbsp;&nbsp;&nbsp;&nbsp;[iam.adatasocialscientist.com](https://iam.asocialdatascientist.com/)
+- `r fontawesome::fa("fas fa-mobile", fill = "#161618", margin_left = "2.1px")` &nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:+1 269-615-8771">+1 269-615-8771</a>
+- `r fontawesome::fa("fab fa-orcid", fill = "#161618")`&nbsp;&nbsp;&nbsp;&nbsp;[0000-0002-7085-8964](https://orcid.org/0000-0002-7085-8964)
 
 
 Expertise {#skills}
@@ -51,17 +51,30 @@ Expertise {#skills}
 
 - <b>Data visualization</b> 
 
-- <b>Cluster analysis</b>
+- <b>Content, cluster, and social network analysis</b>
 
-- <b>Machine learning models, Bayesian statistical methods, and social network analysis</b>
+- <b>Modeling using statistics and machine learning</b>
 
-- <b>Planning and administering program evaluations</b> 
+- <b>Text mining</b>
 
-- <b>Text mining, analytics, and content analysis</b>
+- <b>Planning and conducting program evaluations</b> 
 
-- <b>Programming in</b><i style="color:#3365B3;" class="fab fa-r-project"></i>
+- <b>Designing and administering small- and large-scale surveys</b>
 
-- <b>Reporting in</b> $\LaTeX$
+- <b>Programming and analysis in</b><i style="color:#3365B3;" class="fab fa-r-project fa-lg"></i> <b>with markup using</b> $\LaTeX$
+
+- <b>App development and dynamic reporting using</b>
+<div class="holder">
+
+<div class="left">
+<img src='img/shiny-logo.png' alt='Shiny hex' width='85%'> 
+</div>
+
+<div class="right">
+<img src='img/rmarkdown.png' alt='Rmarkdown hex' width='85%'>
+</div>
+
+</div>
 
 
 Main
@@ -300,7 +313,7 @@ Pennsylvania State University
 - *$2,470,440*
 - *2017-ED H327S170012*
 
-### Research Initiative: A Holistic Cross-Disciplinary Project Experience as a Platform to Advance the Professional Formation of Engineers
+### Cultivating Inclusive Identities of Engineers and Computer Scientists: Expanding Efforts to Infuse Inclusive Excellence in Undergraduate Curricula
 
 West Virginia University
 
@@ -818,6 +831,6 @@ N/A
 Disclaimer {#disclaimer style="width: calc(var(--content-width) - var(--sidebar-width)); padding-left: var(--sidebar-horizontal-padding);"}
 --------------------------------------------------------------------------------
 
-Made in <i style="color:#3365B3;" class="fab fa-r-project"></i>: [Source code](https://github.com/nstrayer/cv)
+Made in <i style="color:#3365B3;" class="fab fa-r-project"></i>: [Source code](https://github.com/drabhikroy/Courses/blob/iam/content/en/work/cv-pdf.Rmd)
 
-Last updated on `r Sys.Date()`
+Last updated on `r format(Sys.Date(), format="%B %d, %Y")`
