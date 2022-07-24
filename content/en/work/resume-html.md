@@ -1,7 +1,7 @@
 ---
 title: "Abhik Ranjan Roy"
 author: Abhik Ranjan Roy
-date: "2022-07-23"
+date: "2022-07-24"
 output:
   pagedown::html_resume:
     self_contained: true
@@ -165,7 +165,7 @@ University of Kansas
 
 ## Selected Projects
 
-### <i>Data Scientist</i><br>WVCTSI: West Virginia Clinical and Translational Science Institute
+### <i>Data Scientist & Program Evaluator</i><br>WVCTSI: West Virginia Clinical and Translational Science Institute
 
 West Virginia University
 
@@ -175,7 +175,7 @@ West Virginia University
 
 -   Analyzing large data sets using frequentist and Bayesian methods.
 -   Conducting local and multi-site mutli-cluster evaluation studies.
--   Developing and distributing customized Qualtrics surveys built with CSS and Javascript.
+-   Developing/validating items and distributing customized Qualtrics surveys built with CSS and Javascript.
 -   Pulling, wrangling, and visualizing secondary data in R.
 -   Mentoring future graduate social data scientists.
 -   Total Amount: *\$20,000,000*
@@ -251,4 +251,4 @@ West Virginia University
 
 Made in <i style="color:#3365B3;" class="fab fa-r-project"></i>: <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-html.Rmd" target="&#39;_blank">Source code</a>
 
-Last updated on July 23, 2022
+Last updated on July 24, 2022

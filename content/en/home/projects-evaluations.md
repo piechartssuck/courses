@@ -1,0 +1,54 @@
+---
+title: Projects
+weight: 6
+output:
+  html_document:
+    css: "style.css"
+---
+
+<style>
+table, 
+tbody, 
+th, 
+td, 
+tr, 
+.markdown tbody tr:nth-child(2n+1) td, 
+.markdown tbody tr:nth-child(2n+1) th,
+.markdown tbody tr:nth-child(2n) td, 
+.markdown tbody tr:nth-child(2n) th{
+  border: none;
+  text-align: left;
+  background-color: #1e1e1e;
+  color: #ffffff;
+  vertical-align: center;
+}
+
+.holder {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+}
+
+</style>
+
+
+
+<div class="holder">
+
+<div class="left">
+Lead data scientist & program evaluator at <br><br><a href='https://percwv.com' target='_blank'><img src='/img/logos/perc-ico.png' alt='RM hex' width='250'></a>
+</div>
+
+<div class="right">
+<table>
+    <tr><th>App development (R/Shiny)</th></tr>
+    <tr><th>Bayesian statistics and modeling</th></tr>
+    <tr><th>Data wrangling, reporting, & visualizations (R/Rmarkdown)</th></tr>
+    <tr><th>Item development and validation</th></tr>
+    <tr><th>Local and multi-site mutli-cluster evaluation studies</th></tr>
+    <tr><th>Survey construction (Qualtrics - HTML/CSS/Javascipt)</th></tr>
+</table>
+</div>
+
+</div>

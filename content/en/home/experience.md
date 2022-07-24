@@ -1,6 +1,6 @@
 ---
 title: "Experience"
-weight: 8
+weight: 2
 ---
 
 <style type="text/css">
@@ -19,8 +19,7 @@ weight: 8
 
 </style>
 
-Please choose from one of the options below to see my qualifications
-<br>
+Please choose from one of the options below to see how my qualifications can help you in academia or industry
 <br>
 <br>
 

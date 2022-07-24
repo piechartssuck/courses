@@ -5,13 +5,15 @@
  *   '
  *   sass/style.sass 1:1  root stylesheet */
 
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
+ @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+ @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700&display=swap');
+
+ body::before {
+  font-family: "Roboto Condensed", sans-serif;
   white-space: pre;
   display: block;
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: 'Error: Expected newline.\a   \2577 \a 1 \2502  {{ $themeStyle := .Site.Params.themeStyle | default "light" }}\a   \2502  ^\a   \2575 \a   sass/style.sass 1:1  root stylesheet';
+  content: 'Error: Expected newline.\a   \2577 \a 1 \2502  {{ $themeStyle := .Site.Params.themeStyle | default "light" }}\a   \2502  ^\a   \2575 \a   assets/sass/style.sass 1:1  root stylesheet';
 }

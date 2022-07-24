@@ -1,7 +1,7 @@
 ---
 title: "Abhik Ranjan Roy"
 author: Abhik Ranjan Roy
-date: "2022-07-23"
+date: "2022-07-24"
 output:
   pagedown::html_resume:
     self_contained: true
@@ -255,6 +255,7 @@ West Virginia University
 
 -   Analyzing large data sets using frequentist and Bayesian methods.
 -   Conducting local and multi-site mutli-cluster evaluation studies.
+-   Developing/validating items and distributing customized Qualtrics surveys built with CSS and Javascript.
 -   Pulling, wrangling, and visualizing secondary data in R.
 -   Mentoring future graduate social data scientists.
 -   *\$20,000,000*
@@ -765,4 +766,4 @@ N/A
 
 Made in <i style="color:#3365B3;" class="fab fa-r-project"></i>: <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/cv-pdf.Rmd" target="&#39;_blank">Source code</a>
 
-Last updated on July 23, 2022
+Last updated on July 24, 2022

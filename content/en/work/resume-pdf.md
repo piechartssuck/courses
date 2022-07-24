@@ -166,7 +166,7 @@ University of Kansas
 
 ## Selected Projects
 
-### <i>Data Scientist</i><br>WVCTSI: West Virginia Clinical and Translational Science Institute
+### <i>Data Scientist & Program Evaluator</i><br>WVCTSI: West Virginia Clinical and Translational Science Institute
 
 West Virginia University
 
@@ -176,7 +176,7 @@ West Virginia University
 
 -   Analyzing large data sets using frequentist and Bayesian methods.
 -   Conducting local and multi-site mutli-cluster evaluation studies.
--   Developing and distributing customized Qualtrics surveys built with CSS and Javascript.
+-   Developing/validating items and distributing customized Qualtrics surveys built with CSS and Javascript.
 -   Pulling, wrangling, and visualizing secondary data in R.
 -   Mentoring future graduate social data scientists.
 -   Total Amount: *\$20,000,000*
