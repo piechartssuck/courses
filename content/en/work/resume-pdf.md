@@ -1,7 +1,7 @@
 ---
 title: "Abhik Ranjan Roy"
 author: Abhik Ranjan Roy
-date: "2022-07-23"
+date: "2022-07-24"
 output:
   pagedown::html_resume:
     self_contained: true
@@ -55,7 +55,7 @@ weight: NULL
 
 -   <b>Designing and administering small- and large-scale surveys</b>
 
--   <b>Programming and analysis in</b><i style="color:#161618;" class="fab fa-r-project fa-lg"></i> <b>with markup using</b> `\(\LaTeX\)`
+-   <b>Programming and analysis in</b><i style="color:#3365B3;" class="fab fa-r-project fa-lg"></i> <b>with markup using</b> `\(\LaTeX\)`
 
 -   <b>App development and dynamic reporting using</b>
 
@@ -252,4 +252,4 @@ West Virginia University
 
 Made in <i style="color:#3365B3;" class="fab fa-r-project"></i>: <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-pdf.Rmd" target="&#39;_blank">Source code</a>
 
-Last updated on July 23, 2022
+Last updated on July 24, 2022

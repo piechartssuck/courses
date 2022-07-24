@@ -70,7 +70,7 @@ Expertise {#skills}
 
 - <b>Designing and administering small- and large-scale surveys</b>
 
-- <b>Programming and analysis in</b><i style="color:#161618;" class="fab fa-r-project fa-lg"></i> <b>with markup using</b> $\LaTeX$
+- <b>Programming and analysis in</b><i style="color:#3365B3;" class="fab fa-r-project fa-lg"></i> <b>with markup using</b> $\LaTeX$
 
 - <b>App development and dynamic reporting using</b>
 <div class="holder">
