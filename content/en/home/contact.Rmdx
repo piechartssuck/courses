@@ -1,0 +1,101 @@
+---
+title: "Contact"
+weight: 7
+---
+
+
+<style>
+form { max-width:420px; margin:50px auto; }
+
+.feedback-input {
+  color:white;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid #ff6666;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+.feedback-input:focus { border:2px solid #CC4949; }
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+[type="submit"] {
+  font-family: 'Roboto Condensed', sans-serif;
+  width: 100%;
+  background:#ff6666;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+[type="submit"]:hover { background:#CC4949; }
+</style>
+
+<form method="post" name="contact_form"
+    action="contact-form-handler.php">     
+  <input name="name" type="text" class="feedback-input" placeholder="Name" />   
+  <input name="email" type="text" class="feedback-input" placeholder="Email" />
+  <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
+  <input type="submit" value="SUBMIT"/>
+</form>
+
+<script language="JavaScript">
+    var frmvalidator  = new Validator("contactform");
+    frmvalidator.addValidation("name","req","Please provide your name");
+    frmvalidator.addValidation("email","req","Please provide your email");
+    frmvalidator.addValidation("email","email",
+      "Please enter a valid email address");
+</script>
+
+<?php
+    $errors = '';
+    $myemail = 'olgratefuldead@gmail.com';
+    if(empty($_POST['name'])  ||
+       empty($_POST['email']) ||
+       empty($_POST['message']))
+    {
+        $errors .= "\n Error: all fields are required";
+    }
+    $name = $_POST['name'];
+    $email_address = $_POST['email'];
+    $message = $_POST['message'];
+    if (!preg_match(
+    "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i",
+    $email_address))
+    {
+        $errors .= "\n Error: Invalid email address";
+    }
+    if( empty($errors))
+    {
+    $to = $myemail;
+    $email_subject = "Contact form submission: $name";
+    $email_body = "You have received a new message. ".
+    " Here are the details:\n Name: $name \n ".
+    "Email: $email_address\n Message \n $message";
+    $headers = "From: $myemail\n";
+    $headers .= "Reply-To: $email_address";
+    mail($to,$email_subject,$email_body,$headers);
+    //redirect to the 'thank you' page
+    header('Location: contact-form-thank-you.html');
+    }
+?>
+

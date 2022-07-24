@@ -1,5 +1,5 @@
 ---
-title: Projects
+title: "Projects & Evaluations"
 weight: 6
 output:
   html_document:
