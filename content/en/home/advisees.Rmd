@@ -119,5 +119,3 @@ paste0("<a href=", loc, " target='_blank'>", icon,"&nbsp;&nbsp; Click here to se
 </div>
 
 </div>
-
-

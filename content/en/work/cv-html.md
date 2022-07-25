@@ -1,7 +1,7 @@
 ---
 title: "Abhik Ranjan Roy"
 author: Abhik Ranjan Roy
-date: "2022-07-24"
+date: "2022-07-25"
 output:
   pagedown::html_resume:
     self_contained: true
@@ -11,7 +11,6 @@ weight: NULL
 ---
 
 <script src="//yihui.org/js/math-code.js" defer></script>
-<!-- Just one possible MathJax CDN below. You may use others. -->
 <script defer
   src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
@@ -766,4 +765,4 @@ N/A
 
 Made in <i style="color:#3365B3;" class="fab fa-r-project"></i>: <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/cv-html.Rmd" target="&#39;_blank">Source code</a>
 
-Last updated on July 24, 2022
+Last updated on July 25, 2022

@@ -7,6 +7,12 @@ output:
     css: "style.css"
 ---
 
+<script src="//yihui.org/js/math-code.js" defer></script>
+
+<script defer
+  src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
 <style>
 
 .holder {
@@ -93,5 +99,6 @@ tr,
 <br>
 <br>
 <center>
-<a href="#experience"><i class="fa-solid fa-file-arrow-down"></i>&nbsp;&nbsp;&nbsp;<i>please jump to the Experience section for access to both my curriculum vitae or resume</i></a>
+<a href="#experience"><i class="fa-solid fa-arrow-turn-down"></i></i>&nbsp;&nbsp;&nbsp;<i>please jump to the Experience section for access to both my curriculum vitae or resume</i></a>
 </center>
+<br>
