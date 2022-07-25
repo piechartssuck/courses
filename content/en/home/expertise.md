@@ -83,7 +83,7 @@ tr,
     <tr><th>Text mining</th></tr> 
     <tr><th>Planning and conducting program evaluations</th></tr>  
     <tr><th>Designing and administering small- and large-scale surveys</th></tr>
-    <tr><th>Programming and analysis in</b><i style="color:#3365B3;" class="fab fa-r-project fa-lg"></i> <b>with markup using</b> `\(\LaTeX\)`</th></tr> 
+    <tr><th>Programming and analysis in </b><i style="color:#3365B3;" class="fab fa-r-project fa-lg"></i> <b>with markup using</b> `\(\LaTeX\)` </th></tr> 
     <tr><th>App development and dynamic reporting using</b></th></tr> 
 </table>
 <div class="holder">
