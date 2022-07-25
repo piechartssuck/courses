@@ -26,3 +26,5 @@ output:
 <br>
 <i>please click on the hex sticker(s) it to access the full course</i>
 <b>
+<br>
+<br>

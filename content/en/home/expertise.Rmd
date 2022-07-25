@@ -87,10 +87,10 @@ fa_i(name = "arrow-down", fill = "#3365B3")
     <tr><th>Programming and analysis in </b><i style="color:#3365B3;" class="fab fa-r-project fa-lg"></i> <b>with markup using</b> <code>$\LaTeX$</code> </th></tr> 
     <tr><th>App development and dynamic reporting using</b></th></tr> 
 </table>
-<div class="holder">
+<div class="holder" style="margin-top: -25px">
 
 <div class="About" id="about">
- <img src='/img/logos/shiny-logo.png' alt='Shiny hex' style="width:75px">&nbsp;&nbsp;
+ &nbsp&nbsp&nbsp<img src='/img/logos/shiny-logo.png' alt='Shiny hex' style="width:75px">&nbsp;&nbsp;
  <img src='/img/logos/rmarkdown.png' alt='Rmarkdown hex' style="width:75px">
 </div>
 

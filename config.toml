@@ -141,4 +141,4 @@ ignoreFiles = [ "\\.Rmd$", "\\.Rmarkdown$", "_cache$" ]
         [languages.en.params]
             fonts = ["Poppins"]
             description  = "Website Description"   # Max 160 characters show in search results
-            footerText   = "<i class='fa-solid fa-terminal'></i>&nbsp;&nbsp;<span style='font-family:Courier New;'> perpetually under construction</span>"                      # Text to override default footer text (markdown allowed)
+            footerText   = "<i class='fa-solid fa-terminal'></i>&nbsp;&nbsp;<span style='font-family:Courier New;'> perpetually under construction</span><br><br>Source code on <a href='https://github.com/drabhikroy/Courses/tree/iam' target='_blank'><i class='fa-brands fa-lg fa-github'></i></a><br><br><a href='https://creativecommons.org/licenses/by-nc/4.0/' target='_blank'><i class='fab fa-creative-commons'></i> CC BY-NC 4.0</a>"    # Text to override default footer text (markdown allowed)
