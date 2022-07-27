@@ -1,7 +1,7 @@
 ---
 title: "Abhik Ranjan Roy"
 author: Abhik Ranjan Roy
-date: "2022-07-25"
+date: "2022-07-27"
 output:
   pagedown::html_resume:
     self_contained: true
@@ -147,7 +147,7 @@ University of Kansas
 
 </div>
 
-## Publications
+## Select Publications
 
 ### There’s So Much to Do and Not Enough Time to Do It! A Case for Sentiment Analysis to Derive Meaning From Open Text Using Student Reflections of Engineering Activities.
 
@@ -766,4 +766,4 @@ N/A
 
 Made in <i style="color:#3365B3;" class="fab fa-r-project"></i>: <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/cv-html.Rmd" target="&#39;_blank">Source code</a>
 
-Last updated on July 25, 2022
+Last updated on July 27, 2022

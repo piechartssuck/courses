@@ -147,3 +147,60 @@ Skilled in participatory evaluation, research methodology, and survey design
 </table>
 </div>
 </div>
+
+<br>
+<br>
+
+<div class="holder">
+
+<div class="left">
+
+<a href="#katie"><img src='/img/photos/katie-name.png' alt='Kathryn Smalley' width='377' align="left"></a>
+
+</div>
+
+<div class="right">
+
+<br>
+
+<table>
+<tr>
+<th>
+Advisee since 2022
+</th>
+</tr>
+<tr>
+<th>
+Earned a <b><a href="http://catalog.wvu.edu/undergraduate/eberlycollegeofartsandsciences/criminology/">Bachelor of Arts in Criminology </a></b>
+</th>
+</tr>
+<tr>
+<th>
+Current <b><a href="http://catalog.wvu.edu/graduate/collegeofappliedhumansciences/schoolofeducation/edp/">Master of Arts in Educational Psychology</a></b> student
+</th>
+</tr>
+</table>
+<center>
+<hr style="height:1px;border-width:0;color:#ff6666;background-color:#ff6666;width:15%;">
+</center>
+<table>
+<tr>
+<th>
+Certified Healthcare Simulation Educator (CHSE), Project Manager, WVU Health Science Department of Interprofessional Education, Research Coordinator, STEPS Medical Simulation Lab
+</th>
+</tr>
+<tr>
+<th>
+Expertise in experiential learning, healthcare simulation, and interprofessional education
+</th>
+</tr>
+<tr>
+<th>
+Skilled in policy development, program evaluation, research design, and survey design
+</th>
+</tr>
+</table>
+</div>
+</div>
+
+<br>

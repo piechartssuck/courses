@@ -156,7 +156,7 @@ University of Kansas
 :::
 
 
-Publications {data-icon=file-text-o}
+Select Publications {data-icon=file-text-o}
 --------------------------------------------------------------------------------
 
 ### There’s So Much to Do and Not Enough Time to Do It! A Case for Sentiment Analysis to Derive Meaning From Open Text Using Student Reflections of Engineering Activities.

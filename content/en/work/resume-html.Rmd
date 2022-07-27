@@ -171,7 +171,7 @@ University of Kansas
 :::
 
 
-Selected Projects {data-icon=toggle-on}
+Select Projects {data-icon=toggle-on}
 --------------------------------------------------------------------------------
 
 ### <i>Data Scientist & Program Evaluator</i><br>WVCTSI: West Virginia Clinical and Translational Science Institute
@@ -231,7 +231,7 @@ West Virginia University
 - Total Amount: *$2,000,000*
 
 
-Selected Talks {data-icon=chalkboard-user}
+Select Talks {data-icon=chalkboard-user}
 --------------------------------------------------------------------------------
 
 ### Best of Both Worlds: Affordances of Mixing Machine Learning and Qualitative Content Analysis

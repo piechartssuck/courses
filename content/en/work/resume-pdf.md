@@ -1,7 +1,7 @@
 ---
 title: "Abhik Ranjan Roy"
 author: Abhik Ranjan Roy
-date: "2022-07-24"
+date: "2022-07-27"
 output:
   pagedown::html_resume:
     self_contained: true
@@ -164,7 +164,7 @@ University of Kansas
 
 </div>
 
-## Selected Projects
+## Select Projects
 
 ### <i>Data Scientist & Program Evaluator</i><br>WVCTSI: West Virginia Clinical and Translational Science Institute
 
@@ -222,7 +222,7 @@ West Virginia University
 -   Writing annual program and National Science Foundation reports.
 -   Total Amount: *\$2,000,000*
 
-## Selected Talks
+## Select Talks
 
 ### Best of Both Worlds: Affordances of Mixing Machine Learning and Qualitative Content Analysis
 
@@ -252,4 +252,4 @@ West Virginia University
 
 Made in <i style="color:#3365B3;" class="fab fa-r-project"></i>: <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-pdf.Rmd" target="&#39;_blank">Source code</a>
 
-Last updated on July 24, 2022
+Last updated on July 27, 2022
