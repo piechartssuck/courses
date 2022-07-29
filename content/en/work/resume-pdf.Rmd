@@ -48,7 +48,7 @@ Aside
 Contact Information {#contact}
 --------------------------------------------------------------------------------
 
-- `r fontawesome::fa("fas fa-at", fill = "#161618")`&nbsp;&nbsp;&nbsp;&nbsp;abhikroy@tutanota.com
+- `r fontawesome::fa("fas fa-at", fill = "#161618")`&nbsp;&nbsp;&nbsp;&nbsp;abhikrroy@protonmail.com
 - `r fontawesome::fa("fab fa-github", fill = "#161618")`&nbsp;&nbsp;&nbsp;&nbsp;[github.com/drabhikroy](https://github.com/drabhikroy)
 - `r fontawesome::fa("far fa-window-maximize", fill = "#161618")`&nbsp;&nbsp;&nbsp;&nbsp;[iam.adatasocialscientist.com](https://iam.asocialdatascientist.com/)
 - `r fontawesome::fa("fas fa-mobile", fill = "#161618", margin_left = "2.1px")` &nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:+1 269-615-8771">+1 269-615-8771</a>
@@ -88,7 +88,7 @@ Expertise {#skills}
 Main
 ================================================================================
 
-Dr. Abhik Roy {#title}
+Abhik Roy {#title}
 --------------------------------------------------------------------------------
 
 <!--
