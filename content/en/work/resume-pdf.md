@@ -1,7 +1,7 @@
 ---
 title: "Abhik Ranjan Roy"
 author: Abhik Ranjan Roy
-date: "2022-07-29"
+date: "2022-08-03"
 output:
   pagedown::html_resume:
     self_contained: true
@@ -252,4 +252,4 @@ West Virginia University
 
 Made in <i style="color:#3365B3;" class="fab fa-r-project"></i>: <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-pdf.Rmd" target="&#39;_blank">Source code</a>
 
-Last updated on July 29, 2022
+Last updated on August 03, 2022
