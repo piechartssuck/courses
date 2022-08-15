@@ -1,0 +1,107 @@
+---
+title: "Does it Work and Why Does it Work?"
+linktitle: "Week 1: Evaluations"
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  readings:
+    parent: Readings
+    weight: 1
+type: docs
+weight: 1
+---
+
+`r blogdown::shortcode("aes-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+<style>
+.videoContainer {
+    height: 480px;
+    width: 320px;   
+    padding: 26px;
+}
+</style>
+
+### Get Some Advice
+<center>
+<div class="videoContainer">
+<video width="320" controls>
+    <source src="/videos/snoop_syllabus.mp4" type="video/mp4">
+
+I'm sorry but your browser doesn't support embedded videos. You can however <a href="/videos/snoop_syllabus.mp4">download it</a>.
+
+</video>
+</div>
+</center>
+
+### Review 
+
+#### Website
+
+Far be it from us to disagree with Snoop, so you should probably go read the [syllabus](/syllabus/) as soon as possible! Additionally look over the other areas on this site: [tasks](/tasks/), [trainings](/trainings/), [to do list](/due/), and [resources](/resources/) pages for this class.
+
+#### Surveys Companion site
+
+You can get additional examples and materials for the 4th edition of *Internet, Phone, Mail, and Mixed-Mode Surveys: The Tailored Design Method* by clicking [here](https://bcs.wiley.com/he-bcs/Books?action=index&bcsId=9087&itemId=1118456149)
+
+### Read Some Text
+
+```{r echo=FALSE}
+
+document <- as.character(fa("file", fill = "#e86af0", height = "25px"))
+
+book <- as.character(fa("book", fill = "#f06ab5", height = "25px"))
+
+site <- as.character(fa("link", fill = "	#a56af0", height = "25px"))
+
+review <- tibble(
+  
+  title <- c("<i>CDC's Introduction to Evaluation</i>",
+             "<i>Sample Surveys in Our Electronic World</i>",
+             "<i>Using Surveys</i>"
+  ),
+  
+  section = c(NA,
+              "Chapter 1",
+              "Chapter 14"),
+  
+  link <- c(
+    paste0("[",site,"]",
+    "(https://www.cdc.gov/eval/guide/introduction/index.htm){target='_blank'}"
+    ),
+    paste0("[",book,"]",
+    "(https://ebookcentral.proquest.com/lib/wvu/reader.action?docID=1762797&ppg=21){target='_blank'}"
+    ),
+    paste0("[",book,"]",
+    "(https://ebookcentral.proquest.com/lib/wvu/reader.action?docID=2144898&ppg=361){target='_blank'}"
+    )
+    
+  ),
+  
+  .name_repair = "minimal"
+  
+)
+
+```
+
+<center>
+```{r, echo=FALSE}
+review %>%
+  mutate_all(replace_na,"") %>%
+  kbl(col.names = c("Title", 
+                    "Section",
+                    "Link"), 
+      "html", 
+      escape = FALSE,
+      align = 'llc') %>%
+   kable_paper(full_width = TRUE) %>%
+  column_spec(1, width = "20em") %>%
+  column_spec(2, width = "10em") %>% 
+  row_spec(0:nrow(review), extra_css = 'vertical-align: middle !important;', color = "#f7f7f7", background = "transparent") 
+```
+</center>

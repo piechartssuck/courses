@@ -1,0 +1,16 @@
+---
+title: "Does it Work and Why Does it Work?"
+linktitle: "Week 1: Evaluations "
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  trainings:
+    parent: Walkthroughs
+    weight: 1
+type: docs
+weight: 2
+---
+
+*Posting soon*

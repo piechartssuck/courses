@@ -1,0 +1,367 @@
+---
+title: "Now You Know"
+linktitle: "Week 6: Now You Know "
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+    self_contained: false
+    code_folding: hide
+menu:
+  trainings:
+    parent: Walkthroughs
+    weight: 6
+type: docs
+weight: 2
+---
+`r blogdown::shortcode("r-walkthrough-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+```{r setup, include=FALSE,purl=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(widgetframe_self_contained = TRUE) 
+knitr::opts_knit$set(root.dir = getwd())
+
+library(tidyverse)
+library(broom)
+library(patchwork)
+library(reactable)
+library(cowplot)
+library(knitr)
+library(kableExtra)
+library(htmlwidgets)
+library(htmltools)
+```
+
+*Posting soon*
+
+## Take This
+
+First things first, please go and take the [The Short Dark Triad](https://openpsychometrics.org/tests/SD3/){target="_blank"}. 
+
+## Read Up
+
+Please make sure that you have read the paper [Introducing the Short Dark Triad (SD3): A
+Brief Measure of Dark Personality Traits  (Jones & Paulhus, 2014)](/readings/06-readings/#download-digital-copies){target="_blank"} included in this week's downloads. 
+
+## Learn Something
+
+```{=html}
+<center>
+<div class="wrapper">
+    <div class="icon leftright">
+      <div class="tooltip"><span style=width:200px;>Move back and forth using <kbd>←</kbd> and <kbd>→</kbd></span></div>
+      <span><i class="fas fa-map-signs"></i></span></div>
+    <div class="icon info">
+      <div class="tooltip"><span style=width:200px;>Toggle fullscreen by pressing <kbd>F</kbd></span></div>
+      <span><i class="fas fa-expand-alt"></i></span>
+    </div><div class="icon github">
+      <div class="tooltip"><span style=width:200px;>Press <kbd>O</kbd> for and overview of all slides</span></div>
+      <span><i class="far fa-images"></i></span>
+    </div><div class="icon youtube">
+      <div class="tooltip"><span style=width:200px;>Discover more shortcuts by pressing <kbd>H</kbd></span></div>
+      <span><i class="fas fa-info-circle"></i></span>
+    </div>
+</div>
+</center>
+<br>
+```
+
+<center>
+<div class="holder">
+
+<div class="bigcol">
+```{r echo = FALSE, out.width="140%", fig.align='left'}
+knitr::include_url("/slides/PCA/pca.html")
+```
+</div>
+
+<div class="smallcol">
+```{r echo = FALSE, fig.align='right'}
+html_link <- function() {
+  paste0("<a href='/slides/PCA/pca.html'>", "<img src='/logos/web-ico.png' alt='PCA Page' width='35'>", "</a>")
+}
+
+pdf_link <- function() {
+ paste0("<a href='/slides/PCA/pca.pdf'>", "<img src='/logos/pdf-ico.png' alt='PCA PDF' width='35'>", "</a>")
+}
+
+tibble(
+  
+  html <- c(html_link(),
+            "Larger version of the presentation",
+            "",
+            pdf_link(),
+            "PDF of the presentation")
+  ) %>%
+  kbl(col.names = c(""),
+      "html",
+      escape = FALSE,
+      align = 'c') %>%
+  kable_paper(full_width = FALSE) %>%
+  column_spec(1, width = "25em", extra_css = "padding-left: 200px;") %>%
+  row_spec(1:5, extra_css = 'vertical-align: middle !important;', color = "#ffffff", background = "transparent")
+```
+</div>
+
+</div>
+
+<div class="clear">
+</div>
+</center>
+
+## Data Files
+
+Please download the files we'll need.
+
+```{r echo=FALSE,eval=TRUE,message=FALSE,purl=FALSE}
+loc <- here::here("static", "data", "EDP611Week5Data&Script.zip")
+
+downloadthis::download_file(
+  path = loc,
+  output_name = "Week 6 Data and Script and Paper",
+  button_label = "&nbsp;&nbsp;&nbsp;<span style='color:#ffffff'>Download</span>",
+  button_type = "primary",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+
+## Prerequisites {-}
+
+Like last week, open up Rstudio and create a new script by going to **File > New File > R Script**. Save this in an easily accessible folder. Now unzip this week's data set and take the files that start with `darkPersonalityTraits` and end a `.csv` - and drop them all in a folder of their own.
+
+Before we load the libraries, we're going tan extra package called `broom` that is on CRAN. To install it, please run the following command in your console
+
+```{r eval = FALSE}
+install.packages(c("broom"), dependencies = TRUE)
+```
+
+or you can simply use the dropdown menu by going to **Tools > Install Packages** and type in `broom`. Remember to have **Install dependencies** checkmarked! 
+
+If you would like to know more about the `broom` package and how it helps to tidy data, take a look at the [Introduction to broom](https://broom.tidymodels.org/articles/broom.html){target="_blank"} site.
+
+Now please go ahead and load up the following libraries or download and load if needed
+
+<div class = "rounded">
+```{r eval=FALSE}
+library("tidyverse")
+library("broom")
+library("patchwork")
+library("reactable")
+```
+</div>
+
+Then set the working directory to the location of the script by running
+
+```{r eval=FALSE}
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+```
+
+in your console or by selecting **Session > Set Working Directory > To Source File Location**.
+
+## Data Files
+
+We'll be looking at responses from a subsample of 10 from 25442 people who took this test. 
+
+## Loading a Local Data Set
+
+If you remember how to load a local dataset, then please skip this section
+
+<div class = "rounded">
+```{r eval=FALSE}
+dark_data <- 
+  read_csv("darkPersonalityTraits.csv")
+```
+</div>
+
+```{r echo=FALSE, purl=FALSE}
+dark_data <- 
+  read_csv(here::here("static", "data", "darkPersonalityTraits.csv"))
+```
+
+<div class = "rounded">
+```{r eval=FALSE}
+dark_data_codebook <- 
+  read_csv("darkPersonalityTraits_codebook.csv")
+```
+</div>
+
+```{r echo=FALSE, purl=FALSE}
+dark_data_codebook <-
+  read_csv(here::here("static", "data", "darkPersonalityTraits_codebook.csv"))
+```
+
+<div class = "rounded">
+```{r eval=FALSE}
+dark_data_measures <- 
+  read_csv("darkPersonalityTraits_measures.csv")
+```
+</div>
+
+```{r echo=FALSE, purl=FALSE}
+dark_data_measures <-
+  read_csv(here::here("static", "data", "darkPersonalityTraits_measures.csv"))
+```
+
+and take a look at the data
+
+<div class = "rounded">
+```{r}
+dark_data %>%
+  head()
+```
+</div>
+
+or via the `reactable()` package^[Scroll to the right to see all columns]
+
+```{r echo=FALSE}
+
+reactable(dark_data,
+          searchable = FALSE, 
+          defaultPageSize = 5,
+          showPageSizeOptions = TRUE,
+          highlight = FALSE,
+          defaultColDef = colDef(
+            align = "center"
+          ),
+          theme = reactableTheme(
+            borderColor = "#dfe2e5",
+            backgroundColor = "#212121",
+            stripedColor = "#f6f8fa",
+            highlightColor = "#f0f5f9",
+            cellPadding = "8px 12px",
+            style = list(
+              fontFamily = "Roboto Condensed"
+              ),
+            searchInputStyle = list(width = "20%")
+            )
+          )
+```
+
+<div class = "rounded">
+```{r eval=FALSE}
+
+reactable(dark_data,
+          defaultPageSize = 5,
+          showPageSizeOptions = TRUE)
+
+```
+</div>
+
+as well as the codebook and measures
+
+<div class = "rounded">
+```{r}
+dark_data_codebook
+```
+</div>
+
+<div class = "rounded">
+```{r}
+dark_data_measures
+```
+</div>
+
+
+## PCA v Everybody
+
+### PCA v Regression
+
+*Regression* is a fancy term for a technique that is used to find a “relationship” between any two things. For example, at the beginning of the summer you start a hike at the base of a mountain with the temperature of 80°F. After walking 500 feet, or about tenth of a mile, the temperature drops to 65°F. A basic deduction here would be that the height above sea level influences temperature.
+
+<div class="sbs">
+
+<div class="left">
+<img src='/img/cards/regressionCard.png' alt='Regression card' width='250'/>
+</div>
+
+<div class="right">
+<img src='img/cards/pcaCard.png' alt='PCA card' width='250'/>
+</div>
+
+</div>
+
+### PCA vs EFA
+
+Principal Component Analysis (PCA) and Exploratory Factor Analysis (EFA) are both dimension reduction techniques and sometimes confused as the same statistical method with more often than not, PCA being mistaken for EFA.
+
+<center>
+```{r echo=FALSE}
+tibble(
+
+reason = c(
+"Purpose",
+"Produces",
+"Reason",
+"Used for"
+),
+
+efa = c(
+"explain as much about the shared variance as possible",
+"factors",
+"identification and classification of latent variables",
+"variable reduction"
+),
+
+pca = c(
+"explain as much about the total variance as possible",
+"components",
+"new variables that are a combination of existing variables",
+"variable reduction"
+)
+
+) %>%
+  kbl(col.names = c("", 
+                    "EFA",
+                    "PCA"), 
+      "html", 
+      escape = FALSE,
+      align = 'lll') %>%
+   kable_paper(full_width = TRUE) %>%
+  column_spec(1, width = "5em") %>%
+  column_spec(2, width = "15em") %>% 
+  column_spec(3, width = "15em") %>%
+  row_spec(0:4, extra_css = 'vertical-align: middle !important;', color = "#f7f7f7", background = "transparent") 
+```
+</center>
+
+## Criteria
+
+When applying a PCA, we have to **at minimum** look at the
+
+1. data in the principal components coordinate system 
+
+2. rotation matrix
+
+3. variance determined by each component
+
+## But First a Little Wrangling 
+
+Possibly not to anyone's surprise but PCA can only be run on numeric data. Since data collection in involves the use of differing scaling methods resulting in variations in quantities, units and/or ranges, we want to shift all of our data to something that's consistent so we can compare the entire set if needed. There are many ways to do this but we'll discuss the difference between the common ones used for approaches that need a true 0 value, or are *zero centric*.
+
++ *(Mean) Normalization*. 
+  + Rescaling data into a range of [0,1]
+  + Good to use when you know that a data set does not follow a normal distribution (also known as a Gaussian distribution)
+  + It works well with algorithms that do not care about the distribution of data
+
++ *Standardization*. Rescaling data to have a mean of 0 and a standard deviation of 1 - aka the ***unit variance***.
+  + Good to use where you have at least some idea about the distribution of a data set
+  + Outliers are not affected since there isn't a range 
+
+Normalization should have been covered in your beginning statistics course whereas standardization is a bit of a toss up. At the end of the day, what you use really depends on the problem and statistical method being applied. 
+
+In our case, we could apply either since every question uses a five-point Likert scale but because of that, we have an idea of the distribution 
+
+```{r}
+
+```
+
+### Step 1: Data in PC Coordinate System
+
+
+

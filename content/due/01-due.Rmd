@@ -1,0 +1,121 @@
+---
+title: "Does it Work and Why Does it Work?"
+linktitle: "Week 1: Evaluations"
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  due:
+    parent: 'To Do List'
+    weight: 1
+type: docs
+weight: 1
+---
+
+`r blogdown::shortcode("aes-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+
+```{r eval = TRUE, echo = FALSE}
+
+wk_post <- 
+  
+  tibble(
+
+Description = c("Read <i>CDC’s Introduction to Evaluation With a Focus on Public Health</i>",
+                "Read <i>Sample Surveys in Our Electronic World</i> in Dillman, Smyth, &amp; Christian (2014)",
+                "Read <i>Using Surveys</i> in Hatry, Newcomer, & Wholey (2015)",
+                "Install both <b>R</b> and <b>RStudio</b>",
+                "Complete the module <span style='color:#ffc787;font-weight:bold'><i>Introduction to R</i></span>",
+                "Take a look at some evaluation checklists at <i>Western Michigan University</i>",
+                "Look over some logic models at the <i>University of Wisconsin Extension Program</i>",
+                "Get a better idea of program evaluation at <i>Better Evaluation</i>",
+                "Think about terrible survey items",
+                "Get logged into the course Slack page and post on <a style='color:#ff8384;'>\\ #wk1-introduce-yourself</a>",
+                "Verify your Qualtrics account",
+                "Go through the slideshow <span style='color:#6ac4cd;font-weight:bold'>Criterial and Interpretive Evaluation: Keys to Merit, Worth, and Significance</span>",
+                "Review the course deliverables"
+                ),
+
+
+Details = c("<a href='/readings/01-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/readings/01-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/readings/01-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/resources/install/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/modules/01-module/#data-camp'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/resources/evaluation/#checklists'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/resources/evaluation/#logic-models'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/resources/evaluation/#a-whole-bunch-of-methods'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/tasks/01-task/#mulling-bad-survey-questions'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/tasks/01-task/#class-slack-account-access'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/tasks/01-tasks/#verify-qualtrics-account-login'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/tasks/01-tasks/#learn-about-program-evaluation'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+             "<a href='/tasks/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
+            ),
+
+Icon = c("offsite",
+         "library",
+         "library",
+         "",
+         "dc",
+         "offsite",
+         "offsite",
+         "offsite",
+         "",
+         "slack",
+         "qualtrics",
+         "",
+         ""),
+
+Site = c("https://www.cdc.gov/eval/guide/introduction/index.htm",
+         "https://ebookcentral.proquest.com/lib/wvu/detail.action?docID=4722459",
+         "https://www.thetaminusb.com/intro-measurement-r/introduction.html",
+         "",
+         "https://www.datacamp.com",
+         "https://wmich.edu/evaluation/checklists",
+         "https://fyi.extension.wisc.edu/programdevelopment/logic-models/",
+         "https://www.betterevaluation.org/en",
+         "",
+         "https://edp619fall2022.slack.com/",
+         "htts://wvu.qualtrics.com",
+         "",
+         "")
+)
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+wk_post %>%
+  mutate(Icon = case_when(
+    str_detect(`Icon`, "slack") ~ '<img src="/logos/slack-ico.png" alt="Slack icon" width="25">',
+    str_detect(`Icon`, "ecampus") ~ '<img src="/logos/wvu-gold-ico.png" alt="WVU icon" width="25">',
+    str_detect(`Icon`, "pdf") ~ '<img src="/logos/pdf-ico.png" alt="WVU icon" width="30">',
+    str_detect(`Icon`, "library") ~ '<img src="/logos/library-ico.png" alt="Library icon" width="25">',
+    str_detect(`Icon`, "offsite") ~ '<img src="/logos/web-ico.png" alt="Web icon" width="26">',
+    str_detect(`Icon`, "qualtrics") ~ '<img src="/logos/qualtrics-ico.png" alt="Qualtrics icon" width="29">',
+    str_detect(`Icon`, "calendar") ~ '<img src="/logos/calendar-clock.png" alt="Calendar clock icon" width="27">',
+    str_detect(`Icon`, "dc") ~ '<img src="/logos/dc-ico.png" alt="DataCamp icon" width="24">',
+    TRUE ~ NA_character_
+      )
+    ) %>%
+  mutate(Site = na_if(Site, "")) %>%
+  mutate(Link = case_when(
+    !is.na(Icon) ~ paste0("<a href=",Site," target='_blank'>",Icon,"</a>"),
+    TRUE ~ NA_character_
+      )
+    ) %>%
+  select(-Icon, -Site) %>% 
+  mutate_all(replace_na,"") %>%
+kbl("html",
+    escape = FALSE,
+    align = 'lcc') %>%
+  kable_paper(full_width = FALSE) %>%
+  column_spec(1, width = "25em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>%
+  column_spec(2:3, width = "5em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(0:nrow(wk_post), extra_css = 'vertical-align: middle !important;', background = "transparent", color = "#f7f7f7") 
+```
+</center>
+
