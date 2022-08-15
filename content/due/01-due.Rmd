@@ -118,5 +118,3 @@ kbl("html",
   row_spec(0:nrow(wk_post), extra_css = 'vertical-align: middle !important;', background = "transparent", color = "#f7f7f7") 
 ```
 </center>
-
-hello

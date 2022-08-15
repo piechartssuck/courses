@@ -1,7 +1,7 @@
 ---
 title: "About the Readings"
 menu:
-  content:
+  readings:
     parent: Overview
     weight: 1
 type: docs

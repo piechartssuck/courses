@@ -176,5 +176,3 @@ Review the course deliverables
 </tbody>
 </table>
 </center>
-
-hello

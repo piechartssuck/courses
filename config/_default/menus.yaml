@@ -21,7 +21,7 @@ main:
     url: /professor/
     weight: 7
   - name: '<i class="fab fa-slack"></i>'
-    url: "https://2022edp619.slack.com"
+    url: "https://edp619fall2022.slack.com"
     weight: 8
   - name: '<i class="fab fa-r-project"></i>'
     url: "https://www.rstudio.com/"
