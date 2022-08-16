@@ -34,76 +34,142 @@ Resources such as presentations, videos, visualizations, walkthroughs, etc. take
 
 ## Incremental Deliverables
 
-Throughout the course, you will have weekly opportunities to expand and refine your skill set culminating in a final product[^1]. Please include your name and submit all documents in either a <span style="color:#12b8ff;font-weight: bold;">.docx</span> or <span style="color:#f47a7b;font-weight: bold;">.pdf</span> format.
+Throughout the course, you will have weekly opportunities to expand and refine your skill set culminating in a final product[^1]. Please include your name and submit all documents in either a <span style="color:#12b8ff;font-weight: bold;">.docx</span> or <span style="color:#f47a7b;font-weight: bold;">.pdf</span> format. *Remember that all submissions must be in a standard APA 7th edition formatting barring the need for a running header.*
 
-*Posting soon*
+<div id="anchorwk2">
 
-<!--
-<div id="anchorwk1"> 
-<details><summary>Week 1: Think about assessment.</summary>
+<details>
+<summary>
+Week 2: Establish a Sampling Frame
+</summary>
 <br>
 <p>
-Construct a one paragraph case for a population that needs to be researched, why it should be be studied, and how the data would be quantitative.
+Construct a one to three paragraph case for a population that needs to be surveyed, why it needs to be studied, and what type of data should be collected. Furthermore include at least one evaluation and/or research question and intended analyses.
 <br>
 <br>
 <i>Note: A population does not necessarily refer to people.</i>
 </p>
 </details>
-</div>
-<br>
 
-<div id="anchorwk2">
-<details><summary>Week 2: Create an argument. </summary>
-<br>
-<p>
-Submit a one to three page proposal outlining specific questions that you would like to assess and then describe an instrument that would be used to assess those items. Include general details on what measures would be used. 
-</p>
-</details>
 </div>
-<br>
 
-<div id="anchorwk3">
-<details><summary>Week 3. Develop a draft.</summary>
-<br>
-<p>
-Create a draft of your instrument by whatever medium you choose. Map the measures directly to the items and group them if possible. 
-<br>
-<br>
-<i>Note: If the instrument is housed elsewhere (e.g. Qualtrics), then simply provide a link and ensure that access is granted to me.</i>
-</p>
-</details>
-</div>
 <br>
 
 <div id="anchorwk4">
-<details><summary>Week 4. Refine the draft.</summary>
-<br>
-<p>
-Based on feedback, amend the instrument if necessary and resubmit for further assessment. Explicitly detail what changes were made using a matrix. After approval, administer the instrument for a simulation of responses.
-</p>
-</details>
-</div>
-<br>
 
-<div id="anchorwk5">
-<details><summary>Week 5. Test for validity and reliability.</summary>
+<details>
+<summary>
+Week 4: Create a Draft
+</summary>
 <br>
 <p>
-Simulate or use collected data to conduct an EFA to assess instrument  validity and reliability.
+Create a draft of your instrument in both skeleton and digital forms. Include both direct and indirect measures for each item.
+<br>
+<br>
+<i>Note: If the instrument is housed elsewhere (e.g. Qualtrics), then simply provide a link and ensure that access is granted to me.</i>
 </p>
 </details>
+
 </div>
+
 <br>
 
 <div id="anchorwk6">
-<details><summary>Week 6. Revise and resubmit.</summary>
+
+<details>
+<summary>
+Week 6: Refine the Draft
+</summary>
 <br>
 <p>
-After amending, create an elevator pitch, supplemental abstract and a final version of your instrument.
+Based on feedback, amend both the instrument and skeleton and resubmit for further assessment. Explicitly detail what changes were made using a matrix. Please reach out for additional help as needed.
 </p>
 </details>
+
 </div>
--->
+
+<br>
+
+<div id="anchorwk8">
+
+<details>
+<summary>
+Week 7: Conduct a Pilot Study
+</summary>
+<br>
+<p>
+Execute at least two pilot studies. Update both the instrument and skeleton and resubmit for further assessment. Furthermore submit a two to three paragraph synopsis describing those who assessed the instrument and summarize their contributions. Then provide your approach to accepting or declining their feedback, including those that may have conflicted.
+<br>
+<br>
+<i>Note: You should not explicitly identify those who helped, rather describe their credentials and the characteristics that make each individual helpful as a reviewer.</i>
+</p>
+</details>
+
+</div>
+
+<br>
+
+<div id="anchorwk8">
+
+<details>
+<summary>
+Week 8: Disseminate the Survey
+</summary>
+<br>
+<p>
+Administer the instrument on a standard two-week cycle unless other arrangements have been made.
+</p>
+</details>
+
+</div>
+
+<br>
+
+<div id="anchorwk11">
+
+<details>
+<summary>
+Week 11: Test for Validity and Reliability
+</summary>
+<br>
+<p>
+Use the collected data to conduct an EFA, CFA, or PCA to assess instrument validity and reliability. Submit a one paragraph descriptive summary of the findings and Rmarkdown file.
+</p>
+</details>
+
+</div>
+
+<br>
+
+<div id="anchorwk13">
+
+<details>
+<summary>
+Week 13: Write an Executive Summary
+</summary>
+<br>
+<p>
+Create a one to three page summary describing the research or evaluation question(s), sampling frame, design, methodology, analysis, and findings. Include at least two data visualizations within the body.
+</p>
+</details>
+
+</div>
+
+<br>
+
+<div id="anchorwk15">
+
+<details>
+<summary>
+Week 15: Give an Elevator Speech
+</summary>
+<br>
+<p>
+After reviewing feedback, create a short one minute summary describing the research or evaluation question(s), sampling frame, design, methodology, analysis, and findings. Additionally provide a brief discussion of what you would do differently if given the chance.
+</p>
+</details>
+
+</div>
 
 ### Need Help?
 

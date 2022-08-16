@@ -16,6 +16,10 @@ output:
 <script src="{{< blogdown/postref >}}index_files/kePrint/kePrint.js"></script>
 <link href="{{< blogdown/postref >}}index_files/lightable/lightable.css" rel="stylesheet" />
 <script src="{{< blogdown/postref >}}index_files/kePrint/kePrint.js"></script>
+<link href="{{< blogdown/postref >}}index_files/lightable/lightable.css" rel="stylesheet" />
+<script src="{{< blogdown/postref >}}index_files/kePrint/kePrint.js"></script>
+<link href="{{< blogdown/postref >}}index_files/lightable/lightable.css" rel="stylesheet" />
+<script src="{{< blogdown/postref >}}index_files/kePrint/kePrint.js"></script>
 
 <link href="{{< blogdown/postref >}}index_files/lightable/lightable.css" rel="stylesheet" />
 
@@ -222,32 +226,93 @@ There are two required texts and software packages necessary for this course. Ad
 
 ### Texts
 
-To help minimize costs, you do not have to purchase any physical texts. We’ll rely on the various materials below which, barring the APA 7th edition handbook, are either available through the WVU library [WVU library](https://library.wvu.edu/) or in digital format.
+To help minimize costs, you are not required to purchase any physical texts. We’ll rely on the various materials below which, barring the APA 7th edition handbook, are either available through the [WVU library](https://library.wvu.edu/) or in digital format.
 
 #### Required
 
--   Albano, T. (2020). Introduction to Educational and Psychological Measurement Using R.
-    -   Free: <https://thetaminusb.com/intro-measurement-r/>
-        <br>
-        <br>
--   Dillman, D.A., Smyth, J.D., & Christian, L.M. (2014). *Internet, Phone, Mail, and Mixed-Mode Surveys: The Tailored Design Method* (4th ed.). Wiley.
-    -   Free: [Digital edition](https://ebookcentral.proquest.com/lib/wvu/detail.action?docID=1762797)
-    -   Not Free: Softcover edition - ISBN: 9781118456149
+<center>
+<table>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; font-weight: bold;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+Albano, T. (2020). <i>Introduction to Educational and Psychological Measurement Using R</i>.
+</td>
+<td style="text-align:center;width: 5em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<a href="https://thetaminusb.com/intro-measurement-r/">Free</a>
+</td>
+<td style="text-align:center;width: 5em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+</td>
+<td style="text-align:left;width: 10em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<img src="/img/texts/measurement-text.png" alt="Measurement text">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; font-weight: bold;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+Dillman, D.A., Smyth, J.D., & Christian, L.M. (2014). <i>Internet, Phone, Mail, and Mixed-Mode Surveys: The Tailored Design Method</i> (4th ed.). Wiley.
+</td>
+<td style="text-align:center;width: 5em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<a href="https://ebookcentral.proquest.com/lib/wvu/detail.action?docID=1762797">Free</a>
+</td>
+<td style="text-align:center;width: 5em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<a href="https://www.wiley.com/en-us/Internet%2C+Phone%2C+Mail%2C+and+Mixed+Mode+Surveys%3A+The+Tailored+Design+Method%2C+4th+Edition-p-9781118456149">Physical</a>
+</td>
+<td style="text-align:left;width: 10em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<img src="/img/texts/survey-text.png" alt="Survey text">
+</td>
+</tr>
+</tbody>
+</table>
+</center>
 
 #### Optional
 
--   American Psychological Association. (2020). *Publication manual of the American Psychological Association* (7th ed.).
-    <br>
-    <br>
--   Wickham, H., Navarro, D. & Pedersen, T.L. (2021). *ggplot2: Elegant Graphics for Data Analysis* (2nd and 3rd eds.). Springer.
-    -   Free: [Digital edition](https://ggplot2-book.org/index.html)
-    -   Not Free: Hardcover edition - ISBN: 9783319242750
-        <br>
-        <br>
--   Wickham, H. (2021). *R for Data Science* (1st ed.). O’Reilly Media.
-    -   Free: [Digital edition (web)](https://r4ds.had.co.nz/)
-    -   Free: [Digital edition (WVU libraries)](https://libwvu.on.worldcat.org/oclc/966429425)
-    -   Not Free: Hardcover edition - ISBN: 9781491910399
+<center>
+<table>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20em; font-weight: bold;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+American Psychological Association. (2020). <i>Publication manual of the American Psychological Association</i> (7th ed.).
+</td>
+<td style="text-align:center;width: 5em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+</td>
+<td style="text-align:center;width: 5em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<a href="https://apastyle.apa.org/products/publication-manual-7th-edition">Physical</a>
+</td>
+<td style="text-align:left;width: 10em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<img src="/img/texts/apa7th-text.png" alt="APA 7th handbook">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; font-weight: bold;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+Wickham, H., Navarro, D. & Pedersen, T.L. (2021). <i>ggplot2: Elegant Graphics for Data Analysis</i> (2nd and 3rd eds.). Springer.
+</td>
+<td style="text-align:center;width: 5em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<a href="https://ggplot2-book.org/">Free</a>
+</td>
+<td style="text-align:center;width: 5em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<a href="https://link.springer.com/book/10.1007/978-3-319-24277-4/">Physical</a>
+</td>
+<td style="text-align:left;width: 10em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<img src="/img/texts/ggplot2-text.png" alt="ggplot2 text">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20em; font-weight: bold;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+Wickham, H. (2021). <i>R for Data Science</i> (1st ed.). O’Reilly Media.
+</td>
+<td style="text-align:center;width: 5em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<a href="https://r4ds.had.co.nz/">Free</a>
+</td>
+<td style="text-align:center;width: 5em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<a href="https://www.oreilly.com/library/view/r-for-data/9781491910382/">Physical</a>
+</td>
+<td style="text-align:left;width: 10em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<img src="/img/texts/r-for-data-science-text.png" alt="R for DS text">
+</td>
+</tr>
+</tbody>
+</table>
+</center>
 
 There will occasionally be additional articles and videos to read and watch. When this happens, links to these other resources will be included on the content page for that session.
 
@@ -259,8 +324,7 @@ You will need access to your WVU [Qualtrics](https://wvu.qualtrics.com/) account
 
 #### R and RStudio
 
-You will be briefly introduced to the open source (and free!) statistical programming language [<svg aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:steelblue;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>](https://cran.r-project.org/) later in the term. You will use [RStudio](https://www.rstudio.com/) as the main program to access the language.
-Think of R as an engine and RStudio as a car dashboard — R handles all the calculations produces the actual statistics and graphical output, while RStudio provides a nice interface for running R code. Please note that
+You will be briefly introduced to the open source (and free!) statistical programming language [<svg aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:steelblue;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>](https://cran.r-project.org/) later in the term. You will use [RStudio](https://www.rstudio.com/) as the main program to access the language. You can think of R as an engine and RStudio as a car dashboard — R handles all the calculations produces the actual statistics and graphical output, while RStudio provides a nice interface for running R code. Please note that
 
 <div class="text-center">
 
@@ -353,7 +417,7 @@ Location
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
 15
 </td>
-<td style="text-align:left;width: 10em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
+<td style="text-align:left;width: 15em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
 R Training
 </td>
 <td style="text-align:left;width: 9em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
@@ -364,7 +428,7 @@ Data Camp
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
 10
 </td>
-<td style="text-align:left;width: 10em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
+<td style="text-align:left;width: 15em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
 R Tasks
 </td>
 <td style="text-align:left;width: 9em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
@@ -375,8 +439,8 @@ eCampus
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
 5
 </td>
-<td style="text-align:left;width: 10em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
-Sampling Frame
+<td style="text-align:left;width: 15em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
+Establish a Sampling Frame
 </td>
 <td style="text-align:left;width: 9em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
 eCampus
@@ -386,8 +450,8 @@ eCampus
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
 5
 </td>
-<td style="text-align:left;width: 10em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
-First Draft
+<td style="text-align:left;width: 15em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
+Create a Draft
 </td>
 <td style="text-align:left;width: 9em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
 eCampus
@@ -397,8 +461,8 @@ eCampus
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
 5
 </td>
-<td style="text-align:left;width: 10em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
-Second Draft
+<td style="text-align:left;width: 15em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
+Refine the Draft
 </td>
 <td style="text-align:left;width: 9em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
 eCampus
@@ -408,19 +472,41 @@ eCampus
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
 10
 </td>
-<td style="text-align:left;width: 10em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
-Pilot Study Summary
+<td style="text-align:left;width: 15em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
+Conduct a Pilot Study
 </td>
 <td style="text-align:left;width: 9em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
-Slack
+eCampus
+</td>
+</tr>
+<tr>
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;">
+5
+</td>
+<td style="text-align:left;width: 15em; color: #ffffff !important;vertical-align: middle !important;">
+Disseminate the Survey
+</td>
+<td style="text-align:left;width: 9em; color: #ffffff !important;vertical-align: middle !important;">
+eCampus
+</td>
+</tr>
+<tr>
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;">
+10
+</td>
+<td style="text-align:left;width: 15em; color: #ffffff !important;vertical-align: middle !important;">
+Test for Validity and Reliability
+</td>
+<td style="text-align:left;width: 9em; color: #ffffff !important;vertical-align: middle !important;">
+eCampus
 </td>
 </tr>
 <tr>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;">
 25
 </td>
-<td style="text-align:left;width: 10em; color: #ffffff !important;vertical-align: middle !important;">
-Final Draft & Skeleton
+<td style="text-align:left;width: 15em; color: #ffffff !important;vertical-align: middle !important;">
+Write an Executive Summary
 </td>
 <td style="text-align:left;width: 9em; color: #ffffff !important;vertical-align: middle !important;">
 eCampus
@@ -428,21 +514,10 @@ eCampus
 </tr>
 <tr>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;">
-20
-</td>
-<td style="text-align:left;width: 10em; color: #ffffff !important;vertical-align: middle !important;">
-Executive Summary
-</td>
-<td style="text-align:left;width: 9em; color: #ffffff !important;vertical-align: middle !important;">
-eCampus/Slack
-</td>
-</tr>
-<tr>
-<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;">
 10
 </td>
-<td style="text-align:left;width: 10em; color: #ffffff !important;vertical-align: middle !important;">
-Presentation
+<td style="text-align:left;width: 15em; color: #ffffff !important;vertical-align: middle !important;">
+Give an Elevator Speech
 </td>
 <td style="text-align:left;width: 9em; color: #ffffff !important;vertical-align: middle !important;">
 eCampus/Slack
@@ -564,7 +639,7 @@ Can I describe <i>whatever</i> using language so that a child could understand i
 
 **In a nutshell** ***keep an open line of communication***, **be** ***honest***, ***nice***, **&** ***respectful*** **to everyone**.
 
-Additially please follow [WVU’s Code of Conduct](https://studentconduct.wvu.edu/campus-student-code).
+Additionally please follow [WVU’s Code of Conduct](https://studentconduct.wvu.edu/campus-student-code).
 
 This syllabus reflects a plan for the term but things change and plans change. so deviations may become necessary as we move along during the term. Note that **I reserve the right to alter or amend this syllabus**.
 
@@ -574,7 +649,7 @@ WVU is committed to maintaining a safe learning environment for all students, fa
 
 In a face-to-face environment, our commitment to safety requires students, staff, and instructors to observe the social distancing and personal protective equipment (PPE) guidelines set by the University at all times. While in class, students will sit in assigned seats when applicable and wear the required PPE. Should a student forget to bring the required PPE, PPE will be available in the building for students to acquire. Students who fail to comply will be dismissed from the classroom for the class period and may be referred to the Office of Student Conduct for further sanctions.
 
-If a student becxomes sick or is required to quarantine during the semester, they should notify the instructor. The student should work with the instructor to develop a plan to receive the necessary course content, activities, and assessments to complete the course learning outcomes.
+If a student becomes sick or is required to quarantine during the semester, they should notify the instructor. The student should work with the instructor to develop a plan to receive the necessary course content, activities, and assessments to complete the course learning outcomes.
 
 ### Psychological and Psychiatric Services
 

@@ -181,32 +181,93 @@ There are two required texts and software packages necessary for this course. Ad
 
 ### Texts
 
-To help minimize costs, you do not have to purchase any physical texts. We'll rely on the various materials below which, barring the APA 7th edition handbook, are either available through the WVU library [WVU library](https://library.wvu.edu/) or in digital format.
+To help minimize costs, you are not required to purchase any physical texts. We'll rely on the various materials below which, barring the APA 7th edition handbook, are either available through the [WVU library](https://library.wvu.edu/) or in digital format.
 
 #### Required
 
-- Albano, T. (2020). Introduction to Educational and Psychological Measurement Using R.
-  - Free: [https://thetaminusb.com/intro-measurement-r/ ](https://thetaminusb.com/intro-measurement-r/)
-  <br>
-  <br>
-- Dillman, D.A., Smyth, J.D., &amp; Christian, L.M. (2014). *Internet, Phone, Mail, and Mixed-Mode Surveys: The Tailored Design Method* (4th ed.). Wiley.
-  - Free: [Digital edition](https://ebookcentral.proquest.com/lib/wvu/detail.action?docID=1762797)
-  - Not Free: Softcover edition - ISBN: 9781118456149
+```{r reqtextstibble, echo=FALSE, message=FALSE}
+
+reqtextstib <- tibble(
+  
+  source <- c("Albano, T. (2020). <i>Introduction to Educational and Psychological Measurement Using R</i>.",
+              "Dillman, D.A., Smyth, J.D., &amp; Christian, L.M. (2014). <i>Internet, Phone, Mail, and Mixed-Mode Surveys: The Tailored Design Method</i> (4th ed.). Wiley."),
+  
+  digital <- c("<a href='https://thetaminusb.com/intro-measurement-r/'>Free</a>",
+               "<a href='https://ebookcentral.proquest.com/lib/wvu/detail.action?docID=1762797'>Free</a>"),
+  
+  paper <- c("",
+             "<a href='https://www.wiley.com/en-us/Internet%2C+Phone%2C+Mail%2C+and+Mixed+Mode+Surveys%3A+The+Tailored+Design+Method%2C+4th+Edition-p-9781118456149'>Physical</a>"),
+  
+  image <- c("<img src='/img/texts/measurement-text.png' alt='Measurement text'>",
+             "<img src='/img/texts/survey-text.png' alt='Survey text'>"),
+  
+  .name_repair = "minimal"
+
+  ) 
+```
+
+<center>
+```{r, echo=FALSE}
+reqtextstib %>%
+  kbl(col.names = NULL, 
+      "html", 
+      escape = FALSE,
+      align = 'lccl') %>%
+  column_spec(1, width = "20em", bold = TRUE, extra_css = 'vertical-align: middle !important;')  %>% 
+  column_spec(2, width = "5em", extra_css = 'vertical-align: middle !important;') %>%
+  column_spec(3, width = "5em", extra_css = 'vertical-align: middle !important;') %>%
+  column_spec(4, width = "10em",extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(1:nrow(reqtextstib), 
+           extra_css = 'vertical-align: middle !important;',
+           color = "#f7f7f7", 
+           background = "transparent")
+```
+</center>
 
 #### Optional
 
-- American Psychological Association. (2020). *Publication manual of the American Psychological Association* (7th ed.).
-  <br>
-  <br>
-- Wickham, H., Navarro, D. & Pedersen, T.L. (2021). *ggplot2: Elegant Graphics for Data Analysis* (2nd and 3rd eds.). Springer.
-  - Free: [Digital edition](https://ggplot2-book.org/index.html)
-  - Not Free: Hardcover edition - ISBN: 9783319242750
-  <br>
-  <br>
-- Wickham, H. (2021). *R for Data Science* (1st ed.). O’Reilly Media.
-  - Free: [Digital edition (web)](https://r4ds.had.co.nz/) 
-  - Free: [Digital edition (WVU libraries)](https://libwvu.on.worldcat.org/oclc/966429425) 
-  - Not Free: Hardcover edition - ISBN: 9781491910399
+```{r opttextstibble, echo=FALSE, message=FALSE}
+
+opttextstib <- tibble(
+  
+  source <- c("American Psychological Association. (2020). <i>Publication manual of the American Psychological Association</i> (7th ed.).",
+              "Wickham, H., Navarro, D. & Pedersen, T.L. (2021). <i>ggplot2: Elegant Graphics for Data Analysis</i> (2nd and 3rd eds.). Springer.",
+              "Wickham, H. (2021). <i>R for Data Science</i> (1st ed.). O’Reilly Media."),
+  
+  digital <- c("",
+               "<a href='https://ggplot2-book.org/'>Free</a>",
+               "<a href='https://r4ds.had.co.nz/'>Free</a>"),
+  
+  paper <- c("<a href='https://apastyle.apa.org/products/publication-manual-7th-edition'>Physical</a>",
+             "<a href='https://link.springer.com/book/10.1007/978-3-319-24277-4/'>Physical</a>",
+             "<a href='https://www.oreilly.com/library/view/r-for-data/9781491910382/'>Physical</a>"),
+  
+  image <- c("<img src='/img/texts/apa7th-text.png' alt='APA 7th handbook'>",
+             "<img src='/img/texts/ggplot2-text.png' alt='ggplot2 text'>",
+             "<img src='/img/texts/r-for-data-science-text.png' alt='R for DS text'>"),
+  
+  .name_repair = "minimal"
+
+  ) 
+```
+
+<center>
+```{r, echo=FALSE}
+opttextstib %>%
+  kbl(col.names = NULL, 
+      "html", 
+      escape = FALSE,
+      align = 'lccl') %>%
+  column_spec(1, width = "20em", bold = TRUE, extra_css = 'vertical-align: middle !important;')  %>% 
+  column_spec(2, width = "5em", extra_css = 'vertical-align: middle !important;') %>%
+  column_spec(3, width = "5em", extra_css = 'vertical-align: middle !important;') %>%
+  column_spec(4, width = "10em",extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(1:nrow(opttextstib), 
+           extra_css = 'vertical-align: middle !important;',
+           color = "#f7f7f7", 
+           background = "transparent")
+```
+</center>
 
 There will occasionally be additional articles and videos to read and watch. When this happens, links to these other resources will be included on the content page for that session.
 
@@ -218,8 +279,7 @@ You will need access to your WVU [Qualtrics](https://wvu.qualtrics.com/) account
 
 #### R and RStudio
 
-You will be briefly introduced to the open source (and free!) statistical programming language [`r fa("r-project", fill = "steelblue")`](https://cran.r-project.org/) later in the term. You will use [RStudio](https://www.rstudio.com/) as the main program to access the language. 
-Think of R as an engine and RStudio as a car dashboard — R handles all the calculations produces the actual statistics and graphical output, while RStudio provides a nice interface for running R code. Please note that
+You will be briefly introduced to the open source (and free!) statistical programming language [`r fa("r-project", fill = "steelblue")`](https://cran.r-project.org/) later in the term. You will use [RStudio](https://www.rstudio.com/) as the main program to access the language. You can think of R as an engine and RStudio as a car dashboard — R handles all the calculations produces the actual statistics and graphical output, while RStudio provides a nice interface for running R code. Please note that
 
 <div class="text-center">
 **you do not need to have any programming experience to use R**
@@ -302,13 +362,14 @@ assignments <- tribble(
   ~Percent,  ~Task, ~Location,
   15, "R Training", "Data Camp",
   10, "R Tasks", "eCampus",
-  5, "Sampling Frame", "eCampus",
-  5, "First Draft", "eCampus",
-  5, "Second Draft", "eCampus",
-  10, "Pilot Study Summary", "Slack", 
-  25, "Final Draft & Skeleton", "eCampus",
-  20, "Executive Summary", "eCampus/Slack",
-  10, "Presentation", "eCampus/Slack"
+  5, "Establish a Sampling Frame", "eCampus",
+  5, "Create a Draft", "eCampus",
+  5, "Refine the Draft", "eCampus",
+  10, "Conduct a Pilot Study", "eCampus", 
+  5, "Disseminate the Survey", "eCampus",
+  10, "Test for Validity and Reliability", "eCampus",
+  25, "Write an Executive Summary", "eCampus",
+  10, "Give an Elevator Speech", "eCampus/Slack"
 ) 
 
 grading <- tribble(
@@ -335,7 +396,7 @@ assignments %>%
                                       "responsive"),
                 full_width = FALSE) %>%
   column_spec(1, width = "5em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>%
-  column_spec(2, width = "10em", color = "#ffffff",
+  column_spec(2, width = "15em", color = "#ffffff",
               extra_css = 'vertical-align: middle !important;') %>%
   column_spec(3, width = "9em", color = "#ffffff",
               extra_css = 'vertical-align: middle !important;') %>%
@@ -422,7 +483,7 @@ Can I describe <i>whatever</i> using language so that a child could understand i
 
 **In a nutshell** ***keep an open line of communication***, **be** ***honest***, ***nice***, **&** ***respectful*** **to everyone**.
 
-Additially please follow [WVU's Code of Conduct](https://studentconduct.wvu.edu/campus-student-code).
+Additionally please follow [WVU's Code of Conduct](https://studentconduct.wvu.edu/campus-student-code).
 
 This syllabus reflects a plan for the term but things change and plans change. so deviations may become necessary as we move along during the term. Note that **I reserve the right to alter or amend this syllabus**.
 
@@ -432,7 +493,7 @@ WVU is committed to maintaining a safe learning environment for all students, fa
 
 In a face-to-face environment, our commitment to safety requires students, staff, and instructors to observe the social distancing and personal protective equipment (PPE) guidelines set by the University at all times. While in class, students will sit in assigned seats when applicable and wear the required PPE. Should a student forget to bring the required PPE, PPE will be available in the building for students to acquire. Students who fail to comply will be dismissed from the classroom for the class period and may be referred to the Office of Student Conduct for further sanctions.
 
-If a student becxomes sick or is required to quarantine during the semester, they should notify the instructor. The student should work with the instructor to develop a plan to receive the necessary course content, activities, and assessments to complete the course learning outcomes. 
+If a student becomes sick or is required to quarantine during the semester, they should notify the instructor. The student should work with the instructor to develop a plan to receive the necessary course content, activities, and assessments to complete the course learning outcomes. 
 
 ### Psychological and Psychiatric Services
 

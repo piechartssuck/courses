@@ -315,14 +315,15 @@ assignments <- tribble(
   ~Percent,  ~Task, ~Location,
   15, "R Training", "Data Camp",
   10, "R Tasks", "eCampus",
-  5, "Sampling Frame", "eCampus",
-  5, "First Draft", "eCampus",
-  5, "Second Draft", "eCampus",
-  10, "Pilot Study Summary", "Slack", 
-  25, "Final Draft & Skeleton", "eCampus",
-  20, "Executive Summary", "eCampus/Slack",
-  10, "Presentation", "eCampus/Slack"
-) 
+  5, "Establish a Sampling Frame", "eCampus",
+  5, "Create a Draft", "eCampus",
+  5, "Refine the Draft", "eCampus",
+  10, "Conduct a Pilot Study", "eCampus", 
+  5, "Disseminate the Survey", "eCampus",
+  10, "Test for Validity and Reliability", "eCampus",
+  25, "Write an Executive Summary", "eCampus",
+  10, "Give an Elevator Speech", "eCampus/Slack"
+)
 ```
 
 <center>
@@ -330,7 +331,7 @@ assignments <- tribble(
 ```{r show-assignments-table, echo=FALSE, results="asis"}
 assignments %>%
   kableExtra::kable(align='cll',
-               col.names = c("Percent", "Assignment", "Location"),
+               col.names = c("Percent", "Assignment", "Submission"),
       ) %>%
   kable_paper(html_font = "Roboto Condensed") %>%
   kable_styling(position = "center",
@@ -339,7 +340,7 @@ assignments %>%
                                       "responsive"),
                 full_width = FALSE) %>%
   column_spec(1, width = "5em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>%
-  column_spec(2, width = "10em", color = "#ffffff",
+  column_spec(2, width = "15em", color = "#ffffff",
               extra_css = 'vertical-align: middle !important;') %>%
   column_spec(3, width = "9em", color = "#ffffff",
               extra_css = 'vertical-align: middle !important;') %>%
