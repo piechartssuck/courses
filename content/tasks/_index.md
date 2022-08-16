@@ -44,7 +44,7 @@ Week 2: Establish a Sampling Frame
 </summary>
 <br>
 <p>
-Construct a one to three paragraph case for a population that needs to be surveyed, why it needs to be studied, and what type of data should be collected. Furthermore include at least one evaluation and/or research question and intended analyses.
+Construct a one to three paragraph case for a population (and its corresponding size) that needs to be surveyed, an estimate of the sample size, why it needs to be studied, and what type of data should be collected. Furthermore include at least one evaluation and/or research question and intended analyses.
 <br>
 <br>
 <i>Note: A population does not necessarily refer to people.</i>
