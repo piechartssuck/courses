@@ -1,113 +1,113 @@
 ﻿Week,Link,Due,Required,Module,Chapters
-1,<a href='/modules/01-module/'>Week 1</a>,8/30/20,checked,Introduction to R,Intro to basics
+1,<a href='/modules/01-module/'>Week 1</a>,8/23/22,checked,Introduction to R,Intro to basics
 1,,,,,Vectors
 1,,,,,Matrices
 1,,,,,Factors
 1,,,,,Data Frames
 1,,,,,Lists
 1,,,,,
-2,<a href='/modules/02-module/'>Week 2</a>,9/13/20,checked,Introduction to the Tidyverse,Data wrangling
+2,<a href='/modules/02-module/'>Week 2</a>,8/30/22,checked,Introduction to the Tidyverse,Data wrangling
 2,,,,,Data visualization
 2,,,,,Grouping and summarizing
 2,,,,,Types of visualizations
 2,,,,,
-3,<a href='/modules/03-module/'>Week 3</a>,9/13/20,checked,Introduction to Data Visualization with ggplot2,Explore your data
+3,<a href='/modules/03-module/'>Week 3</a>,9/6/22,checked,Introduction to Data Visualization with ggplot2,Explore your data
 3,,,,,Tame your data
 3,,,,,Tidy your data
 3,,,,,Transform your data
 3,,,,,
-4,<a href='/modules/04-module/'>Week 4</a>,9/13/20,checked,Working with Data in the Tidyverse,Explore your data
+4,<a href='/modules/04-module/'>Week 4</a>,9/13/22,checked,Working with Data in the Tidyverse,Explore your data
 4,,,,,Tame your data
 4,,,,,Tidy your data
 4,,,,,Transform your data
 4,,,,,
-5,<a href='/modules/05-module/'>Week 5</a>,9/13/20,checked,Data Manipulation with dplyr,Transforming Data with dplyr
+5,<a href='/modules/05-module/'>Week 5</a>,9/20/22,checked,Data Manipulation with dplyr,Transforming Data with dplyr
 5,,,,,Aggregating Data 
 5,,,,,Selecting and Transforming Data 
 5,,,,,Case Study: The babynames Dataset
 5,,,,,
-6,<a href='/modules/06-module/'>Week 6</a>,9/13/20,checked,Reshaping Data with tidyr,Tidy Data
+6,<a href='/modules/06-module/'>Week 6</a>,9/27/22,checked,Reshaping Data with tidyr,Tidy Data
 6,,,,,From Wide to Long and Back 
 6,,,,,Expanding Data 
 6,,,,,Rectangling Data 
 6,,,,,
-7,<a href='/modules/07-module/'>Week 7</a>,9/13/20,checked,Categorical Data in the Tidyverse,Introduction to Factor Variables
+7,<a href='/modules/07-module/'>Week 7</a>,10/4/22,checked,Categorical Data in the Tidyverse,Introduction to Factor Variables
 7,,,,,Manipulating Factor Variables
 7,,,,,Creating Factor Variables
 7,,,,,Case Study on Flight Etiquette
 7,,,,,
-8,<a href='/modules/08-module/'>Week 8</a>,9/13/20,checked,Modeling with Data in the Tidyverse,Introduction to Modeling
+8,<a href='/modules/08-module/'>Week 8</a>,10/11/22,checked,Modeling with Data in the Tidyverse,Introduction to Modeling
 8,,,,,Modeling with Basic Regression
 8,,,,,Modeling with Multiple Regression
 8,,,,,Model Assessment and Selection
 8,,,,,
-9,<a href='/modules/09-module/'>Week 9</a>,10/18/20,checked,Fundamentals of Bayesian Data Analysis in R,What is Bayesian Data Analysis?
+9,<a href='/modules/09-module/'>Week 9</a>,10/18/22,checked,Fundamentals of Bayesian Data Analysis in R,What is Bayesian Data Analysis?
 9,,,,,How does Bayesian inference work?
 9,,,,,Why use Bayesian Data Analysis?
 9,,,,,Bayesian inference with Bayes' theorem
 9,,,,,
-10,<a href='/modules/10-module/'>Week 10</a>,10/25/20,checked,Survey and Measurement Development in R,Preparing to analyze survey data
+10,<a href='/modules/10-module/'>Week 10</a>,10/25/22,checked,Survey and Measurement Development in R,Preparing to analyze survey data
 10,,,,,Exploratory factor analysis & survey development
 10,,,,,Confirmatory factor analysis & construct validation
 10,,,,,Criterion validity & replication
 10,,,,,
-11,<a href='/modules/11-module/'>Week 11</a>,11/1/20,checked,Analyzing Survey Data in R,Introduction to survey data
+11,<a href='/modules/11-module/'>Week 11</a>,11/1/22,checked,Analyzing Survey Data in R,Introduction to survey data
 11,,,,,Exploring categorical data
 11,,,,,Exploring quantitative data
 11,,,,,Modeling quantitative data
 11,,,,,
-12,<a href='/modules/12-module/'>Week 12</a>,11/8/20,checked,Introduction to Text Analysis in R,Wrangling Text
+12,<a href='/modules/12-module/'>Week 12</a>,11/8/22,checked,Introduction to Text Analysis in R,Wrangling Text
 12,,,,,Visualizing Text
 12,,,,,Sentiment Analysis
 12,,,,,Topic Modeling
 12,,,,,
-13,<a href='/modules/13-module/'>Week 13</a>,11/8/20,checked,Text Mining with Bag-of-Words in R,Jumping into text mining with bag of words
+13,<a href='/modules/13-module/'>Week 13</a>,11/8/22,checked,Text Mining with Bag-of-Words in R,Jumping into text mining with bag of words
 13,,,,,Word clouds and more interesting visuals
 13,,,,,Adding to your tm skills
 13,,,,,Battle of the tech giants for talent
 13,,,,,
-14,<a href='/modules/14-module/'>Week 14</a>,11/8/20,checked,Sentiment Analysis in R,Fast & dirty: Polarity scoring
+14,<a href='/modules/14-module/'>Week 14</a>,11/15/22,checked,Sentiment Analysis in R,Fast & dirty: Polarity scoring
 14,,,,,Sentiment analysis the tidytext way
 14,,,,,Visualizing sentiment
 14,,,,,Case study: Airbnb reviews
 ,,,,,
-Extra Credit 1,<a href='/modules/ec-module/'>Extra Credit</a>,12/1/20,unchecked,Analyzing US Census Data in R,Census data in R with tidycensus
+Extra Credit 1,<a href='/modules/ec-module/'>Extra Credit</a>,12/9/22,unchecked,Analyzing US Census Data in R,Census data in R with tidycensus
 Extra Credit 1,,,,,Wrangling US Census Data
 Extra Credit 1,,,,,US Census geographic data in R
 Extra Credit 1,,,,,Mapping US Census Data
 Extra Credit 1,,,,,
-Extra Credit 2,<a href='/modules/ec-module/'>Extra Credit</a>,12/1/20,unchecked,Intermediate Data Visualization with ggplot2,Statistics
+Extra Credit 2,<a href='/modules/ec-module/'>Extra Credit</a>,12/9/22,unchecked,Intermediate Data Visualization with ggplot2,Statistics
 Extra Credit 2,,,,,Coordinates
 Extra Credit 2,,,,,Facets
 Extra Credit 2,,,,,Best Practices 
 Extra Credit 2,,,,,
-Extra Credit 3,<a href='/modules/ec-module/'>Extra Credit</a>,12/1/20,unchecked,Introduction to Natural Language Processing in R,True Fundamentals 
+Extra Credit 3,<a href='/modules/ec-module/'>Extra Credit</a>,12/9/22,unchecked,Introduction to Natural Language Processing in R,True Fundamentals 
 Extra Credit 3,,,,,Representations of Text
 Extra Credit 3,,,,,Applications: Classification and Topic Modeling 
 Extra Credit 3,,,,,Advanced Techniques 
 Extra Credit 3,,,,,
-Extra Credit 4,<a href='/modules/ec-module/'>Extra Credit</a>,12/1/20,unchecked,Machine Learning in the Tidyverse,"Foundations of ""tidy"" Machine learning "
+Extra Credit 4,<a href='/modules/ec-module/'>Extra Credit</a>,12/9/22,unchecked,Machine Learning in the Tidyverse,"Foundations of ""tidy"" Machine learning "
 Extra Credit 4,,,,,Multiple Models with broom 
 Extra Credit 4,,,,,"Build, Tune & Evaluate Regression Models "
 Extra Credit 4,,,,,"Build, Tune & Evaluate Classification Models "
 Extra Credit 4,,,,,
-Recommended 1,<a href='/modules/rec-module/'>Recommended</a>,10/18/20,unchecked,Communicating with Data in the Tidyverse,Custom ggplot2 themes
+Recommended 1,<a href='/modules/rec-module/'>Recommended</a>,12/9/22,unchecked,Communicating with Data in the Tidyverse,Custom ggplot2 themes
 Recommended 1,,,,,Creating a custom and unique visualization
 Recommended 1,,,,,Introduction to Rmarkdown
 Recommended 1,,,,,Customizing your RMarkdown report
 Recommended 1,,,,,
-Recommended 2,<a href='/modules/rec-module/'>Recommended</a>,10/18/20,unchecked,Dealing with Missing Data in R,Why care about missing data?
+Recommended 2,<a href='/modules/rec-module/'>Recommended</a>,12/9/22,unchecked,Dealing with Missing Data in R,Why care about missing data?
 Recommended 2,,,,,Wrangling and tidying up missing values 
 Recommended 2,,,,,Testing missing relationships 
 Recommended 2,,,,,Connecting the dots (Imputation) 
 Recommended 2,,,,,
-Recommended 3,<a href='/modules/rec-module/'>Recommended</a>,10/18/20,unchecked,Intermediate R,Conditionals and Control Flow 
+Recommended 3,<a href='/modules/rec-module/'>Recommended</a>,12/9/22,unchecked,Intermediate R,Conditionals and Control Flow 
 Recommended 3,,,,,Loops
 Recommended 3,,,,,Functions
 Recommended 3,,,,,The apply family
 Recommended 3,,,,,Utilities
 Recommended 3,,,,,
-Recommended 4,<a href='/modules/rec-module/'>Recommended</a>,10/18/20,unchecked,String Manipulation with stringr in R,String basics
+Recommended 4,<a href='/modules/rec-module/'>Recommended</a>,12/9/22,unchecked,String Manipulation with stringr in R,String basics
 Recommended 4,,,,,Introduction to stringr
 Recommended 4,,,,,Pattern matching with regular expressions
 Recommended 4,,,,,More advanced matching and manipulation

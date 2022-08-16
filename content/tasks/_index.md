@@ -28,6 +28,10 @@ There are a lot of moving parts to this class. Students who gain the most out of
 2.  Putting in a good faith effort but also asking for help when needed;
 3.  Keeping a respectful, open, and honest line of communication with me and your peers if possible.
 
+## Complementary Materials
+
+Resources such as presentations, videos, visualizations, walkthroughs, etc. take a lot of time to construct so please take some time to go through them. Do the materials have top notch production value? No because I’m not a famous director from Hollywood will millions of dollars. However they should be good enough…even decent. Given that, I am always open to suggestions so if you have any, send them along!
+
 ## Incremental Deliverables
 
 Throughout the course, you will have weekly opportunities to expand and refine your skill set culminating in a final product[^1]. Please include your name and submit all documents in either a <span style="color:#12b8ff;font-weight: bold;">.docx</span> or <span style="color:#f47a7b;font-weight: bold;">.pdf</span> format.

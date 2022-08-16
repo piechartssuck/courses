@@ -19,9 +19,7 @@ shiny: true
 
 {{% aes-header %}}
 
-Most class sessions have both interactive **Modules** and **Walkthroughs** that you will need to work through ***after*** doing the readings and reviewing the corresponding content (if applicable). These lessons are a central part of the class—they will teach you how to use R and other packages eventually leading to the <font face="Arial Narrow" size="5em">tidyverse</font> family.
-
-Interactive training sections are provided as a courtesy by [Data Camp](https://www.datacamp.com/)[^1].
+Most class sessions have both interactive **Modules** courtesy of [Data Camp](https://www.datacamp.com/)[^1] and **Walkthroughs** created by me that you will need to work through ***after*** doing the readings and reviewing the corresponding content (if applicable). The lessons are a central part of the class and are focused on using the [tidyverse](https://www.tidyverse.org/) family of packages, though the approaches are certainly not the only ways to wrangle, clean, analyze, and visualize data in R.
 
 ### Advice
 
@@ -29,7 +27,7 @@ Carve out some time everyday to go through these. If you try to complete everyth
 
 ### Grading
 
-The ultimate point of Data Camp is to get you familiarized with an environment that you likely have never seen or been exposed to. While you should absolutely go through each module, there is certainly no expectation that you will get everything right. In fact, the points that you incur don’t mean anything as far as how you are assessed so please use hints as needed! As with any things data science, you’ll learn by doing. If you have a polar personality type as it pertains to work (i.e. primarily a perfectionist or mostly careless), then the modules will likely prove to be a challenge. It is highly unlikely that you will be able to comprehend everything by going beyond your limit or that it will just come to you so please work hard but also take breaks, swear[^2], and ask peers or me for help. Your [score](/lesson/gradingish/) is predicated on putting in a solid effort, rather than getting it perfect because everything is probabilistic and nothing is for certain.
+The ultimate point of Data Camp is to get you familiarized with an environment that you likely have never seen or been exposed to. While you should absolutely go through each module, there is certainly no expectation that you will get everything right. In fact, the points that you incur don’t mean anything as far as how you are assessed so please use hints as needed! As with any things data science, you’ll learn by doing. If you have a polar personality type as it pertains to work (i.e. primarily a perfectionist or mostly careless), then the modules will likely prove to be a challenge. It is highly unlikely that you will be able to comprehend everything by going beyond your limit or that it will just come to you so please work hard but also take breaks, swear[^2], and ask peers or me for help. Your score is predicated on putting in a solid effort, rather than getting it perfect because everything is probabilistic and nothing is for certain.
 
 ### Data Camp Schedule
 
@@ -65,7 +63,7 @@ Chapters
 <a href="/modules/01-module/">Week 1</a>
 </td>
 <td style="text-align:left;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-8/30/20
+8/23/22
 </td>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:15px;width:15px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#428bca;overflow:visible;position:relative;">
@@ -161,7 +159,7 @@ Lists
 <a href="/modules/02-module/">Week 2</a>
 </td>
 <td style="text-align:left;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-9/13/20
+8/30/22
 </td>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:15px;width:15px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#428bca;overflow:visible;position:relative;">
@@ -231,7 +229,7 @@ Types of visualizations
 <a href="/modules/03-module/">Week 3</a>
 </td>
 <td style="text-align:left;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-9/13/20
+9/6/22
 </td>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:15px;width:15px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#428bca;overflow:visible;position:relative;">
@@ -301,7 +299,7 @@ Transform your data
 <a href="/modules/04-module/">Week 4</a>
 </td>
 <td style="text-align:left;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-9/13/20
+9/13/22
 </td>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:15px;width:15px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#428bca;overflow:visible;position:relative;">
@@ -371,7 +369,7 @@ Transform your data
 <a href="/modules/05-module/">Week 5</a>
 </td>
 <td style="text-align:left;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-9/13/20
+9/20/22
 </td>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:15px;width:15px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#428bca;overflow:visible;position:relative;">
@@ -441,7 +439,7 @@ Case Study: The babynames Dataset
 <a href="/modules/06-module/">Week 6</a>
 </td>
 <td style="text-align:left;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-9/13/20
+9/27/22
 </td>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:15px;width:15px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#428bca;overflow:visible;position:relative;">
@@ -511,7 +509,7 @@ Rectangling Data
 <a href="/modules/07-module/">Week 7</a>
 </td>
 <td style="text-align:left;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-9/13/20
+10/4/22
 </td>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:15px;width:15px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#428bca;overflow:visible;position:relative;">
@@ -581,7 +579,7 @@ Case Study on Flight Etiquette
 <a href="/modules/08-module/">Week 8</a>
 </td>
 <td style="text-align:left;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-9/13/20
+10/11/22
 </td>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:15px;width:15px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#428bca;overflow:visible;position:relative;">
@@ -651,7 +649,7 @@ Model Assessment and Selection
 <a href="/modules/09-module/">Week 9</a>
 </td>
 <td style="text-align:left;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-10/18/20
+10/18/22
 </td>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:15px;width:15px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#428bca;overflow:visible;position:relative;">
@@ -721,7 +719,7 @@ Bayesian inference with Bayes’ theorem
 <a href="/modules/10-module/">Week 10</a>
 </td>
 <td style="text-align:left;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-10/25/20
+10/25/22
 </td>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:15px;width:15px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#428bca;overflow:visible;position:relative;">
@@ -791,7 +789,7 @@ Criterion validity & replication
 <a href="/modules/11-module/">Week 11</a>
 </td>
 <td style="text-align:left;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-11/1/20
+11/1/22
 </td>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:15px;width:15px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#428bca;overflow:visible;position:relative;">
@@ -861,7 +859,7 @@ Modeling quantitative data
 <a href="/modules/12-module/">Week 12</a>
 </td>
 <td style="text-align:left;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-11/8/20
+11/8/22
 </td>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:15px;width:15px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#428bca;overflow:visible;position:relative;">
@@ -931,7 +929,7 @@ Topic Modeling
 <a href="/modules/13-module/">Week 13</a>
 </td>
 <td style="text-align:left;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-11/8/20
+11/8/22
 </td>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:15px;width:15px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#428bca;overflow:visible;position:relative;">
@@ -1001,7 +999,7 @@ Battle of the tech giants for talent
 <a href="/modules/14-module/">Week 14</a>
 </td>
 <td style="text-align:left;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-11/8/20
+11/15/22
 </td>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:15px;width:15px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#428bca;overflow:visible;position:relative;">
@@ -1069,9 +1067,10 @@ Case study: Airbnb reviews
 </tbody>
 </table>
 
-#### Recommended
+#### Extra Credit
 
-The following modules are optional but highly recommended
+The following modules are optional and may count as extra credit if successfully completed
+
 <center>
 <table class=" lightable-paper" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
 <thead>
@@ -1093,7 +1092,7 @@ Chapters
 <tbody>
 <tr>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-10/18/20
+12/9/22
 </td>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:15px;width:15px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#d9534f;overflow:visible;position:relative;">
@@ -1152,7 +1151,7 @@ Customizing your RMarkdown report
 </tr>
 <tr>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-10/18/20
+12/9/22
 </td>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:15px;width:15px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#d9534f;overflow:visible;position:relative;">
@@ -1211,7 +1210,7 @@ Connecting the dots (Imputation)
 </tr>
 <tr>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-10/18/20
+12/9/22
 </td>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:15px;width:15px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#d9534f;overflow:visible;position:relative;">
@@ -1281,7 +1280,7 @@ Utilities
 </tr>
 <tr>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-10/18/20
+12/9/22
 </td>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:15px;width:15px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#d9534f;overflow:visible;position:relative;">
@@ -1343,9 +1342,9 @@ Case studies
 </table>
 </center>
 
-#### Extra Credit
+#### Recommended
 
-The following modules are optional and may count as extra credit if successfully completed
+The following modules are optional but highly recommended
 <center>
 <table class=" lightable-paper" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
 <thead>
