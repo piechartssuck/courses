@@ -408,7 +408,7 @@ Percent
 Assignment
 </th>
 <th style="text-align:left;color: #f7f7f7 !important;background-color: transparent !important;">
-Location
+Submission
 </th>
 </tr>
 </thead>
@@ -429,7 +429,7 @@ Data Camp
 10
 </td>
 <td style="text-align:left;width: 15em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
-R Tasks
+R Survey EDA
 </td>
 <td style="text-align:left;width: 9em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
 eCampus
@@ -459,7 +459,7 @@ eCampus
 </tr>
 <tr>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
-5
+10
 </td>
 <td style="text-align:left;width: 15em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
 Refine the Draft
@@ -514,7 +514,7 @@ eCampus
 </tr>
 <tr>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;">
-10
+5
 </td>
 <td style="text-align:left;width: 15em; color: #ffffff !important;vertical-align: middle !important;">
 Give an Elevator Speech

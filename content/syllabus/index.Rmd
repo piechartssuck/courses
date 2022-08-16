@@ -361,15 +361,15 @@ You can find descriptions for all the assignments on the [tasks page](/tasks/).
 assignments <- tribble(
   ~Percent,  ~Task, ~Location,
   15, "R Training", "Data Camp",
-  10, "R Tasks", "eCampus",
+  10, "R Survey EDA", "eCampus",
   5, "Establish a Sampling Frame", "eCampus",
   5, "Create a Draft", "eCampus",
-  5, "Refine the Draft", "eCampus",
+  10, "Refine the Draft", "eCampus",
   10, "Conduct a Pilot Study", "eCampus", 
   5, "Disseminate the Survey", "eCampus",
   10, "Test for Validity and Reliability", "eCampus",
   25, "Write an Executive Summary", "eCampus",
-  10, "Give an Elevator Speech", "eCampus/Slack"
+  5, "Give an Elevator Speech", "eCampus/Slack"
 ) 
 
 grading <- tribble(
@@ -387,7 +387,7 @@ grading <- tribble(
 ```{r show-assignments-table, echo=FALSE, results="asis"}
 assignments %>%
   kableExtra::kable(align='cll',
-               col.names = c("Percent", "Assignment", "Location"),
+               col.names = c("Percent", "Assignment", "Submission"),
       ) %>%
   kable_paper(html_font = "Roboto Condensed") %>%
   kable_styling(position = "center",
