@@ -1,14 +1,32 @@
 ---
 title: Professor
 slug: professor
+toc: true
 output:
-  rmarkdown::html_document
+  rmarkdown::html_document:
+    toc: true
 ---
 
-If you want to know more about me, head over to my site at
+{{% aes-header %}}
+
+## My Picture
+
+<div style="text-align: left;">
+
+<img src="/professor/me.png" alt="Me" style="width: 250px;"/>
+
+</div>
+
+## My Page
 
 <center>
 
-<a href="https://iam.asocialdatascientist.com">iam.asocialdatascientist.com</a>
+<a href="https://iam.asocialdatascientist.com" target="_blank">iam.asocialdatascientist.com</a>
 
 </center>
+
+## My Research
+
+<a href="https://orcid.org/0000-0002-7085-8964" target="_blank">
+<img src="/logos/orcid-logo.png" alt="ORCID logo" style="width:200px;">
+</a>
