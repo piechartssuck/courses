@@ -129,9 +129,9 @@ After reviewing feedback, create a short one minute summary describing the resea
 
 [^final]: If you've engaged with the course content and completed the exercises and mini projects throughout the course, you should do just fine with the final task.
 
-### Academic Calendar
+## Academic Calendar and Availibility
 
-You can view the weeks of instruction on the [WVU Office of the Provost site](https://provost.wvu.edu/academic-calendar/weeks-of-instruction).
+You can view the weeks of instruction on the [WVU Office of the Provost site](https://provost.wvu.edu/academic-calendar/weeks-of-instruction). Please note that I will have limited availability between Nov 9th - 12th and Nov 28th - Dec 9th.
 
 ### Need Help?
 

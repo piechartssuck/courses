@@ -171,9 +171,9 @@ After reviewing feedback, create a short one minute summary describing the resea
 
 </div>
 
-### Academic Calendar
+## Academic Calendar and Availibility
 
-You can view the weeks of instruction on the [WVU Office of the Provost site](https://provost.wvu.edu/academic-calendar/weeks-of-instruction).
+You can view the weeks of instruction on the [WVU Office of the Provost site](https://provost.wvu.edu/academic-calendar/weeks-of-instruction). Please note that I will have limited availability between Nov 9th - 12th and Nov 28th - Dec 9th.
 
 ### Need Help?
 
