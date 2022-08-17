@@ -171,6 +171,10 @@ After reviewing feedback, create a short one minute summary describing the resea
 
 </div>
 
+### Academic Calendar
+
+You can view the weeks of instruction on the [WVU Office of the Provost site](https://provost.wvu.edu/academic-calendar/weeks-of-instruction).
+
 ### Need Help?
 
 {{% meetings %}}

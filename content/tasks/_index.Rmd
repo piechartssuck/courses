@@ -129,6 +129,10 @@ After reviewing feedback, create a short one minute summary describing the resea
 
 [^final]: If you've engaged with the course content and completed the exercises and mini projects throughout the course, you should do just fine with the final task.
 
+### Academic Calendar
+
+You can view the weeks of instruction on the [WVU Office of the Provost site](https://provost.wvu.edu/academic-calendar/weeks-of-instruction).
+
 ### Need Help?
 
 `r blogdown::shortcode("meetings")`
