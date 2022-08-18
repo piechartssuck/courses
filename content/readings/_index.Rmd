@@ -1,0 +1,33 @@
+---
+title: "About the Readings"
+menu:
+  readings:
+    parent: Overview
+    weight: 1
+type: docs
+weight: 1
+---
+
+`r blogdown::shortcode("aes-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+Each class session has a set of required readings that you should complete ***before*** doing anything else. It also allows you to ask questions prior to moving on! With that said think of the text as a reference, in that
+
+- it contains a lot of stuff that you may use but not at this very moment, and
+- it gives you a basis to ask intelligent questions
+
+So you should absolutely read it to get a basis but in the long run, you will learn more from this course by doing.
+
+<hr style="width:25%">
+
+<table>
+  <tr>
+    <td><i>Pictures are better than words because some words are big and hard to understand.</i></td>
+  </tr>
+  <tr>
+    <td align='right'>&#8212; Peter Griffin</td>
+  </tr>
+</table>

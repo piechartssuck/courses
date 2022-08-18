@@ -1,0 +1,9 @@
+git add . && git commit -m edp618 && git checkout edp618 && git push https://github.com/drabhikroy/Courses.git edp618:edp618
+
+# echo "# edp-618" >> README.md
+# git init
+# git checkout -b edp618
+# git add README.md
+# git commit -m edp618
+# git branch -M edp618
+# git remote add origin https://github.com/drabhikroy/Courses.git 

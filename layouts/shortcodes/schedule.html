@@ -1,0 +1,109 @@
+<style>
+table {background-color: transparent; border-style: none;}
+tr:nth-child(even) {background-color: transparent;}
+</style>
+
+<table>
+    <tbody>
+
+        {{- range .Site.Data.schedule }}
+        {{- range . }}
+        <tr>
+            <td align="right" style="width:18%;text-align:right;color:white">{{ .date }}</td>
+            <td style="width:50%;text-align:left;color:white">{{ .title | markdownify }}</td>
+
+            {{- if .header }}
+
+            <td style="width:8%;text-align:center;font-weight:bold">readings</td>
+            <td style="width:8%;text-align:center;font-weight:bold">resources</td>
+            <td style="width:8%;text-align:center;font-weight:bold">trainings</td>
+            <td style="width:8%;text-align:center;font-weight:bold">tasks</td>
+            <td style="width:8%;text-align:center;font-weight:bold">due</td>
+
+            {{- else }}
+
+            {{- if .modules }}
+            <td align="center" style="width:10%;text-align:center">
+              <a href="{{ .Site.baseurl }}/modules/{{ .modules }}/">
+                <font color="#6fd8d3">
+                    <i class="fa-solid fa-cubes fa-lg fa-fw"></i>
+                </font>
+              </a>
+            </td>
+            {{- else }}
+            <td align="center" style="width:10%;text-align:center">
+                <font color="#3e464a">
+                    <i class="fas fa-folder-open fa-lg fa-fw"></i>
+                </font>
+            </td>
+            {{- end }}
+
+            {{- if .readings }}
+            <td align="center" style="width:10%;text-align:center">
+              <a href="{{ .Site.baseurl }}/readings/{{ .readings }}/">
+                  <font color="#74d86f">
+                    <i class="fas fa-book fa-lg fa-fw"></i>
+                  </font>
+              </a>
+            </td>
+            {{- else }}
+            <td align="center" style="width:10%;text-align:center">
+                <font color="#3e464a">
+                    <i class="fas fa-book fa-lg fa-fw"></i>
+                </font>
+            </td>
+            {{- end }}
+
+            {{- if .tasks }}
+            <td align="center" style="width:10%;text-align:center">
+              <a href="{{ .Site.baseurl }}/tasks/{{ .tasks }}/">
+                <font color="#d86f9e">
+                    <i class="fas fa-tasks fa-lg fa-fw"></i>
+                </font>
+              </a>
+            </td>
+            {{- else }}
+            <td align="center" style="width:10%;text-align:center">
+                <font color="#3e464a">
+                    <i class="fas fa-tasks fa-lg fa-fw"></i></font>
+            </td>
+            {{- end }}
+
+            {{- if .due }}
+            <td align="center" style="width:10%;text-align:center">
+              <a href="{{ .Site.baseurl }}/due/{{ .due }}/">
+                <font color="#ffa700">
+                    <i class="fas fa-folder-open fa-lg fa-fw"></i>
+                </font>
+              </a>
+            </td>
+            {{- else }}
+            <td align="center" style="width:10%;text-align:center">
+                <font color="#3e464a">
+                    <i class="fas fa-folder-open fa-lg fa-fw"></i>
+                </font>
+            </td>
+            {{- end }}
+
+            {{- if .walkthroughs }}
+            <td align="center" style="width:10%;text-align:center">
+              <a href="{{ .Site.baseurl }}/walkthroughs/{{ .walkthroughs }}/">
+                <font color="#c0bfbb">
+                    <i class="fa-solid fa-map fa-lg fa-fw"></i>
+                </font>
+              </a>
+            </td>
+            {{- else }}
+            <td align="center" style="width:10%;text-align:center">
+                <font color="#3e464a">
+                    <i class="fa-solid fa-map fa-lg fa-fw"></i>
+                </font>
+            </td>
+            {{- end }}
+
+            {{- end }}
+        </tr>
+        {{- end }}
+        {{- end }}
+    </tbody>
+</table>

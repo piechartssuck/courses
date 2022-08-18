@@ -1,0 +1,123 @@
+---
+title: "About the Tasks"
+menu:
+  tasks:
+    parent: Overview
+    weight: 1
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+type: docs
+weight: 1
+---
+
+`r blogdown::shortcode("aes-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+This section contains descriptions of course tasks. Materials will be posted on a weekly basis. Please note that these pages populate information about course related tasks on the left hand side **when they are assigned**. Due dates are given with the description of each task.
+
+<center>
+`r fa("clock", fill = "#ff4e50")` &nbsp <i>Posted weekly</i> 
+</center>
+
+## Keeping Up
+
+There are a lot of moving parts to this class. Students who gain the most out of the course generally follow these general notions:
+
+1. Engaging with the readings and materials;
+2. Putting in a good faith effort but also asking for help when needed; 
+3. Keeping a respectful, open, and honest line of communication with me and your peers if possible.
+
+## Complementary Materials 
+
+Resources such as presentations, videos, visualizations, walkthroughs, etc. take a lot of time to construct so please take some time to go through them. Do the materials have top notch production value? No because I'm not a famous director from Hollywood will millions of dollars. However they should be good enough...even decent. Given that, I am always open to suggestions so if you have any, send them along!
+
+## Incremental Deliverables
+
+Throughout the course, you will have weekly opportunities to expand and refine your skill set culminating in a final product[^final]. Please include your name and submit all documents in either a <span style="color:#12b8ff;font-weight: bold;">.docx</span> or <span style="color:#f47a7b;font-weight: bold;">.pdf</span> format. *Remember that all submissions must be in a standard APA 7th edition formatting barring the need for a running header.*
+
+<div id="anchorwk2"> 
+<details><summary>Week 2: Think about Studies</summary>
+<br>
+<p>
+Provide a table with columns defining at least three research and/or evaluation question or sets of research questions assessing the single concept as well how you could address the problems using quantitative or qualitative approaches or both.
+<br>
+<br>
+<i>Note: Please consider the quantitative or qualitative approaches as separate studies that have no interaction with one another.</i>
+</p>
+</details>
+</div>
+<br>
+
+<div id="anchorwk4">
+<details><summary>Week 4: Create an Argument</summary>
+<br>
+<p>
+Select one of the questions from your table that you think would be appropriate for mixed methodological research and/or evaluation. Create a logical justification for your idea within 300-500 words.
+</p>
+</details>
+</div>
+<br>
+
+<div id="anchorwk6">
+<details><summary>Week 5: Develop a Draft</summary>
+<br>
+<p>
+Based on feedback, amend and add to your argument by outlining a likely design and explicitly detailing the mixing process within 750-1000 words.
+</p>
+</details>
+</div>
+<br>
+
+<div id="anchorwk8">
+<details><summary>Week 7: Update the Draft</summary>
+<br>
+<p>
+Based on feedback, amend and add to your argument by creating a visual of the design detailing the mixing process and adding/expanding on the detailed explanation of individual and mixed analyses within 1500-1750 words. 
+</p>
+</details>
+</div>
+<br>
+
+<div id="anchorwk8">
+<details><summary>Week 8: Refine the Draft</summary>
+<br>
+<p>
+Based on feedback, amend any needed changes and resubmit for a quick assessment.
+</p>
+</details>
+</div>
+<br>
+
+<div id="anchorwk13">
+<details><summary>Week 13: Revise and Resubmit</summary>
+<br>
+<p>
+Finalize your paper between 1500 - 2000 words and create a one page infographic summarizing your intended study to accompany teh submission.
+</p>
+</details>
+</div>
+<br>
+
+<div id="anchorwk15">
+<details><summary>Week 15: Give an Elevator Speech</summary>
+<br>
+<p>
+After reviewing feedback and making any needed corrections, create a short one minute summary describing the research or evaluation question(s), sampling frame, design, methodology, and intended analyses.
+</p>
+</details>
+</div>
+
+[^final]: If you've engaged with the course content and completed the exercises and mini projects throughout the course, you should do just fine with the final task.
+
+## Academic Calendar and Availibility
+
+You can view the weeks of instruction on the [WVU Office of the Provost site](https://provost.wvu.edu/academic-calendar/weeks-of-instruction). Please note that I will have limited availability between Nov 9th - 12th and Nov 28th - Dec 9th.
+
+### Need Help?
+
+`r blogdown::shortcode("meetings")`
