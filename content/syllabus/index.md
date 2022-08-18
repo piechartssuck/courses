@@ -1,6 +1,6 @@
 ---
 title: Syllabus
-slug: syllabus
+# slug: syllabus
 toc: true
 output:
   rmarkdown::html_document:
@@ -47,11 +47,11 @@ The overall purpose of this course is to empower you to
 
 -   <span style="color:#ffffff">utilize frequentist and/or basic Bayesian statistical methods to determine outcomes</span>
 
-Additionally, this class will expose you to [<svg aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:steelblue;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>](https://cran.r-project.org/) — one of the most popular and in-demand statistical languages. Armed with the foundation of R skills you’ll learn in this class, you’ll know enough to be able to conduct basic and advanced analyses, create eye-popping data visualizations, and report results.
+Additionally, this class will expose you to [<svg aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:steelblue;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>](https://cran.r-project.org/) — one of the most popular and in-demand statistical languages. Armed with the foundational skill set, you’ll know enough to be able to conduct basic and some advanced analyses, create eye-popping data visualizations, and report results.
 
 ## Quick Start Guide
 
-Please note that the slideshow goes through highlights of the syllabus, but you are still responsible for reading through the entire page.
+Please note that the slideshow goes through highlights of the syllabus, but you are still responsible for reading through the entire site including this page.
 
 <center>
 <div class="wrapper">
@@ -110,11 +110,19 @@ PDF of the Overview
 
 ### *Is the course content difficult?*
 
-You’ve probably heard an answer like this before: *At times some of the material can be dense.* Well that isn’t much of a response. Difficulty is not the issue here since as humans with differing educational background, we will have strengths in some areas more than others. Instead the question is can you identify areas that need strengthened and communicate them? If you can, then you have a good shot at succeeding in this class.
+You’ve probably heard an answer like this before: *…at times some of the material can be dense.* While ambiguous, difficulty is subjective, varies, and will likely depend on your academic and practical history. Instead consider focusing on the following question
+
+<center>
+<p id="rounded_corners">
+Can I first search for help independently and then reach out as needed?
+</p>
+</center>
+
+If the answer is an overall yes, then you have a good shot at succeeding in this class. Make sure to go through the <a href="#rstats"><span style="color:#03dac6"><b>How to Ask for Help with R and RStudio</b></span></a>.
 
 ### *Is R difficult?*
 
-Learning <svg aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:steelblue;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg> can be especially challenging at first—it’s akin to learning a new language like Spanish or even mathematics. Even experienced R users get frustrated…and so much so that some of us have swear jars. However as silly as it sounds one of the best feelings is to overcome a roadblock. With that said, if you find yourself getting irritated, try the following: take a break, go let some frustration out, sleep, discuss with a peer, etc. If you are at your limit, take a few breaths and contact me!
+Learning <svg aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:steelblue;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg> can be especially challenging at first—it’s akin to learning a new language like Spanish or even mathematics. Even experienced R users get frustrated…and so much so that some of us have swear jars. However as silly as it sounds one of the best feelings is to overcome a logical roadblock so if you find yourself getting irritated, try the following: take a break, go let some frustration out, sleep, discuss with a peer, etc. If you are at your limit, take a few breaths and contact me!
 
 ### *What if I’m a Visual/Aural/Read-write/Kinesthetic learner?*
 
@@ -339,6 +347,8 @@ You can [find instructions for installing R and RStudio here](/resource/install/
 Data science and statistical programming can be challenging. Computers are stupid and its always the tiny errors in your coding can result in tons of headache. People working in any syntax based software package at any level experience this!
 
 But there are multiple resources both online and locally that are available. Prior to our first session, please take a moment to go through this slideshow for a short description of the main outlets.
+
+<span id="rstats"></span>
 
 <center>
 <div class="wrapper">
@@ -621,7 +631,7 @@ Here are the rules, expectations, and policies that I came up with or stole from
 -   **Assumptions**:<br>
 
     1.  Just assume that all submissions are to be written **formally** and should include with the appropriate use of language, grammar, syntax, etc. and follow standard APA 7th edition formatting guidelines where applicable.
-    2.  People who are easily offended by content, believe their work to be flawless or are generally unable to handle criticism should consider looking at another course. If you want rainbows and ponies, consider another class. If you care about data, fieldwork and learning a highly marketable practice, you’ve come to the right place.
+    2.  People who are easily offended by content, believe their work to be flawless, generally unable to handle criticism, or are looking for rainbows and ponies should consider looking at another course. However if you care about data, practice and learning a highly marketable practice, you’ve come to the right place.
     3.  There is a great deal of content in this course and you will likely struggle with some at times. Given that, there is also something to be said about the satisfaction a person gets when figuring something out, but nowhere is it written that has to be on your own. You may find that a nudge here or there elicits the same feeling so please reach out for help.
 
 ### Learning and knowledge during a pandemic
@@ -643,11 +653,11 @@ Additionally please follow [WVU’s Code of Conduct](https://studentconduct.wvu.
 
 This syllabus reflects a plan for the term but things change and plans change. so deviations may become necessary as we move along during the term. Note that **I reserve the right to alter or amend this syllabus**.
 
-### COVID-19 statement
+### Health statement
 
-WVU is committed to maintaining a safe learning environment for all students, faculty, and staff. Should campus operations change because of health concerns related to the COVID-19 pandemic, it is possible that this course will move to a fully online delivery format. If that occurs, students will be advised of technical and/or equipment requirements, including remote proctoring software.
+WVU is committed to maintaining a safe learning environment for all students, faculty, and staff. Should campus operations change because of health concerns related to health crisis, it is possible that this course will move to a fully online delivery format. If that occurs, students will be advised of technical and/or equipment requirements, including remote proctoring software.
 
-In a face-to-face environment, our commitment to safety requires students, staff, and instructors to observe the social distancing and personal protective equipment (PPE) guidelines set by the University at all times. While in class, students will sit in assigned seats when applicable and wear the required PPE. Should a student forget to bring the required PPE, PPE will be available in the building for students to acquire. Students who fail to comply will be dismissed from the classroom for the class period and may be referred to the Office of Student Conduct for further sanctions.
+In a face-to-face environment, our commitment to safety requires students, staff, and instructors to observe guidelines set by the University at all times. Students who fail to comply will be dismissed from the classroom for the class period and may be referred to the Office of Student Conduct for further sanctions.
 
 If a student becomes sick or is required to quarantine during the semester, they should notify the instructor. The student should work with the instructor to develop a plan to receive the necessary course content, activities, and assessments to complete the course learning outcomes.
 

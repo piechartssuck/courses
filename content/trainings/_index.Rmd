@@ -21,7 +21,7 @@ Most class sessions have both interactive **Modules** courtesy of [Data Camp](ht
 Carve out some time everyday to go through these. If you try to complete everything in one sitting, it will probably be overwhelming! However if you have familiarity with some modules, please feel free to work ahead.
 
 ### Grading
-The ultimate point of Data Camp is to get you familiarized with an environment that you likely have never seen or been exposed to. While you should absolutely go through each module, there is certainly no expectation that you will get everything right. In fact, the points that you incur don't mean anything as far as how you are assessed so please use hints as needed! As with any things data science, you'll learn by doing. If you have a polar personality type as it pertains to work (i.e. primarily a perfectionist or mostly careless), then the modules will likely prove to be a challenge. It is highly unlikely that you will be able to comprehend everything by going beyond your limit or that it will just come to you so please work hard but also take breaks, swear^[and curse my name if you have to], and ask peers or me for help. Your score is predicated on putting in a solid effort, rather than getting it perfect because everything is probabilistic and nothing is for certain. 
+The ultimate point of Data Camp is to get you familiarized with an environment that you likely have never seen or been exposed to. While you should absolutely go through each module, there is certainly no expectation that you will get everything right. In fact, the points that you incur don't mean anything as far as how you are assessed so please use hints as needed! As with any things data science, you'll learn by doing. If you have a polar personality type as it pertains to work (i.e. primarily a perfectionist or mostly careless), then the modules will likely prove to be a challenge. The chance that you will be able to comprehend everything by going beyond your limit or conversely assuming it will just come to you is low so please work hard but also take breaks, swear^[and curse my name if you have to], and look on the Internet, ask peers or reach out for help. Your score is predicated on putting in a solid effort, rather than getting it perfect because thats not realistic when it comes to data.
 
 ### Data Camp Schedule
 
@@ -44,8 +44,11 @@ dc_schedule <-
     Required == "unchecked" ~ as.character(fontawesome::fa("circle-xmark", fill = "#d9534f", height = "15px"))
       )
     ) %>%
-  # select(-Group, -Chapters_long, -`Due by_short`) %>%
-  rename(`Due by` = Due) %>%
+  mutate(Task = case_when(
+    Task == "checked" ~ as.character(fontawesome::fa("circle-check", fill = "#428bca", height = "15px")),
+    Task == "unchecked" ~ as.character(fontawesome::fa("circle-xmark", fill = "#d9534f", height = "15px"))
+      )
+    ) %>%
   mutate(
     across(everything(), ~replace_na(.x, ""))
     )
@@ -58,13 +61,14 @@ kable(dc_schedule %>%
   select(-Week), 
       "html", 
       escape = FALSE,
-      align = 'llcll') %>%
+      align = 'ccccll') %>%
   kable_paper(full_width = TRUE) %>%
   column_spec(1, width = "5em") %>%
   column_spec(2, width = "5em") %>%
   column_spec(3, width = "5em") %>%
-  column_spec(4, width = "20em") %>%
+  column_spec(4, width = "5em") %>%
   column_spec(5, width = "20em") %>%
+  column_spec(6, width = "20em") %>%
   row_spec(0:nrow(dc_schedule %>%
         filter(str_detect(Week, "Extra Credit|Recommended", negate = T))), 
         extra_css = 'vertical-align: middle !important;', 
@@ -72,14 +76,14 @@ kable(dc_schedule %>%
         background = "transparent")
 ```
 
-#### Extra Credit
-The following modules are optional and may count as extra credit if successfully completed 
+#### Recommended
+The following modules are optional but highly recommended
 
 <center>
 ```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
 kable(dc_schedule %>%
         filter(str_detect(Week, "Recommended")) %>%
-  select(-Week, -Link), 
+  select(-Week, -Link, -Due), 
       "html", 
       escape = FALSE,
       align = 'ccll') %>%
@@ -96,20 +100,23 @@ kable(dc_schedule %>%
 ```
 </center>
 
-#### Recommended
-The following modules are optional but highly recommended
+#### Extra Credit
+The following modules are optional and may count as extra credit contingnet on the successful completion of the data camp course and corresponding assessment to be submitted via eCampus. Please note that each subsequent module is dependent on the previous one.
+
 <center>
 ```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
 kable(dc_schedule %>%
         filter(str_detect(Week, "Extra Credit")) %>%
-  select(-Week, -Link, -'Due by'), 
+  select(-Week, -Link), 
       "html", 
       escape = FALSE,
-      align = 'cll') %>%
+      align = 'cccll') %>%
   kable_paper(full_width = TRUE) %>%
   column_spec(1, width = "5em") %>%
-  column_spec(2, width = "20em") %>%
-  column_spec(3, width = "20em") %>%
+  column_spec(2, width = "5em") %>%
+  column_spec(3, width = "5em") %>%
+    column_spec(4, width = "20em") %>%
+  column_spec(5, width = "20em") %>%
   row_spec(0:nrow(dc_schedule %>%
         filter(str_detect(Week, "Extra Credit"))), 
         extra_css = 'vertical-align: middle !important;', 
@@ -117,7 +124,6 @@ kable(dc_schedule %>%
         background = "transparent")
 ```
 </center>
-
 
 ### Need Help?
 
