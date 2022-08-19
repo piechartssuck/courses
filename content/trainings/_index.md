@@ -27,7 +27,7 @@ Carve out some time everyday to go through these. If you try to complete everyth
 
 ### Grading
 
-The ultimate point of Data Camp is to get you familiarized with an environment that you likely have never seen or been exposed to. While you should absolutely go through each module, there is certainly no expectation that you will get everything right. In fact, the points that you incur don’t mean anything as far as how you are assessed so please use hints as needed! As with any things data science, you’ll learn by doing. If you have a polar personality type as it pertains to work (i.e. primarily a perfectionist or mostly careless), then the modules will likely prove to be a challenge. The chance that you will be able to comprehend everything by going beyond your limit or conversely assuming it will just come to you is low so please work hard but also take breaks, swear[^2], and look on the Internet, ask peers or reach out for help. Your score is predicated on putting in a solid effort, rather than getting it perfect because thats not realistic when it comes to data.
+The ultimate point of Data Camp is to get you familiarized with an environment that you likely have never seen or been exposed to. While you should absolutely go through each module, there is certainly no expectation that you will get everything right. In fact, the points that you incur don’t mean anything as far as how you are assessed so please use hints as needed! As with any things data science, you’ll learn by doing. If you have a polar personality type as it pertains to work (i.e. primarily a perfectionist or mostly careless), then the modules will likely prove to be a challenge. The chance that you will be able to comprehend everything by going beyond your limit or conversely assuming it will just come to you is low so please work hard but also take breaks, swear[^2], and look on the Internet, ask peers or reach out for help. Your score is predicated on putting in a solid effort, rather than getting it perfect because that’s not realistic when it comes to data.
 
 ### Data Camp Schedule
 
@@ -796,7 +796,7 @@ Chapters
 <path d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM175 208.1L222.1 255.1L175 303C165.7 312.4 165.7 327.6 175 336.1C184.4 346.3 199.6 346.3 208.1 336.1L255.1 289.9L303 336.1C312.4 346.3 327.6 346.3 336.1 336.1C346.3 327.6 346.3 312.4 336.1 303L289.9 255.1L336.1 208.1C346.3 199.6 346.3 184.4 336.1 175C327.6 165.7 312.4 165.7 303 175L255.1 222.1L208.1 175C199.6 165.7 184.4 165.7 175 175C165.7 184.4 165.7 199.6 175 208.1V208.1z"></path>
 </svg>
 </td>
-<td style="text-align:left;width: 20em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 7em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 Intermediate R
 </td>
 <td style="text-align:left;width: 20em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
@@ -808,7 +808,7 @@ Conditionals and Control Flow
 </td>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
-<td style="text-align:left;width: 20em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 7em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
 <td style="text-align:left;width: 20em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 Loops
@@ -819,7 +819,7 @@ Loops
 </td>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
-<td style="text-align:left;width: 20em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 7em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
 <td style="text-align:left;width: 20em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 Functions
@@ -830,7 +830,7 @@ Functions
 </td>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
-<td style="text-align:left;width: 20em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 7em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
 <td style="text-align:left;width: 20em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 The apply family
@@ -841,7 +841,7 @@ The apply family
 </td>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
-<td style="text-align:left;width: 20em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 7em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
 <td style="text-align:left;width: 20em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 Utilities

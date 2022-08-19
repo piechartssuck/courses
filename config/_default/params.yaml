@@ -94,9 +94,9 @@ author: Abhik Roy
 course:
   number: "EDP 618"
   semester: "Fall 2022"
-  days: "Neverending"
-  time: "The present"
-  location: "Online"
+  days: "Mondays"
+  time: "4:00 - 6:50pm"
+  location: "Allen Hall 612"
   dates: "August 17 - December 16"
   github: drabhikroy/Courses/tree/edp618
   copyrightYear: "2022"
