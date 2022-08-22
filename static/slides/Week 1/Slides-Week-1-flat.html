@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Evaluation? Why is this a thing?</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr. Abhik Roy" />
+    <script src="Slides-Week-1-flat_files/header-attrs-2.15/header-attrs.js"></script>
+    <link href="Slides-Week-1-flat_files/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
+    <script src="Slides-Week-1-flat_files/tile-view-0.2.6/tile-view.js"></script>
+    <link href="Slides-Week-1-flat_files/animate.css-3.7.2/animate.xaringan.css" rel="stylesheet" />
+    <link href="Slides-Week-1-flat_files/tachyons-4.12.0/tachyons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Evaluation? Why is this a thing?
+]
+.subtitle[
+## EDP 618 Week 1
+]
+.author[
+### Dr. Abhik Roy
+]
+
+---
+
+
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/x-mathjax-config"&gt;
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+  MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+    cancel: ["Extension","cancel"],
+    bcancel: ["Extension","cancel"],
+    xcancel: ["Extension","cancel"],
+    cancelto: ["Extension","cancel"]
+  });
+});
+&lt;/script&gt;
+
+&lt;style&gt;
+section {
+    display: flex;
+    display: -webkit-flex;
+}
+
+section {
+    height: 600px;
+    width: 60%;
+    margin: auto;
+    border-radius: 21px;
+    background-color: #212121;
+}
+
+section p {
+    text-align: center;
+    font-size: 30px;
+    background-color: #212121;
+    border-radius: 21px;
+    font-family: Roboto Condensed;
+    font-style: bold;
+    padding: 12px;
+    color: #bff4ee;
+    margin: auto;
+}
+
+#center {
+
+text-align: center;
+
+}
+
+.center p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.tab {
+    display: inline-block;
+    margin-left: 40px;
+}
+&lt;/style&gt;
+
+&lt;style type="text/css"&gt;
+.highlight-last-item &gt; ul &gt; li,
+.highlight-last-item &gt; ol &gt; li {
+  opacity: 0.5;
+}
+.highlight-last-item &gt; ul &gt; li:last-of-type,
+.highlight-last-item &gt; ol &gt; li:last-of-type {
+  opacity: 1;
+}
+&lt;/style&gt;
+
+
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 110px;
+height: 128px;
+z-index: 0;
+background-image: url(/Users/skynet/Documents/WVU/Teaching/GitHub.nosync/edp618/static/img/course_hex.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:1em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('a')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = 'https://edp612.asocialdatascientist.com'
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+
+
+# First Things First
+		
+--
+
+.center2[
+&lt;i&gt;Ask questions or comment as you wish!&lt;/i&gt;
+]
+
+---
+
+# Things to think about
+
+--
+
++ **Who** evaluates?
+		
+--
+
++ **What** is evaluation?
+		
+--
+
++ **Where** is evaluation needed?
+
+--
+
++ **When** is it a good time to evaluate?
+		
+--
+
++ **Why** do you have to know how to evaluate?
+
+--
+
++ Your reputation
+
+---
+
+# **Who** evaluates? 
+
+---
+
+## Traits
+
++ Able to ask questions to anyone as needed
+		
+--
+
++ Can live with the fact that they are likely the most hated and/or feared person in a room or study
+		
+--
+
++ Capacity to separate personal biases over and over
+		
+--
+
++ Displays the capacity to pass judgement based on grounded scientific outcomes
+		
+--
+
++ Interest in studying programs regardless of content
+		
+--
+
++ Loves to play with data
+		
+--
+
++ Prepared to be political when necessary
+
+--
+
++ Skilled in anticipating all reasonable scenarios
+
+--
+
++ Thrives in uncertainty
+
+--
+
++ Understand, accept, and embrace the jack of all trades but a master of none (or maybe a few) life
+
+---
+
+# **What** is evaluation? 
+
+---
+
+## Comparison of Purposes
+
+.pull-left[
+**Evaluation** is not the same as&lt;br&gt;
+
++ *Assessment*. Snapshot of what is happening in the moment
+
++ *Research*. Seeking further knowledge
+]
+
+--
+
+.pull-right[
+**Evaluation** &lt;br&gt;
+
++ addresses needs for improvement or judgement
+
++ uses both assessment and research
+]
+
+---
+
+## Public Perception of Evaluation
+
+&lt;center&gt;
+What people think&lt;br&gt;
+&lt;br&gt;
+&lt;img src="img/celebjeo.png" width="500"&gt;
+&lt;/center&gt;
+
+--
+
+&lt;br&gt;
+&lt;center&gt;
+What its really like&lt;br&gt;
+&lt;br&gt;
+&lt;img src="img/herdingcats.png" width="500"&gt;
+&lt;/center&gt;
+
+---
+
+# General Types of Evaluations
+
+--
+
+.pull-left[
+&lt;span style="color:#FCB56D;"&gt;Formal&lt;/span&gt;&lt;br&gt;
+  &gt; Making decisions based on *objective* criteria
+  
+  &gt; Used in studies
+  ]
+  
+--
+
+.pull-right[
+&lt;span style="color:#FC6DB5;"&gt;Informal&lt;/span&gt;&lt;br&gt;
+
+  &gt; Making decisions based on *subjective* criteria
+  
+  &gt; Used everyday by you
+]
+
+---
+
+# Definition
+
+--
+
+.pull-left[
+&lt;center&gt;
+&lt;span style="color:#FCB56D;"&gt;Formal&lt;/span&gt;
+&lt;/center&gt;&lt;br&gt;
+**Evaluation** is the process of determining the
+  
+  &gt; *quality (merit)*,
+  
+  &gt; *value (worth)*, or
+  
+  &gt; *importance (significance)*
+  
+  of something, or the product of that process
+]
+
+--
+
+.pull-right[
+&lt;center&gt;
+&lt;span style="color:#FC6DB5;"&gt;Informal&lt;/span&gt;
+&lt;/center&gt;&lt;br&gt;
+**Evaluation** answers
+  &gt; *Does it work?*
+  
+  &gt; *Why does it work?*
+]
+	
+--
+
+.center2[
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;center&gt;
+&lt;span style="color:#6db5fc;"&gt;Note&lt;/span&gt;
+&lt;/center&gt;&lt;br&gt;
+&lt;i&gt;How does it work?&lt;/i&gt; is a research question
+
+]
+
+---
+
+#  Purposes of Evaluations 
+
+--
+
+.pull-left[
+&lt;span style="color:#FCB56D;"&gt;Formative&lt;/span&gt;&lt;br&gt;
+  &gt; Evaluation conducted with the intent to improve
+  ]
+
+
+--
+
+.pull-right[
+&lt;span style="color:#FC6DB5;"&gt;Summative&lt;/span&gt;&lt;br&gt;
+  &gt; Evaluation conducted for decision-making or accountability (aka to pass judgement)
+]
+
+---
+
+#  Broad Modes of Evaluation 
+
+--
+
+.pull-left[
+&lt;span style="color:#FCB56D;"&gt;Goal Free&lt;/span&gt;&lt;br&gt;
+  &gt; Evaluation conducted by avoiding learning the stated purpose/goals/intended achievements of the program prior to or during the evaluation
+]
+
+--
+
+.pull-right[
+&lt;span style="color:#FC6DB5;"&gt;Goal Based&lt;/span&gt;&lt;br&gt;
+  &gt; Evaluation conducted learning the stated purpose/goals/intended achievements of the program prior to or during the evaluation
+]
+
+---
+
+# Why is evaluation important? 
+
+--
+
+
+&lt;br&gt;
+&lt;br&gt;
+.pull-left[
+&lt;p id="center" style="color:#f0b5d3; font-weight: bold; border:1px; border-style:solid; border-color:#f0b5d3; border-radius: 25px; padding: 0.3em;"&gt;
+&lt;i&gt;Accountability&lt;/i&gt; &amp; &lt;i&gt;efficiency&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+Responsibility for justification of expenditures, decisions, or the results of actions
+&lt;/p&gt;
+]
+
+--
+
+.pull-right[
+&lt;p id="center" style="color:#f5ebd9; font-weight: bold; border:1px; border-style:solid; border-color:#f5ebd9; border-radius: 25px; padding: 0.3em;"&gt;
+&lt;i&gt;Improvement&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+Improving the efficiency and effectiveness of services, the quality of products, the performance of personnel, etc.
+&lt;/p&gt;
+]
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+.pull-left[
+&lt;p id="center" style="color:#99d2dd; font-weight: bold; border:1px; border-style:solid; border-color:#99d2dd; border-radius: 25px; padding: 0.3em;"&gt;
+&lt;i&gt;Judgement&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+Determining the need or necessity of services, products, personnel, etc.
+&lt;/p&gt;
+]
+
+--
+
+.pull-right[
+&lt;p id="center" style="color:#e1e1f9; font-weight: bold; border:1px; border-style:solid; border-color:#e1e1f9; border-radius: 25px; padding: 0.3em;"&gt;
+&lt;i&gt;Resource allocation&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+Allotment, distribution,and uses of existing and/or scarce resources under consideration of competing demands
+&lt;/p&gt;
+]
+
+---
+
+##  Examples 
+
++ Rash of recalls for FDA approved drugs/pharmaceuticals 
+
+--
+
++ Contaminants in pet foods
+
+--
+
++ Dangerous levels of hazardous materials (e.g., lead) in consumer products (e.g., children’s toys)
+
+--
+
++ Large-scale funding and implementation of educational and human and social service programs that simply do not work (e.g., NCLB, DARE, abstinence only education, etc.)
+
+---
+
+#  Where is evaluation needed? 
+
+--
+
++ Where there’s a program, especially those that are ongoing
+
+--
+
++ In practice, anywhere money is involved
+
+---
+#  Example: Tuskegee Syphilis Experiment 
+
++ *Setting*. Clinical Study conducted between 1932 and 1972 by the U.S. Public Health Service (which turned into the CDC beginning in 1952)
+
+--
+
++ *Sampling Frame*. Studied the natural progression of untreated syphilis in rural African-American men in Alabama under the guise of receiving free health care from the United States government. Investigators enrolled in the study a total of 600 impoverished, African American sharecroppers from Macon County, Alabama
+
+--
+
++ *Incentives*. Medical exams, rides to and from the clinics, meals on examination days, free treatment for minor ailments and guarantees that provisions would be made after their deaths in terms of burial stipends paid to their survivors
+
+--
+
++ *Study Design*.
+
+	+ Divided sample into control and experimental groups
+		+ 399 already had syphilis
+		+ 201 did not
+	
+	+ Provided no effective care as the men died, went blind or insane, or experienced other severe health problems due to their untreated syphilis
+
+---
+
++ *Population Outcomes*.
+  
+  + 28 participants had perished from syphilis
+  + 100 others passed away from various related complications
+  + 40 spouses had been diagnosed with syphilis and then passed it to 19 children at birth
+  
+--
+
++ *Ethical standards*. Violation of guidelines established after the 1940s found that researchers failed to treat patients appropriately after the 1947 standardization of penicillin as an effective cure for the disease they were studying
+
+--
+
++ *Long Term Effects*. 
+
+  + As a result of this and other ethical violations
+    + many African Americans developed a lingering, deep mistrust of public health officials and vaccines
+    + in Nov 2021, The Pew Research Center found that 42% of African Americans would take the COVID-19 vaccine - the lowest among any other racial and ethnic group
+
+---
+
+#  When is it a good time to evaluate? 
+
+--
+
+.pull-left[
+&lt;span style="color:#FCB56D;"&gt;Proactive&lt;/span&gt; Evaluations
+
+  + Administered at the onset of a program or cycle
+  + Formative by design
+  + Implemented to improve within a certain timeframe
+  + Provides real-time information about a program
+  + Rarely implemented unless required
+]
+
+--
+
+.pull-right[
+&lt;span style="color:#FC6DB5;"&gt;Reactive&lt;/span&gt; Evaluations 
+
++ Administered at the end of a program or cycle
+	+ Summative by design
+	+ Implemented to construct elements for reporting purposes
+	+ Provides post-hoc about a program
+	+ Commonly implemented
+]
+
+---
+
+#  Why do you have to know how to evaluate?
+
+--
+
+.center2[
+
+&lt;span style="color:#e1e1e1;"&gt;Accountability!&lt;/span&gt;
+
+]
+
+
+---
+
+## Should evaluators provide recommendations?
+
+--
+
+.pull-left[
+&lt;span style="color:#cf6669;"&gt;Questions&lt;/span&gt;
+&lt;br&gt;
+&lt;br&gt;
+How long is the evaluation?
+]
+
+--
+
+.pull-right[
+&lt;span style="color:#bb86fc;"&gt;Answers&lt;/span&gt;
+&lt;br&gt;
+&lt;br&gt;
+Most evaluations are two weeks to one month
+]
+
+--
+
+
+.pull-left[
+Do you enough about any program to give advice?
+
+]
+
+--
+
+.pull-right[
+
+Evaluations are generally *external* meaning an evaluator comes in to an unfamiliar setting and people to conduct a study
+
+]
+
+--
+
+.pull-left[
+
+Is it an expectation of the job?
+
+]
+
+--
+
+.pull-right[
+
+If this is not clarified in the initial stages, then not providing them would be an incomplete study OR may be taken as an overreach
+
+]
+
+--
+
+.pull-left[
+
+What are the practical implication?
+
+]
+
+--
+
+.pull-right[
+
+To determine if an evaluator should serve as an *agent of change*
+
+]
+
+---
+
+# Real World Evaluations
+
+---
+
+## &lt;span style="color:#7ebf97;"&gt;Considerations&lt;/span&gt; 
+
+&gt; *Benefit*. Is the study actually beneficial or just an interest?
+
+&gt; *Drive*. Are you and possibly a team motivated enough to accomplish this task?
+
+&gt; *Outcomes*. Are the anticipated or possible results worth your time and effort?
+
+&gt; *Resources*.  Do you have enough capital to get the job done?
+
+&gt; *Sample*.  Can you reasonably get enough people or units to perform a study?
+
+&gt; *Workload*. Is the work going to hinder your well being or hinder your resources?
+
+---
+
+##&lt;span style="color:#c0506b;"&gt;Scope&lt;/span&gt;
+
+&gt; *Frame*. What would be your population and sample? Where would they be from
+
+&gt; *Size*. How large of a study could you reasonably take on?
+	
+&gt; *Questions*. What questions would you ask?
+
+&gt; *Collection*. What type of data would be collected and how would you go about it?
+	
+&gt; *Methods*. What study methodologies and/or approaches
+
+&gt; *Timeframe*. What is your anticipated timeframe?
+
+---
+
+#  Logic Models 
+
+---
+
+## Description
+
+A *logic model* is a graphic representation (road map, flow chart, insert buzz word here) and is a very early step in the evaluation planning process where you can show
+
+--
+
+.pull-left[
+	+ the shared relationships among the program’s
+	
+	  + resources
+	
+    + activities
+
+    + outputs
+  
+    + outcomes
+  
+    + impact/effect (if applicable)
+]
+
+--
+
+.pull-right[
+  + the association between the program’s
+    
+    + activities
+    
+    + intended effects
+]
+
+---
+
+## Practical Purpose
+
+--
+
+Theory-Driven Evaluation
+
+--
+
++ Step 1. Find out what a program looks like typically from a sponsor’s or primary stakeholder’s point of view
+
+--
+
++ Step 2. Find out what it really looks like through a study
+	
+--
+
++ Step 3. Compare the two and report the results
+	
+---
+
+## Picture!
+
+&lt;center&gt;
+&lt;img src="img/blank logic model 1.png" width="800"&gt;
+&lt;/center&gt;
+
+---
+
+## Meanings
+
+&lt;center&gt;
+&lt;img src="img/blank logic model 2.png" width="800"&gt;
+&lt;/center&gt;
+
+---
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+.pull-left[
+&lt;center&gt;
+&lt;img src="img/blank logic model 1.png"&gt;
+&lt;/center&gt;
+]
+
+.pull-right[
+&lt;center&gt;
+&lt;img src="img/blank logic model 2.png"&gt;
+&lt;/center&gt;
+]
+
+---
+
+
+# Task: Evaluation Proposal
+
+1. Create an Evaluation Team
+  
+  a. Work in groups of 2 or 3
+  
+--
+  
+  b. Pick a program everyone would consider evaluating (real or imaginary)
+  
+--
+
+2. Establish the Process
+  
+  a. Make a plan
+    
+    + Address the Considerations
+    
+    + Figure out Scope of evaluation
+    
+    + Construct a Logic Model
+    
+    + Fill out *Planning a Program Evaluation* as you go along
+    
+--
+  
+  b. Decide whether to provide recommendations
+  
+---
+
+3. Present the Plan
+  
+  a. Describe the program
+  
+--
+  
+  b. Establish a need for the evaluation
+  
+--
+  
+  c. Display and explain your logic model for show and tell
+  
+--
+  
+  d. Anticipate outcomes and limitations&lt;sup&gt;1&lt;/sup&gt;
+
+  
+.footnote[
+&lt;sup&gt;1&lt;/sup&gt; What you expect to see as a result of the study *and* what barriers that may come up
+]
+
+---
+
+#  That’s it! 
+
+Any questions?
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"navigation": {
+"scroll": false
+}
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

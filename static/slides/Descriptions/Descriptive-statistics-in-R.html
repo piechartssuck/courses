@@ -46,9 +46,28 @@ section {
     display: -webkit-flex;
 }
 
-section p {
-    margin: auto;
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
 }
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
+}
+
 
 .hljs-github .hljs {
     background: transparent;
@@ -88,6 +107,7 @@ section p {
     font-style: bold;
     padding: 15px;
     color: #bff4ee;
+    margin: auto;
 }
 
 #center {
@@ -217,7 +237,6 @@ starwars
 ## # … with 77 more rows, 4 more variables: species &lt;chr&gt;, films &lt;list&gt;,
 ## #   vehicles &lt;list&gt;, starships &lt;list&gt;, and abbreviated variable names
 ## #   ¹​hair_color, ²​skin_color, ³​eye_color, ⁴​birth_year, ⁵​homeworld
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names
 ```
 
 ---
@@ -242,7 +261,6 @@ head(starwars)
 ## # … with 4 more variables: species &lt;chr&gt;, films &lt;list&gt;, vehicles &lt;list&gt;,
 ## #   starships &lt;list&gt;, and abbreviated variable names ¹​hair_color, ²​skin_color,
 ## #   ³​eye_color, ⁴​birth_year, ⁵​homeworld
-## # ℹ Use `colnames()` to see all variable names
 ```
 
 ---
@@ -632,7 +650,6 @@ count: false
 ## # … with 77 more rows, 4 more variables: species &lt;chr&gt;, films &lt;list&gt;,
 ## #   vehicles &lt;list&gt;, starships &lt;list&gt;, and abbreviated variable names
 ## #   ¹​hair_color, ²​skin_color, ³​eye_color, ⁴​birth_year, ⁵​homeworld
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names
 ```
 ]
 
@@ -728,7 +745,6 @@ count: false
 ## # … with 77 more rows, 4 more variables: species &lt;chr&gt;, films &lt;list&gt;,
 ## #   vehicles &lt;list&gt;, starships &lt;list&gt;, and abbreviated variable names
 ## #   ¹​hair_color, ²​skin_color, ³​eye_color, ⁴​birth_year, ⁵​homeworld
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names
 ```
 ]
 
@@ -764,7 +780,6 @@ starwars %&gt;%
 ## # … with 77 more rows, 4 more variables: species &lt;chr&gt;, films &lt;list&gt;,
 ## #   vehicles &lt;list&gt;, starships &lt;list&gt;, and abbreviated variable names
 ## #   ¹​hair_color, ²​skin_color, ³​eye_color, ⁴​birth_year, ⁵​homeworld
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names
 ```
 ]
 
@@ -801,7 +816,6 @@ starwars %&gt;%
 ## # … with 19 more rows, 4 more variables: species &lt;chr&gt;, films &lt;list&gt;,
 ## #   vehicles &lt;list&gt;, starships &lt;list&gt;, and abbreviated variable names
 ## #   ¹​hair_color, ²​skin_color, ³​eye_color, ⁴​birth_year, ⁵​homeworld
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names
 ```
 ]
 
@@ -1155,7 +1169,6 @@ count: false
 ## # … with 77 more rows, 4 more variables: species &lt;chr&gt;, films &lt;list&gt;,
 ## #   vehicles &lt;list&gt;, starships &lt;list&gt;, and abbreviated variable names
 ## #   ¹​hair_color, ²​skin_color, ³​eye_color, ⁴​birth_year, ⁵​homeworld
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names
 ```
 ]
 
@@ -1191,7 +1204,6 @@ starwars %&gt;%
 ## # … with 77 more rows, 4 more variables: species &lt;chr&gt;, films &lt;list&gt;,
 ## #   vehicles &lt;list&gt;, starships &lt;list&gt;, and abbreviated variable names
 ## #   ¹​hair_color, ²​skin_color, ³​eye_color, ⁴​birth_year, ⁵​homeworld
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names
 ```
 ]
 
@@ -1228,7 +1240,6 @@ starwars %&gt;%
 ## # … with 19 more rows, 4 more variables: species &lt;chr&gt;, films &lt;list&gt;,
 ## #   vehicles &lt;list&gt;, starships &lt;list&gt;, and abbreviated variable names
 ## #   ¹​hair_color, ²​skin_color, ³​eye_color, ⁴​birth_year, ⁵​homeworld
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names
 ```
 ]
 
@@ -1417,7 +1428,6 @@ count: false
 ## # … with 77 more rows, 4 more variables: species &lt;chr&gt;, films &lt;list&gt;,
 ## #   vehicles &lt;list&gt;, starships &lt;list&gt;, and abbreviated variable names
 ## #   ¹​hair_color, ²​skin_color, ³​eye_color, ⁴​birth_year, ⁵​homeworld
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names
 ```
 ]
 
@@ -1453,7 +1463,6 @@ starwars %&gt;%
 ## # … with 77 more rows, 4 more variables: species &lt;chr&gt;, films &lt;list&gt;,
 ## #   vehicles &lt;list&gt;, starships &lt;list&gt;, and abbreviated variable names
 ## #   ¹​hair_color, ²​skin_color, ³​eye_color, ⁴​birth_year, ⁵​homeworld
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names
 ```
 ]
 
@@ -1490,7 +1499,6 @@ starwars %&gt;%
 ## # … with 19 more rows, 4 more variables: species &lt;chr&gt;, films &lt;list&gt;,
 ## #   vehicles &lt;list&gt;, starships &lt;list&gt;, and abbreviated variable names
 ## #   ¹​hair_color, ²​skin_color, ³​eye_color, ⁴​birth_year, ⁵​homeworld
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names
 ```
 ]
 
@@ -1665,7 +1673,6 @@ count: false
 ## # … with 77 more rows, 4 more variables: species &lt;chr&gt;, films &lt;list&gt;,
 ## #   vehicles &lt;list&gt;, starships &lt;list&gt;, and abbreviated variable names
 ## #   ¹​hair_color, ²​skin_color, ³​eye_color, ⁴​birth_year, ⁵​homeworld
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names
 ```
 ]
 
@@ -1707,7 +1714,6 @@ starwars %&gt;%
 ## # … with 4 more variables: species &lt;chr&gt;, films &lt;list&gt;, vehicles &lt;list&gt;,
 ## #   starships &lt;list&gt;, and abbreviated variable names ¹​hair_color, ²​skin_color,
 ## #   ³​eye_color, ⁴​birth_year, ⁵​homeworld
-## # ℹ Use `colnames()` to see all variable names
 ```
 ]
 
@@ -1751,7 +1757,6 @@ starwars %&gt;%
 ## # … with 4 more variables: species &lt;chr&gt;, films &lt;list&gt;, vehicles &lt;list&gt;,
 ## #   starships &lt;list&gt;, and abbreviated variable names ¹​hair_color, ²​skin_color,
 ## #   ³​eye_color, ⁴​birth_year, ⁵​homeworld
-## # ℹ Use `colnames()` to see all variable names
 ```
 ]
 
@@ -1785,7 +1790,6 @@ starwars %&gt;%
 ## # … with 4 more variables: species &lt;chr&gt;, films &lt;list&gt;, vehicles &lt;list&gt;,
 ## #   starships &lt;list&gt;, and abbreviated variable names ¹​hair_color, ²​skin_color,
 ## #   ³​eye_color, ⁴​birth_year, ⁵​homeworld
-## # ℹ Use `colnames()` to see all variable names
 ```
 ]
 
@@ -1970,7 +1974,6 @@ count: false
 ## # … with 77 more rows, 4 more variables: species &lt;chr&gt;, films &lt;list&gt;,
 ## #   vehicles &lt;list&gt;, starships &lt;list&gt;, and abbreviated variable names
 ## #   ¹​hair_color, ²​skin_color, ³​eye_color, ⁴​birth_year, ⁵​homeworld
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names
 ```
 ]
 
@@ -2006,7 +2009,6 @@ starwars %&gt;%
 ## # … with 77 more rows, 4 more variables: species &lt;chr&gt;, films &lt;list&gt;,
 ## #   vehicles &lt;list&gt;, starships &lt;list&gt;, and abbreviated variable names
 ## #   ¹​hair_color, ²​skin_color, ³​eye_color, ⁴​birth_year, ⁵​homeworld
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names
 ```
 ]
 
@@ -2043,7 +2045,6 @@ starwars %&gt;%
 ## # … with 19 more rows, 4 more variables: species &lt;chr&gt;, films &lt;list&gt;,
 ## #   vehicles &lt;list&gt;, starships &lt;list&gt;, and abbreviated variable names
 ## #   ¹​hair_color, ²​skin_color, ³​eye_color, ⁴​birth_year, ⁵​homeworld
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names
 ```
 ]
 
@@ -2257,7 +2258,6 @@ count: false
 ## # … with 77 more rows, 4 more variables: species &lt;chr&gt;, films &lt;list&gt;,
 ## #   vehicles &lt;list&gt;, starships &lt;list&gt;, and abbreviated variable names
 ## #   ¹​hair_color, ²​skin_color, ³​eye_color, ⁴​birth_year, ⁵​homeworld
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names
 ```
 ]
 
@@ -2293,7 +2293,6 @@ starwars %&gt;%
 ## # … with 77 more rows, 4 more variables: species &lt;chr&gt;, films &lt;list&gt;,
 ## #   vehicles &lt;list&gt;, starships &lt;list&gt;, and abbreviated variable names
 ## #   ¹​hair_color, ²​skin_color, ³​eye_color, ⁴​birth_year, ⁵​homeworld
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names
 ```
 ]
 
@@ -2330,7 +2329,6 @@ starwars %&gt;%
 ## # … with 19 more rows, 4 more variables: species &lt;chr&gt;, films &lt;list&gt;,
 ## #   vehicles &lt;list&gt;, starships &lt;list&gt;, and abbreviated variable names
 ## #   ¹​hair_color, ²​skin_color, ³​eye_color, ⁴​birth_year, ⁵​homeworld
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names
 ```
 ]
 
@@ -2533,7 +2531,6 @@ count: false
 ## # … with 77 more rows, 4 more variables: species &lt;chr&gt;, films &lt;list&gt;,
 ## #   vehicles &lt;list&gt;, starships &lt;list&gt;, and abbreviated variable names
 ## #   ¹​hair_color, ²​skin_color, ³​eye_color, ⁴​birth_year, ⁵​homeworld
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names
 ```
 ]
 
@@ -2569,7 +2566,6 @@ starwars %&gt;%
 ## # … with 77 more rows, 4 more variables: species &lt;chr&gt;, films &lt;list&gt;,
 ## #   vehicles &lt;list&gt;, starships &lt;list&gt;, and abbreviated variable names
 ## #   ¹​hair_color, ²​skin_color, ³​eye_color, ⁴​birth_year, ⁵​homeworld
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names
 ```
 ]
 
@@ -2606,7 +2602,6 @@ starwars %&gt;%
 ## # … with 19 more rows, 4 more variables: species &lt;chr&gt;, films &lt;list&gt;,
 ## #   vehicles &lt;list&gt;, starships &lt;list&gt;, and abbreviated variable names
 ## #   ¹​hair_color, ²​skin_color, ³​eye_color, ⁴​birth_year, ⁵​homeworld
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names
 ```
 ]
 
@@ -2822,7 +2817,6 @@ count: false
 ## # … with 77 more rows, 4 more variables: species &lt;chr&gt;, films &lt;list&gt;,
 ## #   vehicles &lt;list&gt;, starships &lt;list&gt;, and abbreviated variable names
 ## #   ¹​hair_color, ²​skin_color, ³​eye_color, ⁴​birth_year, ⁵​homeworld
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names
 ```
 ]
 
@@ -2858,7 +2852,6 @@ starwars %&gt;%
 ## # … with 77 more rows, 4 more variables: species &lt;chr&gt;, films &lt;list&gt;,
 ## #   vehicles &lt;list&gt;, starships &lt;list&gt;, and abbreviated variable names
 ## #   ¹​hair_color, ²​skin_color, ³​eye_color, ⁴​birth_year, ⁵​homeworld
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names
 ```
 ]
 
@@ -2895,7 +2888,6 @@ starwars %&gt;%
 ## # … with 19 more rows, 4 more variables: species &lt;chr&gt;, films &lt;list&gt;,
 ## #   vehicles &lt;list&gt;, starships &lt;list&gt;, and abbreviated variable names
 ## #   ¹​hair_color, ²​skin_color, ³​eye_color, ⁴​birth_year, ⁵​homeworld
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names
 ```
 ]
 
@@ -3109,7 +3101,6 @@ count: false
 ## # … with 77 more rows, 4 more variables: species &lt;chr&gt;, films &lt;list&gt;,
 ## #   vehicles &lt;list&gt;, starships &lt;list&gt;, and abbreviated variable names
 ## #   ¹​hair_color, ²​skin_color, ³​eye_color, ⁴​birth_year, ⁵​homeworld
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names
 ```
 ]
 
@@ -3145,7 +3136,6 @@ starwars %&gt;%
 ## # … with 77 more rows, 4 more variables: species &lt;chr&gt;, films &lt;list&gt;,
 ## #   vehicles &lt;list&gt;, starships &lt;list&gt;, and abbreviated variable names
 ## #   ¹​hair_color, ²​skin_color, ³​eye_color, ⁴​birth_year, ⁵​homeworld
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names
 ```
 ]
 
@@ -3182,7 +3172,6 @@ starwars %&gt;%
 ## # … with 19 more rows, 4 more variables: species &lt;chr&gt;, films &lt;list&gt;,
 ## #   vehicles &lt;list&gt;, starships &lt;list&gt;, and abbreviated variable names
 ## #   ¹​hair_color, ²​skin_color, ³​eye_color, ⁴​birth_year, ⁵​homeworld
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names
 ```
 ]
 
@@ -3394,7 +3383,6 @@ count: false
 ## # … with 77 more rows, 4 more variables: species &lt;chr&gt;, films &lt;list&gt;,
 ## #   vehicles &lt;list&gt;, starships &lt;list&gt;, and abbreviated variable names
 ## #   ¹​hair_color, ²​skin_color, ³​eye_color, ⁴​birth_year, ⁵​homeworld
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names
 ```
 ]
 
@@ -3430,7 +3418,6 @@ starwars %&gt;%
 ## # … with 77 more rows, 4 more variables: species &lt;chr&gt;, films &lt;list&gt;,
 ## #   vehicles &lt;list&gt;, starships &lt;list&gt;, and abbreviated variable names
 ## #   ¹​hair_color, ²​skin_color, ³​eye_color, ⁴​birth_year, ⁵​homeworld
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names
 ```
 ]
 
@@ -3467,7 +3454,6 @@ starwars %&gt;%
 ## # … with 19 more rows, 4 more variables: species &lt;chr&gt;, films &lt;list&gt;,
 ## #   vehicles &lt;list&gt;, starships &lt;list&gt;, and abbreviated variable names
 ## #   ¹​hair_color, ²​skin_color, ³​eye_color, ⁴​birth_year, ⁵​homeworld
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names
 ```
 ]
 
@@ -3679,7 +3665,6 @@ count: false
 ## # … with 77 more rows, 4 more variables: species &lt;chr&gt;, films &lt;list&gt;,
 ## #   vehicles &lt;list&gt;, starships &lt;list&gt;, and abbreviated variable names
 ## #   ¹​hair_color, ²​skin_color, ³​eye_color, ⁴​birth_year, ⁵​homeworld
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names
 ```
 ]
 
@@ -3715,7 +3700,6 @@ starwars %&gt;%
 ## # … with 77 more rows, 4 more variables: species &lt;chr&gt;, films &lt;list&gt;,
 ## #   vehicles &lt;list&gt;, starships &lt;list&gt;, and abbreviated variable names
 ## #   ¹​hair_color, ²​skin_color, ³​eye_color, ⁴​birth_year, ⁵​homeworld
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names
 ```
 ]
 
@@ -3752,7 +3736,6 @@ starwars %&gt;%
 ## # … with 19 more rows, 4 more variables: species &lt;chr&gt;, films &lt;list&gt;,
 ## #   vehicles &lt;list&gt;, starships &lt;list&gt;, and abbreviated variable names
 ## #   ¹​hair_color, ²​skin_color, ³​eye_color, ⁴​birth_year, ⁵​homeworld
-## # ℹ Use `print(n = ...)` to see more rows, and `colnames()` to see all variable names
 ```
 ]
 

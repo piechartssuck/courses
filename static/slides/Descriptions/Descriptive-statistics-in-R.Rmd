@@ -33,9 +33,28 @@ section {
     display: -webkit-flex;
 }
 
-section p {
-    margin: auto;
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
 }
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
+}
+
 
 .hljs-github .hljs {
     background: transparent;
@@ -75,6 +94,7 @@ section p {
     font-style: bold;
     padding: 15px;
     color: #bff4ee;
+    margin: auto;
 }
 
 #center {
