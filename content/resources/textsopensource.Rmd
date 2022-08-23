@@ -1,0 +1,145 @@
+---
+title: "Tidy and Other Related Open Source Texts"
+menu:
+  resources:
+    parent: Guides
+output:
+  rmarkdown::html_document:
+    toc: true
+type: docs
+weight: 7
+---
+
+`r blogdown::shortcode("r-walkthrough-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+```{r setup, include=FALSE, purl=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(widgetframe_self_contained = TRUE) 
+knitr::opts_knit$set(root.dir = getwd())
+```
+
+<style>
+
+table {
+  padding: 50px;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin: 1.0em;
+}
+
+table:hover {
+  overflow: visible;
+}
+
+td {
+  width: 50px;
+  position:relative;
+}
+
+img {
+  -webkit-transition: all 0.5s linear;
+          transition: all 0.5s linear;
+  -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+}
+
+td:hover img {
+  -webkit-transform: scale3d(1.2, 1.2, 1);
+          transform: scale3d(1.2, 1.2, 1);
+  transform: scale(2.0);
+  transition: all .5s ease-in-out;
+  position: absolute; 
+  display: block; 
+  z-index: 99;
+  top: 35%;
+  bottom: 55%;
+  left: 35%;
+  right: 35%;
+  width: 100%;
+  height: auto;
+}
+
+</style>
+
+```{r functions, echo=FALSE}
+max_nontrivial_divisor <- 
+    function(x) {
+      tryCatch({
+        tibble(divisors = NA_integer_) %>%
+          mutate(
+            divisors = 
+              case_when(
+                numbers::isPrime(x) == TRUE ~ as.integer(1),
+                numbers::isPrime(x) == FALSE ~ 
+                  numbers::divisors(x) |>
+                  as_tibble_col() |>
+                  filter(!value == 1 & !value == x) |>
+                  slice(which.max(value)) |>
+                  pull() 
+              ) 
+            ) 
+        }, 
+      error=function(e) as.integer(1))
+    }
+```
+
+<br>
+```{=html}
+<center>
+<div class="wrapper">
+    <div class="icon leftright">
+      <div class="tooltip"><span style=width:200px;>Hover over any title to zoom in</span></div>
+      <span><i class="fa-solid fa-expand"></i></span></div>
+    <div class="icon info">
+      <div class="tooltip"><span style=width:200px;>Click on any cover for the entire text</span></div>
+      <span><i class="fa-solid fa-arrow-pointer"></i></span></div>
+</div>
+<br>
+<hr style="width:20%">
+</center>
+```
+
+
+```{r opttextstibble, echo=FALSE,warning=FALSE,message=FALSE}
+
+opensourcetexts <-
+  read_csv(here::here("content", "ost.csv"),
+           show_col_types = FALSE) %>% 
+  as_tibble() %>%
+  arrange(title) %>%
+  mutate(source = paste0(authors," (",year,"). <i>",title,"</i>."," (",edition," ed.) ",publisher,".")) %>%
+  mutate(space = " ") %>%
+  mutate(imglink = paste0("<a href='",link,"' target='_blank'> <img src='",loc,img,".",ftype,"' alt='",alt,"'></a>")) %>%
+  select(imglink) %>%
+  mutate(id = 1:nrow(.)%%(max_nontrivial_divisor(nrow(.)) %>% pull())) %>%
+  pivot_wider(names_from = id,
+              values_from = imglink) %>%
+  unnest(col = everything())
+  
+```
+
+<center>
+```{r, echo=FALSE,warning=FALSE,message=FALSE}
+opensourcetexts %>%
+  kbl(col.names = NULL,
+      format = "html", 
+      escape = FALSE,
+      align = 'c') %>%
+  column_spec(1:ncol(opensourcetexts),
+              width = "10em", 
+              extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(1:nrow(opensourcetexts),
+           extra_css = 'vertical-align: middle !important;',
+           color = "#f7f7f7", 
+           background = "transparent") %>%
+  kable_styling()
+```
+</center>
+
+This list only shows a very narrow slice of what are known as modern, or tidy friendly texts that are also in print. Barring a few instances here and there, each title should be accessible to anyone who understands the basic principles of *pipes* and *layers*. If you prefer a more comprehensive and up-to-date repository of nearly all open source texts about R, make sure to visit the impressive and ever growing [Big Book of R](https://www.bigbookofr.com/)! If you feel like I missed a helpful modern open source text, please let me know and I'll be happy to add it.
