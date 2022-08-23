@@ -55,16 +55,16 @@ Please note that the slideshow goes through highlights of the syllabus, but you 
 
 <center>
 <div class="wrapper">
-    <div class="icon directions">
+    <div class="icon leftright">
       <div class="tooltip"><span style=width:200px;>Move back and forth using <kbd>←</kbd> and <kbd>→</kbd></span></div>
       <span><i class="fas fa-map-signs"></i></span></div>
-    <div class="icon fullscreen">
+    <div class="icon info">
       <div class="tooltip"><span style=width:200px;>Toggle fullscreen by pressing <kbd>F</kbd></span></div>
       <span><i class="fas fa-expand-alt"></i></span>
-    </div><div class="icon overview">
+    </div><div class="icon github">
       <div class="tooltip"><span style=width:200px;>Press <kbd>O</kbd> for and overview of all slides</span></div>
       <span><i class="far fa-images"></i></span>
-    </div><div class="icon info">
+    </div><div class="icon youtube">
       <div class="tooltip"><span style=width:200px;>Discover more shortcuts by pressing <kbd>H</kbd></span></div>
       <span><i class="fas fa-info-circle"></i></span>
     </div>
@@ -296,7 +296,7 @@ Plano Clark, V. L. & Ivankova, N. V. (2015). <i>Mixed methods research: A guide 
 </tr>
 <tr>
 <td style="text-align:left;width: 20em; font-weight: bold;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Wickham, H., Navarro, D. & Pedersen, T.L. (2021). <i>ggplot2: Elegant Graphics for Data Analysis</i> (2nd and 3rd eds.). Springer.
+Wickham, H., Navarro, D. & Pedersen, T.L. (2021). <i>ggplot2: Elegant graphics for data analysis</i> (2nd and 3rd eds.). Springer.
 </td>
 <td style="text-align:center;width: 5em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://ggplot2-book.org/">Free</a>
@@ -310,7 +310,7 @@ Wickham, H., Navarro, D. & Pedersen, T.L. (2021). <i>ggplot2: Elegant Graphics f
 </tr>
 <tr>
 <td style="text-align:left;width: 20em; font-weight: bold;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Wickham, H. (2021). <i>R for Data Science</i> (1st ed.). O’Reilly Media.
+Wickham, H. (2021). <i>R for data science</i> (1st ed.). O’Reilly Media.
 </td>
 <td style="text-align:center;width: 5em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://r4ds.had.co.nz/">Free</a>
@@ -358,16 +358,16 @@ But there are multiple resources both online and locally that are available. Pri
 
 <center>
 <div class="wrapper">
-    <div class="icon directions">
+    <div class="icon leftright">
       <div class="tooltip"><span style=width:200px;>Move back and forth using <kbd>←</kbd> and <kbd>→</kbd></span></div>
       <span><i class="fas fa-map-signs"></i></span></div>
-    <div class="icon fullscreen">
+    <div class="icon info">
       <div class="tooltip"><span style=width:200px;>Toggle fullscreen by pressing <kbd>F</kbd></span></div>
       <span><i class="fas fa-expand-alt"></i></span>
-    </div><div class="icon overview">
+    </div><div class="icon github">
       <div class="tooltip"><span style=width:200px;>Press <kbd>O</kbd> for and overview of all slides</span></div>
       <span><i class="far fa-images"></i></span>
-    </div><div class="icon info">
+    </div><div class="icon youtube">
       <div class="tooltip"><span style=width:200px;>Discover more shortcuts by pressing <kbd>H</kbd></span></div>
       <span><i class="fas fa-info-circle"></i></span>
     </div>

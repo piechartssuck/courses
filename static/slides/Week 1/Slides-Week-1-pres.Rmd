@@ -798,6 +798,13 @@ Theory-Driven Evaluation
 
 ---
 
+## Example
+
+<center>
+<img src="img/redacted logic model.png" width="800">
+</center>
+
+---
 
 # Task: Evaluation Proposal
 

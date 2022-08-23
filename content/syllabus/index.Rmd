@@ -46,16 +46,16 @@ Please note that the slideshow goes through highlights of the syllabus, but you 
 ```{=html}
 <center>
 <div class="wrapper">
-    <div class="icon directions">
+    <div class="icon leftright">
       <div class="tooltip"><span style=width:200px;>Move back and forth using <kbd>←</kbd> and <kbd>→</kbd></span></div>
       <span><i class="fas fa-map-signs"></i></span></div>
-    <div class="icon fullscreen">
+    <div class="icon info">
       <div class="tooltip"><span style=width:200px;>Toggle fullscreen by pressing <kbd>F</kbd></span></div>
       <span><i class="fas fa-expand-alt"></i></span>
-    </div><div class="icon overview">
+    </div><div class="icon github">
       <div class="tooltip"><span style=width:200px;>Press <kbd>O</kbd> for and overview of all slides</span></div>
       <span><i class="far fa-images"></i></span>
-    </div><div class="icon info">
+    </div><div class="icon youtube">
       <div class="tooltip"><span style=width:200px;>Discover more shortcuts by pressing <kbd>H</kbd></span></div>
       <span><i class="fas fa-info-circle"></i></span>
     </div>
@@ -199,8 +199,8 @@ opttextstib <- tibble(
               "Creamer, E. G. (2017). <i>An introduction to fully integrated mixed methods research</i>. Sage.",
               "Mertens, D. M. (2018). <i>Mixed methods design in evaluation</i>. Sage",
               "Plano Clark, V. L. & Ivankova, N. V. (2015). <i>Mixed methods research: A guide to the field</i>. Sage.",
-              "Wickham, H., Navarro, D. & Pedersen, T.L. (2021). <i>ggplot2: Elegant Graphics for Data Analysis</i> (2nd and 3rd eds.). Springer.",
-              "Wickham, H. (2021). <i>R for Data Science</i> (1st ed.). O’Reilly Media."),
+              "Wickham, H., Navarro, D. & Pedersen, T.L. (2021). <i>ggplot2: Elegant graphics for data analysis</i> (2nd and 3rd eds.). Springer.",
+              "Wickham, H. (2021). <i>R for data science</i> (1st ed.). O’Reilly Media."),
   
   digital <- c("",
                "<a href='https://methods-sagepub-com.wvu.idm.oclc.org/book/an-introduction-to-fully-integrated-mixed-methods-research'>Free</a>",
@@ -278,16 +278,16 @@ But there are multiple resources both online and locally that are available. Pri
 ```{=html}
 <center>
 <div class="wrapper">
-    <div class="icon directions">
+    <div class="icon leftright">
       <div class="tooltip"><span style=width:200px;>Move back and forth using <kbd>←</kbd> and <kbd>→</kbd></span></div>
       <span><i class="fas fa-map-signs"></i></span></div>
-    <div class="icon fullscreen">
+    <div class="icon info">
       <div class="tooltip"><span style=width:200px;>Toggle fullscreen by pressing <kbd>F</kbd></span></div>
       <span><i class="fas fa-expand-alt"></i></span>
-    </div><div class="icon overview">
+    </div><div class="icon github">
       <div class="tooltip"><span style=width:200px;>Press <kbd>O</kbd> for and overview of all slides</span></div>
       <span><i class="far fa-images"></i></span>
-    </div><div class="icon info">
+    </div><div class="icon youtube">
       <div class="tooltip"><span style=width:200px;>Discover more shortcuts by pressing <kbd>H</kbd></span></div>
       <span><i class="fas fa-info-circle"></i></span>
     </div>
