@@ -19,6 +19,12 @@ This section will let you know what must be completed for the purposes of assess
 <center>
 `r fa("clock", fill = "#ff4e50")` &nbsp <i>Posted weekly</i> 
 </center>
+<br>
+<center>
+<p id="rounded_corners">
+All course tasks are typically due by 11:59 PM every Tuesday unless otherwise noted
+<p>
+</center>
 
 ### Need Help?
 

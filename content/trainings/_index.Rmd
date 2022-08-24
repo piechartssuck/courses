@@ -101,7 +101,10 @@ kable(dc_schedule %>%
 </center>
 
 #### Extra Credit
-The following modules are optional and may count as extra credit contingnet on the successful completion of the data camp course and corresponding assessment to be submitted via eCampus. Please note that each subsequent module is dependent on the previous one.
+The following modules are optional and may count as extra credit contingent on the successful completion of the data camp course and corresponding assessment to be submitted via eCampus. Please note that each subsequent module is dependent on the previous one.
+
+#### Working Ahead
+By no means do you have to wait for a particular module to be assigned. If you wish to enroll in a training - one that is assigned or otherwise - simply search for the name of that course on the Data Camp site. For those modules assigned for this course, you will receive credit after the due date has passed.
 
 <center>
 ```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
