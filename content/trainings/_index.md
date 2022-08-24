@@ -67,7 +67,7 @@ Chapters
 <tbody>
 <tr>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/modules/01-module/">Week 1</a>
+<a href="/modules/01-module/">Week 2</a>
 </td>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 8/30/22
