@@ -143,3 +143,5 @@ opensourcetexts %>%
 </center>
 
 This list only shows a very narrow slice of what are known as modern, or tidy friendly texts that are also in print. Barring a few instances here and there, each title should be accessible to anyone who understands the basic principles of *pipes* and *layers*. If you prefer a more comprehensive and up-to-date repository of nearly all open source texts about R, make sure to visit the impressive and ever growing [Big Book of R](https://www.bigbookofr.com/)! If you feel like I missed a helpful modern open source text, please let me know and I'll be happy to add it.
+
+hello
