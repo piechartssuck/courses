@@ -99,13 +99,17 @@ downloadthis::download_file(
 
 2. [Unzip](/resources/unzipping) them on your computer
 
-3. Open the file `Introduction to the Tidyverse walkthrough.Rmd`, click on Run Document, and then go through the walkthrough preferably in a larger window. To see how to do this, open the file `Introduction to the Tidyverse loading.gif` in the web browser of your choice or by another method to view the animated gif
+3. Open the file `Introduction to the Tidyverse walkthrough.Rmd` in RStudio.
 
-4. After finishing the walkthrough, open the mostly empty script to `Introduction to the Tidyverse script.R` and load up the `tidyverse` library. *Please be aware that it is included for you in this first task but will not be in the future*
+4. Run `install.packages('learnr')` in the Console and wait until the package installs
 
-5. Keeping the hashtag, erase the words at the top and replace them with your full name
+5. Click on Run Document, and then go through the walkthrough preferably in a larger window. To see how to do this, open the file `Introduction to the Tidyverse loading.gif` in the web browser of your choice or by another method to view the animated gif
 
-6. Load the `diamonds`^[Comes from the `ggplot2` package which is also in `tidyverse`] data set in the same way as `starwars` was shown in the walkthrough. Then recode the following values in the `cut` column in a new column named `cut_recoded`
+6. After finishing the walkthrough, open the mostly empty script to `Introduction to the Tidyverse script.R` and load up the `tidyverse` library. *Please be aware that it is included for you in this first task but will not be in the future*
+
+7. Keeping the hashtag, erase the words at the top and replace them with your full name
+
+8. Load the `diamonds`^[Comes from the `ggplot2` package which is also in `tidyverse`] data set in the same way as `starwars` was shown in the walkthrough. Then recode the following values in the `cut` column in a new column named `cut_recoded`
 
     - **Ideal** with **5**
     - **Premium** with **4**
@@ -115,6 +119,6 @@ downloadthis::download_file(
     
     and everything else with **0**. Your output should consist of two columns - the unique original values and their respective recoding.
 
-7. Save the file by adding your first initial and last name to the beginning of the filename. For example, my submission would be `aroy Introduction to the Tidyverse script.R`
+9. Save the file by adding your first initial and last name to the beginning of the filename. For example, my submission would be `aroy Introduction to the Tidyverse script.R`
 
-8. Submit the script to [eCampus](https://ecampus.wvu.edu) in the Submission Portal.
+10. Submit the script to [eCampus](https://ecampus.wvu.edu) in the Submission Portal.
