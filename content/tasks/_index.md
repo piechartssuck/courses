@@ -12,7 +12,7 @@ type: docs
 weight: 1
 ---
 
-{{% aes-header %}}
+{{% r-walkthrough-header %}}
 
 This section contains descriptions of course tasks. Materials will be posted on a weekly basis. Please note that these pages populate information about course related tasks on the left hand side **when they are assigned**. Due dates are given with the description of each task.
 
@@ -32,9 +32,9 @@ There are a lot of moving parts to this class. Students who gain the most out of
 
 Resources such as presentations, videos, visualizations, walkthroughs, etc. take a lot of time to construct so please take some time to go through them. Do the materials have top notch production value? No because I’m not a famous director from Hollywood will millions of dollars. However they should be good enough…even decent. Given that, I am always open to suggestions so if you have any, send them along!
 
-## Incremental Deliverables
+## Deliverables
 
-Throughout the course, you will have weekly opportunities to expand and refine your skill set culminating in a final product[^1]. Please include your name and submit all documents in either a <span style="color:#12b8ff;font-weight: bold;">.docx</span> or <span style="color:#f47a7b;font-weight: bold;">.pdf</span> format. *Remember that all submissions must be in a standard APA 7th edition formatting barring the need for a running header.*
+Throughout the course, you will have weekly opportunities that are incremental and intended to expand and refine your skill set culminating in set of final products[^1]. You are free to submit as a <span style="color:#12b8ff;font-weight: bold;">.docx</span> or <span style="color:#f47a7b;font-weight: bold;">.pdf</span> format. *Remember that all submissions must be in a standard APA 7th edition formatting barring the need for a running header.*
 
 <div id="anchorwk2">
 
@@ -171,6 +171,20 @@ After reviewing feedback, create a short one minute summary describing the resea
 
 </div>
 
+## Submission Formatting
+
+When submitting any task, please
+
+-   put your name in the upper left-hand corner
+
+-   use the following format: first initial + last name + exact name of the task. For example if I were submitting the week 2 deliverable, the it should be named
+
+    > `aroy Establish a Sampling Frame.docx`
+
+    or
+
+    > `aroy Establish a Sampling Frame.pdf`
+
 ## Academic Calendar and Availibility
 
 You can view the weeks of instruction on the [WVU Office of the Provost site](https://provost.wvu.edu/academic-calendar/weeks-of-instruction). Please note that I will have limited availability between Nov 9th - 12th and Nov 28th - Dec 9th.
@@ -179,4 +193,4 @@ You can view the weeks of instruction on the [WVU Office of the Provost site](ht
 
 {{% meetings %}}
 
-[^1]: If you’ve engaged with the course content and completed the exercises and mini projects throughout the course, you should do just fine with the final task.
+[^1]: If you’ve engaged with the course content and completed the exercises and assignments throughout the course, you should do just fine with the final tasks.
