@@ -12,7 +12,7 @@ type: docs
 weight: 1
 ---
 
-{{% aes-header %}}
+{{% r-walkthrough-header %}}
 
 This section contains descriptions of course tasks. Materials will be posted on a weekly basis. Please note that these pages populate information about course related tasks on the left hand side **when they are assigned**. Due dates are given with the description of each task.
 
@@ -34,7 +34,7 @@ Resources such as presentations, videos, visualizations, walkthroughs, etc. take
 
 ## Deliverables
 
-Throughout the course, you will have weekly opportunities that are incremental and intended to expand and refine your skill set culminating in set of final products[^1]. Please include your name and submit all documents in either a <span style="color:#12b8ff;font-weight: bold;">.docx</span> or <span style="color:#f47a7b;font-weight: bold;">.pdf</span> format. *Remember that all submissions must be in a standard APA 7th edition formatting barring the need for a running header.*
+Throughout the course, you will have weekly opportunities that are incremental and intended to expand and refine your skill set culminating in set of final products[^1]. You are free to submit as a <span style="color:#12b8ff;font-weight: bold;">.docx</span> or <span style="color:#f47a7b;font-weight: bold;">.pdf</span> format. *Remember that all submissions must be in a standard APA 7th edition formatting barring the need for a running header.*
 
 <div id="anchorwk2">
 
@@ -151,7 +151,17 @@ After reviewing feedback and making any needed corrections, create a short one m
 
 ## Submission Formatting
 
-When submitting,
+When submitting any task, please
+
+-   put your name in the upper left-hand corner
+
+-   use the following format: first initial + last name + exact name of the task. For example if I were submitting the week 2 deliverable, the it should be named
+
+    > `aroy Think about Studies.docx`
+
+    or
+
+    > `aroy Think about Studies.pdf`
 
 ## Academic Calendar and Availibility
 
