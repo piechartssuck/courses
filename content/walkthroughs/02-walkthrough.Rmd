@@ -1,0 +1,32 @@
+---
+title: "An Introduction to Surveys"
+linktitle: "Week 2: An Introduction to Surveys "
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  trainings:
+    parent: Walkthroughs
+    weight: 1
+type: docs
+weight: 2
+---
+
+`r blogdown::shortcode("r-walkthrough-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+```{r extra-libraries, echo=FALSE, message=FALSE, purl=FALSE}
+library(fivethirtyeight)
+```
+
+```{r setup, include=FALSE, purl=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(widgetframe_self_contained = TRUE) 
+knitr::opts_knit$set(root.dir = getwd())
+```
+
+This week's walkthrough is included in the [R Task](/modules/02-module/#associated-task) download

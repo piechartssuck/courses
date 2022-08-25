@@ -123,7 +123,7 @@ Get a better idea of program evaluation at <i>Better Evaluation</i>
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Think about terrible survey items
+Think about terrible survey items by assessing <span style="color:#89cff0;font-weight:bold">Bad Survey Questions</span>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/tasks/01-task/#mulling-bad-survey-questions"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>

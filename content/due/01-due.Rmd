@@ -33,7 +33,7 @@ Description = c("Read <i>CDC’s Introduction to Evaluation With a Focus on Publ
                 "Take a look at some evaluation checklists at <i>Western Michigan University</i>",
                 "Look over some logic models at the <i>University of Wisconsin Extension Program</i>",
                 "Get a better idea of program evaluation at <i>Better Evaluation</i>",
-                "Think about terrible survey items",
+                "Think about terrible survey items by assessing <span style='color:#89cff0;font-weight:bold'>Bad Survey Questions</span>",
                 "Get logged into the course Slack page and post on <a style='color:#ff8384;'>\\ #wk1-introduce-yourself</a>",
                 "Verify your Qualtrics account",
                 "Go through the slideshow <span style='color:#6ac4cd;font-weight:bold'>Criterial and Interpretive Evaluation: Keys to Merit, Worth, and Significance</span>",
