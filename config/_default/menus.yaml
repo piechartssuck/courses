@@ -44,6 +44,8 @@ tasks:
     weight: 1
   - name: Tasks
     weight: 2
+  - name: Deliverables
+    weight: 3
 due:
   - name: Overview
     weight: 1
