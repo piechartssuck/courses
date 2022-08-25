@@ -44,7 +44,7 @@ Week 2: Think about Studies
 </summary>
 <br>
 <p>
-Provide a table with columns defining at least three research and/or evaluation question or sets of research questions assessing the single concept as well how you could address the problems using quantitative or qualitative approaches or both.
+Provide a table with columns defining at least three research and/or evaluation question or sets of research questions assessing a single concept as well how you could address the problems using quantitative or qualitative approaches or both.
 <br>
 <br>
 <i>Note: Please consider the quantitative or qualitative approaches as separate studies that have no interaction with one another.</i>
@@ -148,6 +148,10 @@ After reviewing feedback and making any needed corrections, create a short one m
 </details>
 
 </div>
+
+## Submission Formatting
+
+When submitting,
 
 ## Academic Calendar and Availibility
 

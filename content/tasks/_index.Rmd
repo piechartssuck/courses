@@ -44,7 +44,7 @@ Throughout the course, you will have weekly opportunities to expand and refine y
 <details><summary>Week 2: Think about Studies</summary>
 <br>
 <p>
-Provide a table with columns defining at least three research and/or evaluation question or sets of research questions assessing the single concept as well how you could address the problems using quantitative or qualitative approaches or both.
+Provide a table with columns defining at least three research and/or evaluation question or sets of research questions assessing a single concept as well how you could address the problems using quantitative or qualitative approaches or both.
 <br>
 <br>
 <i>Note: Please consider the quantitative or qualitative approaches as separate studies that have no interaction with one another.</i>
@@ -113,6 +113,10 @@ After reviewing feedback and making any needed corrections, create a short one m
 </div>
 
 [^final]: If you've engaged with the course content and completed the exercises and mini projects throughout the course, you should do just fine with the final task.
+
+## Submission Formatting
+
+When submitting,  
 
 ## Academic Calendar and Availibility
 

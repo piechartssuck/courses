@@ -1,0 +1,89 @@
+---
+title: "Think about Studies"
+linktitle: "Week 2: Think about Studies"
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  tasks:
+    parent: Deliverables
+    weight: 1
+type: docs
+weight: 2
+editor_options: 
+  chunk_output_type: console
+---
+
+`r blogdown::shortcode("aes-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+<style>
+ul {
+    margin-left: 1.5em
+}
+</style>
+
+This task involves a multi-step process to address the underlying research or evaluation question of your eventual survey. Please follow the directions below.
+
+1. Open a blank copy of the following <img src="/logos/word-ico.png" alt="Word icon" width="50">
+
+2. Put your name in the top left corner
+
+3. Create a four column table with the following headers
+    ```{r eval = TRUE, echo = FALSE}
+    ex <- tibble(
+      
+      question = c(NA),
+      
+      approach = c(NA),
+      
+      measure = c(NA),
+      
+      latent = c(NA),
+      
+      trustworthiness = c(NA)
+       
+    ) 
+    ```
+    
+    <center>
+    ```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+    ex %>%
+      drop_na() %>%
+      kbl("html", 
+      escape = FALSE) %>%
+      kable_styling(full_width = FALSE, 
+                    font_size = 22,
+                    html_font = "roboto condensed") %>% 
+      row_spec(0, extra_css = 'vertical-align: middle !important;font-weight: 600;text-decoration:underline', color = "#f7f7f7", background = "transparent") 
+    ```
+    </center>
+    where the<br><br>
+    
+      a. <span style="font-weight:600; color:#f7f7f7; text-decoration:underline;font_size = 22;">question</span> is a possible underlying research or evaluation question that you would like to study
+      
+      b. <span style="font-weight:600; color:#f7f7f7; text-decoration:underline;font_size = 22;">approach</span> is a list of all possible quantitative and/or qualitative approaches you anticipate may be used to address the question 
+      
+      c. <span style="font-weight:600; color:#f7f7f7; text-decoration:underline;font_size = 22;">measure</span> is the direct quantitative measure
+      
+      d. <span style="font-weight:600; color:#f7f7f7; text-decoration:underline;font_size = 22;">latent</span> is the overall quantitative latent construct
+      
+      e. <span style="font-weight:600; color:#f7f7f7; text-decoration:underline;font_size = 22;">trustworthiness</span> is a short description of the essential qualitative characteristics or markers needed to assess the quality of the study<br><br>
+
+4. Submit this document to <a target="_blank" href="https://ecampus.wvu.edu/">eCampus</a>.
+
+<br />
+
+<i>Please note that if you do not know or are unsure of the meaning of a direct measure, latent construct, and/or trustworthiness please include the column names but leave the values blank. We will cover these concepts later in the term</i>
+
+<br />
+
+<center>
+<p id="rounded_corners">
+All submissions leading up to the final deliverables can be found on the main <a href="/tasks/#incrementaldeliverables">Tasks</a> page
+<p>
+</center>
