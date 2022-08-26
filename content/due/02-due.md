@@ -113,7 +113,7 @@ Watch some videos on the basics of Qualtrics
 Submit your first deliverable <span style="color:#6acda5;font-weight:bold">Establish a Sampling Frame</span>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/tasks/#anchorwk2"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
+<a href="/deliverables/01-l1/"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://ecampus.wvu.edu" target="_blank"><img src="/logos/wvu-gold-ico.png" alt="WVU icon" width="25"></a>
