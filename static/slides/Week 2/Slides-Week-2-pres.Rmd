@@ -16,10 +16,6 @@ output:
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-
-<link href='https://fonts.googleapis.com/css?family=Roboto Condensed' rel='stylesheet'>
-
 <script type="text/x-mathjax-config">
 MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
   MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
@@ -37,13 +33,59 @@ section {
     display: -webkit-flex;
 }
 
-
 section {
     height: 600px;
     width: 60%;
     margin: auto;
     border-radius: 21px;
     background-color: #212121;
+}
+
+.remark-slide-container {
+background: #212121;
+}
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
+}
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
+}
+
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
+}
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
 }
 
 section p {
@@ -59,10 +101,12 @@ section p {
 }
 
 #center {
-
 text-align: center;
-
 }
+
+#right {
+  text-align: right;
+} 
 
 .center p {
   margin: 0;
@@ -86,11 +130,6 @@ text-align: center;
     display: inline-block;
     margin-left: 40px;
 }
-
-td, th, tr, table {
-    border: 0 !important;
-    border-spacing:0 !important;
-  }
 </style>
 
 ```{css echo=FALSE}
@@ -110,7 +149,6 @@ library(knitr)
 library(kableExtra)
 library(fontawesome)
 library(here)
-library(clt)
 library(showtext)
 font_add_google("Roboto Condensed", "roboto")
 showtext_auto()
