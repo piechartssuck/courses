@@ -122,7 +122,7 @@ xaringanExtra::use_xaringan_extra(c("tile_view",
 
 xaringanExtra::use_logo(
   image_url = here::here("static", "img", "course_hex.png"),
-  link_url = "https://edp612.asocialdatascientist.com",
+  link_url = "https://edp618.asocialdatascientist.com",
   position = xaringanExtra::css_position(top = "1em", right = "1em")
 )
 

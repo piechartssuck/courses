@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Mixed Up Models</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr. Abhik Roy" />
+    <script src="Slides-Week-2-pres_files/header-attrs-2.16/header-attrs.js"></script>
+    <link href="Slides-Week-2-pres_files/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
+    <script src="Slides-Week-2-pres_files/tile-view-0.2.6/tile-view.js"></script>
+    <link href="Slides-Week-2-pres_files/animate.css-3.7.2/animate.xaringan.css" rel="stylesheet" />
+    <link href="Slides-Week-2-pres_files/tachyons-4.12.0/tachyons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Mixed Up Models
+]
+.subtitle[
+## EDP 618 Week 2
+]
+.author[
+### Dr. Abhik Roy
+]
+
+---
+
+
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"&gt;&lt;/script&gt;
+
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" /&gt;
+
+&lt;link href='https://fonts.googleapis.com/css?family=Roboto Condensed' rel='stylesheet'&gt;
+
+&lt;script type="text/x-mathjax-config"&gt;
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+  MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+    cancel: ["Extension","cancel"],
+    bcancel: ["Extension","cancel"],
+    xcancel: ["Extension","cancel"],
+    cancelto: ["Extension","cancel"]
+  });
+});
+&lt;/script&gt;
+
+&lt;style&gt;
+section {
+    display: flex;
+    display: -webkit-flex;
+}
+
+
+section {
+    height: 600px;
+    width: 60%;
+    margin: auto;
+    border-radius: 21px;
+    background-color: #212121;
+}
+
+section p {
+    text-align: center;
+    font-size: 30px;
+    background-color: #212121;
+    border-radius: 21px;
+    font-family: Roboto Condensed;
+    font-style: bold;
+    padding: 12px;
+    color: #bff4ee;
+    margin: auto;
+}
+
+#center {
+
+text-align: center;
+
+}
+
+.center p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.tab {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+td, th, tr, table {
+    border: 0 !important;
+    border-spacing:0 !important;
+  }
+&lt;/style&gt;
+
+&lt;style type="text/css"&gt;
+.highlight-last-item &gt; ul &gt; li,
+.highlight-last-item &gt; ol &gt; li {
+  opacity: 0.5;
+}
+.highlight-last-item &gt; ul &gt; li:last-of-type,
+.highlight-last-item &gt; ol &gt; li:last-of-type {
+  opacity: 1;
+}
+&lt;/style&gt;
+
+
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 110px;
+height: 128px;
+z-index: 0;
+background-image: url(/Users/skynet/Documents/WVU/Teaching/GitHub.nosync/edp618/static/img/course_hex.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:1em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('a')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = 'https://edp618.asocialdatascientist.com'
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+
+
+---
+
+class: highlight-last-item
+layout: true
+
+---
+
+#  Readings
+
+--
+
+1. Find a partner
+
+--
+
+2. Discuss 
+
+  + your current understanding of what Mixed Methods Research entails and why anyone would want to do it
+
+  + when Mixed Methods Research does or does not seem useful 
+
+--
+
+3. Come to a consensus and 
+
+  + co-write a single sentence definition of Mixed Methods Research and decide which partner will read it to the class
+
+  + draw a picture of your description
+
+--
+
+4. Submit your work to &lt;a href="https://edp618fall2022.slack.com/archives/C03UGNU6UFQ" target="_blank" style='color:#ff8384;'&gt;#in-class-work&lt;/a&gt; on Slack and be ready to discuss
+
+---
+
+#  Its About Triangulation 
+
+&lt;i&gt;Using multiple approaches, data sets, methods, theories, investigators, etc to increase the validity and credibility of  research findings&lt;/i&gt;
+
+  &gt; By &lt;b&gt;data source&lt;/b&gt; - multiple data collection points
+
+--
+
+  &gt; By &lt;b&gt;researcher&lt;/b&gt; – multiple researchers
+
+--
+
+  &gt; By &lt;b&gt;theory&lt;/b&gt; – multiple researchers with different theoretical perspectives
+
+--
+
+  &gt; By &lt;b&gt;method&lt;/b&gt; – multiple methods
+
+.pull-right[
+&lt;center&gt;
+Looking for more detail? Look over Luttrell (2005)&lt;br&gt;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a href="https://edp612.asocialdatascientist.com/handouts/Luttrell%20(2005).pdf" target='_blank' download="Luttrell (2005)"&gt;
+&lt;img src="img/pdf-ico.png" alt="Luttrell (2005)" width='35'&gt;
+&lt;/a&gt;
+&lt;center&gt;
+&lt;br&gt;
+]
+
+--
+
+  &gt; By &lt;b&gt;verification&lt;/b&gt; – member checking, inquiry audit
+
+--
+
+  &gt; By &lt;b&gt;examination of subjectivity&lt;/b&gt; – researcher journaling, inquiry audit
+
+
+---
+
+#  Working Definition of Mixed Methods Research
+
+--
+
+Mixed methodological approaches use paradigms, data sources, and/or analytic procedures from both quantitative and qualitative studies in various combinations.
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+.pull-right[
+Notice that there is a lot of detail NOT specified in this definition like
+  - assumptions, 
+  - data types
+  - models
+  - modes of analyses
+  - a description of the mixing process
+]
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+.pull-left[
+&lt;span style="text-align: center; display: inline-block; width: 100%;"&gt;&lt;span style="display: inline-block;"&gt;Rather than focus on nature of reality or the possibility of objective truth, focus on &lt;br&gt;&lt;br&gt;&lt;i&gt;What are the likely consequences of believing or acting on&lt;/span&gt;&lt;br&gt;
+&lt;span style="display: inline-block; border-bottom: 1px solid white; width: 200px"&gt;&lt;/span&gt;,&lt;br&gt; and combine elements of qualitative and quantitative&lt;br&gt; approaches to achieve stronger foundations for action.&lt;/i&gt;
+&lt;/span&gt;
+]
+
+---
+
+#  Uses for Standard Mixed Methods Approaches 
+
+--
+
+.pull-left[
+&lt;p id="center" style="color:#f5ebd9; font-weight: bold; border:1px; border-style:solid; border-color:#f5ebd9; border-radius: 25px; padding: 0.3em;"&gt;
+&lt;i&gt;Triangulation&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+a single phenomenon
+&lt;/p&gt;
+]
+
+--
+
+.pull-right[
+&lt;p id="center" style="color:#f0b5d3; font-weight: bold; border:1px; border-style:solid; border-color:#f5ebd9; border-radius: 25px; padding: 0.3em;"&gt;
+&lt;i&gt;Complementarity&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+overlapping phenomenon
+&lt;/p&gt;
+]
+
+--
+
+&lt;center&gt;
+&lt;br&gt;
+&lt;p id="center" style="color:#d9f5eb; font-weight: bold; border:1px; border-style:solid; border-color:#f5ebd9; border-radius: 25px; padding: 0.3em; width: 525px;"&gt;
+&lt;i&gt;Development&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+situations where one method informs another
+&lt;/p&gt;
+&lt;br&gt;
+&lt;/center&gt;
+
+--
+
+.pull-left[
+&lt;p id="center" style="color:#99d2dd; font-weight: bold; border:1px; border-style:solid; border-color:#99d2dd; border-radius: 25px; padding: 0.3em;"&gt;
+&lt;i&gt;Initiation&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+finding paradox(es) and/or contradiction(s)
+&lt;/p&gt;
+]
+
+--
+
+.pull-right[
+&lt;p id="center" style="color:#e1e1f9; font-weight: bold; border:1px; border-style:solid; border-color:#e1e1f9; border-radius: 25px; padding: 0.3em;"&gt;
+&lt;i&gt;Expansion&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+differing methods to address different phenomena
+&lt;/p&gt;
+]
+
+---
+
+#  Designs
+
+---
+
+## Explanatory
+
+--
+
+&lt;center&gt;
+&lt;img src="img/explanatory.png" width="55%"&gt;
+&lt;/center&gt;
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;i&gt;Process&lt;/i&gt;. qualitative data helps explain or build upon initial quantitative results
+
+--
+
+&lt;br&gt;
+.pull-left[
+&lt;i&gt;Strengths&lt;/i&gt;
+&lt;br&gt;
+- Single researcher
+- Two-phases
+- Single or multi-study
+- Quantitative oriented
+]
+
+--
+
+.pull-right[
+&lt;i&gt;Challenges&lt;/i&gt;
+&lt;br&gt;
+- Time consuming
+- Positives/negatives in using the same sample
+- IRB approval
+]
+
+---
+
+## Exploratory
+
+--
+
+&lt;center&gt;
+&lt;img src="img/exploratory.png" width="55%"&gt;
+&lt;/center&gt;
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;i&gt;Process&lt;/i&gt;. starts with qualitative data, to explore a phenomenon, and then builds to a second, quantitative phase
+
+--
+
+&lt;br&gt;
+.pull-left[
+&lt;i&gt;Strengths&lt;/i&gt;
+&lt;br&gt;
+- Single researcher
+- Two-phases
+- Single or multi-study
+- Qualitative oriented
+]
+
+--
+
+.pull-right[
+&lt;i&gt;Challenges&lt;/i&gt;
+&lt;br&gt;
+- Time consuming
+- Must the same sample
+- IRB approval
+]
+
+---
+
+## Triangulation
+
+--
+
+&lt;center&gt;
+&lt;img src="img/triangulation.png" width="30%"&gt;
+&lt;/center&gt;
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;i&gt;Process&lt;/i&gt;. implementation of the quantitative and qualitative methods during the same timeframe and with equal weight
+
+--
+
+&lt;br&gt;
+.pull-left[
+&lt;i&gt;Strengths&lt;/i&gt;
+&lt;br&gt;
+- Time reducing
+- Single-phase
+- Multi-study
+- Quantitative and Qualitative equally represented
+- IRB approval
+]
+
+--
+
+.pull-right[
+&lt;i&gt;Challenges&lt;/i&gt;
+&lt;br&gt;
+- Typically needs multiple researchers
+- Different samples are typically needed
+- Fragile
+]
+
+---
+
+# Create a model
+
+--
+
+1. Find a partner
+
+--
+
+2. Premise. The effect of the pandemic on student learning in a university setting
+
+--
+
+3. Come to a consensus and 
+
+  + Write a research question
+
+  + Come up with a mixed methods design using the *A Short But Not So Short Primer on Mixed Methods Designs* document as a reference
+  
+  + Outline the methodology and analyses
+
+--
+
+4. Submit your work to &lt;a href="https://edp618fall2022.slack.com/archives/C03UGNU6UFQ" target="_blank" style='color:#ff8384;'&gt;#in-class-work&lt;/a&gt; on Slack and be ready to discuss
+
+---
+
+#  That’s It! 
+
+Any questions?
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;center&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;div class="fade_rule"&gt;&lt;/div&gt;  
+&lt;br&gt;&lt;br&gt;
+&lt;/center&gt;
+
+&lt;center&gt;
+&lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;&lt;img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;This work is licensed under a &lt;br /&gt;&lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License&lt;/a&gt;
+&lt;/center&gt;
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"navigation": {
+"scroll": false
+}
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
