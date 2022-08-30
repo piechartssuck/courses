@@ -27,7 +27,7 @@ ul {
 }
 </style>
 
-This task involves a multi-step process to address the underlying research or evaluation question of your eventual survey. Please follow the directions below.
+This task involves a multi-step process to address the underlying research or evaluation question of your eventual mixed methods proposal. Please follow the directions below.
 
 1. Open a blank copy of the following <img src="/logos/word-ico.png" alt="Word icon" width="50">
 
