@@ -1,6 +1,6 @@
 ---
-title: "Exactly What is Mixed Methods Research?"
-linktitle: "Week 1: Exactly What is Mixed Methods Research?"
+title: "The Standard Models"
+linktitle: "Week 2: The Standard Models"
 toc: true
 output:
   rmarkdown::html_document:
@@ -19,23 +19,9 @@ weight: 1
 
 {{% aes-header %}}
 
-## Notes
-
-### for previous participants
-
-If you have participated in Data Camp before and would like to receive credit for assigned modules you have previously completed, make sure to login with the associated username. Please note that you must do this to qualify.
-
-### for new participants
-
-Please take your time with these modules. I suggest setting 3-4 hours for this initial set and go work in a way that’s conducive to your learning. The first module gives you an understand of the R environment while the second deals assigned next week deals with data wrangling and reshaping, namely making sure data is in what we call a “tidy” format. All analyses will be required to be performed in R. Please reach out if you need help!
-
-## Installing R and RStudio (soon to be called Posit)
-
-Go to the [Installing R, RStudio, and tidyverse](/resources/install/) page under Resources to get both R and RStudio installed on your system.
-
 ## Data Camp
 
-Please begin the following module
+Please finish up the following module
 
 <center>
 <table class=" lightable-paper" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
