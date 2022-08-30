@@ -67,13 +67,14 @@ dc_schedule <-
 kable(dc_schedule, 
       "html", 
       escape = FALSE,
-      align = 'cccll') %>%
+      align = 'ccccll') %>%
   kable_paper(full_width = TRUE) %>%
-  column_spec(1, width = "7em") %>%
+  column_spec(1, width = "5em") %>%
   column_spec(2, width = "5em") %>%
   column_spec(3, width = "5em") %>%
-  column_spec(4, width = "8em") %>%
+  column_spec(4, width = "5em") %>%
   column_spec(5, width = "8em") %>%
+  column_spec(6, width = "8em") %>%
   row_spec(0:nrow(dc_schedule), extra_css = 'vertical-align: middle !important;', color = "#f7f7f7", background = "transparent")
 ```
 </center>
