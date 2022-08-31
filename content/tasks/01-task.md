@@ -129,10 +129,10 @@ This week you have nothing to turn in but there is still something to do! First 
 
 </center>
 
-1.  Now download the [Bad Questions](/files/Week1/Bad_Questions.docx) document.<br><br>
-2.  Go through each item and just jot down what you think is off, misleading, etc. I will tell you each item has at lead one error that can lead to confusing from respondents - aka <b>response errors</b> and/or <b>item errors</b>.<br><br>
+1.  Now download the [Bad Questions](/files/Week%201/Bad_Questions.docx) document.<br><br>
+2.  Go through each item and just jot down what you think is off, misleading, etc. Each item has at lead one error that can lead to confusing from respondents - aka <b>response errors</b> and/or <b>item errors</b>.<br><br>
 
-*I will post solutions of what may be the most egregious errors next week.*<br>
+*Solutions of what may be the most egregious errors will be posted next week.*<br>
 
 ### Verify Qualtrics Account Login
 
