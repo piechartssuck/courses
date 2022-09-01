@@ -65,7 +65,6 @@ kable(dc_schedule,
 
 ## <code><span style='font-size:20px'>esquisse</span></code>
 
-
 This is optional, but will be helpful for many of you. If you would like to explore `ggplot2` using a more drag and drop approach, try the R package `esquisse`
 
 <center>
