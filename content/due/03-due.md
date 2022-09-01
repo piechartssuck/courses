@@ -61,7 +61,7 @@ Complete the module <span style="color:#ffc787;font-weight:bold"><i>Introduction
 Optionally download the package <code><span style="font-size:15px">esquisse</span></code> to help with learning about <code><span style="font-size:15px">ggplot2</span></code> using a more familiar drag and drop approach
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/modules03-module/#drag-and-drop-helper"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
+<a href="/modules/03-module/#codespan-stylefont-size20pxesquissespancode"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>

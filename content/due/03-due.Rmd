@@ -36,7 +36,7 @@ Description = c("Read <i>Covering the Population and Selecting Who to Survey</i>
 
 Details = c("<a href='/readings/03-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/modules/03-module/#data-camp'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
-            "<a href='/modules03-module/#drag-and-drop-helper'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/modules/03-module/#codespan-stylefont-size20pxesquissespancode'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/walkthroughs/03-walkthrough/#javascript-in-qualtrics-the-plug'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/tasks/03-task/#learn-about-sampling'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/deliverables/02-l2/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
