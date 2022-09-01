@@ -19,7 +19,7 @@ shiny: true
 
 {{% aes-header %}}
 
-Most class sessions have both interactive **Modules** courtesy of [Data Camp](https://www.datacamp.com/)[^1] and **Walkthroughs** created by me that you will need to work through ***after*** doing the readings and reviewing the corresponding content (if applicable). The lessons are a central part of the class and are focused on using the [tidyverse](https://www.tidyverse.org/) family of packages, though the approaches are certainly not the only ways to wrangle, clean, analyze, and visualize data in R.
+Many class sessions have both interactive **Modules** courtesy of [Data Camp](https://www.datacamp.com/)[^1] and **Walkthroughs** created by me that you will need to work through ***after*** doing the readings and reviewing the corresponding content (if applicable). The lessons are a central part of the class and are focused on using the [tidyverse](https://www.tidyverse.org/) family of packages, though the approaches are certainly not the only ways to wrangle, clean, analyze, and visualize data in R.
 
 ### Advice
 

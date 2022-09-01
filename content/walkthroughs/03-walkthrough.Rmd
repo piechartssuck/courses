@@ -32,12 +32,28 @@ knitr::opts_knit$set(root.dir = getwd())
 ## Javascript in Qualtrics: The Plug
 
 ### Synopsis
-Sometimes Qualtrics likes to include things you don't want. In this walkthrough, you'll figure out how to use the Javascript engine to get rid of some free advertisement that the service plugs into your survey.
+Sometimes Qualtrics likes to include things you don't want. Given that, you can edit almost everything on the platform with a little bit of code - no not by writing it though that helps, but just by knowing where to copy and paste. In this walkthrough, you'll figure out how to use the Javascript engine to get rid of some free advertisement that Qualtrics plugs into your survey.
 
 ### What you need
-Here is a [snippet](/snippets/qualtrics_plug.txt)^[Depending on your settings, you may have to right click to download the file.]. You'll need it for the walkthrough.
+The following download includes a text file known as a *snippet*, directions, and a copy of the gif shown below.
 
-### Video
 <center>
-<iframe class="smart-player-embed-container-iframe" id="embeddedSmartPlayerInstance" src="/videos/plug/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance" width="640" height="360" frameborder="0" scrolling="no"  frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+```{r echo=FALSE,eval=TRUE,message=FALSE}
+loc <- here::here("static", "snippets", "qualtricsplug.zip")
+
+downloadthis::download_file(
+  path = loc,
+  output_name = "Qualtrics Plug JS",
+  button_label = "&nbsp;&nbsp;&nbsp;<span style='color:#ffffff'>Download</span>",
+  button_type = "primary",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+</center>
+<br>
+
+<center>
+![](/img/gifs/qualtricsplug.gif){width=85%}
 </center>
