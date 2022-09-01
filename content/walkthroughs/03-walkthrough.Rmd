@@ -1,0 +1,43 @@
+---
+title: "Population, Selection, and Coverage"
+linktitle: "Week 3: Population, Selection, and Coverage "
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  trainings:
+    parent: Walkthroughs
+    weight: 3
+type: docs
+weight: 2
+---
+
+`r blogdown::shortcode("r-walkthrough-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+```{r extra-libraries, echo=FALSE, message=FALSE, purl=FALSE}
+library(fivethirtyeight)
+```
+
+```{r setup, include=FALSE, purl=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(widgetframe_self_contained = TRUE) 
+knitr::opts_knit$set(root.dir = getwd())
+```
+
+## Javascript in Qualtrics: The Plug
+
+### Synopsis
+Sometimes Qualtrics likes to include things you don't want. In this walkthrough, you'll figure out how to use the Javascript engine to get rid of some free advertisement that the service plugs into your survey.
+
+### What you need
+Here is a [snippet](/snippets/qualtrics_plug.txt)^[Depending on your settings, you may have to right click to download the file.]. You'll need it for the walkthrough.
+
+### Video
+<center>
+<iframe class="smart-player-embed-container-iframe" id="embeddedSmartPlayerInstance" src="/videos/plug/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance" width="640" height="360" frameborder="0" scrolling="no"  frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+</center>

@@ -8,7 +8,7 @@ output:
 menu:
   readings:
     parent: Readings
-    weight: 1
+    weight: 2
 type: docs
 weight: 1
 ---
@@ -38,7 +38,7 @@ review <- tibble(
   
   link <- c(
     paste0("[",book,"]",
-    "(https://ebookcentral.proquest.com/lib/wvu/reader.action?docID=1762797&ppg=21){target='_blank'}"
+    "(https://ebookcentral.proquest.com/lib/wvu/reader.action?docID=1762797&ppg=39){target='_blank'}"
     )
     
   ),

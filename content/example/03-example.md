@@ -30,8 +30,3 @@ Try using your initial surveys in [Qualtrics](wvu.qualtrics.com){target="_blank"
 <iframe class="smart-player-embed-container-iframe" id="embeddedSmartPlayerInstance" src="/videos/media/index_player.html?embedIFrameId=embeddedSmartPlayerInstance" width="640" height="360" frameborder="0" scrolling="no"  frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 </center>
 *Note: If the link for Atom is not working, please use this [link](https://atom.io/){target="_blank"}.*
-
-
-
-
-

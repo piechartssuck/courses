@@ -82,6 +82,7 @@ install.packages("tidyverse", dependencies = TRUE)
 ```{r, echo=FALSE, out.width="90%", purl=FALSE}
 include_graphics("/img/install/installtidy_console.png", error = FALSE)
 ```
+
 In either case, now load up the package by typing in following in the script area 
 
 <div class = "rounded">

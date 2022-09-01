@@ -8,7 +8,7 @@ output:
 menu:
   trainings:
     parent: Walkthroughs
-    weight: 1
+    weight: 2
 type: docs
 weight: 2
 ---

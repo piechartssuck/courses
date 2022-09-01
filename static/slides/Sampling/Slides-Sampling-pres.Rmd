@@ -1,0 +1,957 @@
+---
+title: "Sampling"
+subtitle: "EDP 619 Week 3"
+author: "Dr. Abhik Roy"
+output: 
+ xaringan::moon_reader:
+   css: ['xaringan-themer.css', 'custom.css']
+   nature:
+     ratio: 16:9
+     highlightStyle: github
+     highlightLines: true
+     countIncrementalSlides: false
+     navigation:
+         scroll: false
+---
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+  MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+    cancel: ["Extension","cancel"],
+    bcancel: ["Extension","cancel"],
+    xcancel: ["Extension","cancel"],
+    cancelto: ["Extension","cancel"]
+  });
+});
+</script>
+
+<style>
+section {
+    display: flex;
+    display: -webkit-flex;
+}
+
+section {
+    height: 600px;
+    width: 60%;
+    margin: auto;
+    border-radius: 21px;
+    background-color: #212121;
+}
+
+.remark-slide-container {
+background: #212121;
+}
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
+}
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
+}
+
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
+}
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
+}
+
+section p {
+    text-align: center;
+    font-size: 30px;
+    background-color: #212121;
+    border-radius: 21px;
+    font-family: Roboto Condensed;
+    font-style: bold;
+    padding: 12px;
+    color: #bff4ee;
+    margin: auto;
+}
+
+#center {
+text-align: center;
+}
+
+#right {
+  text-align: right;
+} 
+
+.center p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.tab {
+    display: inline-block;
+    margin-left: 40px;
+}
+</style>
+
+```{css echo=FALSE}
+.highlight-last-item > ul > li,
+.highlight-last-item > ol > li {
+  opacity: 0.5;
+}
+.highlight-last-item > ul > li:last-of-type,
+.highlight-last-item > ol > li:last-of-type {
+  opacity: 1;
+}
+```
+
+```{r setup, include=FALSE, purl=FALSE}
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+library(fontawesome)
+library(here)
+library(showtext)
+font_add_google("Roboto Condensed", "roboto")
+showtext_auto()
+```
+
+```{r echo = FALSE, purl=FALSE}
+xaringanthemer::style_duo(
+  primary_color = "#212121",
+  secondary_color = "#bff4ee",
+  link_color = "#b1ead6",
+  text_bold_color = "#4dc6e2",
+  table_row_border_color = "#212121",
+  table_row_even_background_color = "#212121",
+  footnote_font_size = "0.6em",
+  header_font_google = xaringanthemer::google_font("Roboto Condensed", "700"),
+  text_font_google   = xaringanthemer::google_font("Roboto Condensed", "400")
+)
+
+xaringanExtra::use_xaringan_extra(c("tile_view", 
+                                    "animate_css", 
+                                    "tachyons"))
+
+xaringanExtra::use_logo(
+  image_url = here::here("static", "img", "course_hex.png"),
+  link_url = "https://edp619.asocialdatascientist.com",
+  position = xaringanExtra::css_position(top = "1em", right = "1em")
+)
+
+```
+
+```{r echo=FALSE}
+image_link <- function(image,url,...){
+  htmltools::a(
+    href=url,
+    htmltools::img(src=image,...)
+    )
+}
+```
+
+---
+
+class: highlight-last-item
+layout: true
+
+---
+
+# Two Approaches to Sampling
+
+--
+
+<br>
+<br>
+.pull-left[
+<p id="center" style="color:#ffb3ba; font-weight: bold; border:1px; border-style:solid; border-color:#ffb3ba; border-radius: 25px; padding: 0.3em;">
+<i>Nonprobability</i><br><br>
+each person in your target population <i>does not</i> have an equal chance of being selected
+</p>
+]
+
+--
+
+.pull-right[
+<p id="center" style="color:#bae1ff; font-weight: bold; border:1px; border-style:solid; border-color:#bae1ff; border-radius: 25px; padding: 0.3em;">
+<i>Probability</i><br><br>
+each unit in your target population <i>must</i> have an equal chance of being selected
+</p>
+]
+
+---
+
+# <span style="color:#ffb3ba">Nonprobability</span> Sampling
+
+--
+
+>- Probability is usually unknown
+
+--
+
+>- Does not rely on numerical data
+
+--
+
+>- Inability to generalize to any populous
+
+--
+
+>- Used when you want to say something about a discrete phenomena, a few select cases (people, places, objects, etc)
+
+---
+
+## Characteristics
+
+--
+
+> Easier than probability based methods
+
+--
+
+> Nonrandom selection
+
+--
+
+> Sampling bias is present
+
+--
+
+> Samples are not considered representative of the populations from which they were drawn
+
+---
+
+## Primary Types
+
+--
+
+<br>
+<br>
+.pull-left[
+<p id="center" style="color:#e5a79c; font-weight: bold; border:1px; border-style:solid; border-color:#e5a79c; border-radius: 25px; padding: 0.3em;">
+<i>Convenience</i>
+</p>
+]
+
+--
+
+.pull-right[
+<p id="center" style="color:#e49bb5; font-weight: bold; border:1px; border-style:solid; border-color:#e49bb5; border-radius: 25px; padding: 0.3em;">
+<i>Purposive</i>
+</p>
+]
+
+
+--
+
+<br>
+<br>
+.pull-left[
+<p id="center" style="color:#74dab6; font-weight: bold; border:1px; border-style:solid; border-color:#74dab6; border-radius: 25px; padding: 0.3em; width: 525px;">
+<i>Quota</i>
+</p>
+]
+
+--
+
+.pull-right[
+<p id="center" style="color:#74cbda; font-weight: bold; border:1px; border-style:solid; border-color:#74cbda; border-radius: 25px; padding: 0.3em;">
+<i>Snowball</i>
+</p>
+]
+
+---
+
+## <span style="color:#e5a79c">Convenience</span> Sampling<sup>1</sup>
+
+--
+
+<br>
+.pull-left[
+* Samples are selected based on 
+
+  > their availability to the researcher
+
+* Good for
+
+  > administering a pilot study
+  
+  > generating a hypothesis
+  
+  > gaining an initial sense of attitudes or opinions
+]
+
+--
+
+.pull-right[
+<center>
+<br>
+<p id="center" style="color:#f4acf6; font-weight: bold; border:1px; border-style:solid; border-color:#e5a79c; border-radius: 25px; padding: 2em; width: 400px; height: 200px;">
+<b><span style="color:#eeeeee">Example</span></b><br><br>
+Crowdsourcing survey participants from a platform<sup>2</sup>
+</p>
+<br>
+</center>
+]
+
+--
+
+.footnote[<sup>1</sup> aka **haphazard** or **accidental** sampling<br><br>
+<sup>2</sup> like 
+<a href="https://www.mturk.com/" target="_blank">Amazon Mechanical Turk (MTurk)</a>]
+
+---
+
+## <span style="color:#e49bb5">Purposive</span> Sampling
+
+--
+
+<br>
+.pull-left[
+* Samples are selected based on 
+
+  > elective criteria that define a unique group
+  
+  > targeting knowledgeable individuals<sup>1</sup>
+
+* Good for
+
+  > focusing on the depth of relatively small samples
+  
+  > identifying cases, individuals, or communities best suited for a study
+  
+]
+
+--
+
+.pull-right[
+<center>
+<br>
+<p id="center" style="color:#f4acf6; font-weight: bold; border:1px; border-style:solid; border-color:#e49bb5; border-radius: 25px; padding: 2.3em; width: 400px; height: 200px;">
+<b><span style="color:#eeeeee">Example</span></b><br><br>
+Choosing skilled candidates for a job vacancy
+</p>
+<br>
+</center>
+]
+
+--
+
+.footnote[<sup>1</sup> aka **key informants**]
+
+---
+
+## <span style="color:#74dab6">Quota</span> Sampling
+
+--
+
+<br>
+.pull-left[
+
+* Samples are selected based on 
+
+  > defined subgroups that exhibit certain characteristics of interest
+
+* Good for
+
+  > gaining insight about a characteristic of a particular subgroup
+  
+  > investigating relationships between different subgroups
+  
+]
+
+--
+
+.pull-right[
+<center>
+<br>
+<p id="center" style="color:#f4acf6; font-weight: bold; border:1px; border-style:solid; border-color:#74dab6; border-radius: 25px; padding: 1.7em; width: 400px; height: 200px;">
+<b><span style="color:#eeeeee">Example</span></b><br><br>
+Assessing the the differences in the career goals among university freshman, sophomores, juniors, and seniors
+</p>
+<br>
+</center>
+]
+
+---
+
+## <span style="color:#74cbda">Snowball</span> Sampling<sup>1</sup>
+
+--
+
+<br>
+.pull-left[
+
+* Samples are selected based on 
+
+  > individuals recruited by other individuals
+
+* Good for
+
+  > researching people with specific traits who might otherwise be difficult to identify and/or gain access to
+  
+  > keeping costs low
+  
+]
+
+--
+
+.pull-right[
+<center>
+<br>
+<p id="center" style="color:#f4acf6; font-weight: bold; border:1px; border-style:solid; border-color:#74cbda; border-radius: 25px; padding: 2.3em; width: 400px; height: 200px;">
+<b><span style="color:#eeeeee">Example</span></b><br><br>
+Studying the current living status of ex-convicts
+</p>
+<br>
+</center>
+]
+
+--
+
+.footnote[<sup>1</sup> aka **chain** or **network** sampling]
+
+---
+
+## Why should I even care? 
+
+```{r eval = TRUE, echo = FALSE, fig.align='center'}
+knitr::include_graphics("img/cartman.gif")
+```
+
+--
+<br>
+<br>
+Because:
+
+--
+
+> Any choice will limit the type of utilizable quantitative study
+
+--
+
+> Not everything can be explained quantitatively
+
+--
+
+> Some studies even mandate a mixed methods design
+
+---
+
+# <span style="color:#bae1ff">Probability</span> Sampling
+
+> Based solely on the idea that a population can be represented by a subset of it given some error: **Random selection**
+
+<center>
+Example: 45% ± 3% agree with...
+</center>
+
+--
+
+> Ability to generalize to a certain populous
+
+--
+
+> Inability to describe individual phenomena at any great depth
+
+---
+
+## Characteristics
+
+--
+
+> Greater difficulty than non-probability based methods
+
+--
+
+> Random selection
+
+--
+
+> Sampling bias is minimal, and samples are considered representative of the populations from which they were drawn
+
+--
+
+> Samples are representative of the populations from which they were drawn
+
+---
+
+## Primary Types
+
+--
+
+<br>
+<br>
+.pull-left[
+<p id="center" style="color:#f9c7ca; font-weight: bold; border:1px; border-style:solid; border-color:#f9c7ca; border-radius: 25px; padding: 0.3em;">
+<i>Census</i>
+</p>
+]
+
+--
+
+.pull-right[
+<p id="center" style="color:#95f4f1; font-weight: bold; border:1px; border-style:solid; border-color:#95f4f1; border-radius: 25px; padding: 0.3em;">
+<i>Simple Random Sample (SRS)</i>
+</p>
+]
+
+--
+
+<center>
+<br>
+<p id="center" style="color:#ccfaca; font-weight: bold; border:1px; border-style:solid; border-color:#ccfaca; border-radius: 25px; padding: 0.3em; width: 525px;">
+<i>Systematic</i>
+</p>
+<br>
+</center>
+
+--
+
+.pull-left[
+<p id="center" style="color:#f7d5b5; font-weight: bold; border:1px; border-style:solid; border-color:#f7d5b5; border-radius: 25px; padding: 0.3em;">
+<i>Stratified</i>
+</p>
+]
+
+--
+
+.pull-right[
+<p id="center" style="color:#b1d5f7; font-weight: bold; border:1px; border-style:solid; border-color:#b1d5f7; border-radius: 25px; padding: 0.3em;">
+<i>Cluster</i>
+</p>
+]
+
+---
+
+## <span style="color:#f9c7ca">Census</span>
+
+--
+
+<br>
+.pull-left[
+
+* Samples are selected based on 
+
+  > an official count or survey of a population, typically recording various details of individuals
+
+* Good for
+
+  > ease of administration
+  
+  > generalizing to an overall populous
+  
+  > simple data analysis
+  
+  > small samples
+  
+]
+
+--
+
+.pull-right[
+<center>
+<br>
+<p id="center" style="color:#f4acf6; font-weight: bold; border:1px; border-style:solid; border-color:#f9c7ca; border-radius: 25px; padding: 2em; width: 400px; height: 200px;"><br>
+<b><span style="color:#eeeeee">Example</span></b><br><br>
+The United States Census
+</p>
+<br>
+</center>
+]
+
+---
+
+### General Idea
+
+```{r echo=FALSE, out.width="900px", fig.align='center'}
+knitr::include_graphics("img/census sampling.png")
+```
+
+---
+
+## Characteristics
+
+.pull-left[
+Benefits
+  > a lack of an error associated with a result
+  
+  > self-weighting
+
+]
+
+--
+
+.pull-right[
+Drawbacks
+  > extremely expensive
+  
+  > time consuming
+  
+  > typically infeasible
+]
+
+---
+
+## <span style="color:#95f4f1">Simple Random</span> Sample (SRS)
+
+--
+
+<br>
+.pull-left[
+
+* Samples are selected based on 
+
+  > an equal probability of being picked
+
+* Good for
+
+  > ease of administration
+  
+  > generalizing to an overall populous
+  
+  > simple data analysis
+  
+  > situations where not a lot is known about a population
+  
+  > large samples
+  
+]
+
+--
+
+.pull-right[
+<center>
+<br>
+<p id="center" style="color:#f4acf6; font-weight: bold; border:1px; border-style:solid; border-color:#95f4f1; border-radius: 25px; padding: 2em; width: 400px; height: 200px;"><br>
+<b><span style="color:#eeeeee">Example</span></b><br><br>
+Drawing names from a hat
+</p>
+<br>
+</center>
+]
+
+---
+
+## Characteristics
+
+.pull-left[
+Benefits
+
+  > data collection can be efficiently performed on randomly distributed items
+  
+  > simple error calculation
+  
+  > self-weighting
+
+]
+
+--
+
+.pull-right[
+Drawbacks
+  > expensive
+  
+  > likely impractical
+  
+  > possible underrepresentation of subgroups
+  
+  > tedious
+  
+  > time consuming
+  
+  > vulnerable to sampling errors
+]
+
+---
+
+### General Idea
+
+```{r echo=FALSE, out.width="900px", fig.align='center'}
+knitr::include_graphics("img/simple random sampling.png")
+```
+
+---
+
+## <span style="color:#ccfaca">Systematic</span> Sample
+
+--
+
+<br>
+.pull-left[
+
+* Samples are selected based on 
+
+  > arranging of a population according to some ordering pattern and then the selection of elements at regular intervals from that that ordered list
+
+* Good for
+
+  > ease of administration
+  
+  > automation of selection process<sup>1</sup>
+  
+  > providing more information about a population than an SRS
+  
+]
+
+--
+
+.pull-right[
+<center>
+<br>
+<p id="center" style="color:#f4acf6; font-weight: bold; border:1px; border-style:solid; border-color:#ccfaca; border-radius: 25px; padding: 2em; width: 400px; height: 200px;"><br>
+<b><span style="color:#eeeeee">Example</span></b><br><br>
+Picking every third house on a block to poll
+</p>
+<br>
+</center>
+]
+
+--
+
+.footnote[<sup>1</sup> after selecting the first unit]
+
+---
+
+## Characteristics
+
+.pull-left[
+Benefits
+
+  > most likely will provide a more robust information set per unit cost than an SRS
+  
+  > less subjective to selection error than SRS
+  
+  > simple selection process
+  
+]
+
+--
+
+.pull-right[
+Drawbacks
+  > dependence on a previous and next unit
+  
+  > vulnerable to periodicities
+
+]
+
+---
+
+### General Idea
+
+```{r echo=FALSE, out.width="900px", fig.align='center'}
+knitr::include_graphics("img/systematic random sampling.png")
+```
+
+---
+
+## <span style="color:#f7d5b5">Stratified</span> Random Sampling
+
+--
+
+<br>
+.pull-left[
+
+* Samples are selected based on 
+
+  > a population being divided and subdivided into distinct groups<sup>1</sup> followed by a simple random or systematic sample in each
+
+* Good for
+
+  > ease of administration
+  
+  > automation of selection process<sup>1</sup>
+  
+  > providing more information about a population than an SRS
+  
+]
+
+--
+
+.pull-right[
+<center>
+<br>
+<p id="center" style="color:#f4acf6; font-weight: bold; border:1px; border-style:solid; border-color:#f7d5b5; border-radius: 25px; padding: 2em; width: 400px; height: 200px;"><br>
+<b><span style="color:#eeeeee">Example</span></b><br><br>
+Administering a survey to random units of all apartment complexes in a town
+</p>
+<br>
+</center>
+]
+
+--
+
+.footnote[<sup>1</sup> aka **strata**]
+
+---
+
+## Characteristics
+
+.pull-left[
+Benefits
+
+  > less variability than an SRS
+  
+  > reduced sampling error
+  
+  > reduced reported error and increases precision compared to an SRS
+  
+]
+
+--
+
+.pull-right[
+Drawbacks
+  > may be expensive
+  
+  > strata must be implicitly defined
+
+]
+
+---
+
+### General Idea
+
+```{r echo=FALSE, out.width="900px", fig.align='center'}
+knitr::include_graphics("img/stratified random sampling.png")
+```
+
+---
+
+## <span style="color:#b1d5f7">Cluster</span> Random Sampling
+
+--
+
+<br>
+.pull-left[
+
+* Samples are selected based on 
+
+  > a population being divided and subdivided into distinct groups<sup>1</sup> followed by a random sample of those units with census in each
+
+
+* Good for
+
+  > when lacking a sampling frame
+  
+  > cost efficiency is needed
+  
+]
+
+--
+
+.pull-right[
+<center>
+<br>
+<p id="center" style="color:#f4acf6; font-weight: bold; border:1px; border-style:solid; border-color:#b1d5f7; border-radius: 25px; padding: 2em; width: 400px; height: 200px;"><br>
+<b><span style="color:#eeeeee">Example</span></b><br><br>
+Picking every third house on a block to poll
+</p>
+<br>
+</center>
+]
+
+--
+
+.footnote[<sup>1</sup> aka **clusters**]
+
+---
+
+## Characteristics
+
+.pull-left[
+Benefits
+
+  > clusters can be stratified if necessary which results in increased precision
+  
+  > less subjective to selection error than SRS
+  
+  > simple selection process
+  
+]
+
+--
+
+.pull-right[
+Drawbacks
+  > may not represent diversity within a populous
+  
+  > prone to high sampling errors
+  
+  > requires a larger sample size than SRS
+
+]
+
+---
+
+### General Idea
+
+```{r echo=FALSE, out.width="900px", fig.align='center'}
+knitr::include_graphics("img/cluster random sampling.png")
+```
+
+---
+
+## That's it!
+
+If you have any questions, please reach out
+
+--
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<center>
+<br><br>
+<div class="fade_rule"></div>  
+<br><br>
+</center>
+
+<center>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><br />This work is licensed under a <br /><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>
+</center>

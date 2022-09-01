@@ -1,0 +1,50 @@
+---
+title: "Create a Draft "
+linktitle: "Week 4: Create a Draft "
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  tasks:
+    parent: Deliverables
+    weight: 1
+type: docs
+weight: 2
+editor_options: 
+  chunk_output_type: console
+---
+
+`r blogdown::shortcode("aes-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+<style>
+ul {
+    margin-left: 1.5em
+}
+</style>
+
+*Posting later today*
+
+<!--
+This task involves a multi-step process to address the underlying research or evaluation question of your eventual survey. Please follow the directions below.
+
+1. Open a blank copy of the following <img src="/logos/word-ico.png" alt="Word icon" width="50">
+
+2. Put your name in the top left corner
+
+3. Construct a one to three paragraph case for a population (and its corresponding size) that needs to be surveyed, an estimate of the sample size, why it needs to be studied, and what type of data should be collected. Furthermore include at least one evaluation and/or research question and intended analyses.
+
+4. Submit this document to <a target="_blank" href="https://ecampus.wvu.edu/">eCampus</a>.<br><br>
+-->
+
+<br />
+
+<center>
+<p id="rounded_corners">
+All incremental deliverables can be found on the main <a href="/tasks/#deliverables">Tasks</a> page
+<p>
+</center>

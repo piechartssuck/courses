@@ -31,6 +31,6 @@ To follow up from last week, look over the possible solutions to the [Bad Questi
 [Learn to Use Qualtrics for Research](https://basecamp.qualtrics.com/path/learn-to-use-qualtrics-for-research){target="_blank"} and go through the video series. Please note that you may have to login with your WVU username and password.
 
 
-### Create a Draft
+### Establish a Sampling Frame
 
-Turn in your first deliverable. More details can be found [here](/tasks/#anchorwk2)
+Turn in your first deliverable. More details can be found [here](/deliverables/01-l1/)

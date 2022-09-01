@@ -60,6 +60,7 @@ install.packages("tidyverse", dependencies = TRUE)
 </div>
 
 <img src="../../../../../../../../../img/install/installtidy_console.png" width="90%" />
+
 In either case, now load up the package by typing in following in the script area
 
 <div class="rounded">
@@ -220,7 +221,6 @@ drinks
     ## 10 Austria                     279              75           191             9.7
     ## # … with 183 more rows, and abbreviated variable name
     ## #   ¹​total_litres_of_pure_alcohol
-    ## # ℹ Use `print(n = ...)` to see more rows
 
 </div>
 
