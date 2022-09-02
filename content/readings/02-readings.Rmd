@@ -22,7 +22,7 @@ source(here::here("content", "com_libs.R"))
 ### Download Literature
 
 ```{r echo=FALSE,eval=TRUE,message=FALSE}
-loc <- here::here("static", "readings", "EDP618Week1Readings.zip")
+loc <- here::here("static", "readings", "EDP618Week2Readings.zip")
 
 downloadthis::download_file(
   path = loc,
