@@ -27,19 +27,47 @@ ul {
 }
 </style>
 
-*Posting later today*
 
-<!--
-This task involves a multi-step process to address the underlying research or evaluation question of your eventual survey. Please follow the directions below.
+This task involves a multi-step process to address the underlying research or evaluation question of your eventual survey. Please follow the directions below^[These items assume that Qualtrics is used. If you are using another mode, please amend your responses to for the requirements of that platform]
 
-1. Open a blank copy of the following <img src="/logos/word-ico.png" alt="Word icon" width="50">
+1. First download the following 
 
-2. Put your name in the top left corner
+<center>
+```{r echo=FALSE,eval=TRUE,message=FALSE}
+loc <- here::here("static", "files", "skeleton.zip")
 
-3. Construct a one to three paragraph case for a population (and its corresponding size) that needs to be surveyed, an estimate of the sample size, why it needs to be studied, and what type of data should be collected. Furthermore include at least one evaluation and/or research question and intended analyses.
+downloadthis::download_file(
+  path = loc,
+  output_name = "Survey Skeleton",
+  button_label = "&nbsp;&nbsp;&nbsp;<span style='color:#ffffff'>Download</span>",
+  button_type = "primary",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+</center>
+<br>
 
-4. Submit this document to <a target="_blank" href="https://ecampus.wvu.edu/">eCampus</a>.<br><br>
--->
+2. Open both files and review the variable names and descriptions in the codebook
+
+3. Fill out the following columns^[While not required at the current time, you are free to fill out any of the remaining columns as needed]
+
+  + **Item**. Survey items in the order they will currently appear. 
+  
+  + **ItemType**. Question type as allowed by [Qualtrics](https://www.qualtrics.com/support/survey-platform/survey-module/editing-questions/question-types-guide/question-types-overview/)
+  
+  + **Measure**. Direct measure of the item
+  
+  + **Latent**. Indirect measure of a category
+
+4. After you have completed the draft, login to the [WVU Qualtrics](https://wvu.qualtrics.com) page, create a new survey, and construct an instrument that is a direct reflection of the skeleton
+
+5. Share your survey by enabling [Collaboration](https://www.qualtrics.com/support/survey-platform/my-projects/sharing-a-project/)^[Please disallow editing privileges] 
+
+6. Fill out the **Index** column with the item number provided in Qualtrics. Consider [auto-numbering](https://www.qualtrics.com/support/survey-platform/survey-module/survey-tools/auto-number-questions/) your questions to renumber them in order
+
+7. Rename the document by following the [submission guidelines](/tasks/#submission-formatting) and submit this document to <a target="_blank" href="https://ecampus.wvu.edu/">eCampus</a><br><br>
 
 <br />
 
