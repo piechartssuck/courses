@@ -22,7 +22,7 @@ All course tasks are typically due by 11:59 PM every Tuesday unless otherwise no
 <p>
 </center>
 
-### Need Help?
+## Need Help?
 
 {{% meetings %}}
 

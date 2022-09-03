@@ -189,7 +189,7 @@ When submitting any task, please
 
 You can view the weeks of instruction on the [WVU Office of the Provost site](https://provost.wvu.edu/academic-calendar/weeks-of-instruction). Please note that I will have limited availability between Nov 9th - 12th and Nov 28th - Dec 9th.
 
-### Need Help?
+## Need Help?
 
 {{% meetings %}}
 

@@ -4,6 +4,10 @@ menu:
   trainings:
     parent: Overview
     weight: 1
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
 type: docs
 weight: 1
 shiny: true
@@ -21,19 +25,19 @@ shiny: true
 
 Many class sessions have both interactive **Modules** courtesy of [Data Camp](https://www.datacamp.com/)[^1] and **Walkthroughs** created by me that you will need to work through ***after*** doing the readings and reviewing the corresponding content (if applicable). The lessons are a central part of the class and are focused on using the [tidyverse](https://www.tidyverse.org/) family of packages, though the approaches are certainly not the only ways to wrangle, clean, analyze, and visualize data in R.
 
-### Advice
+## Advice
 
 Carve out some time everyday to go through these. If you try to complete everything in one sitting, it will probably be overwhelming! However if you have familiarity with some modules, please feel free to work ahead.
 
-### Grading
+## Grading
 
 The ultimate point of Data Camp is to get you familiarized with an environment that you likely have never seen or been exposed to. While you should absolutely go through each module, there is certainly no expectation that you will get everything right. In fact, the points that you incur don’t mean anything as far as how you are assessed so please use hints as needed! As with any things data science, you’ll learn by doing. If you have a polar personality type as it pertains to work (i.e. primarily a perfectionist or mostly careless), then the modules will likely prove to be a challenge. The chance that you will be able to comprehend everything by going beyond your limit or conversely assuming it will just come to you is low so please work hard but also take breaks, swear[^2], and look on the Internet, ask peers or reach out for help. Your score is predicated on putting in a solid effort, rather than getting it perfect because thats not realistic when it comes to data.
 
-### Data Camp Schedule
+## Data Camp Schedule
 
 A *tentative* schedule is given below. The **Course** and **Chapter** names represent Data Camp titles[^3]:
 
-#### Required
+### Required
 
 The following modules are required and will count toward your final grade
 
@@ -1256,7 +1260,7 @@ Case study: Airbnb reviews
 </tbody>
 </table>
 
-#### Recommended
+### Recommended
 
 The following modules are optional but highly recommended
 
@@ -1539,11 +1543,11 @@ Case studies
 </table>
 </center>
 
-#### Extra Credit
+### Extra Credit
 
 The following modules are optional and may count as extra credit contingent on the successful completion of the data camp course and corresponding assessment to be submitted via eCampus. Please note that each subsequent module is dependent on the previous one.
 
-#### Working Ahead
+### Working Ahead
 
 By no means do you have to wait for a particular module to be assigned. If you wish to enroll in a training - one that is assigned or otherwise - simply search for the name of that course on the Data Camp site. For those modules assigned for this course, you will receive credit after the due date has passed.
 
@@ -1861,7 +1865,7 @@ Build, Tune & Evaluate Classification Models
 </table>
 </center>
 
-### Need Help?
+## Need Help?
 
 {{% meetings %}}
 

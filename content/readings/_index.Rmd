@@ -31,3 +31,7 @@ So you should absolutely read it to get a basis but in the long run, you will le
     <td align='right'>&#8212; Peter Griffin</td>
   </tr>
 </table>
+
+## Need Help?
+
+`r blogdown::shortcode("meetings")`
