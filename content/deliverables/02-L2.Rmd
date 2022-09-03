@@ -69,10 +69,10 @@ downloadthis::download_file(
 
 7. Rename the document by following the [submission guidelines](/tasks/#submission-formatting) and submit this document to <a target="_blank" href="https://ecampus.wvu.edu/">eCampus</a><br><br>
 
-<br />
-
 <center>
 <p id="rounded_corners">
 All incremental deliverables can be found on the main <a href="/tasks/#deliverables">Tasks</a> page
 <p>
 </center>
+
+<br />
