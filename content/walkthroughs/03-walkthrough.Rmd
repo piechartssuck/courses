@@ -35,7 +35,7 @@ knitr::opts_knit$set(root.dir = getwd())
 Sometimes Qualtrics likes to include things you don't want. Given that, you can edit almost everything on the platform with a little bit of code - no not by writing it though that helps, but just by knowing where to copy and paste. In this walkthrough, you'll figure out how to use the Javascript engine to get rid of some free advertisement that Qualtrics plugs into your survey.
 
 ### What you need
-The following download includes a text file known as a *snippet*, directions, and a copy of the gif shown below. The example survey has been shared with you on Qualtrics^[You will need to access your [shared surveys](https://www.qualtrics.com/support/survey-platform/my-projects/sharing-a-project/#AccessingSharedSurveys) and [copy](https://www.qualtrics.com/support/survey-platform/my-projects/my-projects-overview/#Organizing) it over to your account in order to edit].
+The following download includes a text file known as a *snippet*, directions, and a copy of the gif shown below. The example survey^[Please note that you are not taking the survey, rather this is just a throw away example that we are using for a few walkthroughs] has been shared with you on Qualtrics^[To follow the directiions, you will need edit the survey. This can be done by accessing your [shared surveys](https://www.qualtrics.com/support/survey-platform/my-projects/sharing-a-project/#AccessingSharedSurveys) to [copy](https://www.qualtrics.com/support/survey-platform/my-projects/my-projects-overview/#Organizing) the instrument over to your account].
 
 <center>
 ```{r echo=FALSE,eval=TRUE,message=FALSE}
