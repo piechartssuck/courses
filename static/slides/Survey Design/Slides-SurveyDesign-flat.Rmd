@@ -1,0 +1,1112 @@
+---
+title: 'Survey Design'
+subtitle: "EDP 619 Week 4"
+author: "Dr. Abhik Roy"
+output: 
+ xaringan::moon_reader:
+   css: ['xaringan-themer.css', 'custom.css']
+   nature:
+     ratio: 16:9
+     highlightStyle: github
+     highlightLines: true
+     countIncrementalSlides: false
+     navigation:
+         scroll: false
+---
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+  MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+    cancel: ["Extension","cancel"],
+    bcancel: ["Extension","cancel"],
+    xcancel: ["Extension","cancel"],
+    cancelto: ["Extension","cancel"]
+  });
+});
+</script>
+
+<style>
+section {
+    display: flex;
+    display: -webkit-flex;
+}
+
+section {
+    height: 600px;
+    width: 60%;
+    margin: auto;
+    border-radius: 21px;
+    background-color: #212121;
+}
+
+.remark-slide-container {
+background: #212121;
+}
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
+}
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
+}
+
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
+}
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
+}
+
+section p {
+    text-align: center;
+    font-size: 30px;
+    background-color: #212121;
+    border-radius: 21px;
+    font-family: Roboto Condensed;
+    font-style: bold;
+    padding: 12px;
+    color: #bff4ee;
+    margin: auto;
+}
+
+#center {
+text-align: center;
+}
+
+#right {
+  text-align: right;
+} 
+
+.center p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.tab {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.obr
+{
+    display:block;
+    margin-top:-15px;
+}
+</style>
+
+```{css echo=FALSE}
+.highlight-last-item > ul > li,
+.highlight-last-item > ol > li {
+  opacity: 0.5;
+}
+.highlight-last-item > ul > li:last-of-type,
+.highlight-last-item > ol > li:last-of-type {
+  opacity: 1;
+}
+```
+
+```{r setup, include=FALSE, purl=FALSE}
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+library(fontawesome)
+library(here)
+library(showtext)
+font_add_google("Roboto Condensed", "roboto")
+showtext_auto()
+```
+
+```{r echo = FALSE, purl=FALSE}
+xaringanthemer::style_duo(
+  primary_color = "#212121",
+  secondary_color = "#bff4ee",
+  link_color = "#b1ead6",
+  text_bold_color = "#4dc6e2",
+  table_row_border_color = "#212121",
+  table_row_even_background_color = "#212121",
+  footnote_font_size = "0.6em",
+  header_font_google = xaringanthemer::google_font("Roboto Condensed", "700"),
+  text_font_google   = xaringanthemer::google_font("Roboto Condensed", "400")
+)
+
+xaringanExtra::use_xaringan_extra(c("tile_view", 
+                                    "animate_css", 
+                                    "tachyons"))
+
+xaringanExtra::use_logo(
+  image_url = here::here("static", "img", "course_hex.png"),
+  link_url = "https://edp619.asocialdatascientist.com",
+  position = xaringanExtra::css_position(top = "1em", right = "1em")
+)
+```
+
+
+#  The Tailored Design Method (TDM) 
+
+--
+
+- Premised on social exchange perspective on human behavior - *You do something for me, and I do something for you*
+
+--
+
+- Assumes that the likelihood of responding is greater when the expected rewards outweigh the anticipated costs - *Increased benefits with decreased costs*
+
+---
+
+# Approaches to Increasing Benefits 
+
+--
+
+- Provide information about the survey
+
+--
+
+- Ask for help or advice
+
+--
+
+- Show positive regard
+
+--
+
+- Say thank you!
+
+--
+
+- Support group values
+
+--
+
+- Give tangible rewards 
+
+--
+
+- Make the questionnaire interesting
+
+--
+
+- Provide social validation
+
+--
+
+- Inform people that opportunities to respond are limited
+
+---
+
+# Approaches to Decreasing Costs 
+
+--
+
+
+- Avoid subordinating language
+
+--
+
+- Emphasize similarity to other requests or tasks to which a person has already responded
+
+--
+
+- Make it convenient to respond
+
+--
+
+- Make the questionnaire short and easy to complete
+
+--
+
+- Minimize requests for personal or sensitive information
+
+---
+
+#  Establishing Trust
+
+--
+
+- Provide information about the survey
+
+--
+
+- Ask for help or advise
+
+--
+
+- Show positive regard
+
+--
+
+- Say thank you!
+
+---
+
+#  Choosing Words and Forming Question
+
+--
+
++ Ask one question at a time
+
+--
+
++ Be sure the question specifies the response task
+
+--
+
++ Make sure the question applies to the respondent
+
+--
+
++ Make sure the question is technically accurate
+
+--
+
++ Make sure *yes* means **yes** and *no* means **no**
+
+--
+
++ Use complete sentences with simple sentence structures
+
+--
+
++ Use as few words as possible to pose the question
+
+--
+
++ Use specific and concrete words to specify the concepts clearly
+
+--
+
++ Use simple and familiar words
+
+---
+
+# Visual Presentation of Survey Questions (1/2)
+
+--
+
++ Choose line spacing, font, and text size to ensure the legibility of the text
+
+--
+
++ Integrate special instructions into the question where they will be used rather than including them as freestanding entities
+
+--
+
++ Make sure words and visual elements that make up the question send consistent messages
+
+--
+
++ Organize each question in a way that minimizes the need to reread portions in order to comprehend the response task
+
+--
+
++ Separate optional or occasionally needed instructions from the question stem by font or symbol variation
+
+
+---
+
+# Visual Presentation of Survey Questions (2/2)
+
+--
+
++ Use darker and/or larger print for the question and lighter and/or smaller print for answer choices and answer spaces
+
+--
+
++ Use spacing to create subgrouping within a question
+
+--
+
++ Use visual design properties to emphasize elements that are important to the respondent and to de-emphasize those that are not
+
+--
+
++ Visually standardize all answer spaces or response options
+
+---
+
+#  First Things First: Avoid Double-Barreled Questions!
+
+--
+
+.pull-left[
+<img src="img/image2a.png" width="75%" height="75%"/>
+]
+
+--
+
+.pull-left[
+<img src="img/image2b.png" width="75%" height="75%"/>
+]
+
+---
+
+#  Double-Barreled Questions – What’s the problem? 
+
+--
+
+<center>
+<img src="img/image3.png" width="35%" height="35%"/>
+</center>
+<br>
+
+--
+
+<hr style="width:100px; margin: auto;" />
+<br>
+<br>
+<center>
+Respondents don’t know what you are asking for
+</center>
+
+--
+
+<br>
+<center>
+If the answer is <b>Yes</b>, then are the respondents saying it for the burger, fries, or both?
+</center>
+
+--
+
+<br>
+<center>
+This can lead to massive bias, unreliable or unusable results
+</center>
+
+---
+
+# Structures
+
+**The following slides consist of examples of common structures of survey items.**
+ 
+***This is by no means comprehensive!***
+
+---
+
+##  Nominal Type Questions 
+
+.center2[
+<img src="img/image4.png" width="90%" height="90%" style="background-color:#212121;"/>
+]
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+.footnote[
+*More about [nominal variables](https://statsandr.com/blog/variable-types-and-examples/#nominal)*
+]
+
+---
+
+##  Nominal Type Questions - Dichotomous
+
+--
+
+.center2[
+<img src="img/image5.png" width="85%" height="85%"/>
+]
+
+---
+
+##  Ordinal Type Questions
+
+--
+
+<center>
+<img src="img/image6.png" width="55%" height="55%"/>
+</center>
+
+
+.footnote[
+*More about [ordinal variables](https://statsandr.com/blog/variable-types-and-examples/#ordinal)*
+]
+
+---
+
+## More About Ordinal Type Questions
+
+--
+
+
+<center>
+<img src="img/image7.png" width="65%" height="65%"/>
+</center>
+
+---
+
+### Ordinal or Nominal?
+
+--
+
+<br>
+<br>
+<br>
+<br>
+<br>
+.pull-left[
+<img src="img/image8a.png" width="95%" height="95%"/>
+]
+
+--
+
+.pull-right[
+<img src="img/image8b.png" width="95%" height="95%"/>
+]
+
+---
+
+## Semantic Differentials
+
+--
+
+<br>
+.pull-left[
+<img src="img/image9a.png" width="65%" height="65%"/>
+]
+
+--
+
+.pull-right[
+<img src="img/image9b.png" width="55%" height="55%"/>
+]
+
+--
+
+.pull-left[
+<img src="img/image9c.png" width="65%" height="30%"/>
+]
+
+---
+
+## Visual Analogs
+
+--
+
+<br>
+<br>
+<center>
+<img src="img/image10a.png" width="45%" height="45%"/>
+</center>
+
+--
+
+<br>
+<br>
+<center>
+<img src="img/image10b.png" width="67%" height="67%"/>
+</center>
+---
+
+## Guttman Scaling
+
+--
+
+.center2[
+<img src="img/image11.png" width="90%" height="90%"/>
+]
+
+---
+
+## Filters/Skip Patterns
+
+--
+
+Comes in many names:
+
+--
+
+> Skip logic
+
+--
+
+> Conditional Branching
+
+--
+
+> Conditional Logic
+
+--
+
+<br>
+.pull-right[
+<img src="img/image13.png" width="80%" height="80%" />
+]
+
+
+---
+
+# Closed Ended
+
+---
+
+# General Structural Guidelines
+
+--
+
+- State both positive and negative sides in the question stem when asking either/or types of questions
+
+--
+
+- Develop lists of answer categories that include all reasonable possible answers
+
+--
+
+- Develop lists of answer categories that are mutually exclusive
+
+--
+
+- Maintain spacing between answer categories that is consistent with measurement intent
+
+---
+
+## Positive and Negative Sides in Question Stem
+
+
+.pull-left[
+<img src="img/image14a.png" width="57%" height="57%" />
+]
+
+--
+
+.pull-right[
+<img src="img/image14c.png" width="80%" height="80%" />
+]
+
+--
+
+.pull-left[
+<img src="img/image14b.png" width="70%" height="70%" />
+]
+
+--
+
+.pull-right[
+<img src="img/image14d.png" width="80%" height="80%" />
+]
+
+---
+
+## Exhaustive and Mutually Exclusive Questions
+
+--
+
+<br>
+<br>
+.pull-left[
+<center>
+<img src="img/image15.png" width="97%" height="97%" />
+</center>
+]
+
+--
+
+.pull-right[
+<center>
+<img src="img/image16.png" width="97%" height="97%" />
+</center>
+]
+
+---
+
+## Spacing Response Options Evenly
+
+--
+
+<br>
+<br>
+<center>
+&emsp; &emsp; &emsp; &nbsp; <img src="img/image17a.png" width="68%" height="68%" />
+</center>
+
+--
+
+<br>
+<br>
+<center>
+<img src="img/image17b.png" width="60%" height="60%" />
+</center>
+
+---
+
+# Closed-Ended Questions: Nominal Scales
+
+--
+
+- Ask respondents to rank only a few items at once rather than a long list
+
+--
+
+- Avoid bias from unequal comparisons
+
+--
+
+- Randomize response options if there is concern about order effects
+
+--
+
+- Use forced-choice questions rather than check-all-that-apply questions
+
+--
+
+- Consider using differently shaped answer spaces (circles and squares if possible) to help respondents distinguish between single- and multiple-answer questions
+
+---
+
+## Unordered
+
+--
+
+<img src="img/image18a.png" width="50%" height="50%" />
+
+--
+
+<br>
+.pull-right[
+<img src="img/image18b.png" width="100%" height="100%" />
+]
+
+---
+
+## Unordered
+
+.center2[
+<img src="img/image18c.png" width="90%" height="90%" />
+]
+
+---
+
+## Comparisons (1/2)
+
+<br>
+<br>
+<center>
+<img src="img/image19a.png" width="50%" height="50%" />
+</center>
+<br>
+
+--
+
+<hr style="width:100px; margin: auto;" />
+<br>
+<center>
+<img src="img/image19b.png" width="50%" height="50%" />
+</center>
+<br>
+
+---
+
+## Comparisons (2/2)
+
+--
+
+<br>
+<br>
+<center>
+<img src="img/image19c.png" width="50%" height="50%" />
+</center>
+<br>
+
+--
+
+<hr style="width:100px; margin: auto;" />
+<br>
+<center>
+&emsp; &nbsp; <img src="img/image19d.png" width="53%" height="53%" />
+</center>
+
+---
+
+## Check-all-that-Apply versus Forced-Choice
+
+--
+
+<br>
+<br>
+<br>
+<br>
+<br>
+.pull-left[
+<center>
+<img src="img/image20a.png" width="95%" height="95%" />
+</center>
+]
+
+--
+
+.pull-right[
+<center>
+<img src="img/image20b.png" width="95%" height="95%" />
+</center>
+]
+
+---
+
+## Distinguishing Between Single-and Multiple-Answer Questions
+
+--
+
+<br>
+<br>
+.pull-left[
+<center>
+<img src="img/image21a.png" width="100%" height="100%" />
+</center>
+]
+
+--
+
+.pull-right[
+<center>
+<img src="img/image21b.png" width="100%" height="100%" />
+</center>
+]
+
+---
+
+# Closed-Ended Questions: Ordinal Scales
+
+--
+
+- Align response options vertically in one column or horizontally in one row and strive for equal distance between categories
+
+--
+
+- Carefully evaluate the use of numeric labels and their impact on measurement
+
+--
+
+- Choose an appropriate scale length—in general, limit scales to four or five categories
+
+--
+
+- Choose direct or construct-specific labels to improve cognition
+
+--
+
+- Consider how verbally labeling and visually displaying all response categories may influence answers
+
+--
+
+- Place non-substantive options at the end of the scale and separate them from substantive options
+
+--
+
+- Provide scales that approximate the actual distribution of the characteristic in the population
+
+--
+
+- Provide balances scales where categories are relatively equal distances apart conceptually
+
+---
+
+## Scalar Questions
+
+<center>
+<img src="img/image22a.png" width="50%" height="50%" />
+</center>
+<br>
+
+--
+
+<center>
+<img src="img/image22b.png" width="50%" height="50%" />
+</center>
+<br>
+
+--
+
+<hr style="width:100px; margin: auto;" />
+<br>
+<center>
+<img src="img/image22c.png" width="50%" height="50%" />
+</center>
+<br>
+
+---
+
+## Scalar Questions
+
+--
+
+<br>
+<br>
+.pull-left[
+<center>
+<img src="img/image23a.png" width="75%" height="75%" />
+</center>
+]
+
+--
+
+.pull-right[
+<center>
+<img src="img/image23b.png" width="75%" height="75%" />
+</center>
+]
+
+<br>
+</center>
+.footnote[
+*Note: Here we're referring to balanced scales as having choices that are equidistant from each other*
+]
+
+
+---
+
+## Aligning the Conceptual and Visual Midpoints
+
+--
+
+**This is by far one of the most important criteria to check off when considering survey aesthetics!**
+
+---
+
+<center>
+<img src="img/image24.png" width="45%" height="45%" />
+</center>
+
+---
+
+# Open Ended
+
+---
+
+## Open-Ended Numerical
+
+--
+
+- Ask for the specific unit desired in the question stem
+
+--
+
+- Provide answer spaces that are sized appropriately for the response task
+
+--
+
+- Provide units labels with the answer spaces
+
+---
+
+## Numeric
+
+<center>
+<img src="img/image25a.png" width="30%" height="30%" />
+</center>
+<br>
+
+--
+
+<hr style="width:100px; margin: auto;" />
+<br>
+<center>
+&emsp; &nbsp;  <img src="img/image25b.png" width="33%" height="33%" />
+</center>
+<br>
+
+--
+
+<hr style="width:100px; margin: auto;" />
+<br>
+<center>
+<img src="img/image25c.png" width="30%" height="30%" />
+</center>
+<br>
+
+--
+
+<hr style="width:100px; margin: auto;" />
+<br>
+<center>
+&emsp; &nbsp; <img src="img/image25d.png" width="33%" height="33%" />
+</center>
+
+---
+
+## Open-Ended Lists
+
+--
+
+- Design the answer spaces to support the number and type of responses desired
+
+--
+
+- Provide labels with answer spaces to reinforce the type of response requested
+
+--
+
+- Specify the number and type of responses desired in the question 
+
+---
+
+## Lists
+
+--
+<center>
+&nbsp; <img src="img/image26a.png" width="19%" height="19%" />
+</center>
+<br>
+
+--
+
+<hr style="width:100px; margin: auto;" />
+<br>
+<center>
+&emsp; &ensp; <img src="img/image26b.png" width="22%" height="22%" />
+</center>
+<br>
+
+--
+
+<hr style="width:100px; margin: auto;" />
+<br>
+<center>
+<img src="img/image26c.png" width="33%" height="33%" />
+</center>
+
+---
+
+# Open-Ended Explanatory 
+
+--
+
+- Consider programming probes to open-ended responses in internet surveys
+
+--
+
+- Provide adequate space for respondents to completely answer the question
+
+--
+
+- Provide extra motivation to respond
+
+--
+
+- Use scrollable boxes on internet surveys
+
+---
+
+## Explanatory
+
+--
+
+<br>
+.pull-left[
+<center>
+<img src="img/image27a.png" width="59%" height="59%" />
+</center>
+]
+
+.pull-right[
+]
+
+--
+
+.pull-left[
+]
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+.pull-right[
+<center>
+<img src="img/image27b.png" width="92%" height="92%" />
+</center>
+]
+
+---
+
+# Partially Closed
+
+---
+
+## Partially Closed Nominal
+
+--
+
+.center2[
+<img src="img/image28.png" width="75%" height="75%" />
+]
+
+---
+
+# And That's It...For Now!
+
+--
+
+Much like this class, the content is free to anyone for personal use. For more information, please look at the licensing information provided below.
+
+<center>
+<br><br>
+<div class="fade_rule"></div>  
+<br><br>
+</center>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<center>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><br />This work is licensed under a <br /><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>
+</center>

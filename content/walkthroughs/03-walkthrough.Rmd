@@ -19,10 +19,6 @@ weight: 2
 source(here::here("content", "com_libs.R"))
 ```
 
-```{r extra-libraries, echo=FALSE, message=FALSE, purl=FALSE}
-library(fivethirtyeight)
-```
-
 ```{r setup, include=FALSE, purl=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 knitr::opts_chunk$set(widgetframe_self_contained = TRUE) 

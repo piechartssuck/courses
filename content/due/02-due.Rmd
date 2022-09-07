@@ -27,7 +27,7 @@ wk_post <-
 
 Description = c("Read <i>Reducing Peoples Reluctance to Respond to Surveys</i> in Dillman, Smyth, &amp; Christian (2014)",
                 "Read <i>How to Create a Bad Survey Instrument</i> in Sullivan & Artino (2017)",
-                "Complete the module <span style='color:#ffc787;font-weight:bold'><i>Introduction to the Tidyverse </i></span>",
+                "Complete the module <span style='color:#ffc787;font-weight:bold'><i>Introduction to the Tidyverse</i></span>",
                 "Complete and submit the associated <i class='fa-brands fa-r-project'></i> task for the module",
                 "See some possible solutions for the Bad Survey Questions document",
                 "Download the <span style='color:#89cff0;font-weight:bold'>Exploratory Draft Survey Design Template</span>",

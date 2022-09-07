@@ -15,4 +15,4 @@ weight: 2
 
 {{% r-walkthrough-header %}}
 
-This week’s walkthrough is included in the [R Task](/modules/02-module/#associated-task) download
+This week’s walkthrough is included in the [R Task](/modules/02-module/#r-task) download

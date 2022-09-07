@@ -1,0 +1,69 @@
+---
+title: "The Fundamentals of Writing Questions"
+linktitle: "Week 4: The Fundamentals of Writing Questions "
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  trainings:
+    parent: Walkthroughs
+    weight: 4
+type: docs
+weight: 2
+---
+
+`r blogdown::shortcode("r-walkthrough-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+```{r setup, include=FALSE, purl=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(widgetframe_self_contained = TRUE) 
+knitr::opts_knit$set(root.dir = getwd())
+```
+
+This week you have two walkthroughs 
+
+1. included in the [R Task](/modules/04-module/#r-task) download
+
+2. the one below
+
+## Adding Vertical Spacing to Multiple Choice
+
+*Posting later today*
+
+<!--
+
+Please go through this walkthrough *after* reviewing the [Survey Design](/tasks/04-task/#learn-about-crafting-high-quality-items) slideshow,
+
+### Synopsis
+
+
+### What you need
+The following download includes a text file known as a *snippet*, directions, and a copy of the gif shown below. The example survey^[Please note that you are not taking the survey, rather this is just a throw away example that we are using for a few walkthroughs] has been shared with you on Qualtrics^[To follow the directiions, you will need edit the survey. This can be done by accessing your [shared surveys](https://www.qualtrics.com/support/survey-platform/my-projects/sharing-a-project/#AccessingSharedSurveys) to [copy](https://www.qualtrics.com/support/survey-platform/my-projects/my-projects-overview/#Organizing) the instrument over to your account].
+
+<center>
+```{r echo=FALSE,eval=TRUE,message=FALSE}
+loc <- here::here("static", "snippets", "qualtricsplug.zip")
+
+downloadthis::download_file(
+  path = loc,
+  output_name = "Qualtrics Plug JS",
+  button_label = "&nbsp;&nbsp;&nbsp;<span style='color:#ffffff'>Download</span>",
+  button_type = "primary",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+</center>
+<br>
+
+<center>
+![](/img/gifs/qualtricsplug.gif){width=85%}
+</center>
+
+-->
