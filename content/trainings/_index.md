@@ -1547,10 +1547,6 @@ Case studies
 
 The following modules are optional and may count as extra credit contingent on the successful completion of the data camp course and corresponding assessment to be submitted via eCampus. Please note that each subsequent module is dependent on the previous one.
 
-### Working Ahead
-
-By no means do you have to wait for a particular module to be assigned. If you wish to enroll in a training - one that is assigned or otherwise - simply search for the name of that course on the Data Camp site. For those modules assigned for this course, you will receive credit after the due date has passed.
-
 <center>
 <table class=" lightable-paper" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
 <thead>
@@ -1864,6 +1860,10 @@ Build, Tune & Evaluate Classification Models
 </tbody>
 </table>
 </center>
+
+### Working Ahead
+
+By no means do you have to wait for a particular module to be assigned. If you wish to enroll in a training - one that is assigned or otherwise - simply search for the name of that course on the Data Camp site. For those modules assigned for this course, you will receive credit after the due date has passed.
 
 ## Need Help?
 
