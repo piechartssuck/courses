@@ -16,20 +16,20 @@
 3,,,,,,Tidy your data
 3,,,,,,Transform your data
 3,,,,,,
-4,<a href='/modules/04-module/'>Week 4</a>,9/13/22,checked,checked,Working with Data in the Tidyverse,Explore your data
-4,,,,,,Tame your data
-4,,,,,,Tidy your data
-4,,,,,,Transform your data
+4,<a href='/modules/04-module/'>Week 4</a>,9/13/22,checked,checked,Data Manipulation with dplyr,Transforming Data with dplyr
+4,,,,,,Aggregating Data 
+4,,,,,,Selecting and Transforming Data 
+4,,,,,,Case Study: The babynames Dataset
 4,,,,,,
-5,<a href='/modules/05-module/'>Week 5</a>,9/20/22,checked,unchecked,Data Manipulation with dplyr,Transforming Data with dplyr
-5,,,,,,Aggregating Data 
-5,,,,,,Selecting and Transforming Data 
-5,,,,,,Case Study: The babynames Dataset
+5,<a href='/modules/05-module/'>Week 5</a>,9/20/22,checked,unchecked,Reshaping Data with tidyr,Tidy Data
+5,,,,,,From Wide to Long and Back 
+5,,,,,,Expanding Data 
+5,,,,,,Rectangling Data 
 5,,,,,,
-6,<a href='/modules/06-module/'>Week 6</a>,9/27/22,checked,checked,Reshaping Data with tidyr,Tidy Data
-6,,,,,,From Wide to Long and Back 
-6,,,,,,Expanding Data 
-6,,,,,,Rectangling Data 
+6,<a href='/modules/06-module/'>Week 6</a>,9/27/22,checked,checked,Joining Data with dplyr,Joining Tables
+6,,,,,,Left and Right Joins
+6,,,,,,"Full, Semi, and Anti Joins"
+6,,,,,,Case Study: Joins on Stack Overflow Data 
 6,,,,,,
 7,<a href='/modules/07-module/'>Week 7</a>,10/4/22,checked,unchecked,Categorical Data in the Tidyverse,Introduction to Factor Variables
 7,,,,,,Manipulating Factor Variables

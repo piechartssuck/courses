@@ -25,13 +25,58 @@ knitr::opts_chunk$set(widgetframe_self_contained = TRUE)
 knitr::opts_knit$set(root.dir = getwd())
 ```
 
-## Javascript in Qualtrics: The Plug
+## The Qualtrics Plug
+
+```{r echo = FALSE, purl=FALSE,}
+
+dplyr::tibble(
+  
+  information <- c(
+    "<b>Level of Difficulty</b><sup>1</sup>",
+    "<b>What You'll Mainly Do</b>",
+    "<b>Language(s) We'll Use</b><sup>2</sup>",
+    ""
+  ),
+  
+  description <- c(
+    "<span style='color:#c5d9ff'>Beginner</span>",
+    "Copy and paste syntax from a text (<code>.txt</code>) file to Qualtrics",
+    "<div id='info'><div id='speechbubble' data-hover='CSS'><span style='color:#66d3fa'><span style='font-size: 40px;'><i class='icon-css3'></i></span></span></div></div>",
+    ""
+            ),
+
+  .name_repair = "minimal"
+  
+) %>%
+  kbl(col.names = c("", ""), 
+      "html", 
+      escape = FALSE,
+      align = 'll') %>%
+  kable_paper() %>%
+  kable_styling(full_width = FALSE,
+                font_size = 20,
+                position = "center") %>%
+  column_spec(1, width = "12em") %>%
+  column_spec(2, width = "30em") %>%
+  row_spec(0:3, extra_css = 'vertical-align: middle !important;', background = "transparent", color = "#f7f7f7") %>%
+  row_spec(3, extra_css = "margin-bottom: 30px;") %>%
+  add_footnote(
+    c(
+      "<span style='color:#f7f7f7; font-size:11pt;'><i>This is not an indicator of your personal level or abilities. You may experience varying level of ease and/or difficulties and that is OK!</i></span>", 
+      "<span style='color:#f7f7f7; font-size:11pt;'><i>Hover over an icon to see its name</i></span>"), 
+    notation = "number", 
+    escape = FALSE
+    )
+```
+
+### Prerequisite
+*None*
 
 ### Synopsis
 Sometimes Qualtrics likes to include things you don't want. Given that, you can edit almost everything on the platform with a little bit of code - no not by writing it though that helps, but just by knowing where to copy and paste. In this walkthrough, you'll figure out how to use the Javascript engine to get rid of some free advertisement that Qualtrics plugs into your survey.
 
-### What you need
-The following download includes a text file known as a *snippet*, directions, and a copy of the gif shown below. The example survey^[Please note that you are not taking the survey, rather this is just a throw away example that we are using for a few walkthroughs] has been shared with you on Qualtrics^[To follow the directiions, you will need edit the survey. This can be done by accessing your [shared surveys](https://www.qualtrics.com/support/survey-platform/my-projects/sharing-a-project/#AccessingSharedSurveys) to [copy](https://www.qualtrics.com/support/survey-platform/my-projects/my-projects-overview/#Organizing) the instrument over to your account].
+### Materials
+The following download includes a text file known as a *snippet*, directions, and a copy of the gif shown below. The example survey^[Please note that you are not taking the survey, rather this is just a throw away example that we are using for a few walkthroughs] has been shared with you on Qualtrics^[To follow the directions, you will need edit the survey. This can be done by accessing your [shared surveys](https://www.qualtrics.com/support/survey-platform/my-projects/sharing-a-project/#AccessingSharedSurveys) to [copy](https://www.qualtrics.com/support/survey-platform/my-projects/my-projects-overview/#Organizing) the instrument over to your account].
 
 <center>
 ```{r echo=FALSE,eval=TRUE,message=FALSE}

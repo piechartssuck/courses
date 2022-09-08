@@ -71,7 +71,7 @@ Optionally download the package <code><span style="font-size:15px">esquisse</spa
 Go through a walkthrough on how to get rid of the particularly annoying Qualtrics plug
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/walkthroughs/03-walkthrough/#javascript-in-qualtrics-the-plug"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
+<a href="/walkthroughs/03-walkthrough/#the-qualtrics-plug"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://wvu.qualtrics.com" target="_blank"><img src="/logos/qualtrics-ico.png" alt="Qualtrics icon" width="29"></a>

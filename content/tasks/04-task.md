@@ -97,6 +97,6 @@ PDF of the presentation
 
 </center>
 
-### Create a Draft
+## Create a Draft
 
 Please finish work on your second deliverable. More details can be found [here](/deliverables/01-l2/)

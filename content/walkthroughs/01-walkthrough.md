@@ -13,6 +13,8 @@ type: docs
 weight: 2
 ---
 
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+<link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
 <script src="/rmarkdown-libs/font-awesome/js/script.js"></script>
 <script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
 
@@ -20,19 +22,92 @@ weight: 2
 
 {{% r-walkthrough-header %}}
 
-## Note
+## Getting started
 
-*For those who successfully completed EDP 611, please feel free to ignore this unless you would like a refresher.*
+Starting out in R can be challenging. In this first session we’ll cover the absolute basics, however the examples and materials provided here are by no means comprehensive. *For those who successfully completed EDP 611, please feel free to ignore this unless you would like a refresher.*
 
-## Getting Prepped
+<table class=" lightable-paper table" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto; font-size: 20px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+</th>
+<th style="text-align:left;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 12em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<b>Level of Difficulty</b><sup>1</sup>
+</td>
+<td style="text-align:left;width: 30em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<span style="color:#c5d9ff">Beginner</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 12em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<b>What You’ll Mainly Do</b>
+</td>
+<td style="text-align:left;width: 30em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+Type in syntax
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 12em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;margin-bottom: 30px;">
+<b>Language(s) We’ll Use</b><sup>2</sup>
+</td>
+<td style="text-align:left;width: 30em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;margin-bottom: 30px;">
 
-### Download Walthrough Materials[^1]
+<div id="info">
 
+<div id="speechbubble" data-hover="R">
+
+<span style="color:#4682b4"><i class="fa-brands fa-r-project fa-xl"></i></span>
+
+</div>
+
+</div>
+
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 12em; ">
+</td>
+<td style="text-align:left;width: 30em; ">
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>1</sup> <span style="color:#f7f7f7; font-size:11pt;"><i>This is not an indicator of your personal level or abilities. You may experience varying level of ease and/or difficulties and that is OK!</i></span>
+</td>
+</tr>
+<tr>
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>2</sup> <span style="color:#f7f7f7; font-size:11pt;"><i>Hover over an icon to see its name</i></span>
+</td>
+</tr>
+</tfoot>
+</table>
+
+### Prerequisite
+
+*None*
+
+### Materials
+
+The following download contains files that are provided to help you to understand and/or complete the walkthrough.
+
+<center>
 <a onclick="fetch(&#39;data:application/zip;base64,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&#39;).then(res =&gt; res.blob()).then(blob =&gt; {&#10;      const downloadURL = window.URL.createObjectURL(blob);&#10;      const a = document.createElement(&#39;a&#39;);&#10;      document.body.appendChild(a);&#10;      a.href = downloadURL;&#10;      a.download = &#39;Week 1 Walkthrough.zip&#39;; a.click();&#10;      window.URL.revokeObjectURL(downloadURL);&#10;      document.body.removeChild(a);&#10;    });">
 <button class="btn btn-primary hvr-sweep-to-left"><i class="fa fa-save"></i> &nbsp;&nbsp;&nbsp;<span style='color:#ffffff'>Download</span></button>
 </a>
+</center>
 
-### Set your Working Directory
+### Walkthrough
+
+#### Set your Working Directory
 
 Your *working directory* is simply where your script will look for anything it needs like external data sets. There are a few ways to go about doing this which we will cover. However for now, just do the following:
 
@@ -109,7 +184,7 @@ OK well that’s a good start but to be able to do anything with that data, we r
 
 You should have noticed the **Help** tab on the lower right hand window is prominent and there is a significant amount of information explaining the data set including the variable names and corresponding descriptions.
 
-### Data Files
+#### Data Files
 
 Data sets used in R are typically accessible in three ways, through these certainly are not the only approaches.
 
@@ -262,7 +337,7 @@ drinks <- read_csv("drinks.csv"); drinks
 
 work just as well.
 
-### Chopping Up a Data Set
+#### Chopping Up a Data Set
 
 You may already know that the single bracket, `[`, is useful to select rows and columns in simple cases.
 
@@ -336,7 +411,7 @@ yields
 
 </div>
 
-Unlike `[`, the `[[` and `$` operators can only select a single column and return a vector.[^2]
+Unlike `[`, the `[[` and `$` operators can only select a single column and return a vector.[^1]
 The `dplyr` function `select()` **always** returns a tibble, and never a vector, even if only one column is selected.
 
 For example, note that selecting rows 1–5 of the `beer_servings` column using base R gives us a vector.
@@ -423,7 +498,7 @@ drinks %>%
 
 We’ll use pipes throughout the term!
 
-### Saving Objects
+#### Saving Objects
 
 There are two types of saves you should consider at this point
 
@@ -468,7 +543,7 @@ write_sav(drinks, "new_drinks.sav")
 
 Now you are free to go use SPSS for some reason.
 
-### Style Guide
+#### Style Guide
 
 Following a consistent style is important for your code to be readable by you and others. The preferred style is the <a href="http://style.tidyverse.org/" target="_blank">tidyverse style guide</a>, though any clean and consitent styling is acceptable. Here are some packages that may help you
 
@@ -480,7 +555,5 @@ You will initially be expected to turn in a script with any submission where R i
 
 If you want a warning about styling your script, open RStudio and go to the **Tools \> Global Options \> Code \> Diagnostics** pane. Then check the box to activate style warnings. On this pane, there are other options that can be set in order to increase or decrease the amount of warnings while writing in RStudio.
 
-[^1]: For more on using projects read <a href="https://www.tidyverse.org/articles/2017/12/workflow-vs-script/" target="_blank">Project-oriented workflow</a>.
-
-[^2]: Please see the discussion in
+[^1]: Please see the discussion in
     <a href="http://r4ds.had.co.nz/tibbles.html#tibbles-vs.data.frame" target="_blank">R for DataScience</a> on how <span class="footnote">tibble</span> objects differ from base <span class="footnote">data.frame</span> objects in how the single bracket <span class="footnote">\[</span> is handled.

@@ -1,4 +1,6 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
 
 <link href='https://fonts.googleapis.com/css?family=Roboto Condensed' rel='stylesheet'>
 
@@ -408,6 +410,87 @@ font-size: 12pt;
  font-size: 12pt;
 }
 
+#info {
+  position: absolute;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  margin-left: 24px;
+  margin-top: 16px;
+}
+
+#speechbubble {
+  display: inline-block;
+  padding-top: 1.2em;
+  padding-bottom: 1.2em;
+  padding-right: 45px;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  font-size: 1.0em;
+  outline: none;
+  color: #ffffff;
+  background: transparent;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin-left: 36px;
+}
+
+#speechbubble span {
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transition-delay: 0.2s;
+  -moz-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+#speechbubble:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: left;
+  opacity: 0;
+  -webkit-transition: .4s, opacity .6s;
+  -moz-transition: .4s, opacity .6s;
+  -o-transition: .4s, opacity .6s;
+  transition: .4s, opacity .6s;
+  line-height: 1.6em;
+}
+
+#speechbubble:before {
+  content: attr(data-hover);
+  -webkit-transform: translate(0%, 0);
+  -moz-transform: translate(0%, 0);
+  -ms-transform: translate(0%, 0);
+  -o-transform: translate(0%, 0);
+  transform: translate(0%, 0);
+}
+
+#speechbubble:hover span {
+  opacity: 0;
+  -webkit-transform: scale(0.3);
+  -moz-transform: scale(0.3);
+  -ms-transform: scale(0.3);
+  -o-transform: scale(0.3);
+  transform: scale(0.3);
+}
+
+#speechbubble:hover:before {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+  -webkit-transition-delay: .4s;
+  -moz-transition-delay: .4s;
+  -o-transition-delay: .4s;
+  transition-delay: .4s;
+}
 </style>
 
 <script>

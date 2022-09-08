@@ -29,14 +29,60 @@ knitr::opts_chunk$set(widgetframe_self_contained = TRUE)
 knitr::opts_knit$set(root.dir = getwd())
 ```
 
-## Note
+## Getting started
 
-*For those who successfully completed EDP 611, please feel free to ignore this unless you would like a refresher.*
+Starting out in R can be challenging. In this first session we'll cover the absolute basics, however the examples and materials provided here are by no means comprehensive. *For those who successfully completed EDP 611, please feel free to ignore this unless you would like a refresher.*
 
-## Getting Prepped
+```{r echo = FALSE, purl=FALSE,}
 
-### Download Walthrough Materials[^copying]
+dplyr::tibble(
+  
+  information <- c(
+    "<b>Level of Difficulty</b><sup>1</sup>",
+    "<b>What You'll Mainly Do</b>",
+    "<b>Language(s) We'll Use</b><sup>2</sup>",
+    ""
+  ),
+  
+  description <- c(
+    "<span style='color:#c5d9ff'>Beginner</span>",
+    "Type in syntax",
+    "<div id='info'><div id='speechbubble' data-hover='R'><span style='color:#4682b4'><i class='fa-brands fa-r-project fa-xl'></i></span></div></div>",
+    ""
+            ),
+  
+  .name_repair = "minimal"
+  
+) %>%
+  kbl(col.names = c("", ""), 
+      "html", 
+      escape = FALSE,
+      align = 'll') %>%
+  kable_paper() %>%
+  kable_styling(full_width = FALSE,
+                font_size = 20,
+                position = "center") %>%
+  column_spec(1, width = "12em") %>%
+  column_spec(2, width = "30em") %>%
+  row_spec(0:3, extra_css = 'vertical-align: middle !important;', background = "transparent", color = "#f7f7f7") %>%
+  row_spec(3, extra_css = "margin-bottom: 30px;") %>%
+  add_footnote(
+    c(
+      "<span style='color:#f7f7f7; font-size:11pt;'><i>This is not an indicator of your personal level or abilities. You may experience varying level of ease and/or difficulties and that is OK!</i></span>", 
+      "<span style='color:#f7f7f7; font-size:11pt;'><i>Hover over an icon to see its name</i></span>"), 
+    notation = "number", 
+    escape = FALSE
+    )
+```
 
+
+### Prerequisite
+*None*
+
+### Materials
+The following download contains files that are provided to help you to understand and/or complete the walkthrough.
+
+<center>
 ```{r echo=FALSE,eval=TRUE,message=FALSE}
 loc <- here::here("static", "data", "EDP619Week1Walkthrough.zip")
 
@@ -50,9 +96,11 @@ downloadthis::download_file(
   class = "hvr-sweep-to-left"
   )
 ```
+</center>
 
+### Walkthrough
 
-### Set your Working Directory
+#### Set your Working Directory
 
 Your *working directory* is simply where your script will look for anything it needs like external data sets. There are a few ways to go about doing this which we will cover. However for now, just do the following:
 
@@ -125,7 +173,7 @@ OK well that's a good start but to be able to do anything with that data, we rea
 
 You should have noticed the **Help** tab on the lower right hand window is prominent and there is a significant amount of information explaining the data set including the variable names and corresponding descriptions.
 
-### Data Files
+#### Data Files
 
 Data sets used in R are typically accessible in three ways, through these certainly are not the only approaches.
 
@@ -224,7 +272,7 @@ drinks <- read_csv("drinks.csv"); drinks
 
 work just as well. 
 
-### Chopping Up a Data Set
+#### Chopping Up a Data Set
 You may already know that the single bracket, `[`, is useful to select rows and columns in simple cases.
 
 <div class = "rounded">
@@ -304,7 +352,7 @@ drinks %>%
 
 We'll use pipes throughout the term! 
 
-### Saving Objects
+#### Saving Objects
 
 There are two types of saves you should consider at this point
 
@@ -343,7 +391,7 @@ write_sav(drinks, "new_drinks.sav")
 
 Now you are free to go use SPSS for some reason.
 
-### Style Guide
+#### Style Guide
 
 Following a consistent style is important for your code to be readable by you and others. The preferred style is the [tidyverse style guide](http://style.tidyverse.org/){target="_blank"}, though any clean and consitent styling is acceptable. Here are some packages that may help you
 
@@ -355,7 +403,6 @@ You will initially be expected to turn in a script with any submission where R i
 
 If you want a warning about styling your script, open RStudio and go to the **Tools > Global Options > Code > Diagnostics** pane. Then check the box to activate style warnings. On this pane, there are other options that can be set in order to increase or decrease the amount of warnings while writing in RStudio.
 
-[^copying]: For more on using projects read [Project-oriented workflow](https://www.tidyverse.org/articles/2017/12/workflow-vs-script/){target="_blank"}.
 
 [^tidy]: Please see the discussion in
 [R for DataScience](http://r4ds.had.co.nz/tibbles.html#tibbles-vs.data.frame){target="_blank"} on how <span class='footnote'>tibble</span> objects differ from base <span class='footnote'>data.frame</span> objects in how the single bracket <span class='footnote'>[</span> is handled.

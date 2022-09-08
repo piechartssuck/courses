@@ -27,7 +27,7 @@ wk_post <-
 
 Description = c("Read <i>Covering the Population and Selecting Who to Survey</i> in Dillman, Smyth, &amp; Christian (2014)",
                 "Complete the module <span style='color:#ffc787;font-weight:bold'><i>Introduction to Data Visualization with ggplot2</i></span>",
-                "Optionally download the package  <code><span style='font-size:15px'>esquisse</span></code> to help with learning about <code><span style='font-size:15px'>ggplot2</span></code> using a more familiar drag and drop approach",
+                "Optionally download the package <code><span style='font-size:15px'>esquisse</span></code> to help with learning about <code><span style='font-size:15px'>ggplot2</span></code> using a more familiar drag and drop approach",
                 "Go through a walkthrough on how to get rid of the particularly annoying Qualtrics plug",
                  "Go through the slideshow <span style='color:#6ac4cd;font-weight:bold'>Sampling</span>",
                 "Begin on your second deliverable <span style='color:#6acda5;font-weight:bold'>Create a Draft </span>"
@@ -37,7 +37,7 @@ Description = c("Read <i>Covering the Population and Selecting Who to Survey</i>
 Details = c("<a href='/readings/03-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/modules/03-module/#data-camp'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/modules/03-module/#codespan-stylefont-size20pxesquissespancode'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
-            "<a href='/walkthroughs/03-walkthrough/#javascript-in-qualtrics-the-plug'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/walkthroughs/03-walkthrough/#the-qualtrics-plug'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/tasks/03-task/#learn-about-sampling'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/deliverables/02-l2/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
             ),

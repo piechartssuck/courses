@@ -66,10 +66,10 @@ Chapters
 </svg>
 </td>
 <td style="text-align:left;width: 12em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Working with Data in the Tidyverse
+Data Manipulation with dplyr
 </td>
 <td style="text-align:left;width: 12em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Explore your data
+Transforming Data with dplyr
 </td>
 </tr>
 <tr>
@@ -84,7 +84,7 @@ Explore your data
 <td style="text-align:left;width: 12em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
 <td style="text-align:left;width: 12em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Tame your data
+Aggregating Data
 </td>
 </tr>
 <tr>
@@ -99,7 +99,7 @@ Tame your data
 <td style="text-align:left;width: 12em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
 <td style="text-align:left;width: 12em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Tidy your data
+Selecting and Transforming Data
 </td>
 </tr>
 <tr>
@@ -114,7 +114,7 @@ Tidy your data
 <td style="text-align:left;width: 12em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
 <td style="text-align:left;width: 12em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Transform your data
+Case Study: The babynames Dataset
 </td>
 </tr>
 <tr>

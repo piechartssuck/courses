@@ -123,7 +123,7 @@ esquisse::esquisser()
 ![esquisse with palmerpenguins](/img/gifs/esquisse2.gif){width=85%}
 </center>
 
-#### Additional resources
+### Additional resources
 
 > [Creating plots without coding @ RPubs](https://rpubs.com/brunoquevedo/using-esquisse){target="_blank"}
 

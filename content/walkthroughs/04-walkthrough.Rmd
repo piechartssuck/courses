@@ -19,39 +19,83 @@ weight: 2
 source(here::here("content", "com_libs.R"))
 ```
 
+
 ```{r setup, include=FALSE, purl=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 knitr::opts_chunk$set(widgetframe_self_contained = TRUE) 
 knitr::opts_knit$set(root.dir = getwd())
 ```
 
-This week you have two walkthroughs 
+This week you have two walkthroughs^[lucky you!] 
 
 1. included in the [R Task](/modules/04-module/#r-task) download
 
 2. the one below
 
-## Adding Vertical Spacing to Multiple Choice
+<center>
+<hr style="width:30%;"></hr>
+</center>
 
-*Posting later today*
+## Adding Vertical Space to Multiple Choice Items
 
-<!--
+```{r echo = FALSE, purl=FALSE,}
 
+dplyr::tibble(
+  
+  information <- c(
+    "<b>Level of Difficulty</b><sup>1</sup>",
+    "<b>What You'll Mainly Do</b>",
+    "<b>Language(s) We'll Use</b><sup>2</sup>",
+    ""
+  ),
+  
+  description <- c(
+    "<span style='color:#c5d9ff'>Beginner</span>",
+    "Copy and paste syntax from a text (<code>.txt</code>) file to a Qualtrics and edit some numbers to customize parameters",
+    "<div id='info'><div id='speechbubble' data-hover='Javascript'><span style='color:#f0db4f;'><span style='font-size: 40px;'><i class='icon-css3'></i></span></span></div></div>",
+    ""
+            ),
+
+  .name_repair = "minimal"
+  
+) %>%
+  kbl(col.names = c("", ""), 
+      "html", 
+      escape = FALSE,
+      align = 'll') %>%
+  kable_paper() %>%
+  kable_styling(full_width = FALSE,
+                font_size = 20,
+                position = "center") %>%
+  column_spec(1, width = "12em") %>%
+  column_spec(2, width = "30em") %>%
+  row_spec(0:3, extra_css = 'vertical-align: middle !important;', background = "transparent", color = "#f7f7f7") %>%
+  row_spec(3, extra_css = "margin-bottom: 30px;") %>%
+  add_footnote(
+    c(
+      "<span style='color:#f7f7f7; font-size:11pt;'><i>This is not an indicator of your personal level or abilities. You may experience varying level of ease and/or difficulties and that is OK!</i></span>", 
+      "<span style='color:#f7f7f7; font-size:11pt;'><i>Hover over an icon to see its name</i></span>"), 
+    notation = "number", 
+    escape = FALSE
+    )
+```
+
+### Prerequisite
 Please go through this walkthrough *after* reviewing the [Survey Design](/tasks/04-task/#learn-about-crafting-high-quality-items) slideshow,
 
 ### Synopsis
+Qualtrics houses quite a few built-in survey question types. While this is great, sometimes you need to amend these "stock" items. In this session, you'll look at one instance of this, in particular to understand how to add space of any size above (or below) a possible response within a multiple choice question that has a vertical layout.
 
-
-### What you need
-The following download includes a text file known as a *snippet*, directions, and a copy of the gif shown below. The example survey^[Please note that you are not taking the survey, rather this is just a throw away example that we are using for a few walkthroughs] has been shared with you on Qualtrics^[To follow the directiions, you will need edit the survey. This can be done by accessing your [shared surveys](https://www.qualtrics.com/support/survey-platform/my-projects/sharing-a-project/#AccessingSharedSurveys) to [copy](https://www.qualtrics.com/support/survey-platform/my-projects/my-projects-overview/#Organizing) the instrument over to your account].
+### Materials
+The following download includes a snippet, directions, and a copy of the gif shown below. The example survey was shared with you earlier in the term on Qualtrics^[To follow the directiions, you will need edit the survey. This can be done by accessing your [shared surveys](https://www.qualtrics.com/support/survey-platform/my-projects/sharing-a-project/#AccessingSharedSurveys) to [copy](https://www.qualtrics.com/support/survey-platform/my-projects/my-projects-overview/#Organizing) the instrument over to your account].
 
 <center>
 ```{r echo=FALSE,eval=TRUE,message=FALSE}
-loc <- here::here("static", "snippets", "qualtricsplug.zip")
+loc <- here::here("static", "snippets", "vertical_mc_spacing.zip")
 
 downloadthis::download_file(
   path = loc,
-  output_name = "Qualtrics Plug JS",
+  output_name = "Vertical MC Spacing CSS",
   button_label = "&nbsp;&nbsp;&nbsp;<span style='color:#ffffff'>Download</span>",
   button_type = "primary",
   has_icon = TRUE,
@@ -63,7 +107,5 @@ downloadthis::download_file(
 <br>
 
 <center>
-![](/img/gifs/qualtricsplug.gif){width=85%}
+![](/img/gifs/verticalspacing.gif){width=85%}
 </center>
-
--->

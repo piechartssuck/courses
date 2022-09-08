@@ -47,7 +47,7 @@ Read <i>The Fundamentals of Writing Questions</i> in Dillman, Smyth, & Christian
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Complete the module <span style="color:#ffc787;font-weight:bold"><i>Working with Data in the Tidyverse </i></span>
+Complete the module <span style="color:#ffc787;font-weight:bold"><i>Data Manipulation with dplyr</i></span>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/modules/04-module/#data-camp"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
@@ -71,7 +71,7 @@ Complete and submit the associated <i class="fa-brands fa-r-project"></i> task f
 Go through a walkthrough on how to add vertical spacing to survey items that require conceptual and/or visual separation
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/walkthroughs/04-walkthrough/#adding-vertical-spacing-to-multiple-choice"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
+<a href="/walkthroughs/04-walkthrough/#adding-vertical-space-to-multiple-choice-items"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://wvu.qualtrics.com" target="_blank"><img src="/logos/qualtrics-ico.png" alt="Qualtrics icon" width="29"></a>
