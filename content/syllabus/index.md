@@ -61,16 +61,16 @@ Please note that the slideshow goes through highlights of the syllabus, but you 
 
 <center>
 <div class="wrapper">
-    <div class="icon directions">
+    <div class="icon leftright">
       <div class="tooltip"><span style=width:200px;>Move back and forth using <kbd>←</kbd> and <kbd>→</kbd></span></div>
       <span><i class="fas fa-map-signs"></i></span></div>
-    <div class="icon fullscreen">
+    <div class="icon info">
       <div class="tooltip"><span style=width:200px;>Toggle fullscreen by pressing <kbd>F</kbd></span></div>
       <span><i class="fas fa-expand-alt"></i></span>
-    </div><div class="icon overview">
+    </div><div class="icon github">
       <div class="tooltip"><span style=width:200px;>Press <kbd>O</kbd> for and overview of all slides</span></div>
       <span><i class="far fa-images"></i></span>
-    </div><div class="icon info">
+    </div><div class="icon youtube">
       <div class="tooltip"><span style=width:200px;>Discover more shortcuts by pressing <kbd>H</kbd></span></div>
       <span><i class="fas fa-info-circle"></i></span>
     </div>
@@ -358,16 +358,16 @@ But there are multiple resources both online and locally that are available. Pri
 
 <center>
 <div class="wrapper">
-    <div class="icon directions">
+    <div class="icon leftright">
       <div class="tooltip"><span style=width:200px;>Move back and forth using <kbd>←</kbd> and <kbd>→</kbd></span></div>
       <span><i class="fas fa-map-signs"></i></span></div>
-    <div class="icon fullscreen">
+    <div class="icon info">
       <div class="tooltip"><span style=width:200px;>Toggle fullscreen by pressing <kbd>F</kbd></span></div>
       <span><i class="fas fa-expand-alt"></i></span>
-    </div><div class="icon overview">
+    </div><div class="icon github">
       <div class="tooltip"><span style=width:200px;>Press <kbd>O</kbd> for and overview of all slides</span></div>
       <span><i class="far fa-images"></i></span>
-    </div><div class="icon info">
+    </div><div class="icon youtube">
       <div class="tooltip"><span style=width:200px;>Discover more shortcuts by pressing <kbd>H</kbd></span></div>
       <span><i class="fas fa-info-circle"></i></span>
     </div>
