@@ -39,6 +39,12 @@ The overall purpose of this course is to empower you to
 
 Additionally, this class will expose you to [`r fa("r-project", fill = "steelblue")`](https://cran.r-project.org/) — one of the most popular and in-demand statistical languages. Armed with the foundational skill set, you'll know enough to be able to conduct basic and some advanced analyses, create eye-popping data visualizations, and report results.
 
+<center>
+<p id="rounded_corners_large">
+<i>You will be creating, administering, and analyzing a survey for this course so please plan accordingly!</i>
+</p>
+</center>
+
 ## Quick Start Guide
 
 Please note that the slideshow goes through highlights of the syllabus, but you are still responsible for reading through the entire site including this page.
