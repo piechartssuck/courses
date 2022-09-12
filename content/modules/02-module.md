@@ -8,7 +8,7 @@ output:
 menu:
   trainings:
     parent: Modules
-    weight: 1
+    weight: 2
 type: docs
 weight: 1
 ---
@@ -50,10 +50,10 @@ Chapters
 <tbody>
 <tr>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/modules/01-module/">Week 2</a>
+<a href="/modules/02-module/">Week 3</a>
 </td>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-8/30/22
+9/6/22
 </td>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:15px;width:15px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#428bca;overflow:visible;position:relative;">
@@ -66,10 +66,10 @@ Chapters
 </svg>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Introduction to R
+Introduction to Data Visualization with ggplot2
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Intro to basics
+Explore your data
 </td>
 </tr>
 <tr>
@@ -84,7 +84,7 @@ Intro to basics
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Vectors
+Tame your data
 </td>
 </tr>
 <tr>
@@ -99,7 +99,7 @@ Vectors
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Matrices
+Tidy your data
 </td>
 </tr>
 <tr>
@@ -114,37 +114,7 @@ Matrices
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Factors
-</td>
-</tr>
-<tr>
-<td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-</td>
-<td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-</td>
-<td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-</td>
-<td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-</td>
-<td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-</td>
-<td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Data Frames
-</td>
-</tr>
-<tr>
-<td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-</td>
-<td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-</td>
-<td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-</td>
-<td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-</td>
-<td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-</td>
-<td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Lists
+Transform your data
 </td>
 </tr>
 <tr>

@@ -81,7 +81,7 @@ Read <i>Paradigms Lost and Pragmatism Regained: Methodological Implications of C
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Finish the module <span style="color:#ffc787;font-weight:bold"><i>Introduction to R</i></span>
+Finish the module <span style="color:#ffc787;font-weight:bold"><i>Introduction to Data Visualization with ggplot2</i></span>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/modules/02-module/#data-camp"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>

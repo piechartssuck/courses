@@ -27,7 +27,7 @@ If you have participated in Data Camp before and would like to receive credit fo
 
 ### for new participants
 
-Please take your time with these modules. I suggest setting 3-4 hours for this initial set and go work in a way that’s conducive to your learning. The first module gives you an understand of the R environment while the second deals assigned next week deals with data wrangling and reshaping, namely making sure data is in what we call a “tidy” format. All analyses will be required to be performed in R. Please reach out if you need help!
+Please take your time with these modules. I suggest setting 3-4 hours for this initial set and go work in a way that’s conducive to your learning. The first module gives you an understand of the R environment while the second deals assigned next Set deals with data wrangling and reshaping, namely making sure data is in what we call a “tidy” format. All analyses will be required to be performed in R. Please reach out if you need help!
 
 ## Installing R and RStudio (soon to be called Posit)
 

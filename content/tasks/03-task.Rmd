@@ -1,0 +1,121 @@
+---
+title: "Validity, Reliability, and Objectivity"
+linktitle: "Week 3: Validity, Reliability, and Objectivity"
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  tasks:
+    parent: Tasks
+    weight: 3
+type: docs
+weight: 1
+---
+
+`r blogdown::shortcode("aes-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+<style>
+img {
+max-width:100%;
+}
+</style>
+
+### Downloads
+
+Download a copy of everything you need to follow along with the presentation^[You will have to unzip this file. If you are unfamiliar with this process, please check the [Unzipping files](/resources/unzipping/) section under Resources for assistance]
+
+<center>
+```{r echo=FALSE,eval=TRUE,message=FALSE,purl=FALSE}
+loc <- here::here("static", "slides", "Week 3", "EDP618Week3Materials.zip")
+
+downloadthis::download_file(
+  path = loc,
+  output_name = "Week 3 Presentation Materials",
+  button_label = "&nbsp;&nbsp;&nbsp;<span style='color:#ffffff'>Download</span>",
+  button_type = "primary",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+</center>
+
+### In Class Notes
+
+```{=html}
+<center>
+<div class="wrapper">
+    <div class="icon leftright">
+      <div class="tooltip"><span style=width:200px;>Move back and forth using <kbd>←</kbd> and <kbd>→</kbd></span></div>
+      <span><i class="fas fa-map-signs"></i></span></div>
+    <div class="icon info">
+      <div class="tooltip"><span style=width:200px;>Toggle fullscreen by pressing <kbd>F</kbd></span></div>
+      <span><i class="fas fa-expand-alt"></i></span>
+    </div><div class="icon github">
+      <div class="tooltip"><span style=width:200px;>Press <kbd>O</kbd> for and overview of all slides</span></div>
+      <span><i class="far fa-images"></i></span>
+    </div><div class="icon youtube">
+      <div class="tooltip"><span style=width:200px;>Discover more shortcuts by pressing <kbd>H</kbd></span></div>
+      <span><i class="fas fa-info-circle"></i></span>
+    </div>
+</div>
+</center>
+<br>
+```
+
+<center>
+<div class="holder">
+
+<div class="bigcol">
+```{r echo = FALSE, out.width="140%", fig.align='left'}
+knitr::include_url("/slides/Week 3/Slides-Week-3-pres.html")
+```
+</div>
+
+<div class="smallcol">
+```{r echo = FALSE, fig.align='right'}
+html_link <- function() {
+  paste0("<a href='/slides/Week 3/Slides-Week-3-pres.html' target='_blank'>", "<img src='/logos/web-ico.png' alt='Survey Design Page' width='35'>", "</a>")
+}
+
+pdf_link <- function() {
+ paste0("<a href='/slides/Week 3/Slides-Week-3-flat.pdf' target='_blank'>", "<img src='/logos/pdf-ico.png' alt='Survey Design PDF' width='35'>", "</a>")
+}
+
+tibble(
+  
+  html <- c(html_link(),
+            "Larger version of the presentation",
+            "",
+            pdf_link(),
+            "PDF of the presentation")
+  ) %>%
+  kbl(col.names = c(""),
+      "html",
+      escape = FALSE,
+      align = 'c') %>%
+  kable_paper(full_width = FALSE) %>%
+  column_spec(1, width = "25em", extra_css = "padding-left: 200px;") %>%
+  row_spec(1:5, extra_css = 'vertical-align: middle !important;', color = "#ffffff", background = "transparent")
+```
+</div>
+
+</div>
+
+<div class="clear">
+</div>
+</center>
+
+### Watch a Video
+  
+Take a look at a fantastic explanation of the conept of regression to the mean.
+
+<p align="center">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/1tSqSMOyNFE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+
