@@ -36,8 +36,8 @@ Link
 <tbody>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Read <i>Integrating quantitative and qualitative
-research: how is it done?</i> in Bryman (2006)
+Read <i>Integrating Quantitative and Qualitative
+Research: How is it Done?</i> in Bryman (2006)
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/readings/02-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
@@ -59,7 +59,7 @@ Read <i>Toward a Conceptual Framework for Mixed-Method Evaluation Designs</i> in
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Read <i>Crossing anxious borders: teaching across the quantitative–qualitative ‘divide’</i> in Luttrell (2005)
+Read <i>Crossing Anxious Borders: Teaching Across the Quantitative–Qualitative ‘Divide’</i> in Luttrell (2005)
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/readings/02-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>

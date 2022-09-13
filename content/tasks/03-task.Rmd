@@ -36,7 +36,6 @@ loc <- here::here("static", "slides", "Week 3", "EDP618Week3Materials.zip")
 downloadthis::download_file(
   path = loc,
   output_name = "Week 3 Presentation Materials",
-  button_label = "&nbsp;&nbsp;&nbsp;<span style='color:#ffffff'>Download</span>",
   button_type = "primary",
   has_icon = TRUE,
   icon = "fa fa-save",
@@ -118,4 +117,8 @@ Take a look at a fantastic explanation of the conept of regression to the mean.
 <p align="center">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/1tSqSMOyNFE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
+
+### Create an Argument
+
+Please finish work on your second deliverable. More details can be found [here](/deliverables/02-l2/)
 

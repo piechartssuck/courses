@@ -46,8 +46,7 @@ Link
 <tbody>
 <tr>
 <td style="text-align:left;width: 30em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<i>Mixed Methods and Credibility of
-Evidence in Evaluation</i>
+<i>Mixed Methods and Credibility of Evidence in Evaluation</i>
 </td>
 <td style="text-align:left;width: 20em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 Mertens & Hesse-Biber (2013)

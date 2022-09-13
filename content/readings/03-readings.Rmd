@@ -41,8 +41,7 @@ downloadthis::download_file(
 
 paper <- tibble(
   
-  title = c("<i>Mixed Methods and Credibility of
-Evidence in Evaluation</i>",
+  title = c("<i>Mixed Methods and Credibility of Evidence in Evaluation</i>",
             "<i>Strategies for Ensuring Trustworthiness in Qualitative Research Projects</i>"
   ),
   

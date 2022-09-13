@@ -26,7 +26,7 @@ wk_post <-
   tibble(
 
 Description = c("Read <i>Toward a Definition of Mixed Methods Research</i> in  Johnson, Onwuegbuzie, &amp; Turner (2007)",
-                "Read <i>The Value of Mixed Methods Research: A Mixed Methods Study </i> in  	McKim (2017)",
+                "Read <i>The Value of Mixed Methods Research: A Mixed Methods Study </i> in  =McKim (2017)",
                 "Install <b>Taguette</b>",
                 "Install both <b>R</b> and <b>RStudio</b>",
                 "Start on the module <span style='color:#ffc787;font-weight:bold'><i>Introduction to R</i></span>",
@@ -42,7 +42,7 @@ Details = c("<a href='/readings/01-readings/#read-some-text'><span style='font-s
             "<a href='/resources/install/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/modules/01-module/#data-camp'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/tasks/01-task/#class-slack-account-access'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
-            "<a href='/tasks/01-task/#review-this-weeks-slideshow'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/tasks/01-task/#inclassnotes'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
              "<a href='/tasks/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
             ),
 
