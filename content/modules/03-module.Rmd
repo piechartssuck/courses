@@ -69,16 +69,13 @@ kable(dc_schedule,
 
 ## R Task
 
-*posting soon*
-
-<!--
 Please follow the directions listed below
 
 1. Download the task files
 
 <center>
 ```{r echo=FALSE,eval=TRUE,message=FALSE}
-loc <- here::here("static", "rtasks", "Esquisse.zip")
+loc <- here::here("static", "rtasks", "IntroductionToTheTidyverse.zip")
 
 downloadthis::download_file(
   path = loc,
@@ -95,13 +92,13 @@ downloadthis::download_file(
 
 2. [Unzip](/resources/unzipping) them on your computer
 
-3. Open the file `Introduction to the Tidyverse walkthrough.Rmd` in RStudio.
+3. Open `Introduction to the Tidyverse install.R` and run everything inside of it
 
-4. Run `install.packages('learnr')` in the Console and wait until the package installs
+4. Open the file `Introduction to the Tidyverse walkthrough.Rmd` in RStudio
 
 5. Click on Run Document, and then go through the walkthrough preferably in a larger window. To see how to do this, open the file `Introduction to the Tidyverse loading.gif` in the web browser of your choice or by another method to view the animated gif
 
-6. After finishing the walkthrough, open the mostly empty script to `Introduction to the Tidyverse script.R` and load up the `tidyverse` library. *Please be aware that it is included for you in this first task but will not be in the future*
+6. After finishing the walkthrough, open the mostly empty script to `Introduction to the Tidyverse script.R` and load up the `tidyverse` library. *Please be aware that the needed libraries may not be provided for you in the future*
 
 7. Keeping the hashtag, erase the words at the top and replace them with your full name
 
@@ -118,9 +115,7 @@ downloadthis::download_file(
 
 9. Save the file by adding your first initial and last name to the beginning of the filename. For example, my submission would be `aroy Introduction to the Tidyverse script.R`
 
-10. Submit the script to [eCampus](https://ecampus.wvu.edu) in the Submission Portal
-
--->
+10. Submit the script to <span style="color:#c563ff">Introduction to the Tidyverse</span> in the Submission Portal on [eCampus](https://ecampus.wvu.edu)
 
 ## <code><span style='font-size:20px'>esquisse</span></code>
 
