@@ -1,6 +1,6 @@
 ---
-title: "Reverse Coding and Internal Consistency"
-linktitle: "Week 5: Reverse Coding and Internal Consistency"
+title: "Reliability"
+linktitle: "Week 5: Reliability"
 toc: true
 output:
   rmarkdown::html_document:
