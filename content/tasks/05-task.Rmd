@@ -76,7 +76,7 @@ html_link <- function() {
 }
 
 pdf_link <- function() {
- paste0("<a href='/slides/Statistical%20Tests%20in%20R/Slides-SurveyDesign-flat.pdf' target='_blank'>", "<img src='/logos/pdf-ico.png' alt='Sampling presentation PDF' width='35'>", "</a>")
+ paste0("<a href='/slides/Statistical%20Tests%20in%20R/Statistical-Tests-in-R-flat.pdf' target='_blank'>", "<img src='/logos/pdf-ico.png' alt='Sampling presentation PDF' width='35'>", "</a>")
 }
 
 tibble(

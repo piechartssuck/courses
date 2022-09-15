@@ -86,7 +86,7 @@ Larger version of the presentation
 </tr>
 <tr>
 <td style="text-align:center;width: 25em; padding-left: 200px;color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/slides/Statistical%20Tests%20in%20R/Slides-SurveyDesign-flat.pdf" target="_blank"><img src="/logos/pdf-ico.png" alt="Sampling presentation PDF" width="35"></a>
+<a href="/slides/Statistical%20Tests%20in%20R/Statistical-Tests-in-R-flat.pdf" target="_blank"><img src="/logos/pdf-ico.png" alt="Sampling presentation PDF" width="35"></a>
 </td>
 </tr>
 <tr>
