@@ -36,7 +36,7 @@ max-width:100%;
 
 ### Verify Qualtrics Account Login
 
-You may end up using a survey in this course so its a good idea to go to the [WVU Qualtrics login page](https://wvu.qualtrics.com) and simply make sure you can login. If you are unable to do so, please submit a [ticket to IT](https://wvu.atlassian.net/servicedesk/customer/portals) or give them a ring at <a href="tel:3042934444">304-293-4444</a> as soon as possible.
+You may end up using a survey in this course so its a good idea to go to the [WVU Qualtrics login page](http://wvu.ca1.qualtrics.com/) and simply make sure you can login. If you are unable to do so, please submit a [ticket to IT](https://wvu.atlassian.net/servicedesk/customer/portals) or give them a ring at <a href="tel:3042934444">304-293-4444</a> as soon as possible.
 <br>
 
 ## Learn about Program Evaluation
