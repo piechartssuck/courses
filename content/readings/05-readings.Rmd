@@ -1,0 +1,80 @@
+---
+title: "Reliability"
+linktitle: "Week 5: Reliability"
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  readings:
+    parent: Readings
+    weight: 5
+type: docs
+weight: 1
+---
+
+`r blogdown::shortcode("aes-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+### Read Some Text
+
+```{r echo=FALSE}
+
+document <- as.character(fa("file", fill = "#e86af0", height = "25px"))
+
+book <- as.character(fa("book", fill = "#f06ab5", height = "25px"))
+
+site <- as.character(fa("link", fill = "	#a56af0", height = "25px"))
+
+linkfa <- as.character(fa("link", fill = "#a56af0", height = "25px"))
+
+review <- tibble(
+  
+  title <- c("<i>How to Write Open- and Closed-Ended Questions</i>",
+             "<i>Measurement, Scales, and Scoring</i>",
+             "<i>Reliability</i>"
+             ),
+  
+  section = c("Chapter 5",
+              "Chapter 2",
+              "Chapter 5"),
+  
+  link <- c(
+    paste0("[",book,"]",
+    "(https://ebookcentral.proquest.com/lib/wvu/reader.action?docID=1762797&ppg=147){target='_blank'}"
+    ),
+    paste0("[",linkfa,"]",
+    "(https://www.thetaminusb.com/intro-measurement-r/measurement.html){target='_blank'}"
+    ),
+    paste0("[",linkfa,"]",
+    "(https://www.thetaminusb.com/intro-measurement-r/reliability.html){target='_blank'}"
+    )
+  ),
+  
+  .name_repair = "minimal"
+  
+)
+
+```
+
+<center>
+```{r, echo=FALSE}
+review %>%
+  mutate_all(replace_na,"") %>%
+  kbl(col.names = c("Title", 
+                    "Section",
+                    "Link"), 
+      "html", 
+      escape = FALSE,
+      align = 'llc') %>%
+   kable_paper(full_width = TRUE) %>%
+  column_spec(1, width = "20em") %>%
+  column_spec(2, width = "10em") %>% 
+  row_spec(0:nrow(review), extra_css = 'vertical-align: middle !important;', color = "#f7f7f7", background = "transparent") 
+```
+</center>
+
+*Please feel free to ignore the R code in Albano text. While important, we'll look at reliability through the lens of survey research*

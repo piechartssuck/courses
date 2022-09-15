@@ -1,10 +1,10 @@
 ---
-title: "Create a Draft "
-linktitle: "Week 4: Create a Draft "
+title: "Create a Draft"
+linktitle: "Create a Draft"
 menu:
   tasks:
     parent: Deliverables
-    weight: 1
+    weight: 2
 type: docs
 weight: 2
 editor_options: 

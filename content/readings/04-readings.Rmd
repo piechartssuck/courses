@@ -34,7 +34,7 @@ review <- tibble(
   title <- c("<i>The Fundamentals of Writing Questions</i>"
   ),
   
-  section = c("Chapter 3"),
+  section = c("Chapter 4"),
   
   link <- c(
     paste0("[",book,"]",

@@ -1,6 +1,6 @@
 ---
 title: "Establish a Sampling Frame"
-linktitle: "Week 2: Establish a Sampling Frame"
+linktitle: "Establish a Sampling Frame"
 menu:
   tasks:
     parent: Deliverables

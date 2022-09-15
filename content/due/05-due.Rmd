@@ -1,0 +1,97 @@
+---
+title: "Reliability"
+linktitle: "Week 5: Reliability"
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  due:
+    parent: 'To Do List'
+    weight: 5
+type: docs
+weight: 1
+---
+
+`r blogdown::shortcode("r-walkthrough-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+
+```{r eval = TRUE, echo = FALSE}
+
+wk_post <- 
+  
+  tibble(
+
+Description = c("Read <i>How to Write Open- and Closed-Ended Questions</i> in Dillman, Smyth, &amp; Christian (2014)",
+                "Read <i>Measurement, Scales, and Scoring</i> in Albano (2020)",
+                "Read <i>Reliability</i> in Albano (2020)",
+                "Complete the module <span style='color:#ffc787;font-weight:bold'><i>Reshaping Data with tidyr</i></span>",
+                "Go through a walkthrough on how to reverse code items and internal consistency reliability",
+                "Skim through the slideshow <span style='color:#6ac4cd;font-weight:bold'>A Very Incomplete Survey of Basic Statistical Tests in R</span>",
+                "Begin <span style='color:#6acda5;font-weight:bold'>Refine the Draft</span> after recieving feedback on your second deliverable"
+                ),
+
+
+Details = c("<a href='/readings/05-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/readings/05-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/readings/05-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/modules/05-module/#data-camp'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/walkthroughs/05-walkthrough/#reverse-coding-and-internal-consistency'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/tasks/05-task/#some-statistics-in-r'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/deliverables/03-l3/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
+            ),
+
+Icon = c("library",
+         "offsite",
+         "offsite",
+         "dc",
+         "",
+         "",
+         "ecampus"),
+
+Site = c("https://ebookcentral.proquest.com/lib/wvu/reader.action?docID=1762797&ppg=147",
+         "https://www.thetaminusb.com/intro-measurement-r/measurement.html",
+         "https://www.thetaminusb.com/intro-measurement-r/reliability.html",
+         "https://www.datacamp.com",
+         "",
+         "",
+         "https://ecampus.wvu.edu"
+         )
+)
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+wk_post %>%
+  mutate(Icon = case_when(
+    str_detect(`Icon`, "slack") ~ '<img src="/logos/slack-ico.png" alt="Slack icon" width="25">',
+    str_detect(`Icon`, "ecampus") ~ '<img src="/logos/wvu-gold-ico.png" alt="WVU icon" width="25">',
+    str_detect(`Icon`, "pdf") ~ '<img src="/logos/pdf-ico.png" alt="WVU icon" width="30">',
+    str_detect(`Icon`, "library") ~ '<img src="/logos/library-ico.png" alt="Library icon" width="25">',
+    str_detect(`Icon`, "offsite") ~ '<img src="/logos/web-ico.png" alt="Web icon" width="26">',
+    str_detect(`Icon`, "qualtrics") ~ '<img src="/logos/qualtrics-ico.png" alt="Qualtrics icon" width="29">',
+    str_detect(`Icon`, "calendar") ~ '<img src="/logos/calendar-clock.png" alt="Calendar clock icon" width="27">',
+    str_detect(`Icon`, "dc") ~ '<img src="/logos/dc-ico.png" alt="DataCamp icon" width="24">',
+    TRUE ~ NA_character_
+      )
+    ) %>%
+  mutate(Site = na_if(Site, "")) %>%
+  mutate(Link = case_when(
+    !is.na(Icon) ~ paste0("<a href=",Site," target='_blank'>",Icon,"</a>"),
+    TRUE ~ NA_character_
+      )
+    ) %>%
+  select(-Icon, -Site) %>% 
+  mutate_all(replace_na,"") %>%
+kbl("html",
+    escape = FALSE,
+    align = 'lcc') %>%
+  kable_paper(full_width = FALSE) %>%
+  column_spec(1, width = "25em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>%
+  column_spec(2:3, width = "5em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(0:nrow(wk_post), extra_css = 'vertical-align: middle !important;', background = "transparent", color = "#f7f7f7") 
+```
+</center>
