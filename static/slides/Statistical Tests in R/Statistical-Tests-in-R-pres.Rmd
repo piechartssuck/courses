@@ -375,7 +375,7 @@ DT::datatable(StatsTable,
               class = list(stripe = FALSE),
               extensions = 'Buttons',
               options = list(
-                pageLength = 7,
+                pageLength = 5,
                 searching = FALSE,
                 autoWidth = FALSE,
                 dom = "Brtip",
