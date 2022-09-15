@@ -65,14 +65,14 @@ downloadthis::download_file(
 
 <div class="bigcol">
 ```{r echo = FALSE, out.width="140%", fig.align='left'}
-knitr::include_url("/slides/Statistical%20Tests%20in%20R/Statistical-Tests-in-R.html")
+knitr::include_url("/slides/Statistical%20Tests%20in%20R/Statistical-Tests-in-R-pres.html")
 ```
 </div>
 
 <div class="smallcol">
 ```{r echo = FALSE, fig.align='right'}
 html_link <- function() {
-  paste0("<a href='/slides/Statistical%20Tests%20in%20R/Statistical-Tests-in-R.html' target='_blank'>", "<img src='/logos/web-ico.png' alt='Sampling presentation' width='35'>", "</a>")
+  paste0("<a href='/slides/Statistical%20Tests%20in%20R/Statistical-Tests-in-R-pres.html' target='_blank'>", "<img src='/logos/web-ico.png' alt='Sampling presentation' width='35'>", "</a>")
 }
 
 pdf_link <- function() {

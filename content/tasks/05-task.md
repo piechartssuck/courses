@@ -55,7 +55,7 @@ weight: 1
 
 <div class="bigcol">
 
-<iframe src="/slides/Statistical%20Tests%20in%20R/Statistical-Tests-in-R.html" width="140%" height="400px" data-external="1">
+<iframe src="/slides/Statistical%20Tests%20in%20R/Statistical-Tests-in-R-pres.html" width="140%" height="400px" data-external="1">
 </iframe>
 
 </div>
@@ -72,7 +72,7 @@ weight: 1
 <tbody>
 <tr>
 <td style="text-align:center;width: 25em; padding-left: 200px;color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/slides/Statistical%20Tests%20in%20R/Statistical-Tests-in-R.html" target="_blank"><img src="/logos/web-ico.png" alt="Sampling presentation" width="35"></a>
+<a href="/slides/Statistical%20Tests%20in%20R/Statistical-Tests-in-R-pres.html" target="_blank"><img src="/logos/web-ico.png" alt="Sampling presentation" width="35"></a>
 </td>
 </tr>
 <tr>

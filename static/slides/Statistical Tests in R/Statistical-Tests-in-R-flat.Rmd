@@ -33,8 +33,16 @@ section {
     display: -webkit-flex;
 }
 
-section p {
+section {
+    height: 600px;
+    width: 60%;
     margin: auto;
+    border-radius: 21px;
+    background-color: #212121;
+}
+
+.remark-slide-container {
+background: #212121;
 }
 
 .hljs-github .hljs {
@@ -58,28 +66,47 @@ section p {
     color: #b7b3ef;
 }
 
-section {
-    height: 600px;
-    width: 60%;
-    margin: auto;
-    border-radius: 20px;
-    background-color: #212121;
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
+}
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
 }
 
 section p {
     text-align: center;
     font-size: 30px;
     background-color: #212121;
-    border-radius: 20px;
+    border-radius: 21px;
     font-family: Roboto Condensed;
     font-style: bold;
-    padding: 15px;
+    padding: 12px;
     color: #bff4ee;
+    margin: auto;
 }
 
 #center {
 text-align: center;
 }
+
+#right {
+  text-align: right;
+} 
 
 .center p {
   margin: 0;
@@ -88,19 +115,27 @@ text-align: center;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-
-.left-code {
-  color: #777;
-  width: 38%;
-  height: 92%;
-  float: left;
-}
-.right-plot {
-  width: 60%;
-  float: right;
-  padding-left: 1%;
 }
 
+.center2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.tab {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.obr
+{
+    display:block;
+    margin-top:-15px;
+}
 </style>
 
 ```{css echo=FALSE}
