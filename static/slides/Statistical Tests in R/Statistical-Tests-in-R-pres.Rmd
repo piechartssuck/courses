@@ -216,7 +216,7 @@ To follow along, please make sure to do the following
 --
 
 3. Load up the following packages 
-    ```{r, messages = FALSE}
+    ```{r, messages = FALSE, eval = FALSE}
     library(tidyverse)
     library(car)
     library(foreign)
@@ -224,6 +224,16 @@ To follow along, please make sure to do the following
     library(MASS)
     library(CCA)
     library(psych)
+    ```
+    
+    ```{r, messages = FALSE, echo = FALSE}
+    suppressPackageStartupMessages(library(tidyverse))
+    suppressPackageStartupMessages(library(car))
+    suppressPackageStartupMessages(library(foreign))
+    suppressPackageStartupMessages(library(lme4))
+    suppressPackageStartupMessages(library(MASS))
+    suppressPackageStartupMessages(library(CCA))
+    suppressPackageStartupMessages(library(psych))
     ```
 
 ---
