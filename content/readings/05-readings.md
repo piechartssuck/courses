@@ -73,5 +73,6 @@ Chapter 5
 </tbody>
 </table>
 </center>
+<hr style="width:50%;">
 
-*Please feel free to ignore the R code in Albano text. While important, we’ll look at reliability through the lens of survey research*
+<span style="font-size:14px;font-style: italic;">Please feel free to ignore the R code in the Albano text which is beyond the scope of this course. While similar, we’ll approach the assessment of both reliability and validity through the lens of survey research</span>
