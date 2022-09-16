@@ -1,7 +1,6 @@
 ---
 title: "Reliability"
 linktitle: "Week 5: Reliability"
-toc: true
 output:
   rmarkdown::html_document:
     toc: true
