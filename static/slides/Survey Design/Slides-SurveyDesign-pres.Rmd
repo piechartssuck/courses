@@ -637,15 +637,19 @@ This can lead to massive bias, unreliable or unusable results
 --
 
 <br>
+<center>
+<audio controls preload="auto">
+  <source src="audio/survey/S10_OrdinalorNominal_1.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
 <br>
 <br>
 <br>
-<br>
+
 .pull-left[
 <img src="img/image8a.png" width="95%" height="95%"/>
 ]
-
---
 
 .pull-right[
 <img src="img/image8b.png" width="95%" height="95%"/>
@@ -653,12 +657,24 @@ This can lead to massive bias, unreliable or unusable results
 
 <br>
 <br>
+.pull-left[
 <center>
 <audio controls preload="auto">
-  <source src="audio/survey/S10_OrdinalorNominal.mp3" type="audio/mpeg">
+  <source src="audio/survey/S10_OrdinalorNominal_2.mp3" type="audio/mpeg">
   Your browser does not support embedded audio.
 <audio>
 </center>
+]
+.pull-right[
+<center>
+<audio controls preload="auto">
+  <source src="audio/survey/S10_OrdinalorNominal_3.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+]
+
+.footnote[Order of audio files: top > left > right]
 
 ---
 
