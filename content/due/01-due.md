@@ -165,10 +165,20 @@ Go through the slideshow <span style="color:#6ac4cd;font-weight:bold">Criterial 
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Review the course deliverables
+Review summaries of all course deliverables
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/tasks/"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
+</td>
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+Begin your first deliverable <span style="color:#6acda5;font-weight:bold">Establish a Sampling Frame</span>
+</td>
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<a href="/deliverables/01-l1/"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>

@@ -37,7 +37,8 @@ Description = c("Read <i>CDC’s Introduction to Evaluation With a Focus on Publ
                 "Get logged into the course Slack page and post on <a style='color:#ff8384;'>\\ #wk1-introduce-yourself</a>",
                 "Verify your Qualtrics account",
                 "Go through the slideshow <span style='color:#6ac4cd;font-weight:bold'>Criterial and Interpretive Evaluation: Keys to Merit, Worth, and Significance</span>",
-                "Review the course deliverables"
+                "Review summaries of all course deliverables",
+                "Begin your first deliverable <span style='color:#6acda5;font-weight:bold'>Establish a Sampling Frame</span>"
                 ),
 
 
@@ -53,7 +54,8 @@ Details = c("<a href='/readings/01-readings/#read-some-text'><span style='font-s
             "<a href='/tasks/01-task/#class-slack-account-access'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/tasks/01-tasks/#verify-qualtrics-account-login'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/tasks/01-tasks/#learn-about-program-evaluation'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
-             "<a href='/tasks/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
+             "<a href='/tasks/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+             "<a href='/deliverables/01-l1/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
             ),
 
 Icon = c("offsite",
@@ -68,6 +70,7 @@ Icon = c("offsite",
          "slack",
          "qualtrics",
          "",
+         "",
          ""),
 
 Site = c("https://www.cdc.gov/eval/guide/introduction/index.htm",
@@ -81,6 +84,7 @@ Site = c("https://www.cdc.gov/eval/guide/introduction/index.htm",
          "",
          "https://edp619fall2022.slack.com/",
          "htts://wvu.qualtrics.com",
+         "",
          "",
          "")
 )

@@ -30,7 +30,7 @@ Description = c("Read <i>The Fundamentals of Writing Questions</i> in Dillman, S
                 "Complete and submit the associated <i class='fa-brands fa-r-project'></i> task for the module",
                 "Go through a walkthrough on how to add vertical spacing to survey items that require conceptual and/or visual separation",
                  "Go through the slideshow <span style='color:#6ac4cd;font-weight:bold'>Survey Design</span>",
-                "Finish up on your second deliverable <span style='color:#6acda5;font-weight:bold'>Create a Draft</span>"
+                "Submit your second deliverable <span style='color:#6acda5;font-weight:bold'>Create a Draft</span>"
                 ),
 
 

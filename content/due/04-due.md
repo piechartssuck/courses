@@ -89,7 +89,7 @@ Go through the slideshow <span style="color:#6ac4cd;font-weight:bold">Survey Des
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Finish up on your second deliverable <span style="color:#6acda5;font-weight:bold">Create a Draft</span>
+Submit your second deliverable <span style="color:#6acda5;font-weight:bold">Create a Draft</span>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/deliverables/02-l2/"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>

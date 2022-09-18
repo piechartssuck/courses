@@ -30,7 +30,7 @@ Description = c("Read <i>Covering the Population and Selecting Who to Survey</i>
                 "Optionally download the package <code><span style='font-size:15px'>esquisse</span></code> to help with learning about <code><span style='font-size:15px'>ggplot2</span></code> using a more familiar drag and drop approach",
                 "Go through a walkthrough on how to get rid of the particularly annoying Qualtrics plug",
                  "Go through the slideshow <span style='color:#6ac4cd;font-weight:bold'>Sampling</span>",
-                "Begin on your second deliverable <span style='color:#6acda5;font-weight:bold'>Create a Draft </span>"
+                "Begin work on your second deliverable <span style='color:#6acda5;font-weight:bold'>Create a Draft</span>"
                 ),
 
 
