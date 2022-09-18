@@ -2,6 +2,5 @@
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 
 remotes::install_github("rstudio/chromote")
-source("https://git.io/xaringan2pdf")
-xaringan_to_pdf("Slides-SurveyDesign-flat.html")
+renderthis::to_pdf(from = "Slides-SurveyDesign-flat.Rmd", complex_slides = TRUE)
 

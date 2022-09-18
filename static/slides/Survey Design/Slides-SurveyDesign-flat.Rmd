@@ -371,6 +371,9 @@ xaringanExtra::use_logo(
 
 --
 
+<br>
+<br>
+<br>
 .pull-left[
 <img src="img/image2a.png" width="75%" height="75%"/>
 ]
@@ -427,26 +430,15 @@ This can lead to massive bias, unreliable or unusable results
 
 ##  Nominal Type Questions 
 
-.center2[
-<img src="img/image4.png" width="90%" height="90%" style="background-color:#212121;"/>
-]
+<br>
+<br>
+<br>
+<br>
+<br>
+<center>
+<img src="img/image4.png" width="55%" style="background-color:#212121;"/>
+</center>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 .footnote[
 *More about [nominal variables](https://statsandr.com/blog/variable-types-and-examples/#nominal)*
 ]
@@ -457,9 +449,15 @@ This can lead to massive bias, unreliable or unusable results
 
 --
 
-.center2[
-<img src="img/image5.png" width="85%" height="85%"/>
-]
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<center>
+<img src="img/image5.png" width="35%""/>
+</center>
 
 ---
 
@@ -467,6 +465,9 @@ This can lead to massive bias, unreliable or unusable results
 
 --
 
+<br>
+<br>
+<br>
 <center>
 <img src="img/image6.png" width="55%" height="55%"/>
 </center>
@@ -522,14 +523,14 @@ This can lead to massive bias, unreliable or unusable results
 --
 
 .pull-right[
-<img src="img/image9b.png" width="55%" height="55%"/>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <img src="img/image9b.png" width="55%" height="55%"/>
 ]
 
 --
 
-.pull-left[
-<img src="img/image9c.png" width="65%" height="30%"/>
-]
+<center>
+<img src="img/image9c.png" width="35%""/>
+</center>
 
 ---
 
@@ -556,9 +557,13 @@ This can lead to massive bias, unreliable or unusable results
 
 --
 
-.center2[
-<img src="img/image11.png" width="90%" height="90%"/>
-]
+<br>
+<br>
+<br>
+<br>
+<center>
+<img src="img/image11.png" width="50%"/>
+</center>
 
 ---
 
@@ -724,9 +729,12 @@ Comes in many names:
 
 ## Unordered
 
-.center2[
-<img src="img/image18c.png" width="90%" height="90%" />
-]
+<br>
+<br>
+<br>
+<center>
+<img src="img/image18c.png" width="50%"/>
+</center>
 
 ---
 
@@ -737,7 +745,6 @@ Comes in many names:
 <center>
 <img src="img/image19a.png" width="50%" height="50%" />
 </center>
-<br>
 
 --
 
@@ -1083,9 +1090,12 @@ Comes in many names:
 
 --
 
-.center2[
-<img src="img/image28.png" width="75%" height="75%" />
-]
+<br>
+<br>
+<br>
+<center>
+<img src="img/image28.png" width="40%"/>
+</center>
 
 ---
 
@@ -1095,18 +1105,21 @@ Comes in many names:
 
 Much like this class, the content is free to anyone for personal use. For more information, please look at the licensing information provided below.
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <center>
 <br><br>
 <div class="fade_rule"></div>  
 <br><br>
 </center>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 <center>
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><br />This work is licensed under a <br /><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>
 </center>
