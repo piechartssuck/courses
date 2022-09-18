@@ -510,9 +510,9 @@ big_five_data_EXT_rev %>%
 ```
 
 ```
-## 
-## Correlation method: 'pearson'
-## Missing treated using: 'pairwise.complete.obs'
+## Correlation computed with
+## • Method: 'pearson'
+## • Missing treated using: 'pairwise.complete.obs'
 ```
 
 ```
@@ -542,9 +542,9 @@ inter_measure  <- big_five_data_EXT_rev %>%
 ```
 
 ```
-## 
-## Correlation method: 'pearson'
-## Missing treated using: 'pairwise.complete.obs'
+## Correlation computed with
+## • Method: 'pearson'
+## • Missing treated using: 'pairwise.complete.obs'
 ```
 
 ```r
@@ -703,9 +703,9 @@ agg_scores <- big_five_data_EXT_rev %>%
 ```
 
 ```
-## 
-## Correlation method: 'pearson'
-## Missing treated using: 'pairwise.complete.obs'
+## Correlation computed with
+## • Method: 'pearson'
+## • Missing treated using: 'pairwise.complete.obs'
 ```
 
 ```r

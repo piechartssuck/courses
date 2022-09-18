@@ -82,7 +82,7 @@ You may end up using a survey in this course so its a good idea to go to the [WV
 <tbody>
 <tr>
 <td style="text-align:center;width: 25em; padding-left: 200px;color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/slides/Criterial%20and%20Interpretive%20Evaluation/Criterial-and-Interpretive-Eval-pres.html" target="_blank'"><img src="/logos/web-ico.png" alt="Criteria for Evaluations Page" width="35"></a>
+<a href="/slides/Criterial%20and%20Interpretive%20Evaluation/Criterial-and-Interpretive-Eval-pres.html" target="_blank"><img src="/logos/web-ico.png" alt="Criteria for Evaluations Page" width="35"></a>
 </td>
 </tr>
 <tr>

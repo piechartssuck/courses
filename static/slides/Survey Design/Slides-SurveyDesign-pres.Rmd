@@ -215,15 +215,7 @@ My voice does not sound like Morgan Freeman at all, but most pages will have som
 
 #  The Tailored Design Method (TDM) 
 
---
-
-- Premised on social exchange perspective on human behavior - *You do something for me, and I do something for you*
-
---
-
-- Assumes that the likelihood of responding is greater when the expected rewards outweigh the anticipated costs - *Increased benefits with decreased costs*
-
-<br>
+<div style="margin-left: 395px; margin-top: 300px; position:absolute;">
 <center>
 <audio controls preload="auto">
   <source src="audio/survey/S1_TDM_A.mp3" type="audio/mpeg">
@@ -237,10 +229,30 @@ My voice does not sound like Morgan Freeman at all, but most pages will have som
   Your browser does not support embedded audio.
 <audio>
 </center>
+</div>
+
+--
+
+- Premised on social exchange perspective on human behavior - *You do something for me, and I do something for you*
+
+--
+
+- Assumes that the likelihood of responding is greater when the expected rewards outweigh the anticipated costs - *Increased benefits with decreased costs*
+
+
 
 ---
 
 # Approaches to Increasing Benefits 
+
+<div style="margin-left: 700px; margin-top: 150px; position:absolute;">
+<center>
+<audio controls preload="auto">
+  <source src="audio/survey/S2_IncreasingBenefits.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+</div>
 
 --
 
@@ -278,20 +290,20 @@ My voice does not sound like Morgan Freeman at all, but most pages will have som
 
 - Inform people that opportunities to respond are limited
 
-<br>
-<center>
-<audio controls preload="auto">
-  <source src="audio/survey/S2_IncreasingBenefits.mp3" type="audio/mpeg">
-  Your browser does not support embedded audio.
-<audio>
-</center>
-
 ---
 
 # Approaches to Decreasing Costs 
 
---
+<div style="margin-left: 700px; margin-top: 250px; position:absolute;">
+<center>
+<audio controls preload="auto">
+  <source src="audio/survey/S3_Decreasing Costs.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+</div>
 
+--
 
 - Avoid subordinating language
 
@@ -311,17 +323,18 @@ My voice does not sound like Morgan Freeman at all, but most pages will have som
 
 - Minimize requests for personal or sensitive information
 
-<br>
-<center>
-<audio controls preload="auto">
-  <source src="audio/survey/S3_Decreasing Costs.mp3" type="audio/mpeg">
-  Your browser does not support embedded audio.
-<audio>
-</center>
-
 ---
 
 #  Establishing Trust
+
+<div style="margin-left: 700px; margin-top: 175px; position:absolute;">
+<center>
+<audio controls preload="auto">
+  <source src="audio/survey/S4_EstiablishingTrust.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+</div>
 
 --
 
@@ -338,14 +351,6 @@ My voice does not sound like Morgan Freeman at all, but most pages will have som
 --
 
 - Say thank you!
-
-<br>
-<center>
-<audio controls preload="auto">
-  <source src="audio/survey/S4_EstiablishingTrust.mp3" type="audio/mpeg">
-  Your browser does not support embedded audio.
-<audio>
-</center>
 
 ---
 
@@ -438,6 +443,8 @@ My voice does not sound like Morgan Freeman at all, but most pages will have som
 
 --
 
+<br>
+<br>
 .pull-left[
 <img src="img/image2a.png" width="75%" height="75%"/>
 ]
@@ -451,6 +458,15 @@ My voice does not sound like Morgan Freeman at all, but most pages will have som
 ---
 
 #  Double-Barreled Questions – What’s the problem? 
+
+<div style="margin-left: 395px; margin-top: 350px; position:absolute;">
+<center>
+<audio controls preload="auto">
+  <source src="audio/survey/S6_DoubleBarrel.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+</div>
 
 --
 
@@ -482,14 +498,6 @@ If the answer is <b>Yes</b>, then are the respondents saying it for the burger, 
 This can lead to massive bias, unreliable or unusable results
 </center>
 
-<br>
-<center>
-<audio controls preload="auto">
-  <source src="audio/survey/S6_DoubleBarrel.mp3" type="audio/mpeg">
-  Your browser does not support embedded audio.
-<audio>
-</center>
-
 ---
 
 # Structures
@@ -503,7 +511,7 @@ This can lead to massive bias, unreliable or unusable results
 ##  Nominal Type Questions 
 
 .center2[
-<img src="img/image4.png" width="90%" height="90%" style="background-color:#212121;"/>
+<img src="img/image4.png" width="100%" style="background-color:#212121;"/>
 ]
 
 <br>
@@ -534,12 +542,12 @@ This can lead to massive bias, unreliable or unusable results
 
 ---
 
-##  Nominal Type Questions - Dichotomous
+##  Dichotomous Nominal Type Questions
 
 --
 
 .center2[
-<img src="img/image5.png" width="85%" height="85%"/>
+&emsp; &emsp; &emsp; &ensp; &ensp; <img src="img/image5.png" width="65%" />
 ]
 
 <br>
@@ -573,8 +581,6 @@ This can lead to massive bias, unreliable or unusable results
 <img src="img/image6.png" width="95%"/>
 ]
 
-<br>
-<br>
 <br>
 <br>
 <br>
@@ -680,6 +686,13 @@ This can lead to massive bias, unreliable or unusable results
 
 ## Semantic Differentials
 
+<div style="margin-left: 575px; margin-top: 370px; position:absolute;">
+<audio controls preload="auto">
+  <source src="audio/survey/S11_SemanticDiff.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</div>
+
 --
 
 <br>
@@ -699,20 +712,22 @@ This can lead to massive bias, unreliable or unusable results
 <img src="img/image9c.png" width="65%" height="30%"/>
 ]
 
---
 
 .pull-right[
-<br>
-<br>
-<audio controls preload="auto">
-  <source src="audio/survey/S11_SemanticDiff.mp3" type="audio/mpeg">
-  Your browser does not support embedded audio.
-<audio>
 ]
 
 ---
 
 ## Visual Analogs
+
+<div style="margin-left: 380px; margin-top: 380px; position:absolute;">
+<center>
+<audio controls preload="auto">
+  <source src="audio/survey/S12_VisualAnalogs.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+</div>
 
 --
 
@@ -726,15 +741,6 @@ This can lead to massive bias, unreliable or unusable results
 <br>
 <center>
 <img src="img/image10b.png" width="65%" height="65%"/>
-</center>
-
-<br>
-<br>
-<center>
-<audio controls preload="auto">
-  <source src="audio/survey/S12_VisualAnalogs.mp3" type="audio/mpeg">
-  Your browser does not support embedded audio.
-<audio>
 </center>
 
 ---
@@ -773,6 +779,15 @@ This can lead to massive bias, unreliable or unusable results
 
 ## Filters/Skip Patterns
 
+<div style="margin-left: 700px; margin-top: 175px; position:absolute;">
+<center>
+<audio controls preload="auto">
+  <source src="audio/survey/S15_SkipLogic.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+</div>
+
 --
 
 Comes in many names:
@@ -796,16 +811,9 @@ Comes in many names:
 <img src="img/image13.png" width="80%" height="80%" />
 ]
 
---
-
 .pull-right[
-<center>
-<audio controls preload="auto">
-  <source src="audio/survey/S15_SkipLogic.mp3" type="audio/mpeg">
-  Your browser does not support embedded audio.
-<audio>
-</center>
 ]
+
 
 ---
 
@@ -842,6 +850,14 @@ Comes in many names:
 
 ## Positive and Negative Sides in Question Stem
 
+<div style="margin-top: 380px; margin-left: 20px; position:absolute;">
+<audio controls preload="auto">
+  <source src="audio/survey/S17_PosNegStem.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</div>
+
+--
 
 .pull-left[
 <img src="img/image14a.png" width="57%" height="57%" />
@@ -865,18 +881,18 @@ Comes in many names:
 <img src="img/image14d.png" width="80%" height="80%" />
 ]
 
---
-
-<div style="margin-top: 380px; margin-left: 20px; position:absolute;">
-<audio controls preload="auto">
-  <source src="audio/survey/S17_PosNegStem.mp3" type="audio/mpeg">
-  Your browser does not support embedded audio.
-<audio>
-</div>
-
 ---
 
 ## Exhaustive and Mutually Exclusive Questions
+
+<div style="margin-left: 380px; margin-top: 380px; position:absolute;">
+<center>
+<audio controls preload="auto">
+  <source src="audio/survey/S18_ExhaustiveAndME.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+</div>
 
 --
 
@@ -894,20 +910,20 @@ Comes in many names:
 </center>
 ]
 
-<br>
-<br>
-<center>
-<audio controls preload="auto">
-  <source src="audio/survey/S18_ExhaustiveAndME.mp3" type="audio/mpeg">
-  Your browser does not support embedded audio.
-<audio>
-</center>
-
 ---
 
 ## Spacing Response Options Evenly
 
 ---
+
+<div style="margin-left: 380px; margin-top: 540px; position:absolute;">
+<center>
+<audio controls preload="auto">
+  <source src="audio/survey/S19_Spacing.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+</div>
 
 <br>
 <br>
@@ -921,14 +937,6 @@ Comes in many names:
 <br>
 <center>
 <img src="img/image17b.png" width="60%" height="60%" />
-</center>
-
-<br>
-<center>
-<audio controls preload="auto">
-  <source src="audio/survey/S19_Spacing.mp3" type="audio/mpeg">
-  Your browser does not support embedded audio.
-<audio>
 </center>
 
 ---
@@ -959,6 +967,15 @@ Comes in many names:
 
 ## Unordered
 
+<div style="margin-left: 700px; margin-top: 150px; position:absolute;">
+<center>
+<audio controls preload="auto">
+  <source src="audio/survey/S20_Unordered.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+</div>
+
 --
 
 <img src="img/image18a.png" width="50%" height="50%" />
@@ -970,15 +987,9 @@ Comes in many names:
 <img src="img/image18b.png" width="100%" height="100%" />
 ]
 
---
 
 .pull-right[
-<center>
-<audio controls preload="auto">
-  <source src="audio/survey/S20_Unordered.mp3" type="audio/mpeg">
-  Your browser does not support embedded audio.
-<audio>
-</center>
+
 ]
 
 ---
@@ -1014,6 +1025,15 @@ Comes in many names:
 
 ## Comparisons (2/2)
 
+<div style="margin-left: 380px; margin-top: 440px; position:absolute;">
+<center>
+<audio controls preload="auto">
+  <source src="audio/survey/S21_Comparisons.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+</div>
+
 --
 
 <br>
@@ -1029,17 +1049,19 @@ Comes in many names:
 <center>
 &emsp; &nbsp; <img src="img/image19d.png" width="53%" height="53%" />
 </center>
-<br>
-<center>
-<audio controls preload="auto">
-  <source src="audio/survey/S21_Comparisons.mp3" type="audio/mpeg">
-  Your browser does not support embedded audio.
-<audio>
-</center>
 
 ---
 
 ## Check-all-that-Apply versus Forced-Choice
+
+<div style="margin-left: 380px; margin-top: 380px; position:absolute;">
+<center>
+<audio controls preload="auto">
+  <source src="audio/survey/S22_ForcedChoice.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+</div>
 
 --
 
@@ -1061,20 +1083,18 @@ Comes in many names:
 </center>
 ]
 
-<br>
-<br>
-<center>
-<audio controls preload="auto">
-  <source src="audio/survey/S22_ForcedChoice.mp3" type="audio/mpeg">
-  Your browser does not support embedded audio.
-<audio>
-</center>
-
 ---
 
 ## Distinguishing Between Single-and Multiple-Answer Questions
 
---
+<div style="margin-left: 380px; margin-top: 340px; position:absolute;">
+<center>
+<audio controls preload="auto">
+  <source src="audio/survey/S23_SingleMultipleChoice.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+</div>
 
 --
 
@@ -1093,15 +1113,6 @@ Comes in many names:
 <img src="img/image21b.png" width="100%" height="100%" />
 </center>
 ]
-
-<br>
-<br>
-<center>
-<audio controls preload="auto">
-  <source src="audio/survey/S23_SingleMultipleChoice.mp3" type="audio/mpeg">
-  Your browser does not support embedded audio.
-<audio>
-</center>
 
 ---
 
@@ -1141,7 +1152,47 @@ Comes in many names:
 
 ---
 
-## Scalar Questions
+## Scalar Questions (1/2)
+
+<div style="margin-left: 700px; margin-top: 170px; position:absolute;">
+<center>
+<audio controls preload="auto">
+  <source src="audio/survey/S24_Scalar.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+</div>
+
+--
+
+.pull-left[
+<center>
+<img src="img/image22a.png" width="95%" />
+</center>
+<br>
+<center>
+<img src="img/image22b.png" width="95%" />
+</center>
+]
+
+.pull-right[
+]
+
+--
+
+<br>
+.pull-left[
+<center>
+<img src="img/image22c.png" width="100%" />
+</center>
+]
+
+.pull-right[
+]
+
+---
+
+## Scalar Questions (2/2)
 
 --
 
@@ -1149,28 +1200,18 @@ Comes in many names:
 <br>
 .pull-left[
 <center>
-<img src="img/image23a.png" width="75%" height="75%" />
+<img src="img/image23a.png" width="65%" />
 </center>
 ]
-
---
 
 .pull-right[
 <center>
-<img src="img/image23b.png" width="75%" height="75%" />
+<img src="img/image23b.png" width="65%" />
 </center>
 ]
 
-<br>
-<center>
-<audio controls preload="auto">
-  <source src="audio/survey/S24_Scalar.mp3" type="audio/mpeg">
-  Your browser does not support embedded audio.
-<audio>
-</center>
 .footnote[
-*Note: Here we're referring to balanced scales as having choices that are equidistant from each other*
-]
+*Note: Here we're referring to balanced scales as having choices that are equidistant from each other*]
 
 ---
 
@@ -1185,11 +1226,9 @@ Comes in many names:
 <br>
 .pull-left[
 <center>
-<img src="img/image24.png" width="80%" height="80%" />
+<img src="img/image24.png" width="85%" />
 </center>
 ]
-
---
 
 <br>
 <br>
@@ -1240,44 +1279,52 @@ Comes in many names:
 
 ## Numeric
 
-<center>
-<img src="img/image25a.png" width="30%" height="30%" />
-</center>
-<br>
-
---
-
-<hr style="width:100px; margin: auto;" />
-<br>
-<center>
-&emsp; &nbsp;  <img src="img/image25b.png" width="33%" height="33%" />
-</center>
-<br>
-
---
-
-<hr style="width:100px; margin: auto;" />
-<br>
-<center>
-<img src="img/image25c.png" width="30%" height="30%" />
-</center>
-<br>
-
---
-
-<hr style="width:100px; margin: auto;" />
-<br>
-<center>
-&emsp; &nbsp; <img src="img/image25d.png" width="33%" height="33%" />
-</center>
-
-
-<div style="margin-top: -235px; margin-left: 20px; position:absolute;">
+<div style="margin-top: 200px; margin-left: 700px; position:absolute;">
 <audio controls preload="auto">
   <source src="audio/survey/S27_Numerical.mp3" type="audio/mpeg">
   Your browser does not support embedded audio.
 <audio>
 </div>
+
+--
+
+.pull-left[
+<img src="img/image25a.png" width="70%" height="30%" />
+]
+<br>
+
+.pull-right[
+
+]
+
+--
+
+.pull-left[
+<img src="img/image25b.png" width="75%" height="33%" />
+]
+
+.pull-right[
+]
+
+--
+
+.pull-left[
+<img src="img/image25c.png" width="75%" height="30%" />
+]
+
+.pull-right[
+]
+
+--
+
+
+.pull-left[
+<img src="img/image25d.png" width="75%" height="33%" />
+]
+
+.pull-right[
+]
+
 
 ---
 
@@ -1299,39 +1346,40 @@ Comes in many names:
 
 ## Lists
 
---
-
-<center>
-&nbsp; &nbsp; <img src="img/image26a.png" width="20%" height="20%" />
-</center>
-<br>
-
---
-
-<hr style="width:100px; margin: auto;" />
-<br>
-<center>
-&emsp; &ensp; <img src="img/image26b.png" width="22%" height="22%" />
-</center>
-<br>
-
---
-
-<hr style="width:100px; margin: auto;" />
-<br>
-<center>
-<img src="img/image26c.png" width="33%" height="33%" />
-</center>
-<br>
-
---
-
-<center>
+<div style="margin-top: 200px; margin-left: 700px; position:absolute;">
 <audio controls preload="auto">
   <source src="audio/survey/S28_Lists.mp3" type="audio/mpeg">
   Your browser does not support embedded audio.
 <audio>
-</center>
+</div>
+
+--
+
+.pull-left[
+&nbsp; &nbsp; &emsp; &emsp; &nbsp;<img src="img/image26a.png" width="40%"/>
+]
+
+.pull-right[
+]
+
+--
+
+.pull-left[
+&emsp; &emsp; &nbsp; &nbsp; &nbsp;<img src="img/image26b.png" width="42%"/>
+]
+
+.pull-right[
+]
+
+--
+
+.pull-left[
+<img src="img/image26c.png" width="64%" />
+]
+
+.pull-right[
+]
+
 
 ---
 
@@ -1356,6 +1404,15 @@ Comes in many names:
 ---
 
 ## Explanatory
+
+<div style="margin-left: 100px; margin-top: 390px; position:absolute;">
+<center>
+<audio controls preload="auto">
+  <source src="audio/survey/S29_Explanatory.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+</div>
 
 --
 
@@ -1384,17 +1441,6 @@ Comes in many names:
 </center>
 ]
 
---
-
-<br>
-.pull-left[
-<center>
-<audio controls preload="auto">
-  <source src="audio/survey/S29_Explanatory.mp3" type="audio/mpeg">
-  Your browser does not support embedded audio.
-<audio>
-</center>
-]
 
 ---
 

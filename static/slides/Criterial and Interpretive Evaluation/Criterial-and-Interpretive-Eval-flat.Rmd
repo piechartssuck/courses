@@ -1,12 +1,15 @@
 ---
 title: 'Criterial and Interpretive Evaluation'
-subtitle: 'Keys to Merit, Worth, and Significance'
-author: Dr. Abhik Roy
+subtitle: "EDP 619 Week 1"
+author: "Dr. Abhik Roy"
 output: 
  xaringan::moon_reader:
    css: ['xaringan-themer.css', 'custom.css']
    nature:
      ratio: 16:9
+     highlightStyle: github
+     highlightLines: true
+     countIncrementalSlides: false
      navigation:
          scroll: false
 ---
@@ -222,7 +225,7 @@ We typically leave the ***if it works?*** to people with grounded knowledge in a
 
 ---
 
-# Merit, Worth & Significance 
+# Merit, Worth, & Significance 
 
 --
 
@@ -724,10 +727,13 @@ In a nutshell
 > Multiple times, multiple perspectives
 ]
 
+---
+
+## Evaluation Statements
 
 ---
 
-### Develop an Evaluation Purpose Statement
+### Developing a Purpose
 
 *Step 1*. Critique sample evaluation purpose statements (see following slides) to better understand what might go into crafting a good one
 
@@ -737,7 +743,7 @@ In a nutshell
 
 ---
 
-## Thinking About Evaluation Statements
+### Thinking About Statements
 
 --
 
@@ -755,7 +761,7 @@ In the next two slides, take a look at the sample evaluation purpose statements 
 
 ---
 
-## Sample Evaluation Statements (1/2)
+#### Sample Evaluation Statements (1/2)
 
 <br>
 <center>
@@ -768,7 +774,7 @@ In the next two slides, take a look at the sample evaluation purpose statements 
 
 ---
 
-## Sample Evaluation Statements (2/2)
+#### Sample Evaluation Statements (2/2)
 
 <br>
 <center>

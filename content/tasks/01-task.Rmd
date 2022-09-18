@@ -78,7 +78,7 @@ html_link <- function() {
 }
 
 pdf_link <- function() {
- paste0("<a href='/slides/Criterial%20and%20Interpretive%20Evaluation/Criterial-and-Interpretive-Eval-flat.pdf'>", "<img src='/logos/pdf-ico.png' alt='Criteria for Evaluations PDF' width='35'>", "</a>")
+ paste0("<a href='/slides/Criterial%20and%20Interpretive%20Evaluation/Criterial-and-Interpretive-Eval-flat.pdf' target='_blank'>", "<img src='/logos/pdf-ico.png' alt='Criteria for Evaluations PDF' width='35'>", "</a>")
 }
 
 tibble(

@@ -1,12 +1,15 @@
 ---
 title: 'Criterial and Interpretive Evaluation'
-subtitle: 'Keys to Merit, Worth, and Significance'
-author: Dr. Abhik Roy
+subtitle: "EDP 619 Week 1"
+author: "Dr. Abhik Roy"
 output: 
  xaringan::moon_reader:
    css: ['xaringan-themer.css', 'custom.css']
    nature:
      ratio: 16:9
+     highlightStyle: github
+     highlightLines: true
+     countIncrementalSlides: false
      navigation:
          scroll: false
 ---
@@ -243,7 +246,7 @@ We typically leave the ***if it works?*** to people with grounded knowledge in a
 
 ---
 
-# Merit, Worth & Significance 
+# Merit, Worth, & Significance
 
 --
 
@@ -527,18 +530,17 @@ Merely for the sake of knowing
 </audio>
 </center>
 <br>
+<br>
 ```{r tbl10, echo = FALSE}
 tibble::tribble(
-~` `, ~`What might the purpose of the evaluation be?`, ~`What questions might the evaluation try to answer?`,
-"<span style='color:#ffb3ba; font-weight: bold;'><i>Formative</i></span> <b>Evaluation</b>"," "," ",
-"The program has been designed and piloted with a group of 20 principals. What kind of evaluative feedback should the ASDC seek?"," "," ",
-" "," "," ",
-"<span style='color:#bae1ff; font-weight: bold;'><i>Summative</i></span> <b>Evaluation</b>"," "," ",
-"The program has been delivered to all principals in the county. What kind of evaluative feedback should the ASDC seek?"," "," "
+  ~` `, ~`What might the purpose of the evaluation be?`, ~`What questions might the evaluation try to answer?`,
+  "<span style='color:#ffb3ba; font-weight: bold;'><i>Formative</i></span> <b>Evaluation</b>"," "," ",
+  "The program has been designed and piloted with a group of 20 principals. What kind of evaluative feedback should the ASDC seek?"," "," ",
+  " "," "," ",
+  "<span style='color:#bae1ff; font-weight: bold;'><i>Summative</i></span> <b>Evaluation</b>"," "," ",
+  "The program has been delivered to all principals in the county. What kind of evaluative feedback should the ASDC seek?"," "," "
 ) %>%
-kableExtra::kable_styling(
-  knitr::kable(escape = FALSE), 
-  font_size = 18) %>%
+ knitr::kable(escape = FALSE)%>%
   row_spec(0, color = "white", background = "#212121") %>%
   row_spec(2, color = "white", background = "#212121") %>%
   row_spec(4, color = "white", background = "#212121")
@@ -594,6 +596,15 @@ The one that you fill in your evaluation will determine a lot!
 
 # Defining Culture 
 
+<div style="margin-left: 380px; margin-top: 300px; position:absolute;">
+<center>
+<audio controls preload="auto">
+  <source src="audio/criteria/S13_Culture.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+</audio>
+</center>
+</div>
+
 --
 
 > What is culture?
@@ -608,16 +619,6 @@ The one that you fill in your evaluation will determine a lot!
 .pull-right[
 -- American Evaluation Association (2011)
 ]
-
-</audio>
-</center>
-<br>
-<center>
-<audio controls preload="auto">
-  <source src="audio/criteria/S13_Culture.mp3" type="audio/mpeg">
-  Your browser does not support embedded audio.
-</audio>
-</center>
 
 ---
 
@@ -719,6 +720,17 @@ How might each of the following influence an evaluation’s design and implement
 
 # Increasing your cultural sensitivity 
 
+<div style="margin-left: 380px; margin-top: 320px; position:absolute;">
+<center>
+<audio controls preload="auto">
+  <source src="audio/criteria/S17_Sensitivity.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+</audio>
+</center>
+</div>
+
+--
+
 Try to
 
 --
@@ -733,19 +745,18 @@ Try to
 
 > Be flexible in choice of evaluation methods, use multiple data sources, multiple data collection methods, multiple perspectives
 
-</audio>
-</center>
-<br>
-<center>
-<audio controls preload="auto">
-  <source src="audio/criteria/S17_Sensitivity.mp3" type="audio/mpeg">
-  Your browser does not support embedded audio.
-</audio>
-</center>
-
 ---
 
 # Meta-evaluation
+
+<div style="margin-left: 380px; margin-top: 340px; position:absolute;">
+<center>
+<audio controls preload="auto">
+  <source src="audio/criteria/S18_Meta_Evaluation.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+</audio>
+</center>
+</div>
 
 --
 
@@ -773,17 +784,6 @@ Extra, external study to authenticate the process or product of the evaluation
 Evaluating an evaluation or evaluations
 </p>
 ]
-
-</audio>
-</center>
-<br>
-<br>
-<center>
-<audio controls preload="auto">
-  <source src="audio/criteria/S18_Meta_Evaluation.mp3" type="audio/mpeg">
-  Your browser does not support embedded audio.
-</audio>
-</center>
 
 ---
 
@@ -857,6 +857,15 @@ Evaluating an evaluation or evaluations
 
 # Goals Include
 
+<div style="margin-left: 380px; margin-top: 470px; position:absolute;">
+<center>
+<audio controls preload="auto">
+  <source src="audio/standards/S3 Goals.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+</div>
+
 --
 
 .pull-left[
@@ -894,16 +903,6 @@ Targeted outcomes
   
 + Long-term (distant)
 ]
-
---
-
-<br>
-<center>
-<audio controls preload="auto">
-  <source src="audio/standards/S3 Goals.mp3" type="audio/mpeg">
-  Your browser does not support embedded audio.
-<audio>
-</center>
 
 ---
 
@@ -947,6 +946,17 @@ It's not so clear cut!
 
 # Logic Model Parts
 
+<div style="margin-left: 380px; margin-top: 340px; position:absolute;">
+<center>
+<audio controls preload="auto">
+  <source src="audio/standards/S6 Logic Model Parts.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+</div>
+
+--
+
 + **Inputs**. what resources go into a program (aka investments)
 
 --
@@ -962,15 +972,6 @@ It's not so clear cut!
   + **Medium** *or* **Intermediate**. Action (behavior, practice, decisions, policies)
   + **Long**. Consequences (civic, economic, environmental, political, professional, social, etc.)
   
---
-
-<br>
-<center>
-<audio controls preload="auto">
-  <source src="audio/standards/S6 Logic Model Parts.mp3" type="audio/mpeg">
-  Your browser does not support embedded audio.
-<audio>
-</center>
 
 ---
 
@@ -1079,6 +1080,15 @@ What matters enough to measure given what you know about all the other factors?
 
 ## Estimating Cost
 
+<div style="margin-left: 380px; margin-top: 250px; position:absolute;">
+<center>
+<audio controls preload="auto">
+  <source src="audio/standards/S10 Cost Analysis.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+</div>
+
 --
 
 + Often very hard to do well
@@ -1091,18 +1101,6 @@ What matters enough to measure given what you know about all the other factors?
   
   + Proportion of resources allocated to different program activities (logic modeling can be very helpful for thinking about this)
   
---
-
-<br>
-<center>
-<audio controls preload="auto">
-  <source src="audio/standards/S10 Cost Analysis.mp3" type="audio/mpeg">
-  Your browser does not support embedded audio.
-<audio>
-</center>
-
-<br>
-
 ---
 
 ## Measuring Performances
@@ -1137,7 +1135,11 @@ In a nutshell
 
 ---
 
-### Develop an Evaluation Purpose Statement
+## Evaluation Statements
+
+---
+
+### Developing a Purpose
 
 --
 
@@ -1160,7 +1162,16 @@ In a nutshell
 
 ---
 
-## Thinking About Evaluation Statements
+### Thinking About Statements
+
+<div style="margin-left: 380px; margin-top: 300px; position:absolute;">
+<center>
+<audio controls preload="auto">
+  <source src="audio/standards/S13 Evaluation Purpose Questions.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+</div>
 
 --
 
@@ -1176,17 +1187,9 @@ In the next two slides, take a look at the sample evaluation purpose statements 
 
 > how could the purpose statement be improved?
 
-<br>
-<center>
-<audio controls preload="auto">
-  <source src="audio/standards/S13 Evaluation Purpose Questions.mp3" type="audio/mpeg">
-  Your browser does not support embedded audio.
-<audio>
-</center>
-
 ---
 
-## Sample Evaluation Statements (1/2)
+#### Sample Evaluation Statements (1/2)
 
 <br>
 <center>
@@ -1199,7 +1202,7 @@ In the next two slides, take a look at the sample evaluation purpose statements 
 
 ---
 
-## Sample Evaluation Statements (2/2)
+#### Sample Evaluation Statements (2/2)
 
 <br>
 <center>

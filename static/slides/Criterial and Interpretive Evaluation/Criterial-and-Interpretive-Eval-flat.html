@@ -22,7 +22,7 @@ class: center, middle, inverse, title-slide
 # Criterial and Interpretive Evaluation
 ]
 .subtitle[
-## Keys to Merit, Worth, and Significance
+## EDP 619 Week 1
 ]
 .author[
 ### Dr. Abhik Roy
@@ -235,7 +235,7 @@ We typically leave the ***if it works?*** to people with grounded knowledge in a
 
 ---
 
-# Merit, Worth &amp; Significance 
+# Merit, Worth, &amp; Significance 
 
 --
 
@@ -754,10 +754,13 @@ In a nutshell
 &gt; Multiple times, multiple perspectives
 ]
 
+---
+
+## Evaluation Statements
 
 ---
 
-### Develop an Evaluation Purpose Statement
+### Developing a Purpose
 
 *Step 1*. Critique sample evaluation purpose statements (see following slides) to better understand what might go into crafting a good one
 
@@ -767,7 +770,7 @@ In a nutshell
 
 ---
 
-## Thinking About Evaluation Statements
+### Thinking About Statements
 
 --
 
@@ -785,7 +788,7 @@ In the next two slides, take a look at the sample evaluation purpose statements 
 
 ---
 
-## Sample Evaluation Statements (1/2)
+#### Sample Evaluation Statements (1/2)
 
 &lt;br&gt;
 &lt;center&gt;
@@ -798,7 +801,7 @@ In the next two slides, take a look at the sample evaluation purpose statements 
 
 ---
 
-## Sample Evaluation Statements (2/2)
+#### Sample Evaluation Statements (2/2)
 
 &lt;br&gt;
 &lt;center&gt;
@@ -860,6 +863,9 @@ If you have any questions, please reach out
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
 "ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
 "navigation": {
 "scroll": false
 }
@@ -941,7 +947,24 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
       links[i].target = '_blank';
     }
   }
-})();</script>
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
 
 <script>
 slideshow._releaseMath = function(el) {
