@@ -26,6 +26,6 @@ To follow up from last week, look over the possible solutions to the <a href="/f
 2.  Head over to
     <a href="https://basecamp.qualtrics.com/path/learn-to-use-qualtrics-for-research" target="_blank">Learn to Use Qualtrics for Research</a> and go through the video series. Please note that you may have to login with your WVU username and password.
 
-### Establish a Sampling Frame
+## Establish a Sampling Frame
 
 Turn in your first deliverable. More details can be found [here](/deliverables/01-l1/)

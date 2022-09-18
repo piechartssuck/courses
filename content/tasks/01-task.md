@@ -96,7 +96,7 @@ Larger version of the presentation
 </tr>
 <tr>
 <td style="text-align:center;width: 25em; padding-left: 200px;color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/slides/Criterial%20and%20Interpretive%20Evaluation/Criterial-and-Interpretive-Eval-flat.pdf"><img src="/logos/pdf-ico.png" alt="Criteria for Evaluations PDF" width="35"></a>
+<a href="/slides/Criterial%20and%20Interpretive%20Evaluation/Criterial-and-Interpretive-Eval-flat.pdf" target="_blank"><img src="/logos/pdf-ico.png" alt="Criteria for Evaluations PDF" width="35"></a>
 </td>
 </tr>
 <tr>
@@ -137,3 +137,7 @@ This week you have nothing to turn in but there is still something to do! First 
 ### Verify Qualtrics Account Login
 
 Go to the [WVU Qualtrics login page](https://wvu.qualtrics.com) and simply make sure you can login. If you are unable to do so, please submit a [ticket to IT](https://wvu.atlassian.net/servicedesk/customer/portals) or give them a ring at <a href="tel:3042934444">304-293-4444</a> as soon as possible. We will be working with Qualtrics very soon!
+
+## Establish a Sampling Frame
+
+Begin work on your first deliverable. More details can be found [here](/deliverables/01-l1/)
