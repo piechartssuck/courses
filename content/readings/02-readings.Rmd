@@ -8,7 +8,7 @@ output:
 menu:
   readings:
     parent: Readings
-    weight: 1
+    weight: 2
 type: docs
 weight: 1
 ---
@@ -21,6 +21,7 @@ source(here::here("content", "com_libs.R"))
 
 ### Download Literature
 
+<center>
 ```{r echo=FALSE,eval=TRUE,message=FALSE}
 loc <- here::here("static", "readings", "EDP618Week2Readings.zip")
 
@@ -34,6 +35,7 @@ downloadthis::download_file(
   class = "hvr-sweep-to-left"
   )
 ```
+</center>
 
 ### Read Some Text
 

@@ -31,7 +31,7 @@ Description = c("Read <i>Mixed Methods and Credibility of Evidence in Evaluation
                 "Complete and submit the associated <i class='fa-brands fa-r-project'></i> task for the module",
                 "Review the slideshow <span style='color:#6ac4cd;font-weight:bold'>Causality and Validity</span> after class",
                 "Watch <i>Regression to the Mean</i>",
-                 "Finish up on your second deliverable <span\ style='color:#6acda5;font-weight:bold'>Create an Argument</span>"
+                 "Finish up on your second deliverable <span style='color:#6acda5;font-weight:bold'>Create an Argument</span>"
                 ),
 
 
@@ -52,8 +52,8 @@ Icon = c("pdf",
          "",
          ""),
 
-Site = c("/readings/02-readings/#download-literature",
-         "/readings/02-readings/#download-literature",
+Site = c("/readings/03-readings/#download-literature",
+         "/readings/03-readings/#download-literature",
          "https://www.datacamp.com",
          "",
          "",

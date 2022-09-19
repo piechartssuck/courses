@@ -42,7 +42,7 @@ Read <i>Mixed Methods and Credibility of Evidence in Evaluation</i> in Mertens &
 <a href="/readings/03-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/readings/02-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="WVU icon" width="30"></a>
+<a href="/readings/03-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="WVU icon" width="30"></a>
 </td>
 </tr>
 <tr>
@@ -53,7 +53,7 @@ Read <i>Strategies for Ensuring Trustworthiness in Qualitative Research Projects
 <a href="/readings/03-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/readings/02-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="WVU icon" width="30"></a>
+<a href="/readings/03-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="WVU icon" width="30"></a>
 </td>
 </tr>
 <tr>

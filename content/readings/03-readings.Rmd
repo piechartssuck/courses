@@ -8,7 +8,7 @@ output:
 menu:
   readings:
     parent: Readings
-    weight: 1
+    weight: 3
 type: docs
 weight: 1
 ---
@@ -21,12 +21,13 @@ source(here::here("content", "com_libs.R"))
 
 ### Download Literature
 
+<center>
 ```{r echo=FALSE,eval=TRUE,message=FALSE}
 loc <- here::here("static", "readings", "EDP618Week3Readings.zip")
 
 downloadthis::download_file(
   path = loc,
-  output_name = "Week 2 Readings",
+  output_name = "Week 3 Readings",
   button_label = "&nbsp;&nbsp;&nbsp;<span style='color:#ffffff'>Download</span>",
   button_type = "primary",
   has_icon = TRUE,
@@ -34,6 +35,7 @@ downloadthis::download_file(
   class = "hvr-sweep-to-left"
   )
 ```
+</center>
 
 ### Read Some Text
 
