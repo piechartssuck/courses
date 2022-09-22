@@ -1,6 +1,6 @@
 ---
-title: "Reliability"
-linktitle: "Week 5: Reliability"
+title: "Validity"
+linktitle: "Week 6: Validity"
 toc: true
 output:
   rmarkdown::html_document:
@@ -8,7 +8,7 @@ output:
 menu:
   tasks:
     parent: Tasks
-    weight: 5
+    weight: 6
 type: docs
 weight: 1
 ---
@@ -19,16 +19,16 @@ weight: 1
 source(here::here("content", "com_libs.R"))
 ```
 
-## Some Statistics in R
+## Factors
 
 <br>
 <center>
 ```{r echo=FALSE,eval=TRUE,message=FALSE,purl=FALSE}
-loc <- here::here("static", "data", "EDP619Week5Slideshow.zip")
+loc <- here::here("static", "data", "EDP619Week6Walkthrough.zip")
 
 downloadthis::download_file(
   path = loc,
-  output_name = "Week 5 Walkthrough",
+  output_name = "Week 6 Walkthrough",
   button_label = "&nbsp;&nbsp;&nbsp;<span style='color:#ffffff'>Slideshow Data Download</span>",
   button_type = "primary",
   has_icon = TRUE,
@@ -65,18 +65,18 @@ downloadthis::download_file(
 
 <div class="bigcol">
 ```{r echo = FALSE, out.width="140%", fig.align='left'}
-knitr::include_url("/slides/Statistical%20Tests%20in%20R/Statistical-Tests-in-R-pres.html")
+knitr::include_url("/slides/Factorial%20Validity/FactorialValidity-pres.html")
 ```
 </div>
 
 <div class="smallcol">
 ```{r echo = FALSE, fig.align='right'}
 html_link <- function() {
-  paste0("<a href='/slides/Statistical%20Tests%20in%20R/Statistical-Tests-in-R-pres.html' target='_blank'>", "<img src='/logos/web-ico.png' alt='Sampling presentation' width='35'>", "</a>")
+  paste0("<a href='/slides/Factorial%20Validity/FactorialValidity-pres.html' target='_blank'>", "<img src='/logos/web-ico.png' alt='Sampling presentation' width='35'>", "</a>")
 }
 
 pdf_link <- function() {
- paste0("<a href='/slides/Statistical%20Tests%20in%20R/Statistical-Tests-in-R-flat.pdf' target='_blank'>", "<img src='/logos/pdf-ico.png' alt='Sampling presentation PDF' width='35'>", "</a>")
+ paste0("<a href='/slides/Factorial%20Validity/FactorialValidity-flat.pdf' target='_blank'>", "<img src='/logos/pdf-ico.png' alt='Sampling presentation PDF' width='35'>", "</a>")
 }
 
 tibble(
@@ -105,4 +105,8 @@ tibble(
 
 ## Refine the Draft
 
-Please begin work on your third deliverable as soon as your second is returned with feedback. More details can be found [here](/deliverables/03-l3/)
+Please finish work on your third deliverable as soon as your second is returned with feedback. More details can be found [here](/deliverables/03-l3/)
+
+## Visualize Tidy Pipelines
+
+If you like the idea of seeing how a data frame changes on a step-by-step basis visually, then consider chekcing out [Tidy Data Tutor](https://tidydatatutor.com/). They appear to cover every common command we'll be using this term!

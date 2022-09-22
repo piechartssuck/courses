@@ -1,0 +1,473 @@
+---
+title: 'Factorial Validity'
+subtitle: "EDP 619 Week 6"
+author: "Dr. Abhik Roy"
+output: 
+ xaringan::moon_reader:
+   css: ['xaringan-themer.css', 'custom.css']
+   nature:
+     ratio: 16:9
+     highlightStyle: github
+     highlightLines: true
+     countIncrementalSlides: false
+     navigation:
+         scroll: false
+---
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+  MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+    cancel: ["Extension","cancel"],
+    bcancel: ["Extension","cancel"],
+    xcancel: ["Extension","cancel"],
+    cancelto: ["Extension","cancel"]
+  });
+});
+</script>
+
+<style>
+section {
+    display: flex;
+    display: -webkit-flex;
+}
+
+section {
+    height: 600px;
+    width: 60%;
+    margin: auto;
+    border-radius: 21px;
+    background-color: #212121;
+}
+
+.remark-slide-container {
+background: #212121;
+}
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
+}
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
+}
+
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
+}
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
+}
+
+section p {
+    text-align: center;
+    font-size: 30px;
+    background-color: #212121;
+    border-radius: 21px;
+    font-family: Roboto Condensed;
+    font-style: bold;
+    padding: 12px;
+    color: #bff4ee;
+    margin: auto;
+}
+
+#center {
+text-align: center;
+}
+
+#right {
+  text-align: right;
+} 
+
+.center p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.tab {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.obr
+{
+    display:block;
+    margin-top:-15px;
+}
+</style>
+
+```{css echo=FALSE}
+.highlight-last-item > ul > li,
+.highlight-last-item > ol > li {
+  opacity: 0.5;
+}
+.highlight-last-item > ul > li:last-of-type,
+.highlight-last-item > ol > li:last-of-type {
+  opacity: 1;
+}
+```
+
+```{r setup, include=FALSE, purl=FALSE}
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+library(fontawesome)
+library(here)
+library(showtext)
+font_add_google("Roboto Condensed", "roboto")
+showtext_auto()
+```
+
+```{r echo = FALSE, purl=FALSE}
+xaringanthemer::style_duo(
+  primary_color = "#212121",
+  secondary_color = "#bff4ee",
+  link_color = "#b1ead6",
+  text_bold_color = "#00b0cc",
+  table_row_border_color = "#212121",
+  table_row_even_background_color = "#212121",
+  footnote_font_size = "0.6em",
+  header_font_google = xaringanthemer::google_font("Roboto Condensed", "700"),
+  text_font_google   = xaringanthemer::google_font("Roboto Condensed", "400")
+)
+
+xaringanExtra::use_xaringan_extra(c("tile_view", 
+                                    "animate_css", 
+                                    "tachyons"))
+
+xaringanExtra::use_logo(
+  image_url = here::here("static", "img", "course_hex.png"),
+  link_url = "https://edp619.asocialdatascientist.com",
+  position = xaringanExtra::css_position(top = "1em", right = "1em")
+)
+```
+
+---
+
+class: highlight-last-item
+layout: true
+
+---
+
+# Test Validity 
+
+---
+
+## Definition
+
+<center>
+.bg-washed.b--light-red.ba.bw2.br3.shadow-5.ph4.mt5[
+**Validity** tells you how accurately a method measures something
+]
+</center>
+
+--
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<center>
+There are six main types
+</center>
+
+---
+
+## Types
+
+--
+
+.pull-left[
+<br>
+<p id="center" style="color:#f7c1e5; font-weight: bold; border:1px; border-style:solid; border-color:#f7c1e5; border-radius: 25px; padding: 0.3em;">
+<i>Concurrent</i><br><br>
+examines how well the results of a test approximate the results of another test
+</p>
+]
+
+--
+
+.pull-right[
+<br>
+<p id="center" style="color:#bca0dc; font-weight: bold; border:1px; border-style:solid; border-color:#bca0dc; border-radius: 25px; padding: 0.3em;">
+<i>Construct</i><br><br>
+evaluates whether a measurement tool actually represents what it is intended to measure
+</p>
+]
+
+--
+
+.pull-left[
+<p id="center" style="color:#e69288; font-weight: bold; border:1px; border-style:solid; border-color:#e69288; border-radius: 25px; padding: 0.3em;">
+<i>Content</i><br><br>
+assesses whether a test is representative of all aspects of the construct
+</p>
+]
+
+
+--
+
+.pull-right[
+<p id="center" style="color:#fbc1ae; font-weight: bold; border:1px; border-style:solid; border-color:#fbc1ae; border-radius: 25px; padding: 0.3em; width: 525px;">
+<i>Face</i><br><br>
+considers how suitable the content of a test seems to be on the surface
+</p>
+]
+
+--
+
+.pull-left[
+<p id="center" style="color:#74cbda; font-weight: bold; border:1px; border-style:solid; border-color:#74cbda; border-radius: 25px; padding: 0.3em;">
+<i>Factorial</i><br><br>
+assesses the extent of correlation of the different factors with the whole test
+</p>
+]
+
+--
+
+.pull-right[
+<p id="center" style="color:#8ec9bb; font-weight: bold; border:1px; border-style:solid; border-color:#8ec9bb; border-radius: 25px; padding: 0.3em;">
+<i>Predictive</i><br><br>
+examines how well a test can forecast a concrete outcome
+</p>
+]
+
+--
+
+
+.footnote[<span style="margin-left: 700px;"><i>You may see <span style="color:#f7c1e5;">concurrent</span> and <span style="color:#8ec9bb;">predictive</span> validity pooled together as <b>criterion</b> validity</i></span>]
+
+---
+
+# Structural Ideas
+
+---
+
+## Constructs
+
+<center>
+.bg-washed.b--light-red.ba.bw2.br3.shadow-5.ph4.mt5[
+<p id="center">
+**Constructs** aka ***latent constructs*** are variables that cannot be measured directly
+</p>
+</center>
+]
+</center>
+<br>
+<br>
+<br>
+<br>
+
+--
+
+<center>
+some examples include
+</center>
+<br>
+<br>
+<br>
+
+--
+
+<p id="center" style="color:#84ffea;">
+IQ
+</p>
+<p id="center" style="color:#84ffea;">
+motivation
+</p>
+<p id="center" style="color:#84ffea;">
+values
+</p>
+
+
+---
+
+## Dimensionality
+
+--
+
+<center>
+.bg-washed.b--light-red.ba.bw2.br3.shadow-5.ph4.mt5[
+<p id="center">
+**Dimensions** of a data set are ideally the same as the number of columns - aka <i>attributes</i> 
+</p>
+</center>
+]
+</center>
+<br>
+<br>
+<br>
+<br>
+
+--
+
+<center>
+however
+</center>
+<br>
+<br>
+<br>
+
+--
+
+<p id="center" style="color:#84ffea;">
+some columns are copies, correlated, similar, useless, etc. so an actual count of dimensions may not be known
+</p>
+
+---
+
+## Unidimensional Scales
+
+--
+
+.pull-left[
+Cronbach’s $\alpha$ is typically used to estimate internal consistency applied on a <b>single latent construct</b> (not necessarily one item!)
+]
+
+--
+
+.pull-right[
+aka <i>unidimensionality</i>
+]
+
+--
+
+<br>
+<center>
+<img src="img/fruit-toppings.png" alt="Fruits as a topping scales" style="width: 800px;"/>
+</center>
+
+--
+
+<br>
+are used for measuring food preference (<b>single latent construct</b>) using participants' agreement with varying pizza toppings (<b>three direct measures</b>) 
+<br>
+<br>
+--
+
+Notice that the construct *is not* defined as pizza topping preferences
+
+--
+
+.footnote[*Pineapple is a hard no!*]
+
+---
+
+### A Bit More on <span style="color:#74cbda;">Factorial</span> Validity 
+
+--
+
+- is used to probabilistically determine the way that the parts of the test are related to each other - aka its *internal structure*
+
+--
+
+- should match the actual, or *emperical* structure of the test
+
+--
+
+- in a nutshell it helps to nail down what a test measures by determining a probable number of dimensions needed to explain a construct
+
+---
+
+# Determining Factors
+
+--
+
+- Multiple methods can be used to determine 
+
+--
+
+- We'll use the most common method known as a **Factor Analysis**, namely a type known as an **Exploratory Factor Analysis (EFA)**
+
+---
+
+# Stop!
+
+--
+
+If you do not know what covariance is or need a refresher, please go through this incredible video by [Josh Starmer](https://statquest.org/). If you are familiar, then please feel free to close out of this presentation and move on to the walkthrough
+
+.center2[
+<br>
+<br>
+<br>
+<br>
+<br>
+<iframe width="670.2" height="330.6" src="https://www.youtube.com/embed/qtaqvPAeEJY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+]
+
+---
+
+
+## Thats it!
+
+If you have any questions, please reach out
+
+--
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<center>
+<br><br>
+<div class="fade_rule"></div>  
+<br><br>
+</center>
+
+<center>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><br />This work is licensed under a <br /><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>
+</center>

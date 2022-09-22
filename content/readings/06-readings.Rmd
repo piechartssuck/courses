@@ -1,0 +1,87 @@
+---
+title: "Validity"
+linktitle: "Week 6: Validity"
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  readings:
+    parent: Readings
+    weight: 6
+type: docs
+weight: 1
+---
+
+`r blogdown::shortcode("aes-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+### Read Some Text
+
+```{r echo=FALSE}
+
+document <- as.character(fa("file", fill = "#e86af0", height = "25px"))
+
+book <- as.character(fa("book", fill = "#f06ab5", height = "25px"))
+
+site <- as.character(fa("link", fill = "	#a56af0", height = "25px"))
+
+linkfa <- as.character(fa("link", fill = "#a56af0", height = "25px"))
+
+review <- tibble(
+  
+  title <- c("<i>Aural Versus Visual Design of Questions and Questionnaires</i>",
+             "<i>Ordering Questions and Testing for Question Order Effects</i>",
+             "<i>Test Development</i>",
+             "<i>Validity</i>"
+             ),
+  
+  section = c("Chapter 6",
+              "Chapter 7",
+              "Chapter 4",
+              "Chapter 9"),
+  
+  link <- c(
+    paste0("[",book,"]",
+    "(https://ebookcentral.proquest.com/lib/wvu/reader.action?docID=1762797&ppg=189){target='_blank'}"
+    ),
+    paste0("[",book,"]",
+    "(https://ebookcentral.proquest.com/lib/wvu/reader.action?docID=1762797&ppg=248){target='_blank'}"
+    ),
+    paste0("[",linkfa,"]",
+    "(https://www.thetaminusb.com/intro-measurement-r/development.html){target='_blank'}"
+    ),
+    paste0("[",linkfa,"]",
+    "(https://www.thetaminusb.com/intro-measurement-r/validity.html){target='_blank'}"
+    )
+  ),
+  
+  .name_repair = "minimal"
+  
+)
+
+```
+
+<center>
+```{r, echo=FALSE}
+review %>%
+  mutate_all(replace_na,"") %>%
+  kbl(col.names = c("Title", 
+                    "Section",
+                    "Link"), 
+      "html", 
+      escape = FALSE,
+      align = 'llc') %>%
+   kable_paper(full_width = TRUE) %>%
+  column_spec(1, width = "20em") %>%
+  column_spec(2, width = "10em") %>% 
+  row_spec(0:nrow(review), extra_css = 'vertical-align: middle !important;', color = "#f7f7f7", background = "transparent") 
+```
+</center>
+
+<hr style="width:50%;">
+
+<span style='font-size:14px;font-style: italic;'>Please feel free to ignore the R code in the Albano text which is beyond the scope of this course. While similar, we'll approach the assessment of both reliability and validity through the lens of survey research</span>
+

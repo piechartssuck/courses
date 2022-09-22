@@ -1,6 +1,6 @@
 ---
-title: "The Fundamentals of Writing Questions"
-linktitle: "Week 4: The Fundamentals of Writing Questions"
+title: "Validity"
+linktitle: "Week 6: Validity"
 toc: true
 output:
   rmarkdown::html_document:
@@ -8,7 +8,7 @@ output:
 menu:
   trainings:
     parent: Modules
-    weight: 4
+    weight: 6
 type: docs
 weight: 1
 ---
@@ -33,7 +33,7 @@ dc_schedule <-
     . == "unchecked" ~ as.character(fontawesome::fa("circle-xmark", fill = "#d9534f", height = "15px")),
     TRUE ~ as.character(.)
               ))) %>%
-  filter(Week == "4") %>% #CHANGE HERE
+  filter(Week == "6") %>% #CHANGE HERE
   select(-Week) %>%
   mutate(across(everything(), as.character)) %>%
   mutate(across(everything(), str_squish)) %>%
@@ -71,11 +71,11 @@ Please follow the directions listed below
 
 <center>
 ```{r echo=FALSE,eval=TRUE,message=FALSE}
-loc <- here::here("static", "rtasks", "DataWrangling.zip")
+loc <- here::here("static", "rtasks", "Joins.zip")
 
 downloadthis::download_file(
   path = loc,
-  output_name = "Data Wrangling Task",
+  output_name = "Joins Task",
   button_label = "&nbsp;&nbsp;&nbsp;<span style='color:#ffffff'>Download</span>",
   button_type = "primary",
   has_icon = TRUE,
@@ -88,14 +88,12 @@ downloadthis::download_file(
 
 2. [Unzip](/resources/unzipping) them on your computer
 
-3. Open the file `Data Wrangling Install.R` and run the syntax to install the packages you will need for this task
+3. Open the file `Joins Install.R` and run the syntax to install the packages you will need for this task
 
-4. Open the file `Data Wrangling walkthrough.Rmd` in RStudio
+4. Open the file `Joins walkthrough.Rmd` in RStudio
 
-5. Click on Run Document, and then go through the walkthrough preferably in a larger window. To see how to do this, open the file `Introduction to the Tidyverse loading.gif` from Week 2 in the web browser of your choice or by another method to view the animated gif
+5. After finishing the walkthrough, open the mostly empty Rmarkdown file `Joins Report.Rmd`, read through the body, and please make changes as directed to receive credit. 
 
-6. After finishing the walkthrough, open the mostly empty Rmarkdown file `Data Wrangling Report.Rmd`, read through the body, and please make changes as directed to recieve credit. 
-
-7. Save the resulting PDF file by adding your first initial and last name to the beginning of the filename. For example, my submission would be `aroy Data Wrangling walkthrough.pdf`
+6. Save the resulting PDF file by adding your first initial and last name to the beginning of the filename. For example, my submission would be `aroy Joins walkthrough.pdf`
 
 8. Submit the script to [eCampus](https://ecampus.wvu.edu) in the Submission Portal

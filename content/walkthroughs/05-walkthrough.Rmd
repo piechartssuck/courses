@@ -25,7 +25,7 @@ knitr::opts_chunk$set(widgetframe_self_contained = TRUE)
 knitr::opts_knit$set(root.dir = getwd())
 ```
 
-## Reverse Coding and Internal Consistency
+# Reverse Coding and Internal Consistency
 
 ```{r echo = FALSE, purl=FALSE,}
 
@@ -69,7 +69,7 @@ dplyr::tibble(
     )
 ```
 
-## Prerequisites {-}
+## Prerequisites
 
 + Please go and take the [Big Five Personality Test](https://openpsychometrics.org/tests/IPIP-BFFM/){target="_blank"} 
 
@@ -85,7 +85,7 @@ loc <- here::here("static", "data", "EDP619Week5Walkthrough.zip")
 
 downloadthis::download_file(
   path = loc,
-  output_name = "Week 5 Walkthrought",
+  output_name = "Week 5 Walkthrough",
   button_label = "&nbsp;&nbsp;&nbsp;<span style='color:#ffffff'>Download</span>",
   button_type = "primary",
   has_icon = TRUE,

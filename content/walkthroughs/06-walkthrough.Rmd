@@ -1,0 +1,524 @@
+---
+title: "Validity"
+linktitle: "Week 6: Validity "
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+    self_contained: false
+menu:
+  trainings:
+    parent: Walkthroughs
+    weight: 6
+type: docs
+weight: 2
+---
+
+`r blogdown::shortcode("r-walkthrough-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+```{r setup, include=FALSE, purl=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(widgetframe_self_contained = TRUE) 
+knitr::opts_knit$set(root.dir = getwd())
+
+library(psych)
+library(DT)
+library(reactable)
+library(htmlwidgets)
+library(htmltools)
+```
+
+This week you have two walkthroughs^[again lucky you!] 
+
+1. included in the [R Task](/modules/06-module/#r-task) download
+
+2. the one below
+
+<center>
+<hr style="width:30%;"></hr>
+</center>
+
+# Factor Analysis
+
+```{r echo = FALSE, purl=FALSE,}
+
+dplyr::tibble(
+  
+  information <- c(
+    "<b>Level of Difficulty</b><sup>1</sup>",
+    "<b>What You'll Mainly Do</b>",
+    "<b>Language(s) We'll Use</b><sup>2</sup>",
+    ""
+  ),
+  
+  description <- c(
+    "<span style='color:#c5d9ff'>Intermediate</span>",
+    "Load an external csv file, type in syntax, and consider interpretations",
+    "<div id='info'><div id='speechbubble' data-hover='R'><span style='color:#4682b4'><i class='fa-brands fa-r-project fa-xl'></i></span></div></div>",
+    ""
+            ),
+  
+  .name_repair = "minimal"
+  
+) %>%
+  kbl(col.names = c("", ""), 
+      "html", 
+      escape = FALSE,
+      align = 'll') %>%
+  kable_paper() %>%
+  kable_styling(full_width = FALSE,
+                font_size = 20,
+                position = "center") %>%
+  column_spec(1, width = "12em") %>%
+  column_spec(2, width = "30em") %>%
+  row_spec(0:3, extra_css = 'vertical-align: middle !important;', background = "transparent", color = "#f7f7f7") %>%
+  row_spec(3, extra_css = "margin-bottom: 30px;") %>%
+  add_footnote(
+    c(
+      "<span style='color:#f7f7f7; font-size:11pt;'><i>This is not an indicator of your personal level or abilities. You may experience varying level of ease and/or difficulties and that is OK!</i></span>", 
+      "<span style='color:#f7f7f7; font-size:11pt;'><i>Hover over an icon to see its name</i></span>"), 
+    notation = "number", 
+    escape = FALSE
+    )
+```
+## Prerequisites
+
++ Please go and take the [Generic Conspiracist Beliefs Scale](https://openpsychometrics.org/tests/GCBS/){target="_blank"}. 
+
++ Read this short synopsis on this and other tests to assess what drives conspirators at [Psychology Today](https://www.psychologytoday.com/us/blog/experimentations/201810/what-makes-conspiracy-theorists-tick){target="_blank"}^[I am personally fond of the BSR.]. 
+
+## Materials
+
+The following download contains files that are provided to help you to understand and/or complete the walkthrough
+
+<center>
+```{r echo=FALSE,eval=TRUE,message=FALSE,purl=FALSE}
+loc <- here::here("static", "data", "EDP619Week6Walkthrough.zip")
+
+downloadthis::download_file(
+  path = loc,
+  output_name = "Week 6 Walkthrough",
+  button_label = "&nbsp;&nbsp;&nbsp;<span style='color:#ffffff'>Download</span>",
+  button_type = "primary",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+</center>
+
+### Note
+
+It is strong suggested that you go through the [slideshow](/tasks/factors) this week prior to engaging the walkthrough provided below. 
+
+## Prepping
+
+1. Like last week, open up Rstudio and create a new script by going to **File > New File > R Script**. Save this in an easily accessible folder. Now unzip this week's data set and take the files - `ConspiracyData.csv`, `ConspiracyCodebook.csv`, `ConspiracyMeasures.csv`, `Conspiracy install.R`, and `Conspiracy script.R` - and drop them all in a folder of their own. The Watkins (2018) article is a well written and handy guide to an otherwise dense statistical approach we'll be using today.
+
+2. 2. Open the file `Conspiracy install.R` and run the syntax to install the packages you will need for this task. If you are asked to update any packages, please select `1: All`. 
+
+3. Now please go ahead and load up the following libraries
+
+<div class = "rounded">
+```{r eval=FALSE}
+library("tidyverse")
+library("psych")
+library("reactable")
+library("polycor")
+```
+</div>
+
+4. set the working directory to the location of the script by running
+
+<div class = "rounded">
+```{r eval=FALSE}
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+```
+</div>
+
+in your console or by selecting **Session > Set Working Directory > To Source File Location**.
+
+## Adding Vertical Space to Multiple Choice Items
+
+We'll be looking at responses from a sample of 2449 people who took this test in 2016. 
+
+### Loading a Local Data Set
+
+To load the data set, codebook, and measures, run the following
+
+<div class = "rounded">
+```{r eval=FALSE}
+conspiracy_data <- read_csv("ConspiracyData.csv")
+```
+</div>
+
+<div class = "rounded">
+```{r echo=FALSE, purl=FALSE}
+conspiracy_data <- read_csv(here::here("static", "data", "ConspiracyData.csv"))
+```
+</div>
+
+<div class = "rounded">
+```{r eval=FALSE}
+conspiracy_codebook <- read_csv("ConspiracyCodebook.csv")
+```
+</div>
+
+<div class = "rounded">
+```{r echo=FALSE, purl=FALSE}
+conspiracy_codebook <-
+  read_csv(here::here("static", "data", "ConspiracyCodebook.csv"))
+```
+</div>
+
+<div class = "rounded">
+```{r eval=FALSE}
+conspiracy_measures<- read_csv("ConspiracyMeasures.csv")
+```
+</div>
+
+<div class = "rounded">
+```{r echo=FALSE, purl=FALSE}
+conspiracy_measures<-
+  read_csv(here::here("static", "data", "ConspiracyMeasures.csv"))
+```
+</div>
+
+and take a look at each
+
+<div class = "rounded">
+```{r}
+conspiracy_codebook %>%
+  head()
+```
+</div>
+
+<div class = "rounded">
+```{r}
+conspiracy_measures
+```
+</div>
+
+or to see a nicer table that is also interactive, you can use the `reactable()` command from the aptly named `reactable` package for a more Excel like feel and functionality.
+
+<div class = "rounded">
+```{r}
+reactable(conspiracy_measures)
+```
+</div>
+
+<div class = "rounded">
+```{r}
+reactable(conspiracy_codebook)
+```
+</div>
+
+Well that is really long big and an annoyance if you want to find something. Let's fix it by specifying the number of rows that appear and give it a search box.
+
+<div class = "rounded">
+```{r}
+reactable(conspiracy_codebook,
+          searchable = TRUE, 
+          defaultPageSize = 3)
+```
+</div>
+
+Now that is certainly better but if you don't like it, just change the `3` in `defaultPageSize = 3` to whatever you want.
+
+Moving on, what if the data set is big? Then we might have an even bigger problem in how to display it. Let's remind ourselves of the dimensions
+
+<div class = "rounded">
+```{r}
+dim(conspiracy_data)
+```
+</div>
+
+That's 2495 rows by 15 columns which is a pretty big data set and unlike the codebook, sometimes its nice to have options when it comes to looking at the number of rows and highlight the one I'm on. It may also be nice to save it as as something easier to recall like a word (aka a variable). You can probably see where this is going...
+
+<div class = "rounded">
+```{r}
+reactable(conspiracy_data,
+          searchable = TRUE, 
+          defaultPageSize = 5,
+          showPageSizeOptions = TRUE,
+          highlight = TRUE)
+```
+</div>
+
+That's a bit better, though its certainly not perfect. There are a lot of things you can change about the table to make it easier to use. If you want to know more take a look at this [vignette](https://glin.github.io/reactable/index.html#usage){target="_blank"} and some ways you can customize the [tables](https://glin.github.io/reactable/articles/examples.html){target="_blank"}. Don't be scared off by the syntax. Remember its open source so just copy and paste. Eventually if you want to change certain aspects, just start tweaking what's already there.
+
+## Method: Exploratory Factor Analysis (EFA)
+
+Suppose you are conducting a survey and you want to know whether the items in the survey have similar patterns of responses, do these items *hang out together* to create a construct? This is the underlying principle of a **factor analysis**, or **FA**. 
+
+The basic assumption of a **FA** is that for a collection of observed variables, there are a set of underlying variables called factors which are smaller than those observed variables that can explain the interrelationships among those variables.
+
+Moving forward, we're going to conduct what is known as a single-factor **exploratory factor analysis**, or **EFA**. When you’re using this in the real world, be sure to use a dataset like this one, in that it only contains item responses in a numerical format - other types of data will cause errors and/or incorrect results. In the GCBS the scale is numeric so our dataset will do.
+
+In a nutshell, an EFA is just a statistical method used to uncover underlying categorizations, groups, structures often hidden within a data set. This is done by assessing measures and could easily serve as your group level data! As a result, you can measure the internal reliability of a measure as well.
+
+### Side Note
+
+This is a very rough and light practical introduction to EFAs. There are many intricacies associated with the methods that we simply cannot cover here due to timing. For example, what to do if you find similar loadings in two or more different factors? negative value for factor loading? are both valid questions beyond the scope of this snapshot look at the area.
+
+### A Few Things
+When you have an instrument with multiple scales, there are three standard approaches, of which we will only look at the last.
+
+```{r, echo=FALSE}
+
+lst <- tibble(
+  
+  approach = c("Performed accounting for multiple scales",
+               "Performed on scales that have been reduced",
+               "Performed on grouped items with like scales"
+               ),
+  
+  complexity = c("Most",
+                 "Less",
+                 "Minimal"
+                 ),
+  
+  information = c("Information is lossless",
+                  "Information gathered from higher order scales is lost due to reduction",
+                  "Only information between items with the same scaling is retained"
+                  ),
+  
+  get = c("Between items of the same AND different scales",
+         "Between items of the same AND different scales at the lowest scaling",
+          "Between items of the same scale"
+         )
+  
+)
+
+```
+
+<center>
+```{r, echo=FALSE,purl=FALSE}
+lst %>%
+  kbl(col.names = c("EFA approach", 
+                    "Complexity", 
+                    "Retention", 
+                    "Description"), 
+      "html", 
+      escape = FALSE,
+      align = 'llll') %>%
+  kable_paper(html_font = "Roboto Condensed",
+              font_size = "13pt") %>% 
+  kable_styling(position = "center",
+                full_width = FALSE) %>% 
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "30em") %>%
+  column_spec(4, width = "30em") %>%
+  row_spec(0:3, extra_css = 'vertical-align: middle !important;', background = "transparent", color = "#f7f7f7") 
+```
+</center>
+
+Given that we'll be only concentrating on the latter, you may have to run more than one EFA. After conducting the EFA, there are some things to consider if and when implementing your next one which we will cover at the end.
+
+### Example
+
+Theoretically a five-point likert scale will have five underlying factors, or one for each choice. However in practice, this is rarely the case and we tend to treat the scale as an upper limit - ergo we can't have more than five factors. So to decide on the number of factors, we use what is called a scree plot. Let's do this for the first ten rows of our data set.
+
+<div class = "rounded">
+```{r}
+conspiracy_data_10 <- 
+  conspiracy_data %>%
+  head(n=10)
+```
+</div>
+
+<div class = "rounded">
+```{r, warning=FALSE}
+scree(conspiracy_data_10)
+```
+</div>
+
+We're going to ignore the *y*-axis and just look at where the open circle seems to cross that horizontal line. It looks like this happens around 3, so we can that there are likely three factors.
+
+Conducting an EFA is relatively straight forward in R, and can be performed in any number of packages. In our case, we'll use the popular `psych` package and the command `fa()` where we define the number of factors by `nfactors`. 
+
+<div class = "rounded">
+```{r, warning=FALSE}
+EFA <- 
+  fa(conspiracy_data_10,
+     nfactors = 3)
+```
+</div>
+
+and then to view the results 
+
+<div class = "rounded">
+```{r}
+EFA
+```
+</div>
+
+### Viewing and Visualizing Factors
+
+Each result using the `fa()` command actually gives you a list, and each element of the list contains specific information about the analysis, including factor loadings. *Factor loadings* represent the strength and of the relationship between each item and the underlying factor, and they can range from -1 to 1. We can see this by looking only at the first column
+
+<div class = "rounded">
+```{r}
+EFA$loadings
+```
+</div>
+
+You can also create a diagram of loadings. The `fa.diagram()` command takes the output from `fa()` and creates a diagram, called a *path diagram* to show the items’ loadings ordered from strongest to weakest. This type of visualization can be a helpful way to represent your results where the factor loading are represented on the arrows going from each factor to their respective items.
+
+<div class = "rounded">
+```{r}
+fa.diagram(EFA)
+```
+</div>
+
+For those of you who have some statistical background, *factor loadings* show the correlation between the observed score and the latent score. Generally, the higher the better since the square of factor loading can be directly translated as item reliability. The other number between the factors is called a *factor correlation* that I am definitely not going to cover here other than to say that it tells us how well the factors correlate with each other. Since you are just learning about EFAs, disregard both of these for right now and just focus on the underlying concept of a factor and possibly think about how amazing it is that an algorithm and statistical approach can group variables together simply from raw response data.
+
+### What if you only have a single factor?
+
+A single factor tells you that your items likely fit onto a single theoretical construct which is just a fancy way of saying a single category. Operationally that means they can be represented on one dimension/scale which is nice and easy, but you can't get much information out of the items beyond what they tell you individually. But this is not necessarily a bad thing and you can use the output to your advantage, in that you can
+
+1. use the factor analysis to help refine your scale like choosing only those items with higher loadings on the factor and removing those that are lower - i.e. by using some threshold to separate the higher values from the lower values you see on the arrows going from the factor to the items. 
+
+2. see if any of your items could be reverse-scored on the scale by determining any negative loadings on the factor - i.e. negative values you see on the arrows going from the factor to the items. 
+
+### Side Note: Lack of Pipes
+So why can't we just use pipes and `ggplot` here? Well the main problem can be found using this command
+
+<div class = "rounded">
+```{r}
+class(EFA)
+```
+</div>
+
+Notice that the `psych` package has its own data type called  "psych". Tidy involves data that is neatly in rows and columns. In any case, we'll stick to the default format for now. 
+
+You can actually use the `class()` syntax to figure out the data type for any variable in R.
+
+Anyway getting back to the issue, we have three factors consisting of certain items. Now the final step is to go back and decide compartmentalize `MR1`, `MR2`, and `MR3` based on how the questions are grouped.
+
+## Interpreting Factor Scores
+
+### ...using Items
+
+Let's take a look at the codebook, but this time look at them by items within factors
+
+<div class = "rounded">
+```{r}
+MR1_factor <- 
+  conspiracy_codebook %>%
+  filter(str_detect(Item, paste(c("Q12", "Q7", "Q11", "Q14", "Q1", "Q9", "Q2", "Q5"), collapse = '|')))
+
+MR2_factor <- 
+  conspiracy_codebook %>%
+  filter(str_detect(Item, paste(c("Q3", "Q13", "Q8", "Q4"), collapse = '|')))
+
+MR3_factor <- 
+  conspiracy_codebook %>%
+  filter(str_detect(Item, paste(c("Q6", "Q15", "Q10"), collapse = '|')))
+```
+</div>
+
+If you're interested, the `|` is called a logical operator and it means the word ***or***. Information about other operators can be found [here](https://www.statmethods.net/management/operators.html){target="_blank"}.
+
+<div class = "rounded">
+```{r}
+reactable(MR1_factor,
+          defaultPageSize = 11)
+
+reactable(MR2_factor)
+
+reactable(MR3_factor)
+```
+</div>
+
+We could say that 
+
+1. `MR1` = *information control by groups*
+2. `MR2` = *hiding information from the public*
+3. `MR3` = *acts of self-interest to suppress information* 
+
+Of course there are many interpretations so yours may differ. Regardless the idea should always be in the context of your original purpose and research questions.
+
+The additional benefit here is that these interpretations can serve as *natural groupings*, or ones that are derived from, rather than labeling them prior to a statistical analysis. 
+
+### ...using Participants
+
+An EFA contains information about factor scores for each participant in your data set These scores are indicators of how much or how little of the factor each participant likely possesses. Please note that factor scores are not calculated for respondents with missing data. That issue will be tackled in next week's walkthrough. Anyway let's take a look at our data by calculating the total scores.
+
+To see an example, lets first look at the raw data for the first six participants
+
+<div class = "rounded">
+```{r}
+head(conspiracy_data_10)
+```
+</div>
+
+or if you prefer, we can show this using
+
+<div class = "rounded">
+```{r}
+reactable(conspiracy_data_10)
+```
+</div>
+
+We can then apply `rowSums()` command to see the total scores for these respondents.
+
+<div class = "rounded">
+```{r}
+conspiracy_data_10 %>%
+  head() %>%
+  rowSums()
+```
+</div>
+
+Then let's look at the first six participant factor scores to see the relationship between those and the responses.
+
+<div class = "rounded">
+```{r}
+head(EFA$scores)
+```
+</div>
+
+and with their descriptive summary
+
+<div class = "rounded">
+```{r}
+summary(EFA$scores)
+```
+</div>
+
+I can plot the density curve
+
+<div class = "rounded">
+```{r}
+plot(density(EFA$scores, 
+             na.rm = TRUE), 
+     main = "Factor Scores")
+```
+</div>
+
+to get a feel for how the data looks. So what does it all mean  with respect to the larger data set? Well nothing because EFAs only apply to the data that was used. This was an example of how to go about performing one so we used a very small subset of the entire population for the purposes of showing an example. To administer a proper one, we would go back and perform it on the entire 2449 row data set. In fact, as a general rule of thumb, you should always perform an EFA in your entire data set unless there is an underlying reason not to. 
+
+## Additional Things
+1. Even though we looked at how factors apply at to the participants, you should know that interpretations aren't conducted at the individual level. This means creating overarching statements about any of these ten participants separately would be complete nonsense. However the benefit is when conducting one using a subset of a large data, you get information in the form of indicators - or to put it another way you get an idea of what an EFA on the entire data set may tell you. If you do this, just make sure to use a large enough random sample of the participants instead of what I did in the example.
+
+2. If you want to know what the study said broadly, please take a look over the Brotherton, French & Pickering (2013) paper. 
+
+## Caveaut
+OK so we've conducted an EFA, but what I didn't tell you is that there are some guidelines to think about before implementing one. For those who have not had a statistics course may consider skipping the first for now, though the basic idea of the *variance* is given in this footer^[We essentially want a way to describe the *spread of our data* from one end to another, or *dispersion*. We have some ways to do this such as mean, median, and mode but that doesn't tell us the whole picture since these are just ways to describe the average. They essentially do  not say anything about how far away from the mean, median, or mode is from the raw data since that varies - ergo the term *variance*.]
+
+1. Each factor must only contain items explaining at least 10% of the variance in its respective factor.
+2. Each factor is recommended to have at least three items.
+3. Each factor must be interpreted in a reasonable and applicable way.
+4. It is recommended that your factoring do not have items that appear in multiple factors with a similar factor loading.
+
+## Let's Stop Here
+OK that's enough. EFAs can be quite useful, but due to the complexity of the approach they can be misused or misinterpreted. While no doubt still difficult, hopefully the walkthrough provided some grounded explanations of how they are used and what you can with the results. A lot of the additional assumptions, benefits, possible outcomes, side effects, etc have been set aside for the purposes of simplifying this approach. I encourage you to further explore EFAs and after you get "comfortable" with them, take a look at the idea of a [confirmatory factor analysis (CFA)](https://stats.idre.ucla.edu/r/seminars/rcfa/#s1a){target="_blank"} as well. Warning that CFAs lead down a rabbit hole into some higher level statistics!
+
+## Looking Forward
+Recall that a factor analysis can only be performed on a full set of data, but what if you don't have that? Its something we deal with all of the time and we'll talk about how to deal with missingness next week!
