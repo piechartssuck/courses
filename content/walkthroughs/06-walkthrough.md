@@ -164,17 +164,15 @@ The following download contains files that are provided to help you to understan
 </a>
 </center>
 
-### Note
-
-It is strong suggested that you go through the [slideshow](/tasks/factors) this week prior to engaging the walkthrough provided below.
-
 ## Prepping
 
-1.  Like last week, open up Rstudio and create a new script by going to **File \> New File \> R Script**. Save this in an easily accessible folder. Now unzip this week’s data set and take the files - `ConspiracyData.csv`, `ConspiracyCodebook.csv`, `ConspiracyMeasures.csv`, `Conspiracy install.R`, and `Conspiracy script.R` - and drop them all in a folder of their own. The Watkins (2018) article is a well written and handy guide to an otherwise dense statistical approach we’ll be using today.
+1.  Go through the [slideshow](/tasks/factors) this week prior to engaging the walkthrough provided below unless you have a strong familiarity with factor validity.
 
-2.  2.  Open the file `Conspiracy install.R` and run the syntax to install the packages you will need for this task. If you are asked to update any packages, please select `1: All`.
+2.  Like last week, open up Rstudio and create a new script by going to **File \> New File \> R Script**. Save this in an easily accessible folder. Now unzip this week’s data set and take the files - `ConspiracyData.csv`, `ConspiracyCodebook.csv`, `ConspiracyMeasures.csv`, `Conspiracy install.R`, and `Conspiracy script.R` - and drop them all in a folder of their own. The Watkins (2018) article is a well written and handy guide to an otherwise dense statistical approach we’ll be using today.
 
-3.  Now please go ahead and load up the following libraries
+3.  Open the file `Conspiracy install.R` and run the syntax to install the packages you will need for this task. If you are asked to update any packages, please select `1: All`.
+
+4.  Now please go ahead and load up the following libraries
 
 <div class="rounded">
 
