@@ -21,7 +21,7 @@ source(here::here("content", "com_libs.R"))
 
 ## Data Camp
 
-Please finish up the following module
+Please start on the following module
 
 ```{r eval = TRUE, echo = FALSE, message=FALSE}
 dc_schedule <-  

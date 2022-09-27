@@ -69,7 +69,7 @@ Read <i>Using Theoretical Models in Mixed Methods Research: An Example from an E
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Finish the module <span style="color:#ffc787;font-weight:bold"><i>Data Manipulation with dplyr</i></span>
+Begin the module <span style="color:#ffc787;font-weight:bold"><i>Data Manipulation with dplyr</i></span>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/modules/04-module/#data-camp"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
