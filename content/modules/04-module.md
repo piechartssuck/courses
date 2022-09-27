@@ -21,7 +21,7 @@ weight: 1
 
 ## Data Camp
 
-Please finish up the following module
+Please start on the following module
 
 <center>
 <table class=" lightable-paper" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
