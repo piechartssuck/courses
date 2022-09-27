@@ -27,7 +27,7 @@ ul {
 }
 </style>
 
-*posting soo*
+*posting soon*
 
 <!--
 Select one of the questions from your table that you think would be appropriate for mixed methodological research and/or evaluation. Create a logical justification for your idea within a 300-500 word narrative
