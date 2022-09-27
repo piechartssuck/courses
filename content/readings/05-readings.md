@@ -40,7 +40,7 @@ Title
 <th style="text-align:left;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 Citation
 </th>
-<th style="text-align:left;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<th style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 Link
 </th>
 </tr>
@@ -54,7 +54,7 @@ Across Methodologies, Methods, and Stakeholder Groups: The Joys, Woes, and Polit
 <td style="text-align:left;width: 20em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 Campbell, et al. (2020)
 </td>
-<td style="text-align:left;width: 10em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 10em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 Please check this week’s download
 </td>
 </tr>
@@ -65,7 +65,7 @@ Please check this week’s download
 <td style="text-align:left;width: 20em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 Mertens (2017)
 </td>
-<td style="text-align:left;width: 10em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 10em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://methods-sagepub-com.wvu.idm.oclc.org/book/mixed-methods-design-in-evaluation/i257.xml" target="_blank"><img src="/logos/library-ico.png" alt="Slack icon" width="25px"></a>
 </td>
 </tr>
@@ -76,7 +76,7 @@ Mertens (2017)
 <td style="text-align:left;width: 20em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 Mertens (2017)
 </td>
-<td style="text-align:left;width: 10em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 10em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://methods-sagepub-com.wvu.idm.oclc.org/book/mixed-methods-design-in-evaluation/i318.xml" target="_blank"><img src="/logos/library-ico.png" alt="Slack icon" width="25px"></a>
 </td>
 </tr>
@@ -88,7 +88,7 @@ Open-Ended Responses: A Mixed Methods Approach</i>
 <td style="text-align:left;width: 20em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 Jacobson, Whyte, & Azzam (2018)
 </td>
-<td style="text-align:left;width: 10em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 10em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 Please check this week’s download
 </td>
 </tr>
