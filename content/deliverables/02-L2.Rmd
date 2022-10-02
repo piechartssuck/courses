@@ -11,7 +11,7 @@ editor_options:
   chunk_output_type: console
 ---
 
-`r blogdown::shortcode("aes-header")`
+`r blogdown::shortcode("r-walkthrough-header")`
 
 ```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
 source(here::here("content", "com_libs.R"))
@@ -49,7 +49,7 @@ downloadthis::download_file(
 
 3. Fill out the following columns^[While not required at the current time, you are free to fill out any of the remaining columns as needed]
 
-  + **Item**. Survey items in the order they will currently appear. 
+  + **Item**. Survey items in the order they will currently appear
   
   + **ItemType**. Question type as allowed by [Qualtrics](https://www.qualtrics.com/support/survey-platform/survey-module/editing-questions/question-types-guide/question-types-overview/)
   
@@ -63,7 +63,7 @@ downloadthis::download_file(
 
 6. Fill out the **Index** column with the item number provided in Qualtrics. Consider [auto-numbering](https://www.qualtrics.com/support/survey-platform/survey-module/survey-tools/auto-number-questions/) your questions to renumber them in order
 
-7. Rename the document by following the [submission guidelines](/tasks/#submission-formatting) and submit this document to <a target="_blank" href="https://ecampus.wvu.edu/">eCampus</a><br><br>
+7. Rename the document by following the [submission guidelines](/tasks/#submission-formatting), save it in `xlsx` format, and submit this document to <a target="_blank" href="https://ecampus.wvu.edu/">eCampus</a><br><br>
 
 <center>
 <p id="rounded_corners">

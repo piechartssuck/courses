@@ -6,12 +6,12 @@ menu:
     parent: Deliverables
     weight: 3
 type: docs
-weight: 2
+weight: 3
 editor_options: 
   chunk_output_type: console
 ---
 
-`r blogdown::shortcode("aes-header")`
+`r blogdown::shortcode("r-walkthrough-header")`
 
 ```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
 source(here::here("content", "com_libs.R"))
@@ -23,49 +23,17 @@ ul {
 }
 </style>
 
-*Posting soon*
-
-<!--
 This task involves a multi-step process to address the underlying research or evaluation question of your eventual survey. Please follow the directions below^[These items assume that Qualtrics is used. If you are using another mode, please amend your responses to for the requirements of that platform]
 
-1. First download the following 
+1. Review the feedback provided in your second deliverable
 
-<center>
-```{r echo=FALSE,eval=TRUE,message=FALSE}
-loc <- here::here("static", "files", "skeleton.zip")
+2. Review the variable names and descriptions provided in the codebook again
 
-downloadthis::download_file(
-  path = loc,
-  output_name = "Survey Skeleton",
-  button_label = "&nbsp;&nbsp;&nbsp;<span style='color:#ffffff'>Download</span>",
-  button_type = "primary",
-  has_icon = TRUE,
-  icon = "fa fa-save",
-  class = "hvr-sweep-to-left"
-  )
-```
-</center>
-<br>
+3. Amend the existing columns from the feedback and fill out the remaining columns that are applicable. These must directly reflect the survey shared on [ Qualtrics](https://wvu.qualtrics.com) 
 
-2. Open both files and review the variable names and descriptions in the codebook
+4. Again consider [auto-numbering](https://www.qualtrics.com/support/survey-platform/survey-module/survey-tools/auto-number-questions/) your questions to renumber them in order. Then make sure to update the **Index** column with the item number provided in Qualtrics
 
-3. Fill out the following columns^[While not required at the current time, you are free to fill out any of the remaining columns as needed]
-
-  + **Item**. Survey items in the order they will currently appear. 
-  
-  + **ItemType**. Question type as allowed by [Qualtrics](https://www.qualtrics.com/support/survey-platform/survey-module/editing-questions/question-types-guide/question-types-overview/)
-  
-  + **Measure**. Direct measure of the item
-  
-  + **Latent**. Indirect measure of a category
-
-4. After you have completed the draft, login to the [WVU Qualtrics](https://wvu.qualtrics.com) page, create a new survey, and construct an instrument that is a direct reflection of the skeleton
-
-5. Share your survey by enabling [Collaboration](https://www.qualtrics.com/support/survey-platform/my-projects/sharing-a-project/)^[Please disallow editing privileges] 
-
-6. Fill out the **Index** column with the item number provided in Qualtrics. Consider [auto-numbering](https://www.qualtrics.com/support/survey-platform/survey-module/survey-tools/auto-number-questions/) your questions to renumber them in order
-
-7. Rename the document by following the [submission guidelines](/tasks/#submission-formatting) and submit this document to <a target="_blank" href="https://ecampus.wvu.edu/">eCampus</a><br><br>
+5. Rename the document by following the [submission guidelines](/tasks/#submission-formatting), save it in `xlsx` format, and submit this document to <a target="_blank" href="https://ecampus.wvu.edu/">eCampus</a><br><br>
 
 <center>
 <p id="rounded_corners">
@@ -74,4 +42,3 @@ All incremental deliverables can be found on the main <a href="/tasks/#deliverab
 </center>
 
 <br />
--->

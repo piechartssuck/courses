@@ -140,7 +140,7 @@ setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 
 in your console or by selecting **Session > Set Working Directory > To Source File Location**.
 
-## Adding Vertical Space to Multiple Choice Items
+## Sampling Frame
 
 We'll be looking at responses from a sample of 2449 people who took this test in 2016. 
 

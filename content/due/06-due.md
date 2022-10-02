@@ -91,7 +91,7 @@ Complete the module <span style="color:#ffc787;font-weight:bold"><i>Joining Data
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Go through the slideshow <span style="color:#6ac4cd;font-weight:bold">Factorial Validity</span> priot to the Factor Analysis walkthrough
+Go through the slideshow <span style="color:#6ac4cd;font-weight:bold">Factorial Validity</span> prior to the Factor Analysis walkthrough
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/tasks/06-task/#factorial-validity"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
