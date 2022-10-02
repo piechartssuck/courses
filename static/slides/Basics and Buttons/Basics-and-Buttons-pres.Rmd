@@ -689,7 +689,7 @@ We'll be working in one particular submenu this week, namely the **Custom CSS** 
 ]]
 
 .pull-right[.center-right[
-<img class = "expand" src="img/custom-css.gif" alt="Button Labels" style="margin-top:-20px;">
+<img class = "expand" src="img/custom-css.gif" alt="Custom CSS" style="margin-top:-20px;">
 ]]
 
 .pull-left[
@@ -731,7 +731,7 @@ Is dark mode really that better for you? More specifically is it better in getti
 ]]
 
 .pull-right[.center-right[
-<img class = "expand" src="img/backround-color.gif" alt="Button Labels">
+<img class = "expand" src="img/backround-color.gif" alt="Coloring the Background">
 ]]
 
 .pull-left[
@@ -773,7 +773,7 @@ The text color clearly needs to be changed. But the larger question here is does
 ]]
 
 .pull-right[.center-right-seven[
-<img class = "expand" src="img/text-color.gif" alt="Button Labels">
+<img class = "expand" src="img/text-color.gif" alt="Coloring the Text">
 ]]
 
 .pull-left[
@@ -924,7 +924,7 @@ In this example, we define *both* the default and hover color for the back and n
 ]]
 
 .pull-right[.center-right[
-<img class = "expand" src="img/buttons-all.gif" alt="Button Labels">
+<img class = "expand" src="img/buttons-all.gif" alt="Uniform Color">
 ]]
 
 ---
@@ -955,7 +955,7 @@ In this example, we define *both* the default and hover colors for the back and 
 ]]
 
 .pull-right[.center-right[
-<img class = "expand" src="img/buttons-different-hovercolor.gif" alt="Button Labels" style="margin-top:-50px;">
+<img class = "expand" src="img/buttons-different-hovercolor.gif" alt="Different Default and Hover Colors" style="margin-top:-50px;">
 ]]
 
 ---
@@ -986,7 +986,7 @@ In this example, we define *every* default and hover color for the back and next
 ]]
 
 .pull-right[.center-right[
-<img class = "expand" src="img/buttons-all-differentcolors.gif" alt="Button Labels" style="margin-top:-50px;">
+<img class = "expand" src="img/buttons-all-differentcolors.gif" alt="Different Colors For All" style="margin-top:-50px;">
 ]]
 
 ---
@@ -1017,7 +1017,7 @@ In this example, we *split* the back and next buttons and define different color
 ]]
 
 .pull-right[.center-right[
-<img class = "expand" src="img/buttons-all-differentcolors-lrborder.gif" alt="Button Labels" style="margin-top:-50px;">
+<img class = "expand" src="img/buttons-all-differentcolors.gif" alt="Adding Border Colors" style="margin-top:-50px;">
 ]]
 
 .footnote[Go to the <a href="https://universityrelations.wvu.edu/brand-guide/color" target='_blank'>WVU Brand Guide for Color</a>]

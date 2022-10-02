@@ -35,7 +35,7 @@ dplyr::tibble(
   description <- c(
     "<span style='color:#c5d9ff'>Intermediate</span>",
     "Copy/paste syntax and tinker as needed",
-    "<div id='info'><div id='speechbubble' data-hover='CSS'><span style='color:#4682b4'><i class='fa-brands fa-r-project fa-xl'></i></span></div></div>",
+    "<div id='info'><div id='speechbubble' data-hover='CSS'><span style='color:#4682b4'><i class='fa-brands fa-css3-alt fa-xl'></i></span></div></div>",
     ""
             ),
   
@@ -63,6 +63,24 @@ dplyr::tibble(
     )
 ```
 
+<br>
+<center>
+```{r echo=FALSE,eval=TRUE,message=FALSE,purl=FALSE}
+loc <- here::here("static", "data", "EDP619Week7SlideshowMenuTweaks.zip")
+
+downloadthis::download_file(
+  path = loc,
+  output_name = "Week 7 Slideshow Menu Tweaks.zip",
+  button_label = "&nbsp;&nbsp;&nbsp;<span style='color:#ffffff'>Week 7 Slideshow Menu Tweaks</span>",
+  button_type = "primary",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+)
+```
+</center>
+<br>
+  
 ```{=html}
 <center>
 <div class="wrapper">
@@ -83,15 +101,13 @@ dplyr::tibble(
 </center>
 <br>
 ```
-  
-*posting soon* 
 
 <center>
 <div class="holder">
 
 <div class="bigcol">
 ```{r echo = FALSE, out.width="140%", fig.align='left'}
-knitr::include_url("/slides/Factorial%20Validity/Basics-and-Buttons-pres.html")
+knitr::include_url("/slides/Basics%20and%20Buttons/Basics-and-Buttons-pres.html")
 ```
 </div>
 
