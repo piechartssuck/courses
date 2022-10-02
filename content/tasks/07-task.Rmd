@@ -66,11 +66,11 @@ dplyr::tibble(
 <br>
 <center>
 ```{r echo=FALSE,eval=TRUE,message=FALSE,purl=FALSE}
-loc <- here::here("static", "data", "EDP619Week7SlideshowMenuTweaks.zip")
+loc <- here::here("static", "data", "EDP619Week7Slideshow.zip")
 
 downloadthis::download_file(
   path = loc,
-  output_name = "Week 7 Slideshow Menu Tweaks.zip",
+  output_name = "Week 7 Slideshow.zip",
   button_label = "&nbsp;&nbsp;&nbsp;<span style='color:#ffffff'>Week 7 Slideshow Menu Tweaks</span>",
   button_type = "primary",
   has_icon = TRUE,
@@ -80,7 +80,7 @@ downloadthis::download_file(
 ```
 </center>
 <br>
-  
+
 ```{=html}
 <center>
 <div class="wrapper">
