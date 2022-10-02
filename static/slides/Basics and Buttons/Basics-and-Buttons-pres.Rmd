@@ -14,6 +14,9 @@ output:
          scroll: false
 ---
 
+<link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 <script type="text/x-mathjax-config">
@@ -472,6 +475,11 @@ Unless you specify a theme type when creating a new survey Quatrics will provide
 
 .pull-right[.center-right[
 <img class = "expand" src="img/qualtrics-aes-blank-theme.gif" alt="Blank Theme">
+<br>
+<center>
+<a href="img/qualtrics-aes-blank-theme.gif" target='_blank' download="qualtrics-aes-blank-theme.gif">
+<i class="fa-solid fa-file-arrow-down"></i></a>
+<center>
 ]]
 
 ---
@@ -496,6 +504,11 @@ Progress bars have a single primary purpose – to help inform respondent on how
 
 .pull-right[.center-right[
 <img class = "expand" src="img/qualtrics-aes-progress-bar.gif" alt="Progress Bar">
+<br>
+<center>
+<a href="img/qualtrics-aes-progress-bar.gif" target='_blank' download="qualtrics-aes-progress-bar.gif">
+<i class="fa-solid fa-file-arrow-down"></i></a>
+<center>
 ]]
 
 .pull-left[
@@ -566,12 +579,17 @@ A back button allows respondents can return to pages they have already visited i
 
 .pull-right[.center-right[
 <img class = "expand" src="img/qualtrics-aes-back-button.gif" alt="Back Button">
+<br>
+<center>
+<a href="img/qualtrics-aes-back-button.gif" target='_blank' download="qualtrics-aes-back-button.gif">
+<i class="fa-solid fa-file-arrow-down"></i></a>
+<center>
 ]]
 
 <br>
 .pull-left[
 <center>
-<div class="hover">
+<div class="hover" style="margin-top:-40px;">
   <span> Read   More!</span>
    <div class="boxl"><p style="color:#212121;">Hays et al (2010)</p></div>
   <div class="vertline"></div>
@@ -606,7 +624,12 @@ The default text you see on buttons within Qualtrics are left and right arrows. 
 ]]
 
 .pull-right[.center-right[
-<img class = "expand" src="img/qualtrics-aes-button-labels.gif" alt="Button Labels">
+<img class = "expand" src="img/qualtrics-aes-button-labels.gif" alt="Button Labels" style="margin-top:-20px;">
+<br>
+<center>
+<a href="img/qualtrics-aes-button-labels.gif" target='_blank' download="qualtrics-aes-button-labels.gif">
+<i class="fa-solid fa-file-arrow-down"></i></a>
+<center>
 ]]
 
 <br>
@@ -689,7 +712,13 @@ We'll be working in one particular submenu this week, namely the **Custom CSS** 
 ]]
 
 .pull-right[.center-right[
-<img class = "expand" src="img/custom-css.gif" alt="Custom CSS" style="margin-top:-20px;">
+<img class = "expand" src="img/custom-css.gif" alt="Custom CSS" style="margin-top:-50px;">
+<br>
+<br>
+<center>
+<a href="img/custom-css.gif" target='_blank' download="custom-css.gif">
+<i class="fa-solid fa-file-arrow-down"></i></a>
+<center>
 ]]
 
 .pull-left[
@@ -700,7 +729,7 @@ We'll be working in one particular submenu this week, namely the **Custom CSS** 
   <div class="vertline"></div>
   <div class="boxr"><a href="papers/Mahon-Haft%2C%20T.%20A.%2C%20%26%20Dillman%2C%20D.%20A.%20%282010%29.pdf" target='_blank' download="Mahon-Haft, T. A., & Dillman, D. A. (2010).pdf"></div>
   <div class="vertical"></div>
-<div class="picr"><img src="img/pdf-ico.png" alt="Paper" width='35' style="margin-top:-50px;"></div>
+<div class="picr"><img src="img/pdf-ico.png" alt="Paper" width='35'></div>
     </a>
 </div>
 <center>
@@ -712,7 +741,7 @@ We'll be working in one particular submenu this week, namely the **Custom CSS** 
 
 --
 
-Is dark mode really that better for you? More specifically is it better in getting response rates than the standard white background with black text? Well officially the jury is still out but multiple lines of research are alluding to that being an actual effect, even having an impact on <a href="papers/Koning%2C%20L.%20%26%20Junger%2C%20M.%20%282021%29.pdf" target='_blank' download="Pombo, M. & Velasco, C (2020).pdf">how honest people are when they are tired</a>.
+Is dark mode really that better for you? More specifically is it better in getting response rates than the standard white background with black text? Well officially the jury is still out but multiple lines of research are alluding to that being an actual effect, even having an impact on <a href="papers/Koning%2C%20L.%20%26%20Junger%2C%20M.%20%282021%29.pdf" target='_blank' download="Pombo, M. & Velasco, C (2020).pdf"> how honest people are when they are tired</a>.
 
 --
 
@@ -732,11 +761,16 @@ Is dark mode really that better for you? More specifically is it better in getti
 
 .pull-right[.center-right[
 <img class = "expand" src="img/backround-color.gif" alt="Coloring the Background">
+<br>
+<center>
+<a href="img/backround-color.gif" target='_blank' download="backround-color.gif">
+<i class="fa-solid fa-file-arrow-down"></i></a>
+<center>
 ]]
 
 .pull-left[
 <center>
-<div class="hover" style="margin-top:30px;">
+<div class="hover" style="margin-top:-20px;">
   <span> Read   More!</span>
    <div class="boxl"><p style="color:#212121;">Eisfeld, H., & Kristallovich, F. (2020)</p></div>
   <div class="vertline"></div>
@@ -774,6 +808,11 @@ The text color clearly needs to be changed. But the larger question here is does
 
 .pull-right[.center-right-seven[
 <img class = "expand" src="img/text-color.gif" alt="Coloring the Text">
+<br>
+<center>
+<a href="img/text-color.gif" target='_blank' download="text-color.gif">
+<i class="fa-solid fa-file-arrow-down"></i></a>
+<center>
 ]]
 
 .pull-left[
@@ -925,6 +964,11 @@ In this example, we define *both* the default and hover color for the back and n
 
 .pull-right[.center-right[
 <img class = "expand" src="img/buttons-all.gif" alt="Uniform Color">
+<br>
+<center>
+<a href="img/buttons-all.gif" target='_blank' download="buttons-all.gif">
+<i class="fa-solid fa-file-arrow-down"></i></a>
+<center>
 ]]
 
 ---
@@ -956,6 +1000,11 @@ In this example, we define *both* the default and hover colors for the back and 
 
 .pull-right[.center-right[
 <img class = "expand" src="img/buttons-different-hovercolor.gif" alt="Different Default and Hover Colors" style="margin-top:-50px;">
+<br>
+<center>
+<a href="img/buttons-different-hovercolor.gif" target='_blank' download="buttons-different-hovercolor.gif">
+<i class="fa-solid fa-file-arrow-down"></i></a>
+<center>
 ]]
 
 ---
@@ -987,6 +1036,11 @@ In this example, we define *every* default and hover color for the back and next
 
 .pull-right[.center-right[
 <img class = "expand" src="img/buttons-all-differentcolors.gif" alt="Different Colors For All" style="margin-top:-50px;">
+<br>
+<center>
+<a href="img/buttons-all-differentcolors.gif" target='_blank' download="buttons-all-differentcolors.gif">
+<i class="fa-solid fa-file-arrow-down"></i></a>
+<center>
 ]]
 
 ---
@@ -1018,6 +1072,11 @@ In this example, we *split* the back and next buttons and define different color
 
 .pull-right[.center-right[
 <img class = "expand" src="img/buttons-all-differentcolors.gif" alt="Adding Border Colors" style="margin-top:-50px;">
+<br>
+<center>
+<a href="img/buttons-all-differentcolors.gif" target='_blank' download="buttons-all-differentcolors.gif">
+<i class="fa-solid fa-file-arrow-down"></i></a>
+<center>
 ]]
 
 .footnote[Go to the <a href="https://universityrelations.wvu.edu/brand-guide/color" target='_blank'>WVU Brand Guide for Color</a>]
