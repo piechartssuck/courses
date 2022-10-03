@@ -75,7 +75,7 @@ Select one of the questions from your table that you think would be appropriate 
 
 <details>
 <summary>
-Week 5: Develop a Draft
+Week 6: Develop a Draft
 </summary>
 <br>
 <p>
@@ -91,7 +91,7 @@ Based on feedback, amend and add to your argument by outlining a likely design a
 
 <details>
 <summary>
-Week 7: Update the Draft
+Week 8: Update the Draft
 </summary>
 <br>
 <p>
@@ -107,7 +107,7 @@ Based on feedback, amend and add to your argument by creating a visual of the de
 
 <details>
 <summary>
-Week 8: Refine the Draft
+Week 9: Refine the Draft
 </summary>
 <br>
 <p>

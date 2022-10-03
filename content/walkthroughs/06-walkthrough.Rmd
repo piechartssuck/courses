@@ -1,0 +1,51 @@
+---
+title: "Actually Evaluating Interventions"
+linktitle: "Week 6: Actually Evaluating Interventions "
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  trainings:
+    parent: Walkthroughs
+    weight: 6
+type: docs
+weight: 2
+---
+
+`r blogdown::shortcode("r-walkthrough-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+# Sentiment Analysis
+
+1. Download the following install script and run it in RStudio
+
+<center>
+```{r echo=FALSE,eval=TRUE,message=FALSE}
+loc <- here::here("static", "data", "EDP619Week6Walkthrough.zip")
+
+downloadthis::download_file(
+  path = loc,
+  output_name = "Week 6 Walkthrough",
+  button_label = "&nbsp;&nbsp;&nbsp;<span style='color:#ffffff'>Download</span>",
+  button_type = "primary",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+
+</center>
+
+
+2. Follow chapters
+
+  + [1: The tidy text format](https://www.tidytextmining.com/tidytext.html#tidytext)
+  
+  + [2: Sentiment analysis with tidy data](https://www.tidytextmining.com/sentiment.html#sentiment) 
+  <br>
+  <br>
+  in *Text Mining with R: A Tidy Approach* by copying, pasting, and running the syntax. Please pay close attention to what is occurring and how the text data is being interpreted. We're going to have a work next week so please bring your laptops!
+  

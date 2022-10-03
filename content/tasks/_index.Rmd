@@ -64,7 +64,7 @@ Select one of the questions from your table that you think would be appropriate 
 <br>
 
 <div id="anchorwk6">
-<details><summary>Week 5: Develop a Draft</summary>
+<details><summary>Week 6: Develop a Draft</summary>
 <br>
 <p>
 Based on feedback, amend and add to your argument by outlining a likely design and explicitly detailing the mixing process within 750-1000 words.
@@ -74,7 +74,7 @@ Based on feedback, amend and add to your argument by outlining a likely design a
 <br>
 
 <div id="anchorwk8">
-<details><summary>Week 7: Update the Draft</summary>
+<details><summary>Week 8: Update the Draft</summary>
 <br>
 <p>
 Based on feedback, amend and add to your argument by creating a visual of the design detailing the mixing process and adding/expanding on the detailed explanation of individual and mixed analyses within 1500-1750 words. 
@@ -84,7 +84,7 @@ Based on feedback, amend and add to your argument by creating a visual of the de
 <br>
 
 <div id="anchorwk8">
-<details><summary>Week 8: Refine the Draft</summary>
+<details><summary>Week 9: Refine the Draft</summary>
 <br>
 <p>
 Based on feedback, amend any needed changes and resubmit for a quick assessment.

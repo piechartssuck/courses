@@ -1,13 +1,13 @@
 ---
-title: "Evaluating Interventions"
-linktitle: "Week 5: Evaluating Interventions"
+title: "Actually Evaluating Interventions"
+linktitle: "Week 6: Actually Evaluating Interventions"
 output:
   rmarkdown::html_document:
     toc: true
 menu:
   due:
     parent: 'To Do List'
-    weight: 5
+    weight: 6
 type: docs
 weight: 1
 ---
@@ -25,38 +25,33 @@ wk_post <-
   
   tibble(
 
-Description = c("Read <i>Assessing Triangulation
-Across Methodologies, Methods, and Stakeholder Groups: The Joys, Woes, and Politics of Interpreting Convergent and Divergent Data</i> in Campbell, et al. (2020)",
-                "Read <i>Mixed Methods in Evaluation: History and Progress</i> in Mertens (2017)",
-                "Read <i>Mixed Methods Designs to Evaluate Interventions</i> in Mertens (2017)",
-                "Read <i>Using Crowdsourcing to Code
-Open-Ended Responses: A Mixed Methods Approach</i> in Jacobson, Whyte, & Azzam (2018)",
-                "Finish the module <span style='color:#ffc787;font-weight:bold'><i>Data Manipulation with dplyr</i></span>",
-                "Take a look at the criteria for your third deliverable <span style='color:#6acda5;font-weight:bold'>Develop a Draft</span>"
+Description = c("Read <i>Accelerating Mixed Methods
+Research With Natural Language Processing of Big Text Data</i> in Chang et al. (2021)",
+                "Read <i>Comparing Grounded Theory and Topic Modeling: Extreme Divergence or Unlikely Convergence?</i> in Baumer et al. (2017)",
+                "Begin the module <span style='color:#ffc787;font-weight:bold'><i>Unsupervised Learning in R</i></span>",
+                "Carefully go through the first two chapters in <i>Text Mining with R: A Tidy Approach</i>",
+                "Finish up on your third deliverable <span style='color:#6acda5;font-weight:bold'>Develop a Draft</span> after recieving feedback on the second submission"
                 ),
 
 
-Details = c("<a href='/readings/05-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
-            "<a href='/readings/05-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
-            "<a href='/readings/05-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
-            "<a href='/readings/05-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
-            "<a href='/modules/05-module/#data-camp'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+Details = c("<a href='/readings/06-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/readings/06-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/modules/06-module/#data-camp'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/walkthroughs/06-walkthrough/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/deliverables/03-l3/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
             ),
 
 Icon = c("pdf",
-         "library",
-         "library",
          "pdf",
          "dc",
-         ""),
+         "offsite",
+         "ecampus"),
 
-Site = c("/readings/05-readings/#download-literature",
-         "https://methods-sagepub-com.wvu.idm.oclc.org/book/mixed-methods-design-in-evaluation/i257.xml",
-         "https://methods-sagepub-com.wvu.idm.oclc.org/book/mixed-methods-design-in-evaluation/i318.xml",
-         "/readings/05-readings/#download-literature",
+Site = c("/readings/06-readings/#download-literature",
+         "/readings/06-readings/#download-literature",
          "https://www.datacamp.com",
-         "")
+         "https://www.tidytextmining.com",
+         "https://ecampus.wvu.edu/")
 )
 ```
 
