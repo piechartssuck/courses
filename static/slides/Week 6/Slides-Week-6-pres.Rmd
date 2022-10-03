@@ -504,7 +504,7 @@ tibble(
 
 --
 
-+ Known as a one-shot study
++ Known as a pre-post study
 
 ---
 
