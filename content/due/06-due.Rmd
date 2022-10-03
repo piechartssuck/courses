@@ -30,6 +30,7 @@ Research With Natural Language Processing of Big Text Data</i> in Chang et al. (
                 "Read <i>Comparing Grounded Theory and Topic Modeling: Extreme Divergence or Unlikely Convergence?</i> in Baumer et al. (2017)",
                 "Begin the module <span style='color:#ffc787;font-weight:bold'><i>Unsupervised Learning in R</i></span>",
                 "Carefully go through the first two chapters in <i>Text Mining with R: A Tidy Approach</i>",
+                "Review the slideshow <span style='color:#6ac4cd;font-weight:bold'>The Quasi Experiments</span> after class",
                 "Finish up on your third deliverable <span style='color:#6acda5;font-weight:bold'>Develop a Draft</span> after recieving feedback on the second submission"
                 ),
 
@@ -38,6 +39,7 @@ Details = c("<a href='/readings/06-readings/#read-some-text'><span style='font-s
             "<a href='/readings/06-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/modules/06-module/#data-camp'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/walkthroughs/06-walkthrough/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/tasks/06-task/#inclassnotes'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/deliverables/03-l3/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
             ),
 
@@ -45,11 +47,13 @@ Icon = c("pdf",
          "pdf",
          "dc",
          "offsite",
+         "",
          "ecampus"),
 
 Site = c("/readings/06-readings/#download-literature",
          "/readings/06-readings/#download-literature",
          "https://www.datacamp.com",
+         "",
          "https://www.tidytextmining.com",
          "https://ecampus.wvu.edu/")
 )
