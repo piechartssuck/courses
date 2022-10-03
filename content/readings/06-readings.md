@@ -47,7 +47,7 @@ Link
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left;width: 30em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 40em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <i>Accelerating Mixed Methods
 Research With Natural Language Processing of Big Text Data</i>
 </td>
@@ -59,7 +59,7 @@ Please check this week’s download
 </td>
 </tr>
 <tr>
-<td style="text-align:left;width: 30em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 40em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <i>Comparing Grounded Theory and Topic Modeling: Extreme Divergence or Unlikely Convergence?</i>
 </td>
 <td style="text-align:left;width: 20em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
