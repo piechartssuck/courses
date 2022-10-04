@@ -1,6 +1,7 @@
 ---
 title: "Actually Evaluating Interventions"
 linktitle: "Week 6: Actually Evaluating Interventions "
+toc: true
 output:
   rmarkdown::html_document:
     toc: true
@@ -20,7 +21,9 @@ source(here::here("content", "com_libs.R"))
 
 # Sentiment Analysis
 
-1. Download the following install script and run it in RStudio
+## Materials
+
+The following download contains files that are provided to help you to understand and/or complete the walkthrough
 
 <center>
 ```{r echo=FALSE,eval=TRUE,message=FALSE}
@@ -39,13 +42,24 @@ downloadthis::download_file(
 
 </center>
 
+## Prepping
 
-2. Follow chapters
+1. Open `Text-Mining-with-R-CH1&2-install.R` and run the syntax to install the packages you will need for this task. If you are asked to update any packages, please select `1: All`. If further requests come up to install additional components or files, please select `Yes`^[Should you have any issues with the installation, please reach out as soon as possible]
 
-  + [1: The tidy text format](https://www.tidytextmining.com/tidytext.html#tidytext)
-  
-  + [2: Sentiment analysis with tidy data](https://www.tidytextmining.com/sentiment.html#sentiment) 
-  <br>
-  <br>
-  in *Text Mining with R: A Tidy Approach* by copying, pasting, and running the syntax. Please pay close attention to what is occurring and how the text data is being interpreted. We're going to have a work next week so please bring your laptops!
+2. Open `Text-Mining-with-R-CH1&2-script.R` and run everything in it before starting. Use this script to copy and paste code from the chapters outlined below
+
+## Tidy Text Mining
+
+Follow the chapters
+
+<ol>
+  <li>
+  <a href="https://www.tidytextmining.com/tidytext.html#tidytext">The tidy text format</a>
+  </li>
+  <li>
+  <a href="https://www.tidytextmining.com/sentiment.html#sentiment">Sentiment analysis with tidy data</a>
+  </li>
+</ol> 
+
+in *Text Mining with R: A Tidy Approach* by copying, pasting, and running the syntax in `Text-Mining-with-R-CH1&2-script.R` within RStudio. Please pay close attention to what is occurring and how the text data is being interpreted. We're going to have a work next week so please bring your laptops!
   
