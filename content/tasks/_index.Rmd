@@ -90,7 +90,7 @@ Execute at least two pilot studies. Update both the instrument and skeleton and 
 <br>
 
 <div id="anchorwk8">
-<details><summary>Week 8: Disseminate the Survey</summary>
+<details><summary>Week 8 (or 9): Disseminate the Survey</summary>
 <br>
 <p>
 Administer the instrument on a standard two-week cycle unless other arrangements have been made.

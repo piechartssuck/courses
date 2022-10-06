@@ -73,7 +73,7 @@ Please check this week’s download
 <i>Web Questionnaires and Implementation</i>
 </td>
 <td style="text-align:left;width: 20em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Mertens (2017)
+Dillman, Smyth, & Christian (2014)
 </td>
 <td style="text-align:center;width: 10em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="(https://ebookcentral.proquest.com/lib/wvu/reader.action?docID=1762797&amp;ppg=322)%7Btarget='_blank'%7D" target="_blank"><img src="/logos/library-ico.png" alt="Slack icon" width="25px"></a>

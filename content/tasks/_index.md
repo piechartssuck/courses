@@ -113,7 +113,7 @@ Execute at least two pilot studies. Update both the instrument and skeleton and 
 
 <details>
 <summary>
-Week 8: Disseminate the Survey
+Week 8 (or 9): Disseminate the Survey
 </summary>
 <br>
 <p>

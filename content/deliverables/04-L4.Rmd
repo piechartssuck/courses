@@ -32,7 +32,8 @@ This task involves a multi-step process to address the underlying research or ev
   + *Content expert*. A person who is not in your sampling frame but has in-depth knowledge regarding the content tested within the survey. Ideally this should be someone who also understands your research/evaluation question and the purpose/measures associated with each item.
   
   + *External reviewer*. This volunteer may be a content expert but should have no connection to your study or its purpose, rather more importantly the person should have some knowledge of proper and effective survey design. This individual serves as a check on the structure and flow of your instrument.
-  
+  <br>
+  <br>
   It may be difficult to locate and have all three types of people agree to assess your survey and provide feedback, please do the best you can. While not mandatory, it is strongly suggested that you conduct at least two rounds of the pilot study.
 
 2. Volunteers should be instructed to be highly critical. While each individual serves a specific function, they should not limit their feedback to that assigned role. With that said, they should not be informed of the type of reviewer as not to potentially bias their feedback.
@@ -45,7 +46,7 @@ This task involves a multi-step process to address the underlying research or ev
   
   + Combined feedback via a focus group like setting where all three individuals meet in a physical or virtual setting to address each applicable item through discourse
 
-4. Incorporate any changes including any the feedback given in your third deliverable in your online survey and update the skeleton accordingly. If any items receive an updated index, please record that in the `ReIndex` column.   
+4. Incorporate any changes including any the feedback given in your third deliverable in your online survey and update the skeleton accordingly. If any items receive an updated index, please record that in the `ReIndex` column. 
 
 5. Rename the document by following the [submission guidelines](/tasks/#submission-formatting), save it in `xlsx` format, and submit this document to <a target="_blank" href="https://ecampus.wvu.edu/">eCampus</a><br><br>
 

@@ -1,0 +1,59 @@
+---
+title: "Disseminate the Survey"
+linktitle: " Disseminate the Survey"
+menu:
+  tasks:
+    parent: Deliverables
+    weight: 5
+type: docs
+weight: 5
+editor_options: 
+  chunk_output_type: console
+---
+
+`r blogdown::shortcode("r-walkthrough-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+<style>
+ul {
+    margin-left: 1.5em
+}
+</style>
+
+Download the following to 
+
+<center>
+```{r echo=FALSE,eval=TRUE,message=FALSE}
+loc <- here::here("static", "files", "example solicitations and descriptions.zip")
+
+downloadthis::download_file(
+  path = loc,
+  output_name = "Example Survey Solicitaions and Landing/Gratitude Pages",
+  button_label = "&nbsp;&nbsp;&nbsp;<span style='color:#ffffff'>Download</span>",
+  button_type = "primary",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+</center>
+
+<br>
+This task involves a multi-step process. After reviewing the documents provided in the download, please follow the directions below
+
+1. Add a landing and gratitude page
+
+2. Create an initial solicitation and follow-up [email](https://www.qualtrics.com/support/survey-platform/distributions-module/email-distribution/emails-overview/) communications 
+
+3. Administer your survey by the end of the 8th week (if possible) but no later than the end of the 9th week. Submit a screenshot of the contents under the [Distribution](https://www.qualtrics.com/support/survey-platform/distributions-module/distributions-overview/) tab after you have sent the initial solicitation.
+
+*Unless there is a need that has been discussed with me, surveys should stay open at least one week and close within two weeks of distribution*
+
+<center>
+<p id="rounded_corners">
+All incremental deliverables can be found on the main <a href="/tasks/#deliverables">Tasks</a> page
+<p>
+</center>

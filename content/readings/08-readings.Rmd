@@ -1,13 +1,13 @@
 ---
-title: "Missingness"
-linktitle: "Week 7: Missingness"
+title: "Preparing for Distribution"
+linktitle: "Week 8: Preparing for Distribution"
 output:
   rmarkdown::html_document:
     toc: true
 menu:
   readings:
     parent: Readings
-    weight: 7
+    weight: 8
 type: docs
 weight: 1
 ---
@@ -22,11 +22,11 @@ source(here::here("content", "com_libs.R"))
 
 <center>
 ```{r echo=FALSE,eval=TRUE,message=FALSE}
-loc <- here::here("static", "readings", "EDP619Week7Readings.zip")
+loc <- here::here("static", "readings", "EDP619Week8Readings.zip")
 
 downloadthis::download_file(
   path = loc,
-  output_name = "Week 7 Readings",
+  output_name = "Week 8 Readings",
   button_label = "&nbsp;&nbsp;&nbsp;<span style='color:#ffffff'>Download</span>",
   button_type = "primary",
   has_icon = TRUE,
@@ -42,14 +42,14 @@ downloadthis::download_file(
 
 paper <- tibble(
   
-  title = c("<i>Survey Response Rates: Trends and
-a Validity Assessment Framework</i>",
-            "<i>Material Incentives and Other Potential Factors Associated with Response Rates to Internet Surveys of American Evaluation Association Members: Findings From a Randomized Experiment</i>",
-            "<i>Web Questionnaires and Implementation</i>"
+  title = c("<i>The Effect of Invitation Design on Web Survey Response Rates</i>",
+            "<i>An Experimental Study on
+the Impact of Contact Design on Web Survey Participation</i>",
+            "<i>Mixed-Mode Questionnaires and Survey Implementation</i>"
             ),
   
-  Source = c("Hotom, et al. (2022)",
-             "Coryn, et al. (2017)",
+  Source = c("Kaplowitz, et al. (2011)",
+             "Maineri & Van Mol (2022)",
              "Dillman, Smyth, & Christian (2014)"),
   
   Arrow = c("internal",
@@ -63,7 +63,7 @@ a Validity Assessment Framework</i>",
   Site = c(
     "",
     "",
-    "(https://ebookcentral.proquest.com/lib/wvu/reader.action?docID=1762797&ppg=322){target='_blank'}"
+    "(https://ebookcentral.proquest.com/lib/wvu/reader.action?docID=1762797&ppg=418){target='_blank'}"
   ),
   
   .name_repair = "minimal"

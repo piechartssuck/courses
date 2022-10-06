@@ -1,0 +1,158 @@
+---
+title: "Preparing for Distribution"
+linktitle: "Week 8: Preparing for Distribution"
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  tasks:
+    parent: Tasks
+    weight: 8
+type: docs
+weight: 1
+---
+
+`r blogdown::shortcode("r-walkthrough-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+
+## Likert Scale Items
+
+*posting soon*
+<!--
+```{r echo = FALSE, purl=FALSE,}
+
+dplyr::tibble(
+  
+  information <- c(
+    "<b>Level of Difficulty</b><sup>1</sup>",
+    "<b>What You'll Mainly Do</b>",
+    "<b>Language(s) We'll Use</b><sup>2</sup>",
+    ""
+  ),
+  
+  description <- c(
+    "<span style='color:#c5d9ff'>Intermediate</span>",
+    "Copy/paste syntax and tinker as needed",
+    "<div id='info'><div id='speechbubble' data-hover='CSS'><span style='color:#4682b4'><i class='fa-brands fa-css3-alt fa-xl'></i></span></div></div>",
+    ""
+            ),
+  
+  .name_repair = "minimal"
+  
+) %>%
+  kbl(col.names = c("", ""), 
+      "html", 
+      escape = FALSE,
+      align = 'll') %>%
+  kable_paper() %>%
+  kable_styling(full_width = FALSE,
+                font_size = 20,
+                position = "center") %>%
+  column_spec(1, width = "12em") %>%
+  column_spec(2, width = "30em") %>%
+  row_spec(0:3, extra_css = 'vertical-align: middle !important;', background = "transparent", color = "#f7f7f7") %>%
+  row_spec(3, extra_css = "margin-bottom: 30px;") %>%
+  add_footnote(
+    c(
+      "<span style='color:#f7f7f7; font-size:11pt;'><i>This is not an indicator of your personal level or abilities. You may experience varying level of ease and/or difficulties and that is OK!</i></span>", 
+      "<span style='color:#f7f7f7; font-size:11pt;'><i>Hover over an icon to see its name</i></span>"), 
+    notation = "number", 
+    escape = FALSE
+    )
+```
+
+<br>
+<center>
+```{r echo=FALSE,eval=TRUE,message=FALSE,purl=FALSE}
+loc <- here::here("static", "data", "EDP619Week7Slideshow.zip")
+
+downloadthis::download_file(
+  path = loc,
+  output_name = "Week 7 Slideshow.zip",
+  button_label = "&nbsp;&nbsp;&nbsp;<span style='color:#ffffff'>Week 7 Slideshow Menu Tweaks</span>",
+  button_type = "primary",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+)
+```
+</center>
+<br>
+
+```{=html}
+<center>
+<div class="wrapper">
+    <div class="icon leftright">
+      <div class="tooltip"><span style=width:200px;>Move back and forth using <kbd>←</kbd> and <kbd>→</kbd></span></div>
+      <span><i class="fas fa-map-signs"></i></span></div>
+    <div class="icon info">
+      <div class="tooltip"><span style=width:200px;>Toggle fullscreen by pressing <kbd>F</kbd></span></div>
+      <span><i class="fas fa-expand-alt"></i></span>
+    </div><div class="icon github">
+      <div class="tooltip"><span style=width:200px;>Press <kbd>O</kbd> for and overview of all slides</span></div>
+      <span><i class="far fa-images"></i></span>
+    </div><div class="icon youtube">
+      <div class="tooltip"><span style=width:200px;>Discover more shortcuts by pressing <kbd>H</kbd></span></div>
+      <span><i class="fas fa-info-circle"></i></span>
+    </div>
+</div>
+</center>
+<br>
+```
+
+<center>
+<div class="holder">
+
+<div class="bigcol">
+```{r echo = FALSE, out.width="140%", fig.align='left'}
+knitr::include_url("/slides/Basics%20and%20Buttons/Basics-and-Buttons-pres.html")
+```
+</div>
+
+<div class="smallcol">
+```{r echo = FALSE, fig.align='right'}
+html_link <- function() {
+  paste0("<a href='/slides/Basics%20and%20Buttons/Basics-and-Buttons-pres.html' target='_blank'>", "<img src='/logos/web-ico.png' alt='Sampling presentation' width='35'>", "</a>")
+}
+
+pdf_link <- function() {
+ paste0("<a href='/slides/Basics%20and%20Buttons/Basics-and-Buttons-flat.pdf' target='_blank'>", "<img src='/logos/pdf-ico.png' alt='Sampling presentation PDF' width='35'>", "</a>")
+}
+
+tibble(
+  
+  html <- c(html_link(),
+            "Larger version of the presentation",
+            "",
+            pdf_link(),
+            "PDF of the presentation")
+  ) %>%
+  kbl(col.names = c(""),
+      "html",
+      escape = FALSE,
+      align = 'c') %>%
+  kable_paper(full_width = FALSE) %>%
+  column_spec(1, width = "25em", extra_css = "padding-left: 200px;") %>%
+  row_spec(1:5, extra_css = 'vertical-align: middle !important;', color = "#ffffff", background = "transparent")
+```
+</div>
+
+</div>
+
+<div class="clear">
+</div>
+</center>
+-->
+
+## Qualtrics Guide to Linear Regression
+
+For a simplified guide to differing types of regression, take a look at the <a href="https://www.qualtrics.com/support/stats-iq/analyses/regression-guides/user-friendly-guide-linear-regression/" target="_blank"><i>User-friendly Guide to Linear Regression</i></a> on the Qualtrics website.
+
+## Disseminate the Survey
+
+Please review the criteria for your fifth deliverable. More details can be found [here](/deliverables/05-l5/)
