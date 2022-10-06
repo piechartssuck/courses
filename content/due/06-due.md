@@ -97,6 +97,7 @@ Go through the slideshow <span style="color:#6ac4cd;font-weight:bold">Factorial 
 <a href="/tasks/06-task/#factorial-validity"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<a href="NA" target="_blank"><img src="/logos/slideshow-ico.png" alt="Slideshow icon" width="27"></a>
 </td>
 </tr>
 <tr>
@@ -107,6 +108,7 @@ Go through a walkthrough on how to conduct and interpret a factor analysis
 <a href="/walkthroughs/06-walkthrough/#factor-analysis"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<a href="NA" target="_blank"><img src="/logos/walkthrough-ico.png" alt="Wough icon" width="27"></a>
 </td>
 </tr>
 <tr>

@@ -43,6 +43,7 @@ a Validity Assessment Framework</i> in Hotom, et al. (2022)
 <a href="/readings/07-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<a href="NA" target="_blank"><img src="/logos/pdf-ico.png" alt="PDF icon" width="30"></a>
 </td>
 </tr>
 <tr>
@@ -53,6 +54,7 @@ Read <i>Material Incentives and Other Potential Factors Associated with Response
 <a href="/readings/07-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<a href="NA" target="_blank"><img src="/logos/pdf-ico.png" alt="PDF icon" width="30"></a>
 </td>
 </tr>
 <tr>
@@ -85,6 +87,7 @@ Go through the slideshow <span style="color:#6ac4cd;font-weight:bold">Basics and
 <a href="/tasks/07-task/#moving-back-and-forth"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<a href="NA" target="_blank"><img src="/logos/slideshow-ico.png" alt="Slideshow icon" width="27"></a>
 </td>
 </tr>
 <tr>
@@ -95,6 +98,7 @@ Go through a walkthrough on multiple imputation
 <a href="/walkthroughs/07-walkthrough/#multiple-imputation"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<a href="https://ecampus.wvu.edu" target="_blank"><img src="/logos/walkthrough-ico.png" alt="Wough icon" width="27"></a>
 </td>
 </tr>
 <tr>

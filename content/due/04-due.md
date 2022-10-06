@@ -64,6 +64,7 @@ Complete and submit the associated <i class="fa-brands fa-r-project"></i> task f
 <a href="/modules/04-module/#r-task"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<a href="NA" target="_blank"><img src="/logos/Rscript-ico.png" alt="PDF icon" width="30"></a>
 </td>
 </tr>
 <tr>
@@ -74,7 +75,7 @@ Go through a walkthrough on how to add vertical spacing to survey items that req
 <a href="/walkthroughs/04-walkthrough/#adding-vertical-space-to-multiple-choice-items"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://wvu.qualtrics.com" target="_blank"><img src="/logos/qualtrics-ico.png" alt="Qualtrics icon" width="29"></a>
+<a href="https://wvu.qualtrics.com" target="_blank"><img src="/logos/walkthrough-ico.png" alt="Wough icon" width="27"></a>
 </td>
 </tr>
 <tr>
@@ -85,6 +86,7 @@ Go through the slideshow <span style="color:#6ac4cd;font-weight:bold">Survey Des
 <a href="/tasks/04-task/#learn-about-crafting-high-quality-items"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<a href="NA" target="_blank"><img src="/logos/slideshow-ico.png" alt="Slideshow icon" width="27"></a>
 </td>
 </tr>
 <tr>

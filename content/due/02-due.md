@@ -53,6 +53,7 @@ Read <i>How to Create a Bad Survey Instrument</i> in Sullivan & Artino (2017)
 <a href="/readings/02-readings/#read-a-paper"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<a href="NA" target="_blank"><img src="/logos/pdf-ico.png" alt="PDF icon" width="30"></a>
 </td>
 </tr>
 <tr>
@@ -85,6 +86,7 @@ See some possible solutions for the Bad Survey Questions document
 <a href="/tasks/02-task/#mulling-bad-survey-questions-solutions"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<a href="NA" target="_blank"><img src="/logos/Rscript-ico.png" alt="PDF icon" width="30"></a>
 </td>
 </tr>
 <tr>
@@ -95,6 +97,7 @@ Download the <span style="color:#89cff0;font-weight:bold">Exploratory Draft Surv
 <a href="/tasks/02-task/#qualtrics"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<a href="NA" target="_blank"><img src="/logos/slideshow-ico.png" alt="Survey icon" width="27"></a>
 </td>
 </tr>
 <tr>

@@ -75,6 +75,7 @@ Install both <b>R</b> and <b>RStudio</b>
 <a href="/resources/install/"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<a href="NA" target="_blank"><img src="/logos/Rscript-ico.png" alt="PDF icon" width="30"></a>
 </td>
 </tr>
 <tr>
@@ -129,6 +130,7 @@ Think about terrible survey items by assessing <span style="color:#89cff0;font-w
 <a href="/tasks/01-task/#mulling-bad-survey-questions"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<a href="NA" target="_blank"><img src="/logos/slideshow-ico.png" alt="Survey icon" width="27"></a>
 </td>
 </tr>
 <tr>
@@ -161,6 +163,7 @@ Go through the slideshow <span style="color:#6ac4cd;font-weight:bold">Criterial 
 <a href="/tasks/01-tasks/#learn-about-program-evaluation"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<a href="NA" target="_blank"><img src="/logos/slideshow-ico.png" alt="Slideshow icon" width="27"></a>
 </td>
 </tr>
 <tr>
@@ -171,6 +174,7 @@ Review summaries of all course deliverables
 <a href="/tasks/"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<a href="NA" target="_blank"><img src="/logos/webpage-ico.png" alt="Webpage icon" width="27"></a>
 </td>
 </tr>
 <tr>
@@ -181,6 +185,7 @@ Begin your first deliverable <span style="color:#6acda5;font-weight:bold">Establ
 <a href="/deliverables/01-l1/"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<a href="NA" target="_blank"><img src="/logos/wvu-gold-ico.png" alt="WVU icon" width="25"></a>
 </td>
 </tr>
 </tbody>
