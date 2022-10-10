@@ -38,7 +38,7 @@ Research With Natural Language Processing of Big Text Data</i> in Chang et al. (
 Details = c("<a href='/readings/06-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/readings/06-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/modules/06-module/#data-camp'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
-            "<a href='/walkthroughs/06-walkthrough/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/walkthroughs/06-walkthrough/#tidy-text-mining'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/tasks/06-task/#inclassnotes'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/deliverables/03-l3/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
             ),
@@ -53,8 +53,8 @@ Icon = c("pdf",
 Site = c("/readings/06-readings/#download-literature",
          "/readings/06-readings/#download-literature",
          "https://www.datacamp.com",
-         "",
          "https://www.tidytextmining.com",
+         "",
          "https://ecampus.wvu.edu/")
 )
 ```

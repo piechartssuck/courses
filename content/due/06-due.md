@@ -73,10 +73,10 @@ Begin the module <span style="color:#ffc787;font-weight:bold"><i>Unsupervised Le
 Carefully go through the first two chapters in <i>Text Mining with R: A Tidy Approach</i>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/walkthroughs/06-walkthrough/"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
+<a href="/walkthroughs/06-walkthrough/#tidy-text-mining"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="NA" target="_blank"><img src="/logos/web-ico.png" alt="Web icon" width="26"></a>
+<a href="https://www.tidytextmining.com" target="_blank"><img src="/logos/web-ico.png" alt="Web icon" width="26"></a>
 </td>
 </tr>
 <tr>
