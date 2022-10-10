@@ -31,7 +31,6 @@ the Impact of Contact Design on Web Survey Participation</i> in Maineri & Van Mo
                 "View a refresher on Linear Regression if needed",
                 "Complete the module <span style='color:#ffc787;font-weight:bold'><i>Modeling with Data in the Tidyverse</i></span>",
                 "Complete and submit the associated <i class='fa-brands fa-r-project'></i> task for the module",
-                "Go through the slideshow <span style='color:#6ac4cd;font-weight:bold'>Likert Scale Items</span>",
                 "Go through the User-friendly Guide to Linear Regression on the Qualtrics website",
                 "Review <span style='color:#6acda5;font-weight:bold'>Disseminate the Survey</span> and submit it either by the end of Week 8 or 9"
                 ),
@@ -43,7 +42,6 @@ Details = c("<a href='/readings/07=8-readings/#read-some-text'><span style='font
              "<a href='/modules/08-module/#refresher'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/modules/08-module/#data-camp'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
              "<a href='/modules/08-module/#r-task'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
-            "<a href='/tasks/08-task/#likert-scale-items'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/tasks/08-task/#qualtrics-guide-to-linear-regression'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/deliverables/05-l5/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
             ),
@@ -54,7 +52,6 @@ Icon = c("pdf",
          "youtube",
          "dc",
          "R",
-         "slideshow",
          "qualtrics",
          "ecampus"),
 
@@ -63,7 +60,6 @@ Site = c("",
          "https://ebookcentral.proquest.com/lib/wvu/reader.action?docID=1762797&ppg=418",
          "",
          "https://www.datacamp.com",
-         "",
          "",
          "",
          "https://ecampus.wvu.edu"

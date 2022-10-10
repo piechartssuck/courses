@@ -103,17 +103,6 @@ Complete and submit the associated <i class="fa-brands fa-r-project"></i> task f
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Go through the slideshow <span style="color:#6ac4cd;font-weight:bold">Likert Scale Items</span>
-</td>
-<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/tasks/08-task/#likert-scale-items"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
-</td>
-<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="NA" target="_blank"><img src="/logos/slideshow-ico.png" alt="Slideshow icon" width="27"></a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 Go through the User-friendly Guide to Linear Regression on the Qualtrics website
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
