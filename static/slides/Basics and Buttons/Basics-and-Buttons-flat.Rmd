@@ -528,7 +528,7 @@ Progress bars have a single primary purpose – to help inform respondent on how
 
 
 .pull-left[
-<span class = "tab"><a href="https://edp619.asocialdatascientist.com/papers/Villar%2C%20Callegaro%2C%20%26%20Yang%20%282013%29.pdf" target='_blank' download="Villar, Callegaro, & Yang (2013).pdf">
+<span class = "tab"><a href="https://edp619.asocialdatascientist.com/slides/basics%20and%20buttons/papers/Villar%2C%20Callegaro%2C%20%26%20Yang%20%282013%29.pdf" target='_blank' download="Villar, Callegaro, & Yang (2013).pdf">
 <img src="img/pdf-ico.png" alt="Paper" width='35'><span class = "hr-lines">Villar, Callegaro, & Yang (2013)</span></span>
 </a> 
 ]
@@ -588,7 +588,7 @@ A back button allows respondents can return to pages they have already visited i
 ]]
 
 .pull-left[
-<span class = "tab"><a href="https://edp619.asocialdatascientist.com/papers/Hays%20et%20al%20%282010%29.pdf" target='_blank' download="Hays et al (2010).pdf">
+<span class = "tab"><a href="https://edp619.asocialdatascientist.com/slides/basics%20and%20buttons/papers/Hays%20et%20al%20%282010%29.pdf" target='_blank' download="Hays et al (2010).pdf">
 <img src="img/pdf-ico.png" alt="Paper" width='35'><span class = "hr-lines">Hays et al (2010)</span></span>
 </a> 
 ]
@@ -620,7 +620,7 @@ The default text you see on buttons within Qualtrics are left and right arrows. 
 ]]
 
 .pull-left[
-<span class = "tab"><a href="https://edp619.asocialdatascientist.com/papers/Feuer%20et.%20al%20%282021%29.pdf" target='_blank' download="Feuer et. al (2021).pdf">
+<span class = "tab"><a href="https://edp619.asocialdatascientist.com/slides/basics%20and%20buttons/papers/Feuer%20et.%20al%20%282021%29.pdf" target='_blank' download="Feuer et. al (2021).pdf">
 <img src="img/pdf-ico.png" alt="Paper" width='35'><span class = "hr-lines">Feuer et. al (2021)</span></span>
 </a> 
 ]
@@ -693,7 +693,7 @@ We'll be working in one particular submenu this week, namely the **Custom CSS** 
 ]]
 
 .pull-left[
-<span class = "tab" style="margin-top:-50px;"><a href="https://edp619.asocialdatascientist.com/papers/Mahon-Haft%2C%20T.%20A.%2C%20%26%20Dillman%2C%20D.%20A.%20%282010%29.pdf" target='_blank' download="Mahon-Haft, T. A., & Dillman, D. A. (2010).pdf">
+<span class = "tab" style="margin-top:-50px;"><a href="https://edp619.asocialdatascientist.com/slides/basics%20and%20buttons/papers/Mahon-Haft%2C%20T.%20A.%2C%20%26%20Dillman%2C%20D.%20A.%20%282010%29.pdf" target='_blank' download="Mahon-Haft, T. A., & Dillman, D. A. (2010).pdf">
 <img src="img/pdf-ico.png" alt="Paper" width='35'><span class = "hr-lines">Mahon-Haft, T. A., & Dillman, D. A. (2010)</span></span>
 </a> 
 ]
@@ -737,7 +737,7 @@ Is dark mode really that better for you? More specifically is it better in getti
 ]
 
 .pull-left[
-<span class = "tab" style="margin-top:0px;"><a href="https://edp619.asocialdatascientist.com/papers/Eisfeld%2C%20H.%2C%20%26%20Kristallovich%2C%20F.%20%282020%29.pdf" target='_blank' download="Eisfeld, H., & Kristallovich, F. (2020).pdf">
+<span class = "tab" style="margin-top:0px;"><a href="https://edp619.asocialdatascientist.com/slides/basics%20and%20buttons/papers/Eisfeld%2C%20H.%2C%20%26%20Kristallovich%2C%20F.%20%282020%29.pdf" target='_blank' download="Eisfeld, H., & Kristallovich, F. (2020).pdf">
 <img src="img/pdf-ico.png" alt="Paper" width='35'><span class = "hr-lines">Eisfeld, H., & Kristallovich, F. (2020)</span></span>
 </a> 
 ]
@@ -782,7 +782,7 @@ The text color clearly needs to be changed. But the larger question here is does
 ]
 
 .pull-left[
-<span class = "tab" style="margin-top:80px;"><a href="https://edp619.asocialdatascientist.com/papers/Aleman%2C%20A.C.%2C%20Wang%2C%20M.%2C%20%26%20Schaeffel%2C%20F.%20%282018%29.pdf" target='_blank' download="Aleman, A.C., Wang, M., & Schaeffel, F. (2018).pdff">
+<span class = "tab" style="margin-top:80px;"><a href="https://edp619.asocialdatascientist.com/slides/basics%20and%20buttons/papers/Aleman%2C%20A.C.%2C%20Wang%2C%20M.%2C%20%26%20Schaeffel%2C%20F.%20%282018%29.pdf" target='_blank' download="Aleman, A.C., Wang, M., & Schaeffel, F. (2018).pdff">
 <img src="img/pdf-ico.png" alt="Paper" width='35'><span class = "hr-lines">Aleman, A.C., Wang, M., & Schaeffel, F. (2018)</span></span>
 </a> 
 ]
@@ -801,7 +801,7 @@ There is only one known study in this area which reported that the color <span s
 <br>
 .pull-left[
 <center>
-<span class = "tab"><a href="https://edp619.asocialdatascientist.com/papers/Gnambs%2C%20T.%2C%20Appel%2C%20M.%2C%20%26%20Batinic%2C%20B.%20%282010%29.pdf" target='_blank' download="Gnambs, T., Appel, M., & Batinic, B. (2010).pdf">
+<span class = "tab"><a href="https://edp619.asocialdatascientist.com/slides/basics%20and%20buttons/papers/Gnambs%2C%20T.%2C%20Appel%2C%20M.%2C%20%26%20Batinic%2C%20B.%20%282010%29.pdf" target='_blank' download="Gnambs, T., Appel, M., & Batinic, B. (2010).pdf">
 <img src="img/pdf-ico.png" alt="Paper" width='35'><span class = "hr-lines">Gnambs, T., Appel, M., & Batinic, B. (2010)</span></span>
 </a> 
 </center>
@@ -809,7 +809,7 @@ There is only one known study in this area which reported that the color <span s
 
 .pull-right[
 <center>
-<span class = "tab"><a href="https://edp619.asocialdatascientist.com/papers/Gnambs%2C%20T.%20%282020%29.pdf" target='_blank' download="Gnambs, T. (2020).pdf">
+<span class = "tab"><a href="https://edp619.asocialdatascientist.com/slides/basics%20and%20buttons/papers/Gnambs%2C%20T.%20%282020%29.pdf" target='_blank' download="Gnambs, T. (2020).pdf">
 <img src="img/pdf-ico.png" alt="Paper" width='35'><span class = "hr-lines">Gnambs, T. (2020)</span></span>
 </a> 
 </center>
@@ -827,7 +827,7 @@ Until we know more, best practices align with findings about colors themselves. 
 
 .pull-right[
 <center>
-<span class = "tab" style="margin-top:40px;"><a href="https://edp619.asocialdatascientist.com/papers/Jonauskaite%20et%20al.%20%282020%29.pdf" target='_blank' download="Jonauskaite et al. (2020).pdf">
+<span class = "tab" style="margin-top:40px;"><a href="https://edp619.asocialdatascientist.com/slides/basics%20and%20buttons/papers/Jonauskaite%20et%20al.%20%282020%29.pdf" target='_blank' download="Jonauskaite et al. (2020).pdf">
 <img src="img/pdf-ico.png" alt="Paper" width='35'><span class = "hr-lines">Jonauskaite et al. (2020)</span></span>
 </a> 
 </center>
@@ -1110,7 +1110,7 @@ While the number of studies on the color of buttons is fairly low, the effect or
 <br>
 <br>
 <center>
-<span class = "tab"><a href="https://edp619.asocialdatascientist.com/papers/Nissen%2C%20A.%20%26%20Riedl%2C%20R.%20%282021%29.pdf" target='_blank' download="Nissen, A. & Riedl, R. (2021).pdf">
+<span class = "tab"><a href="https://edp619.asocialdatascientist.com/slides/basics%20and%20buttons/papers/Nissen%2C%20A.%20%26%20Riedl%2C%20R.%20%282021%29.pdf" target='_blank' download="Nissen, A. & Riedl, R. (2021).pdf">
 <img src="img/pdf-ico.png" alt="Paper" width='35'><span class = "hr-lines">Nissen, A. & Riedl, R. (2021)</span></span>
 <center>
 

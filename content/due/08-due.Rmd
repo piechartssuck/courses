@@ -36,7 +36,7 @@ the Impact of Contact Design on Web Survey Participation</i> in Maineri & Van Mo
                 ),
 
 
-Details = c("<a href='/readings/07=8-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+Details = c("<a href='/readings/08-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/readings/08-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/readings/08-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/modules/08-module/#refresher'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",

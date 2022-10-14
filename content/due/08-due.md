@@ -39,7 +39,7 @@ Link
 Read <i>The Effect of Invitation Design on Web Survey Response Rate</i> in Kaplowitz, et al. (2011)
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/readings/07=8-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
+<a href="/readings/08-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="NA" target="_blank"><img src="/logos/pdf-ico.png" alt="PDF icon" width="30"></a>

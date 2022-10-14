@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Being a Basic Bayesian</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr. Abhik Roy" />
+    <script src="Basic-Bayesian-flat_files/header-attrs-2.17/header-attrs.js"></script>
+    <link href="Basic-Bayesian-flat_files/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
+    <script src="Basic-Bayesian-flat_files/tile-view-0.2.6/tile-view.js"></script>
+    <link href="Basic-Bayesian-flat_files/animate.css-3.7.2/animate.xaringan.css" rel="stylesheet" />
+    <link href="Basic-Bayesian-flat_files/tachyons-4.12.0/tachyons.min.css" rel="stylesheet" />
+    <script src="Basic-Bayesian-flat_files/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+    <script src="Basic-Bayesian-flat_files/viz-1.8.2/viz.js"></script>
+    <link href="Basic-Bayesian-flat_files/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+    <script src="Basic-Bayesian-flat_files/grViz-binding-1.0.9.9000/grViz.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Being a Basic Bayesian
+]
+.subtitle[
+## EDP 619 Week 9
+]
+.author[
+### Dr. Abhik Roy
+]
+
+---
+
+
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/x-mathjax-config"&gt;
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+  MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+    cancel: ["Extension","cancel"],
+    bcancel: ["Extension","cancel"],
+    xcancel: ["Extension","cancel"],
+    cancelto: ["Extension","cancel"]
+  });
+});
+&lt;/script&gt;
+
+&lt;style&gt;
+section {
+    display: flex;
+    display: -webkit-flex;
+}
+
+section {
+    height: 600px;
+    width: 60%;
+    margin: auto;
+    border-radius: 21px;
+    background-color: #212121;
+}
+
+.remark-slide-container {
+background: #212121;
+}
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
+}
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
+}
+
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
+}
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
+}
+
+section p {
+    text-align: center;
+    font-size: 30px;
+    background-color: #212121;
+    border-radius: 21px;
+    font-family: Roboto Condensed;
+    font-style: bold;
+    padding: 12px;
+    color: #bff4ee;
+    margin: auto;
+}
+
+#center {
+text-align: center;
+}
+
+#right {
+  text-align: right;
+} 
+
+.center p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.tab {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.tabdbl {
+    display: inline-block;
+    margin-left: 80px;
+}
+
+.tabtpl {
+    display: inline-block;
+    margin-left: 120px;
+}
+
+
+.obr
+{
+    display:block;
+    margin-top:-15px;
+}
+
+.pull-left-left {
+  float: left;
+  width: 27%;
+}
+
+.pull-right-right {
+  float: right;
+  width: 32%;
+}
+
+img.expand:hover {
+  margin: 0 auto;
+  position: relative;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  transform: scale(1.5)             
+  translateX(-35%);
+  z-index: 99;
+  transition:all 0.5s ease-in-out;
+  -webkit-transition:all 0.2s ease-in-out;
+}
+
+.vertline {
+  border-left: 5px solid #212121;
+  height: 100px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+*, *:before, *:after {
+	 box-sizing: border-box;
+	 outline: none;
+}
+
+.hover {
+	 position: relative;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 width: 400px;
+	 height: 65px;
+	 background-color: #e3c0ff;
+	 border-radius: 99px;
+	 box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	 transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+	 overflow: hidden;
+}
+
+ .hover:before, .hover:after {
+	 position: absolute;
+	 top: 0;
+	 display: flex;
+	 align-items: center;
+   justify-content: center;
+	 width: 50%;
+	 height: 100%;
+	 transition: 0.25s linear;
+	 z-index: 1;
+}
+
+ .hover:before {
+	 content: '';
+	 left: 0;
+	 background-color: #ca86ec;
+   color: #212121;
+}
+
+ .hover:after {
+	 content: '';
+	 right: 0;
+	 background-color: #d896ff;
+}
+
+ .hover:hover {
+	 background-color: #cc8bff;
+	 box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+ .hover:hover span {
+	 opacity: 0;
+	 z-index: -3;
+}
+
+ .hover:hover:before {
+	 opacity: 0.5;
+	 transform: translateY(-100%);
+}
+
+ .hover:hover:after {
+	 opacity: 0.5;
+	 transform: translateY(100%);
+}
+
+ .hover span {
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 text-align: center;
+	 width: 100%;
+	 height: 100%;
+	 color: #212121;
+	 font-size: 24px;
+	 font-weight: 700;
+	 opacity: 1;
+	 transition: opacity 0.25s;
+	 z-index: 2;
+   white-space:pre;
+}
+
+ .hover .doc-link {
+	 position: relative;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 text-align: center;
+	 width: 25%;
+	 height: 100%;
+	 color: whitesmoke;
+	 font-size: 24px;
+	 text-decoration: none;
+	 transition: 0.25s;
+}
+ .hover .doc-link i {
+	 text-shadow: 1px 1px rgba(70, 98, 127, 0.7);
+	 transform: scale(1);
+}
+ .hover .doc-link:hover {
+	 background-color: rgba(245, 245, 245, 0.1);
+}
+ .hover .doc-link:hover i {
+	 animation: bounce 0.4s linear;
+}
+ @keyframes bounce {
+	 40% {
+		 transform: scale(1.4);
+	}
+	 60% {
+		 transform: scale(0.8);
+	}
+	 80% {
+		 transform: scale(1.2);
+	}
+	 100% {
+		 transform: scale(1);
+	}
+}
+
+.boxl {
+    width: 50%;
+    margin: 5px;
+    text-align: center;
+}
+
+.boxr {
+    margin: 5px;
+    text-align: center;
+}
+
+.picr {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.hr-lines:before{
+  content:" ";
+  display: block;
+  height: 2px;
+  width: 350px;
+  position: relative;
+  top: 50%;
+  left: 0;
+  background: #FAF9F6;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+div.rounded pre {
+  border-radius: 25px;
+  border: 1px solid #bbc6cc;
+  padding: 20px;
+}
+
+div.rounded pre.r {
+  border-radius: 25px;
+  border: 1px solid #93bdbd;
+  padding: 20px;
+ }
+
+#rounded_corners {
+  border-radius: 25px;
+  border: 2px solid #80FFDB;
+  padding: 20px;
+  width: 350px;
+  height: 115px;
+}
+&lt;/style&gt;
+
+&lt;style type="text/css"&gt;
+.highlight-last-item &gt; ul &gt; li,
+.highlight-last-item &gt; ol &gt; li {
+  opacity: 0.5;
+}
+.highlight-last-item &gt; ul &gt; li:last-of-type,
+.highlight-last-item &gt; ol &gt; li:last-of-type {
+  opacity: 1;
+}
+&lt;/style&gt;
+
+
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 110px;
+height: 128px;
+z-index: 0;
+background-image: url(/Users/skynet/Documents/WVU/Teaching/GitHub.nosync/edp619/static/img/course_hex.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:1em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('a')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = 'https://edp619.asocialdatascientist.com'
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+
+
+## Note
+
+--
+
+We are going to try to keep this as light as possible, but you will to think outside of your traditional training. For most of you, you'll likely see this as a new way of thinking and may even appear to be counterintuitive - however you may find this idea of iterative refining of one's beliefs is a fundamental principle of being human
+
+If you are interested in learning more about the statistics, here is an absolutely biased selection of texts you may want to look at. While both employ R, the one on the right uses it significantly less than the text sitting on the left. 
+
+--
+
+&lt;br&gt;
+.pull-left[
+&lt;center&gt;
+&lt;a href="https://libwvu.on.worldcat.org/oclc/881386855" target="_blank"&gt;
+&lt;img src="img/Kruschke%20(2015).png" alt="Doing Bayesian Data Analysis Cover" style="width: 200px;"/&gt;
+&lt;/a&gt;
+&lt;/center&gt;
+]
+
+
+.pull-right[
+&lt;center&gt;
+&lt;a href="https://libwvu.on.worldcat.org/oclc/1108874742" target="_blank"&gt;
+&lt;img src="img/Kurt%20(2019).png" alt="Neon Bayesian" style="width: 180px;"/&gt;
+&lt;/a&gt;
+&lt;/center&gt;
+]
+
+--
+
+&lt;br&gt;
+&lt;center&gt;
+As of this writing, both texts are available as ebooks through WVU Libraries. Please click on the images above to access them
+&lt;/center&gt;
+
+---
+
+# Bayesian Inference
+
+.center2[
+&lt;img src="img/bayesneon.png" alt="Bayes' theorem in neon lights at the office of a software company in Cambridge, England" style="width: 500px;"/&gt;
+]
+
+---
+
+## The Idea
+
+.pull-left[
+1. Begin with 
+
+  &gt; a hypothesis 
+  
+  &gt; a degree of belief (in the hypothesis)
+  
+  So based on domain expertise or prior knowledge, we assign a non-zero probability to that hypothesis
+  
+2. Then
+  &gt; gather data
+  
+  Collection is probability based and done without a purpose
+  
+3. Finally
+  
+  &gt; update our initial beliefs (if needed) 
+
+  If the data supports the hypothesis then the probability goes up, and if not then it goes down. ***Then recursively begin the cycle again with the updated probabilities***
+  ]
+  
+--
+
+.pull-right[
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;img src="img/bayesian-cycle.png" alt="Bayes' theorem in neon lights at the office of a software company in Cambridge, England" style="width: 500px;"/&gt;
+  ]
+  
+---
+
+### Getting A Different Perspective
+
+--
+
+Is your understanding of *conditional probability* a bit fuzzy or possibly even non existent? That is understandable - you probably took statistics from a frequentist, that's ok! Click on the icons below to take a look at the two videos from the wonderful series Crash Course Statistics. I'm 95% sure you won't regret it!
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+.pull-left[
+&lt;center&gt;
+ &lt;a href="https://youtu.be/OyddY7DlV58"&gt;
+&lt;img src="img/youtube-ico.png" height="100px" style="background-color:#212121;"/&gt;
+&lt;/a&gt;
+&lt;/center&gt;
+]
+
+.pull-right[
+&lt;center&gt;
+ &lt;a href="https://youtu.be/oZCskBpHWyk"&gt;
+&lt;img src="img/youtube-ico.png" height="100px" style="background-color:#212121;"/&gt;
+&lt;/a&gt;
+&lt;/center&gt;
+]
+
+---
+
+## Hopefully Some Review
+
+--
+
+&lt;br&gt;
+.pull-left[
+`$$P(\color{RoyalBlue}{A} \,\,\textrm{and}\,\, \color{OrangeRed}{B})\,\, \\ \textrm{means the probability of} \,\,\color{RoyalBlue}{A}\,\,\textrm{and}\,\,\color{OrangeRed}{B}\,\, \textrm{happening}$$`]
+
+--
+
+.pull-right[
+`$$P(\color{RoyalBlue}{A}\,|\,\color{OrangeRed}{B})\\ \,\,\textrm{means the probability of} \,\,\color{RoyalBlue}{A} \,\,\textrm{happening if} \,\,\color{OrangeRed}{B} \,\,\textrm{happens}$$`]
+
+--
+
+&lt;br&gt;
+.pull-left[
+`$$P(\color{RoyalBlue}{A} \,\,\textrm{and}\,\, \color{OrangeRed}{B}) = P(\color{OrangeRed}{B} \,\,\textrm{and}\,\, \color{RoyalBlue}{A})$$`]
+--
+
+.pull-right[
+`$$P(\color{RoyalBlue}{A}\,|\,\color{OrangeRed}{B}) \neq P(\color{OrangeRed}{B}\,|\,\color{RoyalBlue}{A})$$`]
+
+--
+
+&lt;br&gt;
+.pull-left[
+&lt;i&gt;As long as both events happen, we DO NOT care about the order&lt;/i&gt;
+]
+
+--
+
+.pull-right[
+&lt;i&gt;One event relies on the other happening so we ABSOLUTELY care about the order&lt;/i&gt;
+]
+
+---
+
+## And Some More Review
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+.pull-left[
+`$$P(\color{RoyalBlue}{A} \,\,\textrm{and}\,\, \color{OrangeRed}{B})$$` 
+&lt;center&gt;has a standard formula regardless&lt;br&gt;if they are dependent or independent
+&lt;/center&gt;
+]
+
+--
+
+.pull-right[
+&lt;br&gt;
+`$$P(\color{RoyalBlue}{A} \,\,\textrm{and}\,\, \color{OrangeRed}{B}) = P(\color{OrangeRed}{B}\,|\,\color{RoyalBlue}{A}) \cdot P(\color{RoyalBlue}{A})$$`
+]
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+.pull-left[
+`$$P(\color{OrangeRed}{B})$$`
+&lt;center&gt;is the average&lt;br&gt;probability of a positive test result&lt;sup&gt;1&lt;/sup&gt;&lt;/center&gt;
+]
+
+--
+
+.pull-right[
+&lt;br&gt;
+`$$P(\color{OrangeRed}{B}) = P(\color{RoyalBlue}{A} \,\,\textrm{and}\,\, \color{OrangeRed}{B}) + P(\color{OrangeRed}{B}\,|\,\color{Orchid}{\neg{A}})\cdot (1-P(\color{RoyalBlue}{A}))$$`
+]
+
+
+.footnote[&lt;sup&gt;1&lt;/sup&gt; `\\(\color{Orchid}{\neg{A}}\\)` is one of many ways to write shorthand for the statement &lt;span style='color: Orchid;'&gt;NOT&lt;/span&gt; `\\(\color{Orchid}{A}\\)`. In an absolutely non confusing way, you may also see variants like `\\(\color{Orchid}{\sim{A}}\\)`,&amp;nbsp; `\\(\color{Orchid}{\widetilde{A}}\\)`,&amp;nbsp; or `\\(\color{Orchid}{\overline{A}}\\)` just to name a few that all denote the same&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;thing]
+
+---
+
+## Labels
+
+Now that we have some understanding of what the parts of Bayes' Theorem are, let's take a look at the names of each
+
+.center2[
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;img src="img/bayesneon_labeled.png" alt="Bayes' theorem in neon lights at the office of a software company in Cambridge, England" style="width: 600px;"/&gt;
+]
+
+---
+
+## More about `\(P(\color{RoyalBlue}{A}\,|\,\color{OrangeRed}{B}) \neq P(\color{OrangeRed}{B}\,|\,\color{RoyalBlue}{A})\)`
+
+&lt;br&gt;
+.pull-left[
+&lt;span class="tabtpl"&gt;
+`\(P(\color{RoyalBlue}{A}\,|\,\color{OrangeRed}{B}) =\dfrac{P(\color{RoyalBlue}{\color{RoyalBlue}{A}} \,\,\textrm{and}\,\, \color{OrangeRed}{B})}{P(\color{OrangeRed}{B})}\)`
+&lt;/span&gt;
+]
+
+
+--
+
+.pull-right[
+&lt;span class="tabtpl"&gt;
+`\(P(\color{OrangeRed}{B}\,|\,\color{RoyalBlue}{A}) =\dfrac{P(\color{OrangeRed}{B} \,\,\textrm{and}\,\, \color{RoyalBlue}{A})}{P(\color{RoyalBlue}{A})}\)`
+&lt;/span&gt;
+]
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;center&gt;
+&lt;p style="font-size:30px"&gt;Some Algebra!&lt;/p&gt;
+&lt;/center&gt;
+&lt;br&gt;
+
+--
+
+&lt;br&gt;
+.pull-left[
+&lt;span class="tabtpl"&gt;
+`\(P(\color{RoyalBlue}{\color{RoyalBlue}{A}} \,\,\textrm{and}\,\, \color{OrangeRed}{B}) = P(\color{RoyalBlue}{A})\cdot P(\color{OrangeRed}{B}\,|\,\color{RoyalBlue}{A})\)`
+&lt;/span&gt;
+]
+
+--
+
+.pull-right[
+&lt;span class="tabtpl"&gt;
+`\(P(\color{OrangeRed}{B} \,\,\textrm{and}\,\, \color{RoyalBlue}{A}) = P(\color{OrangeRed}{B})\cdot P(\color{OrangeRed}{B}\,|\,\color{RoyalBlue}{A})\)`
+&lt;/span&gt;
+]
+
+---
+
+### Getting A Different Perspective
+
+--
+
+Still a bit or all the way confused? Then try going through through this incredible video from [Josh Starmer](https://statquest.org/) by clicking on the icon below. Now I'm 98% sure you won't regret it!
+.center2[
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;center&gt;
+ &lt;a href="https://youtu.be/9wCnvr7Xw4E"&gt;
+&lt;img src="img/youtube-ico.png" height="100px" style="background-color:#212121;"/&gt;
+&lt;/a&gt;
+&lt;/center&gt;
+]
+
+---
+
+# Example
+
+.center2[
+&lt;img src="img/sotd.png" alt="Shaun of the Dead gif" style="width: 520px;"/&gt;
+]
+
+---
+
+## Screening
+
+--
+
+.pull-left[
+Let's say the chance of a test for infection coming back &lt;span style='color: OrangeRed;'&gt;positive&lt;/span&gt; given a person was &lt;span style='color: RoyalBlue;'&gt;bitten by a zombie&lt;/span&gt; is
+`$$P(\color{OrangeRed}{+}\,\,|\,\,\color{RoyalBlue}{\textrm{zombie bite}}) = 0.90$$` 
+&lt;center&gt;
+This is known as as test &lt;b&gt;&lt;i&gt;sensitivity&lt;/i&gt;&lt;/b&gt;
+&lt;/center&gt;
+]
+
+--
+
+.pull-right[
+And the chance of a test for infection coming back &lt;span style='color: ForestGreen;'&gt;negative&lt;/span&gt;&lt;br&gt;given a person was &lt;span style='color: Orchid;'&gt;NOT bitten by a zombie&lt;/span&gt; is
+`$$P(\color{ForestGreen}{-}\,\,|\,\,\color{Orchid}{\textrm{NO zombie bite}}) = 0.95$$` 
+&lt;center&gt;
+This is known as as test &lt;b&gt;&lt;i&gt;specificity&lt;/i&gt;&lt;/b&gt;
+&lt;/center&gt;
+]
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;center&gt;
+So based on the two pieces of information above we can say the following about&lt;br&gt;a test for infection coming back &lt;span style='color: OrangeRed;'&gt;positive&lt;/span&gt; even though a person was &lt;span style='color: Orchid;'&gt;NOT bitten by a zombie&lt;/span&gt;
+&lt;/center&gt;
+
+`\begin{align}
+P(\color{OrangeRed}{+}\,\,|\,\, \color{Orchid}{\textrm{NO zombie bite}}) &amp;= 1 - P(\color{ForestGreen}{-}\,\,|\,\,\color{Orchid}{\textrm{NO zombie bite}}) \\\\
+&amp;=  1 - 0.95 \\\\
+&amp;= 0.05
+\end{align}`
+
+
+--
+
+.footnote[Remember that all test, especially medical tests have some error]
+
+---
+
+## Questions
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+.pull-left[
+&lt;center&gt;
+Perspective of a person administering the test
+
+&lt;hr style="width:75%"&gt;
+&lt;br&gt;&lt;p id="center" style="color:#bca0dc; font-weight: bold; border:1px; border-style:solid; border-color:#74cbda; border-radius: 25px; padding: 0.3em;"&gt;
+&lt;i&gt;Given a person was &lt;span style='color: RoyalBlue;'&gt;bitten by a zombie&lt;/span&gt;, what is&lt;br&gt;the probability that their test is &lt;span style='color: OrangeRed;'&gt;positive&lt;/span&gt;?&lt;/i&gt;
+&lt;/p&gt;
+&lt;br&gt;
+&lt;/center&gt;
+`$$P(\color{OrangeRed}{+}\,\,|\,\,\color{RoyalBlue}{\textrm{zombie bite}}) = 0.90$$` 
+]
+
+--
+
+.pull-right[
+&lt;center&gt;
+Perspective of a person who is not infected
+
+&lt;hr style="width:75%"&gt;
+&lt;br&gt;
+&lt;p id="center" style="color:#74cbda; font-weight: bold; border:1px; border-style:solid; border-color:#74cbda; border-radius: 25px; padding: 0.3em;"&gt;
+&lt;i&gt;Given that their test is &lt;span style='color: OrangeRed;'&gt;positive&lt;/span&gt;, what is&lt;br&gt;the probability that person was &lt;span style='color: RoyalBlue;'&gt;bitten by a zombie&lt;/span&gt;?&lt;/i&gt;
+&lt;/p&gt;
+&lt;/center&gt;
+&lt;br&gt;
+`$$P(\color{RoyalBlue}{\textrm{zombie bite}}\,\,\,|\,\,\color{OrangeRed}{+}) = \textrm{?}$$`
+]
+
+---
+
+## Assumtions
+
+--
+
+.center2[
+Assume that for now zombies are pretty rare and represent only 0.1% of the population. This means that&lt;br&gt;
+`$$P(\color{RoyalBlue}{\textrm{zombie bite}}) = 0.001$$`
+]
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;center&gt;
+This is known as a &lt;b&gt;&lt;i&gt;prior&lt;/i&gt;&lt;/b?
+&lt;/center&gt;
+
+---
+
+### The Math
+
+--
+
+1. From Bayes'theorem we have `$$P(\color{RoyalBlue}{\textrm{zombie bite}}\,\,|\,\color{OrangeRed}{+}) = \dfrac{P(\color{RoyalBlue}{\color{RoyalBlue}{\textrm{zombie bite}}} \,\,\,\textrm{and}\,\, \color{OrangeRed}{+})}{P(\color{OrangeRed}{+})}$$`
+
+&lt;br&gt;
+&lt;br&gt;
+.pull-left[
+&lt;div id="center" style="color:#f4acf6; font-weight: bold; border:1px; border-style:solid; border-color:#74cbda; border-radius: 25px; padding: 2.3em; width: 750px; height: 300px;"&gt;
+&lt;span style = "color:#ffffba;"&gt;The numerator&lt;/span&gt;
+`
+`\begin{align}
+  P(\color{RoyalBlue}{\color{RoyalBlue}{\textrm{zombie bite}}} \,\,\,\textrm{and}\,\, \color{OrangeRed}{+}) &amp;= P(\color{RoyalBlue}{\textrm{zombie bite}}) \cdot P(\color{OrangeRed}{+}\,\,|\,\,\color{RoyalBlue}{\textrm{zombie bite}}) \\\\&amp;= 0.001 \cdot 0.90 \\\\
+  &amp;= 0.0009
+\end{align}`
+`
+&lt;/div&gt;
+]
+
+--
+
+.pull-right-right[
+&lt;br&gt;
+&gt; This follows
+`$$P(\color{RoyalBlue}{\color{RoyalBlue}{A}} \,\,\textrm{and}\,\, \color{OrangeRed}{B}) = P(\color{RoyalBlue}{A})\cdot P(\color{OrangeRed}{B}\,|\,\color{RoyalBlue}{A})$$`
+]
+ 
+---
+
+.pull-left[ 
+&lt;div id="center" style="color:#f4acf6; font-weight: bold; border:1px; border-style:solid; border-color:#74cbda; border-radius: 25px; padding: 2.3em; width: 950px; height: 300px;"&gt;
+&lt;span style = "color:#ffffba;"&gt;The denominator&lt;/span&gt;
+`
+`\begin{align}
+  P(\color{OrangeRed}{+}) &amp;= P(\color{RoyalBlue}{\color{RoyalBlue}{\textrm{zombie bite}}} \,\,\,\textrm{and}\,\, \color{OrangeRed}{+})\,\, + P(\color{OrangeRed}{+}\,\,|\,\,\color{Orchid}{\textrm{NO zombie bite}}) \cdot (1-P(\color{RoyalBlue}{\textrm{zombie bite}}))\\\\
+  &amp;= 0.0009 + 0.05 \cdot (1-0.0001) \\\\
+&amp;= 0.5085
+\end{align}`
+`
+&lt;/div&gt;
+]
+
+.pull-right[ 
+
+]
+
+--
+
+.pull-left[
+&lt;br&gt;
+&gt; The above follows
+`$$P(\color{OrangeRed}{B}) = P(\color{RoyalBlue}{A} \,\,\textrm{and}\,\, \color{OrangeRed}{B}) + P(\color{OrangeRed}{B}\,|\,\color{Orchid}{\neg{A}})\cdot (1-P(\color{RoyalBlue}{A}))$$`
+]
+
+
+.pull-right[]
+
+---
+
+&lt;ol start="2"&gt;
+2. We can take the previous values into Bayes' theorem to get
+ \begin{align}
+ P(\color{RoyalBlue}{\textrm{zombie bite}}\,\,|\,\color{OrangeRed}{+}) &amp;= \dfrac{0.0009}{0.05085}\\\\
+ &amp;= 0.02
+ \end{align}
+&lt;/ol&gt;
+
+--
+
+&lt;span class="tab"&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;implying that given a positive test result, there is only a 2% chance that they were bitten by a zombie&lt;/span&gt; 
+
+---
+
+## Does this seem counterintuitive? 
+
+--
+
+&gt; You are definitely not alone, but this silly example is indicative a pretty important result because it parallels the nature of many realistic testing contexts  such as HIV and DNA testing, criminal profiling, and even your standard run of the mill statistical significance testing
+
+--
+
+&gt; Now for the time being, forget about the result that you may be dismissing as garbage and try to make sense think about why the probability was so low. After you come to conclusion or get stuck, move on
+
+---
+
+## Considerations
+
+--
+
+.pull-left[
+Whenever the condition of interest is very rare, having a test that finds all the true cases is still no guarantee that a positive result carries much information at all]
+
+--
+
+.pull-right[
+Remember that zombies are pretty rare, only making up 0.1% of the population. As of this writing, there are about [7.93 billion people](https://www.census.gov/popclock/) in the world. While 8 million zombies appears to be a lot, consider that in this scenario they would be spread out over the globe. Even if you restrict that number to the United States, the country alone has a population of about 333 million people making zombies about 2.4% of the total count of "people". or to put it another way, as of 2021 the number of zombies could almost equal the state population of Virginia
+]
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;center&gt;But why?&lt;/center&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+--
+
+&lt;center&gt;Well the reason may also seem counterintuitive but here you go:&lt;br&gt;&lt;br&gt;&lt;b&gt;&lt;i&gt;most positive results are false positives, even when all the true positives are detected correctly&lt;/i&gt;&lt;/b&gt;&lt;/center&gt;
+
+--
+
+Now through testing and larger samples, if the prior probability changes then there is a good chance that the narrative above also changes with it
+
+---
+
+### A Probability Tree of the Zombie "Problem"
+
+--
+
+
+
+&lt;center&gt;
+<div id="htmlwidget-7aa6bf8dc9e3a3e2784a" style="width:504px;height:504px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-7aa6bf8dc9e3a3e2784a">{"x":{"diagram":"digraph {\n\ngraph [layout = \"neato\",\n       outputorder = \"edgesfirst\",\n       bgcolor = \"white\"]\n\nnode [fontname = \"Helvetica\",\n      fontsize = \"10\",\n      shape = \"circle\",\n      fixedsize = \"true\",\n      width = \"0.5\",\n      style = \"filled\",\n      fillcolor = \"aliceblue\",\n      color = \"gray70\",\n      fontcolor = \"gray50\"]\n\nedge [fontname = \"Helvetica\",\n     fontsize = \"8\",\n     len = \"1.5\",\n     color = \"gray80\",\n     arrowsize = \"0.5\"]\n\n  \"1\" [label = \"infection test\", shape = \"circle\", height = \"1\", width = \"1\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\", pos = \"0,0!\"] \n  \"2\" [label = \"0.001\", shape = \"circle\", height = \"1\", width = \"1\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\", pos = \"3,2!\"] \n  \"3\" [label = \"0.999\", shape = \"circle\", height = \"1\", width = \"1\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\", pos = \"3,-2!\"] \n  \"4\" [label = \"0.9\", shape = \"circle\", height = \"1\", width = \"1\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\", pos = \"6,3!\"] \n  \"5\" [label = \"0.1\", shape = \"circle\", height = \"1\", width = \"1\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\", pos = \"6,1!\"] \n  \"6\" [label = \"0.95\", shape = \"circle\", height = \"1\", width = \"1\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\", pos = \"6,-3!\"] \n  \"7\" [label = \"0.05\", shape = \"circle\", height = \"1\", width = \"1\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\", pos = \"6,-1!\"] \n  \"8\" [label = \"9e-04\", shape = \"circle\", height = \"1\", width = \"1\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\", pos = \"8,3!\"] \n  \"9\" [label = \"1e-04\", shape = \"circle\", height = \"1\", width = \"1\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\", pos = \"8,1!\"] \n  \"10\" [label = \"0.949\", shape = \"circle\", height = \"1\", width = \"1\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\", pos = \"8,-3!\"] \n  \"11\" [label = \"0.05\", shape = \"circle\", height = \"1\", width = \"1\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\", pos = \"8,-1!\"] \n\"1\"->\"2\" [label = \"Zombie Bite\"] \n\"1\"->\"3\" [label = \"NO Zombie Bite\"] \n\"2\"->\"4\" [label = \"True Positive\"] \n\"2\"->\"5\" [label = \"False Negative\"] \n\"3\"->\"7\" [label = \"False Positive\"] \n\"3\"->\"6\" [label = \"True Negative\"] \n\"4\"->\"8\" [label = \"True Negative\"] \n\"5\"->\"9\" [label = \"True Negative\"] \n\"7\"->\"11\" [label = \"True Negative\"] \n\"6\"->\"10\" [label = \"True Negative\"] \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+&lt;/center&gt;
+
+---
+
+## Is it perfect?
+
+--
+
+No! If someone has a prior of 0 or 1, then it doesn't matter what you do, statistically speaking their mind is not going to change! 
+
+--
+
+Also there are some issues with people's ability to use Bayesian approaches
+
+&lt;center&gt;
+&lt;img src="img/bayesianprocon.png" alt="Doing Bayesian Data Analysis Cover" style="width: 500px;"/&gt;
+&lt;/center&gt;
+
+---
+
+### Did You Know?
+
+In 2005 John Ioannidis, a professor at the Stanford School of Medicine, published a very famous and highly controversial paper named [*Why Most Published Research Findings Are False*](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0020124). He used Bayes' Theorem to establish a weak basis, though one did not exist prior to his publication. His calculation led to a broader argument and warnings that have been for the most part accepted by the broader research community
+
+---
+
+### If You Torture Data Long Enough, It Will Confess to Anything
+
+If you're interested in a broader review of how most research is false but is worth doing anyway, click on the icon below
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;center&gt;
+ &lt;a href="https://youtu.be/42QuXLucH3Q"&gt;
+&lt;img src="img/youtube-ico.png" height="100px" style="background-color:#212121;"/&gt;
+&lt;/a&gt;
+&lt;/center&gt;
+
+---
+
+# One Last Thing About Bayes
+
+We barely scratched the surface of Bayesian thinking. Unfortunately it is underutilized in the social sciences and education and that will become an issue as areas such as machine learning and the data sciences in general become prevalent. If you find this area interesting, I am happy to point you to resources that may be useful. In the meantime, you may wish to take a look at the papers below by hovering over the pills
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+.pull-left[
+&lt;span class = "tab"&gt;&lt;a href="https://edp619.asocialdatascientist.com/slides/basics%20and%20buttons/papers/Villar%2C%20Callegaro%2C%20%26%20Yang%20%282013%29.pdf" target='_blank' download="Aczel et al. (2020).pdf"&gt;
+&lt;img src="img/pdf-ico.png" alt="Paper" width='35'&gt;&lt;span class = "hr-lines"&gt;Aczel et al. (2020)&lt;/span&gt;&lt;/span&gt;
+]
+
+.pull-right[
+&lt;a href="https://edp619.asocialdatascientist.com/slides/basics%20and%20buttons/papers/Villar%2C%20Callegaro%2C%20%26%20Yang%20%282013%29.pdf" target='_blank' download="Kruschke (2010).pdf"&gt;
+&lt;img src="img/pdf-ico.png" alt="Paper" width='35'&gt;&lt;span class = "hr-lines"&gt;Kruschke (2010)&lt;/span&gt;&lt;/span&gt;
+]
+
+---
+
+## Thats it!
+
+If you have any questions, please reach out
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;center&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;div class="fade_rule"&gt;&lt;/div&gt;  
+&lt;br&gt;&lt;br&gt;
+&lt;/center&gt;
+
+&lt;center&gt;
+&lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;&lt;img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;This work is licensed under a &lt;br /&gt;&lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License&lt;/a&gt;
+&lt;/center&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"navigation": {
+"scroll": false
+}
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
