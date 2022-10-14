@@ -710,12 +710,11 @@ $$P(\color{OrangeRed}{B}) = P(\color{RoyalBlue}{A} \,\,\textrm{and}\,\, \color{O
 
 Now that we have some understanding of what the parts of Bayes' Theorem are, let's take a look at the names of each
 
-.center2[
 <br>
 <br>
-<br>
+<center>
 <img src="img/bayesneon_labeled.png" alt="Bayes' theorem in neon lights at the office of a software company in Cambridge, England" style="width: 600px;"/>
-]
+</center>
 
 ---
 
