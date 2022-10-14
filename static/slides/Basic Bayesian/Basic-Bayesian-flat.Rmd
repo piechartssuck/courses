@@ -1089,12 +1089,12 @@ We barely scratched the surface of Bayesian thinking. Unfortunately it is underu
 <br>
 <br>
 .pull-left[
-<span class = "tab"><a href="https://edp619.asocialdatascientist.com/slides/basics%20and%20buttons/papers/Villar%2C%20Callegaro%2C%20%26%20Yang%20%282013%29.pdf" target='_blank' download="Aczel et al. (2020).pdf">
+<span class = "tab"><a href="https://edp619.asocialdatascientist.com/slides/basic%20bayesian/papers/Aczel%20et%20al.%20%282020%29.pdf" target='_blank' download="Aczel et al. (2020).pdf">
 <img src="img/pdf-ico.png" alt="Paper" width='35'><span class = "hr-lines">Aczel et al. (2020)</span></span>
 ]
 
 .pull-right[
-<a href="https://edp619.asocialdatascientist.com/slides/basics%20and%20buttons/papers/Villar%2C%20Callegaro%2C%20%26%20Yang%20%282013%29.pdf" target='_blank' download="Kruschke (2010).pdf">
+<a href="https://edp619.asocialdatascientist.com/slides/basic%20bayesian/papers/Kruschke%20%282010%29.pdf" target='_blank' download="Kruschke (2010).pdf">
 <img src="img/pdf-ico.png" alt="Paper" width='35'><span class = "hr-lines">Kruschke (2010)</span></span>
 ]
 
