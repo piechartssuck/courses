@@ -68,7 +68,7 @@ max-width:100%;
 <tbody>
 <tr>
 <td style="text-align:center;width: 25em; padding-left: 200px;color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/slides/Week%206/Slides-Week-8-pres.html" target="_blank"><img src="/logos/web-ico.png" alt="Survey Design Page" width="35"></a>
+<a href="/slides/Week%208/Slides-Week-8-pres.html" target="_blank"><img src="/logos/web-ico.png" alt="Survey Design Page" width="35"></a>
 </td>
 </tr>
 <tr>
@@ -82,7 +82,7 @@ Larger version of the presentation
 </tr>
 <tr>
 <td style="text-align:center;width: 25em; padding-left: 200px;color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/slides/Week%206/Slides-Week-8-flat.pdf" target="_blank"><img src="/logos/pdf-ico.png" alt="Survey Design PDF" width="35"></a>
+<a href="/slides/Week%208/Slides-Week-8-flat.pdf" target="_blank"><img src="/logos/pdf-ico.png" alt="Survey Design PDF" width="35"></a>
 </td>
 </tr>
 <tr>

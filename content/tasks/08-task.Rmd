@@ -57,14 +57,15 @@ knitr::include_url("/slides/Week 8/Slides-Week-8-pres.html")
 ```
 </div>
 
+
 <div class="smallcol">
 ```{r echo = FALSE, fig.align='right'}
 html_link <- function() {
-  paste0("<a href='/slides/Week 6/Slides-Week-8-pres.html' target='_blank'>", "<img src='/logos/web-ico.png' alt='Survey Design Page' width='35'>", "</a>")
+  paste0("<a href='/slides/Week 8/Slides-Week-8-pres.html' target='_blank'>", "<img src='/logos/web-ico.png' alt='Survey Design Page' width='35'>", "</a>")
 }
 
 pdf_link <- function() {
- paste0("<a href='/slides/Week 6/Slides-Week-8-flat.pdf' target='_blank'>", "<img src='/logos/pdf-ico.png' alt='Survey Design PDF' width='35'>", "</a>")
+ paste0("<a href='/slides/Week 8/Slides-Week-8-flat.pdf' target='_blank'>", "<img src='/logos/pdf-ico.png' alt='Survey Design PDF' width='35'>", "</a>")
 }
 
 tibble(
