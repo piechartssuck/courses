@@ -1,0 +1,3713 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Sentiment Analysis</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr. Abhik Roy" />
+    <script src="Slides-Week-8-pres_files/header-attrs-2.17/header-attrs.js"></script>
+    <link href="Slides-Week-8-pres_files/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
+    <script src="Slides-Week-8-pres_files/tile-view-0.2.6/tile-view.js"></script>
+    <link href="Slides-Week-8-pres_files/animate.css-3.7.2/animate.xaringan.css" rel="stylesheet" />
+    <link href="Slides-Week-8-pres_files/tachyons-4.12.0/tachyons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Sentiment Analysis
+]
+.subtitle[
+## EDP 618 Week 8
+]
+.author[
+### Dr. Abhik Roy
+]
+
+---
+
+
+&lt;script&gt;
+  function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+  }
+&lt;/script&gt;
+
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/x-mathjax-config"&gt;
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+  MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+    cancel: ["Extension","cancel"],
+    bcancel: ["Extension","cancel"],
+    xcancel: ["Extension","cancel"],
+    cancelto: ["Extension","cancel"]
+  });
+});
+&lt;/script&gt;
+
+&lt;style&gt;
+section {
+    display: flex;
+    display: -webkit-flex;
+}
+
+section {
+    height: 600px;
+    width: 60%;
+    margin: auto;
+    border-radius: 21px;
+    background-color: #212121;
+}
+
+.remark-slide-container {
+background: #212121;
+}
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
+}
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
+}
+
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
+}
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
+}
+
+section p {
+    text-align: center;
+    font-size: 30px;
+    background-color: #212121;
+    border-radius: 21px;
+    font-family: Roboto Condensed;
+    font-style: bold;
+    padding: 12px;
+    color: #bff4ee;
+    margin: auto;
+}
+
+#center {
+text-align: center;
+}
+
+#right {
+  text-align: right;
+} 
+
+.center p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.tab {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.obr
+{
+    display:block;
+    margin-top:-15px;
+}
+
+.container {
+  display: flex;
+}
+
+.container &gt; div {
+  flex: 1; /*grow*/
+  margin-right: 40px;
+}
+
+td, th, tr, table {
+    border: 0 !important;
+    border-spacing:0 !important;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: unset !important;
+    color: unset !important;
+  }
+
+tbody &gt; td &gt; tr:hover {
+      background-color: unset !important;
+      color: unset !important;
+  }
+&lt;/style&gt;
+
+&lt;style type="text/css"&gt;
+.highlight-last-item &gt; ul &gt; li,
+.highlight-last-item &gt; ol &gt; li {
+  opacity: 0.5;
+}
+.highlight-last-item &gt; ul &gt; li:last-of-type,
+.highlight-last-item &gt; ol &gt; li:last-of-type {
+  opacity: 1;
+}
+&lt;/style&gt;
+
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 110px;
+height: 128px;
+z-index: 0;
+background-image: url(/Users/skynet/Documents/WVU/Teaching/GitHub.nosync/edp618/static/img/course_hex.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:1em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('a')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = 'https://edp618.asocialdatascientist.com'
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 110px;
+height: 128px;
+z-index: 0;
+background-image: url(/Users/skynet/Documents/WVU/Teaching/GitHub.nosync/edp618/static/img/course_hex_alpha.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:1em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('a')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = 'https://edp613.asocialdatascientist.com'
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+
+
+---
+
+class: highlight-last-item
+layout: true
+
+---
+
+# Getting Prepped
+
+--
+
+## Opening a Script Setting the working directory
+
+1. Open up RStudio
+
+--
+
+2. Go to `File &gt; New File &gt; R Script`
+
+--
+
+3. Go to `File &gt; Save As` and save the R Script in the same folder as the `csv` file. Name it whatever you want (e.g. **Week 7 R Walkthrough**)
+
+--
+
+4. Run the following command in your RStudio console
+    
+    ```r
+    setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+    ```
+
+---
+
+## Loading Packages
+
+--
+
+Please load up the following packages by placing these at the top of your script
+
+
+```r
+library(tidyverse)
+library(tidytext)
+```
+
+
+
+--
+
+You may also want to put 
+
+
+```r
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+```
+
+below the packages so its there
+
+---
+
+## Getting Data 
+
+--
+
+We will be working with scripts from the first three seasons of the show [*Rick and Morty*](https://www.rickandmorty.com/). Run the following to load the data
+
+
+
+```r
+rickmorty &lt;- read_csv("RickAndMortyScripts.csv")
+```
+
+```
+## Rows: 1905 Columns: 6
+## ── Column specification ─────────────────────────────────────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (3): episode name, name, line
+## dbl (3): index, season no., episode no.
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+```
+
+
+```r
+data("stop_words")
+```
+
+---
+
+# Assessing Data
+
+--
+
+We can take a look at the first ten rows of the data by running
+
+
+```r
+head(rickmorty)
+```
+
+```
+## # A tibble: 6 × 6
+##   index `season no.` `episode no.` `episode name` name  line                                                     
+##   &lt;dbl&gt;        &lt;dbl&gt;         &lt;dbl&gt; &lt;chr&gt;          &lt;chr&gt; &lt;chr&gt;                                                    
+## 1     0            1             1 Pilot          Rick  Morty! You gotta come on. Jus'... you gotta come with me.
+## 2     1            1             1 Pilot          Morty What, Rick? What’s going on?                             
+## 3     2            1             1 Pilot          Rick  I got a surprise for you, Morty.                         
+## 4     3            1             1 Pilot          Morty It's the middle of the night. What are you talking about?
+## 5     4            1             1 Pilot          Rick  Come on, I got a surprise for you.  Come on, hurry up.   
+## 6     5            1             1 Pilot          Morty Ow! Ow! You're tugging me too hard!
+```
+
+---
+
+We can also take a look at the types of columns by running
+
+
+```r
+glimpse(rickmorty)
+```
+
+```
+## Rows: 1,905
+## Columns: 6
+## $ index          &lt;dbl&gt; 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24…
+## $ `season no.`   &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…
+## $ `episode no.`  &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…
+## $ `episode name` &lt;chr&gt; "Pilot", "Pilot", "Pilot", "Pilot", "Pilot", "Pilot", "Pilot", "Pilot", "Pilot", "Pilot"…
+## $ name           &lt;chr&gt; "Rick", "Morty", "Rick", "Morty", "Rick", "Morty", "Rick", "Rick", "Morty", "Rick", "Mor…
+## $ line           &lt;chr&gt; "Morty! You gotta come on. Jus'... you gotta come with me.", "What, Rick? What’s going o…
+```
+
+---
+
+# Wrangling Terms 
+
+---
+
+## Selecting Needed Columns
+
+--
+
+
+```r
+rickmorty_selected &lt;-
+  rickmorty %&gt;%
+  select(index, line)
+
+rickmorty_selected
+```
+
+```
+## # A tibble: 1,905 × 2
+##    index line                                                                                                    
+##    &lt;dbl&gt; &lt;chr&gt;                                                                                                   
+##  1     0 Morty! You gotta come on. Jus'... you gotta come with me.                                               
+##  2     1 What, Rick? What’s going on?                                                                            
+##  3     2 I got a surprise for you, Morty.                                                                        
+##  4     3 It's the middle of the night. What are you talking about?                                               
+##  5     4 Come on, I got a surprise for you.  Come on, hurry up.                                                  
+##  6     5 Ow! Ow! You're tugging me too hard!                                                                     
+##  7     6 We gotta go, gotta get outta here, come on. Got a surprise for you Morty.                               
+##  8     7 What do you think of this... flying vehicle, Morty? I built it outta stuff I found in the garage.       
+##  9     8 Yeah, Rick... I-it's great. Is this the surprise?                                                       
+## 10     9 Morty. I had to... I had to do it. I had— I had to— I had to make a bomb, Morty. I had to create a bomb.
+## # … with 1,895 more rows
+```
+
+---
+
+## Getting Rid of Common Terms
+
+
+```r
+tidy_script &lt;-
+  rickmorty_selected %&gt;%
+  unnest_tokens(word, line) %&gt;%
+  anti_join(stop_words)
+```
+
+```
+## Joining, by = "word"
+```
+
+```r
+tidy_script
+```
+
+```
+## # A tibble: 8,513 × 2
+##    index word    
+##    &lt;dbl&gt; &lt;chr&gt;   
+##  1     0 morty   
+##  2     0 gotta   
+##  3     0 jus     
+##  4     0 gotta   
+##  5     1 rick    
+##  6     1 what’s  
+##  7     2 surprise
+##  8     2 morty   
+##  9     3 middle  
+## 10     3 night   
+## # … with 8,503 more rows
+```
+
+---
+
+## Counting (Remaining) Terms
+
+---
+
+
+count: false
+ 
+
+.panel1-sw1-auto[
+
+```r
+*tidy_script
+```
+]
+ 
+.panel2-sw1-auto[
+
+```
+## # A tibble: 8,513 × 2
+##    index word    
+##    &lt;dbl&gt; &lt;chr&gt;   
+##  1     0 morty   
+##  2     0 gotta   
+##  3     0 jus     
+##  4     0 gotta   
+##  5     1 rick    
+##  6     1 what’s  
+##  7     2 surprise
+##  8     2 morty   
+##  9     3 middle  
+## 10     3 night   
+## # … with 8,503 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1-auto[
+
+```r
+tidy_script %&gt;%
+* count(word, sort = TRUE)
+```
+]
+ 
+.panel2-sw1-auto[
+
+```
+## # A tibble: 3,072 × 2
+##    word      n
+##    &lt;chr&gt; &lt;int&gt;
+##  1 morty   334
+##  2 rick    169
+##  3 gonna   113
+##  4 time     89
+##  5 yeah     78
+##  6 uh       53
+##  7 whoa     53
+##  8 jerry    50
+##  9 god      48
+## 10 guys     48
+## # … with 3,062 more rows
+```
+]
+
+&lt;style&gt;
+.panel1-sw1-auto {
+  color: white;
+  width: 58.8%;
+  hight: 32%;
+  float: top;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw1-auto {
+  color: white;
+  width: 39.2%;
+  hight: 32%;
+  float: top;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw1-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: top;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+## Plotting Term Counts
+
+---
+
+
+count: false
+ 
+
+.panel1-sw2-auto[
+
+```r
+*tidy_script
+```
+]
+ 
+.panel2-sw2-auto[
+
+```
+## # A tibble: 8,513 × 2
+##    index word    
+##    &lt;dbl&gt; &lt;chr&gt;   
+##  1     0 morty   
+##  2     0 gotta   
+##  3     0 jus     
+##  4     0 gotta   
+##  5     1 rick    
+##  6     1 what’s  
+##  7     2 surprise
+##  8     2 morty   
+##  9     3 middle  
+## 10     3 night   
+## # … with 8,503 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw2-auto[
+
+```r
+tidy_script  %&gt;%
+* count(word, sort = TRUE)
+```
+]
+ 
+.panel2-sw2-auto[
+
+```
+## # A tibble: 3,072 × 2
+##    word      n
+##    &lt;chr&gt; &lt;int&gt;
+##  1 morty   334
+##  2 rick    169
+##  3 gonna   113
+##  4 time     89
+##  5 yeah     78
+##  6 uh       53
+##  7 whoa     53
+##  8 jerry    50
+##  9 god      48
+## 10 guys     48
+## # … with 3,062 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw2-auto[
+
+```r
+tidy_script  %&gt;%
+  count(word, sort = TRUE) %&gt;%
+* mutate(word = reorder(word, n))
+```
+]
+ 
+.panel2-sw2-auto[
+
+```
+## # A tibble: 3,072 × 2
+##    word      n
+##    &lt;fct&gt; &lt;int&gt;
+##  1 morty   334
+##  2 rick    169
+##  3 gonna   113
+##  4 time     89
+##  5 yeah     78
+##  6 uh       53
+##  7 whoa     53
+##  8 jerry    50
+##  9 god      48
+## 10 guys     48
+## # … with 3,062 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw2-auto[
+
+```r
+tidy_script  %&gt;%
+  count(word, sort = TRUE) %&gt;%
+  mutate(word = reorder(word, n)) %&gt;%
+* ggplot(aes(n, word))
+```
+]
+ 
+.panel2-sw2-auto[
+![](Slides-Week-8-pres_files/figure-html/sw2_auto_04_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw2-auto[
+
+```r
+tidy_script  %&gt;%
+  count(word, sort = TRUE) %&gt;%
+  mutate(word = reorder(word, n)) %&gt;%
+  ggplot(aes(n, word)) +
+* geom_col()
+```
+]
+ 
+.panel2-sw2-auto[
+![](Slides-Week-8-pres_files/figure-html/sw2_auto_05_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw2-auto[
+
+```r
+tidy_script  %&gt;%
+  count(word, sort = TRUE) %&gt;%
+  mutate(word = reorder(word, n)) %&gt;%
+  ggplot(aes(n, word)) +
+  geom_col() +
+* labs(y = NULL)
+```
+]
+ 
+.panel2-sw2-auto[
+![](Slides-Week-8-pres_files/figure-html/sw2_auto_06_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw2-auto[
+
+```r
+tidy_script  %&gt;%
+  count(word, sort = TRUE) %&gt;%
+  mutate(word = reorder(word, n)) %&gt;%
+  ggplot(aes(n, word)) +
+  geom_col() +
+  labs(y = NULL) +
+* theme_minimal()
+```
+]
+ 
+.panel2-sw2-auto[
+![](Slides-Week-8-pres_files/figure-html/sw2_auto_07_output-1.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-sw2-auto {
+  color: white;
+  width: 58.8%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw2-auto {
+  color: white;
+  width: 39.2%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw2-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+
+count: false
+ 
+
+.panel1-sw3-auto[
+
+```r
+*tidy_script
+```
+]
+ 
+.panel2-sw3-auto[
+
+```
+## # A tibble: 8,513 × 2
+##    index word    
+##    &lt;dbl&gt; &lt;chr&gt;   
+##  1     0 morty   
+##  2     0 gotta   
+##  3     0 jus     
+##  4     0 gotta   
+##  5     1 rick    
+##  6     1 what’s  
+##  7     2 surprise
+##  8     2 morty   
+##  9     3 middle  
+## 10     3 night   
+## # … with 8,503 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw3-auto[
+
+```r
+tidy_script  %&gt;%
+* count(word, sort = TRUE)
+```
+]
+ 
+.panel2-sw3-auto[
+
+```
+## # A tibble: 3,072 × 2
+##    word      n
+##    &lt;chr&gt; &lt;int&gt;
+##  1 morty   334
+##  2 rick    169
+##  3 gonna   113
+##  4 time     89
+##  5 yeah     78
+##  6 uh       53
+##  7 whoa     53
+##  8 jerry    50
+##  9 god      48
+## 10 guys     48
+## # … with 3,062 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw3-auto[
+
+```r
+tidy_script  %&gt;%
+  count(word, sort = TRUE) %&gt;%
+* filter(n &gt; 2)
+```
+]
+ 
+.panel2-sw3-auto[
+
+```
+## # A tibble: 687 × 2
+##    word      n
+##    &lt;chr&gt; &lt;int&gt;
+##  1 morty   334
+##  2 rick    169
+##  3 gonna   113
+##  4 time     89
+##  5 yeah     78
+##  6 uh       53
+##  7 whoa     53
+##  8 jerry    50
+##  9 god      48
+## 10 guys     48
+## # … with 677 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw3-auto[
+
+```r
+tidy_script  %&gt;%
+  count(word, sort = TRUE) %&gt;%
+  filter(n &gt; 2) %&gt;%
+* mutate(word = reorder(word, n))
+```
+]
+ 
+.panel2-sw3-auto[
+
+```
+## # A tibble: 687 × 2
+##    word      n
+##    &lt;fct&gt; &lt;int&gt;
+##  1 morty   334
+##  2 rick    169
+##  3 gonna   113
+##  4 time     89
+##  5 yeah     78
+##  6 uh       53
+##  7 whoa     53
+##  8 jerry    50
+##  9 god      48
+## 10 guys     48
+## # … with 677 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw3-auto[
+
+```r
+tidy_script  %&gt;%
+  count(word, sort = TRUE) %&gt;%
+  filter(n &gt; 2) %&gt;%
+  mutate(word = reorder(word, n)) %&gt;%
+* ggplot(aes(n, word))
+```
+]
+ 
+.panel2-sw3-auto[
+![](Slides-Week-8-pres_files/figure-html/sw3_auto_05_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw3-auto[
+
+```r
+tidy_script  %&gt;%
+  count(word, sort = TRUE) %&gt;%
+  filter(n &gt; 2) %&gt;%
+  mutate(word = reorder(word, n)) %&gt;%
+  ggplot(aes(n, word)) +
+* geom_col()
+```
+]
+ 
+.panel2-sw3-auto[
+![](Slides-Week-8-pres_files/figure-html/sw3_auto_06_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw3-auto[
+
+```r
+tidy_script  %&gt;%
+  count(word, sort = TRUE) %&gt;%
+  filter(n &gt; 2) %&gt;%
+  mutate(word = reorder(word, n)) %&gt;%
+  ggplot(aes(n, word)) +
+  geom_col() +
+* labs(y = NULL)
+```
+]
+ 
+.panel2-sw3-auto[
+![](Slides-Week-8-pres_files/figure-html/sw3_auto_07_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw3-auto[
+
+```r
+tidy_script  %&gt;%
+  count(word, sort = TRUE) %&gt;%
+  filter(n &gt; 2) %&gt;%
+  mutate(word = reorder(word, n)) %&gt;%
+  ggplot(aes(n, word)) +
+  geom_col() +
+  labs(y = NULL) +
+* theme_minimal()
+```
+]
+ 
+.panel2-sw3-auto[
+![](Slides-Week-8-pres_files/figure-html/sw3_auto_08_output-1.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-sw3-auto {
+  color: white;
+  width: 58.8%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw3-auto {
+  color: white;
+  width: 39.2%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw3-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+
+count: false
+ 
+
+.panel1-sw4-auto[
+
+```r
+*tidy_script
+```
+]
+ 
+.panel2-sw4-auto[
+
+```
+## # A tibble: 8,513 × 2
+##    index word    
+##    &lt;dbl&gt; &lt;chr&gt;   
+##  1     0 morty   
+##  2     0 gotta   
+##  3     0 jus     
+##  4     0 gotta   
+##  5     1 rick    
+##  6     1 what’s  
+##  7     2 surprise
+##  8     2 morty   
+##  9     3 middle  
+## 10     3 night   
+## # … with 8,503 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw4-auto[
+
+```r
+tidy_script  %&gt;%
+* count(word, sort = TRUE)
+```
+]
+ 
+.panel2-sw4-auto[
+
+```
+## # A tibble: 3,072 × 2
+##    word      n
+##    &lt;chr&gt; &lt;int&gt;
+##  1 morty   334
+##  2 rick    169
+##  3 gonna   113
+##  4 time     89
+##  5 yeah     78
+##  6 uh       53
+##  7 whoa     53
+##  8 jerry    50
+##  9 god      48
+## 10 guys     48
+## # … with 3,062 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw4-auto[
+
+```r
+tidy_script  %&gt;%
+  count(word, sort = TRUE) %&gt;%
+* filter(n &gt; 10)
+```
+]
+ 
+.panel2-sw4-auto[
+
+```
+## # A tibble: 126 × 2
+##    word      n
+##    &lt;chr&gt; &lt;int&gt;
+##  1 morty   334
+##  2 rick    169
+##  3 gonna   113
+##  4 time     89
+##  5 yeah     78
+##  6 uh       53
+##  7 whoa     53
+##  8 jerry    50
+##  9 god      48
+## 10 guys     48
+## # … with 116 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw4-auto[
+
+```r
+tidy_script  %&gt;%
+  count(word, sort = TRUE) %&gt;%
+  filter(n &gt; 10) %&gt;%
+* mutate(word = reorder(word, n))
+```
+]
+ 
+.panel2-sw4-auto[
+
+```
+## # A tibble: 126 × 2
+##    word      n
+##    &lt;fct&gt; &lt;int&gt;
+##  1 morty   334
+##  2 rick    169
+##  3 gonna   113
+##  4 time     89
+##  5 yeah     78
+##  6 uh       53
+##  7 whoa     53
+##  8 jerry    50
+##  9 god      48
+## 10 guys     48
+## # … with 116 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw4-auto[
+
+```r
+tidy_script  %&gt;%
+  count(word, sort = TRUE) %&gt;%
+  filter(n &gt; 10) %&gt;%
+  mutate(word = reorder(word, n)) %&gt;%
+* ggplot(aes(n, word))
+```
+]
+ 
+.panel2-sw4-auto[
+![](Slides-Week-8-pres_files/figure-html/sw4_auto_05_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw4-auto[
+
+```r
+tidy_script  %&gt;%
+  count(word, sort = TRUE) %&gt;%
+  filter(n &gt; 10) %&gt;%
+  mutate(word = reorder(word, n)) %&gt;%
+  ggplot(aes(n, word)) +
+* geom_col()
+```
+]
+ 
+.panel2-sw4-auto[
+![](Slides-Week-8-pres_files/figure-html/sw4_auto_06_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw4-auto[
+
+```r
+tidy_script  %&gt;%
+  count(word, sort = TRUE) %&gt;%
+  filter(n &gt; 10) %&gt;%
+  mutate(word = reorder(word, n)) %&gt;%
+  ggplot(aes(n, word)) +
+  geom_col() +
+* labs(y = NULL)
+```
+]
+ 
+.panel2-sw4-auto[
+![](Slides-Week-8-pres_files/figure-html/sw4_auto_07_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw4-auto[
+
+```r
+tidy_script  %&gt;%
+  count(word, sort = TRUE) %&gt;%
+  filter(n &gt; 10) %&gt;%
+  mutate(word = reorder(word, n)) %&gt;%
+  ggplot(aes(n, word)) +
+  geom_col() +
+  labs(y = NULL) +
+* theme_minimal()
+```
+]
+ 
+.panel2-sw4-auto[
+![](Slides-Week-8-pres_files/figure-html/sw4_auto_08_output-1.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-sw4-auto {
+  color: white;
+  width: 58.8%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw4-auto {
+  color: white;
+  width: 39.2%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw4-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+
+count: false
+ 
+
+.panel1-sw5-auto[
+
+```r
+*tidy_script
+```
+]
+ 
+.panel2-sw5-auto[
+
+```
+## # A tibble: 8,513 × 2
+##    index word    
+##    &lt;dbl&gt; &lt;chr&gt;   
+##  1     0 morty   
+##  2     0 gotta   
+##  3     0 jus     
+##  4     0 gotta   
+##  5     1 rick    
+##  6     1 what’s  
+##  7     2 surprise
+##  8     2 morty   
+##  9     3 middle  
+## 10     3 night   
+## # … with 8,503 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw5-auto[
+
+```r
+tidy_script %&gt;%
+* count(word, sort = TRUE)
+```
+]
+ 
+.panel2-sw5-auto[
+
+```
+## # A tibble: 3,072 × 2
+##    word      n
+##    &lt;chr&gt; &lt;int&gt;
+##  1 morty   334
+##  2 rick    169
+##  3 gonna   113
+##  4 time     89
+##  5 yeah     78
+##  6 uh       53
+##  7 whoa     53
+##  8 jerry    50
+##  9 god      48
+## 10 guys     48
+## # … with 3,062 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw5-auto[
+
+```r
+tidy_script %&gt;%
+  count(word, sort = TRUE) %&gt;%
+* filter(n &gt; 20)
+```
+]
+ 
+.panel2-sw5-auto[
+
+```
+## # A tibble: 37 × 2
+##    word      n
+##    &lt;chr&gt; &lt;int&gt;
+##  1 morty   334
+##  2 rick    169
+##  3 gonna   113
+##  4 time     89
+##  5 yeah     78
+##  6 uh       53
+##  7 whoa     53
+##  8 jerry    50
+##  9 god      48
+## 10 guys     48
+## # … with 27 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw5-auto[
+
+```r
+tidy_script %&gt;%
+  count(word, sort = TRUE) %&gt;%
+  filter(n &gt; 20) %&gt;%
+* mutate(word = reorder(word, n))
+```
+]
+ 
+.panel2-sw5-auto[
+
+```
+## # A tibble: 37 × 2
+##    word      n
+##    &lt;fct&gt; &lt;int&gt;
+##  1 morty   334
+##  2 rick    169
+##  3 gonna   113
+##  4 time     89
+##  5 yeah     78
+##  6 uh       53
+##  7 whoa     53
+##  8 jerry    50
+##  9 god      48
+## 10 guys     48
+## # … with 27 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw5-auto[
+
+```r
+tidy_script %&gt;%
+  count(word, sort = TRUE) %&gt;%
+  filter(n &gt; 20) %&gt;%
+  mutate(word = reorder(word, n)) %&gt;%
+* ggplot(aes(n, word))
+```
+]
+ 
+.panel2-sw5-auto[
+![](Slides-Week-8-pres_files/figure-html/sw5_auto_05_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw5-auto[
+
+```r
+tidy_script %&gt;%
+  count(word, sort = TRUE) %&gt;%
+  filter(n &gt; 20) %&gt;%
+  mutate(word = reorder(word, n)) %&gt;%
+  ggplot(aes(n, word)) +
+* geom_col()
+```
+]
+ 
+.panel2-sw5-auto[
+![](Slides-Week-8-pres_files/figure-html/sw5_auto_06_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw5-auto[
+
+```r
+tidy_script %&gt;%
+  count(word, sort = TRUE) %&gt;%
+  filter(n &gt; 20) %&gt;%
+  mutate(word = reorder(word, n)) %&gt;%
+  ggplot(aes(n, word)) +
+  geom_col() +
+* labs(y = NULL)
+```
+]
+ 
+.panel2-sw5-auto[
+![](Slides-Week-8-pres_files/figure-html/sw5_auto_07_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw5-auto[
+
+```r
+tidy_script %&gt;%
+  count(word, sort = TRUE) %&gt;%
+  filter(n &gt; 20) %&gt;%
+  mutate(word = reorder(word, n)) %&gt;%
+  ggplot(aes(n, word)) +
+  geom_col() +
+  labs(y = NULL) +
+* theme_minimal()
+```
+]
+ 
+.panel2-sw5-auto[
+![](Slides-Week-8-pres_files/figure-html/sw5_auto_08_output-1.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-sw5-auto {
+  color: white;
+  width: 58.8%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw5-auto {
+  color: white;
+  width: 39.2%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw5-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+## Getting Rid of Unwanted Terms Manually
+
+---
+
+
+count: false
+ 
+
+.panel1-sw6-auto[
+
+```r
+* rickmorty_selected
+```
+]
+ 
+.panel2-sw6-auto[
+
+```
+## # A tibble: 1,905 × 2
+##    index line                                                                                                    
+##    &lt;dbl&gt; &lt;chr&gt;                                                                                                   
+##  1     0 Morty! You gotta come on. Jus'... you gotta come with me.                                               
+##  2     1 What, Rick? What’s going on?                                                                            
+##  3     2 I got a surprise for you, Morty.                                                                        
+##  4     3 It's the middle of the night. What are you talking about?                                               
+##  5     4 Come on, I got a surprise for you.  Come on, hurry up.                                                  
+##  6     5 Ow! Ow! You're tugging me too hard!                                                                     
+##  7     6 We gotta go, gotta get outta here, come on. Got a surprise for you Morty.                               
+##  8     7 What do you think of this... flying vehicle, Morty? I built it outta stuff I found in the garage.       
+##  9     8 Yeah, Rick... I-it's great. Is this the surprise?                                                       
+## 10     9 Morty. I had to... I had to do it. I had— I had to— I had to make a bomb, Morty. I had to create a bomb.
+## # … with 1,895 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw6-auto[
+
+```r
+  rickmorty_selected %&gt;%
+* mutate(line = str_remove_all(line, "Rick"))
+```
+]
+ 
+.panel2-sw6-auto[
+
+```
+## # A tibble: 1,905 × 2
+##    index line                                                                                                    
+##    &lt;dbl&gt; &lt;chr&gt;                                                                                                   
+##  1     0 Morty! You gotta come on. Jus'... you gotta come with me.                                               
+##  2     1 What, ? What’s going on?                                                                                
+##  3     2 I got a surprise for you, Morty.                                                                        
+##  4     3 It's the middle of the night. What are you talking about?                                               
+##  5     4 Come on, I got a surprise for you.  Come on, hurry up.                                                  
+##  6     5 Ow! Ow! You're tugging me too hard!                                                                     
+##  7     6 We gotta go, gotta get outta here, come on. Got a surprise for you Morty.                               
+##  8     7 What do you think of this... flying vehicle, Morty? I built it outta stuff I found in the garage.       
+##  9     8 Yeah, ... I-it's great. Is this the surprise?                                                           
+## 10     9 Morty. I had to... I had to do it. I had— I had to— I had to make a bomb, Morty. I had to create a bomb.
+## # … with 1,895 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw6-auto[
+
+```r
+  rickmorty_selected %&gt;%
+  mutate(line = str_remove_all(line, "Rick")) %&gt;%
+* mutate(line = str_remove_all(line, "Morty"))
+```
+]
+ 
+.panel2-sw6-auto[
+
+```
+## # A tibble: 1,905 × 2
+##    index line                                                                                          
+##    &lt;dbl&gt; &lt;chr&gt;                                                                                         
+##  1     0 ! You gotta come on. Jus'... you gotta come with me.                                          
+##  2     1 What, ? What’s going on?                                                                      
+##  3     2 I got a surprise for you, .                                                                   
+##  4     3 It's the middle of the night. What are you talking about?                                     
+##  5     4 Come on, I got a surprise for you.  Come on, hurry up.                                        
+##  6     5 Ow! Ow! You're tugging me too hard!                                                           
+##  7     6 We gotta go, gotta get outta here, come on. Got a surprise for you .                          
+##  8     7 What do you think of this... flying vehicle, ? I built it outta stuff I found in the garage.  
+##  9     8 Yeah, ... I-it's great. Is this the surprise?                                                 
+## 10     9 . I had to... I had to do it. I had— I had to— I had to make a bomb, . I had to create a bomb.
+## # … with 1,895 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw6-auto[
+
+```r
+  rickmorty_selected %&gt;%
+  mutate(line = str_remove_all(line, "Rick")) %&gt;%
+  mutate(line = str_remove_all(line, "Morty")) %&gt;%
+* mutate(line = replace_contraction(line))
+```
+]
+ 
+.panel2-sw6-auto[
+
+```
+## # A tibble: 1,905 × 2
+##    index line                                                                                          
+##    &lt;dbl&gt; &lt;chr&gt;                                                                                         
+##  1     0 ! You gotta come on. Jus'... you gotta come with me.                                          
+##  2     1 What, ? What’s going on?                                                                      
+##  3     2 I got a surprise for you, .                                                                   
+##  4     3 it is the middle of the night. What are you talking about?                                    
+##  5     4 Come on, I got a surprise for you.  Come on, hurry up.                                        
+##  6     5 Ow! Ow! you are tugging me too hard!                                                          
+##  7     6 We gotta go, gotta get outta here, come on. Got a surprise for you .                          
+##  8     7 What do you think of this... flying vehicle, ? I built it outta stuff I found in the garage.  
+##  9     8 Yeah, ... I-it is great. Is this the surprise?                                                
+## 10     9 . I had to... I had to do it. I had— I had to— I had to make a bomb, . I had to create a bomb.
+## # … with 1,895 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw6-auto[
+
+```r
+  rickmorty_selected %&gt;%
+  mutate(line = str_remove_all(line, "Rick")) %&gt;%
+  mutate(line = str_remove_all(line, "Morty")) %&gt;%
+  mutate(line = replace_contraction(line)) %&gt;%
+* unnest_tokens(word, line)
+```
+]
+ 
+.panel2-sw6-auto[
+
+```
+## # A tibble: 26,070 × 2
+##    index word 
+##    &lt;dbl&gt; &lt;chr&gt;
+##  1     0 you  
+##  2     0 gotta
+##  3     0 come 
+##  4     0 on   
+##  5     0 jus  
+##  6     0 you  
+##  7     0 gotta
+##  8     0 come 
+##  9     0 with 
+## 10     0 me   
+## # … with 26,060 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw6-auto[
+
+```r
+  rickmorty_selected %&gt;%
+  mutate(line = str_remove_all(line, "Rick")) %&gt;%
+  mutate(line = str_remove_all(line, "Morty")) %&gt;%
+  mutate(line = replace_contraction(line)) %&gt;%
+  unnest_tokens(word, line) %&gt;%
+* anti_join(stop_words)
+```
+]
+ 
+.panel2-sw6-auto[
+
+```
+## Joining, by = "word"
+```
+
+```
+## # A tibble: 7,950 × 2
+##    index word    
+##    &lt;dbl&gt; &lt;chr&gt;   
+##  1     0 gotta   
+##  2     0 jus     
+##  3     0 gotta   
+##  4     1 what’s  
+##  5     2 surprise
+##  6     3 middle  
+##  7     3 night   
+##  8     3 talking 
+##  9     4 surprise
+## 10     4 hurry   
+## # … with 7,940 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw6-auto[
+
+```r
+  rickmorty_selected %&gt;%
+  mutate(line = str_remove_all(line, "Rick")) %&gt;%
+  mutate(line = str_remove_all(line, "Morty")) %&gt;%
+  mutate(line = replace_contraction(line)) %&gt;%
+  unnest_tokens(word, line) %&gt;%
+  anti_join(stop_words) %&gt;%
+* count(word, sort = TRUE)
+```
+]
+ 
+.panel2-sw6-auto[
+
+```
+## Joining, by = "word"
+```
+
+```
+## # A tibble: 3,056 × 2
+##    word       n
+##    &lt;chr&gt;  &lt;int&gt;
+##  1 gonna    113
+##  2 time      89
+##  3 yeah      78
+##  4 uh        53
+##  5 whoa      53
+##  6 jerry     50
+##  7 god       48
+##  8 guys      48
+##  9 summer    45
+## 10 hey       44
+## # … with 3,046 more rows
+```
+]
+
+&lt;style&gt;
+.panel1-sw6-auto {
+  color: white;
+  width: 58.8%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw6-auto {
+  color: white;
+  width: 39.2%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw6-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+
+```r
+tidy_script_nonames &lt;-
+ rickmorty_selected %&gt;%
+  mutate(line = str_remove_all(line, "Rick")) %&gt;%
+  mutate(line = str_remove_all(line, "Morty")) %&gt;%
+  mutate(line = replace_contraction(line)) %&gt;%
+  unnest_tokens(word, line) %&gt;%
+  anti_join(stop_words) %&gt;%
+  count(word, sort = TRUE) 
+```
+
+```
+## Joining, by = "word"
+```
+
+---
+
+
+count: false
+ 
+
+.panel1-sw7-auto[
+
+```r
+*rickandmorty_filtered
+```
+]
+ 
+.panel2-sw7-auto[
+
+```
+## # A tibble: 122 × 2
+##    word       n
+##    &lt;chr&gt;  &lt;int&gt;
+##  1 gonna    113
+##  2 time      89
+##  3 yeah      78
+##  4 uh        53
+##  5 whoa      53
+##  6 jerry     50
+##  7 god       48
+##  8 guys      48
+##  9 summer    45
+## 10 hey       44
+## # … with 112 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw7-auto[
+
+```r
+rickandmorty_filtered %&gt;%
+* filter(n &gt; 20)
+```
+]
+ 
+.panel2-sw7-auto[
+
+```
+## # A tibble: 35 × 2
+##    word       n
+##    &lt;chr&gt;  &lt;int&gt;
+##  1 gonna    113
+##  2 time      89
+##  3 yeah      78
+##  4 uh        53
+##  5 whoa      53
+##  6 jerry     50
+##  7 god       48
+##  8 guys      48
+##  9 summer    45
+## 10 hey       44
+## # … with 25 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw7-auto[
+
+```r
+rickandmorty_filtered %&gt;%
+  filter(n &gt; 20) %&gt;%
+* mutate(word = reorder(word, n))
+```
+]
+ 
+.panel2-sw7-auto[
+
+```
+## # A tibble: 35 × 2
+##    word       n
+##    &lt;fct&gt;  &lt;int&gt;
+##  1 gonna    113
+##  2 time      89
+##  3 yeah      78
+##  4 uh        53
+##  5 whoa      53
+##  6 jerry     50
+##  7 god       48
+##  8 guys      48
+##  9 summer    45
+## 10 hey       44
+## # … with 25 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw7-auto[
+
+```r
+rickandmorty_filtered %&gt;%
+  filter(n &gt; 20) %&gt;%
+  mutate(word = reorder(word, n)) %&gt;%
+* ggplot(aes(n, word))
+```
+]
+ 
+.panel2-sw7-auto[
+![](Slides-Week-8-pres_files/figure-html/sw7_auto_04_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw7-auto[
+
+```r
+rickandmorty_filtered %&gt;%
+  filter(n &gt; 20) %&gt;%
+  mutate(word = reorder(word, n)) %&gt;%
+  ggplot(aes(n, word)) +
+* geom_col()
+```
+]
+ 
+.panel2-sw7-auto[
+![](Slides-Week-8-pres_files/figure-html/sw7_auto_05_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw7-auto[
+
+```r
+rickandmorty_filtered %&gt;%
+  filter(n &gt; 20) %&gt;%
+  mutate(word = reorder(word, n)) %&gt;%
+  ggplot(aes(n, word)) +
+  geom_col() +
+* labs(y = NULL)
+```
+]
+ 
+.panel2-sw7-auto[
+![](Slides-Week-8-pres_files/figure-html/sw7_auto_06_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw7-auto[
+
+```r
+rickandmorty_filtered %&gt;%
+  filter(n &gt; 20) %&gt;%
+  mutate(word = reorder(word, n)) %&gt;%
+  ggplot(aes(n, word)) +
+  geom_col() +
+  labs(y = NULL) +
+* theme_minimal()
+```
+]
+ 
+.panel2-sw7-auto[
+![](Slides-Week-8-pres_files/figure-html/sw7_auto_07_output-1.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-sw7-auto {
+  color: white;
+  width: 58.8%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw7-auto {
+  color: white;
+  width: 39.2%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw7-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+# Sentiment Analysis
+
+--
+
++ is used to determine whether a given text contains negative, positive, or neutral emotions
+
+--
+
++ employs *Natural Language Processing* - computer program to understand human language as it is spoken and writte
+
+---
+
+## Bing Lexicon
+
+.center2[&lt;i&gt;General purpose English sentiment lexicon that categorizes words in a binary fashion, either positive or negative&lt;/i&gt;]
+
+---
+
+
+count: false
+ 
+
+.panel1-sw8-auto[
+
+```r
+*rickandmorty_filtered
+```
+]
+ 
+.panel2-sw8-auto[
+
+```
+## # A tibble: 122 × 2
+##    word       n
+##    &lt;chr&gt;  &lt;int&gt;
+##  1 gonna    113
+##  2 time      89
+##  3 yeah      78
+##  4 uh        53
+##  5 whoa      53
+##  6 jerry     50
+##  7 god       48
+##  8 guys      48
+##  9 summer    45
+## 10 hey       44
+## # … with 112 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw8-auto[
+
+```r
+rickandmorty_filtered %&gt;%
+* rowid_to_column(var = "index")
+```
+]
+ 
+.panel2-sw8-auto[
+
+```
+## # A tibble: 122 × 3
+##    index word       n
+##    &lt;int&gt; &lt;chr&gt;  &lt;int&gt;
+##  1     1 gonna    113
+##  2     2 time      89
+##  3     3 yeah      78
+##  4     4 uh        53
+##  5     5 whoa      53
+##  6     6 jerry     50
+##  7     7 god       48
+##  8     8 guys      48
+##  9     9 summer    45
+## 10    10 hey       44
+## # … with 112 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw8-auto[
+
+```r
+rickandmorty_filtered %&gt;%
+  rowid_to_column(var = "index") %&gt;%
+* inner_join(get_sentiments("bing"))
+```
+]
+ 
+.panel2-sw8-auto[
+
+```
+## Joining, by = "word"
+```
+
+```
+## # A tibble: 22 × 4
+##    index word       n sentiment
+##    &lt;int&gt; &lt;chr&gt;  &lt;int&gt; &lt;chr&gt;    
+##  1     5 whoa      53 positive 
+##  2    11 love      37 positive 
+##  3    17 shit      30 negative 
+##  4    20 hell      26 negative 
+##  5    22 bad       24 negative 
+##  6    30 die       22 negative 
+##  7    31 fuck      22 negative 
+##  8    43 crap      18 negative 
+##  9    45 pretty    18 positive 
+## 10    49 bitch     16 negative 
+## # … with 12 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw8-auto[
+
+```r
+rickandmorty_filtered %&gt;%
+  rowid_to_column(var = "index") %&gt;%
+  inner_join(get_sentiments("bing")) %&gt;%
+* pivot_wider(names_from = sentiment,
+*             values_from = n,
+*             values_fill = 0)
+```
+]
+ 
+.panel2-sw8-auto[
+
+```
+## Joining, by = "word"
+```
+
+```
+## # A tibble: 22 × 4
+##    index word   positive negative
+##    &lt;int&gt; &lt;chr&gt;     &lt;int&gt;    &lt;int&gt;
+##  1     5 whoa         53        0
+##  2    11 love         37        0
+##  3    17 shit          0       30
+##  4    20 hell          0       26
+##  5    22 bad           0       24
+##  6    30 die           0       22
+##  7    31 fuck          0       22
+##  8    43 crap          0       18
+##  9    45 pretty       18        0
+## 10    49 bitch         0       16
+## # … with 12 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw8-auto[
+
+```r
+rickandmorty_filtered %&gt;%
+  rowid_to_column(var = "index") %&gt;%
+  inner_join(get_sentiments("bing")) %&gt;%
+  pivot_wider(names_from = sentiment,
+              values_from = n,
+              values_fill = 0) %&gt;%
+* mutate(sentiment = positive - negative)
+```
+]
+ 
+.panel2-sw8-auto[
+
+```
+## Joining, by = "word"
+```
+
+```
+## # A tibble: 22 × 5
+##    index word   positive negative sentiment
+##    &lt;int&gt; &lt;chr&gt;     &lt;int&gt;    &lt;int&gt;     &lt;int&gt;
+##  1     5 whoa         53        0        53
+##  2    11 love         37        0        37
+##  3    17 shit          0       30       -30
+##  4    20 hell          0       26       -26
+##  5    22 bad           0       24       -24
+##  6    30 die           0       22       -22
+##  7    31 fuck          0       22       -22
+##  8    43 crap          0       18       -18
+##  9    45 pretty       18        0        18
+## 10    49 bitch         0       16       -16
+## # … with 12 more rows
+```
+]
+
+&lt;style&gt;
+.panel1-sw8-auto {
+  color: white;
+  width: 49%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw8-auto {
+  color: white;
+  width: 49%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw8-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+
+```r
+rickandmorty_bing &lt;- 
+  rickandmorty_filtered %&gt;%
+  rowid_to_column(var = "index") %&gt;%
+  inner_join(get_sentiments("bing")) %&gt;%
+  pivot_wider(names_from = sentiment, 
+              values_from = n, 
+              values_fill = 0) %&gt;%
+  mutate(sentiment = positive - negative) 
+```
+
+```
+## Joining, by = "word"
+```
+
+---
+
+
+count: false
+ 
+
+.panel1-sw9-auto[
+
+```r
+*ggplot(rickandmorty_bing,
+*      aes(index, sentiment))
+```
+]
+ 
+.panel2-sw9-auto[
+![](Slides-Week-8-pres_files/figure-html/sw9_auto_01_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw9-auto[
+
+```r
+ggplot(rickandmorty_bing,
+       aes(index, sentiment)) +
+* geom_bar(stat = "identity",
+*          show.legend = FALSE)
+```
+]
+ 
+.panel2-sw9-auto[
+![](Slides-Week-8-pres_files/figure-html/sw9_auto_02_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw9-auto[
+
+```r
+ggplot(rickandmorty_bing,
+       aes(index, sentiment)) +
+  geom_bar(stat = "identity",
+           show.legend = FALSE) +
+* theme_minimal()
+```
+]
+ 
+.panel2-sw9-auto[
+![](Slides-Week-8-pres_files/figure-html/sw9_auto_03_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw9-auto[
+
+```r
+ggplot(rickandmorty_bing,
+       aes(index, sentiment)) +
+  geom_bar(stat = "identity",
+           show.legend = FALSE) +
+  theme_minimal() +
+* facet_wrap(~sentiment, scales = "free_y")
+```
+]
+ 
+.panel2-sw9-auto[
+![](Slides-Week-8-pres_files/figure-html/sw9_auto_04_output-1.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-sw9-auto {
+  color: white;
+  width: 58.8%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw9-auto {
+  color: white;
+  width: 39.2%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw9-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+## AFINN Lexicon
+
+.center2[&lt;i&gt;Lexicon of English words rated for valence with an integer between minus five (negative) and plus five (positive)&lt;/i&gt;]
+
+---
+
+
+count: false
+ 
+
+.panel1-sw10-auto[
+
+```r
+*rickandmorty_filtered
+```
+]
+ 
+.panel2-sw10-auto[
+
+```
+## # A tibble: 122 × 2
+##    word       n
+##    &lt;chr&gt;  &lt;int&gt;
+##  1 gonna    113
+##  2 time      89
+##  3 yeah      78
+##  4 uh        53
+##  5 whoa      53
+##  6 jerry     50
+##  7 god       48
+##  8 guys      48
+##  9 summer    45
+## 10 hey       44
+## # … with 112 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw10-auto[
+
+```r
+rickandmorty_filtered %&gt;%
+* rowid_to_column(var = "index")
+```
+]
+ 
+.panel2-sw10-auto[
+
+```
+## # A tibble: 122 × 3
+##    index word       n
+##    &lt;int&gt; &lt;chr&gt;  &lt;int&gt;
+##  1     1 gonna    113
+##  2     2 time      89
+##  3     3 yeah      78
+##  4     4 uh        53
+##  5     5 whoa      53
+##  6     6 jerry     50
+##  7     7 god       48
+##  8     8 guys      48
+##  9     9 summer    45
+## 10    10 hey       44
+## # … with 112 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw10-auto[
+
+```r
+rickandmorty_filtered %&gt;%
+  rowid_to_column(var = "index") %&gt;%
+* inner_join(get_sentiments("afinn"))
+```
+]
+ 
+.panel2-sw10-auto[
+
+```
+## Joining, by = "word"
+```
+
+```
+## # A tibble: 31 × 4
+##    index word      n value
+##    &lt;int&gt; &lt;chr&gt; &lt;int&gt; &lt;dbl&gt;
+##  1     3 yeah     78     1
+##  2     7 god      48     1
+##  3    11 love     37     3
+##  4    17 shit     30    -4
+##  5    20 hell     26    -4
+##  6    22 bad      24    -3
+##  7    28 stop     23    -1
+##  8    30 die      22    -3
+##  9    31 fuck     22    -4
+## 10    43 crap     18    -3
+## # … with 21 more rows
+```
+]
+
+&lt;style&gt;
+.panel1-sw10-auto {
+  color: white;
+  width: 58.8%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw10-auto {
+  color: white;
+  width: 39.2%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw10-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+
+```r
+rickandmorty_afinn &lt;- 
+  rickandmorty_filtered %&gt;% 
+  rowid_to_column(var = "index") %&gt;%
+  inner_join(get_sentiments("afinn"))
+```
+
+```
+## Joining, by = "word"
+```
+
+---
+
+
+count: false
+ 
+
+.panel1-sw11-auto[
+
+```r
+*ggplot(rickandmorty_afinn,
+*      aes(index, value))
+```
+]
+ 
+.panel2-sw11-auto[
+![](Slides-Week-8-pres_files/figure-html/sw11_auto_01_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw11-auto[
+
+```r
+ggplot(rickandmorty_afinn,
+       aes(index, value)) +
+* geom_bar(stat = "identity",
+*          show.legend = FALSE)
+```
+]
+ 
+.panel2-sw11-auto[
+![](Slides-Week-8-pres_files/figure-html/sw11_auto_02_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw11-auto[
+
+```r
+ggplot(rickandmorty_afinn,
+       aes(index, value)) +
+  geom_bar(stat = "identity",
+           show.legend = FALSE) +
+* theme_minimal()
+```
+]
+ 
+.panel2-sw11-auto[
+![](Slides-Week-8-pres_files/figure-html/sw11_auto_03_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw11-auto[
+
+```r
+ggplot(rickandmorty_afinn,
+       aes(index, value)) +
+  geom_bar(stat = "identity",
+           show.legend = FALSE) +
+  theme_minimal() +
+* facet_wrap(~value, scales = "free_y")
+```
+]
+ 
+.panel2-sw11-auto[
+![](Slides-Week-8-pres_files/figure-html/sw11_auto_04_output-1.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-sw11-auto {
+  color: white;
+  width: 58.8%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw11-auto {
+  color: white;
+  width: 39.2%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw11-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+
+count: false
+ 
+
+.panel1-sw12-auto[
+
+```r
+*rickandmorty_filtered
+```
+]
+ 
+.panel2-sw12-auto[
+
+```
+## # A tibble: 122 × 2
+##    word       n
+##    &lt;chr&gt;  &lt;int&gt;
+##  1 gonna    113
+##  2 time      89
+##  3 yeah      78
+##  4 uh        53
+##  5 whoa      53
+##  6 jerry     50
+##  7 god       48
+##  8 guys      48
+##  9 summer    45
+## 10 hey       44
+## # … with 112 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw12-auto[
+
+```r
+rickandmorty_filtered %&gt;%
+* rowid_to_column(var = "index")
+```
+]
+ 
+.panel2-sw12-auto[
+
+```
+## # A tibble: 122 × 3
+##    index word       n
+##    &lt;int&gt; &lt;chr&gt;  &lt;int&gt;
+##  1     1 gonna    113
+##  2     2 time      89
+##  3     3 yeah      78
+##  4     4 uh        53
+##  5     5 whoa      53
+##  6     6 jerry     50
+##  7     7 god       48
+##  8     8 guys      48
+##  9     9 summer    45
+## 10    10 hey       44
+## # … with 112 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw12-auto[
+
+```r
+rickandmorty_filtered %&gt;%
+  rowid_to_column(var = "index") %&gt;%
+* inner_join(get_sentiments("afinn"))
+```
+]
+ 
+.panel2-sw12-auto[
+
+```
+## Joining, by = "word"
+```
+
+```
+## # A tibble: 31 × 4
+##    index word      n value
+##    &lt;int&gt; &lt;chr&gt; &lt;int&gt; &lt;dbl&gt;
+##  1     3 yeah     78     1
+##  2     7 god      48     1
+##  3    11 love     37     3
+##  4    17 shit     30    -4
+##  5    20 hell     26    -4
+##  6    22 bad      24    -3
+##  7    28 stop     23    -1
+##  8    30 die      22    -3
+##  9    31 fuck     22    -4
+## 10    43 crap     18    -3
+## # … with 21 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw12-auto[
+
+```r
+rickandmorty_filtered %&gt;%
+  rowid_to_column(var = "index") %&gt;%
+  inner_join(get_sentiments("afinn")) %&gt;%
+* mutate(sentiment = if_else(value &gt; 0,
+*                            "positive",
+*                            "negative",
+*                            "NA"))
+```
+]
+ 
+.panel2-sw12-auto[
+
+```
+## Joining, by = "word"
+```
+
+```
+## # A tibble: 31 × 5
+##    index word      n value sentiment
+##    &lt;int&gt; &lt;chr&gt; &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;    
+##  1     3 yeah     78     1 positive 
+##  2     7 god      48     1 positive 
+##  3    11 love     37     3 positive 
+##  4    17 shit     30    -4 negative 
+##  5    20 hell     26    -4 negative 
+##  6    22 bad      24    -3 negative 
+##  7    28 stop     23    -1 negative 
+##  8    30 die      22    -3 negative 
+##  9    31 fuck     22    -4 negative 
+## 10    43 crap     18    -3 negative 
+## # … with 21 more rows
+```
+]
+
+&lt;style&gt;
+.panel1-sw12-auto {
+  color: white;
+  width: 58.8%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw12-auto {
+  color: white;
+  width: 39.2%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw12-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+
+```r
+rickandmorty_afinn_posneg &lt;- 
+  rickandmorty_filtered %&gt;% 
+  rowid_to_column(var = "index") %&gt;%
+  inner_join(get_sentiments("afinn")) %&gt;%
+  mutate(sentiment = if_else(value &gt; 0, 
+                             "positive", 
+                             "negative", 
+                             "NA"))
+```
+
+```
+## Joining, by = "word"
+```
+
+---
+
+
+count: false
+ 
+
+.panel1-sw13-auto[
+
+```r
+*ggplot(rickandmorty_afinn_posneg,
+*      aes(index, value, fill = sentiment))
+```
+]
+ 
+.panel2-sw13-auto[
+![](Slides-Week-8-pres_files/figure-html/sw13_auto_01_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw13-auto[
+
+```r
+ggplot(rickandmorty_afinn_posneg,
+       aes(index, value, fill = sentiment)) +
+* geom_bar(stat = "identity",
+*          show.legend = FALSE)
+```
+]
+ 
+.panel2-sw13-auto[
+![](Slides-Week-8-pres_files/figure-html/sw13_auto_02_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw13-auto[
+
+```r
+ggplot(rickandmorty_afinn_posneg,
+       aes(index, value, fill = sentiment)) +
+  geom_bar(stat = "identity",
+           show.legend = FALSE) +
+* theme_minimal()
+```
+]
+ 
+.panel2-sw13-auto[
+![](Slides-Week-8-pres_files/figure-html/sw13_auto_03_output-1.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-sw13-auto {
+  color: white;
+  width: 58.8%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw13-auto {
+  color: white;
+  width: 39.2%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw13-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+
+count: false
+ 
+
+.panel1-sw14-auto[
+
+```r
+*ggplot(rickandmorty_afinn_posneg,
+*      aes(index, value, fill = sentiment))
+```
+]
+ 
+.panel2-sw14-auto[
+![](Slides-Week-8-pres_files/figure-html/sw14_auto_01_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw14-auto[
+
+```r
+ggplot(rickandmorty_afinn_posneg,
+       aes(index, value, fill = sentiment)) +
+* geom_bar(stat = "identity",
+*          show.legend = FALSE)
+```
+]
+ 
+.panel2-sw14-auto[
+![](Slides-Week-8-pres_files/figure-html/sw14_auto_02_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw14-auto[
+
+```r
+ggplot(rickandmorty_afinn_posneg,
+       aes(index, value, fill = sentiment)) +
+  geom_bar(stat = "identity",
+           show.legend = FALSE) +
+* theme_minimal()
+```
+]
+ 
+.panel2-sw14-auto[
+![](Slides-Week-8-pres_files/figure-html/sw14_auto_03_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw14-auto[
+
+```r
+ggplot(rickandmorty_afinn_posneg,
+       aes(index, value, fill = sentiment)) +
+  geom_bar(stat = "identity",
+           show.legend = FALSE) +
+  theme_minimal() +
+* scale_fill_manual(values = c("tomato", "skyblue"))
+```
+]
+ 
+.panel2-sw14-auto[
+![](Slides-Week-8-pres_files/figure-html/sw14_auto_04_output-1.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-sw14-auto {
+  color: white;
+  width: 58.8%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw14-auto {
+  color: white;
+  width: 39.2%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw14-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+
+count: false
+ 
+
+.panel1-sw15-auto[
+
+```r
+*ggplot(rickandmorty_afinn_posneg,
+*      aes(index, value, fill = sentiment))
+```
+]
+ 
+.panel2-sw15-auto[
+![](Slides-Week-8-pres_files/figure-html/sw15_auto_01_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw15-auto[
+
+```r
+ggplot(rickandmorty_afinn_posneg,
+       aes(index, value, fill = sentiment)) +
+* geom_bar(stat = "identity",
+*          show.legend = FALSE)
+```
+]
+ 
+.panel2-sw15-auto[
+![](Slides-Week-8-pres_files/figure-html/sw15_auto_02_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw15-auto[
+
+```r
+ggplot(rickandmorty_afinn_posneg,
+       aes(index, value, fill = sentiment)) +
+  geom_bar(stat = "identity",
+           show.legend = FALSE) +
+* theme_minimal()
+```
+]
+ 
+.panel2-sw15-auto[
+![](Slides-Week-8-pres_files/figure-html/sw15_auto_03_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw15-auto[
+
+```r
+ggplot(rickandmorty_afinn_posneg,
+       aes(index, value, fill = sentiment)) +
+  geom_bar(stat = "identity",
+           show.legend = FALSE) +
+  theme_minimal() +
+* scale_fill_manual(values = c("#ffb3ba", "#bae1ff"))
+```
+]
+ 
+.panel2-sw15-auto[
+![](Slides-Week-8-pres_files/figure-html/sw15_auto_04_output-1.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-sw15-auto {
+  color: white;
+  width: 58.8%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw15-auto {
+  color: white;
+  width: 39.2%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw15-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+## NRC Lexicon
+
+.center2[&lt;i&gt;Lexicon labels words with six possible sentiments or emotions: "negative", "positive", "anger", "anticipation", "disgust", "fear", "joy", "sadness", "surprise", or "trust".&lt;/i&gt;]
+
+---
+
+
+count: false
+ 
+
+.panel1-sw16-auto[
+
+```r
+*rickandmorty_filtered
+```
+]
+ 
+.panel2-sw16-auto[
+
+```
+## # A tibble: 122 × 2
+##    word       n
+##    &lt;chr&gt;  &lt;int&gt;
+##  1 gonna    113
+##  2 time      89
+##  3 yeah      78
+##  4 uh        53
+##  5 whoa      53
+##  6 jerry     50
+##  7 god       48
+##  8 guys      48
+##  9 summer    45
+## 10 hey       44
+## # … with 112 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw16-auto[
+
+```r
+rickandmorty_filtered %&gt;%
+* rowid_to_column(var = "index")
+```
+]
+ 
+.panel2-sw16-auto[
+
+```
+## # A tibble: 122 × 3
+##    index word       n
+##    &lt;int&gt; &lt;chr&gt;  &lt;int&gt;
+##  1     1 gonna    113
+##  2     2 time      89
+##  3     3 yeah      78
+##  4     4 uh        53
+##  5     5 whoa      53
+##  6     6 jerry     50
+##  7     7 god       48
+##  8     8 guys      48
+##  9     9 summer    45
+## 10    10 hey       44
+## # … with 112 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw16-auto[
+
+```r
+rickandmorty_filtered %&gt;%
+  rowid_to_column(var = "index") %&gt;%
+* inner_join(get_sentiments("nrc"))
+```
+]
+ 
+.panel2-sw16-auto[
+
+```
+## Joining, by = "word"
+```
+
+```
+## # A tibble: 72 × 4
+##    index word      n sentiment   
+##    &lt;int&gt; &lt;chr&gt; &lt;int&gt; &lt;chr&gt;       
+##  1     2 time     89 anticipation
+##  2     7 god      48 anticipation
+##  3     7 god      48 fear        
+##  4     7 god      48 joy         
+##  5     7 god      48 positive    
+##  6     7 god      48 trust       
+##  7    11 love     37 joy         
+##  8    11 love     37 positive    
+##  9    17 shit     30 anger       
+## 10    17 shit     30 disgust     
+## # … with 62 more rows
+```
+]
+
+&lt;style&gt;
+.panel1-sw16-auto {
+  color: white;
+  width: 58.8%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw16-auto {
+  color: white;
+  width: 39.2%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw16-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+
+```r
+rickandmorty_nrc &lt;- 
+  rickandmorty_filtered %&gt;% 
+  rowid_to_column(var = "index") %&gt;%
+  inner_join(get_sentiments("nrc"))
+```
+
+```
+## Joining, by = "word"
+```
+
+---
+
+
+count: false
+ 
+
+.panel1-sw17-auto[
+
+```r
+*ggplot(rickandmorty_nrc,
+*      aes(index, sentiment,
+*          fill = sentiment))
+```
+]
+ 
+.panel2-sw17-auto[
+![](Slides-Week-8-pres_files/figure-html/sw17_auto_01_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw17-auto[
+
+```r
+ggplot(rickandmorty_nrc,
+       aes(index, sentiment,
+           fill = sentiment)) +
+* geom_bar(stat = "identity",
+*          show.legend = FALSE)
+```
+]
+ 
+.panel2-sw17-auto[
+![](Slides-Week-8-pres_files/figure-html/sw17_auto_02_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw17-auto[
+
+```r
+ggplot(rickandmorty_nrc,
+       aes(index, sentiment,
+           fill = sentiment)) +
+  geom_bar(stat = "identity",
+           show.legend = FALSE) +
+* theme_minimal()
+```
+]
+ 
+.panel2-sw17-auto[
+![](Slides-Week-8-pres_files/figure-html/sw17_auto_03_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw17-auto[
+
+```r
+ggplot(rickandmorty_nrc,
+       aes(index, sentiment,
+           fill = sentiment)) +
+  geom_bar(stat = "identity",
+           show.legend = FALSE) +
+  theme_minimal() +
+* facet_wrap(~sentiment, scales = "free_y",
+*            nrow = 5, ncol = 2)
+```
+]
+ 
+.panel2-sw17-auto[
+![](Slides-Week-8-pres_files/figure-html/sw17_auto_04_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw17-auto[
+
+```r
+ggplot(rickandmorty_nrc,
+       aes(index, sentiment,
+           fill = sentiment)) +
+  geom_bar(stat = "identity",
+           show.legend = FALSE) +
+  theme_minimal() +
+  facet_wrap(~sentiment, scales = "free_y",
+             nrow = 5, ncol = 2) +
+* scale_fill_manual(values = c("#05A4C0", "#85CEDA",
+*                              "#D2A7D8", "#A67BC5",
+*                              "#BB1C8B", "#8D266E",
+*                              "#BE82AF", "#9D4387",
+*                              "#DEC0D7", "#40BDC8",
+*                              "#80D3DB", "#BFE9ED"))
+```
+]
+ 
+.panel2-sw17-auto[
+![](Slides-Week-8-pres_files/figure-html/sw17_auto_05_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw17-auto[
+
+```r
+ggplot(rickandmorty_nrc,
+       aes(index, sentiment,
+           fill = sentiment)) +
+  geom_bar(stat = "identity",
+           show.legend = FALSE) +
+  theme_minimal() +
+  facet_wrap(~sentiment, scales = "free_y",
+             nrow = 5, ncol = 2) +
+  scale_fill_manual(values = c("#05A4C0", "#85CEDA",
+                               "#D2A7D8", "#A67BC5",
+                               "#BB1C8B", "#8D266E",
+                               "#BE82AF", "#9D4387",
+                               "#DEC0D7", "#40BDC8",
+                               "#80D3DB", "#BFE9ED"))
+```
+]
+ 
+.panel2-sw17-auto[
+![](Slides-Week-8-pres_files/figure-html/sw17_auto_06_output-1.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-sw17-auto {
+  color: white;
+  width: 58.8%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw17-auto {
+  color: white;
+  width: 39.2%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw17-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+
+count: false
+ 
+
+.panel1-sw18-auto[
+
+```r
+*ggplot(rickandmorty_nrc,
+*      aes(index, sentiment,
+*          fill = sentiment))
+```
+]
+ 
+.panel2-sw18-auto[
+![](Slides-Week-8-pres_files/figure-html/sw18_auto_01_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw18-auto[
+
+```r
+ggplot(rickandmorty_nrc,
+       aes(index, sentiment,
+           fill = sentiment)) +
+* geom_bar(stat = "identity",
+*          show.legend = FALSE)
+```
+]
+ 
+.panel2-sw18-auto[
+![](Slides-Week-8-pres_files/figure-html/sw18_auto_02_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw18-auto[
+
+```r
+ggplot(rickandmorty_nrc,
+       aes(index, sentiment,
+           fill = sentiment)) +
+  geom_bar(stat = "identity",
+           show.legend = FALSE) +
+* theme_minimal()
+```
+]
+ 
+.panel2-sw18-auto[
+![](Slides-Week-8-pres_files/figure-html/sw18_auto_03_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw18-auto[
+
+```r
+ggplot(rickandmorty_nrc,
+       aes(index, sentiment,
+           fill = sentiment)) +
+  geom_bar(stat = "identity",
+           show.legend = FALSE) +
+  theme_minimal() +
+* facet_wrap(~sentiment, scales = "free_y", nrow = 5, ncol = 2)
+```
+]
+ 
+.panel2-sw18-auto[
+![](Slides-Week-8-pres_files/figure-html/sw18_auto_04_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw18-auto[
+
+```r
+ggplot(rickandmorty_nrc,
+       aes(index, sentiment,
+           fill = sentiment)) +
+  geom_bar(stat = "identity",
+           show.legend = FALSE) +
+  theme_minimal() +
+  facet_wrap(~sentiment, scales = "free_y", nrow = 5, ncol = 2)
+```
+]
+ 
+.panel2-sw18-auto[
+![](Slides-Week-8-pres_files/figure-html/sw18_auto_05_output-1.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-sw18-auto {
+  color: white;
+  width: 58.8%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw18-auto {
+  color: white;
+  width: 39.2%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw18-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+#  That’s It! 
+
+Any questions?
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;center&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;div class="fade_rule"&gt;&lt;/div&gt;  
+&lt;br&gt;&lt;br&gt;
+&lt;/center&gt;
+
+&lt;center&gt;
+&lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;&lt;img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;This work is licensed under a &lt;br /&gt;&lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License&lt;/a&gt;
+&lt;/center&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"navigation": {
+"scroll": false
+}
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

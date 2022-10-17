@@ -1,0 +1,49 @@
+---
+title: "Update the Draft"
+linktitle: "Week 8: Update the Draft"
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  tasks:
+    parent: Deliverables
+    weight: 4
+type: docs
+weight: 2
+editor_options: 
+  chunk_output_type: console
+---
+
+`r blogdown::shortcode("aes-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+<style>
+ul {
+    margin-left: 1.5em
+}
+</style>
+
+
+Expand on your draft to include a 1500-1750 word narrative
+
+1. Make sure you have thoroughly reviewed the four papers from the [Week 8 readings](/readings/08-readings/)
+
+2. Open copy of the following <img src="/logos/word-ico.png" alt="Word icon" width="50">
+
+3. Put your name in the top left corner
+
+4. Amend your document based on the feedback provided from the previous task. Please make sure that you include enough information to have your proposed study stand on its own, in that your descriptions are crystal clear and intentions thoroughly detailed without filler or fluff
+  
+5. Submit this document to <a target="_blank" href="https://ecampus.wvu.edu/">eCampus</a>.<br><br>
+
+<br />
+
+<center>
+<p id="rounded_corners">
+All incremental deliverables can be found on the main <a href="/tasks/#deliverables">Tasks</a> page
+<p>
+</center>

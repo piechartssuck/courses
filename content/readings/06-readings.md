@@ -8,7 +8,7 @@ output:
 menu:
   readings:
     parent: Readings
-    weight: 5
+    weight: 6
 type: docs
 weight: 1
 ---

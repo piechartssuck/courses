@@ -1,0 +1,732 @@
+---
+title: "Sentiment Analysis"
+subtitle: "EDP 618 Week 8"
+author: "Dr. Abhik Roy"
+output: 
+ xaringan::moon_reader:
+   css: ['xaringan-themer.css', 'custom.css']
+   nature:
+     ratio: 16:9
+     highlightStyle: github
+     highlightLines: true
+     countIncrementalSlides: false
+     navigation:
+         scroll: false
+---
+
+<script>
+  function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+  }
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+  MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+    cancel: ["Extension","cancel"],
+    bcancel: ["Extension","cancel"],
+    xcancel: ["Extension","cancel"],
+    cancelto: ["Extension","cancel"]
+  });
+});
+</script>
+
+<style>
+section {
+    display: flex;
+    display: -webkit-flex;
+}
+
+section {
+    height: 600px;
+    width: 60%;
+    margin: auto;
+    border-radius: 21px;
+    background-color: #212121;
+}
+
+.remark-slide-container {
+background: #212121;
+}
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
+}
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
+}
+
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
+}
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
+}
+
+section p {
+    text-align: center;
+    font-size: 30px;
+    background-color: #212121;
+    border-radius: 21px;
+    font-family: Roboto Condensed;
+    font-style: bold;
+    padding: 12px;
+    color: #bff4ee;
+    margin: auto;
+}
+
+#center {
+text-align: center;
+}
+
+#right {
+  text-align: right;
+} 
+
+.center p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.tab {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.obr
+{
+    display:block;
+    margin-top:-15px;
+}
+
+.container {
+  display: flex;
+}
+
+.container > div {
+  flex: 1; /*grow*/
+  margin-right: 40px;
+}
+
+td, th, tr, table {
+    border: 0 !important;
+    border-spacing:0 !important;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: unset !important;
+    color: unset !important;
+  }
+
+tbody > td > tr:hover {
+      background-color: unset !important;
+      color: unset !important;
+  }
+</style>
+
+```{css echo=FALSE}
+.highlight-last-item > ul > li,
+.highlight-last-item > ol > li {
+  opacity: 0.5;
+}
+.highlight-last-item > ul > li:last-of-type,
+.highlight-last-item > ol > li:last-of-type {
+  opacity: 1;
+}
+```
+
+
+```{r echo = FALSE, purl=FALSE}
+xaringanthemer::style_duo(
+  primary_color = "#212121",
+  secondary_color = "#bff4ee",
+  link_color = "#b1ead6",
+  text_bold_color = "#4dc6e2",
+  table_row_border_color = "#212121",
+  table_row_even_background_color = "#212121",
+  footnote_font_size = "0.6em",
+  header_font_google = xaringanthemer::google_font("Roboto Condensed", "700"),
+  text_font_google   = xaringanthemer::google_font("Roboto Condensed", "400")
+)
+
+xaringanExtra::use_xaringan_extra(c("tile_view", 
+                                    "animate_css", 
+                                    "tachyons"))
+
+xaringanExtra::use_logo(
+  image_url = here::here("static", "img", "course_hex.png"),
+  link_url = "https://edp618.asocialdatascientist.com",
+  position = xaringanExtra::css_position(top = "1em", right = "1em")
+)
+```
+
+```{r setup, include=FALSE, purl=FALSE}
+library(tidyverse)
+library(textclean)
+library(knitr)
+library(kableExtra)
+library(fontawesome)
+library(patchwork)
+library(flipbookr)
+library(here)
+library(showtext)
+font_add_google("Roboto Condensed", "roboto")
+showtext_auto()
+
+knitr::opts_chunk$set(echo = TRUE)
+options(knitr.table.format = function() {
+  if (knitr::is_latex_output()) 'latex' else 'pandoc'
+})
+```
+
+```{r echo = FALSE, purl=FALSE}
+xaringanthemer::style_duo(
+  primary_color = "#212121",
+  secondary_color = "#bff4ee",
+  code_inline_background_color = "transparent",
+  code_inline_color = "#b2dfdb",
+  code_highlight_color = "#db6464",
+  table_row_border_color = "#212121",
+  table_row_even_background_color = "#212121",
+  footnote_font_size = "0.6em",
+  header_font_google = xaringanthemer::google_font("Roboto Condensed", "700"),
+  text_font_google   = xaringanthemer::google_font("Roboto Condensed", "400")
+)
+
+xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "tachyons"))
+
+xaringanExtra::use_logo(
+  image_url = here::here("static", "img", "course_hex_alpha.png"),
+  link_url = "https://edp613.asocialdatascientist.com",
+  position = xaringanExtra::css_position(top = "1em", right = "1em")
+  )
+```
+
+```{r functions, echo=FALSE}
+textcolor <- 
+  function(text, color){
+  sprintf("<span style='color: %s;'>%s</span>", color, text)
+    }
+```
+
+---
+
+class: highlight-last-item
+layout: true
+
+---
+
+# Getting Prepped
+
+--
+
+## Opening a Script Setting the working directory
+
+1. Open up RStudio
+
+--
+
+2. Go to `File > New File > R Script`
+
+--
+
+3. Go to `File > Save As` and save the R Script in the same folder as the `csv` file. Name it whatever you want (e.g. **Week 7 R Walkthrough**)
+
+--
+
+4. Run the following command in your RStudio console
+    ```{r echo = TRUE, eval = FALSE}
+    setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+    ```
+
+---
+
+## Loading Packages
+
+--
+
+Please load up the following packages by placing these at the top of your script
+
+```{r echo = TRUE, eval = FALSE}
+library(tidyverse)
+library(tidytext)
+``` 
+
+```{r echo = FALSE, eval = TRUE, message=FALSE}
+suppressMessages(library(tidyverse))
+suppressMessages(library(tidytext))
+suppressMessages(library(textclean))
+``` 
+
+--
+
+You may also want to put 
+
+```{r echo = TRUE, eval = FALSE}
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+```
+
+below the packages so its there
+
+---
+
+## Getting Data 
+
+--
+
+We will be working with scripts from the first three seasons of the show [*Rick and Morty*](https://www.rickandmorty.com/). Run the following to load the data
+
+
+```{r}
+rickmorty <- read_csv("RickAndMortyScripts.csv")
+```
+
+```{r}
+data("stop_words")
+```
+
+---
+
+# Assessing Data
+
+--
+
+We can take a look at the first ten rows of the data by running
+
+```{r}
+head(rickmorty)
+```
+
+---
+
+We can also take a look at the types of columns by running
+
+```{r}
+glimpse(rickmorty)
+```
+
+---
+
+# Wrangling Terms 
+
+---
+
+## Selecting Needed Columns
+
+--
+
+```{r}
+rickmorty_selected <-
+  rickmorty %>%
+  select(index, line)
+
+rickmorty_selected
+```
+
+---
+
+## Getting Rid of Common Terms
+
+```{r}
+tidy_script <-
+  rickmorty_selected %>%
+  unnest_tokens(word, line) %>%
+  anti_join(stop_words)
+
+tidy_script
+```
+
+---
+
+## Counting (Remaining) Terms
+
+---
+
+```{r sw1, include = FALSE}
+tidy_script %>%
+  count(word, sort = TRUE) 
+```
+`r chunk_reveal(chunk_name = "sw1", color = c("white", "white", "white"), width = c(120, 80), float = "top")`
+
+---
+
+## Plotting Term Counts
+
+---
+
+```{r sw2, include = FALSE}
+tidy_script  %>%
+  count(word, sort = TRUE) %>%
+  mutate(word = reorder(word, n)) %>%
+  ggplot(aes(n, word)) +
+  geom_col() +
+  labs(y = NULL) +
+  theme_minimal()
+```
+`r chunk_reveal(chunk_name = "sw2", color = c("white", "white", "white"), width = c(120, 80))`
+
+---
+
+```{r sw3, include = FALSE}
+tidy_script  %>%
+  count(word, sort = TRUE) %>%
+  filter(n > 2) %>%
+  mutate(word = reorder(word, n)) %>%
+  ggplot(aes(n, word)) +
+  geom_col() +
+  labs(y = NULL) +
+  theme_minimal()
+```
+`r chunk_reveal(chunk_name = "sw3", color = c("white", "white", "white"), width = c(120, 80))`
+
+---
+
+```{r sw4, include = FALSE}
+tidy_script  %>%
+  count(word, sort = TRUE) %>%
+  filter(n > 10) %>%
+  mutate(word = reorder(word, n)) %>%
+  ggplot(aes(n, word)) +
+  geom_col() +
+  labs(y = NULL) +
+  theme_minimal()
+```
+`r chunk_reveal(chunk_name = "sw4", color = c("white", "white", "white"), width = c(120, 80))`
+
+---
+
+```{r sw5, include = FALSE}
+tidy_script %>%
+  count(word, sort = TRUE) %>%
+  filter(n > 20) %>%
+  mutate(word = reorder(word, n)) %>%
+  ggplot(aes(n, word)) +
+  geom_col() +
+  labs(y = NULL) +
+  theme_minimal()
+```
+`r chunk_reveal(chunk_name = "sw5", color = c("white", "white", "white"), width = c(120, 80))`
+
+---
+
+## Getting Rid of Unwanted Terms Manually
+
+---
+
+```{r sw6, include = FALSE}
+  rickmorty_selected %>%
+  mutate(line = str_remove_all(line, "Rick")) %>%
+  mutate(line = str_remove_all(line, "Morty")) %>%
+  mutate(line = replace_contraction(line)) %>%
+  unnest_tokens(word, line) %>%
+  anti_join(stop_words) %>%
+  count(word, sort = TRUE) 
+```
+`r chunk_reveal(chunk_name = "sw6", color = c("white", "white", "white"), width = c(120, 80))`
+
+---
+
+```{r}
+tidy_script_nonames <-
+ rickmorty_selected %>%
+  mutate(line = str_remove_all(line, "Rick")) %>%
+  mutate(line = str_remove_all(line, "Morty")) %>%
+  mutate(line = replace_contraction(line)) %>%
+  unnest_tokens(word, line) %>%
+  anti_join(stop_words) %>%
+  count(word, sort = TRUE) 
+```
+
+---
+
+```{r sw7, include = FALSE}
+rickandmorty_filtered %>%
+  filter(n > 20) %>%
+  mutate(word = reorder(word, n)) %>%
+  ggplot(aes(n, word)) +
+  geom_col() +
+  labs(y = NULL) +
+  theme_minimal()
+```
+`r chunk_reveal(chunk_name = "sw7", color = c("white", "white", "white"), width = c(120, 80))`
+
+---
+
+# Sentiment Analysis
+
+--
+
++ is used to determine whether a given text contains negative, positive, or neutral emotions
+
+--
+
++ employs *Natural Language Processing* - computer program to understand human language as it is spoken and writte
+
+---
+
+## Bing Lexicon
+
+.center2[<i>General purpose English sentiment lexicon that categorizes words in a binary fashion, either positive or negative</i>]
+
+---
+
+```{r sw8, include = FALSE}
+rickandmorty_filtered %>%
+  rowid_to_column(var = "index") %>%
+  inner_join(get_sentiments("bing")) %>%
+  pivot_wider(names_from = sentiment, 
+              values_from = n, 
+              values_fill = 0) %>%
+  mutate(sentiment = positive - negative)
+```
+`r chunk_reveal(chunk_name = "sw8", color = c("white", "white", "white"), width = c(100, 100))`
+
+---
+
+```{r}
+rickandmorty_bing <- 
+  rickandmorty_filtered %>%
+  rowid_to_column(var = "index") %>%
+  inner_join(get_sentiments("bing")) %>%
+  pivot_wider(names_from = sentiment, 
+              values_from = n, 
+              values_fill = 0) %>%
+  mutate(sentiment = positive - negative) 
+```
+
+---
+
+```{r sw9, include = FALSE}
+ggplot(rickandmorty_bing, 
+       aes(index, sentiment)) +
+  geom_bar(stat = "identity", 
+           show.legend = FALSE) +
+  theme_minimal() +
+  facet_wrap(~sentiment, scales = "free_y")
+```
+`r chunk_reveal(chunk_name = "sw9", color = c("white", "white", "white"), width = c(120, 80))`
+
+---
+
+## AFINN Lexicon
+
+.center2[<i>Lexicon of English words rated for valence with an integer between minus five (negative) and plus five (positive)</i>]
+
+---
+
+```{r sw10, include = FALSE}
+rickandmorty_filtered %>% 
+  rowid_to_column(var = "index") %>%
+  inner_join(get_sentiments("afinn"))
+```
+`r chunk_reveal(chunk_name = "sw10", color = c("white", "white", "white"), width = c(120, 80))`
+
+---
+
+```{r}
+rickandmorty_afinn <- 
+  rickandmorty_filtered %>% 
+  rowid_to_column(var = "index") %>%
+  inner_join(get_sentiments("afinn"))
+```
+
+---
+
+```{r sw11, include = FALSE}
+ggplot(rickandmorty_afinn, 
+       aes(index, value)) +
+  geom_bar(stat = "identity", 
+           show.legend = FALSE) +
+  theme_minimal() +
+  facet_wrap(~value, scales = "free_y")
+```
+`r chunk_reveal(chunk_name = "sw11", color = c("white", "white", "white"), width = c(120, 80))`
+
+---
+
+```{r sw12, include = FALSE}
+rickandmorty_filtered %>% 
+  rowid_to_column(var = "index") %>%
+  inner_join(get_sentiments("afinn")) %>%
+  mutate(sentiment = if_else(value > 0, 
+                             "positive", 
+                             "negative", 
+                             "NA"))
+```
+`r chunk_reveal(chunk_name = "sw12", color = c("white", "white", "white"), width = c(120, 80))`
+
+---
+
+```{r}
+rickandmorty_afinn_posneg <- 
+  rickandmorty_filtered %>% 
+  rowid_to_column(var = "index") %>%
+  inner_join(get_sentiments("afinn")) %>%
+  mutate(sentiment = if_else(value > 0, 
+                             "positive", 
+                             "negative", 
+                             "NA"))
+```
+
+---
+
+```{r sw13, include = FALSE}
+ggplot(rickandmorty_afinn_posneg, 
+       aes(index, value, fill = sentiment)) +
+  geom_bar(stat = "identity", 
+           show.legend = FALSE) +
+  theme_minimal() 
+```
+`r chunk_reveal(chunk_name = "sw13", color = c("white", "white", "white"), width = c(120, 80))`
+
+---
+
+```{r sw14, include = FALSE}
+ggplot(rickandmorty_afinn_posneg, 
+       aes(index, value, fill = sentiment)) +
+  geom_bar(stat = "identity", 
+           show.legend = FALSE) +
+  theme_minimal() +
+  scale_fill_manual(values = c("tomato", "skyblue"))
+```
+`r chunk_reveal(chunk_name = "sw14", color = c("white", "white", "white"), width = c(120, 80))`
+
+---
+
+```{r sw15, include = FALSE}
+ggplot(rickandmorty_afinn_posneg, 
+       aes(index, value, fill = sentiment)) +
+  geom_bar(stat = "identity", 
+           show.legend = FALSE) +
+  theme_minimal() +
+  scale_fill_manual(values = c("#ffb3ba", "#bae1ff"))
+```
+`r chunk_reveal(chunk_name = "sw15", color = c("white", "white", "white"), width = c(120, 80))`
+
+---
+
+## NRC Lexicon
+
+.center2[<i>Lexicon labels words with six possible sentiments or emotions: "negative", "positive", "anger", "anticipation", "disgust", "fear", "joy", "sadness", "surprise", or "trust".</i>]
+
+---
+
+```{r sw16, include = FALSE}
+rickandmorty_filtered %>% 
+  rowid_to_column(var = "index") %>%
+  inner_join(get_sentiments("nrc"))
+```
+`r chunk_reveal(chunk_name = "sw16", color = c("white", "white", "white"), width = c(120, 80))`
+
+---
+
+```{r}
+rickandmorty_nrc <- 
+  rickandmorty_filtered %>% 
+  rowid_to_column(var = "index") %>%
+  inner_join(get_sentiments("nrc"))
+```
+
+---
+
+```{r sw17, include = FALSE}
+ggplot(rickandmorty_nrc, 
+       aes(index, sentiment, 
+           fill = sentiment)) +
+  geom_bar(stat = "identity", 
+           show.legend = FALSE) +
+  theme_minimal() +
+  facet_wrap(~sentiment, scales = "free_y", 
+             nrow = 5, ncol = 2) + 
+  scale_fill_manual(values = c("#05A4C0", "#85CEDA", 
+                               "#D2A7D8", "#A67BC5", 
+                               "#BB1C8B", "#8D266E", 
+                               "#BE82AF", "#9D4387", 
+                               "#DEC0D7", "#40BDC8", 
+                               "#80D3DB", "#BFE9ED"))
+  
+```
+`r chunk_reveal(chunk_name = "sw17", color = c("white", "white", "white"), width = c(120, 80))`
+
+---
+
+```{r sw18, include = FALSE}
+ggplot(rickandmorty_nrc, 
+       aes(index, sentiment, 
+           fill = sentiment)) +
+  geom_bar(stat = "identity", 
+           show.legend = FALSE) +
+  theme_minimal() +
+  facet_wrap(~sentiment, scales = "free_y", nrow = 5, ncol = 2)
+
+```
+`r chunk_reveal(chunk_name = "sw18", color = c("white", "white", "white"), width = c(120, 80))`
+
+---
+
+#  That’s It! 
+
+Any questions?
+
+--
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<center>
+<br><br>
+<div class="fade_rule"></div>  
+<br><br>
+</center>
+
+<center>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><br />This work is licensed under a <br /><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>
+</center>

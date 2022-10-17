@@ -1,0 +1,96 @@
+---
+title: "Detailing Studies"
+linktitle: "Week 8: Detailing Studies"
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  tasks:
+    parent: Tasks
+    weight: 8
+type: docs
+weight: 1
+---
+
+`r blogdown::shortcode("aes-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+<style>
+img {
+max-width:100%;
+}
+</style>
+
+### In Class Notes
+
+```{=html}
+<center>
+<div class="wrapper">
+    <div class="icon leftright">
+      <div class="tooltip"><span style=width:200px;>Move back and forth using <kbd>←</kbd> and <kbd>→</kbd></span></div>
+      <span><i class="fas fa-map-signs"></i></span></div>
+    <div class="icon info">
+      <div class="tooltip"><span style=width:200px;>Toggle fullscreen by pressing <kbd>F</kbd></span></div>
+      <span><i class="fas fa-expand-alt"></i></span>
+    </div><div class="icon github">
+      <div class="tooltip"><span style=width:200px;>Press <kbd>O</kbd> for and overview of all slides</span></div>
+      <span><i class="far fa-images"></i></span>
+    </div><div class="icon youtube">
+      <div class="tooltip"><span style=width:200px;>Discover more shortcuts by pressing <kbd>H</kbd></span></div>
+      <span><i class="fas fa-info-circle"></i></span>
+    </div>
+</div>
+</center>
+<br>
+```
+
+<center>
+<div class="holder">
+
+<div class="bigcol">
+```{r echo = FALSE, out.width="140%", fig.align='left'}
+knitr::include_url("/slides/Week 8/Slides-Week-8-pres.html")
+```
+</div>
+
+<div class="smallcol">
+```{r echo = FALSE, fig.align='right'}
+html_link <- function() {
+  paste0("<a href='/slides/Week 6/Slides-Week-8-pres.html' target='_blank'>", "<img src='/logos/web-ico.png' alt='Survey Design Page' width='35'>", "</a>")
+}
+
+pdf_link <- function() {
+ paste0("<a href='/slides/Week 6/Slides-Week-8-flat.pdf' target='_blank'>", "<img src='/logos/pdf-ico.png' alt='Survey Design PDF' width='35'>", "</a>")
+}
+
+tibble(
+  
+  html <- c(html_link(),
+            "Larger version of the presentation",
+            "",
+            pdf_link(),
+            "PDF of the presentation")
+  ) %>%
+  kbl(col.names = c(""),
+      "html",
+      escape = FALSE,
+      align = 'c') %>%
+  kable_paper(full_width = FALSE) %>%
+  column_spec(1, width = "25em", extra_css = "padding-left: 200px;") %>%
+  row_spec(1:5, extra_css = 'vertical-align: middle !important;', color = "#ffffff", background = "transparent")
+```
+</div>
+
+</div>
+
+<div class="clear">
+</div>
+</center>
+
+### Develop a Draft
+
+Please begin and finish work on the third deliverable after receiving feedback on the your third submission. More details can be found [here](/deliverables/04-l4/)

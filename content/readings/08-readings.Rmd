@@ -1,6 +1,6 @@
 ---
-title: "Actually Evaluating Interventions"
-linktitle: "Week 6: Actually Evaluating Interventions"
+title: "Detailing Studies"
+linktitle: "Week 8: Detailing Studies"
 toc: true
 output:
   rmarkdown::html_document:
@@ -8,7 +8,7 @@ output:
 menu:
   readings:
     parent: Readings
-    weight: 6
+    weight: 8
 type: docs
 weight: 1
 ---
@@ -27,7 +27,7 @@ loc <- here::here("static", "readings", "EDP618Week6Readings.zip")
 
 downloadthis::download_file(
   path = loc,
-  output_name = "Week 6 Readings",
+  output_name = "Week 8 Readings",
   button_label = "&nbsp;&nbsp;&nbsp;<span style='color:#ffffff'>Download</span>",
   button_type = "primary",
   has_icon = TRUE,
@@ -43,21 +43,30 @@ downloadthis::download_file(
 
 paper <- tibble(
   
-  title = c("<i>Accelerating Mixed Methods
-Research With Natural Language Processing of Big Text Data</i>",
-            "<i>Comparing Grounded Theory and Topic Modeling: Extreme Divergence or Unlikely Convergence?</i>"
+  title = c("<i>A Checklist of Mixed Methods Elements in a Submission for Advancing the Methodology of Mixed Methods Research</i>",
+            "<i>The Journal of Mixed Methods Research Starts a New Decade: Principles for Bringing in the New and Divesting of the Old Language of the Field</i>",
+            "<i>New Requirements to Include the Methodological Contribution in Articles Published in the Journal of Mixed Methods Research</i>",
+            "<i>Publishing a Methodological Mixed Methods Research Article</i>"
             ),
   
-  Source = c("Chang et al. (2021)",
-             "Baumer et al. (2017)"),
+  Source = c("Fetters, M.D. & Molina-Azorin, J.F. (2019a)",
+             "Fetters, M.D. & Molina-Azorin, J.F. (2017)",
+             "Fetters, M.D. & Molina-Azorin, J.F. (2019b)",
+             "Fetters, M.D. & Freshwater, D. (2015)"),
   
   Arrow = c("internal",
+            "internal",
+            "internal",
             "internal"),
   
   Icon = c("", 
+           "",
+           "",
            ""),
   
   Site = c(
+    "",
+    "",
     "",
     ""
   ),
