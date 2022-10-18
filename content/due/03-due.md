@@ -26,10 +26,10 @@ weight: 1
 Description
 </th>
 <th style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Details
+Details<sup>1</sup>
 </th>
 <th style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Link
+Type<sup>2</sup>
 </th>
 </tr>
 </thead>
@@ -42,7 +42,7 @@ Read <i>Covering the Population and Selecting Who to Survey</i> in Dillman, Smyt
 <a href="/readings/03-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://ebookcentral.proquest.com/lib/wvu/reader.action?docID=1762797&amp;ppg=76" target="_blank"><img src="/logos/library-ico.png" alt="Library icon" width="25"></a>
+<a href="https://ebookcentral.proquest.com/lib/wvu/reader.action?docID=1762797&amp;ppg=76" target="_blank"><img src="/logos/library-ico.png" alt="Library icon" width="25"> </a>
 </td>
 </tr>
 <tr>
@@ -53,7 +53,7 @@ Complete the module <span style="color:#ffc787;font-weight:bold"><i>Introduction
 <a href="/modules/03-module/#data-camp"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://www.datacamp.com" target="_blank"><img src="/logos/dc-ico.png" alt="DataCamp icon" width="24"></a>
+<a href="https://www.datacamp.com" target="_blank"><img src="/logos/dc-ico.png" alt="DataCamp icon" width="24"> </a>
 </td>
 </tr>
 <tr>
@@ -64,7 +64,7 @@ Optionally download the package <code><span style="font-size:15px">esquisse</spa
 <a href="/modules/03-module/#codespan-stylefont-size20pxesquissespancode"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="NA" target="_blank"><img src="/logos/Rscript-ico.png" alt="PDF icon" width="30"></a>
+<img src="/logos/Rscript-ico.png" alt="R icon" width="27">
 </td>
 </tr>
 <tr>
@@ -75,7 +75,6 @@ Go through a walkthrough on how to get rid of the particularly annoying Qualtric
 <a href="/walkthroughs/03-walkthrough/#the-qualtrics-plug"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://wvu.qualtrics.com" target="_blank"><img src="/logos/walkthrough-ico.png" alt="Wough icon" width="27"></a>
 </td>
 </tr>
 <tr>
@@ -86,7 +85,7 @@ Go through the slideshow <span style="color:#6ac4cd;font-weight:bold">Sampling</
 <a href="/tasks/03-task/#learn-about-sampling"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="NA" target="_blank"><img src="/logos/slideshow-ico.png" alt="Slideshow icon" width="27"></a>
+<img src="/logos/slideshow-ico.png" alt="Slideshow icon" width="26">
 </td>
 </tr>
 <tr>
@@ -97,9 +96,29 @@ Begin work on your second deliverable <span style="color:#6acda5;font-weight:bol
 <a href="/deliverables/02-l2/"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://ecampus.wvu.edu" target="_blank"><img src="/logos/wvu-gold-ico.png" alt="WVU icon" width="25"></a>
+<a href="https://ecampus.wvu.edu" target="_blank"><img src="/logos/wvu-gold-ico.png" alt="WVU icon" width="26"> </a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;">
+</td>
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;">
+</td>
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;">
 </td>
 </tr>
 </tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>1</sup> contains active links
+</td>
+</tr>
+<tr>
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>2</sup> icons may contain active links
+</td>
+</tr>
+</tfoot>
 </table>
 </center>

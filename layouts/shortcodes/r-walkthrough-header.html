@@ -60,17 +60,24 @@ iframe {
   height: 115px;
 }
 
-td,
-th,
-tr,
-table {
+td, th, tr, table {
     border: 0 !important;
     border-spacing:0 !important;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: unset !important;
+    color: unset !important;
   }
 
-tbody > tr:hover > td {
+tbody > td > tr:hover {
       background-color: unset !important;
       color: unset !important;
+  }
+
+tfoot {
+    text-align: left;
+    font-size: 80%;
+    font-style: italic;
   }
 
 .wrapper{

@@ -26,10 +26,10 @@ weight: 1
 Description
 </th>
 <th style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Details
+Details<sup>1</sup>
 </th>
 <th style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Link
+Type<sup>2</sup>
 </th>
 </tr>
 </thead>
@@ -42,7 +42,7 @@ Read <i>CDC’s Introduction to Evaluation With a Focus on Public Health</i>
 <a href="/readings/01-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://www.cdc.gov/eval/guide/introduction/index.htm" target="_blank"><img src="/logos/web-ico.png" alt="Web icon" width="26"></a>
+<a href="https://www.cdc.gov/eval/guide/introduction/index.htm" target="_blank"><img src="/logos/web-ico.png" alt="Web icon" width="26"> </a>
 </td>
 </tr>
 <tr>
@@ -53,7 +53,7 @@ Read <i>Sample Surveys in Our Electronic World</i> in Dillman, Smyth, & Christia
 <a href="/readings/01-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://ebookcentral.proquest.com/lib/wvu/detail.action?docID=4722459" target="_blank"><img src="/logos/library-ico.png" alt="Library icon" width="25"></a>
+<a href="https://ebookcentral.proquest.com/lib/wvu/detail.action?docID=4722459" target="_blank"><img src="/logos/library-ico.png" alt="Library icon" width="25"> </a>
 </td>
 </tr>
 <tr>
@@ -64,7 +64,7 @@ Read <i>Using Surveys</i> in Hatry, Newcomer, & Wholey (2015)
 <a href="/readings/01-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://www.thetaminusb.com/intro-measurement-r/introduction.html" target="_blank"><img src="/logos/library-ico.png" alt="Library icon" width="25"></a>
+<a href="https://www.thetaminusb.com/intro-measurement-r/introduction.html" target="_blank"><img src="/logos/library-ico.png" alt="Library icon" width="25"> </a>
 </td>
 </tr>
 <tr>
@@ -75,7 +75,7 @@ Install both <b>R</b> and <b>RStudio</b>
 <a href="/resources/install/"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="NA" target="_blank"><img src="/logos/Rscript-ico.png" alt="PDF icon" width="30"></a>
+<img src="/logos/Rscript-ico.png" alt="R icon" width="27">
 </td>
 </tr>
 <tr>
@@ -86,7 +86,7 @@ Complete the module <span style="color:#ffc787;font-weight:bold"><i>Introduction
 <a href="/modules/01-module/#data-camp"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://www.datacamp.com" target="_blank"><img src="/logos/dc-ico.png" alt="DataCamp icon" width="24"></a>
+<a href="https://www.datacamp.com" target="_blank"><img src="/logos/dc-ico.png" alt="DataCamp icon" width="24"> </a>
 </td>
 </tr>
 <tr>
@@ -97,7 +97,7 @@ Take a look at some evaluation checklists at <i>Western Michigan University</i>
 <a href="/resources/evaluation/#checklists"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://wmich.edu/evaluation/checklists" target="_blank"><img src="/logos/web-ico.png" alt="Web icon" width="26"></a>
+<a href="https://wmich.edu/evaluation/checklists" target="_blank"><img src="/logos/web-ico.png" alt="Web icon" width="26"> </a>
 </td>
 </tr>
 <tr>
@@ -108,7 +108,7 @@ Look over some logic models at the <i>University of Wisconsin Extension Program<
 <a href="/resources/evaluation/#logic-models"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://fyi.extension.wisc.edu/programdevelopment/logic-models/" target="_blank"><img src="/logos/web-ico.png" alt="Web icon" width="26"></a>
+<a href="https://fyi.extension.wisc.edu/programdevelopment/logic-models/" target="_blank"><img src="/logos/web-ico.png" alt="Web icon" width="26"> </a>
 </td>
 </tr>
 <tr>
@@ -119,7 +119,7 @@ Get a better idea of program evaluation at <i>Better Evaluation</i>
 <a href="/resources/evaluation/#a-whole-bunch-of-methods"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://www.betterevaluation.org/en" target="_blank"><img src="/logos/web-ico.png" alt="Web icon" width="26"></a>
+<a href="https://www.betterevaluation.org/en" target="_blank"><img src="/logos/web-ico.png" alt="Web icon" width="26"> </a>
 </td>
 </tr>
 <tr>
@@ -130,7 +130,7 @@ Think about terrible survey items by assessing <span style="color:#89cff0;font-w
 <a href="/tasks/01-task/#mulling-bad-survey-questions"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="NA" target="_blank"><img src="/logos/slideshow-ico.png" alt="Survey icon" width="27"></a>
+<img src="/logos/survey-ico.png" alt="Survey icon" width="27">
 </td>
 </tr>
 <tr>
@@ -141,7 +141,7 @@ Get logged into the course Slack page and post on <a style="color:#ff8384;"> #w
 <a href="/tasks/01-task/#class-slack-account-access"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://edp619fall2022.slack.com/" target="_blank"><img src="/logos/slack-ico.png" alt="Slack icon" width="25"></a>
+<a href="https://edp619fall2022.slack.com/" target="_blank"><img src="/logos/slack-ico.png" alt="Slack icon" width="25"> </a>
 </td>
 </tr>
 <tr>
@@ -152,7 +152,7 @@ Verify your Qualtrics account
 <a href="/tasks/01-tasks/#verify-qualtrics-account-login"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="htts://wvu.qualtrics.com" target="_blank"><img src="/logos/qualtrics-ico.png" alt="Qualtrics icon" width="29"></a>
+<a href="htts://wvu.qualtrics.com" target="_blank"><img src="/logos/qualtrics-ico.png" alt="Qualtrics icon" width="29"> </a>
 </td>
 </tr>
 <tr>
@@ -163,7 +163,7 @@ Go through the slideshow <span style="color:#6ac4cd;font-weight:bold">Criterial 
 <a href="/tasks/01-tasks/#learn-about-program-evaluation"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="NA" target="_blank"><img src="/logos/slideshow-ico.png" alt="Slideshow icon" width="27"></a>
+<img src="/logos/slideshow-ico.png" alt="Slideshow icon" width="26">
 </td>
 </tr>
 <tr>
@@ -174,7 +174,7 @@ Review summaries of all course deliverables
 <a href="/tasks/"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="NA" target="_blank"><img src="/logos/webpage-ico.png" alt="Webpage icon" width="27"></a>
+<img src="/logos/webpage-ico.png" alt="Webpage icon" width="27">
 </td>
 </tr>
 <tr>
@@ -185,9 +185,29 @@ Begin your first deliverable <span style="color:#6acda5;font-weight:bold">Establ
 <a href="/deliverables/01-l1/"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="NA" target="_blank"><img src="/logos/wvu-gold-ico.png" alt="WVU icon" width="25"></a>
+<img src="/logos/wvu-gold-ico.png" alt="WVU icon" width="26">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;">
+</td>
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;">
+</td>
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;">
 </td>
 </tr>
 </tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>1</sup> contains active links
+</td>
+</tr>
+<tr>
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>2</sup> icons may contain active links
+</td>
+</tr>
+</tfoot>
 </table>
 </center>

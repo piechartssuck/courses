@@ -26,10 +26,10 @@ weight: 1
 Description
 </th>
 <th style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Details
+Details<sup>1</sup>
 </th>
 <th style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Link
+Type<sup>2</sup>
 </th>
 </tr>
 </thead>
@@ -42,7 +42,7 @@ Read <i>The Effect of Invitation Design on Web Survey Response Rate</i> in Kaplo
 <a href="/readings/08-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="NA" target="_blank"><img src="/logos/pdf-ico.png" alt="PDF icon" width="30"></a>
+<img src="/logos/pdf-ico.png" alt="PDF icon" width="32">
 </td>
 </tr>
 <tr>
@@ -54,7 +54,7 @@ the Impact of Contact Design on Web Survey Participation</i> in Maineri & Van Mo
 <a href="/readings/08-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="NA" target="_blank"><img src="/logos/pdf-ico.png" alt="PDF icon" width="30"></a>
+<img src="/logos/pdf-ico.png" alt="PDF icon" width="32">
 </td>
 </tr>
 <tr>
@@ -65,7 +65,7 @@ Read <i>Mixed-Mode Questionnaires and Survey Implementation</i> in Dillman, Smyt
 <a href="/readings/08-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://ebookcentral.proquest.com/lib/wvu/reader.action?docID=1762797&amp;ppg=418" target="_blank"><img src="/logos/library-ico.png" alt="Library icon" width="25"></a>
+<a href="https://ebookcentral.proquest.com/lib/wvu/reader.action?docID=1762797&amp;ppg=418" target="_blank"><img src="/logos/library-ico.png" alt="Library icon" width="25"> </a>
 </td>
 </tr>
 <tr>
@@ -76,7 +76,7 @@ View a refresher on Linear Regression if needed
 <a href="/modules/08-module/#refresher"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="NA" target="_blank"><img src="/logos/youtube-ico.png" alt="YouTube icon" width="24"></a>
+<img src="/logos/youtube-ico.png" alt="YouTube icon" width="28">
 </td>
 </tr>
 <tr>
@@ -87,7 +87,7 @@ Complete the module <span style="color:#ffc787;font-weight:bold"><i>Modeling wit
 <a href="/modules/08-module/#data-camp"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://www.datacamp.com" target="_blank"><img src="/logos/dc-ico.png" alt="DataCamp icon" width="24"></a>
+<a href="https://www.datacamp.com" target="_blank"><img src="/logos/dc-ico.png" alt="DataCamp icon" width="24"> </a>
 </td>
 </tr>
 <tr>
@@ -98,7 +98,7 @@ Complete and submit the associated <i class="fa-brands fa-r-project"></i> task f
 <a href="/modules/08-module/#r-task"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="NA" target="_blank"><img src="/logos/Rscript-ico.png" alt="PDF icon" width="30"></a>
+<img src="/logos/Rscript-ico.png" alt="R icon" width="27">
 </td>
 </tr>
 <tr>
@@ -109,7 +109,7 @@ Go through the User-friendly Guide to Linear Regression on the Qualtrics website
 <a href="/tasks/08-task/#qualtrics-guide-to-linear-regression"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="NA" target="_blank"><img src="/logos/qualtrics-ico.png" alt="Qualtrics icon" width="29"></a>
+<img src="/logos/qualtrics-ico.png" alt="Qualtrics icon" width="29">
 </td>
 </tr>
 <tr>
@@ -120,9 +120,29 @@ Review <span style="color:#6acda5;font-weight:bold">Disseminate the Survey</span
 <a href="/deliverables/05-l5/"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://ecampus.wvu.edu" target="_blank"><img src="/logos/wvu-gold-ico.png" alt="WVU icon" width="25"></a>
+<a href="https://ecampus.wvu.edu" target="_blank"><img src="/logos/wvu-gold-ico.png" alt="WVU icon" width="26"> </a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;">
+</td>
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;">
+</td>
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;">
 </td>
 </tr>
 </tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>1</sup> contains active links
+</td>
+</tr>
+<tr>
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>2</sup> icons may contain active links
+</td>
+</tr>
+</tfoot>
 </table>
 </center>

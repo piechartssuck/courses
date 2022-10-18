@@ -26,10 +26,10 @@ weight: 1
 Description
 </th>
 <th style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Details
+Details<sup>1</sup>
 </th>
 <th style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Link
+Type<sup>2</sup>
 </th>
 </tr>
 </thead>
@@ -42,7 +42,7 @@ Read <i>The Fundamentals of Writing Questions</i> in Dillman, Smyth, & Christian
 <a href="/readings/04-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://ebookcentral.proquest.com/lib/wvu/reader.action?docID=1762797&amp;ppg=114" target="_blank"><img src="/logos/library-ico.png" alt="Library icon" width="25"></a>
+<a href="https://ebookcentral.proquest.com/lib/wvu/reader.action?docID=1762797&amp;ppg=114" target="_blank"><img src="/logos/library-ico.png" alt="Library icon" width="25"> </a>
 </td>
 </tr>
 <tr>
@@ -53,7 +53,7 @@ Complete the module <span style="color:#ffc787;font-weight:bold"><i>Data Manipul
 <a href="/modules/04-module/#data-camp"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://www.datacamp.com" target="_blank"><img src="/logos/dc-ico.png" alt="DataCamp icon" width="24"></a>
+<a href="https://www.datacamp.com" target="_blank"><img src="/logos/dc-ico.png" alt="DataCamp icon" width="24"> </a>
 </td>
 </tr>
 <tr>
@@ -64,7 +64,7 @@ Complete and submit the associated <i class="fa-brands fa-r-project"></i> task f
 <a href="/modules/04-module/#r-task"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="NA" target="_blank"><img src="/logos/Rscript-ico.png" alt="PDF icon" width="30"></a>
+<img src="/logos/Rscript-ico.png" alt="R icon" width="27">
 </td>
 </tr>
 <tr>
@@ -75,7 +75,7 @@ Go through a walkthrough on how to add vertical spacing to survey items that req
 <a href="/walkthroughs/04-walkthrough/#adding-vertical-space-to-multiple-choice-items"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://wvu.qualtrics.com" target="_blank"><img src="/logos/walkthrough-ico.png" alt="Wough icon" width="27"></a>
+<a href="https://wvu.qualtrics.com" target="_blank"><img src="/logos/walkthrough-ico.png" alt="Walkthrough icon" width="26"> </a>
 </td>
 </tr>
 <tr>
@@ -86,7 +86,7 @@ Go through the slideshow <span style="color:#6ac4cd;font-weight:bold">Survey Des
 <a href="/tasks/04-task/#learn-about-crafting-high-quality-items"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="NA" target="_blank"><img src="/logos/slideshow-ico.png" alt="Slideshow icon" width="27"></a>
+<img src="/logos/slideshow-ico.png" alt="Slideshow icon" width="26">
 </td>
 </tr>
 <tr>
@@ -97,9 +97,29 @@ Submit your second deliverable <span style="color:#6acda5;font-weight:bold">Crea
 <a href="/deliverables/02-l2/"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://ecampus.wvu.edu" target="_blank"><img src="/logos/wvu-gold-ico.png" alt="WVU icon" width="25"></a>
+<a href="https://ecampus.wvu.edu" target="_blank"><img src="/logos/wvu-gold-ico.png" alt="WVU icon" width="26"> </a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;">
+</td>
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;">
+</td>
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;">
 </td>
 </tr>
 </tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>1</sup> contains active links
+</td>
+</tr>
+<tr>
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>2</sup> icons may contain active links
+</td>
+</tr>
+</tfoot>
 </table>
 </center>

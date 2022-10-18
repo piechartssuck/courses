@@ -26,10 +26,10 @@ weight: 1
 Description
 </th>
 <th style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Details
+Details<sup>1</sup>
 </th>
 <th style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Link
+Type<sup>2</sup>
 </th>
 </tr>
 </thead>
@@ -42,7 +42,7 @@ Read <i>How to Write Open- and Closed-Ended Questions</i> in Dillman, Smyth, & C
 <a href="/readings/05-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://ebookcentral.proquest.com/lib/wvu/reader.action?docID=1762797&amp;ppg=147" target="_blank"><img src="/logos/library-ico.png" alt="Library icon" width="25"></a>
+<a href="https://ebookcentral.proquest.com/lib/wvu/reader.action?docID=1762797&amp;ppg=147" target="_blank"><img src="/logos/library-ico.png" alt="Library icon" width="25"> </a>
 </td>
 </tr>
 <tr>
@@ -53,7 +53,7 @@ Read <i>Measurement, Scales, and Scoring</i> in Albano (2020)
 <a href="/readings/05-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://www.thetaminusb.com/intro-measurement-r/measurement.html" target="_blank"><img src="/logos/web-ico.png" alt="Web icon" width="26"></a>
+<a href="https://www.thetaminusb.com/intro-measurement-r/measurement.html" target="_blank"><img src="/logos/web-ico.png" alt="Web icon" width="26"> </a>
 </td>
 </tr>
 <tr>
@@ -64,7 +64,7 @@ Read <i>Reliability</i> in Albano (2020)
 <a href="/readings/05-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://www.thetaminusb.com/intro-measurement-r/reliability.html" target="_blank"><img src="/logos/web-ico.png" alt="Web icon" width="26"></a>
+<a href="https://www.thetaminusb.com/intro-measurement-r/reliability.html" target="_blank"><img src="/logos/web-ico.png" alt="Web icon" width="26"> </a>
 </td>
 </tr>
 <tr>
@@ -75,7 +75,7 @@ Complete the module <span style="color:#ffc787;font-weight:bold"><i>Reshaping Da
 <a href="/modules/05-module/#data-camp"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://www.datacamp.com" target="_blank"><img src="/logos/dc-ico.png" alt="DataCamp icon" width="24"></a>
+<a href="https://www.datacamp.com" target="_blank"><img src="/logos/dc-ico.png" alt="DataCamp icon" width="24"> </a>
 </td>
 </tr>
 <tr>
@@ -86,7 +86,7 @@ Go through a walkthrough on how to reverse code items and internal consistency r
 <a href="/walkthroughs/05-walkthrough/#reverse-coding-and-internal-consistency"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="NA" target="_blank"><img src="/logos/walkthrough-ico.png" alt="Wough icon" width="27"></a>
+<img src="/logos/walkthrough-ico.png" alt="Walkthrough icon" width="26">
 </td>
 </tr>
 <tr>
@@ -97,7 +97,7 @@ Skim through the slideshow <span style="color:#6ac4cd;font-weight:bold">A Very I
 <a href="/tasks/05-task/#some-statistics-in-r"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="NA" target="_blank"><img src="/logos/Rscript-ico.png" alt="PDF icon" width="30"></a>
+<img src="/logos/Rscript-ico.png" alt="R icon" width="27">
 </td>
 </tr>
 <tr>
@@ -108,9 +108,29 @@ Begin <span style="color:#6acda5;font-weight:bold">Refine the Draft</span> after
 <a href="/deliverables/03-l3/"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://ecampus.wvu.edu" target="_blank"><img src="/logos/wvu-gold-ico.png" alt="WVU icon" width="25"></a>
+<a href="https://ecampus.wvu.edu" target="_blank"><img src="/logos/wvu-gold-ico.png" alt="WVU icon" width="26"> </a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;">
+</td>
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;">
+</td>
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;">
 </td>
 </tr>
 </tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>1</sup> contains active links
+</td>
+</tr>
+<tr>
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>2</sup> icons may contain active links
+</td>
+</tr>
+</tfoot>
 </table>
 </center>
