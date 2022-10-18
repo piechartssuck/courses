@@ -245,7 +245,7 @@ xaringanExtra::use_logo(
   )
 ```
 
-```{r functions, echo=FALSE}
+```{r functions, echo=FALSE, purl=FALSE}
 textcolor <- 
   function(text, color){
   sprintf("<span style='color: %s;'>%s</span>", color, text)
@@ -289,7 +289,7 @@ library(tidytext)
 library(textclean)
 ``` 
 
-```{r echo = FALSE, eval = TRUE, message=FALSE}
+```{r echo = FALSE, eval = TRUE, message=FALSE, purl=FALSE}
 suppressMessages(library(tidyverse))
 suppressMessages(library(tidytext))
 suppressMessages(library(textclean))
@@ -505,6 +505,8 @@ rickandmorty_filtered %>%
 
 .center2[<i>General purpose English sentiment lexicon that categorizes words in a binary fashion, either positive or negative</i>]
 
+.footnote[[Opinion Mining, Sentiment Analysis, and Opinion Spam Detection](https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html)]
+
 ---
 
 ```{r sw8, include = FALSE}
@@ -548,6 +550,8 @@ ggplot(rickandmorty_bing,
 ## AFINN Lexicon
 
 .center2[<i>Lexicon of English words rated for valence with an integer between minus five (negative) and plus five (positive)</i>]
+
+.footnote[[afinn project](https://github.com/fnielsen/afinn)]
 
 ---
 
@@ -624,9 +628,11 @@ ggplot(rickandmorty_afinn_posneg,
   geom_bar(stat = "identity", 
            show.legend = FALSE) +
   theme_minimal() +
-  scale_fill_manual(values = c("tomato", "skyblue"))
+  scale_fill_manual(values = c("lightsalmon", "khaki"))
 ```
 `r chunk_reveal(chunk_name = "sw14", color = c("white", "white", "white"), width = c(120, 80))`
+
+.footnote[[Colors in R](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf)]
 
 ---
 
@@ -640,11 +646,15 @@ ggplot(rickandmorty_afinn_posneg,
 ```
 `r chunk_reveal(chunk_name = "sw15", color = c("white", "white", "white"), width = c(120, 80))`
 
+.footnote[[Color Hex Color Codes](https://www.color-hex.com/)]
+
 ---
 
 ## NRC Lexicon
 
 .center2[<i>Lexicon labels words with six possible sentiments or emotions: "negative", "positive", "anger", "anticipation", "disgust", "fear", "joy", "sadness", "surprise", or "trust".</i>]
+
+.footnote[[NRC Word-Emotion Association Lexicon](https://saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm)]
 
 ---
 

@@ -26,10 +26,10 @@ weight: 1
 Description
 </th>
 <th style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Details
+Details<sup>1</sup>
 </th>
 <th style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Link
+Type<sup>2</sup>
 </th>
 </tr>
 </thead>
@@ -42,7 +42,7 @@ Read <i>A Checklist of Mixed Methods Elements in a Submission for Advancing the 
 <a href="/readings/08-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/readings/08-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="PDF icon" width="30"></a>
+<a href="/readings/08-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="PDF icon" width="32"> </a>
 </td>
 </tr>
 <tr>
@@ -53,7 +53,7 @@ Read <i>The Journal of Mixed Methods Research Starts a New Decade: Principles fo
 <a href="/readings/08-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/readings/08-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="PDF icon" width="30"></a>
+<a href="/readings/08-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="PDF icon" width="32"> </a>
 </td>
 </tr>
 <tr>
@@ -64,7 +64,7 @@ Read <i>New Requirements to Include the Methodological Contribution in Articles 
 <a href="/readings/08-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/readings/08-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="PDF icon" width="30"></a>
+<a href="/readings/08-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="PDF icon" width="32"> </a>
 </td>
 </tr>
 <tr>
@@ -75,7 +75,7 @@ Read <i>Publishing a Methodological Mixed Methods Research Article</i> in Fetter
 <a href="/readings/08-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/readings/08-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="PDF icon" width="30"></a>
+<a href="/readings/08-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="PDF icon" width="32"> </a>
 </td>
 </tr>
 <tr>
@@ -86,7 +86,7 @@ Begin the module <span style="color:#ffc787;font-weight:bold"><i>Introduction to
 <a href="/modules/08-module/#data-camp"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://www.datacamp.com" target="_blank"><img src="/logos/dc-ico.png" alt="DataCamp icon" width="24"></a>
+<a href="https://www.datacamp.com" target="_blank"><img src="/logos/dc-ico.png" alt="DataCamp icon" width="24"> </a>
 </td>
 </tr>
 <tr>
@@ -97,7 +97,7 @@ Begin the associated <i class="fa-brands fa-r-project"></i> task for the module
 <a href="/modules/08-module/#r-task"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="NA" target="_blank"><img src="/logos/Rscript-ico.png" alt="PDF icon" width="30"></a>
+<img src="/logos/Rscript-ico.png" alt="R icon" width="27">
 </td>
 </tr>
 <tr>
@@ -108,7 +108,7 @@ Carefully go through chapters 3 and 4 in <i>Text Mining with R: A Tidy Approach<
 <a href="/walkthroughs/08-walkthrough/#tidy-text-mining"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://www.tidytextmining.com" target="_blank"><img src="/logos/web-ico.png" alt="Web icon" width="26"></a>
+<a href="https://www.tidytextmining.com" target="_blank"><img src="/logos/web-ico.png" alt="Web icon" width="26"> </a>
 </td>
 </tr>
 <tr>
@@ -119,7 +119,7 @@ Review the slideshow <span style="color:#6ac4cd;font-weight:bold">Sentiment Anal
 <a href="/tasks/08-task/#inclassnotes"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="NA" target="_blank"><img src="/logos/slideshow-ico.png" alt="Slideshow icon" width="27"></a>
+<img src="/logos/slideshow-ico.png" alt="Slideshow icon" width="26">
 </td>
 </tr>
 <tr>
@@ -130,9 +130,29 @@ Concentrate and submit up on your fourth deliverable <span style="color:#6acda5;
 <a href="/deliverables/04-l4/"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://ecampus.wvu.edu/" target="_blank"><img src="/logos/wvu-gold-ico.png" alt="WVU icon" width="25"></a>
+<a href="https://ecampus.wvu.edu/" target="_blank"><img src="/logos/wvu-gold-ico.png" alt="WVU icon" width="26"> </a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;">
+</td>
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;">
+</td>
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;">
 </td>
 </tr>
 </tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>1</sup> contains active links
+</td>
+</tr>
+<tr>
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>2</sup> icons may contain active links
+</td>
+</tr>
+</tfoot>
 </table>
 </center>

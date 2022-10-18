@@ -333,36 +333,14 @@ rickmorty &lt;- read_csv("RickAndMortyScripts.csv")
 ```
 
 ```
-## 
-                                                                
-Rows: 1905 Columns: 6
-## [36mℹ[39m Rendering ]8;;file:///Users/skynet/Documents/WVU/Teaching/GitHub.nosync/edp618/static/slides/Week 8/Slides-Week-8-flat.Rmd[34mSlides-Week-8-flat.Rmd[39m]8;; into ]8;;file:///Users/skynet/Documents/WVU/Teaching/GitHub.nosync/edp618/static/slides/Week 8/Slides-Week-8-flat.html[32mSlides-Week-8-flat.html[39m]8;;
-## 
-                                                                
-## [36mℹ[39m Rendering ]8;;file:///Users/skynet/Documents/WVU/Teaching/GitHub.nosync/edp618/static/slides/Week 8/Slides-Week-8-flat.Rmd[34mSlides-Week-8-flat.Rmd[39m]8;; into ]8;;file:///Users/skynet/Documents/WVU/Teaching/GitHub.nosync/edp618/static/slides/Week 8/Slides-Week-8-flat.html[32mSlides-Week-8-flat.html[39m]8;;
-
-                                                                
-── Column specification ─────────────────────────────────────────────
-## [36mℹ[39m Rendering ]8;;file:///Users/skynet/Documents/WVU/Teaching/GitHub.nosync/edp618/static/slides/Week 8/Slides-Week-8-flat.Rmd[34mSlides-Week-8-flat.Rmd[39m]8;; into ]8;;file:///Users/skynet/Documents/WVU/Teaching/GitHub.nosync/edp618/static/slides/Week 8/Slides-Week-8-flat.html[32mSlides-Week-8-flat.html[39m]8;;
-
-                                                                
-Delimiter: ","
+## Rows: 1905 Columns: 6
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
 ## chr (3): episode name, name, line
 ## dbl (3): index, season no., episode no.
 ## 
-## [36mℹ[39m Rendering ]8;;file:///Users/skynet/Documents/WVU/Teaching/GitHub.nosync/edp618/static/slides/Week 8/Slides-Week-8-flat.Rmd[34mSlides-Week-8-flat.Rmd[39m]8;; into ]8;;file:///Users/skynet/Documents/WVU/Teaching/GitHub.nosync/edp618/static/slides/Week 8/Slides-Week-8-flat.html[32mSlides-Week-8-flat.html[39m]8;;
-## 
-                                                                
-## 
-## [36mℹ[39m Rendering ]8;;file:///Users/skynet/Documents/WVU/Teaching/GitHub.nosync/edp618/static/slides/Week 8/Slides-Week-8-flat.Rmd[34mSlides-Week-8-flat.Rmd[39m]8;; into ]8;;file:///Users/skynet/Documents/WVU/Teaching/GitHub.nosync/edp618/static/slides/Week 8/Slides-Week-8-flat.html[32mSlides-Week-8-flat.html[39m]8;;
-
-                                                                
-ℹ Use `spec()` to retrieve the full column specification for this data.
-## [36mℹ[39m Rendering ]8;;file:///Users/skynet/Documents/WVU/Teaching/GitHub.nosync/edp618/static/slides/Week 8/Slides-Week-8-flat.Rmd[34mSlides-Week-8-flat.Rmd[39m]8;; into ]8;;file:///Users/skynet/Documents/WVU/Teaching/GitHub.nosync/edp618/static/slides/Week 8/Slides-Week-8-flat.html[32mSlides-Week-8-flat.html[39m]8;;
-
-                                                                
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-## [36mℹ[39m Rendering ]8;;file:///Users/skynet/Documents/WVU/Teaching/GitHub.nosync/edp618/static/slides/Week 8/Slides-Week-8-flat.Rmd[34mSlides-Week-8-flat.Rmd[39m]8;; into ]8;;file:///Users/skynet/Documents/WVU/Teaching/GitHub.nosync/edp618/static/slides/Week 8/Slides-Week-8-flat.html[32mSlides-Week-8-flat.html[39m]8;;
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 ```
 
 
@@ -385,14 +363,14 @@ head(rickmorty)
 
 ```
 ## # A tibble: 6 × 6
-##   index `season no.` `episode no.` `episode name` name  line         
-##   &lt;dbl&gt;        &lt;dbl&gt;         &lt;dbl&gt; &lt;chr&gt;          &lt;chr&gt; &lt;chr&gt;        
-## 1     0            1             1 Pilot          Rick  Morty! You g…
-## 2     1            1             1 Pilot          Morty What, Rick? …
-## 3     2            1             1 Pilot          Rick  I got a surp…
-## 4     3            1             1 Pilot          Morty It's the mid…
-## 5     4            1             1 Pilot          Rick  Come on, I g…
-## 6     5            1             1 Pilot          Morty Ow! Ow! You'…
+##   index `season no.` `episode no.` `episode name` name  line                    
+##   &lt;dbl&gt;        &lt;dbl&gt;         &lt;dbl&gt; &lt;chr&gt;          &lt;chr&gt; &lt;chr&gt;                   
+## 1     0            1             1 Pilot          Rick  Morty! You gotta come o…
+## 2     1            1             1 Pilot          Morty What, Rick? What’s goin…
+## 3     2            1             1 Pilot          Rick  I got a surprise for yo…
+## 4     3            1             1 Pilot          Morty It's the middle of the …
+## 5     4            1             1 Pilot          Rick  Come on, I got a surpri…
+## 6     5            1             1 Pilot          Morty Ow! Ow! You're tugging …
 ```
 
 ---
@@ -407,12 +385,12 @@ glimpse(rickmorty)
 ```
 ## Rows: 1,905
 ## Columns: 6
-## $ index          &lt;dbl&gt; 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13…
-## $ `season no.`   &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,…
-## $ `episode no.`  &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,…
-## $ `episode name` &lt;chr&gt; "Pilot", "Pilot", "Pilot", "Pilot", "Pilot",…
-## $ name           &lt;chr&gt; "Rick", "Morty", "Rick", "Morty", "Rick", "M…
-## $ line           &lt;chr&gt; "Morty! You gotta come on. Jus'... you gotta…
+## $ index          &lt;dbl&gt; 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 1…
+## $ `season no.`   &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…
+## $ `episode no.`  &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…
+## $ `episode name` &lt;chr&gt; "Pilot", "Pilot", "Pilot", "Pilot", "Pilot", "Pilot", "…
+## $ name           &lt;chr&gt; "Rick", "Morty", "Rick", "Morty", "Rick", "Morty", "Ric…
+## $ line           &lt;chr&gt; "Morty! You gotta come on. Jus'... you gotta come with …
 ```
 
 ---
@@ -436,18 +414,18 @@ rickmorty_selected
 
 ```
 ## # A tibble: 1,905 × 2
-##    index line                                                        
-##    &lt;dbl&gt; &lt;chr&gt;                                                       
-##  1     0 Morty! You gotta come on. Jus'... you gotta come with me.   
-##  2     1 What, Rick? What’s going on?                                
-##  3     2 I got a surprise for you, Morty.                            
-##  4     3 It's the middle of the night. What are you talking about?   
-##  5     4 Come on, I got a surprise for you.  Come on, hurry up.      
-##  6     5 Ow! Ow! You're tugging me too hard!                         
-##  7     6 We gotta go, gotta get outta here, come on. Got a surprise …
-##  8     7 What do you think of this... flying vehicle, Morty? I built…
-##  9     8 Yeah, Rick... I-it's great. Is this the surprise?           
-## 10     9 Morty. I had to... I had to do it. I had— I had to— I had t…
+##    index line                                                                   
+##    &lt;dbl&gt; &lt;chr&gt;                                                                  
+##  1     0 Morty! You gotta come on. Jus'... you gotta come with me.              
+##  2     1 What, Rick? What’s going on?                                           
+##  3     2 I got a surprise for you, Morty.                                       
+##  4     3 It's the middle of the night. What are you talking about?              
+##  5     4 Come on, I got a surprise for you.  Come on, hurry up.                 
+##  6     5 Ow! Ow! You're tugging me too hard!                                    
+##  7     6 We gotta go, gotta get outta here, come on. Got a surprise for you Mor…
+##  8     7 What do you think of this... flying vehicle, Morty? I built it outta s…
+##  9     8 Yeah, Rick... I-it's great. Is this the surprise?                      
+## 10     9 Morty. I had to... I had to do it. I had— I had to— I had to make a bo…
 ## # … with 1,895 more rows
 ```
 
@@ -1545,18 +1523,18 @@ count: false
 
 ```
 ## # A tibble: 1,905 × 2
-##    index line                                                        
-##    &lt;dbl&gt; &lt;chr&gt;                                                       
-##  1     0 Morty! You gotta come on. Jus'... you gotta come with me.   
-##  2     1 What, Rick? What’s going on?                                
-##  3     2 I got a surprise for you, Morty.                            
-##  4     3 It's the middle of the night. What are you talking about?   
-##  5     4 Come on, I got a surprise for you.  Come on, hurry up.      
-##  6     5 Ow! Ow! You're tugging me too hard!                         
-##  7     6 We gotta go, gotta get outta here, come on. Got a surprise …
-##  8     7 What do you think of this... flying vehicle, Morty? I built…
-##  9     8 Yeah, Rick... I-it's great. Is this the surprise?           
-## 10     9 Morty. I had to... I had to do it. I had— I had to— I had t…
+##    index line                                                                   
+##    &lt;dbl&gt; &lt;chr&gt;                                                                  
+##  1     0 Morty! You gotta come on. Jus'... you gotta come with me.              
+##  2     1 What, Rick? What’s going on?                                           
+##  3     2 I got a surprise for you, Morty.                                       
+##  4     3 It's the middle of the night. What are you talking about?              
+##  5     4 Come on, I got a surprise for you.  Come on, hurry up.                 
+##  6     5 Ow! Ow! You're tugging me too hard!                                    
+##  7     6 We gotta go, gotta get outta here, come on. Got a surprise for you Mor…
+##  8     7 What do you think of this... flying vehicle, Morty? I built it outta s…
+##  9     8 Yeah, Rick... I-it's great. Is this the surprise?                      
+## 10     9 Morty. I had to... I had to do it. I had— I had to— I had to make a bo…
 ## # … with 1,895 more rows
 ```
 ]
@@ -1577,18 +1555,18 @@ count: false
 
 ```
 ## # A tibble: 1,905 × 2
-##    index line                                                        
-##    &lt;dbl&gt; &lt;chr&gt;                                                       
-##  1     0 Morty! You gotta come on. Jus'... you gotta come with me.   
-##  2     1 What, ? What’s going on?                                    
-##  3     2 I got a surprise for you, Morty.                            
-##  4     3 It's the middle of the night. What are you talking about?   
-##  5     4 Come on, I got a surprise for you.  Come on, hurry up.      
-##  6     5 Ow! Ow! You're tugging me too hard!                         
-##  7     6 We gotta go, gotta get outta here, come on. Got a surprise …
-##  8     7 What do you think of this... flying vehicle, Morty? I built…
-##  9     8 Yeah, ... I-it's great. Is this the surprise?               
-## 10     9 Morty. I had to... I had to do it. I had— I had to— I had t…
+##    index line                                                                   
+##    &lt;dbl&gt; &lt;chr&gt;                                                                  
+##  1     0 Morty! You gotta come on. Jus'... you gotta come with me.              
+##  2     1 What, ? What’s going on?                                               
+##  3     2 I got a surprise for you, Morty.                                       
+##  4     3 It's the middle of the night. What are you talking about?              
+##  5     4 Come on, I got a surprise for you.  Come on, hurry up.                 
+##  6     5 Ow! Ow! You're tugging me too hard!                                    
+##  7     6 We gotta go, gotta get outta here, come on. Got a surprise for you Mor…
+##  8     7 What do you think of this... flying vehicle, Morty? I built it outta s…
+##  9     8 Yeah, ... I-it's great. Is this the surprise?                          
+## 10     9 Morty. I had to... I had to do it. I had— I had to— I had to make a bo…
 ## # … with 1,895 more rows
 ```
 ]
@@ -1610,18 +1588,18 @@ count: false
 
 ```
 ## # A tibble: 1,905 × 2
-##    index line                                                        
-##    &lt;dbl&gt; &lt;chr&gt;                                                       
-##  1     0 ! You gotta come on. Jus'... you gotta come with me.        
-##  2     1 What, ? What’s going on?                                    
-##  3     2 I got a surprise for you, .                                 
-##  4     3 It's the middle of the night. What are you talking about?   
-##  5     4 Come on, I got a surprise for you.  Come on, hurry up.      
-##  6     5 Ow! Ow! You're tugging me too hard!                         
-##  7     6 We gotta go, gotta get outta here, come on. Got a surprise …
-##  8     7 What do you think of this... flying vehicle, ? I built it o…
-##  9     8 Yeah, ... I-it's great. Is this the surprise?               
-## 10     9 . I had to... I had to do it. I had— I had to— I had to mak…
+##    index line                                                                   
+##    &lt;dbl&gt; &lt;chr&gt;                                                                  
+##  1     0 ! You gotta come on. Jus'... you gotta come with me.                   
+##  2     1 What, ? What’s going on?                                               
+##  3     2 I got a surprise for you, .                                            
+##  4     3 It's the middle of the night. What are you talking about?              
+##  5     4 Come on, I got a surprise for you.  Come on, hurry up.                 
+##  6     5 Ow! Ow! You're tugging me too hard!                                    
+##  7     6 We gotta go, gotta get outta here, come on. Got a surprise for you .   
+##  8     7 What do you think of this... flying vehicle, ? I built it outta stuff …
+##  9     8 Yeah, ... I-it's great. Is this the surprise?                          
+## 10     9 . I had to... I had to do it. I had— I had to— I had to make a bomb, .…
 ## # … with 1,895 more rows
 ```
 ]
@@ -1644,18 +1622,18 @@ count: false
 
 ```
 ## # A tibble: 1,905 × 2
-##    index line                                                        
-##    &lt;dbl&gt; &lt;chr&gt;                                                       
-##  1     0 ! You gotta come on. Jus'... you gotta come with me.        
-##  2     1 What, ? What’s going on?                                    
-##  3     2 I got a surprise for you, .                                 
-##  4     3 it is the middle of the night. What are you talking about?  
-##  5     4 Come on, I got a surprise for you.  Come on, hurry up.      
-##  6     5 Ow! Ow! you are tugging me too hard!                        
-##  7     6 We gotta go, gotta get outta here, come on. Got a surprise …
-##  8     7 What do you think of this... flying vehicle, ? I built it o…
-##  9     8 Yeah, ... I-it is great. Is this the surprise?              
-## 10     9 . I had to... I had to do it. I had— I had to— I had to mak…
+##    index line                                                                   
+##    &lt;dbl&gt; &lt;chr&gt;                                                                  
+##  1     0 ! You gotta come on. Jus'... you gotta come with me.                   
+##  2     1 What, ? What’s going on?                                               
+##  3     2 I got a surprise for you, .                                            
+##  4     3 it is the middle of the night. What are you talking about?             
+##  5     4 Come on, I got a surprise for you.  Come on, hurry up.                 
+##  6     5 Ow! Ow! you are tugging me too hard!                                   
+##  7     6 We gotta go, gotta get outta here, come on. Got a surprise for you .   
+##  8     7 What do you think of this... flying vehicle, ? I built it outta stuff …
+##  9     8 Yeah, ... I-it is great. Is this the surprise?                         
+## 10     9 . I had to... I had to do it. I had— I had to— I had to make a bomb, .…
 ## # … with 1,895 more rows
 ```
 ]
@@ -2046,6 +2024,8 @@ rickandmorty_filtered %&gt;%
 
 .center2[&lt;i&gt;General purpose English sentiment lexicon that categorizes words in a binary fashion, either positive or negative&lt;/i&gt;]
 
+.footnote[[Opinion Mining, Sentiment Analysis, and Opinion Spam Detection](https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html)]
+
 ---
 
 
@@ -2385,6 +2365,8 @@ ggplot(rickandmorty_bing,
 ## AFINN Lexicon
 
 .center2[&lt;i&gt;Lexicon of English words rated for valence with an integer between minus five (negative) and plus five (positive)&lt;/i&gt;]
+
+.footnote[[afinn project](https://github.com/fnielsen/afinn)]
 
 ---
 
@@ -2976,7 +2958,7 @@ ggplot(rickandmorty_afinn_posneg,
   geom_bar(stat = "identity",
            show.legend = FALSE) +
   theme_minimal() +
-* scale_fill_manual(values = c("tomato", "skyblue"))
+* scale_fill_manual(values = c("lightsalmon", "khaki"))
 ```
 ]
  
@@ -3012,6 +2994,8 @@ ggplot(rickandmorty_afinn_posneg,
 &lt;/style&gt;
 
 
+
+.footnote[[Colors in R](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf)]
 
 ---
 
@@ -3117,11 +3101,15 @@ ggplot(rickandmorty_afinn_posneg,
 
 
 
+.footnote[[Color Hex Color Codes](https://www.color-hex.com/)]
+
 ---
 
 ## NRC Lexicon
 
 .center2[&lt;i&gt;Lexicon labels words with six possible sentiments or emotions: "negative", "positive", "anger", "anticipation", "disgust", "fear", "joy", "sadness", "surprise", or "trust".&lt;/i&gt;]
+
+.footnote[[NRC Word-Emotion Association Lexicon](https://saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm)]
 
 ---
 

@@ -26,10 +26,10 @@ weight: 1
 Description
 </th>
 <th style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Details
+Details<sup>1</sup>
 </th>
 <th style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Link
+Type<sup>2</sup>
 </th>
 </tr>
 </thead>
@@ -42,7 +42,7 @@ Read <i>Modeling the Use of Mixed Methods–Grounded Theory: Developing Scales f
 <a href="/readings/04-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/readings/04-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="WVU icon" width="30"></a>
+<a href="/readings/04-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="PDF icon" width="32"> </a>
 </td>
 </tr>
 <tr>
@@ -53,7 +53,7 @@ Read <i>Pushing the Integration Envelope: A Network Analysis of Study Abroad Web
 <a href="/readings/04-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/readings/04-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="WVU icon" width="30"></a>
+<a href="/readings/04-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="PDF icon" width="32"> </a>
 </td>
 </tr>
 <tr>
@@ -64,7 +64,7 @@ Read <i>Using Theoretical Models in Mixed Methods Research: An Example from an E
 <a href="/readings/04-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/readings/04-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="WVU icon" width="30"></a>
+<a href="/readings/04-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="PDF icon" width="32"> </a>
 </td>
 </tr>
 <tr>
@@ -75,7 +75,7 @@ Begin the module <span style="color:#ffc787;font-weight:bold"><i>Data Manipulati
 <a href="/modules/04-module/#data-camp"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://www.datacamp.com" target="_blank"><img src="/logos/dc-ico.png" alt="DataCamp icon" width="24"></a>
+<a href="https://www.datacamp.com" target="_blank"><img src="/logos/dc-ico.png" alt="DataCamp icon" width="24"> </a>
 </td>
 </tr>
 <tr>
@@ -86,6 +86,7 @@ Review the slideshow <span style="color:#6ac4cd;font-weight:bold">Single Method 
 <a href="/tasks/04-task/#inclassnotes"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<img src="/logos/slideshow-ico.png" alt="Slideshow icon" width="26">
 </td>
 </tr>
 <tr>
@@ -96,7 +97,7 @@ Create a survey in Qualtrics and present on the corresponding hypothetical mixed
 <a href="/tasks/04-task/#construct-a-survey-for-mixing"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://wvu.ca1.qualtrics.com/" target="_blank"><img src="/logos/qualtrics-ico.png" alt="Qualtrics icon" width="29"></a>
+<a href="https://wvu.ca1.qualtrics.com/" target="_blank"><img src="/logos/qualtrics-ico.png" alt="Qualtrics icon" width="29"> </a>
 </td>
 </tr>
 <tr>
@@ -107,8 +108,29 @@ Finish up on your third deliverable <span style="color:#6acda5;font-weight:bold"
 <a href="/deliverables/03-l3/"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<img src="/logos/wvu-gold-ico.png" alt="WVU icon" width="26">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;">
+</td>
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;">
+</td>
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;">
 </td>
 </tr>
 </tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>1</sup> contains active links
+</td>
+</tr>
+<tr>
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>2</sup> icons may contain active links
+</td>
+</tr>
+</tfoot>
 </table>
 </center>

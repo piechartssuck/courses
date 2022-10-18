@@ -26,10 +26,10 @@ weight: 1
 Description
 </th>
 <th style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Details
+Details<sup>1</sup>
 </th>
 <th style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Link
+Type<sup>2</sup>
 </th>
 </tr>
 </thead>
@@ -43,7 +43,7 @@ Across Methodologies, Methods, and Stakeholder Groups: The Joys, Woes, and Polit
 <a href="/readings/05-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/readings/05-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="WVU icon" width="30"></a>
+<a href="/readings/05-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="PDF icon" width="32"> </a>
 </td>
 </tr>
 <tr>
@@ -54,7 +54,7 @@ Read <i>Mixed Methods in Evaluation: History and Progress</i> in Mertens (2017)
 <a href="/readings/05-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://methods-sagepub-com.wvu.idm.oclc.org/book/mixed-methods-design-in-evaluation/i257.xml" target="_blank"><img src="/logos/library-ico.png" alt="Library icon" width="25"></a>
+<a href="https://methods-sagepub-com.wvu.idm.oclc.org/book/mixed-methods-design-in-evaluation/i257.xml" target="_blank"><img src="/logos/library-ico.png" alt="Library icon" width="25"> </a>
 </td>
 </tr>
 <tr>
@@ -65,7 +65,7 @@ Read <i>Mixed Methods Designs to Evaluate Interventions</i> in Mertens (2017)
 <a href="/readings/05-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://methods-sagepub-com.wvu.idm.oclc.org/book/mixed-methods-design-in-evaluation/i318.xml" target="_blank"><img src="/logos/library-ico.png" alt="Library icon" width="25"></a>
+<a href="https://methods-sagepub-com.wvu.idm.oclc.org/book/mixed-methods-design-in-evaluation/i318.xml" target="_blank"><img src="/logos/library-ico.png" alt="Library icon" width="25"> </a>
 </td>
 </tr>
 <tr>
@@ -77,7 +77,7 @@ Open-Ended Responses: A Mixed Methods Approach</i> in Jacobson, Whyte, & Azzam (
 <a href="/readings/05-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/readings/05-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="WVU icon" width="30"></a>
+<a href="/readings/05-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="PDF icon" width="32"> </a>
 </td>
 </tr>
 <tr>
@@ -88,7 +88,7 @@ Finish the module <span style="color:#ffc787;font-weight:bold"><i>Data Manipulat
 <a href="/modules/05-module/#data-camp"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://www.datacamp.com" target="_blank"><img src="/logos/dc-ico.png" alt="DataCamp icon" width="24"></a>
+<a href="https://www.datacamp.com" target="_blank"><img src="/logos/dc-ico.png" alt="DataCamp icon" width="24"> </a>
 </td>
 </tr>
 <tr>
@@ -99,8 +99,29 @@ Take a look at the criteria for your third deliverable <span style="color:#6acda
 <a href="/deliverables/03-l3/"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<img src="/logos/wvu-gold-ico.png" alt="WVU icon" width="26">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;">
+</td>
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;">
+</td>
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;">
 </td>
 </tr>
 </tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>1</sup> contains active links
+</td>
+</tr>
+<tr>
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>2</sup> icons may contain active links
+</td>
+</tr>
+</tfoot>
 </table>
 </center>

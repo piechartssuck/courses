@@ -26,10 +26,10 @@ weight: 1
 Description
 </th>
 <th style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Details
+Details<sup>1</sup>
 </th>
 <th style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Link
+Type<sup>2</sup>
 </th>
 </tr>
 </thead>
@@ -43,7 +43,7 @@ Research: How is it Done?</i> in Bryman (2006)
 <a href="/readings/02-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/readings/02-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="WVU icon" width="30"></a>
+<a href="/readings/02-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="PDF icon" width="32"> </a>
 </td>
 </tr>
 <tr>
@@ -54,7 +54,7 @@ Read <i>Toward a Conceptual Framework for Mixed-Method Evaluation Designs</i> in
 <a href="/readings/02-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/readings/02-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="WVU icon" width="30"></a>
+<a href="/readings/02-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="PDF icon" width="32"> </a>
 </td>
 </tr>
 <tr>
@@ -65,7 +65,7 @@ Read <i>Crossing Anxious Borders: Teaching Across the Quantitative–Qualitative
 <a href="/readings/02-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/readings/02-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="WVU icon" width="30"></a>
+<a href="/readings/02-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="PDF icon" width="32"> </a>
 </td>
 </tr>
 <tr>
@@ -76,7 +76,7 @@ Read <i>Paradigms Lost and Pragmatism Regained: Methodological Implications of C
 <a href="/readings/02-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/readings/02-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="WVU icon" width="30"></a>
+<a href="/readings/02-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="PDF icon" width="32"> </a>
 </td>
 </tr>
 <tr>
@@ -87,7 +87,7 @@ Finish the module <span style="color:#ffc787;font-weight:bold"><i>Introduction t
 <a href="/modules/02-module/#data-camp"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://www.datacamp.com" target="_blank"><img src="/logos/dc-ico.png" alt="DataCamp icon" width="24"></a>
+<a href="https://www.datacamp.com" target="_blank"><img src="/logos/dc-ico.png" alt="DataCamp icon" width="24"> </a>
 </td>
 </tr>
 <tr>
@@ -98,8 +98,29 @@ Review the slideshow <span style="color:#6ac4cd;font-weight:bold">Mixed Up Model
 <a href="/tasks/01-task/#review-this-weeks-slideshow"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<img src="/logos/slideshow-ico.png" alt="Slideshow icon" width="26">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;">
+</td>
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;">
+</td>
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;">
 </td>
 </tr>
 </tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>1</sup> contains active links
+</td>
+</tr>
+<tr>
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>2</sup> icons may contain active links
+</td>
+</tr>
+</tfoot>
 </table>
 </center>

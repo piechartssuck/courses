@@ -25,6 +25,26 @@ max-width:100%;
 }
 </style>
 
+### Downloads
+
+Download a copy of everything you need to follow along with the presentation^[You will have to unzip this file. If you are unfamiliar with this process, please check the [Unzipping files](/resources/unzipping/) section under Resources for assistance]
+
+<center>
+```{r echo=FALSE,eval=TRUE,message=FALSE,purl=FALSE}
+loc <- here::here("static", "slides", "Week 8", "EDP618Week8Materials.zip")
+
+downloadthis::download_file(
+  path = loc,
+  output_name = "Week 8 Presentation Materials",
+  button_label = "&nbsp;&nbsp;&nbsp;<span style='color:#ffffff'>Download</span>",
+  button_type = "primary",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+</center>
+
 ### In Class Notes
 
 ```{=html}
@@ -92,6 +112,6 @@ tibble(
 </div>
 </center>
 
-### Develop a Draft
+### Update the Draft
 
 Please begin and finish work on the third deliverable after receiving feedback on the your third submission. More details can be found [here](/deliverables/04-l4/)

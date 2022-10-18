@@ -26,10 +26,10 @@ weight: 1
 Description
 </th>
 <th style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Details
+Details<sup>1</sup>
 </th>
 <th style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Link
+Type<sup>2</sup>
 </th>
 </tr>
 </thead>
@@ -43,7 +43,7 @@ Research With Natural Language Processing of Big Text Data</i> in Chang et al. 
 <a href="/readings/06-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/readings/06-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="WVU icon" width="30"></a>
+<a href="/readings/06-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="PDF icon" width="32"> </a>
 </td>
 </tr>
 <tr>
@@ -54,7 +54,7 @@ Read <i>Comparing Grounded Theory and Topic Modeling: Extreme Divergence or Unli
 <a href="/readings/06-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/readings/06-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="WVU icon" width="30"></a>
+<a href="/readings/06-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="PDF icon" width="32"> </a>
 </td>
 </tr>
 <tr>
@@ -65,7 +65,7 @@ Begin the module <span style="color:#ffc787;font-weight:bold"><i>Unsupervised Le
 <a href="/modules/06-module/#data-camp"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://www.datacamp.com" target="_blank"><img src="/logos/dc-ico.png" alt="DataCamp icon" width="24"></a>
+<a href="https://www.datacamp.com" target="_blank"><img src="/logos/dc-ico.png" alt="DataCamp icon" width="24"> </a>
 </td>
 </tr>
 <tr>
@@ -76,7 +76,7 @@ Carefully go through the first two chapters in <i>Text Mining with R: A Tidy App
 <a href="/walkthroughs/06-walkthrough/#tidy-text-mining"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://www.tidytextmining.com" target="_blank"><img src="/logos/web-ico.png" alt="Web icon" width="26"></a>
+<a href="https://www.tidytextmining.com" target="_blank"><img src="/logos/web-ico.png" alt="Web icon" width="26"> </a>
 </td>
 </tr>
 <tr>
@@ -87,6 +87,7 @@ Review the slideshow <span style="color:#6ac4cd;font-weight:bold">The Quasi Expe
 <a href="/tasks/06-task/#inclassnotes"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<img src="/logos/slideshow-ico.png" alt="Slideshow icon" width="26">
 </td>
 </tr>
 <tr>
@@ -97,9 +98,29 @@ Finish up on your third deliverable <span style="color:#6acda5;font-weight:bold"
 <a href="/deliverables/03-l3/"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://ecampus.wvu.edu/" target="_blank"><img src="/logos/wvu-gold-ico.png" alt="WVU icon" width="25"></a>
+<a href="https://ecampus.wvu.edu/" target="_blank"><img src="/logos/wvu-gold-ico.png" alt="WVU icon" width="26"> </a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;">
+</td>
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;">
+</td>
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;">
 </td>
 </tr>
 </tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>1</sup> contains active links
+</td>
+</tr>
+<tr>
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>2</sup> icons may contain active links
+</td>
+</tr>
+</tfoot>
 </table>
 </center>
