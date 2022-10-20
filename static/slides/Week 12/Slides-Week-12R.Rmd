@@ -1,0 +1,706 @@
+---
+title: "Inferentials with `Infer`"
+linktitle: "EDP 613"
+author: "Week 12"
+output: 
+ xaringan::moon_reader:
+   css: xaringan-themer.css
+   nature:
+     ratio: 16:9
+     highlightStyle: github
+     highlightLines: true
+     countIncrementalSlides: false
+     navigation:
+         scroll: false
+---
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+  MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+    cancel: ["Extension","cancel"],
+    bcancel: ["Extension","cancel"],
+    xcancel: ["Extension","cancel"],
+    cancelto: ["Extension","cancel"]
+  });
+});
+</script>
+
+<style>
+section {
+    display: flex;
+    display: -webkit-flex;
+}
+
+section p {
+    margin: auto;
+}
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
+}
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
+}
+
+section {
+    height: 600px;
+    width: 60%;
+    margin: auto;
+    border-radius: 20px;
+    background-color: #212121;
+}
+
+section p {
+    text-align: center;
+    font-size: 30px;
+    background-color: #212121;
+    border-radius: 20px;
+    font-family: Roboto Condensed;
+    font-style: bold;
+    padding: 15px;
+    color: #bff4ee;
+}
+
+#center {
+text-align: center;
+}
+
+.center p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+</style>
+
+```{r setup, include=FALSE, purl=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+library(tidyverse)
+library(infer)
+library(patchwork)
+library(flipbookr)
+library(viridis)
+library(knitr)
+library(kableExtra)
+library(fontawesome)
+library(here)
+library(DT)
+library(scales)
+library(latex2exp)
+library(tweetrmd)
+library(showtext)
+font_add_google("Roboto Condensed", "roboto")
+showtext_auto()
+```
+
+```{r echo = FALSE, purl=FALSE}
+xaringanthemer::style_duo(
+  primary_color = "#212121",
+  secondary_color = "#f4eebf",
+  code_inline_background_color = "transparent",
+  code_inline_color = "#b2dfdb",
+  code_highlight_color = "#db6464",
+  table_row_border_color = "#212121",
+  table_row_even_background_color = "#212121",
+  footnote_font_size = "0.6em",
+  header_font_google = xaringanthemer::google_font("Roboto Condensed", "700"),
+  text_font_google   = xaringanthemer::google_font("Roboto Condensed", "400")
+)
+
+xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "tachyons"))
+
+xaringanExtra::use_logo(
+  image_url = here::here("static", "img", "course_hex_alpha.png"),
+  link_url = "https://edp613.asocialdatascientist.com",
+  position = xaringanExtra::css_position(top = "1em", right = "1em")
+)
+```
+
+# Packages needed and a Note about Icons
+
+Please load up the following packages. Remember to first install the ones you don't have.
+```{r echo = TRUE, eval = FALSE, message=FALSE}
+library(tidyverse)
+library(infer)
+library(patchwork)
+``` 
+
+You may come across the following icons. The table below lists what each means.
+```{r eval = TRUE, echo = FALSE, purl=FALSE}
+forward <- as.character(fontawesome::fa("forward", fill = "
+#4682b4"))
+
+stop <- as.character(fontawesome::fa("stop", fill = "#ff6347"))
+
+link <- as.character(fontawesome::fa("link", fill = "#5cb85c"))
+
+bookmark <- as.character(fontawesome::fa("bookmark", fill = "#faffbd"))
+
+
+icon_desc <- tibble(
+  
+  Icon = c(forward,
+           stop, 
+           link,
+           bookmark),
+  
+  Description = c("Indicates that an example continues on the following slide.",
+                  "Indicates that a section using common syntax has ended.",
+                  "Indicates that there is an active hyperlink on the slide.",
+                  "Indicates that a section covering a concept has ended.")
+  
+)
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE, purl=FALSE}
+kable(icon_desc, 
+      escape = FALSE,
+      align = 'cl') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "40em")
+```
+
+---
+
+# Load up General Social Survey
+
+```{r}
+gss <- 
+  infer::gss
+
+gss %>%
+  head()
+```
+
+--
+
+Check the unique values for each
+
+```{r}
+unique(gss$college)
+unique(gss$income)
+unique(gss$finrela)
+```
+
+---
+
+Let's test the association between income (`income`) and educational attainment (`college`) and family income (`finrela`)
+
+```{r sw1, include = FALSE, echo=TRUE}
+gss %>%
+  filter(finrela != "DK") %>%
+  ggplot() +
+  aes(x = finrela, fill = college) +
+  geom_bar(position = "fill") +
+  scale_fill_brewer(palette = "Pastel1") +
+  theme(axis.text.x = element_text(size = 12,
+                                   angle = 45,
+                                   vjust = 0.5)) +
+  theme_minimal()
+```
+
+`r chunk_reveal(chunk_name = "sw1", color = c("white", "white", "white"), width = c(100, 100))`
+
+.right[`r fa("stop", fill = "#ff6347")`]
+
+---
+
+Now calculate the observed statistic
+
+```{r sw2, include = FALSE}
+gss %>%
+  specify(college ~ finrela) %>% # compare variables
+  hypothesise(null = "independence") %>% # declare null hypothesis
+  calculate(stat = "Chisq") # tell infer what test to run
+```
+
+`r chunk_reveal(chunk_name = "sw2", color = c("white", "white", "white"), width = c(95, 110))`
+
+---
+
+```{r calc-obs-stat-indep, warning = FALSE, message = FALSE}
+observed_indep_statistic <- 
+  gss %>%
+  specify(college ~ finrela) %>%
+  hypothesise(null = "independence") %>%
+  calculate(stat = "Chisq")
+```
+
+---
+
+The observed $\chi^2$ statistic is `r observed_indep_statistic`. Now, we want to compare this statistic to a null distribution, generated under the assumption that these variables are not actually related, to get a sense of how likely it would be for us to see this observed statistic if there were actually no association between education and income.
+
+---
+
+# Null Distribution Simulation
+
+Let's take a look at the ratings
+
+```{r sw3, include = FALSE}
+gss %>%
+  specify(college ~ finrela) %>%
+  assume(distribution = "Chisq")
+
+```
+
+`r chunk_reveal(chunk_name = "sw3", color = c("white", "white", "white"), width = c(95, 115))`
+
+---
+
+```{r}
+null_dist_sim <-
+  gss %>%
+  specify(college ~ finrela) %>%
+  assume(distribution = "Chisq")
+```
+
+---
+
+Either way, it looks like our observed test statistic would be quite unlikely if there were actually no association between education and income. More exactly, we can approximate the *p*-value with `get_p_value`:
+
+---
+
+```{r sw4, include = FALSE}
+gss %>%
+  specify(college ~ finrela) %>%
+  hypothesise(null = "independence") %>%
+  generate(reps = 1000, type = "permute") %>%
+  assume(distribution = "Chisq")
+```
+
+`r chunk_reveal(chunk_name = "sw4", color = c("white", "white", "white"), width = c(95, 115))`
+
+---
+
+```{r}
+null_distribution <- 
+  gss %>%
+  specify(college ~ finrela) %>%
+  hypothesise(null = "independence") %>%
+  generate(reps = 1000, type = "permute") %>%
+  assume(distribution = "Chisq")
+```
+
+---
+
+```{r sw5, include = FALSE}
+null_distribution %>%
+  visualize() +
+  shade_p_value(observed_indep_statistic,
+                direction = "greater")
+```
+
+`r chunk_reveal(chunk_name = "sw5", color = c("white", "white", "white"), width = c(95, 115))`
+
+---
+
+# $\chi^2$ statistic
+
+```{r}
+chisq_stat(gss,
+           college ~ finrela)
+```
+
+---
+
+# $\chi^2$ Goodness of Fit
+
+```{r sw6, include = FALSE}
+gss %>%
+  specify(response = finrela) %>%
+  hypothesise(null = "point",
+              p = c("far below average" = 1/6,
+                    "below average" = 1/6,
+                    "average" = 1/6,
+                    "above average" = 1/6,
+                    "far above average" = 1/6,
+                    "DK" = 1/6)) %>%
+  calculate(stat = "Chisq") 
+```
+
+`r chunk_reveal(chunk_name = "sw6", color = c("white", "white", "white"), width = c(95, 115))`
+
+---
+
+```{r echo=TRUE, eval=TRUE}
+observed_gof_statistic <-
+  gss %>%
+  specify(response = finrela) %>%
+  hypothesise(null = "point",
+              p = c("far below average" = 1/6,
+                    "below average" = 1/6,
+                    "average" = 1/6,
+                    "above average" = 1/6,
+                    "far above average" = 1/6,
+                    "DK" = 1/6)) %>%
+  calculate(stat = "Chisq")
+```
+
+---
+
+```{r echo=TRUE, eval=TRUE}
+null_dist_gof <-
+gss %>%
+  specify(response = finrela) %>%
+  hypothesise(null = "point",
+              p = c("far below average" = 1/6,
+                    "below average" = 1/6,
+                    "average" = 1/6,
+                    "above average" = 1/6,
+                    "far above average" = 1/6,
+                    "DK" = 1/6)) %>%
+  generate(reps = 1000, type = "draw") %>% # we only added this!
+  calculate(stat = "Chisq")
+```
+
+---
+
+```{r sw7, include = FALSE}
+null_dist_gof %>%
+  visualize() +
+  shade_p_value(observed_gof_statistic,
+                direction = "greater") 
+```
+
+`r chunk_reveal(chunk_name = "sw7", color = c("white", "white", "white"), width = c(95, 115))`
+
+---
+
+```{r sw8, include = FALSE}
+gss %>%
+  ggplot() +
+  aes(x = finrela, fill = college) +
+  geom_bar(position = "fill") +
+  scale_fill_brewer(type = "qual") +
+  theme(axis.text.x = element_text(angle = 45, 
+                                   vjust = .5)) +
+    labs(x = "finrela: Self-Identification of Income Class",
+         y = "Proportion") +
+  theme_minimal()
+```
+
+`r chunk_reveal(chunk_name = "sw8", color = c("white", "white", "white"), width = c(95, 115))`
+
+---
+
+- If there were no relationship, we would expect to see the purple bars reaching to the same height, regardless of income class. 
+
+--
+
+- Are the differences we see in the plot just due to random noise?
+
+--
+
+- We can `generate` the null distribution in one of two ways
+
+  - using randomization: approximates the null distribution by permuting the response and explanatory variables, so that each person's educational attainment is matched up with a random income from the sample in order to break up any association between the two
+  
+--
+  
+  - theory-based methods: the general approximation
+
+---
+
+# Generate the null distribution using randomization
+
+```{r sw9, include = FALSE}
+gss %>%
+  specify(college ~ finrela) %>%
+  hypothesize(null = "independence") %>%
+  generate(reps = 1000, type = "permute") %>%
+  calculate(stat = "Chisq")
+```
+
+`r chunk_reveal(chunk_name = "sw9", color = c("white", "white", "white"), width = c(95, 115))`
+
+---
+
+```{r echo=TRUE, eval=TRUE}
+null_dist_sim <- 
+  gss %>%
+  specify(college ~ finrela) %>%
+  hypothesize(null = "independence") %>%
+  generate(reps = 1000, type = "permute") %>%
+  calculate(stat = "Chisq")
+```
+
+---
+
+# Generate the null distribution using theory based methods
+
+```{r sw10, include = FALSE}
+gss %>%
+  specify(college ~ finrela) %>%
+  assume(distribution = "Chisq")
+```
+
+`r chunk_reveal(chunk_name = "sw10", color = c("white", "white", "white"), width = c(95, 115))`
+
+---
+
+```{r echo=TRUE, eval=TRUE}
+null_dist_theory <- 
+  gss %>%
+  specify(college ~ finrela) %>%
+  assume(distribution = "Chisq")
+```
+
+---
+
+# Visualize the randomized null distribution and test statistic
+
+```{r sw11, include = FALSE}
+null_dist_sim %>%
+  visualize() + 
+  shade_p_value(observed_indep_statistic,
+                direction = "greater")
+```
+
+`r chunk_reveal(chunk_name = "sw11", color = c("white", "white", "white"), width = c(95, 115))`
+
+---
+
+# Visualize the *theoretical* null distribution and test statistic
+
+```{r sw12, include = FALSE}
+null_dist_sim %>%
+  visualize() + 
+  shade_p_value(observed_indep_statistic,
+                direction = "greater")
+```
+
+`r chunk_reveal(chunk_name = "sw12", color = c("white", "white", "white"), width = c(95, 115))`
+
+---
+
+# Visualize both null distributions and the test statistic
+
+```{r sw13, include = FALSE}
+null_dist_sim %>%
+  visualize(method = "both") + 
+  shade_p_value(observed_indep_statistic,
+                direction = "greater")
+```
+
+`r chunk_reveal(chunk_name = "sw13", color = c("white", "white", "white"), width = c(95, 115))`
+
+---
+
+# Calculate the *p*-value from the observed statistic and null distribution
+```{r sw14, include = FALSE}
+null_dist_sim %>%
+  get_p_value(obs_stat = observed_indep_statistic,
+              direction = "greater")
+```
+
+`r chunk_reveal(chunk_name = "sw14", color = c("white", "white", "white"), width = c(95, 115))`
+
+---
+
+```{r p-value-indep, warning = FALSE, message = FALSE}
+p_value_independence <- 
+  null_dist_sim %>%
+  get_p_value(obs_stat = observed_indep_statistic,
+              direction = "greater")
+```
+
+---
+
+If there were really no relationship between education and income, our approximation of the probability that we would see a statistic as or more extreme than `r observed_indep_statistic` is approximately `r p_value_independence`
+
+---
+
+# Calculate the *p*-value using the true $\chi^2$ distribution
+
+```{r}
+pchisq(observed_indep_statistic$stat, 
+       5, 
+       lower.tail = FALSE)
+```
+
+--
+
+```{r chisq-indep-wrapper, message = FALSE, warning = FALSE}
+chisq_test(gss, college ~ finrela)
+```
+
+---
+
+Take a look at the self-identified income class of our survey respondents. Suppose our null hypothesis is that `finrela` follows a uniform distribution (i.e. there's actually an equal number of people that describe their income as far below average, below average, average, above average, far above average, or that don't know their income.) 
+
+---
+
+```{r sw15, include = FALSE}
+gss %>%
+  ggplot2::ggplot() +
+  ggplot2::aes(x = finrela) +
+  ggplot2::geom_bar() +
+  ggplot2::geom_hline(yintercept = 466.3, 
+                      col = "red") +
+  ggplot2::labs(x = "finrela: Self-Identification of Income Class",
+                y = "Number of Responses") +
+  theme_minimal()
+```
+
+`r chunk_reveal(chunk_name = "sw15", color = c("white", "white", "white"), width = c(95, 115))`
+
+---
+
+It seems like a uniform distribution may not be the most appropriate description of the data--many more people describe their income as average than than any of the other options. Lets now test whether this difference in distributions is statistically significant.
+
+---
+
+# Calculate the null distribution
+
+```{r sw16, include = FALSE}
+gss %>%
+  specify(response = finrela) %>%
+  hypothesize(null = "point",
+              p = c("far below average" = 1/6,
+                    "below average" = 1/6,
+                    "average" = 1/6,
+                    "above average" = 1/6,
+                    "far above average" = 1/6,
+                    "DK" = 1/6)) %>%
+  calculate(stat = "Chisq")
+```
+
+`r chunk_reveal(chunk_name = "sw16", color = c("white", "white", "white"), width = c(95, 115))`
+
+---
+
+```{r}
+observed_gof_statistic <- gss %>%
+  specify(response = finrela) %>%
+  hypothesize(null = "point",
+              p = c("far below average" = 1/6,
+                    "below average" = 1/6,
+                    "average" = 1/6,
+                    "above average" = 1/6,
+                    "far above average" = 1/6,
+                    "DK" = 1/6)) %>%
+  calculate(stat = "Chisq")
+```
+
+---
+
+# Generate a null distribution assuming each income class is equally likely
+
+```{r sw17, include = FALSE}
+gss %>%
+  specify(response = finrela) %>%
+  hypothesize(null = "point",
+              p = c("far below average" = 1/6,
+                    "below average" = 1/6,
+                    "average" = 1/6,
+                    "above average" = 1/6,
+                    "far above average" = 1/6,
+                    "DK" = 1/6)) %>%
+  generate(reps = 1000, type = "draw") %>%
+  calculate(stat = "Chisq")
+```
+
+`r chunk_reveal(chunk_name = "sw17", color = c("white", "white", "white"), width = c(95, 115))`
+
+---
+
+```{r null-distribution-gof, warning = FALSE, message = FALSE}
+# generating a null distribution, assuming each income class is equally likely
+null_dist_gof <- gss %>%
+  specify(response = finrela) %>%
+  hypothesize(null = "point",
+              p = c("far below average" = 1/6,
+                    "below average" = 1/6,
+                    "average" = 1/6,
+                    "above average" = 1/6,
+                    "far above average" = 1/6,
+                    "DK" = 1/6)) %>%
+  generate(reps = 1000, type = "draw") %>%
+  calculate(stat = "Chisq")
+```
+
+---
+
+# Visualize the null distribution and test statistic
+
+```{r sw18, include = FALSE}
+null_dist_gof %>%
+  visualize() + 
+  shade_p_value(observed_gof_statistic,
+                direction = "greater")
+```
+
+`r chunk_reveal(chunk_name = "sw18", color = c("white", "white", "white"), width = c(95, 115))`
+
+---
+
+# Calculate the *p*-value
+
+```{r sw19, include = FALSE}
+null_dist_gof %>%
+  get_p_value(observed_gof_statistic,
+              direction = "greater")
+```
+
+`r chunk_reveal(chunk_name = "sw19", color = c("white", "white", "white"), width = c(95, 115))`
+
+---
+
+```{r get-p-value-gof, warning = FALSE, message = FALSE}
+p_value_gof <- 
+null_dist_gof %>%
+  get_p_value(observed_gof_statistic,
+              direction = "greater")
+```
+
+---
+
+If each self-identified income class was equally likely to occur, our approximation of the probability that we would see a distribution like the one we did is approximately `r p_value_gof`
+
+---
+
+# Calculate the *p*-value using the true $\chi^2$ distribution
+
+```{r}
+pchisq(observed_gof_statistic$stat, 
+       5, 
+       lower.tail = FALSE)
+```
+
+---
+
+```{r sw20, include = FALSE}
+chisq_test(gss, 
+           response = finrela,
+           p = c("far below average" = 1/6,
+                    "below average" = 1/6,
+                    "average" = 1/6,
+                    "above average" = 1/6,
+                    "far above average" = 1/6,
+                    "DK" = 1/6))
+```
+
+---
+
+## Thats it!
+

@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Bivariate Tables</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Week 9" />
+    <script src="Slides-Week-10_files/header-attrs-2.11/header-attrs.js"></script>
+    <link href="Slides-Week-10_files/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
+    <script src="Slides-Week-10_files/tile-view-0.2.6/tile-view.js"></script>
+    <link href="Slides-Week-10_files/animate.css-3.7.2/animate.xaringan.css" rel="stylesheet" />
+    <link href="Slides-Week-10_files/tachyons-4.12.0/tachyons.min.css" rel="stylesheet" />
+    <script src="Slides-Week-10_files/kePrint-0.0.1/kePrint.js"></script>
+    <link href="Slides-Week-10_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Bivariate Tables
+## EDP 613
+### Week 9
+
+---
+
+
+&lt;style&gt;
+
+&lt;script&gt;
+  function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+  }
+&lt;/script&gt;
+
+.hvr-sweep-to-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+  }
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #761756;
+    -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.center2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+&lt;/style&gt;
+
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 110px;
+height: 128px;
+z-index: 0;
+background-image: url(/Users/skynet/Documents/WVU/Teaching/GitHub.nosync/Workspace/edp613/static/img/course_hex_alpha.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:1em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('a')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = 'https://edp613.asocialdatascientist.com'
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+# &lt;span style='color:#bff4ee;'&gt;A Note About The Slides&lt;/span&gt;
+
+Currently the equations may not show up properly in Firefox. Other browsers such as Chrome and Safari do appear to render them correctly. 
+
+---
+
+# Terms
+
+--
+
+**bivariate** - Doing something with two variables
+
+--
+
+**bivariate analysis** 
+
+--
+
+&gt;- *Formally*: A statistical method to detect and describe the relationship between two nominal or ordinal variables (typically independent and dependent variables) 
+
+--
+
+&gt;- *Nutshell*: Finding out if and how two variables are related to each other
+
+--
+
+**cross-tabulation** 
+
+--
+
+&gt;- *Formally*: A tool for analyzing the relationship between two or more nominal or ordinal variables
+
+--
+
+&gt;- *Nutshell*: A data table to compare the values between two variables
+
+--
+
+&gt;- *Note*: A good approach when establishing "control" variables
+
+---
+
+# Bivariate Tables 
+
+--
+
+&lt;img src="img/bivaraite_table.png" width="40%" style="display: block; margin: auto;" /&gt;
+
+.footnote[*totals* are also known as *marginals*]
+
+---
+
+# Creating a Cross-Tabulation Using Raw Data
+
+--
+
+&gt;- Column totals: Add across columns
+
+
+--
+
+&gt;- Row totals: Add across rows
+
+---
+
+# Example of Cross-Tabulation Using Raw Data
+
+
+
+&lt;table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+&lt;caption&gt;&lt;b&gt;Views on Candy Corn&lt;/b&gt;&lt;/caption&gt;
+ &lt;thead&gt;
+&lt;tr&gt;&lt;th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; padding-right: 4px; padding-left: 4px; background-color: #212121 !important;" colspan="4"&gt;&lt;div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; "&gt;Sentiment&lt;/div&gt;&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;background-color: #212121 !important;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;background-color: #212121 !important;"&gt; Delicious &lt;/th&gt;
+   &lt;th style="text-align:center;background-color: #212121 !important;"&gt; Disgusting &lt;/th&gt;
+   &lt;th style="text-align:center;background-color: #212121 !important;"&gt;  &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; font-weight: bold;"&gt; Yes &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 7 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 11 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; font-weight: bold;background-color: #212121 !important;"&gt; No &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; 9 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; 15 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; font-weight: bold;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 10 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 16 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 26 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+---
+
+# Creating a Cross-Tabulation Using Percents
+
+--
+
+.pull-left[
+&lt;span style='color:#e5a8be;'&gt;&lt;i&gt;Column&lt;/i&gt;&lt;/span&gt; &lt;i&gt;percentages&lt;/i&gt; :&lt;br&gt;&lt;br&gt; Use column totals as a denominator of the row values.
+]
+
+--
+
+.pull-right[
+&lt;span style='color:#61b2e3;'&gt;&lt;i&gt;Row&lt;/i&gt;&lt;/span&gt; &lt;i&gt;percentages&lt;/i&gt; :&lt;br&gt;&lt;br&gt; Use column totals as a denominator of the row values.
+]
+
+--
+
+
+&lt;br&gt;
+&lt;center&gt;
+&lt;i&gt;Note&lt;/i&gt;: Percentages are typically given for the independent variable.
+&lt;/center&gt;
+
+---
+
+
+# Example of Cross-Tabulation Using Percents
+
+
+
+&lt;table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+&lt;caption&gt;&lt;b&gt;Views on Candy Corn&lt;/b&gt;&lt;/caption&gt;
+ &lt;thead&gt;
+&lt;tr&gt;&lt;th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; padding-right: 4px; padding-left: 4px; background-color: #212121 !important;" colspan="4"&gt;&lt;div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; "&gt;Sentiment&lt;/div&gt;&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;background-color: #212121 !important;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;background-color: #212121 !important;"&gt; Delicious &lt;/th&gt;
+   &lt;th style="text-align:center;background-color: #212121 !important;"&gt; Disgusting &lt;/th&gt;
+   &lt;th style="text-align:center;background-color: #212121 !important;"&gt;  &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; font-weight: bold;"&gt; Yes &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 40.00% (4) &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 43.75% (7) &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; 42.30% (11) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; font-weight: bold;background-color: #212121 !important;"&gt; No &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; 60.00% (6) &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; 56.25% (9) &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; 57.69% (15) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; font-weight: bold;"&gt; &lt;i&gt;N&lt;/i&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; (10) &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; (16) &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; (26) &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+-- 
+
+&lt;center&gt;
+
+That is a &lt;b&gt;contingency table&lt;/b&gt;
+
+&lt;/center&gt;
+--
+
+&lt;br&gt;
+&lt;center&gt;
+Specifically a &lt;b&gt;2 x 2 contingency table&lt;/b&gt;
+&lt;/center&gt;
+
+---
+
+# Why Do We Care?
+
+Well we use them if we want to
+
+--
+
+- *partition* the dependent and independent variables 
+
+--
+
+- detect if a relationship *exists* between the dependent and independent variables 
+
+--
+
+- measure how *strong* a relationship may be (known as a *measure of association*)
+
+--
+
+- determine the *direction* of a relationship 
+
+---
+
+# This Way or That Way
+
+The direction of a relationship can be
+
+--
+
+.pull-left[
+**positive** if the dependent and independent both go in the same direction up or down
+]
+  
+--
+
+.pull-right[ 
+**negative** if the dependent and independent go in opposite directions
+]
+
+---
+
+# Example of a Positive Relationship
+
+
+
+&lt;table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+&lt;caption&gt;&lt;b&gt;Health Condition by SES&lt;/b&gt;&lt;/caption&gt;
+ &lt;thead&gt;
+&lt;tr&gt;&lt;th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; padding-right: 4px; padding-left: 4px; background-color: #212121 !important;" colspan="4"&gt;&lt;div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; "&gt;Sentiment&lt;/div&gt;&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;background-color: #212121 !important;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;background-color: #212121 !important;"&gt; Low &lt;/th&gt;
+   &lt;th style="text-align:center;background-color: #212121 !important;"&gt; Middle &lt;/th&gt;
+   &lt;th style="text-align:center;background-color: #212121 !important;"&gt; High &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; font-weight: bold;background-color: #212121 !important;"&gt; Poor &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; 39% (15) &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; 12% (32) &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; 9% (18) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; font-weight: bold;background-color: #212121 !important;"&gt; Fair &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; 36% (14) &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; 45% (114) &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; 28% (57) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; font-weight: bold;background-color: #212121 !important;"&gt; Good &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; 25% (10) &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; 43% (109) &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; 63% (127) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; font-weight: bold;background-color: #212121 !important;"&gt; &lt;i&gt;N&lt;/i&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; (39) &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; (254) &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; (202) &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+*Source: General Social Survey: 1987-1992*
+
+---
+
+# Example of a Negative Relationship
+
+
+
+&lt;table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+&lt;caption&gt;&lt;b&gt;Frequency of Trauma by SES&lt;/b&gt;&lt;/caption&gt;
+ &lt;thead&gt;
+&lt;tr&gt;&lt;th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; padding-right: 4px; padding-left: 4px; background-color: #212121 !important;" colspan="4"&gt;&lt;div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; "&gt;Sentiment&lt;/div&gt;&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;background-color: #212121 !important;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;background-color: #212121 !important;"&gt; Low &lt;/th&gt;
+   &lt;th style="text-align:center;background-color: #212121 !important;"&gt; Middle &lt;/th&gt;
+   &lt;th style="text-align:center;background-color: #212121 !important;"&gt; High &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; font-weight: bold;background-color: #212121 !important;"&gt; Poor &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; 31% (15) &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; 41% (90) &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; 48% (86) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; font-weight: bold;background-color: #212121 !important;"&gt; Fair &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; 22% (10) &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; 42% (92) &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; 20% (36) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; font-weight: bold;background-color: #212121 !important;"&gt; Good &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; 47% (23) &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; 17% (38) &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; 32% (58) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; font-weight: bold;background-color: #212121 !important;"&gt; &lt;i&gt;N&lt;/i&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; (48) &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; (220) &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; background-color: #212121 !important;"&gt; (180) &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+*Source: General Social Survey: 1987-1992*
+
+---
+
+# Other Explanations
+
+--
+
+&lt;center&gt;hours studying &amp; grades&lt;/center&gt;
+
+--
+
+&lt;br&gt;
+&lt;center&gt;partying &amp; assessments&lt;/center&gt;
+
+--
+
+&lt;br&gt;
+&lt;center&gt;sleep &amp; performance&lt;/center&gt;
+
+--
+
+&lt;br&gt;
+&lt;center&gt;Color of your car &amp; how well you do in EDP 613&lt;/center&gt;
+
+--
+
+&lt;br&gt;
+&lt;center&gt;.&lt;/center&gt;
+
+--
+
+&lt;br&gt;
+&lt;center&gt;.&lt;/center&gt;
+
+
+---
+
+# Elaborate 
+
+--
+
+- A **control variable** is a special type of variable that doesn't change. We can use it to compare the possible effects of a treatment.
+
+--
+
+- **Elaboration** is a specific type of bivariate relationship where control variables are introduced.
+
+---
+
+#  Testing for an intervening relationship
+
+- **Intervening variable** - A control variable that follows an independent variable but precedes the dependent variable in a causal sequence
+
+--
+
+- **Intervening relationships** - The control variable intervenes between the independent and dependent variables
+
+---
+
+# Example: Examining two variables before considering a third one
+
+- &lt;span style='color:#78c4a9;'&gt;independent&lt;/span&gt; variable: Attending weekday parties
+
+--
+
+- &lt;span style='color:#e5a8be;'&gt;dependent&lt;/span&gt; variable: Grades
+
+--
+
+- &lt;span style='color:#b5caa8;'&gt;intervening&lt;/span&gt;&lt;/span&gt; variable (maybe): Hours studying
+
+
+---
+
+# Example
+
+- &lt;span style='color:#78c4a9;'&gt;independent&lt;/span&gt; variable: Sale of ice cream
+
+--
+
+- &lt;span style='color:#e5a8be;'&gt;dependent&lt;/span&gt; variable: Number of outdoor crimes
+
+--
+
+- &lt;span style='color:#b5caa8;'&gt;intervening&lt;/span&gt;&lt;/span&gt; variable (maybe): Outdoor temperature
+
+---
+
+###   Testing for a spurious relationship
+
+- **Spurious relationships** - Both the independent variable and the dependent variable are NOT
+
+--
+
+  1. not causally linked
+  
+--
+
+  2. influenced by some third variable 
+  
+--
+
+  3. explained by a control variable
+
+--
+
+- **Nonspurious relationships** - Both the independent variable and the dependent variable
+  - cannot by explained by a control variable
+
+---
+
+# Example
+
+- &lt;span style='color:#78c4a9;'&gt;independent&lt;/span&gt; variable: Number of firefighters at the scene of a crime
+
+--
+
+- &lt;span style='color:#e5a8be;'&gt;dependent&lt;/span&gt; variable: Property damage
+
+--
+
+- Possible cause prior to the control variable: Size of the fire 
+
+---
+
+# Elaborate 
+
+--
+
+- A **control variable** is a special type of variable that doesn't change. We can use it to compare the possible effects of a treatment.
+
+--
+
+- **Elaboration** is a specific type of bivariate relationship where control variables are introduced.
+
+---
+
+# Testing
+
+Elaboration tests 
+
+- are useless on relationships that have been determined like
+
+  - *causal* : At least one variable is found to directly effect another
+  
+--
+
+- include relationships that are 
+
+  - *spurious* : Both an independent and dependent variable are influenced by some third party variable. If the third variable is unknown, it may appear that there is a causal link when there actually isn't one.
+  
+--
+
+  - *intervening* : A control variable that comes after an independent variable but is before the dependent variable in a causal chain
+  
+--
+
+  - *conditional* : An independent variable’s effect on the dependent variable depends something within a control variable
+
+---
+
+#  Testing for a control relationship
+
+&lt;center&gt;
+&lt;b&gt;control relationship&lt;/b&gt; - An independent variable’s effect on the dependent variable depends on, or is conditioned by, a category of a control variable
+&lt;/center&gt;
+
+--
+
+&lt;br&gt;
+&lt;center&gt;
+&lt;i&gt;Note&lt;/i&gt;: The relationship between the independent and dependent variables will change according to the different conditions (or categories) of the control variable
+&lt;/center&gt;
+
+---
+
+# Example: Examining two variables before considering a control 
+
+- &lt;span style='color:#78c4a9;'&gt;independent&lt;/span&gt; variable: Number of toys owned
+
+--
+
+- &lt;span style='color:#e5a8be;'&gt;dependent&lt;/span&gt; variable: Hours spent playing with toys
+
+--
+
+- &lt;span style='color:#BDA8CA;'&gt;conditional&lt;/span&gt;&lt;/span&gt; variable (maybe): SES
+
+---
+
+# Goals of Elaboration
+
+--
+
+1. *to* test for spurious relationships
+
+--
+
+2. *to* clear up the causal sequence of bivariate relationships by finding possible intervening variables
+
+--
+
+3. *to* specify the different conditions under which the original bivariate relationship might hold
+
+---
+
+## That's it. Take a break before our R session!
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;img src="img/sc.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+
+.footnote[See more ridiculous correlations at [spurious correlations](https://www.tylervigen.com/spurious-correlations)]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"navigation": {
+"scroll": false
+}
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

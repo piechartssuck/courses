@@ -1,0 +1,364 @@
+---
+title: "Exploring NFL Ticket Prices in R"
+subtitle: "EDP 613"
+author: "Week 6"
+output: 
+ xaringan::moon_reader:
+   css: xaringan-themer.css
+---
+
+<style>
+section {
+    display: flex;
+    display: -webkit-flex;
+}
+
+section p {
+    margin: auto;
+}
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
+}
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
+}
+
+section {
+    height: 600px;
+    width: 60%;
+    margin: auto;
+    border-radius: 20px;
+    background-color: #212121;
+}
+
+section p {
+    text-align: center;
+    font-size: 30px;
+    background-color: #212121;
+    border-radius: 20px;
+    font-family: Roboto Condensed;
+    font-style: bold;
+    padding: 15px;
+    color: #bff4ee;
+}
+
+#center {
+text-align: center;
+}
+
+.center p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  
+.center2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+</style>
+
+```{r setup, include=FALSE, purl=FALSE}
+library(tidyverse)
+library(psych)
+library(tigerstats)
+library(here)
+library(flipbookr)
+```
+
+```{r echo = FALSE, purl=FALSE}
+xaringanthemer::style_duo(
+  primary_color = "#212121",
+  secondary_color = "#bff4ee",
+  code_inline_background_color = "transparent",
+  code_inline_color = "#b2dfdb",
+  code_highlight_color = "#db6464",
+  table_row_border_color = "#212121",
+  table_row_even_background_color = "#212121",
+  footnote_font_size = "0.6em",
+  header_font_google = xaringanthemer::google_font("Roboto Condensed", "700"),
+  text_font_google   = xaringanthemer::google_font("Roboto Condensed", "400")
+)
+
+xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "tachyons"))
+
+xaringanExtra::use_logo(
+  image_url = here::here("static", "img", "course_hex_alpha.png"),
+  link_url = "https://edp613.asocialdatascientist.com",
+  position = xaringanExtra::css_position(top = "1em", right = "1em")
+  )
+```
+
+```{r echo = FALSE, eval = TRUE, message=FALSE}
+library(tidyverse)
+``` 
+
+# Bring in the data set
+
+```{r echo = FALSE, eval = TRUE}
+prices <- 
+  read_csv(here::here("static", "slides", "Week 6", "2014-average-ticket-price.csv"))
+```
+
+```{r echo = TRUE, eval = FALSE}
+prices <- 
+  read_csv("2014-average-ticket-price.csv")
+```
+---
+
+# Take a look at the entire frame...
+
+```{r echo = TRUE, eval = TRUE}
+prices
+```
+
+---
+
+# ...or just the first six rows
+
+```{r echo = TRUE, eval = TRUE}
+head(prices)
+```
+---
+
+## 1. What was the average ticket price for all 2014-2015 NFL games?
+
+```{r echo = TRUE, eval = TRUE, out.width="50%", fig.align='center'}
+hist(prices$AverageTP)
+```
+
+---
+
+## 2. What was the average ticket price for all 2014-2015 NFL games by division? Provide counts and a histogram.
+
+```{r echo = TRUE, eval = TRUE}
+unique(prices$Division)
+```
+
+---
+
+### Cases
+
+```{r echo = TRUE, eval = TRUE}
+afc_north <- filter(prices, Division == "AFC North")
+afc_east <- filter(prices, Division == "AFC East")
+afc_west <- filter(prices, Division == "AFC West")
+afc_south <- filter(prices, Division == "AFC South")
+nfc_north <- filter(prices, Division == "NFC North")
+nfc_east <- filter(prices, Division == "NFC East")
+nfc_west <- filter(prices, Division == "NFC West")
+nfc_south <- filter(prices, Division == "NFC South")
+```
+
+---
+
+## Check
+
+```{r echo = TRUE, eval = TRUE}
+afc_north 
+```
+
+---
+
+## AFC North
+
+```{r echo = TRUE, eval = TRUE, out.width="50%", fig.align='center'}
+hist(afc_north$AverageTP)
+```
+
+---
+
+## AFC East: 
+
+```{r echo = TRUE, eval = TRUE, out.width="50%", fig.align='center'}
+hist(afc_east$AverageTP)
+```
+
+---
+
+## AFC West: 
+
+```{r echo = TRUE, eval = TRUE, out.width="50%", fig.align='center'}
+hist(afc_west$AverageTP)
+```
+
+---
+
+## AFC South: 
+
+
+```{r echo = TRUE, eval = TRUE, out.width="50%", fig.align='center'}
+hist(afc_south$AverageTP)
+```
+
+---
+
+## NFC North: 
+
+
+```{r echo = TRUE, eval = TRUE, out.width="50%", fig.align='center'}
+hist(nfc_north$AverageTP)
+```
+
+---
+
+## NFC East: 
+
+<center>
+```{r echo = TRUE, eval = TRUE, out.width="50%", fig.align='center'}
+hist(nfc_east$AverageTP)
+```
+
+---
+
+## NFC West: 
+
+<center>
+```{r echo = TRUE, eval = TRUE, out.width="50%", fig.align='center'}
+hist(nfc_west$AverageTP)
+```
+
+---
+
+## NFC South: 
+
+```{r echo = TRUE, eval = TRUE, out.width="50%", fig.align='center'}
+hist(nfc_south$AverageTP)
+```
+
+---
+
+## AFC: 
+
+```{r echo = TRUE, eval = TRUE}
+median(afc_north$AverageTP, na.rm = TRUE)
+```
+
+```{r echo = TRUE, eval = TRUE}
+median(afc_east$AverageTP, na.rm = TRUE)
+```
+
+```{r echo = TRUE, eval = TRUE}
+median(afc_west$AverageTP, na.rm = TRUE)
+```
+
+```{r echo = TRUE, eval = TRUE}
+median(afc_south$AverageTP, na.rm = TRUE)
+```
+
+---
+
+## NFC
+
+```{r echo = TRUE, eval = TRUE}
+median(nfc_north$AverageTP, na.rm = TRUE)
+```
+
+```{r echo = TRUE, eval = TRUE}
+median(nfc_east$AverageTP, na.rm = TRUE)
+```
+
+```{r echo = TRUE, eval = TRUE}
+median(nfc_west$AverageTP, na.rm = TRUE)
+```
+
+```{r echo = TRUE, eval = TRUE}
+median(nfc_south$AverageTP, na.rm = TRUE)
+```
+
+---
+
+## 3. How likely was it be for a fan of an AFC North team to play $100 for a ticket during the 2014-2015 NFL season?
+
+```{r echo = TRUE, eval = TRUE}
+x = 100
+mu_afc_north = mean(afc_north$AverageTP)
+sigma_afc_north = sd(afc_north$AverageTP)
+```
+
+```{r echo = TRUE, eval = TRUE}
+z_score_afc_north = (x - mu_afc_north)/sigma_afc_north
+z_score_afc_north
+
+pnorm(z_score_afc_north)
+```
+
+
+---
+
+
+```{r echo = TRUE, eval = TRUE}
+mu_afc_north
+
+pnorm(x, mu_afc_north, sigma_afc_north)
+```
+
+---
+
+```{r echo = TRUE, eval = TRUE, out.width="50%",  fig.align='center'}
+pnormGC(x, 
+        region = "below",
+        mean = mu_afc_north,
+        sd = sigma_afc_north,
+        graph = TRUE)
+```
+
+---
+
+```{r echo = TRUE, eval = TRUE, out.width="40%",  fig.align='center'}
+ggplot(afc_north, aes(x = str_wrap(Event, 30), y = AverageTP, fill = AverageTP)) +
+  geom_col(show.legend = FALSE) +
+  geom_hline(aes(yintercept = median(AverageTP)), color = "#ee4035", size = 2, alpha = 0.5) +
+  geom_hline(aes(yintercept = mean(AverageTP)), color = "#0392cf", size = 2, alpha = 0.5) +
+  scale_fill_gradient(low = "#e5c3c6", high ="#bcd2d0") +
+  ggtitle("Histogram of Average AFC North Ticket Prices by Event") +
+  xlab("Event") +
+  ylab("Price") +
+  theme_minimal()  +
+  theme(axis.text.x = element_text(angle = 90),
+        panel.grid.major.x = element_blank(),
+        panel.grid.minor = element_blank())
+```
+
+---
+
+```{r echo = FALSE, eval = TRUE, out.width="80%",  fig.align='center'}
+ggplot(afc_north, aes(x = str_wrap(Event, 30), y = AverageTP, fill = AverageTP)) +
+  geom_col(show.legend = FALSE) +
+  geom_hline(aes(yintercept = median(AverageTP)), color = "#ee4035", size = 2, alpha = 0.5) +
+  geom_hline(aes(yintercept = mean(AverageTP)), color = "#0392cf", size = 2, alpha = 0.5) +
+  scale_fill_gradient(low = "#e5c3c6", high ="#bcd2d0") +
+  ggtitle("Histogram of Average AFC North Ticket Prices by Event") +
+  xlab("Event") +
+  ylab("Price") +
+  theme_minimal()  +
+  theme(axis.text.x = element_text(angle = 90),
+        panel.grid.major.x = element_blank(),
+        panel.grid.minor = element_blank())
+```
+
+---
+
+## Thats it!

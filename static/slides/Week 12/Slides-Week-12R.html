@@ -1,0 +1,3312 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Inferentials with Infer</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Week 12" />
+    <script src="Slides-Week-12R_files/header-attrs-2.11/header-attrs.js"></script>
+    <link href="Slides-Week-12R_files/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
+    <script src="Slides-Week-12R_files/tile-view-0.2.6/tile-view.js"></script>
+    <link href="Slides-Week-12R_files/animate.css-3.7.2/animate.xaringan.css" rel="stylesheet" />
+    <link href="Slides-Week-12R_files/tachyons-4.12.0/tachyons.min.css" rel="stylesheet" />
+    <script src="Slides-Week-12R_files/kePrint-0.0.1/kePrint.js"></script>
+    <link href="Slides-Week-12R_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Inferentials with <code>Infer</code>
+### Week 12
+
+---
+
+
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/x-mathjax-config"&gt;
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+  MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+    cancel: ["Extension","cancel"],
+    bcancel: ["Extension","cancel"],
+    xcancel: ["Extension","cancel"],
+    cancelto: ["Extension","cancel"]
+  });
+});
+&lt;/script&gt;
+
+&lt;style&gt;
+section {
+    display: flex;
+    display: -webkit-flex;
+}
+
+section p {
+    margin: auto;
+}
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
+}
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
+}
+
+section {
+    height: 600px;
+    width: 60%;
+    margin: auto;
+    border-radius: 20px;
+    background-color: #212121;
+}
+
+section p {
+    text-align: center;
+    font-size: 30px;
+    background-color: #212121;
+    border-radius: 20px;
+    font-family: Roboto Condensed;
+    font-style: bold;
+    padding: 15px;
+    color: #bff4ee;
+}
+
+#center {
+text-align: center;
+}
+
+.center p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+&lt;/style&gt;
+
+
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 110px;
+height: 128px;
+z-index: 0;
+background-image: url(/Users/skynet/Documents/WVU/Teaching/GitHub.nosync/Workspace/edp613/static/img/course_hex_alpha.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:1em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('a')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = 'https://edp613.asocialdatascientist.com'
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+# Packages needed and a Note about Icons
+
+Please load up the following packages. Remember to first install the ones you don't have.
+
+```r
+library(tidyverse)
+library(infer)
+library(patchwork)
+```
+
+You may come across the following icons. The table below lists what each means.
+
+
+&lt;table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;"&gt; Icon &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Description &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; &lt;svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:
+#4682b4;overflow:visible;position:relative;"&gt;&lt;path d="M500.5 231.4l-192-160C287.9 54.3 256 68.6 256 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2zm-256 0l-192-160C31.9 54.3 0 68.6 0 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2z"&gt;&lt;/path&gt;&lt;/svg&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 40em; "&gt; Indicates that an example continues on the following slide. &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; &lt;svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#ff6347;overflow:visible;position:relative;"&gt;&lt;path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z"&gt;&lt;/path&gt;&lt;/svg&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 40em; "&gt; Indicates that a section using common syntax has ended. &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; &lt;svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#5cb85c;overflow:visible;position:relative;"&gt;&lt;path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"&gt;&lt;/path&gt;&lt;/svg&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 40em; "&gt; Indicates that there is an active hyperlink on the slide. &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; &lt;svg aria-hidden="true" role="img" viewbox="0 0 384 512" style="height:1em;width:0.75em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#faffbd;overflow:visible;position:relative;"&gt;&lt;path d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z"&gt;&lt;/path&gt;&lt;/svg&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 40em; "&gt; Indicates that a section covering a concept has ended. &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+# Load up General Social Survey
+
+
+```
+## # A tibble: 6 × 11
+##    year   age sex    college   partyid hompop hours income  class finrela weight
+##   &lt;dbl&gt; &lt;dbl&gt; &lt;fct&gt;  &lt;fct&gt;     &lt;fct&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;ord&gt;   &lt;fct&gt; &lt;fct&gt;    &lt;dbl&gt;
+## 1  2014    36 male   degree    ind          3    50 $25000… midd… below …  0.896
+## 2  1994    34 female no degree rep          4    31 $20000… work… below …  1.08 
+## 3  1998    24 male   degree    ind          1    40 $25000… work… below …  0.550
+## 4  1996    42 male   no degree ind          4    40 $25000… work… above …  1.09 
+## 5  1994    31 male   degree    rep          2    40 $25000… midd… above …  1.08 
+## 6  1996    32 female no degree rep          4    53 $25000… midd… average  1.09
+```
+
+--
+
+Check the unique values for each
+
+
+```
+## [1] degree    no degree
+## Levels: no degree degree
+```
+
+```
+##  [1] $25000 or more $20000 - 24999 $15000 - 19999 $8000 to 9999  $10000 - 14999
+##  [6] $5000 to 5999  $6000 to 6999  $4000 to 4999  $1000 to 2999  $7000 to 7999 
+## [11] $3000 to 3999  lt $1000      
+## 12 Levels: lt $1000 &lt; $1000 to 2999 &lt; $3000 to 3999 &lt; ... &lt; $25000 or more
+```
+
+```
+## [1] below average     above average     average           far below average
+## [5] DK                far above average
+## 6 Levels: far below average below average average ... DK
+```
+
+---
+
+Let's test the association between income (`income`) and educational attainment (`college`) and family income (`finrela`)
+
+
+
+count: false
+ 
+
+.panel1-sw1-auto[
+
+```r
+*gss
+```
+]
+ 
+.panel2-sw1-auto[
+
+```
+## # A tibble: 500 × 11
+##     year   age sex    college   partyid hompop hours income class finrela weight
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;fct&gt;  &lt;fct&gt;     &lt;fct&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;ord&gt;  &lt;fct&gt; &lt;fct&gt;    &lt;dbl&gt;
+##  1  2014    36 male   degree    ind          3    50 $2500… midd… below …  0.896
+##  2  1994    34 female no degree rep          4    31 $2000… work… below …  1.08 
+##  3  1998    24 male   degree    ind          1    40 $2500… work… below …  0.550
+##  4  1996    42 male   no degree ind          4    40 $2500… work… above …  1.09 
+##  5  1994    31 male   degree    rep          2    40 $2500… midd… above …  1.08 
+##  6  1996    32 female no degree rep          4    53 $2500… midd… average  1.09 
+##  7  1990    48 female no degree dem          2    32 $2500… work… below …  1.06 
+##  8  2016    36 female degree    ind          1    20 $2500… midd… above …  0.478
+##  9  2000    30 female degree    rep          5    40 $2500… midd… average  1.10 
+## 10  1998    33 female no degree dem          2    40 $1500… work… far be…  0.550
+## # … with 490 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1-auto[
+
+```r
+gss %&gt;%
+* filter(finrela != "DK")
+```
+]
+ 
+.panel2-sw1-auto[
+
+```
+## # A tibble: 495 × 11
+##     year   age sex    college   partyid hompop hours income class finrela weight
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;fct&gt;  &lt;fct&gt;     &lt;fct&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;ord&gt;  &lt;fct&gt; &lt;fct&gt;    &lt;dbl&gt;
+##  1  2014    36 male   degree    ind          3    50 $2500… midd… below …  0.896
+##  2  1994    34 female no degree rep          4    31 $2000… work… below …  1.08 
+##  3  1998    24 male   degree    ind          1    40 $2500… work… below …  0.550
+##  4  1996    42 male   no degree ind          4    40 $2500… work… above …  1.09 
+##  5  1994    31 male   degree    rep          2    40 $2500… midd… above …  1.08 
+##  6  1996    32 female no degree rep          4    53 $2500… midd… average  1.09 
+##  7  1990    48 female no degree dem          2    32 $2500… work… below …  1.06 
+##  8  2016    36 female degree    ind          1    20 $2500… midd… above …  0.478
+##  9  2000    30 female degree    rep          5    40 $2500… midd… average  1.10 
+## 10  1998    33 female no degree dem          2    40 $1500… work… far be…  0.550
+## # … with 485 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1-auto[
+
+```r
+gss %&gt;%
+  filter(finrela != "DK") %&gt;%
+* ggplot()
+```
+]
+ 
+.panel2-sw1-auto[
+![](Slides-Week-12R_files/figure-html/sw1_auto_03_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw1-auto[
+
+```r
+gss %&gt;%
+  filter(finrela != "DK") %&gt;%
+  ggplot() +
+* aes(x = finrela, fill = college)
+```
+]
+ 
+.panel2-sw1-auto[
+![](Slides-Week-12R_files/figure-html/sw1_auto_04_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw1-auto[
+
+```r
+gss %&gt;%
+  filter(finrela != "DK") %&gt;%
+  ggplot() +
+  aes(x = finrela, fill = college) +
+* geom_bar(position = "fill")
+```
+]
+ 
+.panel2-sw1-auto[
+![](Slides-Week-12R_files/figure-html/sw1_auto_05_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw1-auto[
+
+```r
+gss %&gt;%
+  filter(finrela != "DK") %&gt;%
+  ggplot() +
+  aes(x = finrela, fill = college) +
+  geom_bar(position = "fill") +
+* scale_fill_brewer(palette = "Pastel1")
+```
+]
+ 
+.panel2-sw1-auto[
+![](Slides-Week-12R_files/figure-html/sw1_auto_06_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw1-auto[
+
+```r
+gss %&gt;%
+  filter(finrela != "DK") %&gt;%
+  ggplot() +
+  aes(x = finrela, fill = college) +
+  geom_bar(position = "fill") +
+  scale_fill_brewer(palette = "Pastel1") +
+* theme(axis.text.x = element_text(size = 12,
+*                                  angle = 45,
+*                                  vjust = 0.5))
+```
+]
+ 
+.panel2-sw1-auto[
+![](Slides-Week-12R_files/figure-html/sw1_auto_07_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw1-auto[
+
+```r
+gss %&gt;%
+  filter(finrela != "DK") %&gt;%
+  ggplot() +
+  aes(x = finrela, fill = college) +
+  geom_bar(position = "fill") +
+  scale_fill_brewer(palette = "Pastel1") +
+  theme(axis.text.x = element_text(size = 12,
+                                   angle = 45,
+                                   vjust = 0.5)) +
+* theme_minimal()
+```
+]
+ 
+.panel2-sw1-auto[
+![](Slides-Week-12R_files/figure-html/sw1_auto_08_output-1.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-sw1-auto {
+  color: white;
+  width: 49%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw1-auto {
+  color: white;
+  width: 49%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw1-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+.right[<svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#ff6347;overflow:visible;position:relative;"><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z"/></svg>]
+
+---
+
+Now calculate the observed statistic
+
+
+
+count: false
+ 
+
+.panel1-sw2-auto[
+
+```r
+*gss
+```
+]
+ 
+.panel2-sw2-auto[
+
+```
+## # A tibble: 500 × 11
+##     year   age sex    college   partyid hompop hours income class finrela weight
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;fct&gt;  &lt;fct&gt;     &lt;fct&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;ord&gt;  &lt;fct&gt; &lt;fct&gt;    &lt;dbl&gt;
+##  1  2014    36 male   degree    ind          3    50 $2500… midd… below …  0.896
+##  2  1994    34 female no degree rep          4    31 $2000… work… below …  1.08 
+##  3  1998    24 male   degree    ind          1    40 $2500… work… below …  0.550
+##  4  1996    42 male   no degree ind          4    40 $2500… work… above …  1.09 
+##  5  1994    31 male   degree    rep          2    40 $2500… midd… above …  1.08 
+##  6  1996    32 female no degree rep          4    53 $2500… midd… average  1.09 
+##  7  1990    48 female no degree dem          2    32 $2500… work… below …  1.06 
+##  8  2016    36 female degree    ind          1    20 $2500… midd… above …  0.478
+##  9  2000    30 female degree    rep          5    40 $2500… midd… average  1.10 
+## 10  1998    33 female no degree dem          2    40 $1500… work… far be…  0.550
+## # … with 490 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw2-auto[
+
+```r
+gss %&gt;%
+* specify(college ~ finrela)   # compare variables
+```
+]
+ 
+.panel2-sw2-auto[
+
+```
+## Response: college (factor)
+## Explanatory: finrela (factor)
+## # A tibble: 500 × 2
+##    college   finrela          
+##    &lt;fct&gt;     &lt;fct&gt;            
+##  1 degree    below average    
+##  2 no degree below average    
+##  3 degree    below average    
+##  4 no degree above average    
+##  5 degree    above average    
+##  6 no degree average          
+##  7 no degree below average    
+##  8 degree    above average    
+##  9 degree    average          
+## 10 no degree far below average
+## # … with 490 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw2-auto[
+
+```r
+gss %&gt;%
+  specify(college ~ finrela) %&gt;%  # compare variables
+* hypothesise(null = "independence")   # declare null hypothesis
+```
+]
+ 
+.panel2-sw2-auto[
+
+```
+## Response: college (factor)
+## Explanatory: finrela (factor)
+## Null Hypothesis: independence
+## # A tibble: 500 × 2
+##    college   finrela          
+##    &lt;fct&gt;     &lt;fct&gt;            
+##  1 degree    below average    
+##  2 no degree below average    
+##  3 degree    below average    
+##  4 no degree above average    
+##  5 degree    above average    
+##  6 no degree average          
+##  7 no degree below average    
+##  8 degree    above average    
+##  9 degree    average          
+## 10 no degree far below average
+## # … with 490 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw2-auto[
+
+```r
+gss %&gt;%
+  specify(college ~ finrela) %&gt;%  # compare variables
+  hypothesise(null = "independence") %&gt;%  # declare null hypothesis
+* calculate(stat = "Chisq")  # tell infer what test to run
+```
+]
+ 
+.panel2-sw2-auto[
+
+```
+## Response: college (factor)
+## Explanatory: finrela (factor)
+## Null Hypothesis: independence
+## # A tibble: 1 × 1
+##    stat
+##   &lt;dbl&gt;
+## 1  30.7
+```
+]
+
+&lt;style&gt;
+.panel1-sw2-auto {
+  color: white;
+  width: 45.4146341463415%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw2-auto {
+  color: white;
+  width: 52.5853658536585%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw2-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+
+
+---
+
+The observed `\(\chi^2\)` statistic is 30.6825231. Now, we want to compare this statistic to a null distribution, generated under the assumption that these variables are not actually related, to get a sense of how likely it would be for us to see this observed statistic if there were actually no association between education and income.
+
+---
+
+# Null Distribution Simulation
+
+Let's take a look at the ratings
+
+
+
+count: false
+ 
+
+.panel1-sw3-auto[
+
+```r
+*gss
+```
+]
+ 
+.panel2-sw3-auto[
+
+```
+## # A tibble: 500 × 11
+##     year   age sex    college   partyid hompop hours income class finrela weight
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;fct&gt;  &lt;fct&gt;     &lt;fct&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;ord&gt;  &lt;fct&gt; &lt;fct&gt;    &lt;dbl&gt;
+##  1  2014    36 male   degree    ind          3    50 $2500… midd… below …  0.896
+##  2  1994    34 female no degree rep          4    31 $2000… work… below …  1.08 
+##  3  1998    24 male   degree    ind          1    40 $2500… work… below …  0.550
+##  4  1996    42 male   no degree ind          4    40 $2500… work… above …  1.09 
+##  5  1994    31 male   degree    rep          2    40 $2500… midd… above …  1.08 
+##  6  1996    32 female no degree rep          4    53 $2500… midd… average  1.09 
+##  7  1990    48 female no degree dem          2    32 $2500… work… below …  1.06 
+##  8  2016    36 female degree    ind          1    20 $2500… midd… above …  0.478
+##  9  2000    30 female degree    rep          5    40 $2500… midd… average  1.10 
+## 10  1998    33 female no degree dem          2    40 $1500… work… far be…  0.550
+## # … with 490 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw3-auto[
+
+```r
+gss %&gt;%
+* specify(college ~ finrela)
+```
+]
+ 
+.panel2-sw3-auto[
+
+```
+## Response: college (factor)
+## Explanatory: finrela (factor)
+## # A tibble: 500 × 2
+##    college   finrela          
+##    &lt;fct&gt;     &lt;fct&gt;            
+##  1 degree    below average    
+##  2 no degree below average    
+##  3 degree    below average    
+##  4 no degree above average    
+##  5 degree    above average    
+##  6 no degree average          
+##  7 no degree below average    
+##  8 degree    above average    
+##  9 degree    average          
+## 10 no degree far below average
+## # … with 490 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw3-auto[
+
+```r
+gss %&gt;%
+  specify(college ~ finrela) %&gt;%
+* assume(distribution = "Chisq")
+```
+]
+ 
+.panel2-sw3-auto[
+
+```
+## A Chi-squared distribution with 5 degrees of freedom.
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw3-auto[
+
+```r
+gss %&gt;%
+  specify(college ~ finrela) %&gt;%
+  assume(distribution = "Chisq")
+```
+]
+ 
+.panel2-sw3-auto[
+
+```
+## A Chi-squared distribution with 5 degrees of freedom.
+```
+]
+
+&lt;style&gt;
+.panel1-sw3-auto {
+  color: white;
+  width: 44.3333333333333%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw3-auto {
+  color: white;
+  width: 53.6666666666667%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw3-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+
+
+---
+
+Either way, it looks like our observed test statistic would be quite unlikely if there were actually no association between education and income. More exactly, we can approximate the *p*-value with `get_p_value`:
+
+---
+
+
+
+count: false
+ 
+
+.panel1-sw4-auto[
+
+```r
+*gss
+```
+]
+ 
+.panel2-sw4-auto[
+
+```
+## # A tibble: 500 × 11
+##     year   age sex    college   partyid hompop hours income class finrela weight
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;fct&gt;  &lt;fct&gt;     &lt;fct&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;ord&gt;  &lt;fct&gt; &lt;fct&gt;    &lt;dbl&gt;
+##  1  2014    36 male   degree    ind          3    50 $2500… midd… below …  0.896
+##  2  1994    34 female no degree rep          4    31 $2000… work… below …  1.08 
+##  3  1998    24 male   degree    ind          1    40 $2500… work… below …  0.550
+##  4  1996    42 male   no degree ind          4    40 $2500… work… above …  1.09 
+##  5  1994    31 male   degree    rep          2    40 $2500… midd… above …  1.08 
+##  6  1996    32 female no degree rep          4    53 $2500… midd… average  1.09 
+##  7  1990    48 female no degree dem          2    32 $2500… work… below …  1.06 
+##  8  2016    36 female degree    ind          1    20 $2500… midd… above …  0.478
+##  9  2000    30 female degree    rep          5    40 $2500… midd… average  1.10 
+## 10  1998    33 female no degree dem          2    40 $1500… work… far be…  0.550
+## # … with 490 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw4-auto[
+
+```r
+gss %&gt;%
+* specify(college ~ finrela)
+```
+]
+ 
+.panel2-sw4-auto[
+
+```
+## Response: college (factor)
+## Explanatory: finrela (factor)
+## # A tibble: 500 × 2
+##    college   finrela          
+##    &lt;fct&gt;     &lt;fct&gt;            
+##  1 degree    below average    
+##  2 no degree below average    
+##  3 degree    below average    
+##  4 no degree above average    
+##  5 degree    above average    
+##  6 no degree average          
+##  7 no degree below average    
+##  8 degree    above average    
+##  9 degree    average          
+## 10 no degree far below average
+## # … with 490 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw4-auto[
+
+```r
+gss %&gt;%
+  specify(college ~ finrela) %&gt;%
+* hypothesise(null = "independence")
+```
+]
+ 
+.panel2-sw4-auto[
+
+```
+## Response: college (factor)
+## Explanatory: finrela (factor)
+## Null Hypothesis: independence
+## # A tibble: 500 × 2
+##    college   finrela          
+##    &lt;fct&gt;     &lt;fct&gt;            
+##  1 degree    below average    
+##  2 no degree below average    
+##  3 degree    below average    
+##  4 no degree above average    
+##  5 degree    above average    
+##  6 no degree average          
+##  7 no degree below average    
+##  8 degree    above average    
+##  9 degree    average          
+## 10 no degree far below average
+## # … with 490 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw4-auto[
+
+```r
+gss %&gt;%
+  specify(college ~ finrela) %&gt;%
+  hypothesise(null = "independence") %&gt;%
+* generate(reps = 1000, type = "permute")
+```
+]
+ 
+.panel2-sw4-auto[
+
+```
+## Response: college (factor)
+## Explanatory: finrela (factor)
+## Null Hypothesis: independence
+## # A tibble: 500,000 × 3
+## # Groups:   replicate [1,000]
+##    college   finrela           replicate
+##    &lt;fct&gt;     &lt;fct&gt;                 &lt;int&gt;
+##  1 no degree below average             1
+##  2 no degree below average             1
+##  3 degree    below average             1
+##  4 no degree above average             1
+##  5 no degree above average             1
+##  6 no degree average                   1
+##  7 degree    below average             1
+##  8 no degree above average             1
+##  9 no degree average                   1
+## 10 degree    far below average         1
+## # … with 499,990 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw4-auto[
+
+```r
+gss %&gt;%
+  specify(college ~ finrela) %&gt;%
+  hypothesise(null = "independence") %&gt;%
+  generate(reps = 1000, type = "permute") %&gt;%
+* assume(distribution = "Chisq")
+```
+]
+ 
+.panel2-sw4-auto[
+
+```
+## A Chi-squared distribution with 5 degrees of freedom.
+```
+]
+
+&lt;style&gt;
+.panel1-sw4-auto {
+  color: white;
+  width: 44.3333333333333%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw4-auto {
+  color: white;
+  width: 53.6666666666667%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw4-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+
+
+---
+
+
+
+count: false
+ 
+
+.panel1-sw5-auto[
+
+```r
+*null_distribution
+```
+]
+ 
+.panel2-sw5-auto[
+
+```
+## A Chi-squared distribution with 5 degrees of freedom.
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw5-auto[
+
+```r
+null_distribution %&gt;%
+* visualize()
+```
+]
+ 
+.panel2-sw5-auto[
+![](Slides-Week-12R_files/figure-html/sw5_auto_02_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw5-auto[
+
+```r
+null_distribution %&gt;%
+  visualize() +
+* shade_p_value(observed_indep_statistic,
+*               direction = "greater")
+```
+]
+ 
+.panel2-sw5-auto[
+![](Slides-Week-12R_files/figure-html/sw5_auto_03_output-1.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-sw5-auto {
+  color: white;
+  width: 44.3333333333333%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw5-auto {
+  color: white;
+  width: 53.6666666666667%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw5-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+# `\(\chi^2\)` statistic
+
+
+```
+## Warning: The chisq_stat() wrapper has been deprecated in favor of the more
+## general observe(). Please use that function instead.
+```
+
+```
+## X-squared 
+##  30.68252
+```
+
+---
+
+# `\(\chi^2\)` Goodness of Fit
+
+
+
+count: false
+ 
+
+.panel1-sw6-auto[
+
+```r
+*gss
+```
+]
+ 
+.panel2-sw6-auto[
+
+```
+## # A tibble: 500 × 11
+##     year   age sex    college   partyid hompop hours income class finrela weight
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;fct&gt;  &lt;fct&gt;     &lt;fct&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;ord&gt;  &lt;fct&gt; &lt;fct&gt;    &lt;dbl&gt;
+##  1  2014    36 male   degree    ind          3    50 $2500… midd… below …  0.896
+##  2  1994    34 female no degree rep          4    31 $2000… work… below …  1.08 
+##  3  1998    24 male   degree    ind          1    40 $2500… work… below …  0.550
+##  4  1996    42 male   no degree ind          4    40 $2500… work… above …  1.09 
+##  5  1994    31 male   degree    rep          2    40 $2500… midd… above …  1.08 
+##  6  1996    32 female no degree rep          4    53 $2500… midd… average  1.09 
+##  7  1990    48 female no degree dem          2    32 $2500… work… below …  1.06 
+##  8  2016    36 female degree    ind          1    20 $2500… midd… above …  0.478
+##  9  2000    30 female degree    rep          5    40 $2500… midd… average  1.10 
+## 10  1998    33 female no degree dem          2    40 $1500… work… far be…  0.550
+## # … with 490 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw6-auto[
+
+```r
+gss %&gt;%
+* specify(response = finrela)
+```
+]
+ 
+.panel2-sw6-auto[
+
+```
+## Response: finrela (factor)
+## # A tibble: 500 × 1
+##    finrela          
+##    &lt;fct&gt;            
+##  1 below average    
+##  2 below average    
+##  3 below average    
+##  4 above average    
+##  5 above average    
+##  6 average          
+##  7 below average    
+##  8 above average    
+##  9 average          
+## 10 far below average
+## # … with 490 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw6-auto[
+
+```r
+gss %&gt;%
+  specify(response = finrela) %&gt;%
+* hypothesise(null = "point",
+*             p = c("far below average" = 1/6,
+*                   "below average" = 1/6,
+*                   "average" = 1/6,
+*                   "above average" = 1/6,
+*                   "far above average" = 1/6,
+*                   "DK" = 1/6))
+```
+]
+ 
+.panel2-sw6-auto[
+
+```
+## Response: finrela (factor)
+## Null Hypothesis: point
+## # A tibble: 500 × 1
+##    finrela          
+##    &lt;fct&gt;            
+##  1 below average    
+##  2 below average    
+##  3 below average    
+##  4 above average    
+##  5 above average    
+##  6 average          
+##  7 below average    
+##  8 above average    
+##  9 average          
+## 10 far below average
+## # … with 490 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw6-auto[
+
+```r
+gss %&gt;%
+  specify(response = finrela) %&gt;%
+  hypothesise(null = "point",
+              p = c("far below average" = 1/6,
+                    "below average" = 1/6,
+                    "average" = 1/6,
+                    "above average" = 1/6,
+                    "far above average" = 1/6,
+                    "DK" = 1/6)) %&gt;%
+* calculate(stat = "Chisq")
+```
+]
+ 
+.panel2-sw6-auto[
+
+```
+## Response: finrela (factor)
+## Null Hypothesis: point
+## # A tibble: 1 × 1
+##    stat
+##   &lt;dbl&gt;
+## 1  488.
+```
+]
+
+&lt;style&gt;
+.panel1-sw6-auto {
+  color: white;
+  width: 44.3333333333333%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw6-auto {
+  color: white;
+  width: 53.6666666666667%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw6-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+
+```r
+observed_gof_statistic &lt;-
+  gss %&gt;%
+  specify(response = finrela) %&gt;%
+  hypothesise(null = "point",
+              p = c("far below average" = 1/6,
+                    "below average" = 1/6,
+                    "average" = 1/6,
+                    "above average" = 1/6,
+                    "far above average" = 1/6,
+                    "DK" = 1/6)) %&gt;%
+  calculate(stat = "Chisq")
+```
+
+---
+
+
+```r
+null_dist_gof &lt;-
+gss %&gt;%
+  specify(response = finrela) %&gt;%
+  hypothesise(null = "point",
+              p = c("far below average" = 1/6,
+                    "below average" = 1/6,
+                    "average" = 1/6,
+                    "above average" = 1/6,
+                    "far above average" = 1/6,
+                    "DK" = 1/6)) %&gt;%
+  generate(reps = 1000, type = "draw") %&gt;% # we only added this!
+  calculate(stat = "Chisq")
+```
+
+---
+
+
+
+count: false
+ 
+
+.panel1-sw7-auto[
+
+```r
+*null_dist_gof
+```
+]
+ 
+.panel2-sw7-auto[
+
+```
+## Response: finrela (factor)
+## Null Hypothesis: point
+## # A tibble: 1,000 × 2
+##    replicate   stat
+##    &lt;fct&gt;      &lt;dbl&gt;
+##  1 1          8.22 
+##  2 2          1.72 
+##  3 3          1.72 
+##  4 4          6.26 
+##  5 5         15.4  
+##  6 6          0.928
+##  7 7          7.46 
+##  8 8          2.87 
+##  9 9          1    
+## 10 10         5.63 
+## # … with 990 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw7-auto[
+
+```r
+null_dist_gof %&gt;%
+* visualize()
+```
+]
+ 
+.panel2-sw7-auto[
+![](Slides-Week-12R_files/figure-html/sw7_auto_02_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw7-auto[
+
+```r
+null_dist_gof %&gt;%
+  visualize() +
+* shade_p_value(observed_gof_statistic,
+*               direction = "greater")
+```
+]
+ 
+.panel2-sw7-auto[
+![](Slides-Week-12R_files/figure-html/sw7_auto_03_output-1.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-sw7-auto {
+  color: white;
+  width: 44.3333333333333%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw7-auto {
+  color: white;
+  width: 53.6666666666667%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw7-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+
+
+count: false
+ 
+
+.panel1-sw8-auto[
+
+```r
+*gss
+```
+]
+ 
+.panel2-sw8-auto[
+
+```
+## # A tibble: 500 × 11
+##     year   age sex    college   partyid hompop hours income class finrela weight
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;fct&gt;  &lt;fct&gt;     &lt;fct&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;ord&gt;  &lt;fct&gt; &lt;fct&gt;    &lt;dbl&gt;
+##  1  2014    36 male   degree    ind          3    50 $2500… midd… below …  0.896
+##  2  1994    34 female no degree rep          4    31 $2000… work… below …  1.08 
+##  3  1998    24 male   degree    ind          1    40 $2500… work… below …  0.550
+##  4  1996    42 male   no degree ind          4    40 $2500… work… above …  1.09 
+##  5  1994    31 male   degree    rep          2    40 $2500… midd… above …  1.08 
+##  6  1996    32 female no degree rep          4    53 $2500… midd… average  1.09 
+##  7  1990    48 female no degree dem          2    32 $2500… work… below …  1.06 
+##  8  2016    36 female degree    ind          1    20 $2500… midd… above …  0.478
+##  9  2000    30 female degree    rep          5    40 $2500… midd… average  1.10 
+## 10  1998    33 female no degree dem          2    40 $1500… work… far be…  0.550
+## # … with 490 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw8-auto[
+
+```r
+gss %&gt;%
+* ggplot()
+```
+]
+ 
+.panel2-sw8-auto[
+![](Slides-Week-12R_files/figure-html/sw8_auto_02_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw8-auto[
+
+```r
+gss %&gt;%
+  ggplot() +
+* aes(x = finrela, fill = college)
+```
+]
+ 
+.panel2-sw8-auto[
+![](Slides-Week-12R_files/figure-html/sw8_auto_03_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw8-auto[
+
+```r
+gss %&gt;%
+  ggplot() +
+  aes(x = finrela, fill = college) +
+* geom_bar(position = "fill")
+```
+]
+ 
+.panel2-sw8-auto[
+![](Slides-Week-12R_files/figure-html/sw8_auto_04_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw8-auto[
+
+```r
+gss %&gt;%
+  ggplot() +
+  aes(x = finrela, fill = college) +
+  geom_bar(position = "fill") +
+* scale_fill_brewer(type = "qual")
+```
+]
+ 
+.panel2-sw8-auto[
+![](Slides-Week-12R_files/figure-html/sw8_auto_05_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw8-auto[
+
+```r
+gss %&gt;%
+  ggplot() +
+  aes(x = finrela, fill = college) +
+  geom_bar(position = "fill") +
+  scale_fill_brewer(type = "qual") +
+* theme(axis.text.x = element_text(angle = 45,
+*                                  vjust = .5))
+```
+]
+ 
+.panel2-sw8-auto[
+![](Slides-Week-12R_files/figure-html/sw8_auto_06_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw8-auto[
+
+```r
+gss %&gt;%
+  ggplot() +
+  aes(x = finrela, fill = college) +
+  geom_bar(position = "fill") +
+  scale_fill_brewer(type = "qual") +
+  theme(axis.text.x = element_text(angle = 45,
+                                   vjust = .5)) +
+*   labs(x = "finrela: Self-Identification of Income Class",
+*        y = "Proportion")
+```
+]
+ 
+.panel2-sw8-auto[
+![](Slides-Week-12R_files/figure-html/sw8_auto_07_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw8-auto[
+
+```r
+gss %&gt;%
+  ggplot() +
+  aes(x = finrela, fill = college) +
+  geom_bar(position = "fill") +
+  scale_fill_brewer(type = "qual") +
+  theme(axis.text.x = element_text(angle = 45,
+                                   vjust = .5)) +
+    labs(x = "finrela: Self-Identification of Income Class",
+         y = "Proportion") +
+* theme_minimal()
+```
+]
+ 
+.panel2-sw8-auto[
+![](Slides-Week-12R_files/figure-html/sw8_auto_08_output-1.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-sw8-auto {
+  color: white;
+  width: 44.3333333333333%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw8-auto {
+  color: white;
+  width: 53.6666666666667%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw8-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+- If there were no relationship, we would expect to see the purple bars reaching to the same height, regardless of income class. 
+
+--
+
+- Are the differences we see in the plot just due to random noise?
+
+--
+
+- We can `generate` the null distribution in one of two ways
+
+  - using randomization: approximates the null distribution by permuting the response and explanatory variables, so that each person's educational attainment is matched up with a random income from the sample in order to break up any association between the two
+  
+--
+  
+  - theory-based methods: the general approximation
+
+---
+
+# Generate the null distribution using randomization
+
+
+
+count: false
+ 
+
+.panel1-sw9-auto[
+
+```r
+*gss
+```
+]
+ 
+.panel2-sw9-auto[
+
+```
+## # A tibble: 500 × 11
+##     year   age sex    college   partyid hompop hours income class finrela weight
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;fct&gt;  &lt;fct&gt;     &lt;fct&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;ord&gt;  &lt;fct&gt; &lt;fct&gt;    &lt;dbl&gt;
+##  1  2014    36 male   degree    ind          3    50 $2500… midd… below …  0.896
+##  2  1994    34 female no degree rep          4    31 $2000… work… below …  1.08 
+##  3  1998    24 male   degree    ind          1    40 $2500… work… below …  0.550
+##  4  1996    42 male   no degree ind          4    40 $2500… work… above …  1.09 
+##  5  1994    31 male   degree    rep          2    40 $2500… midd… above …  1.08 
+##  6  1996    32 female no degree rep          4    53 $2500… midd… average  1.09 
+##  7  1990    48 female no degree dem          2    32 $2500… work… below …  1.06 
+##  8  2016    36 female degree    ind          1    20 $2500… midd… above …  0.478
+##  9  2000    30 female degree    rep          5    40 $2500… midd… average  1.10 
+## 10  1998    33 female no degree dem          2    40 $1500… work… far be…  0.550
+## # … with 490 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw9-auto[
+
+```r
+gss %&gt;%
+* specify(college ~ finrela)
+```
+]
+ 
+.panel2-sw9-auto[
+
+```
+## Response: college (factor)
+## Explanatory: finrela (factor)
+## # A tibble: 500 × 2
+##    college   finrela          
+##    &lt;fct&gt;     &lt;fct&gt;            
+##  1 degree    below average    
+##  2 no degree below average    
+##  3 degree    below average    
+##  4 no degree above average    
+##  5 degree    above average    
+##  6 no degree average          
+##  7 no degree below average    
+##  8 degree    above average    
+##  9 degree    average          
+## 10 no degree far below average
+## # … with 490 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw9-auto[
+
+```r
+gss %&gt;%
+  specify(college ~ finrela) %&gt;%
+* hypothesize(null = "independence")
+```
+]
+ 
+.panel2-sw9-auto[
+
+```
+## Response: college (factor)
+## Explanatory: finrela (factor)
+## Null Hypothesis: independence
+## # A tibble: 500 × 2
+##    college   finrela          
+##    &lt;fct&gt;     &lt;fct&gt;            
+##  1 degree    below average    
+##  2 no degree below average    
+##  3 degree    below average    
+##  4 no degree above average    
+##  5 degree    above average    
+##  6 no degree average          
+##  7 no degree below average    
+##  8 degree    above average    
+##  9 degree    average          
+## 10 no degree far below average
+## # … with 490 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw9-auto[
+
+```r
+gss %&gt;%
+  specify(college ~ finrela) %&gt;%
+  hypothesize(null = "independence") %&gt;%
+* generate(reps = 1000, type = "permute")
+```
+]
+ 
+.panel2-sw9-auto[
+
+```
+## Response: college (factor)
+## Explanatory: finrela (factor)
+## Null Hypothesis: independence
+## # A tibble: 500,000 × 3
+## # Groups:   replicate [1,000]
+##    college   finrela           replicate
+##    &lt;fct&gt;     &lt;fct&gt;                 &lt;int&gt;
+##  1 degree    below average             1
+##  2 degree    below average             1
+##  3 no degree below average             1
+##  4 degree    above average             1
+##  5 degree    above average             1
+##  6 no degree average                   1
+##  7 no degree below average             1
+##  8 degree    above average             1
+##  9 no degree average                   1
+## 10 degree    far below average         1
+## # … with 499,990 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw9-auto[
+
+```r
+gss %&gt;%
+  specify(college ~ finrela) %&gt;%
+  hypothesize(null = "independence") %&gt;%
+  generate(reps = 1000, type = "permute") %&gt;%
+* calculate(stat = "Chisq")
+```
+]
+ 
+.panel2-sw9-auto[
+
+```
+## Response: college (factor)
+## Explanatory: finrela (factor)
+## Null Hypothesis: independence
+## # A tibble: 1,000 × 2
+##    replicate  stat
+##        &lt;int&gt; &lt;dbl&gt;
+##  1         1  3.29
+##  2         2  6.72
+##  3         3  3.02
+##  4         4  2.45
+##  5         5  1.10
+##  6         6  4.49
+##  7         7  1.60
+##  8         8  3.13
+##  9         9 12.1 
+## 10        10  2.33
+## # … with 990 more rows
+```
+]
+
+&lt;style&gt;
+.panel1-sw9-auto {
+  color: white;
+  width: 44.3333333333333%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw9-auto {
+  color: white;
+  width: 53.6666666666667%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw9-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+
+```r
+null_dist_sim &lt;- 
+  gss %&gt;%
+  specify(college ~ finrela) %&gt;%
+  hypothesize(null = "independence") %&gt;%
+  generate(reps = 1000, type = "permute") %&gt;%
+  calculate(stat = "Chisq")
+```
+
+---
+
+# Generate the null distribution using theory based methods
+
+
+
+count: false
+ 
+
+.panel1-sw10-auto[
+
+```r
+*gss
+```
+]
+ 
+.panel2-sw10-auto[
+
+```
+## # A tibble: 500 × 11
+##     year   age sex    college   partyid hompop hours income class finrela weight
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;fct&gt;  &lt;fct&gt;     &lt;fct&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;ord&gt;  &lt;fct&gt; &lt;fct&gt;    &lt;dbl&gt;
+##  1  2014    36 male   degree    ind          3    50 $2500… midd… below …  0.896
+##  2  1994    34 female no degree rep          4    31 $2000… work… below …  1.08 
+##  3  1998    24 male   degree    ind          1    40 $2500… work… below …  0.550
+##  4  1996    42 male   no degree ind          4    40 $2500… work… above …  1.09 
+##  5  1994    31 male   degree    rep          2    40 $2500… midd… above …  1.08 
+##  6  1996    32 female no degree rep          4    53 $2500… midd… average  1.09 
+##  7  1990    48 female no degree dem          2    32 $2500… work… below …  1.06 
+##  8  2016    36 female degree    ind          1    20 $2500… midd… above …  0.478
+##  9  2000    30 female degree    rep          5    40 $2500… midd… average  1.10 
+## 10  1998    33 female no degree dem          2    40 $1500… work… far be…  0.550
+## # … with 490 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw10-auto[
+
+```r
+gss %&gt;%
+* specify(college ~ finrela)
+```
+]
+ 
+.panel2-sw10-auto[
+
+```
+## Response: college (factor)
+## Explanatory: finrela (factor)
+## # A tibble: 500 × 2
+##    college   finrela          
+##    &lt;fct&gt;     &lt;fct&gt;            
+##  1 degree    below average    
+##  2 no degree below average    
+##  3 degree    below average    
+##  4 no degree above average    
+##  5 degree    above average    
+##  6 no degree average          
+##  7 no degree below average    
+##  8 degree    above average    
+##  9 degree    average          
+## 10 no degree far below average
+## # … with 490 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw10-auto[
+
+```r
+gss %&gt;%
+  specify(college ~ finrela) %&gt;%
+* assume(distribution = "Chisq")
+```
+]
+ 
+.panel2-sw10-auto[
+
+```
+## A Chi-squared distribution with 5 degrees of freedom.
+```
+]
+
+&lt;style&gt;
+.panel1-sw10-auto {
+  color: white;
+  width: 44.3333333333333%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw10-auto {
+  color: white;
+  width: 53.6666666666667%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw10-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+
+```r
+null_dist_theory &lt;- 
+  gss %&gt;%
+  specify(college ~ finrela) %&gt;%
+  assume(distribution = "Chisq")
+```
+
+---
+
+# Visualize the randomized null distribution and test statistic
+
+
+
+count: false
+ 
+
+.panel1-sw11-auto[
+
+```r
+*null_dist_sim
+```
+]
+ 
+.panel2-sw11-auto[
+
+```
+## Response: college (factor)
+## Explanatory: finrela (factor)
+## Null Hypothesis: independence
+## # A tibble: 1,000 × 2
+##    replicate   stat
+##        &lt;int&gt;  &lt;dbl&gt;
+##  1         1  3.86 
+##  2         2  3.79 
+##  3         3  9.96 
+##  4         4  2.72 
+##  5         5  3.20 
+##  6         6  0.695
+##  7         7  7.92 
+##  8         8  7.79 
+##  9         9 10.6  
+## 10        10  6.17 
+## # … with 990 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw11-auto[
+
+```r
+null_dist_sim %&gt;%
+* visualize()
+```
+]
+ 
+.panel2-sw11-auto[
+![](Slides-Week-12R_files/figure-html/sw11_auto_02_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw11-auto[
+
+```r
+null_dist_sim %&gt;%
+  visualize() +
+* shade_p_value(observed_indep_statistic,
+*               direction = "greater")
+```
+]
+ 
+.panel2-sw11-auto[
+![](Slides-Week-12R_files/figure-html/sw11_auto_03_output-1.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-sw11-auto {
+  color: white;
+  width: 44.3333333333333%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw11-auto {
+  color: white;
+  width: 53.6666666666667%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw11-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+# Visualize the *theoretical* null distribution and test statistic
+
+
+
+count: false
+ 
+
+.panel1-sw12-auto[
+
+```r
+*null_dist_sim
+```
+]
+ 
+.panel2-sw12-auto[
+
+```
+## Response: college (factor)
+## Explanatory: finrela (factor)
+## Null Hypothesis: independence
+## # A tibble: 1,000 × 2
+##    replicate   stat
+##        &lt;int&gt;  &lt;dbl&gt;
+##  1         1  3.86 
+##  2         2  3.79 
+##  3         3  9.96 
+##  4         4  2.72 
+##  5         5  3.20 
+##  6         6  0.695
+##  7         7  7.92 
+##  8         8  7.79 
+##  9         9 10.6  
+## 10        10  6.17 
+## # … with 990 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw12-auto[
+
+```r
+null_dist_sim %&gt;%
+* visualize()
+```
+]
+ 
+.panel2-sw12-auto[
+![](Slides-Week-12R_files/figure-html/sw12_auto_02_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw12-auto[
+
+```r
+null_dist_sim %&gt;%
+  visualize() +
+* shade_p_value(observed_indep_statistic,
+*               direction = "greater")
+```
+]
+ 
+.panel2-sw12-auto[
+![](Slides-Week-12R_files/figure-html/sw12_auto_03_output-1.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-sw12-auto {
+  color: white;
+  width: 44.3333333333333%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw12-auto {
+  color: white;
+  width: 53.6666666666667%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw12-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+# Visualize both null distributions and the test statistic
+
+
+
+count: false
+ 
+
+.panel1-sw13-auto[
+
+```r
+*null_dist_sim
+```
+]
+ 
+.panel2-sw13-auto[
+
+```
+## Response: college (factor)
+## Explanatory: finrela (factor)
+## Null Hypothesis: independence
+## # A tibble: 1,000 × 2
+##    replicate   stat
+##        &lt;int&gt;  &lt;dbl&gt;
+##  1         1  3.86 
+##  2         2  3.79 
+##  3         3  9.96 
+##  4         4  2.72 
+##  5         5  3.20 
+##  6         6  0.695
+##  7         7  7.92 
+##  8         8  7.79 
+##  9         9 10.6  
+## 10        10  6.17 
+## # … with 990 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw13-auto[
+
+```r
+null_dist_sim %&gt;%
+* visualize(method = "both")
+```
+]
+ 
+.panel2-sw13-auto[
+
+```
+## Warning: Check to make sure the conditions have been met for the theoretical
+## method. {infer} currently does not check these for you.
+```
+
+![](Slides-Week-12R_files/figure-html/sw13_auto_02_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw13-auto[
+
+```r
+null_dist_sim %&gt;%
+  visualize(method = "both") +
+* shade_p_value(observed_indep_statistic,
+*               direction = "greater")
+```
+]
+ 
+.panel2-sw13-auto[
+
+```
+## Warning: Check to make sure the conditions have been met for the theoretical
+## method. {infer} currently does not check these for you.
+```
+
+![](Slides-Week-12R_files/figure-html/sw13_auto_03_output-1.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-sw13-auto {
+  color: white;
+  width: 44.3333333333333%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw13-auto {
+  color: white;
+  width: 53.6666666666667%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw13-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+# Calculate the *p*-value from the observed statistic and null distribution
+
+
+count: false
+ 
+
+.panel1-sw14-auto[
+
+```r
+*null_dist_sim
+```
+]
+ 
+.panel2-sw14-auto[
+
+```
+## Response: college (factor)
+## Explanatory: finrela (factor)
+## Null Hypothesis: independence
+## # A tibble: 1,000 × 2
+##    replicate   stat
+##        &lt;int&gt;  &lt;dbl&gt;
+##  1         1  3.86 
+##  2         2  3.79 
+##  3         3  9.96 
+##  4         4  2.72 
+##  5         5  3.20 
+##  6         6  0.695
+##  7         7  7.92 
+##  8         8  7.79 
+##  9         9 10.6  
+## 10        10  6.17 
+## # … with 990 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw14-auto[
+
+```r
+null_dist_sim %&gt;%
+* get_p_value(obs_stat = observed_indep_statistic,
+*             direction = "greater")
+```
+]
+ 
+.panel2-sw14-auto[
+
+```
+## Warning: Please be cautious in reporting a p-value of 0. This result is an
+## approximation based on the number of `reps` chosen in the `generate()` step. See
+## `?get_p_value()` for more information.
+```
+
+```
+## # A tibble: 1 × 1
+##   p_value
+##     &lt;dbl&gt;
+## 1       0
+```
+]
+
+&lt;style&gt;
+.panel1-sw14-auto {
+  color: white;
+  width: 44.3333333333333%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw14-auto {
+  color: white;
+  width: 53.6666666666667%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw14-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+
+
+---
+
+If there were really no relationship between education and income, our approximation of the probability that we would see a statistic as or more extreme than 30.6825231 is approximately 0
+
+---
+
+# Calculate the *p*-value using the true `\(\chi^2\)` distribution
+
+
+```
+##    X-squared 
+## 1.082094e-05
+```
+
+--
+
+
+```
+## # A tibble: 1 × 3
+##   statistic chisq_df   p_value
+##       &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;
+## 1      30.7        5 0.0000108
+```
+
+---
+
+Take a look at the self-identified income class of our survey respondents. Suppose our null hypothesis is that `finrela` follows a uniform distribution (i.e. there's actually an equal number of people that describe their income as far below average, below average, average, above average, far above average, or that don't know their income.) 
+
+---
+
+
+
+count: false
+ 
+
+.panel1-sw15-auto[
+
+```r
+*gss
+```
+]
+ 
+.panel2-sw15-auto[
+
+```
+## # A tibble: 500 × 11
+##     year   age sex    college   partyid hompop hours income class finrela weight
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;fct&gt;  &lt;fct&gt;     &lt;fct&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;ord&gt;  &lt;fct&gt; &lt;fct&gt;    &lt;dbl&gt;
+##  1  2014    36 male   degree    ind          3    50 $2500… midd… below …  0.896
+##  2  1994    34 female no degree rep          4    31 $2000… work… below …  1.08 
+##  3  1998    24 male   degree    ind          1    40 $2500… work… below …  0.550
+##  4  1996    42 male   no degree ind          4    40 $2500… work… above …  1.09 
+##  5  1994    31 male   degree    rep          2    40 $2500… midd… above …  1.08 
+##  6  1996    32 female no degree rep          4    53 $2500… midd… average  1.09 
+##  7  1990    48 female no degree dem          2    32 $2500… work… below …  1.06 
+##  8  2016    36 female degree    ind          1    20 $2500… midd… above …  0.478
+##  9  2000    30 female degree    rep          5    40 $2500… midd… average  1.10 
+## 10  1998    33 female no degree dem          2    40 $1500… work… far be…  0.550
+## # … with 490 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw15-auto[
+
+```r
+gss %&gt;%
+* ggplot2::ggplot()
+```
+]
+ 
+.panel2-sw15-auto[
+![](Slides-Week-12R_files/figure-html/sw15_auto_02_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw15-auto[
+
+```r
+gss %&gt;%
+  ggplot2::ggplot() +
+* ggplot2::aes(x = finrela)
+```
+]
+ 
+.panel2-sw15-auto[
+![](Slides-Week-12R_files/figure-html/sw15_auto_03_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw15-auto[
+
+```r
+gss %&gt;%
+  ggplot2::ggplot() +
+  ggplot2::aes(x = finrela) +
+* ggplot2::geom_bar()
+```
+]
+ 
+.panel2-sw15-auto[
+![](Slides-Week-12R_files/figure-html/sw15_auto_04_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw15-auto[
+
+```r
+gss %&gt;%
+  ggplot2::ggplot() +
+  ggplot2::aes(x = finrela) +
+  ggplot2::geom_bar() +
+* ggplot2::geom_hline(yintercept = 466.3,
+*                     col = "red")
+```
+]
+ 
+.panel2-sw15-auto[
+![](Slides-Week-12R_files/figure-html/sw15_auto_05_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw15-auto[
+
+```r
+gss %&gt;%
+  ggplot2::ggplot() +
+  ggplot2::aes(x = finrela) +
+  ggplot2::geom_bar() +
+  ggplot2::geom_hline(yintercept = 466.3,
+                      col = "red") +
+* ggplot2::labs(x = "finrela: Self-Identification of Income Class",
+*               y = "Number of Responses")
+```
+]
+ 
+.panel2-sw15-auto[
+![](Slides-Week-12R_files/figure-html/sw15_auto_06_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw15-auto[
+
+```r
+gss %&gt;%
+  ggplot2::ggplot() +
+  ggplot2::aes(x = finrela) +
+  ggplot2::geom_bar() +
+  ggplot2::geom_hline(yintercept = 466.3,
+                      col = "red") +
+  ggplot2::labs(x = "finrela: Self-Identification of Income Class",
+                y = "Number of Responses") +
+* theme_minimal()
+```
+]
+ 
+.panel2-sw15-auto[
+![](Slides-Week-12R_files/figure-html/sw15_auto_07_output-1.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-sw15-auto {
+  color: white;
+  width: 44.3333333333333%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw15-auto {
+  color: white;
+  width: 53.6666666666667%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw15-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+It seems like a uniform distribution may not be the most appropriate description of the data--many more people describe their income as average than than any of the other options. Lets now test whether this difference in distributions is statistically significant.
+
+---
+
+# Calculate the null distribution
+
+
+
+count: false
+ 
+
+.panel1-sw16-auto[
+
+```r
+*gss
+```
+]
+ 
+.panel2-sw16-auto[
+
+```
+## # A tibble: 500 × 11
+##     year   age sex    college   partyid hompop hours income class finrela weight
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;fct&gt;  &lt;fct&gt;     &lt;fct&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;ord&gt;  &lt;fct&gt; &lt;fct&gt;    &lt;dbl&gt;
+##  1  2014    36 male   degree    ind          3    50 $2500… midd… below …  0.896
+##  2  1994    34 female no degree rep          4    31 $2000… work… below …  1.08 
+##  3  1998    24 male   degree    ind          1    40 $2500… work… below …  0.550
+##  4  1996    42 male   no degree ind          4    40 $2500… work… above …  1.09 
+##  5  1994    31 male   degree    rep          2    40 $2500… midd… above …  1.08 
+##  6  1996    32 female no degree rep          4    53 $2500… midd… average  1.09 
+##  7  1990    48 female no degree dem          2    32 $2500… work… below …  1.06 
+##  8  2016    36 female degree    ind          1    20 $2500… midd… above …  0.478
+##  9  2000    30 female degree    rep          5    40 $2500… midd… average  1.10 
+## 10  1998    33 female no degree dem          2    40 $1500… work… far be…  0.550
+## # … with 490 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw16-auto[
+
+```r
+gss %&gt;%
+* specify(response = finrela)
+```
+]
+ 
+.panel2-sw16-auto[
+
+```
+## Response: finrela (factor)
+## # A tibble: 500 × 1
+##    finrela          
+##    &lt;fct&gt;            
+##  1 below average    
+##  2 below average    
+##  3 below average    
+##  4 above average    
+##  5 above average    
+##  6 average          
+##  7 below average    
+##  8 above average    
+##  9 average          
+## 10 far below average
+## # … with 490 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw16-auto[
+
+```r
+gss %&gt;%
+  specify(response = finrela) %&gt;%
+* hypothesize(null = "point",
+*             p = c("far below average" = 1/6,
+*                   "below average" = 1/6,
+*                   "average" = 1/6,
+*                   "above average" = 1/6,
+*                   "far above average" = 1/6,
+*                   "DK" = 1/6))
+```
+]
+ 
+.panel2-sw16-auto[
+
+```
+## Response: finrela (factor)
+## Null Hypothesis: point
+## # A tibble: 500 × 1
+##    finrela          
+##    &lt;fct&gt;            
+##  1 below average    
+##  2 below average    
+##  3 below average    
+##  4 above average    
+##  5 above average    
+##  6 average          
+##  7 below average    
+##  8 above average    
+##  9 average          
+## 10 far below average
+## # … with 490 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw16-auto[
+
+```r
+gss %&gt;%
+  specify(response = finrela) %&gt;%
+  hypothesize(null = "point",
+              p = c("far below average" = 1/6,
+                    "below average" = 1/6,
+                    "average" = 1/6,
+                    "above average" = 1/6,
+                    "far above average" = 1/6,
+                    "DK" = 1/6)) %&gt;%
+* calculate(stat = "Chisq")
+```
+]
+ 
+.panel2-sw16-auto[
+
+```
+## Response: finrela (factor)
+## Null Hypothesis: point
+## # A tibble: 1 × 1
+##    stat
+##   &lt;dbl&gt;
+## 1  488.
+```
+]
+
+&lt;style&gt;
+.panel1-sw16-auto {
+  color: white;
+  width: 44.3333333333333%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw16-auto {
+  color: white;
+  width: 53.6666666666667%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw16-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+
+
+---
+
+# Generate a null distribution assuming each income class is equally likely
+
+
+
+count: false
+ 
+
+.panel1-sw17-auto[
+
+```r
+*gss
+```
+]
+ 
+.panel2-sw17-auto[
+
+```
+## # A tibble: 500 × 11
+##     year   age sex    college   partyid hompop hours income class finrela weight
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;fct&gt;  &lt;fct&gt;     &lt;fct&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;ord&gt;  &lt;fct&gt; &lt;fct&gt;    &lt;dbl&gt;
+##  1  2014    36 male   degree    ind          3    50 $2500… midd… below …  0.896
+##  2  1994    34 female no degree rep          4    31 $2000… work… below …  1.08 
+##  3  1998    24 male   degree    ind          1    40 $2500… work… below …  0.550
+##  4  1996    42 male   no degree ind          4    40 $2500… work… above …  1.09 
+##  5  1994    31 male   degree    rep          2    40 $2500… midd… above …  1.08 
+##  6  1996    32 female no degree rep          4    53 $2500… midd… average  1.09 
+##  7  1990    48 female no degree dem          2    32 $2500… work… below …  1.06 
+##  8  2016    36 female degree    ind          1    20 $2500… midd… above …  0.478
+##  9  2000    30 female degree    rep          5    40 $2500… midd… average  1.10 
+## 10  1998    33 female no degree dem          2    40 $1500… work… far be…  0.550
+## # … with 490 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw17-auto[
+
+```r
+gss %&gt;%
+* specify(response = finrela)
+```
+]
+ 
+.panel2-sw17-auto[
+
+```
+## Response: finrela (factor)
+## # A tibble: 500 × 1
+##    finrela          
+##    &lt;fct&gt;            
+##  1 below average    
+##  2 below average    
+##  3 below average    
+##  4 above average    
+##  5 above average    
+##  6 average          
+##  7 below average    
+##  8 above average    
+##  9 average          
+## 10 far below average
+## # … with 490 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw17-auto[
+
+```r
+gss %&gt;%
+  specify(response = finrela) %&gt;%
+* hypothesize(null = "point",
+*             p = c("far below average" = 1/6,
+*                   "below average" = 1/6,
+*                   "average" = 1/6,
+*                   "above average" = 1/6,
+*                   "far above average" = 1/6,
+*                   "DK" = 1/6))
+```
+]
+ 
+.panel2-sw17-auto[
+
+```
+## Response: finrela (factor)
+## Null Hypothesis: point
+## # A tibble: 500 × 1
+##    finrela          
+##    &lt;fct&gt;            
+##  1 below average    
+##  2 below average    
+##  3 below average    
+##  4 above average    
+##  5 above average    
+##  6 average          
+##  7 below average    
+##  8 above average    
+##  9 average          
+## 10 far below average
+## # … with 490 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw17-auto[
+
+```r
+gss %&gt;%
+  specify(response = finrela) %&gt;%
+  hypothesize(null = "point",
+              p = c("far below average" = 1/6,
+                    "below average" = 1/6,
+                    "average" = 1/6,
+                    "above average" = 1/6,
+                    "far above average" = 1/6,
+                    "DK" = 1/6)) %&gt;%
+* generate(reps = 1000, type = "draw")
+```
+]
+ 
+.panel2-sw17-auto[
+
+```
+## Response: finrela (factor)
+## Null Hypothesis: point
+## # A tibble: 500,000 × 2
+## # Groups:   replicate [1,000]
+##    finrela           replicate
+##    &lt;fct&gt;             &lt;fct&gt;    
+##  1 DK                1        
+##  2 far below average 1        
+##  3 far below average 1        
+##  4 far above average 1        
+##  5 far below average 1        
+##  6 below average     1        
+##  7 DK                1        
+##  8 average           1        
+##  9 far above average 1        
+## 10 far below average 1        
+## # … with 499,990 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw17-auto[
+
+```r
+gss %&gt;%
+  specify(response = finrela) %&gt;%
+  hypothesize(null = "point",
+              p = c("far below average" = 1/6,
+                    "below average" = 1/6,
+                    "average" = 1/6,
+                    "above average" = 1/6,
+                    "far above average" = 1/6,
+                    "DK" = 1/6)) %&gt;%
+  generate(reps = 1000, type = "draw") %&gt;%
+* calculate(stat = "Chisq")
+```
+]
+ 
+.panel2-sw17-auto[
+
+```
+## Response: finrela (factor)
+## Null Hypothesis: point
+## # A tibble: 1,000 × 2
+##    replicate  stat
+##    &lt;fct&gt;     &lt;dbl&gt;
+##  1 1          7.53
+##  2 2          2.54
+##  3 3          2.85
+##  4 4          2.06
+##  5 5          3.45
+##  6 6          3.54
+##  7 7          6.02
+##  8 8          2.68
+##  9 9          6.54
+## 10 10         3.4 
+## # … with 990 more rows
+```
+]
+
+&lt;style&gt;
+.panel1-sw17-auto {
+  color: white;
+  width: 44.3333333333333%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw17-auto {
+  color: white;
+  width: 53.6666666666667%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw17-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+
+
+---
+
+# Visualize the null distribution and test statistic
+
+
+
+count: false
+ 
+
+.panel1-sw18-auto[
+
+```r
+*null_dist_gof
+```
+]
+ 
+.panel2-sw18-auto[
+
+```
+## Response: finrela (factor)
+## Null Hypothesis: point
+## # A tibble: 1,000 × 2
+##    replicate  stat
+##    &lt;fct&gt;     &lt;dbl&gt;
+##  1 1          3.86
+##  2 2          2.27
+##  3 3          7.55
+##  4 4          5.75
+##  5 5          6.02
+##  6 6          3.81
+##  7 7          4.17
+##  8 8          1.77
+##  9 9          4.65
+## 10 10         3.59
+## # … with 990 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw18-auto[
+
+```r
+null_dist_gof %&gt;%
+* visualize()
+```
+]
+ 
+.panel2-sw18-auto[
+![](Slides-Week-12R_files/figure-html/sw18_auto_02_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw18-auto[
+
+```r
+null_dist_gof %&gt;%
+  visualize() +
+* shade_p_value(observed_gof_statistic,
+*               direction = "greater")
+```
+]
+ 
+.panel2-sw18-auto[
+![](Slides-Week-12R_files/figure-html/sw18_auto_03_output-1.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-sw18-auto {
+  color: white;
+  width: 44.3333333333333%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw18-auto {
+  color: white;
+  width: 53.6666666666667%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw18-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+# Calculate the *p*-value
+
+
+
+count: false
+ 
+
+.panel1-sw19-auto[
+
+```r
+*null_dist_gof
+```
+]
+ 
+.panel2-sw19-auto[
+
+```
+## Response: finrela (factor)
+## Null Hypothesis: point
+## # A tibble: 1,000 × 2
+##    replicate  stat
+##    &lt;fct&gt;     &lt;dbl&gt;
+##  1 1          3.86
+##  2 2          2.27
+##  3 3          7.55
+##  4 4          5.75
+##  5 5          6.02
+##  6 6          3.81
+##  7 7          4.17
+##  8 8          1.77
+##  9 9          4.65
+## 10 10         3.59
+## # … with 990 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw19-auto[
+
+```r
+null_dist_gof %&gt;%
+* get_p_value(observed_gof_statistic,
+*             direction = "greater")
+```
+]
+ 
+.panel2-sw19-auto[
+
+```
+## Warning: Please be cautious in reporting a p-value of 0. This result is an
+## approximation based on the number of `reps` chosen in the `generate()` step. See
+## `?get_p_value()` for more information.
+```
+
+```
+## # A tibble: 1 × 1
+##   p_value
+##     &lt;dbl&gt;
+## 1       0
+```
+]
+
+&lt;style&gt;
+.panel1-sw19-auto {
+  color: white;
+  width: 44.3333333333333%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw19-auto {
+  color: white;
+  width: 53.6666666666667%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw19-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+
+
+---
+
+If each self-identified income class was equally likely to occur, our approximation of the probability that we would see a distribution like the one we did is approximately 0
+
+---
+
+# Calculate the *p*-value using the true `\(\chi^2\)` distribution
+
+
+```
+## [1] 3.131231e-103
+```
+
+---
+
+
+
+---
+
+## Thats it!
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"navigation": {
+"scroll": false
+}
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

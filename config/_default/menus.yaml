@@ -1,0 +1,79 @@
+main:
+  - name: Syllabus
+    url: /syllabus/
+    weight: 1
+  - name: Schedule
+    url: /schedule/
+    weight: 2
+  - name: Readings
+    url: /readings/
+    weight: 3
+  - name: Data Camp
+    url: /datacamp/
+    weight: 4
+  - name: Materials
+    url: /materials/
+    weight: 5
+  - name: Extras
+    url: /extras/
+    weight: 6
+  - name: Tasks
+    url: /tasks/
+    weight: 7
+  - name: To Do List
+    url: /due/
+    weight: 8
+  - name: Resources
+    url: /resources/
+    weight: 9
+  - name: Professor
+    url: /professor/
+    weight: 10
+  - name: '<i class="fab fa-slack"></i>'
+    url: "https://2021edp613.slack.com"
+    weight: 11
+  - name: '<i class="fab fa-r-project"></i>'
+    url: "https://rstudio.cloud/"
+    weight: 12
+
+readings:
+  - name: Overview
+    weight: 1
+  - name: Readings
+    weight: 2
+datacamp:
+  - name: Overview
+    weight: 1
+  - name: Modules
+    weight: 2
+materials:
+  - name: Overview
+    weight: 1
+  - name: Content
+    weight: 2
+extras:
+  - name: Overview
+    weight: 1
+  - name: Examples
+    weight: 2
+tasks:
+  - name: Overview
+    weight: 1
+  - name: Homeworks
+    weight: 2
+  - name: Quizzes
+    weight: 3
+  - name: Exams
+    weight: 4
+due:
+  - name: Overview
+    weight: 1
+  - name: To Do
+    weight: 2
+resources:
+  - name: Overview
+    weight: 1
+  - name: Guides
+    weight: 2
+  - name: References
+    weight: 3

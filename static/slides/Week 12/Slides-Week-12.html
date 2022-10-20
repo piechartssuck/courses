@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>The Chi Square Test and Measures of Association</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Week 12" />
+    <script src="Slides-Week-12_files/header-attrs-2.11/header-attrs.js"></script>
+    <link href="Slides-Week-12_files/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
+    <script src="Slides-Week-12_files/tile-view-0.2.6/tile-view.js"></script>
+    <link href="Slides-Week-12_files/animate.css-3.7.2/animate.xaringan.css" rel="stylesheet" />
+    <link href="Slides-Week-12_files/tachyons-4.12.0/tachyons.min.css" rel="stylesheet" />
+    <script src="Slides-Week-12_files/kePrint-0.0.1/kePrint.js"></script>
+    <link href="Slides-Week-12_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# The Chi Square Test and Measures of Association
+## EDP 613
+### Week 12
+
+---
+
+
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/x-mathjax-config"&gt;
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+  MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+    cancel: ["Extension","cancel"],
+    bcancel: ["Extension","cancel"],
+    xcancel: ["Extension","cancel"],
+    cancelto: ["Extension","cancel"]
+  });
+});
+&lt;/script&gt;
+
+&lt;style&gt;
+section {
+    display: flex;
+    display: -webkit-flex;
+}
+
+section p {
+    margin: auto;
+}
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
+}
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
+}
+
+section {
+    height: 600px;
+    width: 60%;
+    margin: auto;
+    border-radius: 20px;
+    background-color: #212121;
+}
+
+section p {
+    text-align: center;
+    font-size: 30px;
+    background-color: #212121;
+    border-radius: 20px;
+    font-family: Roboto Condensed;
+    font-style: bold;
+    padding: 15px;
+    color: #bff4ee;
+}
+
+#center {
+text-align: center;
+}
+
+.center p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+&lt;/style&gt;
+
+
+
+
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 110px;
+height: 128px;
+z-index: 0;
+background-image: url(/Users/skynet/Documents/WVU/Teaching/GitHub.nosync/Workspace/edp613/static/img/course_hex_alpha.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:1em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('a')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = 'https://edp613.asocialdatascientist.com'
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+
+
+# A Note About The Slides
+
+Currently the equations do not show up properly in Firefox. Other browsers such as Chrome and Safari do work. 
+
+---
+
+# Independence
+
+Two variables that have no association with each other are **statistically independent**.
+
+---
+
+# Frequencies
+
+--
+
+- **expected frequencies**
+
+  &gt; written `\(f_e\)`
+  
+--
+  
+  &gt; what you would *expect* in a bivariate table if two variables were statistically independent 
+  
+--
+  
+  &gt; only assumption: the null hypothesis is true
+  
+--
+
+  &gt; calculated by `$$f_e = \dfrac{\text{column marginal}\cdot\text{row marginal}}{\text{total sample size}}$$`
+  
+--
+
+- **observed frequencies**
+
+--
+
+  &gt; written `\(f_o\)`
+  
+--
+
+  &gt; what you would *observe* in a bivariate table given what you have
+  
+--
+
+ &gt; calculated by you or given
+
+---
+
+# Chi-Square Test
+
+--
+
+&gt; written `\(\chi^2\)`.
+
+--
+
+&gt; assumes *random sampling*
+
+--
+
+&gt; Is an inferential test to find significant relationships between two variables.
+
+--
+
+&gt; Calculated by `$$\chi^2 =\sum\dfrac{(f_o-f_e)^2}{f_e}$$`
+
+--
+
+&gt; with `$$df = (r-1)(c-1)$$`
+
+---
+
+### Example: Social Media
+
+The percent of people using at least one social media outlet is given below by age groups
+.footnote[Source: [*Pew Research Center: Social Media Fact Sheet*](https://www.pewresearch.org/internet/fact-sheet/social-media/)]
+
+.pull-left[
+&lt;center&gt;In 2011:&lt;/center&gt; 
+&lt;br&gt;
+&lt;table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Age &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; Portion &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 18 - 29 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 820 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 30 - 49 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 590 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 50 - 64 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 360 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 65+ &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 120 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+--
+
+.pull-right[
+&lt;center&gt;In 2021:&lt;/center&gt; 
+&lt;br&gt;
+&lt;table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Age &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; Responses &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 18 - 29 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; `840` &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 30 - 49 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; `810` &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 50 - 64 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; `730` &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 65+ &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; `450` &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+--
+
+a. Test the assumption that *users are equally likely* to be in each of the four age groups listed.
+
+b. Which age group contributes the largest amount to the test statistic?
+
+---
+
+### Example: Solution for 2011
+
+a. We have 
+
+--
+
+`$$H_0: \text{Users are equally likely to be in each of the four groups listed}$$`
+--
+
+`$$H_1: \text{Users are NOT equally likely to be in each of the four groups listed}$$`
+
+--
+
+&gt; Step 1: Find `\(N\)`
+&lt;br&gt;
+&lt;br&gt;
+ 
+
+--
+
+.pull-left[
+We have `\(820+590+360+120=1890\)` total responses
+]
+
+--
+
+.pull-right[
+If the distribution was uniform across all four categories, we would expect that each had `\(1890/4\approx472\)` respondents
+]
+
+---
+
+&gt; Step 2: Caluclate the `\(\chi^2\)` statistic
+
+&lt;table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Age &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; Responses &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; `\chi^2` &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 18 - 29 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; `820` &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; `\frac{(820-472)^2}{472} \approx 256.576` &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 30 - 49 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; `590` &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; `\frac{(590-472)^2}{472} \approx 29.500` &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 50 - 64 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; `360` &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; `\frac{(360-472)^2}{472} \approx 26.576` &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 65+ &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; `120` &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; `\frac{(120-472)^2}{472} \approx 62.509` &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+--
+
+with the total `$$256.576 + 29.500 + 26.576 + 62.509 = 375.161$$` 
+
+--
+
+and `$$df = 4-1 = 3$$`
+
+---
+
+&gt; Step 3: Make a Decision
+
+--
+
+In Appendix D
+
+  - Look at `\(df = 3\)`
+ 
+--
+ 
+  - `\(\chi^2=375.161\)` &lt; the greatest `\(p\)`-value so `\(p&lt;0.001\)`
+ 
+--
+
+  - We reject `\(H_0\)` implying that
+  
+--
+  
+&lt;center&gt;  
+ &lt;i&gt; respondents are not equally likely to be in each of the four age ranges listed&lt;/i&gt;
+&lt;/center&gt;
+
+---
+
+b . 
+  
+  - 65+ contributes the greatest amount to the sum for the test statistic
+  
+--
+
+  - The observed count is much smaller than expected
+
+---
+
+### Example: Solution for 2021
+
+We have 
+
+
+`$$H_0: \text{Users are equally likely to be in each of the four groups listed}$$`
+
+`$$H_1: \text{Users are NOT equally likely to be in each of the four groups listed}$$`
+
+---
+
+&gt; Step 1: Find `\(N\)`
+&lt;br&gt;
+&lt;br&gt;
+ 
+
+--
+
+.pull-left[
+We have `\(840+810+730+450=2830\)` total responses
+]
+
+--
+
+.pull-right[
+If the distribution was uniform across all four categories, we would expect that each had `\(2830/4\approx707\)` respondents
+]
+
+---
+
+&gt; Step 2: Caluclate the `\(\chi^2\)` statistic
+
+&lt;table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Age &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; Responses &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; `\chi^2` &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 18 - 29 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; `840` &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; `\frac{(840-707)^2}{707} \approx 25.020` &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 30 - 49 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; `810` &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; `\frac{(810-707)^2}{707} \approx 15.006` &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 50 - 64 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; `730` &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; `\frac{(730-707)^2}{707} \approx 0.748` &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 65+ &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; `450` &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; `\frac{(450-707)^2}{707} \approx 93.422` &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+with the total `$$5.020+15.006+0.748+93.422 = 134.196$$` 
+
+and `$$df = 4-1 = 3$$`
+
+---
+
+&gt; Step 3: Make a Decision
+
+--
+
+In Appendix D
+
+  - Look at `\(df = 3\)`
+ 
+  - `\(\chi^2=33.526\)` &lt; the greatest `\(p\)`-value so `\(p&lt;0.001\)`
+ 
+--
+
+  - We reject `\(H_0\)` implying that
+  
+&lt;center&gt;  
+ &lt;i&gt; respondents are not equally likely to be in each of the four age ranges listed&lt;/i&gt;
+&lt;/center&gt;
+
+---
+
+## That's it. Take a break before our R session!
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"navigation": {
+"scroll": false
+}
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
