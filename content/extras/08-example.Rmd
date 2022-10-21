@@ -25,8 +25,8 @@ This week we have another brief introduction from Crash Course Statistics on **C
 <iframe width="560" height="315" src="https://www.youtube.com/embed/bf3egy7TQ2Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 
-Remember you can always access a Crash Course Statistics playlist using the following  [link](https://www.youtube.com/playlist?list=PL8dPuuaLjXtNM_Y-bUAhblSAdWRnmBUcr){target="_blank"}.
+Remember you can always access a Crash Course Statistics playlist using the following [link](https://www.youtube.com/playlist?list=PL8dPuuaLjXtNM_Y-bUAhblSAdWRnmBUcr).
 
 ### Power and Significance 
 
-If you like interactive things and want to see how Type I & Type II errors, $\alpha$, $\beta$, *p*-values, power and effect sizes all play together, try Kristoffer Magnusson's wonderful page [Understanding Statistical Power and Significance Testing: an interactive visualization](https://rpsychologist.com/d3/nhst/){target="_blank"}.
+If you like interactive things and want to see how Type I & Type II errors, $ \alpha$, $ \beta$, *p*-values, power and effect sizes all play together, try Kristoffer Magnusson's wonderful page [Understanding Statistical Power and Significance Testing: an interactive visualization](https://rpsychologist.com/d3/nhst/).

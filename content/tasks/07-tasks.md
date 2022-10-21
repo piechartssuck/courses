@@ -37,7 +37,8 @@ table thead th { border-bottom: 1px solid #ddd;
 th, td { padding: 5px; 
 }
 
-tr:nth-child(even) { background: #ffffff; 
+table > tbody > tr:hover > td, table > tbody > tr:hover > th {
+  background-color: #ffffff;
 }
 </style>
 
@@ -48,18 +49,18 @@ tr:nth-child(even) { background: #ffffff;
 <table>
  <thead>
   <tr>
-   <th style="text-align:center;"> Chapter </th>
-   <th style="text-align:left;"> Problems </th>
-   <th style="text-align:left;"> Source </th>
-   <th style="text-align:left;"> Pages </th>
+   <th style="text-align:center;background-color: #ffffff !important;vertical-align: middle !important;"> Chapter </th>
+   <th style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> Problems </th>
+   <th style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> Source </th>
+   <th style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> Pages </th>
   </tr>
  </thead>
 <tbody>
   <tr>
-   <td style="text-align:center;font-weight: bold;"> 6 </td>
-   <td style="text-align:left;"> 1, 2, 3, 4, 5, 6, 7, 8, 9 </td>
-   <td style="text-align:left;"> Social Statistics for a Diverse Society </td>
-   <td style="text-align:left;"> 206-210 </td>
+   <td style="text-align:center;font-weight: bold;background-color: #ffffff !important;vertical-align: middle !important;"> 6 </td>
+   <td style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> 1, 2, 3, 4, 5, 6, 7, 8, 9 </td>
+   <td style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> Social Statistics for a Diverse Society </td>
+   <td style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> 206-210 </td>
   </tr>
 </tbody>
 </table>
@@ -268,17 +269,17 @@ First we convert these to a vector and take the sum
       ```
       
       ```
-      ##            [,1]       [,2]       [,3]
-      ##  [1,]  29970.79  13521.099 202605.486
-      ##  [2,] 115796.50 180407.759 361934.576
-      ##  [3,]  91694.79 244523.975 195074.850
-      ##  [4,] 178312.98  81292.637 202675.908
-      ##  [5,]  25231.10 167902.751 115652.860
-      ##  [6,]  39238.93  72243.892 148876.931
-      ##  [7,] 376162.26 -17960.976  -4974.728
-      ##  [8,]  35836.33   1144.881 283503.557
-      ##  [9,] 168946.93  55485.447 106619.696
-      ## [10,] 140142.17  25259.942  55076.843
+      ##            [,1]       [,2]        [,3]
+      ##  [1,] 105699.52   73510.34  47366.5273
+      ##  [2,]  30006.16 -152541.74  67542.3456
+      ##  [3,] 145093.65   90592.21 131036.4313
+      ##  [4,] 129979.25  -57916.92 129541.9173
+      ##  [5,] 143612.03   63349.44  58423.2653
+      ##  [6,] 133048.45  105502.30 -19070.0009
+      ##  [7,]  80526.49  142114.93 240017.2511
+      ##  [8,] 139189.61   82385.98  12053.5580
+      ##  [9,] 100133.71  184022.74 205169.9065
+      ## [10,] 194136.21   84008.67   -834.3961
       ```
   c. The mean of these 10 sets of means is 
       
@@ -287,7 +288,7 @@ First we convert these to a vector and take the sum
       ```
       
       ```
-      ## [1] 123073.3
+      ## [1] 89590
       ```
       or about <span class="boxed">105428</span>. We notice that the population mean and the mean of the sampling distribution are somewhat close, a feature that we should come to expect given the fact that `\(\mu_Y = \mu_{\overline{Y}}\)`.
   d. The standard deviation of these 10 sets of means is
@@ -297,7 +298,7 @@ First we convert these to a vector and take the sum
       ```
       
       ```
-      ## [1] 103613.9
+      ## [1] 80685.79
       ```
       or about <span class="boxed">122991</span>.
   e. The population distribution is positively skewed and not close to normal. Since a very small sample size is used in this problem, the histogram for the samples of size 3 does not look normal. The distributions appear unimodal. The fact that the sample distribution of the means tends toward normality because of the Central Limit Theorem would become even more apparent if we took samples of size 5 or 6. To show this, look at the plots below

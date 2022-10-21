@@ -13,15 +13,19 @@ weight: 3
 editor_options: 
   chunk_output_type: console
 ---
-
 <script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
 <link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
-<script src="/rmarkdown-libs/font-awesome/js/script.js"></script>
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+<link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+<link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
+
 <script>
   function resizeIframe(obj) {
     obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
   }
 </script>
+
 <style>
   .hvr-sweep-to-left {
     display: inline-block;
@@ -65,76 +69,98 @@ editor_options:
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
+
+table > tbody > tr:hover > td, table > tbody > tr:hover > th {
+  background-color: #ffffff;
+}
 </style>
 
-### Textbook Notes
 
+
+## Stock Textbook Notes
+
+
+
+<center>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
-<thead>
-<tr>
-<th style="text-align:center;">
-</th>
-<th style="text-align:center;">
-</th>
-</tr>
-</thead>
+ <thead>
+  <tr>
+   <th style="text-align:center;">  </th>
+   <th style="text-align:center;">  </th>
+  </tr>
+ </thead>
 <tbody>
-<tr>
-<td style="text-align:center;width: 20em; ">
-Chapter 7 PowerPoint
-</td>
-<td style="text-align:center;width: 20em; ">
-Chapter 7 Notes
-</td>
-</tr>
-<tr>
-<td style="text-align:center;width: 20em; ">
-<a href="/lecture_notes/Week%208/SSDS_Ch7.pptx"><svg aria-hidden="true" role="img" viewbox="0 0 384 512" style="height:2.67em;width:2em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#d04423;overflow:visible;position:relative;"><path d="M256 0v128h128L256 0zM224 128L224 0H48C21.49 0 0 21.49 0 48v416C0 490.5 21.49 512 48 512h288c26.51 0 48-21.49 48-48V160h-127.1C238.3 160 224 145.7 224 128zM279.6 308.1C284.2 353.5 248.5 392 204 392H160v40C160 440.8 152.8 448 144 448H128c-8.836 0-16-7.164-16-16V256c0-8.836 7.164-16 16-16h71.51C239.3 240 275.6 268.5 279.6 308.1zM160 344h44c15.44 0 28-12.56 28-28S219.4 288 204 288H160V344z"></path></svg></a>
-</td>
-<td style="text-align:center;width: 20em; ">
-<a href="/lecture_notes/Week%208/SSDS_Ch7.docx"><svg aria-hidden="true" role="img" viewbox="0 0 384 512" style="height:2.67em;width:2em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#00a4ef;overflow:visible;position:relative;"><path d="M224 128L224 0H48C21.49 0 0 21.49 0 48v416C0 490.5 21.49 512 48 512h288c26.51 0 48-21.49 48-48V160h-127.1C238.3 160 224 145.7 224 128zM281.5 240h23.37c7.717 0 13.43 7.18 11.69 14.7l-42.46 184C272.9 444.1 268 448 262.5 448h-29.26c-5.426 0-10.18-3.641-11.59-8.883L192 329.1l-29.61 109.1C160.1 444.4 156.2 448 150.8 448H121.5c-5.588 0-10.44-3.859-11.69-9.305l-42.46-184C65.66 247.2 71.37 240 79.08 240h23.37c5.588 0 10.44 3.859 11.69 9.301L137.8 352L165.6 248.9C167 243.6 171.8 240 177.2 240h29.61c5.426 0 10.18 3.641 11.59 8.883L246.2 352l23.7-102.7C271.1 243.9 275.1 240 281.5 240zM256 0v128h128L256 0z"></path></svg></a>
-</td>
-</tr>
+  <tr>
+   <td style="text-align:center;width: 20em; background-color: #ffffff !important;vertical-align: middle !important;"> Chapter 7 PowerPoint </td>
+   <td style="text-align:center;width: 20em; background-color: #ffffff !important;vertical-align: middle !important;"> Chapter 7 Notes </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 20em; background-color: #ffffff !important;vertical-align: middle !important;"> <a target="_blank" href="/lecture_notes/Week%208/SSDS_Ch7.pptx"><svg aria-hidden="true" role="img" viewbox="0 0 384 512" style="height:2.67em;width:2em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#d04423;overflow:visible;position:relative;"><path d="M256 0v128h128L256 0zM224 128L224 0H48C21.49 0 0 21.49 0 48v416C0 490.5 21.49 512 48 512h288c26.51 0 48-21.49 48-48V160h-127.1C238.3 160 224 145.7 224 128zM279.6 308.1C284.2 353.5 248.5 392 204 392H160v40C160 440.8 152.8 448 144 448H128c-8.836 0-16-7.164-16-16V256c0-8.836 7.164-16 16-16h71.51C239.3 240 275.6 268.5 279.6 308.1zM160 344h44c15.44 0 28-12.56 28-28S219.4 288 204 288H160V344z"></path></svg></a> </td>
+   <td style="text-align:center;width: 20em; background-color: #ffffff !important;vertical-align: middle !important;"> <a target="_blank" href="/lecture_notes/Week%208/SSDS_Ch7.docx"><svg aria-hidden="true" role="img" viewbox="0 0 384 512" style="height:2.67em;width:2em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#00a4ef;overflow:visible;position:relative;"><path d="M224 128L224 0H48C21.49 0 0 21.49 0 48v416C0 490.5 21.49 512 48 512h288c26.51 0 48-21.49 48-48V160h-127.1C238.3 160 224 145.7 224 128zM281.5 240h23.37c7.717 0 13.43 7.18 11.69 14.7l-42.46 184C272.9 444.1 268 448 262.5 448h-29.26c-5.426 0-10.18-3.641-11.59-8.883L192 329.1l-29.61 109.1C160.1 444.4 156.2 448 150.8 448H121.5c-5.588 0-10.44-3.859-11.69-9.305l-42.46-184C65.66 247.2 71.37 240 79.08 240h23.37c5.588 0 10.44 3.859 11.69 9.301L137.8 352L165.6 248.9C167 243.6 171.8 240 177.2 240h29.61c5.426 0 10.18 3.641 11.59 8.883L246.2 352l23.7-102.7C271.1 243.9 275.1 240 281.5 240zM256 0v128h128L256 0z"></path></svg></a> </td>
+  </tr>
 </tbody>
 </table>
+</center>
 
-### In Class Notes
+## In Class Presentations
+For all slideshows, you may move back and forth using <kbd>←</kbd> and <kbd>→</kbd> and toggle fullscreen by pressing <kbd>F</kbd>. Just press <kbd>O</kbd>[^1] at any point in your slideshow and a display of all slides, called tile view, will appear. Click on a slide to go there or press <kbd>O</kbd> to exit tile view. For more options, press <kbd>H</kbd> for help.
 
-<!--
-*posted during class time*
--->
-<iframe src="/slides/Week 8/Slides-Week-8.html" width="672" height="400px" data-external="1">
-</iframe>
+### Concepts
 
-You can move back and forth using <kbd>←</kbd> and <kbd>→</kbd> and toggle fullscreen by pressing <kbd>F</kbd>. Just press <kbd>O</kbd>[^1] at any point in your slideshow and a display of all slides, called tile view, will appear. Click on a slide to go there or press <kbd>O</kbd> to exit tile view. For more options, press <kbd>H</kbd> for help.
+<center>
+<iframe src="/slides/Week 8/Slides-Week-8.html" width="672" height="400px" data-external="1"></iframe>
+</center>
 
-> Click <a href="/slides/Week%208/Slides-Week-8.html" target="_blank">here</a> for a larger version of the presentation.
 
-> Click <a href="/slides/Week%208/Slides-Week-8.pdf" target="_blank">here</a> here for a PDF of the presentation.
+
+<center>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:center;">  </th>
+   <th style="text-align:center;">  </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:center;width: 20em; background-color: #ffffff !important;vertical-align: middle !important;"> Full Screen Slideshow </td>
+   <td style="text-align:center;width: 20em; background-color: #ffffff !important;vertical-align: middle !important;"> Presentation PDF </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 20em; background-color: #ffffff !important;vertical-align: middle !important;"> <a target="_blank" href="/slides/Week%208/Slides-Week-8.html"><svg aria-hidden="true" role="img" viewbox="0 0 640 512" style="height:2.4em;width:3em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#7ead86;overflow:visible;position:relative;"><path d="M144 48C144 21.49 165.5 0 192 0C218.5 0 240 21.49 240 48C240 74.51 218.5 96 192 96C165.5 96 144 74.51 144 48zM152 512C134.3 512 120 497.7 120 480V256.9L91.43 304.5C82.33 319.6 62.67 324.5 47.52 315.4C32.37 306.3 27.47 286.7 36.58 271.5L94.85 174.6C112.2 145.7 143.4 128 177.1 128H320V48C320 21.49 341.5 .0003 368 .0003H592C618.5 .0003 640 21.49 640 48V272C640 298.5 618.5 320 592 320H368C341.5 320 320 298.5 320 272V224H384V256H576V64H384V128H400C417.7 128 432 142.3 432 160C432 177.7 417.7 192 400 192H264V480C264 497.7 249.7 512 232 512C214.3 512 200 497.7 200 480V352H184V480C184 497.7 169.7 512 152 512L152 512z"></path></svg></a> </td>
+   <td style="text-align:center;width: 20em; background-color: #ffffff !important;vertical-align: middle !important;"> <a target="_blank" href="/slides/Week%208/Slides-Week-8.pdf"><svg aria-hidden="true" role="img" viewbox="0 0 384 512" style="height:2.67em;width:2em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#f40f02;overflow:visible;position:relative;"><path d="M88 304H80V256H88C101.3 256 112 266.7 112 280C112 293.3 101.3 304 88 304zM192 256H200C208.8 256 216 263.2 216 272V336C216 344.8 208.8 352 200 352H192V256zM224 0V128C224 145.7 238.3 160 256 160H384V448C384 483.3 355.3 512 320 512H64C28.65 512 0 483.3 0 448V64C0 28.65 28.65 0 64 0H224zM64 224C55.16 224 48 231.2 48 240V368C48 376.8 55.16 384 64 384C72.84 384 80 376.8 80 368V336H88C118.9 336 144 310.9 144 280C144 249.1 118.9 224 88 224H64zM160 368C160 376.8 167.2 384 176 384H200C226.5 384 248 362.5 248 336V272C248 245.5 226.5 224 200 224H176C167.2 224 160 231.2 160 240V368zM288 224C279.2 224 272 231.2 272 240V368C272 376.8 279.2 384 288 384C296.8 384 304 376.8 304 368V320H336C344.8 320 352 312.8 352 304C352 295.2 344.8 288 336 288H304V256H336C344.8 256 352 248.8 352 240C352 231.2 344.8 224 336 224H288zM256 0L384 128H256V0z"></path></svg></a> </td>
+  </tr>
+</tbody>
+</table>
+</center>
 
 ### R Walkthrough
 
-<!--
-*posted during class time*
--->
-
-Download a copy of everything you need to follow along the walkthrough[^2]
-
-<a onclick="fetch(&#39;data:application/zip;base64,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&#39;).then(res =&gt; res.blob()).then(blob =&gt; {&#10;      const downloadURL = window.URL.createObjectURL(blob);&#10;      const a = document.createElement(&#39;a&#39;);&#10;      document.body.appendChild(a);&#10;      a.href = downloadURL;&#10;      a.download = &#39;Week 8 R Walkthrough Materials.zip&#39;; a.click();&#10;      window.URL.revokeObjectURL(downloadURL);&#10;      document.body.removeChild(a);&#10;    });">
-<button class="btn btn-default hvr-sweep-to-left"><i class="fa fa-save"></i> Download</button>
-</a>
-
-<br>
+<center>
 <iframe src="/slides/Week 8/Slides-Week-8R.html" width="672" height="400px" data-external="1"></iframe>
+</center>
 
-You can move back and forth using <kbd>←</kbd> and <kbd>→</kbd> and toggle fullscreen by pressing <kbd>F</kbd>. Just press <kbd>O</kbd>[^3] at any point in your slideshow and a display of all slides, called tile view, will appear. Click on a slide to go there or press <kbd>O</kbd> to exit tile view. For more options, press <kbd>H</kbd> for help.
 
-> Click <a href="/slides/Week%208/Slides-Week-8R.html" target="_blank">here</a> for a larger version of the presentation.
 
-> Click <a href="/slides/Week%208/Slides-Week-8R.pdf" target="_blank">here</a> here for a PDF of the presentation.
+<center>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:center;">  </th>
+   <th style="text-align:center;">  </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:center;width: 20em; background-color: #ffffff !important;vertical-align: middle !important;"> Full Screen Slideshow </td>
+   <td style="text-align:center;width: 20em; background-color: #ffffff !important;vertical-align: middle !important;"> Presentation PDF </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;width: 20em; background-color: #ffffff !important;vertical-align: middle !important;"> <a target="_blank" href="/slides/Week%208/Slides-Week-8R.html"><svg aria-hidden="true" role="img" viewbox="0 0 640 512" style="height:2.4em;width:3em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#7ead86;overflow:visible;position:relative;"><path d="M144 48C144 21.49 165.5 0 192 0C218.5 0 240 21.49 240 48C240 74.51 218.5 96 192 96C165.5 96 144 74.51 144 48zM152 512C134.3 512 120 497.7 120 480V256.9L91.43 304.5C82.33 319.6 62.67 324.5 47.52 315.4C32.37 306.3 27.47 286.7 36.58 271.5L94.85 174.6C112.2 145.7 143.4 128 177.1 128H320V48C320 21.49 341.5 .0003 368 .0003H592C618.5 .0003 640 21.49 640 48V272C640 298.5 618.5 320 592 320H368C341.5 320 320 298.5 320 272V224H384V256H576V64H384V128H400C417.7 128 432 142.3 432 160C432 177.7 417.7 192 400 192H264V480C264 497.7 249.7 512 232 512C214.3 512 200 497.7 200 480V352H184V480C184 497.7 169.7 512 152 512L152 512z"></path></svg></a> </td>
+   <td style="text-align:center;width: 20em; background-color: #ffffff !important;vertical-align: middle !important;"> <a target="_blank" href="/slides/Week%208/Slides-Week-8R.pdf"><svg aria-hidden="true" role="img" viewbox="0 0 384 512" style="height:2.67em;width:2em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#f40f02;overflow:visible;position:relative;"><path d="M88 304H80V256H88C101.3 256 112 266.7 112 280C112 293.3 101.3 304 88 304zM192 256H200C208.8 256 216 263.2 216 272V336C216 344.8 208.8 352 200 352H192V256zM224 0V128C224 145.7 238.3 160 256 160H384V448C384 483.3 355.3 512 320 512H64C28.65 512 0 483.3 0 448V64C0 28.65 28.65 0 64 0H224zM64 224C55.16 224 48 231.2 48 240V368C48 376.8 55.16 384 64 384C72.84 384 80 376.8 80 368V336H88C118.9 336 144 310.9 144 280C144 249.1 118.9 224 88 224H64zM160 368C160 376.8 167.2 384 176 384H200C226.5 384 248 362.5 248 336V272C248 245.5 226.5 224 200 224H176C167.2 224 160 231.2 160 240V368zM288 224C279.2 224 272 231.2 272 240V368C272 376.8 279.2 384 288 384C296.8 384 304 376.8 304 368V320H336C344.8 320 352 312.8 352 304C352 295.2 344.8 288 336 288H304V256H336C344.8 256 352 248.8 352 240C352 231.2 344.8 224 336 224H288zM256 0L384 128H256V0z"></path></svg></a> </td>
+  </tr>
+</tbody>
+</table>
+</center>
 
-[^1]: For **O**verview
-
-[^2]: You will have to unzip this file. If you are unfamiliar with this process, please check the [Unzipping files](/resource/unzipping/) section under Resources for assistance
-
-[^3]: For **O**verview
+[^1]: For <b>O</b>verview

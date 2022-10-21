@@ -41,7 +41,8 @@ table thead th { border-bottom: 1px solid #ddd;
 th, td { padding: 5px; 
 }
 
-tr:nth-child(even) { background: #ffffff; 
+table > tbody > tr:hover > td, table > tbody > tr:hover > th {
+  background-color: #ffffff;
 }
 </style>
 
@@ -69,8 +70,8 @@ book %>%
       "html", 
       escape = FALSE,
       align = 'clll') %>%
-  column_spec(1, 
-              bold = TRUE)
+  column_spec(1, bold = TRUE) %>%
+  row_spec(0:1, extra_css = 'vertical-align: middle !important;', background = "#ffffff")
 ```
 </center>
 

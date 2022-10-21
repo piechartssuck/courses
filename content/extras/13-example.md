@@ -1,8 +1,9 @@
 ---
 title: "Regression and Correlation & Analysis of Variance"
 linktitle: "Week 13: Regression and Correlation & Analysis of Variance"
+toc: true
 output:
-  blogdown::html_page:
+  rmarkdown::html_document:
     toc: true
 menu:
   extras:
@@ -25,7 +26,7 @@ This week we are combing the next two chapters because it makes sense to do so. 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/oOuu8IBd-yo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 
-Remember you can always access a Crash Course Statistics playlist using the following  [link](https://www.youtube.com/playlist?list=PL8dPuuaLjXtNM_Y-bUAhblSAdWRnmBUcr){target="_blank"}.
+Remember you can always access a Crash Course Statistics playlist using the following  [link](https://www.youtube.com/playlist?list=PL8dPuuaLjXtNM_Y-bUAhblSAdWRnmBUcr).
 
 ### Veritasium
 

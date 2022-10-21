@@ -1,30 +1,30 @@
-﻿Group,Chapter,Title,Source,Pages,Details,Assigned,Read Before,Required,Tasks,Materials,Example,Data Camp
-1,1,The What and the Why of Statistics,Social Statistics for a Diverse Society,19-Jan,[Week 1](/readings/01-reading/),8/19/21,8/26/21,checked,[Link](/tasks/01-tasks/),[Link](/materials/01-content/),,[Link](/datacamp/01-module/)
-,,,,,,,,,,,,
-2,2,The Organization and Graphic Presentation of Data,Social Statistics for a Diverse Society,27-55,[Week 2](/readings/02-reading/),8/19/21,8/26/21,checked,[Link](/tasks/02-tasks/),[Link](/materials/02-content/),[Link](/materials/02-example/),[Link](/datacamp/01-module/)
-,,,,,,,,,,,,
-3,3,Measures of Central Tendency,Social Statistics for a Diverse Society,75-97,[Week 3](/readings/03-reading/),8/26/21,9/2/21,checked,[Link](/tasks/03-tasks/),[Link](/materials/03-content/),[Link](/materials/03-example/),[Link](/datacamp/02-module/)
-,,,,,,,,,,,,
-4,4,Measures of Variability,Social Statistics for a Diverse Society,113-134,[Week 4](/readings/04-reading/),9/2/21,9/9/21,checked,[Link](/tasks/04-tasks/),[Link](/materials/04-content/),[Link](/materials/04-example/),[Link](/datacamp/02-module/)
-,,,,,,,,,,,,
-5,5,The Normal Distribution,Social Statistics for a Diverse Society,151-168,[Week 5](/readings/05-reading/),9/9/21,9/16/21,checked,[Link](/tasks/05-tasks/),[Link](/materials/05-content/),[Link](/materials/05-example/),[Link](/datacamp/02-module/)
-,,,,,,,,,,,,
-E1,,Descriptive Statistics,Exam 1,,[Exam 1](/tasks/01-exam/),9/23/21,,checked,[Exam 1](/tasks/01-exam/),,,[Link](/datacamp/03-module/)
-,,,,,,,,,,,,
-7,7,Sampling and Sampling Distributions,Social Statistics for a Diverse Society,179-201,[Week 7](/readings/07-reading/),9/23/21,9/30/21,checked,[Link](/tasks/07-tasks/),[Link](/materials/07-content/),[Link](/materials/07-example/),[Link](/datacamp/04-module/)
-,,,,,,,,,,,,
-8,8,Estimation,Social Statistics for a Diverse Society,211-230,[Week 8](/readings/08-reading/),9/30/21,10/14/21,checked,[Link](/tasks/08-tasks/),[Link](/materials/08-content/),[Link](/materials/08-example/),[Link](/datacamp/04-module/)
-,,,,,,,,,,,,
-9,9,Testing Hyptheses,Social Statistics for a Diverse Society,241-264,[Week 9](/readings/09-reading/),10/14/21,10/21/21,checked,[Link](/tasks/09-tasks/),[Link](/materials/09-content/),[Link](/materials/09-example/),[Link](/datacamp/05-module/)
-,,,,,,,,,,,,
-10,10,Bivariate Tables,Social Statistics for a Diverse Society,281-306,[Week 10](/readings/10-reading/),10/21/21,10/28/21,checked,[Link](/tasks/10-tasks/),[Link](/materials/10-content/),[Link](/materials/10-example/),[Link](/datacamp/05-module/)
-,,,,,,,,,,,,
-Q1,,Basics of Inference,Quiz 1,,[Quiz 1](/tasks/01-quiz/),11/4/21,,checked,[Quiz 1](/tasks/01-quiz/),,,[Link](/datacamp/05-module/)
-,,,,,,,,,,,,
-12,12,The Chi-Square Test and Measures of Association,,327-350,[Week 12](/readings/12-reading/),10/28/21,11/11/21,checked,[Link](/tasks/12-tasks/),[Link](/materials/12-content/),[Link](/materials/12-example/),[Link](/datacamp/05-module/)
-,,,,,,,,,,,,
-13,13,Regression and Correlation & Analysis of Variance,,373-429,[Week 13](/readings/13-reading/),11/11/21,11/18/21,checked,[Link](/tasks/13-tasks/),[Link](/materials/13-content/),[Link](/materials/13-example/),[Link](/datacamp)
-,,,,,,,,,,,,
-E2,,Interential Statistics,Exam 2,,[Exam 2](/tasks/02-exam/),,,checked,[Exam 2](/tasks/02-exam/),,,[Link](/datacamp)
-,,,,,,,,,,,,
-FE,,Descriptive & Inferential Statistics ,,,[Final Exam](/tasks/03-exam/),,,,[Final Exam](/tasks/03-exam/),,,
+﻿Group,Chapter,Title,Source,Pages,Details,Assigned,Read Before,Required
+1,1,The What and the Why of Statistics,<i>Social Statistics for a Diverse Society</i>,4-18,<a href='/readings/01-reading/'>Week 1</a>,8/19/21,8/26/21,checked
+,,,,,,,,
+2,2,The Organization and Graphic Presentation of Data,<i>Social Statistics for a Diverse Society</i>,27-55,<a href='/readings/02-reading/'>Week 2</a>,8/19/21,8/26/21,checked
+,,,,,,,,
+3,3,Measures of Central Tendency,<i>Social Statistics for a Diverse Society</i>,75-97,<a href='/readings/03-reading/'>Week 3</a>,8/26/21,9/2/21,checked
+,,,,,,,,
+4,4,Measures of Variability,<i>Social Statistics for a Diverse Society</i>,113-134,<a href='/readings/04-reading/'>Week 4</a>,9/2/21,9/9/21,checked
+,,,,,,,,
+5,5,The Normal Distribution,<i>Social Statistics for a Diverse Society</i>,151-168,<a href='/readings/05-reading/'>Week 5</a>,9/9/21,9/16/21,checked
+,,,,,,,,
+E1,,Descriptive Statistics,Exam 1,,<a href='(/tasks/01-exam/'>Exam 1</a>,9/23/21,,checked
+,,,,,,,,
+7,7,Sampling and Sampling Distributions,<i>Social Statistics for a Diverse Society</i>,179-201,<a href='/readings/07-reading/'>Week 7</a>,9/23/21,9/30/21,checked
+,,,,,,,,
+8,8,Estimation,<i>Social Statistics for a Diverse Society</i>,211-230,<a href='/readings/08-reading/'>Week 8</a>,9/30/21,10/14/21,checked
+,,,,,,,,
+9,9,Testing Hyptheses,<i>Social Statistics for a Diverse Society</i>,241-264,<a href='/readings/09-reading/'>Week 9</a>,10/14/21,10/21/21,checked
+,,,,,,,,
+10,10,Bivariate Tables,<i>Social Statistics for a Diverse Society</i>,281-306,<a href='/readings/10-reading/'>Week 10</a>,10/21/21,10/28/21,checked
+,,,,,,,,
+Q1,,Basics of Inference,Quiz 1,,<a href='/readings/01-quiz/'>Quiz 1</a>,11/4/21,,checked
+,,,,,,,,
+12,12,The Chi-Square Test and Measures of Association,<i>Social Statistics for a Diverse Society</i>,327-350,<a href='/readings/12-reading/'>Week 12</a>,10/28/21,11/11/21,checked
+,,,,,,,,
+13,13,Regression and Correlation & Analysis of Variance,<i>Social Statistics for a Diverse Society</i>,373-429,<a href='/readings/12-reading/'>Week 12</a>,11/11/21,11/18/21,checked
+,,,,,,,,
+E2,,Interential Statistics,Exam 2,,<a href='/tasks/02-exam/'>Exam 2</a>,,,checked
+,,,,,,,,
+FE,,Descriptive & Inferential Statistics ,,,<a href='/tasks/03-exam/'>Final Exam</a>,,,

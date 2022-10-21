@@ -17,7 +17,7 @@ faread <-  as.character(fa("book", fill = "#739670", height = "17px"))
 fadc <-  as.character(fa("chalkboard", fill = "#764874", height = "17px"))
 famat <-  as.character(fa("lightbulb", fill = "#eb7b59", height = "17px"))
 faextra <-  as.character(fa("square-plus", fill = "#4f5bd5", height = "17px"))
-fatask <- as.character(fa("tasks", fill = "#cf4647", height = "17px"))
+fatask <- as.character(fa("bars-progress", fill = "#cf4647", height = "17px"))
 fadue <- as.character(fa("folder-open", fill = "#2a6e84", height = "17px"))
 
 tableofcontent <- tibble(
@@ -29,12 +29,12 @@ tableofcontent <- tibble(
             "Tasks",
             "To Do List"),
   
-  location <- c("[Go](/readings/)",
-                "[Go](/datacamp/)",
-                "[Go](/materials/)",
-                "[Go](/extras/)",
-                "[Go](/tasks/)",
-                "[Go](/due/)"),
+  location <- c("<a href='/readings/'>Go</a>",
+                "<a href='/datacamp/'>Go</a>",
+                "<a href='/materials/'>Go</a>",
+                "<a href='/extras/'>Go</a>",
+                "<a href='/tasks/'>Go</a>",
+                "<a href='/due/'>Go</a>"),
   
   icon <- c(faread,
             fadc,
@@ -68,13 +68,6 @@ tableofcontent %>%
 ```
 </center>
 
-<span style="font-size:17px">*Note: Homeworks are due by* ***the beginning of class time each Thursday at 4:00 PM*** *unless otherwise noted.*^[If we go online for whatever reason, then submissions will be due at the same time within the eCampus portal]</span>
+<span style="font-size:17px">*Note: Homeworks are due by* ***the beginning of class time each Thursday at 4:00 PM*** *unless otherwise noted.*[^1]</span>
 
-<br>
-<br>
-
-<hr style"width:50%; margin-left:25% !important; margin-right:25% !important;" />
-
-## Weekly Overview
-
-`r blogdown::shortcode("schedule")`
+[^1]: If we go virtual for any reason, then submissions will be due at the same time within the eCampus portal

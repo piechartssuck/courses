@@ -35,7 +35,8 @@ table thead th { border-bottom: 1px solid #ddd;
 th, td { padding: 5px; 
 }
 
-tr:nth-child(even) { background: #ffffff; 
+table > tbody > tr:hover > td, table > tbody > tr:hover > th {
+  background-color: #ffffff;
 }
 </style>
 
@@ -45,20 +46,20 @@ tr:nth-child(even) { background: #ffffff;
 <table>
  <thead>
   <tr>
-   <th style="text-align:center;"> Chapters </th>
-   <th style="text-align:left;"> Date </th>
-   <th style="text-align:left;"> Description </th>
-   <th style="text-align:left;"> Cheat Sheet? </th>
-   <th style="text-align:left;"> Process </th>
+   <th style="text-align:center;background-color: #ffffff !important;vertical-align: middle !important;"> Chapters </th>
+   <th style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> Date </th>
+   <th style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> Description </th>
+   <th style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> Cheat Sheet? </th>
+   <th style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> Process </th>
   </tr>
  </thead>
 <tbody>
   <tr>
-   <td style="text-align:center;font-weight: bold;"> 1-5 </td>
-   <td style="text-align:left;"> 9/23/21 </td>
-   <td style="text-align:left;"> A written portion is followed by an R task </td>
-   <td style="text-align:left;"> You may bring a single page standard A4 paper with formulas and definitions as needed. Example problems are not allowed. You are of course always free to reach out to verify if certain items may be included. </td>
-   <td style="text-align:left;"> You will be given the entire class length to complete this two part exam. The paper portion will be administered first and you may only use your cheat sheet and a calculator as resources. After submitting that potrtion, you will be given an R task. You may at that time use any online resources or notes you have brought to class. </td>
+   <td style="text-align:center;font-weight: bold;background-color: #ffffff !important;vertical-align: middle !important;"> 1-5 </td>
+   <td style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> 9/23/21 </td>
+   <td style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> A written portion is followed by an R task </td>
+   <td style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> You may bring a single page standard A4 paper with formulas and definitions as needed. Example problems are not allowed. You are of course always free to reach out to verify if certain items may be included. </td>
+   <td style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> You will be given the entire class length to complete this two part exam. The paper portion will be administered first and you may only use your cheat sheet and a calculator as resources. After submitting that potrtion, you will be given an R task. You may at that time use any online resources or notes you have brought to class. </td>
   </tr>
 </tbody>
 </table>

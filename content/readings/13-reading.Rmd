@@ -9,16 +9,21 @@ type: docs
 weight: 1
 ---
 
-## Text 
-
-```{r echo=FALSE, message=FALSE}
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE}
+library(tidyverse)
 library(knitr)
 library(kableExtra)
-library(tidyverse)
 library(fontawesome)
 ```
 
+<style>
+table > tbody > tr:hover > td, table > tbody > tr:hover > th {
+  background-color: #ffffff;
+}
+</style>
+
 ```{r eval = TRUE, echo = FALSE, message=FALSE}
+
 read_schedule <- read_csv("read.csv",
                           show_col_types = FALSE) %>% 
                   as_tibble() %>%
@@ -27,20 +32,21 @@ read_schedule <- read_csv("read.csv",
                 Required == "unchecked" ~ as.character(fontawesome::fa("circle-xmark", fill = "#d9534f", height = "15px"))
               )) %>%
                   mutate(across(everything(), as.character)) %>%
-                    filter(Group == "13") %>% #CHANGE HERE
-                    select(-Group) %>%
+                    filter(Group == 13) %>% #CHANGE HERE
+                    select(-Group, -Details) %>%
                   filter_all(any_vars(!is.na(.))) %>% 
                   mutate(
                     across(everything(), ~replace_na(.x, ""))
                   ) %>%
-                select_if(~!all(is.na(.))) 
+                select_if(~!all(is.na(.))) %>%
+  mutate(Title = paste0("<b>", Title, "</b>"))
   
 ```
 
 ```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
 kable(read_schedule, 
       escape = FALSE,
-      align = 'cllccccccccc') %>%
+      align = 'cllccccc') %>%
   kable_styling(full_width = FALSE,
                 bootstrap_options = c("striped", "hover")) %>%
   column_spec(1, width = "5em") %>%
@@ -49,5 +55,6 @@ kable(read_schedule,
   column_spec(4, width = "5em") %>%
   column_spec(5, width = "10em") %>%
   column_spec(6, width = "10em") %>%
-  column_spec(7, width = "10em") 
+  column_spec(7, width = "10em") %>%
+  row_spec(0:1, extra_css = 'vertical-align: middle !important;', background = "#ffffff")
 ```

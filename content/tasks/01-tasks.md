@@ -37,18 +37,19 @@ table thead th { border-bottom: 1px solid #ddd;
 th, td { padding: 5px; 
 }
 
-tr:nth-child(even) { background: #ffffff; 
+table > tbody > tr:hover > td, table > tbody > tr:hover > th {
+  background-color: #ffffff;
 }
 </style>
 
 ### Class Slack Account Access
 Please sign up for Slack!
 
-1. You will receive an invite for the class [Slack](2021edp613.slack.com){target="_blank"} account
+1. You will receive an invite for the class [Slack](2021edp613.slack.com) account
 2. Register if you already do not have an account. Note that you do not have to use your WVU account, but its not a bad idea.
 3. Head to to the channel `#introduce-yourself` and well introduce yourself by tell everyone about yourself, what you hope to achieve out of this course, and something about you that really defines who you are. For example, here is something about me:<br>
 <br>
-*I teach data visualization BUT I am also about 40% colorblind^[You just need to know a little math to distinguish colors without ever seeing them]*<br><br>
+<i>I teach data visualization BUT I am also about 40% colorblind[^1]</i><br><br>
 4. (optional) Provide a picture if you are willing. I am a very visual person as are many other people so pictures help a great deal. However, you are not mandated to do so!
 
 ### Class Software
@@ -61,18 +62,18 @@ Decide whether to sign up for [RStudio.cloud](/resources/install/#rstudio-cloud)
 <table>
  <thead>
   <tr>
-   <th style="text-align:center;"> Chapter </th>
-   <th style="text-align:left;"> Problems </th>
-   <th style="text-align:left;"> Source </th>
-   <th style="text-align:left;"> Pages </th>
+   <th style="text-align:center;background-color: #ffffff !important;vertical-align: middle !important;"> Chapter </th>
+   <th style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> Problems </th>
+   <th style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> Source </th>
+   <th style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> Pages </th>
   </tr>
  </thead>
 <tbody>
   <tr>
-   <td style="text-align:center;font-weight: bold;"> 1 </td>
-   <td style="text-align:left;"> 3, 4, 6, 7, 8 </td>
-   <td style="text-align:left;"> Social Statistics for a Diverse Society </td>
-   <td style="text-align:left;"> 23-25 </td>
+   <td style="text-align:center;font-weight: bold;background-color: #ffffff !important;vertical-align: middle !important;"> 1 </td>
+   <td style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> 3, 4, 6, 7, 8 </td>
+   <td style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> Social Statistics for a Diverse Society </td>
+   <td style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> 23-25 </td>
   </tr>
 </tbody>
 </table>
@@ -84,7 +85,7 @@ Notes:
 - Remember to follow the [homework guidelines](/tasks/#homeworks) for consideration.
 
 <!--
-to the Submission Portal on [ecampus](https://ecampus.wvu.edu/){target="_blank"} by 11:59 PM next Wednesday.<br>
+to the Submission Portal on [ecampus](https://ecampus.wvu.edu/) by 11:59 PM next Wednesday.<br>
 -->
 
 #### Solutions
@@ -181,3 +182,5 @@ At the <span class="boxed">interval–ratio</span> level, political participatio
 </p>
 </details>
 -->
+
+[^1]: You just need to know a little math to distinguish colors without ever seeing them.

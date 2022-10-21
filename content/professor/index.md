@@ -11,11 +11,15 @@ output:
 
 ## My Picture
 
+<center>
+
 <div style="text-align: left;">
 
-<img src="/professor/me.png" alt="Me" style="width: 250px;"/>
+<img src="/img/me.png" alt="Me" style="width: 250px;"/>
 
 </div>
+
+</center>
 
 ## My Page
 

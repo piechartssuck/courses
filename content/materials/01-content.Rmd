@@ -1,8 +1,9 @@
 ---
 title: "The What and Why of Statistics"
 linktitle: "Week 1: The What and Why of Statistics"
+toc: true
 output:
-  blogdown::html_page:
+  rmarkdown::html_document:
     toc: true
 menu:
   materials:
@@ -63,6 +64,10 @@ editor_options:
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
+
+table > tbody > tr:hover > td, table > tbody > tr:hover > th {
+  background-color: #ffffff;
+}
 </style>
 
 ```{r setup, include=FALSE, purl=FALSE}
@@ -81,7 +86,7 @@ font_add_google("Roboto Condensed", "roboto")
 showtext_auto()
 ```
 
-### Textbook Notes
+## Stock Textbook Notes
 
 ```{r echo=FALSE}
 
@@ -89,11 +94,11 @@ pptx_location <- "/lecture_notes/Week 1/SSDS_Ch1.pptx"
 docx_location <- "/lecture_notes/Week 1/SSDS_Ch1.docx"
 
 powerpoint_link <- function() {
-  paste0("<a href=\"", pptx_location, "\">", as.character(fa("file-powerpoint", fill = "#d04423", width = "2em")), "</a>")
+  paste0("<a target='_blank' href=\"", pptx_location, "\">", as.character(fa("file-powerpoint", fill = "#d04423", width = "2em")), "</a>")
 }
 
 word_link <- function() {
-  paste0("<a href=\"", docx_location, "\">", as.character(fa("file-word", fill = "#00a4ef", width = "2em")), "</a>")
+  paste0("<a target='_blank' href=\"", docx_location, "\">", as.character(fa("file-word", fill = "#00a4ef", width = "2em")), "</a>")
 }
 
 textitems <- tibble(
@@ -108,24 +113,62 @@ textitems <- tibble(
 
 ```
 
+<center>
 ```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
 kable(textitems, 
       col.names = c("", ""),
       escape = FALSE,
       align = 'cc') %>%
   kable_styling(full_width = FALSE) %>%
-  column_spec(1, width = "20em") %>%
-  column_spec(2, width = "20em") 
+  column_spec(1:2, width = "20em", extra_css = 'vertical-align: middle !important;', background = "#ffffff")
 ```
+</center>
 
-### In Class Notes
+## In Class Presentation
+For this slideshow, you may move back and forth using <kbd>←</kbd> and <kbd>→</kbd> and toggle fullscreen by pressing <kbd>F</kbd>. Just press <kbd>O</kbd>[^1] at any point in your slideshow and a display of all slides, called tile view, will appear. Click on a slide to go there or press <kbd>O</kbd> to exit tile view. For more options, press <kbd>H</kbd> for help.
 
+### Concepts
+
+<center>
 ```{r echo = FALSE}
 knitr::include_url("/slides/Week 1/Slides-Week-1.html")
 ```
+</center>
 
-You can move back and forth using <kbd>←</kbd> and <kbd>→</kbd> and toggle fullscreen by pressing <kbd>F</kbd>. Just press <kbd>O</kbd>^[For **O**verview] at any point in your slideshow and a display of all slides, called tile view, will appear. Click on a slide to go there or press <kbd>O</kbd> to exit tile view. For more options, press <kbd>H</kbd> for help.
+```{r echo=FALSE}
 
-> Click [here](/slides/Week 1/Slides-Week-1.html){target="_blank"} for a larger version of the presentation.
+html_location <- "/slides/Week 1/Slides-Week-1.html"
+pdf_location <- "/slides/Week 1/Slides-Week-1.pdf"
 
-> Click [here](/slides/Week 51Slides-Week-1.pdf){target="_blank"} here for a PDF of the presentation.
+html_link <- function() {
+  paste0("<a target='_blank' href=\"", html_location, "\">", as.character(fa("person-chalkboard", fill = "#7ead86", width = "3em")), "</a>")
+}
+
+pdf_link <- function() {
+  paste0("<a target='_blank' href=\"", pdf_location, "\">", as.character(fa("file-pdf", fill = "#f40f02", width = "2em")), "</a>")
+}
+
+slideshowitems <- tibble(
+  
+  html <- c("Full Screen Slideshow",
+               html_link()),
+  
+  pdf <- c("Presentation PDF",
+            pdf_link())
+  
+)
+
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(slideshowitems, 
+      col.names = c("", ""),
+      escape = FALSE,
+      align = 'cc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1:2, width = "20em", extra_css = 'vertical-align: middle !important;', background = "#ffffff")
+```
+</center>
+
+[^1]: For <b>O</b>verview

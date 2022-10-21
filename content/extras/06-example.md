@@ -85,7 +85,7 @@ To get it, open up RStudio and run
 install.packages("esquisse", dependencies = TRUE)
 ```
 
-and also install the example data set <a href="https://allisonhorst.github.io/palmerpenguins/articles/intro.html" target="_blank">palmerpenguins</a> by
+and also install the example data set [palmerpenguins](https://allisonhorst.github.io/palmerpenguins/articles/intro.html) by
 
 ``` r
 install.packages("palmerpenguins", dependencies = TRUE)
@@ -123,8 +123,8 @@ esquisse::esquisser()
 
 #### Additional resources
 
--   <a href="https://rpubs.com/brunoquevedo/using-esquisse" target="_blank">Creating plots without coding @ RPubs</a>
--   <a href="https://www.littlemissdata.com/fdf/esquisse" target="_blank">Esquisse R Package @ Little Miss Data</a>
--   <a href="https://towardsdatascience.com/tableau-esque-drag-and-drop-gui-visualization-in-r-901ee9f2fe3f" target="_blank">Tableau-like Drag and Drop GUI Visualization in R @ Towards Data Science</a>
+-   [Creating plots without coding @ RPubs](https://rpubs.com/brunoquevedo/using-esquisse)
+-   [Esquisse R Package @ Little Miss Data](https://www.littlemissdata.com/fdf/esquisse)
+-   [Tableau-like Drag and Drop GUI Visualization in R @ Towards Data Science](https://towardsdatascience.com/tableau-esque-drag-and-drop-gui-visualization-in-r-901ee9f2fe3f)
 
-[^1]: You will have to unzip this file. If you are unfamiliar with this process, please check the [Unzipping files](/resource/unzipping/) section under Resources for assistance
+[^1]: You will have to unzip this file. If you are unfamiliar with this process, please check the [Unzipping files](/resource/unzipping/) section under Resources for assistance.

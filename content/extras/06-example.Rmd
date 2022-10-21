@@ -69,7 +69,7 @@ editor_options:
 
 #### Download
 
-Download a copy of everything you need to follow along the example^[You will have to unzip this file. If you are unfamiliar with this process, please check the [Unzipping files](/resource/unzipping/) section under Resources for assistance]
+Download a copy of everything you need to follow along the example[^1]
 ```{r echo=FALSE,eval=TRUE,message=FALSE,purl=FALSE}
 loc <- here::here("static", "scripts",  "EDP613Esquisse.zip")
 
@@ -92,7 +92,7 @@ To get it, open up RStudio and run
 install.packages("esquisse", dependencies = TRUE)
 ```
 
-and also install the example data set [palmerpenguins](https://allisonhorst.github.io/palmerpenguins/articles/intro.html){target="_blank"} by
+and also install the example data set [palmerpenguins](https://allisonhorst.github.io/palmerpenguins/articles/intro.html) by
 ```{r eval=FALSE}
 install.packages("palmerpenguins", dependencies = TRUE)
 ```
@@ -116,7 +116,8 @@ esquisse::esquisser()
 </center>
 
 #### Additional resources
-- [Creating plots without coding @ RPubs](https://rpubs.com/brunoquevedo/using-esquisse){target="_blank"}
-- [Esquisse R Package @ Little Miss Data](https://www.littlemissdata.com/fdf/esquisse){target="_blank"}
-- [Tableau-like Drag and Drop GUI Visualization in R @ Towards Data Science](https://towardsdatascience.com/tableau-esque-drag-and-drop-gui-visualization-in-r-901ee9f2fe3f){target="_blank"}
+- [Creating plots without coding @ RPubs](https://rpubs.com/brunoquevedo/using-esquisse)
+- [Esquisse R Package @ Little Miss Data](https://www.littlemissdata.com/fdf/esquisse)
+- [Tableau-like Drag and Drop GUI Visualization in R @ Towards Data Science](https://towardsdatascience.com/tableau-esque-drag-and-drop-gui-visualization-in-r-901ee9f2fe3f)
 
+[^1]: You will have to unzip this file. If you are unfamiliar with this process, please check the [Unzipping files](/resource/unzipping/) section under Resources for assistance.

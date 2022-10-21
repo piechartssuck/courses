@@ -1,8 +1,9 @@
 ---
 title: "An Unbiased Biased View on Bayesian Statistics"
 linktitle: "Week 14: An Unbiased Biased View on Bayesian Statistics"
+toc: true
 output:
-  blogdown::html_page:
+  rmarkdown::html_document:
     toc: true
 menu:
   extras:
@@ -17,8 +18,15 @@ editor_options:
 <link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
 
 
+
+<style>
+table > tbody > tr:hover > td, table > tbody > tr:hover > th {
+  background-color: #ffffff;
+}
+</style>
+
 ### Veritasium + Crash Course Statistics
-This week we're doing something a little different. We first have a video from a science communicator named Derek Muller on his excellent YouTube channel [Veritasium](https://www.youtube.com/channel/UCHnyfMqiRRG1u-2MsSQLbXA){target="_blank"}. At the end, there will be two videos from Crash Course Statistics that go deeper into the statistics part of the Bayesian approach.
+This week we're doing something a little different. We first have a video from a science communicator named Derek Muller on his excellent YouTube channel [Veritasium](https://www.youtube.com/channel/UCHnyfMqiRRG1u-2MsSQLbXA). At the end, there will be two videos from Crash Course Statistics that go deeper into the statistics part of the Bayesian approach.
 
 <p align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/R13BD8qKeTg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -28,11 +36,11 @@ This week we're doing something a little different. We first have a video from a
 To be honest most of you will leave this class likely not thinking or caring about the underlying methodological and philosophical disagreement that exists between the two types of statisticians explained below. So why does it matter? In a nutshell, we're at a point in history where the dominant approach will affect your everyday life ranging from credit to Internet speeds to predictions/reviews in sports to any other aspect where data, in particular "big data" is present. So while you may not be personally invested in the statistical approach that becomes the *standard*, your life will surely be affected and its not a bad idea to know the underlying reasons behind it. 
 
 <center>
-![](/img/examples/statistician_deathmatch.png){width=50%}
+ <img alt="Statistician Deathmatch" src="/img/examples/statistician_deathmatch.png" width = "50%">
 </center>
 
 ### Full Disclosure
-Firstly I am a Bayesian statistician through and through, so there is an inherent bias and uncertainty in this writing which will be apparent later. The benefit here is that unlike a frequentist approach that rejects or minimizes bias and favors outcomes with certainty, Bayesians recognize and utilize bias in their statistics where both uncertainty exists as part of the problem, and solutions are given as multiple possibilities with varying levels of probabilities^[Fun fact: The fact you are able to view this exact page right now is based on [based on probability](https://www.americanscientist.org/article/programs-and-probability){target="_blank"}]. 
+Firstly I consider myself a Bayesian statistician, so there is an inherent bias and uncertainty in this writing which will be apparent later. The benefit here is that unlike a frequentist approach that rejects or minimizes bias and favors outcomes with certainty, Bayesians recognize and utilize bias in their statistics where both uncertainty exists as part of the problem, and solutions are given as multiple possibilities with varying levels of probabilities[^1]. 
 
 ### Bit of History
 The Bayesian way of thinking was quite popular in the 18th and 19th centuries, but fell out of favor in the 20th century which gave way to the frequentists. During that time, the few Bayesian statisticians that were active were often shunned and even ridiculed by academics and practitioners alike. It looked like we knew everything about the foundation of statistics and anything that needed a new approach was simply a matter of furthering that viewpoint. But in the mid to late 2000 large sets consisting of a combination of structured, semistructured, and unstructured data - aka "big data" - began to pop up everywhere. However technology, in particular computing technology was simply not able to handle and analyze these data sets. Moreover for most of the public, computers were just a means to create or run an application - the idea that they could do anything beyond that was deemed to be science fiction that could be science one day in the distant future. But as life would have it, not only were we able to figure out how to teach a computer to learn and make decisions - aka machine learning (ML) - many ML algorithms were significant improved by attaching prior beliefs about how a data set should be looked at creating a situation where a person get choice of multiple statistical models and are able to pick the one that works out the best for an analyses. 
@@ -69,7 +77,7 @@ Rather than provide an example that uses a bunch of statistics, let's look at it
 
 - Frequentist: You hear the phone beeping and you have some approach using a mental model to help figure out what room the beeping is coming from. So you used  ***inferences from the beeps*** to locate the room in your home you must search to find the phone.
 
-- Bayesian: You hear the phone beeping and along with some approach using a mental model, you also know all of the rooms you have misplaced the phone before which combined help to figure out what room the beeping is coming from. So you used ***inferences from the beeps*** and  ***prior knowledge *** to locate the room in your home you must search to find the phone.  
+- Bayesian: You hear the phone beeping and along with some approach using a mental model, you also know all of the rooms you have misplaced the phone before which combined help to figure out what room the beeping is coming from. So you used ***inferences from the beeps*** and  ***prior knowledge*** to locate the room in your home you must search to find the phone.  
 
 ### Table of Differences
 
@@ -80,30 +88,30 @@ There are multiple differences in how the sides view not just how problems shoul
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
  <thead>
   <tr>
-   <th style="text-align:center;"> Type </th>
-   <th style="text-align:left;"> Information Used </th>
-   <th style="text-align:center;"> What is Random? </th>
-   <th style="text-align:center;"> Type of Reasoning </th>
-   <th style="text-align:left;"> Terminology </th>
-   <th style="text-align:center;"> Observed Data </th>
+   <th style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> Type </th>
+   <th style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> Information Used </th>
+   <th style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> What is Random? </th>
+   <th style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> Type of Reasoning </th>
+   <th style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> Terminology </th>
+   <th style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> Observed Data </th>
   </tr>
  </thead>
 <tbody>
   <tr>
-   <td style="text-align:center;width: 10em; "> Frequentist statistician </td>
-   <td style="text-align:left;width: 30em; "> Outcomes derived strictly from experiments </td>
-   <td style="text-align:center;width: 10em; "> Observed data^[Any data that has been collected from an experiment.] </td>
-   <td style="text-align:center;width: 10em; "> Deductive logic. </td>
-   <td style="text-align:left;width: 30em; "> Common terms like *p*-value, significant, null hypothesis, and confidence interval. </td>
-   <td style="text-align:center;width: 10em; "> Unknown and comes only from experiments. </td>
+   <td style="text-align:left;width: 5em; background-color: #ffffff !important;vertical-align: middle !important;"> <i>Frequentist</i> statistician </td>
+   <td style="text-align:left;width: 20em; background-color: #ffffff !important;vertical-align: middle !important;"> Outcomes derived strictly from experiments </td>
+   <td style="text-align:left;width: 20em; background-color: #ffffff !important;vertical-align: middle !important;"> <i>Observed data</i>. Any data that has been collected from an experiment </td>
+   <td style="text-align:left;width: 5em; background-color: #ffffff !important;vertical-align: middle !important;"> <i>Deductive</i> logic </td>
+   <td style="text-align:left;width: 20em; background-color: #ffffff !important;vertical-align: middle !important;"> Common terms like <i>p-value</i>, <i>significant</i>, <i>null hypothesis</i>, and <i>confidence interval</i> </td>
+   <td style="text-align:left;width: 10em; background-color: #ffffff !important;vertical-align: middle !important;"> Unknown and comes only from experiments </td>
   </tr>
   <tr>
-   <td style="text-align:center;width: 10em; "> Bayesian statistician </td>
-   <td style="text-align:left;width: 30em; "> Prior beliefs about what the truth might be which are updated as experiments progress. </td>
-   <td style="text-align:center;width: 10em; "> Population parameters^[Any summary number, like an average or percentage, that describes the entire population.] </td>
-   <td style="text-align:center;width: 10em; "> Inductive logic. </td>
-   <td style="text-align:left;width: 30em; "> Uncommon terms like prior probability, noninformative priors, and credible intervals. </td>
-   <td style="text-align:center;width: 10em; "> Known since we already know what we know. </td>
+   <td style="text-align:left;width: 5em; background-color: #ffffff !important;vertical-align: middle !important;"> <i>Bayesian</i> statistician </td>
+   <td style="text-align:left;width: 20em; background-color: #ffffff !important;vertical-align: middle !important;"> Prior beliefs about what the truth might be which are interatievly updated as experiments progress </td>
+   <td style="text-align:left;width: 20em; background-color: #ffffff !important;vertical-align: middle !important;"> <i>Population parameters</i>. Any summary number, like an average or percentage, that describes the entire population </td>
+   <td style="text-align:left;width: 5em; background-color: #ffffff !important;vertical-align: middle !important;"> <i>Inductive</i> logic </td>
+   <td style="text-align:left;width: 20em; background-color: #ffffff !important;vertical-align: middle !important;"> Uncommon terms like <i>prior probability</i>, <i>noninformative priors</i>, and <i>credible intervals</i> </td>
+   <td style="text-align:left;width: 10em; background-color: #ffffff !important;vertical-align: middle !important;"> Known since we already know what we know </td>
   </tr>
 </tbody>
 </table>
@@ -125,3 +133,6 @@ The actual explanation for which side is right is likely some combination of bot
 <p align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/oZCskBpHWyk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
+
+[^1]: Fun fact: The fact you are able to view this exact page right now is based on [based on probability](https://www.americanscientist.org/article/programs-and-probability)
+

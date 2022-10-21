@@ -40,7 +40,8 @@ table thead th { border-bottom: 1px solid #ddd;
 th, td { padding: 5px; 
 }
 
-tr:nth-child(even) { background: #ffffff; 
+table > tbody > tr:hover > td, table > tbody > tr:hover > th {
+  background-color: #ffffff;
 }
 </style>
 
@@ -51,18 +52,18 @@ tr:nth-child(even) { background: #ffffff;
 <table>
  <thead>
   <tr>
-   <th style="text-align:center;"> Chapter </th>
-   <th style="text-align:left;"> Problems </th>
-   <th style="text-align:left;"> Source </th>
-   <th style="text-align:left;"> Pages </th>
+   <th style="text-align:center;background-color: #ffffff !important;vertical-align: middle !important;"> Chapter </th>
+   <th style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> Problems </th>
+   <th style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> Source </th>
+   <th style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> Pages </th>
   </tr>
  </thead>
 <tbody>
   <tr>
-   <td style="text-align:center;font-weight: bold;"> 3 </td>
-   <td style="text-align:left;"> 1, 2, 3, 4, 5, 6, 10, 11 </td>
-   <td style="text-align:left;"> Social Statistics for a Diverse Society </td>
-   <td style="text-align:left;"> 75-97 </td>
+   <td style="text-align:center;font-weight: bold;background-color: #ffffff !important;vertical-align: middle !important;"> 3 </td>
+   <td style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> 1, 2, 3, 4, 5, 6, 10, 11 </td>
+   <td style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> Social Statistics for a Diverse Society </td>
+   <td style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> 75-97 </td>
   </tr>
 </tbody>
 </table>

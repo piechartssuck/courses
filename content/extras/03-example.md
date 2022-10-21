@@ -22,7 +22,7 @@ This week we have another brief introduction from Crash Course Statistics. This 
 </p>
 <br>
 
-Remember you can always access a Crash Course Statistics playlist using the following  [link](https://www.youtube.com/playlist?list=PL8dPuuaLjXtNM_Y-bUAhblSAdWRnmBUcr){target="_blank"}.
+Remember you can always access a Crash Course Statistics playlist using the following  [link](https://www.youtube.com/playlist?list=PL8dPuuaLjXtNM_Y-bUAhblSAdWRnmBUcr).
 
 <!-- ### R Nuances
 The following video is a bit of a compilation of things that come up that are frustrating unless someone points them out. (*coming soon*)
@@ -34,4 +34,3 @@ The following video is a bit of a compilation of things that come up that are fr
 </video>
 </center>
 -->
-

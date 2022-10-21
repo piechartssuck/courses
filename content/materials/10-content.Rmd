@@ -1,8 +1,9 @@
 ---
 title: "Bivariate Tables"
 linktitle: "Week 10: Bivariate Tables"
+toc: true
 output:
-  blogdown::html_page:
+  rmarkdown::html_document:
     toc: true
 menu:
   materials:
@@ -63,6 +64,10 @@ editor_options:
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
+
+table > tbody > tr:hover > td, table > tbody > tr:hover > th {
+  background-color: #ffffff;
+}
 </style>
 
 ```{r setup, include=FALSE, purl=FALSE}
@@ -81,104 +86,175 @@ font_add_google("Roboto Condensed", "roboto")
 showtext_auto()
 ```
 
-## Notes
+## Stock Textbook Notes
 
-### From the Text
 ```{r echo=FALSE}
 
 pptx_location <- "/lecture_notes/Week 10/SSDS_Ch9.pptx"
 docx_location <- "/lecture_notes/Week 10/SSDS_Ch9.docx"
 
 powerpoint_link <- function() {
-  paste0("<a href=\"", pptx_location, "\">", as.character(fa("file-powerpoint", fill = "#d04423", width = "2em")), "</a>")
+  paste0("<a target='_blank' href=\"", pptx_location, "\">", as.character(fa("file-powerpoint", fill = "#d04423", width = "2em")), "</a>")
 }
 
 word_link <- function() {
-  paste0("<a href=\"", docx_location, "\">", as.character(fa("file-word", fill = "#00a4ef", width = "2em")), "</a>")
+  paste0("<a target='_blank' href=\"", docx_location, "\">", as.character(fa("file-word", fill = "#00a4ef", width = "2em")), "</a>")
 }
 
 textitems <- tibble(
   
-  pptx <- c("Chapter 10 PowerPoint",
+  pptx <- c("Chapter 9 PowerPoint",
                powerpoint_link()),
   
-  docx <- c("Chapter 10 Notes",
+  docx <- c("Chapter 9 Notes",
             word_link())
   
 )
 
 ```
 
+<center>
 ```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
 kable(textitems, 
       col.names = c("", ""),
       escape = FALSE,
       align = 'cc') %>%
   kable_styling(full_width = FALSE) %>%
-  column_spec(1, width = "20em") %>%
-  column_spec(2, width = "20em") 
+  column_spec(1:2, width = "20em", extra_css = 'vertical-align: middle !important;', background = "#ffffff")
 ```
+</center>
 
-## From the Class
-<!--
-*posted during class time*
--->
+## In Class Presentations
+For all slideshows, you may move back and forth using <kbd>←</kbd> and <kbd>→</kbd> and toggle fullscreen by pressing <kbd>F</kbd>. Just press <kbd>O</kbd>[^1] at any point in your slideshow and a display of all slides, called tile view, will appear. Click on a slide to go there or press <kbd>O</kbd> to exit tile view. For more options, press <kbd>H</kbd> for help.
 
+### Concepts
+
+<center>
 ```{r echo = FALSE}
 knitr::include_url("/slides/Week 10/Slides-Week-10.html")
 ```
+</center>
 
-You can move back and forth using <kbd>←</kbd> and <kbd>→</kbd> and toggle fullscreen by pressing <kbd>F</kbd>. Just press <kbd>O</kbd>^[For **O**verview] at any point in your slideshow and a display of all slides, called tile view, will appear. Click on a slide to go there or press <kbd>O</kbd> to exit tile view. For more options, press <kbd>H</kbd> for help.
+```{r echo=FALSE}
 
-> Click [here](/slides/Week 10/Slides-Week-10.html){target="_blank"} for a larger version of the presentation.
+html_location <- "/slides/Week 10/Slides-Week-10.html"
+pdf_location <- "/slides/Week 10/Slides-Week-10.pdf"
 
-> Click [here](/slides/Week 10/Slides-Week-10.pdf){target="_blank"} here for a PDF of the presentation.
+html_link <- function() {
+  paste0("<a target='_blank' href=\"", html_location, "\">", as.character(fa("person-chalkboard", fill = "#7ead86", width = "3em")), "</a>")
+}
 
-## R Walkthroughs
-<!--
-*posted during class time*
--->
+pdf_link <- function() {
+  paste0("<a target='_blank' href=\"", pdf_location, "\">", as.character(fa("file-pdf", fill = "#f40f02", width = "2em")), "</a>")
+}
 
-Download a copy of everything you need to follow along the walkthroughs^[You will have to unzip this file. If you are unfamiliar with this process, please check the [Unzipping files](/resource/unzipping/) section under Resources for assistance]
+slideshowitems <- tibble(
+  
+  html <- c("Full Screen Slideshow",
+               html_link()),
+  
+  pdf <- c("Presentation PDF",
+            pdf_link())
+  
+)
 
-```{r echo=FALSE,eval=TRUE,message=FALSE,purl=FALSE}
-loc <- here::here("static", "slides", "Week 10", "EDP613Week10RMaterials.zip")
-
-downloadthis::download_file(
-  path = loc,
-  output_name = "Week 10 R Walkthrough Materials",
-  button_label = "Download",
-  button_type = "default",
-  has_icon = TRUE,
-  icon = "fa fa-save",
-  class = "hvr-sweep-to-left"
-  )
 ```
 
-<br>
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(slideshowitems, 
+      col.names = c("", ""),
+      escape = FALSE,
+      align = 'cc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1:2, width = "20em", extra_css = 'vertical-align: middle !important;', background = "#ffffff")
+```
+</center>
 
-### The *t*-test
+### R Walkthroughs
 
+<center>
 ```{r echo = FALSE}
 knitr::include_url("/slides/Week 10/Slides-Week-10R.html")
 ```
+</center>
 
-You can move back and forth using <kbd>←</kbd> and <kbd>→</kbd> and toggle fullscreen by pressing <kbd>F</kbd>. Just press <kbd>O</kbd>^[For **O**verview] at any point in your slideshow and a display of all slides, called tile view, will appear. Click on a slide to go there or press <kbd>O</kbd> to exit tile view. For more options, press <kbd>H</kbd> for help.
+```{r echo=FALSE}
 
-> Click [here](/slides/Week 10/Slides-Week-10R.html){target="_blank"} for a larger version of the presentation.
+htmlR_location <- "/slides/Week 10/Slides-Week-10R.html"
+pdfR_location <- "/slides/Week 10/Slides-Week-10R.pdf"
 
-> Click [here](/slides/Week 10/Slides-Week-10R.pdf){target="_blank"} here for a PDF of the presentation.
+htmlR_link <- function() {
+  paste0("<a target='_blank' href=\"", htmlR_location, "\">", as.character(fa("person-chalkboard", fill = "#7ead86", width = "3em")), "</a>")
+}
 
-<br>
+pdfR_link <- function() {
+  paste0("<a target='_blank' href=\"", pdfR_location, "\">", as.character(fa("file-pdf", fill = "#f40f02", width = "2em")), "</a>")
+}
 
-### Bonus: Groupwise Comparisons
+slideshowRitems <- tibble(
+  
+  htmlR <- c("Full Screen Slideshow",
+               htmlR_link()),
+  
+  pdfR <- c("Presentation PDF",
+            pdfR_link())
+  
+)
 
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(slideshowRitems, 
+      col.names = c("", ""),
+      escape = FALSE,
+      align = 'cc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1:2, width = "20em", extra_css = 'vertical-align: middle !important;', background = "#ffffff") 
+```
+</center>
+
+<center>
 ```{r echo = FALSE}
 knitr::include_url("/slides/Week 10/Slides-Week-10R-Extra.html")
 ```
+</center>
 
-You can move back and forth using <kbd>←</kbd> and <kbd>→</kbd> and toggle fullscreen by pressing <kbd>F</kbd>. Just press <kbd>O</kbd>^[For **O**verview] at any point in your slideshow and a display of all slides, called tile view, will appear. Click on a slide to go there or press <kbd>O</kbd> to exit tile view. For more options, press <kbd>H</kbd> for help.
+```{r echo=FALSE}
 
-> Click [here](/slides/Week 10/Slides-Week-10R-Extra.html){target="_blank"} for a larger version of the presentation.
+htmlRb_location <- "/slides/Week 10/Slides-Week-10R-Extra.html"
+pdfRb_location <- "/slides/Week 10/Slides-Week-10R-Extra.pdf"
 
-> Click [here](/slides/Week 10/Slides-Week-10R-Extra.pdf){target="_blank"} here for a PDF of the presentation.
+htmlRb_link <- function() {
+  paste0("<a target='_blank' href=\"", htmlRb_location, "\">", as.character(fa("person-chalkboard", fill = "#7ead86", width = "3em")), "</a>")
+}
+
+pdfRb_link <- function() {
+  paste0("<a target='_blank' href=\"", pdfRb_location, "\">", as.character(fa("file-pdf", fill = "#f40f02", width = "2em")), "</a>")
+}
+
+slideshowRbitems <- tibble(
+  
+  htmlRb <- c("Full Screen Slideshow",
+               htmlRb_link()),
+  
+  pdfRb <- c("Presentation PDF",
+            pdfRb_link())
+  
+)
+
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(slideshowRbitems, 
+      col.names = c("", ""),
+      escape = FALSE,
+      align = 'cc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1:2, width = "20em", extra_css = 'vertical-align: middle !important;', background = "#ffffff") 
+```
+</center>
+
+[^1]: For <b>O</b>verview

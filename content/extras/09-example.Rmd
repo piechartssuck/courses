@@ -2,7 +2,7 @@
 title: "Testing Hypotheses"
 linktitle: "Week 9: Testing Hypotheses"
 output:
-  blogdown::html_page:
+  rmarkdown::html_document:
     toc: true
 menu:
   extras:
@@ -26,5 +26,5 @@ This week we are looking ahead a bit and prepping for testing by first looking o
 </p>
 
 
-Remember you can always access a Crash Course Statistics playlist using the following  [link](https://www.youtube.com/playlist?list=PL8dPuuaLjXtNM_Y-bUAhblSAdWRnmBUcr){target="_blank"}.
+Remember you can always access a Crash Course Statistics playlist using the following  [link](https://www.youtube.com/playlist?list=PL8dPuuaLjXtNM_Y-bUAhblSAdWRnmBUcr).
 

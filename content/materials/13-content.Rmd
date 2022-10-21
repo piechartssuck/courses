@@ -63,6 +63,10 @@ editor_options:
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
+
+table > tbody > tr:hover > td, table > tbody > tr:hover > th {
+  background-color: #ffffff;
+}
 </style>
 
 ```{r setup, include=FALSE, purl=FALSE}
@@ -81,7 +85,7 @@ font_add_google("Roboto Condensed", "roboto")
 showtext_auto()
 ```
 
-### Textbook Notes
+## Stock Textbook Notes
 
 ```{r echo=FALSE}
 
@@ -89,16 +93,16 @@ pptx_location <- "/lecture_notes/Week 13/SSDS_Ch11_Ch12_pptx.zip"
 docx_location <- "/lecture_notes/Week 13/SSDS_Ch11_Ch12_docx.zip"
 
 powerpoint_link <- function() {
-  paste0("<a href=\"", pptx_location, "\">", as.character(fa("file-powerpoint", fill = "#d04423", width = "2em")), "</a>")
+  paste0("<a target='_blank' href=\"", pptx_location, "\">", as.character(fa("file-powerpoint", fill = "#d04423", width = "2em")), "</a>")
 }
 
 word_link <- function() {
-  paste0("<a href=\"", docx_location, "\">", as.character(fa("file-word", fill = "#00a4ef", width = "2em")), "</a>")
+  paste0("<a target='_blank' href=\"", docx_location, "\">", as.character(fa("file-word", fill = "#00a4ef", width = "2em")), "</a>")
 }
 
 textitems <- tibble(
   
-  pptx <- c("Chapters 11 & 12 PowerPoints",
+  pptx <- c("Chapters 11 & 12 PowerPoint",
                powerpoint_link()),
   
   docx <- c("Chapters 11 & 12 Notes",
@@ -108,39 +112,67 @@ textitems <- tibble(
 
 ```
 
+<center>
 ```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
 kable(textitems, 
       col.names = c("", ""),
       escape = FALSE,
       align = 'cc') %>%
   kable_styling(full_width = FALSE) %>%
-  column_spec(1, width = "20em") %>%
-  column_spec(2, width = "20em") 
+  column_spec(1:2, width = "20em", extra_css = 'vertical-align: middle !important;', background = "#ffffff")
 ```
+</center>
 
-### In Class Notes
-<!--
-*posted during class time*
--->
+## In Class Presentations
+For all slideshows, you may move back and forth using <kbd>←</kbd> and <kbd>→</kbd> and toggle fullscreen by pressing <kbd>F</kbd>. Just press <kbd>O</kbd>[^1] at any point in your slideshow and a display of all slides, called tile view, will appear. Click on a slide to go there or press <kbd>O</kbd> to exit tile view. For more options, press <kbd>H</kbd> for help.
 
+### Concepts
+
+<center>
 ```{r echo = FALSE}
 knitr::include_url("/slides/Week 13/Slides-Week-13.html")
 ```
+</center>
 
-You can move back and forth using <kbd>←</kbd> and <kbd>→</kbd> and toggle fullscreen by pressing <kbd>F</kbd>. Just press <kbd>O</kbd>^[For **O**verview] at any point in your slideshow and a display of all slides, called tile view, will appear. Click on a slide to go there or press <kbd>O</kbd> to exit tile view. For more options, press <kbd>H</kbd> for help.
+```{r echo=FALSE}
 
-> Click [here](/slides/Week 13/Slides-Week-13.html){target="_blank"} for a larger version of the presentation.
+html_location <- "/slides/Week 13/Slides-Week-13.html"
+pdf_location <- "/slides/Week 13/Slides-Week-13.pdf"
 
-> Click [here](/slides/Week 13/Slides-Week-13.pdf){target="_blank"} here for a PDF of the presentation.
+html_link <- function() {
+  paste0("<a target='_blank' href=\"", html_location, "\">", as.character(fa("person-chalkboard", fill = "#7ead86", width = "3em")), "</a>")
+}
 
+pdf_link <- function() {
+  paste0("<a target='_blank' href=\"", pdf_location, "\">", as.character(fa("file-pdf", fill = "#f40f02", width = "2em")), "</a>")
+}
+
+slideshowitems <- tibble(
+  
+  html <- c("Full Screen Slideshow",
+               html_link()),
+  
+  pdf <- c("Presentation PDF",
+            pdf_link())
+  
+)
+
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(slideshowitems, 
+      col.names = c("", ""),
+      escape = FALSE,
+      align = 'cc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1:2, width = "20em", extra_css = 'vertical-align: middle !important;', background = "#ffffff")
+```
+</center>
 
 ### R Walkthroughs
 
-<!--
-*posted during class time*
--->
-
-Download a copy of everything you need to follow along the walkthroughs^[You will have to unzip this file. If you are unfamiliar with this process, please check the [Unzipping files](/resource/unzipping/) section under Resources for assistance]
+Download a copy of everything you need to follow along the walkthroughs[^2]) section under Resources for assistance]
 
 ```{r echo=FALSE,eval=TRUE,message=FALSE,purl=FALSE}
 loc <- here::here("static", "slides", "Descriptions", "EDP613RStatsMaterials.zip")
@@ -153,30 +185,93 @@ downloadthis::download_file(
   has_icon = TRUE,
   icon = "fa fa-save",
   class = "hvr-sweep-to-left"
-  )
+)
 ```
 
-#### Descriptive Statistics
-
+<center>
 ```{r echo = FALSE}
 knitr::include_url("/slides/Descriptions/Descriptive-statistics-in-R.html")
 ```
+</center>
 
-You can move back and forth using <kbd>←</kbd> and <kbd>→</kbd> and toggle fullscreen by pressing <kbd>F</kbd>. Just press <kbd>O</kbd>^[For **O**verview] at any point in your slideshow and a display of all slides, called tile view, will appear. Click on a slide to go there or press <kbd>O</kbd> to exit tile view. For more options, press <kbd>H</kbd> for help.
+```{r echo=FALSE}
 
-> Click [here](/slides/Descriptions/Descriptive-statistics-in-R.html){target="_blank"} for a larger version of the presentation.
+htmlRdesc_location <- "/slides/Descriptions/Descriptive-statistics-in-R.htm"
+pdfRdesc_location <- "/slides/Descriptions/Descriptive-statistics-in-R.pdf"
 
-> Click [here](/slides/Descriptions/Descriptive-statistics-in-R.pdf){target="_blank"} here for a PDF of the presentation.
+htmlRdesc_link <- function() {
+  paste0("<a target='_blank' href=\"", htmlRdesc_location, "\">", as.character(fa("person-chalkboard", fill = "#7ead86", width = "3em")), "</a>")
+}
 
-<br>
+pdfRdesc_link <- function() {
+  paste0("<a target='_blank' href=\"", pdfRdesc_location, "\">", as.character(fa("file-pdf", fill = "#f40f02", width = "2em")), "</a>")
+}
 
-#### Statistical Tests
+slideshowRdescitems <- tibble(
+  
+  htmlRdesc <- c("Full Screen Slideshow",
+               htmlRdesc_link()),
+  
+  pdfRdesc <- c("Presentation PDF",
+              pdfRdesc_link())
+  
+)
+
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(slideshowRdescitems, 
+      col.names = c("", ""),
+      escape = FALSE,
+      align = 'cc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1:2, width = "20em", extra_css = 'vertical-align: middle !important;', background = "#ffffff")
+```
+</center>
+
+<center>
 ```{r echo = FALSE}
 knitr::include_url("/slides/Descriptions/Statistical-Tests-in-R.html")
 ```
+</center>
 
-You can move back and forth using <kbd>←</kbd> and <kbd>→</kbd> and toggle fullscreen by pressing <kbd>F</kbd>. Just press <kbd>O</kbd>^[For **O**verview] at any point in your slideshow and a display of all slides, called tile view, will appear. Click on a slide to go there or press <kbd>O</kbd> to exit tile view. For more options, press <kbd>H</kbd> for help.
+```{r echo=FALSE}
 
-> Click [here](/slides/Descriptions/Statistical-Tests-in-R.html){target="_blank"} for a larger version of the presentation.
+htmlRinfer_location <- "/slides/Descriptions/Statistical-Tests-in-R.html"
+pdfRinfer_location <- "/slides/Descriptions/Statistical-Tests-in-R.pdf"
 
-> Click [here](/slides/Descriptions/Statistical-Tests-in-R.pdf){target="_blank"} here for a PDF of the presentation.
+htmlRinfer_link <- function() {
+  paste0("<a target='_blank' href=\"", htmlRinfer_location, "\">", as.character(fa("person-chalkboard", fill = "#7ead86", width = "3em")), "</a>")
+}
+
+pdfRinfer_link <- function() {
+  paste0("<a target='_blank' href=\"", pdfRinfer_location, "\">", as.character(fa("file-pdf", fill = "#f40f02", width = "2em")), "</a>")
+}
+
+slideshowRinferitems <- tibble(
+  
+  htmlRinfer <- c("Full Screen Slideshow",
+               htmlRinfer_link()),
+  
+  pdfRinfer <- c("Presentation PDF",
+               pdfRinfer_link())
+  
+)
+
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(slideshowRinferitems, 
+      col.names = c("", ""),
+      escape = FALSE,
+      align = 'cc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1:2, width = "20em", extra_css = 'vertical-align: middle !important;', background = "#ffffff")
+```
+</center>
+
+[^1]: For <b>O</b>verview
+
+[^2]: You will have to unzip this file. If you are unfamiliar with this process, please check the [Unzipping files](/resource/unzipping/)
