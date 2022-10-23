@@ -12,6 +12,7 @@ wk_post %>%
     str_detect(`Icon`, "slideshow") ~ '<img src="/logos/slideshow-ico.png" alt="Slideshow icon" width="26">',
     str_detect(`Icon`, "survey") ~ '<img src="/logos/survey-ico.png" alt="Survey icon" width="27">',
     str_detect(`Icon`, "youtube") ~ '<img src="/logos/youtube-ico.png" alt="YouTube icon" width="28">',
+    str_detect(`Icon`, "walkthrough") ~ '<img src="/logos/walkthrough-ico.png" alt="Walkthrough icon" width="26">',
     str_detect(`Icon`, "webpage") ~ '<img src="/logos/webpage-ico.png" alt="Webpage icon" width="27">',
     TRUE ~ NA_character_
     )

@@ -76,7 +76,7 @@ privacy_pack: false
 edit_page:
   repo_url: 'https://github.com/drabhikroy/Courses/tree/edp618'
   content_dir: ''
-  repo_branch: edp619
+  repo_branch: edp618
   editable:
     docs: true
     page: false
