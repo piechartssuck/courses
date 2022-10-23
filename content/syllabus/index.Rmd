@@ -16,11 +16,7 @@ library(kableExtra)
 library(here)
 ```
 
-<style>
-table > tbody > tr:hover > td, table > tbody > tr:hover > th {
-  background-color: #ffffff;
-}
-</style>
+`r blogdown::shortcode("aes-header")`
 
 ## Course objectives
 
@@ -116,17 +112,17 @@ assignments <- tribble(
 
 grading <- tribble(
   ~Grade, ~Range,
-  "A",  "> 90%",
-  "B",  "80%-89%",  
-  "C",  "70–79%",
-  "D",  "60–69%", 
-  "F",  "< 60%"
+  "A",  "90 &#150; 100%",
+  "B",  "80 &#150; 89%",  
+  "C",  "70 &#150; 79%",
+  "D",  "60 &#150; 69%", 
+  "F",  "&#60; 60%"
 )
 ```
 
 ```{r show-assignments-table, echo=FALSE, results="asis"}
 assignments %>%
-  kableExtra::kable(align='cl',
+  kableExtra::kable(align='cll',
                     col.names = c("Percent", "Task", "Location"),
   ) %>%
   kable_styling(position = "center",
@@ -136,10 +132,9 @@ assignments %>%
                                       "responsive"),
                 full_width = FALSE) %>%
   column_spec(1, width = "5em") %>%
-  column_spec(2, width = "12em") %>%
-  column_spec(3, width = "12em") %>%
-  row_spec(0:5, extra_css = 'vertical-align: middle !important;')  %>%
-  row_spec(0:5, extra_css = 'vertical-align: middle !important;', background = "#ffffff")
+  column_spec(2, width = "7em") %>%
+  column_spec(3, width = "7em") %>%
+  row_spec(0:5, extra_css = 'vertical-align: middle !important;', background = "#212121", color = "#ffffff")
 ```
 
 </center>
@@ -150,7 +145,7 @@ assignments %>%
 
 ```{r show-grades-table, echo=FALSE, results="asis"}
 grading %>%
-  kableExtra::kable(align='cl',
+  kableExtra::kable(align='cc',
                col.names = c("Grade", "Range")) %>%
    kable_styling(position = "center",
                 bootstrap_options = c("striped", 
@@ -160,7 +155,7 @@ grading %>%
                 full_width = FALSE) %>%
   column_spec(1, width = "5em") %>%
   column_spec(2, width = "12em")  %>%
-  row_spec(0:5, extra_css = 'vertical-align: middle !important;', background = "#ffffff")
+  row_spec(0:5, extra_css = 'vertical-align: middle !important;', background = "#212121",  color = "#ffffff")
 ```
 
 </center>

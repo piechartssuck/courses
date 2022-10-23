@@ -18,11 +18,7 @@ library(tidyverse)
 library(fontawesome)
 ```
 
-<style>
-table > tbody > tr:hover > td, table > tbody > tr:hover > th {
-  background-color: #ffffff;
-}
-</style>
+`r blogdown::shortcode("aes-header")`
 
 ```{r eval = TRUE, echo = FALSE, message=FALSE}
 dc_schedule <-  
@@ -57,5 +53,5 @@ kable(dc_schedule,
   column_spec(3, width = "10em") %>%
   column_spec(4, width = "10em") %>%
   column_spec(5, width = "10em") %>%
-  row_spec(0:5, extra_css = 'vertical-align: middle !important;', background = "#ffffff")
+  row_spec(0:nrow(dc_schedule), extra_css = 'vertical-align: middle !important;', background = "#212121", color = "#ffffff")
 ```

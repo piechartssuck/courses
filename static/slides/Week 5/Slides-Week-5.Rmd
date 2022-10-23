@@ -4,7 +4,7 @@ subtitle: "EDP 613"
 author: "Week 5"
 output: 
  xaringan::moon_reader:
-   css: xaringan-themer.css
+   css: ['xaringan-themer.css', 'custom.css']
    nature:
      ratio: 16:9
      highlightStyle: github
@@ -27,50 +27,6 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
 });
 </script>
 
-<style>
-section {
-    display: flex;
-    display: -webkit-flex;
-}
-
-section p {
-    margin: auto;
-}
-
-section {
-    height: 600px;
-    width: 60%;
-    margin: auto;
-    border-radius: 20px;
-    background-color: #212121;
-}
-
-section p {
-    text-align: center;
-    font-size: 30px;
-    background-color: #212121;
-    border-radius: 20px;
-    font-family: Roboto Condensed;
-    font-style: bold;
-    padding: 15px;
-    color: #bff4ee;
-}
-
-#center {
-
-text-align: center;
-
-}
-
-.center p {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-
-</style>
 
 ```{r setup, include=FALSE, purl=FALSE}
 knitr::opts_chunk$set(echo = FALSE)

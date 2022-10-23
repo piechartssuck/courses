@@ -1,8 +1,9 @@
 ---
 title: "The Normal Distribution"
 linktitle: "Week 5: The Normal Distribution"
+toc: true
 output:
-  blogdown::html_page:
+  rmarkdown::html_document:
     toc: true
 menu:
   due:
@@ -21,7 +22,9 @@ library(knitr)
 library(kableExtra)
 ```
 
-### What to do for Week 5 after class ends^[For grading.]
+`r blogdown::shortcode("aes-header")`
+
+### What to do for Week 5 after class ends
 
 ```{r eval = TRUE, echo = FALSE}
 unchecked <- as.character(fontawesome::fa("square", fill = "#4682b4"))
@@ -35,8 +38,8 @@ Submit = c(checked,
            unchecked,
            unchecked),
 
-Description = c("Continue the *Dr. Semmelweis and the Discovery of Handwashing* project on Data Camp",
-               "Continue the *Introduction to Statistics in R* module on Data Camp",
+Description = c("Continue the optional chapter <i>Dr. Semmelweis and the Discovery of Handwashing</b> project on Data Camp",
+               "Continue the <i>Introduction to Statistics in R</i> module on Data Camp",
                "Download the in-class Chapter 5 Slideshow",
                "Download the in-class R Walkthrough Slideshow"
                ),
@@ -47,30 +50,32 @@ Location = c("[Link](/datacamp/04-module/)",
              "[Link](/materials/05-content/#r-walkthrough)"
              )
 
-)
+) %>%
+  mutate(Link = paste0("<a href=", str_extract_all(Location, "(?<=\\().+?(?=\\))"), "> <i class='fa-solid fa-link' style='color:#598fff'></i> </a>")) %>%
+  select(-Location)
 ```
 
 ```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
 kable(wk_post, 
-      col.names = c("Turn in?", "Description", "Location"),
       escape = FALSE,
       align = 'clc') %>%
   kable_styling(full_width = FALSE) %>%
   column_spec(1, width = "10em") %>%
   column_spec(2, width = "30em") %>%
-  column_spec(3, width = "10em")
+  column_spec(3, width = "10em") %>%
+  row_spec(0:nrow(wk_post), extra_css = 'vertical-align: middle !important;', background = "#212121", color = "#ffffff")
 ```
 
 <br />
 
-### What to do for Week 6 before coming to class^[For preparation.]
+### What to do for Week 6 before coming to class
 
 ```{r eval = TRUE, echo = FALSE}
-book <- as.character(fontawesome::fa("book", fill = "steelblue"))
+book <- as.character(fontawesome::fa("book", fill = "#739670"))
 
-chalkboard <- as.character(fontawesome::fa("chalkboard", fill = "steelblue"))
+chalkboard <- as.character(fontawesome::fa("chalkboard", fill = "#764874"))
 
-lightbulb <- as.character(fontawesome::fa("lightbulb", fill = "steelblue"))
+lightbulb <- as.character(fontawesome::fa("lightbulb", fill = "#eb7b59"))
 
 wk_pre <- tibble(
 Area = c(book, 
@@ -85,7 +90,9 @@ Location = c("[Link](/tasks/01-exam/)",
              "[Link](/tasks/01-exam/)",
              "[Link](/tasks/01-exam/)")
 
-)
+) %>%
+  mutate(Link = paste0("<a href=", str_extract_all(Location, "(?<=\\().+?(?=\\))"), "> <i class='fa-solid fa-link' style='color:#ff598f'></i> </a>")) %>%
+  select(-Location)
 
 ```
 
@@ -97,5 +104,6 @@ kable(wk_pre,
   kable_styling(full_width = FALSE) %>%
   column_spec(1, width = "10em") %>%
   column_spec(2, width = "30em") %>%
-  column_spec(3, width = "10em")
+  column_spec(3, width = "10em") %>%
+  row_spec(0:nrow(wk_pre), extra_css = 'vertical-align: middle !important;', background = "#212121", color = "#ffffff")
 ```  

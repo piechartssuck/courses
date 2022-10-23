@@ -16,13 +16,15 @@ library(tidyverse)
 library(fontawesome)
 ```
 
+`r blogdown::shortcode("aes-header")`
+
 ### Description
 Some class sessions have an interactive lesson that you will work through ***after*** doing the readings and lecture (if applicable). These lessons are a central part of the class—they will teach you how to use R and corresponding packages we'll use.
 
-Interactive training sections are provided on  
+Interactive training sections are provided via  
 
 <center>
- <a href="https://www.datacamp.com/users/sign_in">
+ <a href="https://www.datacamp.com/">
  <img alt="Data Camp Logo" src="/logos/datacamp.png" width = "400px">
  </a>
 </center>
@@ -85,7 +87,7 @@ kable(dc_schedule,
   column_spec(3, width = "10em") %>%
   column_spec(4, width = "10em") %>%
   column_spec(5, width = "30em") %>%
-  row_spec(0:8, extra_css = 'vertical-align: middle !important;')
+  row_spec(0:nrow(dc_schedule), extra_css = 'vertical-align: middle !important;', background = "#212121", color = "#ffffff")
 ```
 </center>
 <hr />

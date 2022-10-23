@@ -13,16 +13,16 @@ hero_media: course_hex.png
 design:
   background:
     # Background gradient
-    gradient_start: '#1F1C2C'
-    gradient_end: '#928DAB'
+    # gradient_start: '#1F1C2C'
+    # gradient_end: '#928DAB'
 
     # Text color (true=light or false=dark).
-    text_color_light: false
+    text_color_light: true
 
     image: gapminder_plot.png
 
 cta_note:
-  label: Fall 2021<br>Counseling & Learning Sciences<br>West Virginia University
+  label: <span style="color:#fafafa">Fall 2021<br>Counseling & Learning Sciences<br>West Virginia University</span>
 ---
 
 **A foundational course with odds and ends**

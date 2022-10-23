@@ -1,8 +1,9 @@
 ---
 title: "Measures of Variability"
 linktitle: "Week 4: Measures of Variability"
+toc: true
 output:
-  blogdown::html_page:
+  rmarkdown::html_document:
     toc: true
 menu:
   due:
@@ -21,7 +22,9 @@ library(knitr)
 library(kableExtra)
 ```
 
-### What to do for Week 4 after class ends^[For grading.]
+`r blogdown::shortcode("aes-header")`
+
+### What to do for Week 4 after class ends
 
 ```{r eval = TRUE, echo = FALSE}
 unchecked <- as.character(fontawesome::fa("square", fill = "#4682b4"))
@@ -37,8 +40,8 @@ Submit = c(unchecked,
            unchecked),
 
 Description = c("Review the solution set from the Chapter 3 homework set",
-               "Begin the optional *Dr. Semmelweis and the Discovery of Handwashing* project on Data Camp",
-               "Begin the *Introduction to Statistics in R* module on Data Camp",
+               "Begin the optional chapter <i>Dr. Semmelweis and the Discovery of Handwashing</i> project on Data Camp",
+               "Begin the <i>Introduction to Statistics in R</i> module on Data Camp",
                "Complete problems 1, 2, 3, 7, 8, 11, 12, and 13 in Chapter 4",
                "Download the in-class Chapter 4 Slideshow",
                "Download the in-class R Walkthrough Slideshow"),
@@ -49,7 +52,9 @@ Location = c( "[Link](/tasks/03-tasks/#solutions)",
               "[Link](/tasks/04-tasks/#homework)",
               "[Link](/materials/04-content/#in-class-notes)",
               "[Link](/materials/04-content/#r-walkthrough)")
-)
+) %>%
+  mutate(Link = paste0("<a href=", str_extract_all(Location, "(?<=\\().+?(?=\\))"), "> <i class='fa-solid fa-link' style='color:#598fff'></i> </a>")) %>%
+  select(-Location)
 
 ```
 
@@ -60,34 +65,37 @@ kable(wk_post,
   kable_styling(full_width = FALSE) %>%
   column_spec(1, width = "10em") %>%
   column_spec(2, width = "30em") %>%
-  column_spec(3, width = "10em")
+  column_spec(3, width = "10em") %>%
+  row_spec(0:nrow(wk_post), extra_css = 'vertical-align: middle !important;', background = "#212121", color = "#ffffff")
 ```
 
 <br />
 
-### What to do for Week 5 before coming to class^[For preparation.]
+### What to do for Week 5 before coming to class
 
 ```{r eval = TRUE, echo = FALSE}
-book <- as.character(fontawesome::fa("book", fill = "steelblue"))
+book <- as.character(fontawesome::fa("book", fill = "#739670"))
 
-chalkboard <- as.character(fontawesome::fa("chalkboard", fill = "steelblue"))
+chalkboard <- as.character(fontawesome::fa("chalkboard", fill = "#764874"))
 
-lightbulb <- as.character(fontawesome::fa("lightbulb", fill = "steelblue"))
+lightbulb <- as.character(fontawesome::fa("lightbulb", fill = "#eb7b59"))
 
 wk_pre <- tibble(
 Area = c(book, 
          chalkboard, 
          lightbulb),
 
-Description = c("Read *The Normal Distribution* in the text",
+Description = c("Read <i>The Normal Distribution</i> in the text",
                "Download Chapter 5 Powerpoint and Lecture Textbook Notes",
-               "Watch a video on the Normal Distribution.^[Optional but recommended.]"),
+               "Watch a video on the Normal Distribution"),
 
 Location = c("[Link](/readings/05-reading/#book-stuff)", 
              "[Link](/materials/05-content/#textbook-notes)",
              "[Link](/extras/05-example/#crash-course-statistics)")
 
-)
+) %>%
+  mutate(Link = paste0("<a href=", str_extract_all(Location, "(?<=\\().+?(?=\\))"), "> <i class='fa-solid fa-link' style='color:#ff598f'></i> </a>")) %>%
+  select(-Location)
 
 ```
 
@@ -98,6 +106,7 @@ kable(wk_pre,
   kable_styling(full_width = FALSE) %>%
   column_spec(1, width = "10em") %>%
   column_spec(2, width = "30em") %>%
-  column_spec(3, width = "10em")
+  column_spec(3, width = "10em") %>%
+  row_spec(0:nrow(wk_pre), extra_css = 'vertical-align: middle !important;', background = "#212121", color = "#ffffff")
 ```
 

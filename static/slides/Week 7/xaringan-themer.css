@@ -15,7 +15,7 @@
  *    - xaringan wiki: https://github.com/yihui/xaringan/wiki
  *    - remarkjs wiki: https://github.com/gnab/remark/wiki
  *
- *  Version: 0.4.1
+ *  Version: 0.4.2
  *
  * ------------------------------------------------------- */
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400&display=swap);
@@ -44,21 +44,21 @@
 
   /* Colors */
   --text-color: #FEFEFE;
-  --header-color: #bff4ee;
+  --header-color: #f4eebf;
   --background-color: #212121;
-  --link-color: #bff4ee;
-  --text-bold-color: #bff4ee;
-  --code-highlight-color: rgba(255,255,0,0.5);
+  --link-color: #f4eebf;
+  --text-bold-color: #f4eebf;
+  --code-highlight-color: #db6464;
   --inverse-text-color: #212121;
-  --inverse-background-color: #bff4ee;
+  --inverse-background-color: #f4eebf;
   --inverse-header-color: #212121;
-  --inverse-link-color: #bff4ee;
+  --inverse-link-color: #f4eebf;
   --title-slide-background-color: #212121;
-  --title-slide-text-color: #bff4ee;
-  --header-background-color: #bff4ee;
+  --title-slide-text-color: #f4eebf;
+  --header-background-color: #f4eebf;
   --header-background-text-color: #212121;
   --primary: #212121;
-  --secondary: #bff4ee;
+  --secondary: #f4eebf;
 }
 
 html {
@@ -99,7 +99,9 @@ h1, h2, h3 {
 }
 .remark-inline-code {
   font-size: var(--code-inline-font-size);
-  color: #bff4ee;
+  color: #b2dfdb;
+  background-color: transparent;
+  padding: 2px;
 }
 .remark-slide-number {
   color: #FEFEFE;
@@ -150,10 +152,10 @@ a, a > code {
   float: left;
 }
 .left-column h2, .left-column h3 {
-  color: #bff4ee99;
+  color: #f4eebf99;
 }
 .left-column h2:last-of-type, .left-column h3:last-child {
-  color: #bff4ee;
+  color: #f4eebf;
 }
 .right-column {
   width: 75%;
@@ -175,7 +177,7 @@ img, video, iframe {
   max-width: 100%;
 }
 blockquote {
-  border-left: solid 5px #bff4ee80;
+  border-left: solid 5px #f4eebf80;
   padding-left: 1em;
 }
 .remark-slide table {
@@ -189,7 +191,9 @@ blockquote {
 th, td {
   padding: 5px;
 }
-.remark-slide thead, .remark-slide tfoot, .remark-slide tr:nth-child(even) {
+.remark-slide table:not(.table-unshaded) thead,
+.remark-slide table:not(.table-unshaded) tfoot,
+.remark-slide table:not(.table-unshaded) tr:nth-child(even) {
   background: #212121;
 }
 table.dataTable tbody {

@@ -4,7 +4,7 @@ subtitle: "EDP 613"
 author: "Week 7"
 output: 
  xaringan::moon_reader:
-   css: xaringan-themer.css
+   css: ['xaringan-themer.css', 'custom.css']
    nature:
      ratio: 16:9
      highlightStyle: github
@@ -13,6 +13,25 @@ output:
      navigation:
          scroll: false
 ---
+
+<script>
+  function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+  }
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+  MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+    cancel: ["Extension","cancel"],
+    bcancel: ["Extension","cancel"],
+    xcancel: ["Extension","cancel"],
+    cancelto: ["Extension","cancel"]
+  });
+});
+</script>
 
 ```{r setup, include=FALSE, purl=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
@@ -33,20 +52,24 @@ showtext_auto()
 ```{r echo = FALSE, purl=FALSE}
 xaringanthemer::style_duo(
   primary_color = "#212121",
-  secondary_color = "#bff4ee",
+  secondary_color = "#f4eebf",
+  code_inline_background_color = "transparent",
+  code_inline_color = "#b2dfdb",
+  code_highlight_color = "#db6464",
   table_row_border_color = "#212121",
   table_row_even_background_color = "#212121",
   footnote_font_size = "0.6em",
   header_font_google = xaringanthemer::google_font("Roboto Condensed", "700"),
   text_font_google   = xaringanthemer::google_font("Roboto Condensed", "400")
 )
+
 xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "tachyons"))
 
 xaringanExtra::use_logo(
   image_url = here::here("static", "img", "course_hex_alpha.png"),
   link_url = "https://edp613.asocialdatascientist.com",
   position = xaringanExtra::css_position(top = "1em", right = "1em")
-)
+  )
 ```
 
 ```{r echo = FALSE}

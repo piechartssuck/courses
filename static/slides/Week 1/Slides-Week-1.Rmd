@@ -4,7 +4,7 @@ subtitle: "EDP 613"
 author: "Week 1"
 output: 
  xaringan::moon_reader:
-   css: xaringan-themer.css
+   css: ['xaringan-themer.css', 'custom.css']
    nature:
      ratio: 16:9
      highlightStyle: github
@@ -13,6 +13,12 @@ output:
      navigation:
          scroll: false
 ---
+
+<script>
+  function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+  }
+</script>
 
 ```{r setup, include=FALSE, purl=FALSE}
 library(tidyverse)
@@ -34,7 +40,7 @@ xaringanthemer::style_duo(
   table_row_even_background_color = "#212121",
   footnote_font_size = "0.6em",
   header_font_google = xaringanthemer::google_font("Roboto Condensed", "700"),
-  text_font_google   = xaringanthemer::google_font("Roboto Condensed", "400")
+  text_font_google = xaringanthemer::google_font("Roboto Condensed", "400")
 )
 
 xaringanExtra::use_xaringan_extra(c("tile_view", 

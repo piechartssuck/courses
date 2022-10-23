@@ -1,6 +1,10 @@
 ---
 title: "Sampling and Sampling Distributions"
 linktitle: "Week 7: Sampling and Sampling Distributions"
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
 menu:
   tasks:
     parent: Homeworks
@@ -10,71 +14,62 @@ weight: 2
 editor_options: 
   chunk_output_type: console
 ---
+
 <script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
 <link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
 <script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+
 <link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
 
-
-
-<style>
-span.boxed {
-  border: 0px solid #FFFFFF;
-  padding: 5px;
-  color: #FFFFFF;
-  background-color: #005b96;
-  display: inline;
-} 
-
-table {
-   margin-left: auto;
-   margin-right: auto;
-}
-
-table thead th { border-bottom: 1px solid #ddd; 
-}
-
-th, td { padding: 5px; 
-}
-
-table > tbody > tr:hover > td, table > tbody > tr:hover > th {
-  background-color: #ffffff;
-}
-</style>
+{{% aes-header %}}
 
 ### Homework
 
-
 <center>
 <table>
- <thead>
-  <tr>
-   <th style="text-align:center;background-color: #ffffff !important;vertical-align: middle !important;"> Chapter </th>
-   <th style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> Problems </th>
-   <th style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> Source </th>
-   <th style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> Pages </th>
-  </tr>
- </thead>
+<thead>
+<tr>
+<th style="text-align:center;color: #ffffff !important;background-color: #212121 !important;vertical-align: middle !important;">
+Chapter
+</th>
+<th style="text-align:left;color: #ffffff !important;background-color: #212121 !important;vertical-align: middle !important;">
+Problems
+</th>
+<th style="text-align:left;color: #ffffff !important;background-color: #212121 !important;vertical-align: middle !important;">
+Source
+</th>
+<th style="text-align:left;color: #ffffff !important;background-color: #212121 !important;vertical-align: middle !important;">
+Pages
+</th>
+</tr>
+</thead>
 <tbody>
-  <tr>
-   <td style="text-align:center;font-weight: bold;background-color: #ffffff !important;vertical-align: middle !important;"> 6 </td>
-   <td style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> 1, 2, 3, 4, 5, 6, 7, 8, 9 </td>
-   <td style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> Social Statistics for a Diverse Society </td>
-   <td style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> 206-210 </td>
-  </tr>
+<tr>
+<td style="text-align:center;font-weight: bold;color: #ffffff !important;background-color: #212121 !important;vertical-align: middle !important;">
+6
+</td>
+<td style="text-align:left;color: #ffffff !important;background-color: #212121 !important;vertical-align: middle !important;">
+1, 2, 3, 4, 5, 6, 7, 8, 9
+</td>
+<td style="text-align:left;color: #ffffff !important;background-color: #212121 !important;vertical-align: middle !important;">
+Social Statistics for a Diverse Society
+</td>
+<td style="text-align:left;color: #ffffff !important;background-color: #212121 !important;vertical-align: middle !important;">
+206-210
+</td>
+</tr>
 </tbody>
 </table>
 </center>
 
-Notes: 
+Notes:
 
-- Please submit this at the beginning of class next week.
-- Remember to follow the [homework guidelines](/tasks/#homeworks) for consideration.
+-   Please submit this at the beginning of class next week.
+-   Remember to follow the [homework guidelines](/tasks/#homeworks) for consideration.
 
 <!--
 to the Submission Portal on [ecampus](https://ecampus.wvu.edu/){target="_blank"} by 11:59 PM next Wednesday.<br>
 -->
-
 
 ### Solutions
 
@@ -269,17 +264,17 @@ First we convert these to a vector and take the sum
       ```
       
       ```
-      ##            [,1]       [,2]        [,3]
-      ##  [1,] 105699.52   73510.34  47366.5273
-      ##  [2,]  30006.16 -152541.74  67542.3456
-      ##  [3,] 145093.65   90592.21 131036.4313
-      ##  [4,] 129979.25  -57916.92 129541.9173
-      ##  [5,] 143612.03   63349.44  58423.2653
-      ##  [6,] 133048.45  105502.30 -19070.0009
-      ##  [7,]  80526.49  142114.93 240017.2511
-      ##  [8,] 139189.61   82385.98  12053.5580
-      ##  [9,] 100133.71  184022.74 205169.9065
-      ## [10,] 194136.21   84008.67   -834.3961
+      ##            [,1]      [,2]      [,3]
+      ##  [1,] 212062.40 311167.07 -94611.41
+      ##  [2,] 275220.28  97663.07  94243.24
+      ##  [3,] 350385.14 125438.06 204528.87
+      ##  [4,] 209579.89 120847.84 358622.80
+      ##  [5,] 358860.35 222561.37 105573.97
+      ##  [6,] 247519.81 -64690.66  22692.11
+      ##  [7,]  40461.77 240819.53  48926.83
+      ##  [8,]  61247.94 282650.57 -68414.66
+      ##  [9,] 140149.98 233870.44 -11748.40
+      ## [10,] -64463.29 131286.95  51928.77
       ```
   c. The mean of these 10 sets of means is 
       
@@ -288,7 +283,7 @@ First we convert these to a vector and take the sum
       ```
       
       ```
-      ## [1] 89590
+      ## [1] 141479.4
       ```
       or about <span class="boxed">105428</span>. We notice that the population mean and the mean of the sampling distribution are somewhat close, a feature that we should come to expect given the fact that `\(\mu_Y = \mu_{\overline{Y}}\)`.
   d. The standard deviation of these 10 sets of means is
@@ -298,7 +293,7 @@ First we convert these to a vector and take the sum
       ```
       
       ```
-      ## [1] 80685.79
+      ## [1] 133421
       ```
       or about <span class="boxed">122991</span>.
   e. The population distribution is positively skewed and not close to normal. Since a very small sample size is used in this problem, the histogram for the samples of size 3 does not look normal. The distributions appear unimodal. The fact that the sample distribution of the means tends toward normality because of the Central Limit Theorem would become even more apparent if we took samples of size 5 or 6. To show this, look at the plots below

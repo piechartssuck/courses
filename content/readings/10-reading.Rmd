@@ -1,6 +1,9 @@
 ---
 title: "Bivariate Tables"
 linktitle: "Week 10: Bivariate Tables"
+output:
+  rmarkdown::html_document:
+    toc: true
 menu:
   readings:
     parent: Readings
@@ -16,11 +19,8 @@ library(kableExtra)
 library(fontawesome)
 ```
 
-<style>
-table > tbody > tr:hover > td, table > tbody > tr:hover > th {
-  background-color: #ffffff;
-}
-</style>
+`r blogdown::shortcode("aes-header")`
+
 
 ```{r eval = TRUE, echo = FALSE, message=FALSE}
 
@@ -46,7 +46,7 @@ read_schedule <- read_csv("read.csv",
 ```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
 kable(read_schedule, 
       escape = FALSE,
-      align = 'cllccccc') %>%
+      align = 'clcccccc') %>%
   kable_styling(full_width = FALSE,
                 bootstrap_options = c("striped", "hover")) %>%
   column_spec(1, width = "5em") %>%
@@ -56,5 +56,5 @@ kable(read_schedule,
   column_spec(5, width = "10em") %>%
   column_spec(6, width = "10em") %>%
   column_spec(7, width = "10em") %>%
-  row_spec(0:1, extra_css = 'vertical-align: middle !important;', background = "#ffffff")
+  row_spec(0:nrow(read_schedule), extra_css = 'vertical-align: middle !important;', background = "#212121", color = "#ffffff")
 ```

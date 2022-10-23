@@ -8,7 +8,7 @@
 1,,,,,checked,,Data Frames,
 1,,,,,checked,,Lists,
 ,,,,,,,,
-2,2,8/26/21,9/8/21,9/8/21,checked,<a href='/datacamp/02-module/'>Introduction to the Tidyverse</a>,Data wrangling,"<a href=""https://www.datacamp.com/users/sign_in"">
+2,2,8/26/21,9/8/21,9/8/21,checked,<a href='/datacamp/02-module/'>Introduction to the Tidyverse</a>,Data wrangling,"<a href=""https://www.datacamp.com"">
  <img alt=""Data Camp Logo"" src=""/logos/dc-ico.png"" width = ""20px"">
  </a>"
 2,,,,,checked,,Data visualization,
@@ -16,7 +16,7 @@
 2,,,,,checked,,Types of visualizations,
 2,,,,,unchecked,,Dr. Semmelweis and the Discovery of Handwashing,
 ,,,,,,,,
-3,3,8/26/21,10/6/21,10/6/21,checked,<a href='/datacamp/03-module/'>Introduction to Statistics in R</a>,Summary Statistics,"<a href=""https://www.datacamp.com/users/sign_in"">
+3,3,8/26/21,10/6/21,10/6/21,checked,<a href='/datacamp/03-module/'>Introduction to Statistics in R</a>,Summary Statistics,"<a href=""https://www.datacamp.com"">
  <img alt=""Data Camp Logo"" src=""/logos/dc-ico.png"" width = ""20px"">
  </a>"
 3,,,,,checked,,"
@@ -24,14 +24,14 @@ Random Numbers and Probability",
 3,,,,,checked,,More Distributions and the Central Limit Theorem,
 3,,,,,checked,,Correlation and Experimental Design,
 ,,,,,,,,
-4,4,9/23/21,10/20/21,10/20/21,checked,<a href='/datacamp/04-module/'>Introduction to Data in R</a>,Language of data,"<a href=""https://www.datacamp.com/users/sign_in"">
+4,4,9/23/21,10/20/21,10/20/21,checked,<a href='/datacamp/04-module/'>Introduction to Data in R</a>,Language of data,"<a href=""https://www.datacamp.com"">
  <img alt=""Data Camp Logo"" src=""/logos/dc-ico.png"" width = ""20px"">
  </a>"
 4,,,,,checked,,Study types and cautionary tales,
 4,,,,,checked,,Sampling strategies and experimental design,
 4,,,,,checked,,Case study,
 ,,,,,,,,
-5,5,10/21/21,11/3/21,11/3/21,checked,<a href='/datacamp/05-module/'>Foundations of Inference</a>,Introduction to ideas of inference,"<a href=""https://www.datacamp.com/users/sign_in"">
+5,5,10/21/21,11/3/21,11/3/21,checked,<a href='/datacamp/05-module/'>Foundations of Inference</a>,Introduction to ideas of inference,"<a href=""https://www.datacamp.com"">
  <img alt=""Data Camp Logo"" src=""/logos/dc-ico.png"" width = ""20px"">
  </a>"
 5,,,,,checked,,Completing a randomization test: gender discrimination,
@@ -39,7 +39,7 @@ Random Numbers and Probability",
 5,,,,,checked,,"
 Confidence intervals",
 ,,,,,,,,
-6,6,10/21/21,11/17/21,11/17/21,checked,<a href='/datacamp/06-module/'>Inference for Categorical Data in R</a>,Inference for a single parameter,"<a href=""https://www.datacamp.com/users/sign_in"">
+6,6,10/21/21,11/17/21,11/17/21,checked,<a href='/datacamp/06-module/'>Inference for Categorical Data in R</a>,Inference for a single parameter,"<a href=""https://www.datacamp.com"">
  <img alt=""Data Camp Logo"" src=""/logos/dc-ico.png"" width = ""20px"">
  </a>"
 6,,,,,checked,,"
@@ -47,21 +47,21 @@ Proportions: testing and power",
 6,,,,,checked,,Comparing many parameters: independence,
 6,,,,,checked,,Comparing many parameters: goodness of fit,
 ,,,,,,,,
-7,EC1,10/21/21,11/3/21,11/3/21,unchecked,<a href='/datacamp/01-extra/'>Analyzing Survey Data in R</a>,Introduction to survey data,"<a href=""https://www.datacamp.com/users/sign_in"">
+7,EC1,10/21/21,11/3/21,11/3/21,unchecked,<a href='/datacamp/01-extra/'>Analyzing Survey Data in R</a>,Introduction to survey data,"<a href=""https://www.datacamp.com"">
  <img alt=""Data Camp Logo"" src=""/logos/dc-ico.png"" width = ""20px"">
  </a>"
 7,,,,,unchecked,,Exploring categorical data,
 7,,,,,unchecked,,Exploring quantitative data,
 7,,,,,unchecked,,Modeling quantitative data,
 ,,,,,,,,
-8,EC2,11/4/21,11/18/21,11/18/21,unchecked,<a href='/datacamp/02-extra/'>Fundamentals of Bayesian Data Analysis in R</a>,What is Bayesian Data Analysis?,"<a href=""https://www.datacamp.com/users/sign_in"">
+8,EC2,11/4/21,11/18/21,11/18/21,unchecked,<a href='/datacamp/02-extra/'>Fundamentals of Bayesian Data Analysis in R</a>,What is Bayesian Data Analysis?,"<a href=""https://www.datacamp.com"">
  <img alt=""Data Camp Logo"" src=""/logos/dc-ico.png"" width = ""20px"">
  </a>"
 8,,,,,unchecked,,How does Bayesian inference work?,
 8,,,,,unchecked,,Why use Bayesian Data Analysis?,
 8,,,,,unchecked,,Bayesian inference with Bayes' theorem,
 ,,,,,,,,
-9,EC3,10/21/21,12/8/21,12/8/21,unchecked,<a href='/datacamp/03-extra/'>Reporting with R Markdown</a>,Getting Started with R Markdown,"<a href=""https://www.datacamp.com/users/sign_in"">
+9,EC3,10/21/21,12/8/21,12/8/21,unchecked,<a href='/datacamp/03-extra/'>Reporting with R Markdown</a>,Getting Started with R Markdown,"<a href=""https://www.datacamp.com"">
  <img alt=""Data Camp Logo"" src=""/logos/dc-ico.png"" width = ""20px"">
  </a>"
 9,,,,,unchecked,,Adding Analyses and Visualizations,

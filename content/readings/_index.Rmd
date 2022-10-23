@@ -8,6 +8,8 @@ type: docs
 weight: 1
 ---
 
+`r blogdown::shortcode("r-walkthrough-header")`
+
 ## The Course Text
 Each class session has a set of required readings that you should complete ***before*** doing anything else. It also allows you to ask questions prior to moving on! With that said, think of the text as a reference, in that
 
@@ -25,4 +27,5 @@ There's no such thing as visual learner or any other kind of learner [(Rogowsky,
 --- Peter Griffin
 
 ### Need Help?
-I always prefer a face to face meeting if possible but since that's not possible, you can schedule a Zoom via the [Calendar](https://calendly.com/nopiecharts) or contact me within [Slack](https://2021edp613.slack.com) by tagging my name `@Dr. Abhik Roy` in a text box along with your message.
+
+`r blogdown::shortcode("meetings")`

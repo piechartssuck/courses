@@ -1,6 +1,9 @@
 ---
 title: "Testing Hypotheses"
 linktitle: "Week 9: Testing Hypotheses"
+output:
+  rmarkdown::html_document:
+    toc: true
 menu:
   readings:
     parent: Readings
@@ -16,11 +19,8 @@ library(kableExtra)
 library(fontawesome)
 ```
 
-<style>
-table > tbody > tr:hover > td, table > tbody > tr:hover > th {
-  background-color: #ffffff;
-}
-</style>
+`r blogdown::shortcode("aes-header")`
+
 
 ```{r eval = TRUE, echo = FALSE, message=FALSE}
 
@@ -56,5 +56,5 @@ kable(read_schedule,
   column_spec(5, width = "10em") %>%
   column_spec(6, width = "10em") %>%
   column_spec(7, width = "10em") %>%
-  row_spec(0:1, extra_css = 'vertical-align: middle !important;', background = "#ffffff")
+  row_spec(0:nrow(read_schedule), extra_css = 'vertical-align: middle !important;', background = "#212121", color = "#ffffff")
 ```

@@ -1,6 +1,10 @@
 ---
 title: "The Chi Square Test and Measures of Association"
 linktitle: "Week 12: The Chi Square Test and Measures of Association"
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
 menu:
   tasks:
     parent: Homeworks
@@ -10,68 +14,60 @@ weight: 2
 editor_options: 
   chunk_output_type: console
 ---
+
 <script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
 <link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
 <script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
 <link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
 <script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+
 <link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
 
-
-
-<style>
-span.boxed {
-  border: 0px solid #FFFFFF;
-  padding: 5px;
-  color: #FFFFFF;
-  background-color: #005b96;
-  display: inline;
-} 
-
-table {
-   margin-left: auto;
-   margin-right: auto;
-}
-
-table thead th { border-bottom: 1px solid #ddd; 
-}
-
-th, td { padding: 5px; 
-}
-
-table > tbody > tr:hover > td, table > tbody > tr:hover > th {
-  background-color: #ffffff;
-}
-</style>
+{{% aes-header %}}
 
 ### Homework
 
-
 <center>
 <table>
- <thead>
-  <tr>
-   <th style="text-align:center;background-color: #ffffff !important;vertical-align: middle !important;"> Chapter </th>
-   <th style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> Problems </th>
-   <th style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> Source </th>
-   <th style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> Pages </th>
-  </tr>
- </thead>
+<thead>
+<tr>
+<th style="text-align:center;color: #ffffff !important;background-color: #212121 !important;vertical-align: middle !important;">
+Chapter
+</th>
+<th style="text-align:left;color: #ffffff !important;background-color: #212121 !important;vertical-align: middle !important;">
+Problems
+</th>
+<th style="text-align:left;color: #ffffff !important;background-color: #212121 !important;vertical-align: middle !important;">
+Source
+</th>
+<th style="text-align:left;color: #ffffff !important;background-color: #212121 !important;vertical-align: middle !important;">
+Pages
+</th>
+</tr>
+</thead>
 <tbody>
-  <tr>
-   <td style="text-align:center;font-weight: bold;background-color: #ffffff !important;vertical-align: middle !important;"> 10 </td>
-   <td style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> 1, 2, 3, 5, 7, 13 </td>
-   <td style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> Social Statistics for a Diverse Society </td>
-   <td style="text-align:left;background-color: #ffffff !important;vertical-align: middle !important;"> 364-372 </td>
-  </tr>
+<tr>
+<td style="text-align:center;font-weight: bold;color: #ffffff !important;background-color: #212121 !important;vertical-align: middle !important;">
+10
+</td>
+<td style="text-align:left;color: #ffffff !important;background-color: #212121 !important;vertical-align: middle !important;">
+1, 2, 3, 5, 7, 13
+</td>
+<td style="text-align:left;color: #ffffff !important;background-color: #212121 !important;vertical-align: middle !important;">
+Social Statistics for a Diverse Society
+</td>
+<td style="text-align:left;color: #ffffff !important;background-color: #212121 !important;vertical-align: middle !important;">
+364-372
+</td>
+</tr>
 </tbody>
 </table>
 </center>
 
-Notes: 
+Notes:
 
-- Please submit this at the beginning of class next week.
-- Remember to follow the [homework guidelines](/tasks/#homeworks) for consideration.
+-   Please submit this at the beginning of class next week.
+-   Remember to follow the [homework guidelines](/tasks/#homeworks) for consideration.
 
 <!--
 to the Submission Portal on [ecampus](https://ecampus.wvu.edu/){target="_blank"} by 11:59 PM next Wednesday.<br>
@@ -171,7 +167,7 @@ b. For
 - Black offenders, we could make <span class="boxed">493 errors</span>
 - Other offenders, we would make <span class="boxed">42 errors</span> given `\(E_2 = 908\)`. 
 
-c.	The proportional reduction in error is then 
+c.  The proportional reduction in error is then 
 `\begin{align}
 \dfrac{2973 – 908}{2973} & \approx 0.6946
 \end{align}`

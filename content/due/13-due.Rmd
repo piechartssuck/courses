@@ -1,8 +1,9 @@
 ---
 title: "Regression and Correlation & Analysis of Variance"
 linktitle: "Week 13: Regression and Correlation & Analysis of Variance"
+toc: true
 output:
-  blogdown::html_page:
+  rmarkdown::html_document:
     toc: true
 menu:
   due:
@@ -21,6 +22,7 @@ library(knitr)
 library(kableExtra)
 ```
 
+`r blogdown::shortcode("aes-header")`
 
 ### What to do for Week 13 after class ends
 
@@ -43,13 +45,13 @@ Submit = c(unchecked,
 
 Description = c("Review the solution set from the Chapter 10 homework set",
                 "Complete problems 1, 2, 6 in Chapter 11",
-                "Complete ***optional*** problems 1, 2 in Chapter 12",
+                "Complete <b><i>optional</i></b> problems 1, 2 in Chapter 12",
                 "Take a look at a compilation of statistical commands in R",
-                "Begin or continue the first ***optional*** extra credit module *Analyzing Survey Data in R*",
-                "Begin or continue the second ***optional*** extra credit module *Fundamentals of Bayesian Data Analysis in R*",
-                "Begin or continue the third ***optional*** extra credit module *Reporting with R Markdown*",
-                "Watch videos on the Regression & Correlation and ANOVAs^[Optional but recommended.]",
-                "Watch a fantastic explanation on a concept called *Regression to the Mean*"),
+                "Finish the first <b><i>optional</i></b> extra credit module <i>Analyzing Survey Data in R</i>",
+                "Finish the second <b><i>optional</i></b> extra credit module <i>Fundamentals of Bayesian Data Analysis in R</i>",
+                "Finish the third <b><i>optional</i></b> extra credit module <i>Reporting with R Markdown</i>",
+                "Watch videos on the Regression & Correlation and ANOVAs",
+                "Watch a fantastic explanation on a concept called <i>Regression to the Mean</i>"),
 
 
 Location = c("[Link](/tasks/12-tasks/#solutions)",
@@ -62,7 +64,9 @@ Location = c("[Link](/tasks/12-tasks/#solutions)",
              "[Link](/materials/13-example/#crash-course-statistics)",
              "[Link](/extras/13-example/#veritasium)"
              )
-)
+) %>%
+  mutate(Link = paste0("<a href=", str_extract_all(Location, "(?<=\\().+?(?=\\))"), "> <i class='fa-solid fa-link' style='color:#598fff'></i> </a>")) %>%
+  select(-Location)
 ```
 
 ```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
@@ -70,19 +74,20 @@ kable(wk_post,
       escape = FALSE,
       align = 'clc') %>%
   kable_styling(full_width = FALSE)  %>%
-  column_spec(1, width = "10em")
+  column_spec(1, width = "10em") %>%
+  row_spec(0:nrow(wk_post), extra_css = 'vertical-align: middle !important;', background = "#212121", color = "#ffffff")
 ```
 
 <br />
 
-### What to do for Week 14 before coming to class^[For preparation.]
+### What to do for Week 14 before coming to class
 
 ```{r eval = TRUE, echo = FALSE}
-book <- as.character(fontawesome::fa("book", fill = "steelblue"))
+book <- as.character(fontawesome::fa("book", fill = "#739670"))
 
-chalkboard <- as.character(fontawesome::fa("chalkboard", fill = "steelblue"))
+chalkboard <- as.character(fontawesome::fa("chalkboard", fill = "#764874"))
 
-lightbulb <- as.character(fontawesome::fa("lightbulb", fill = "steelblue"))
+lightbulb <- as.character(fontawesome::fa("lightbulb", fill = "#eb7b59"))
 
 wk_pre <- tibble(
   
@@ -98,7 +103,9 @@ Location = c("[Link](/tasks/02-exam/)",
              "[Link](https://www.jamovi.org/){target='_blank'}",
              "[Link](/extras/14-example)")
 
-)
+) %>%
+  mutate(Link = paste0("<a href=", str_extract_all(Location, "(?<=\\().+?(?=\\))"), "> <i class='fa-solid fa-link' style='color:#ff598f'></i> </a>")) %>%
+  select(-Location)
 ```
 
 ```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
@@ -108,5 +115,6 @@ kable(wk_pre,
   kable_styling(full_width = FALSE) %>%
   column_spec(1, width = "10em") %>%
   column_spec(2, width = "30em") %>%
-  column_spec(3, width = "10em")
+  column_spec(3, width = "10em") %>%
+  row_spec(0:nrow(wk_pre), extra_css = 'vertical-align: middle !important;', background = "#212121", color = "#ffffff")
 ```  

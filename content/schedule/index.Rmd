@@ -10,6 +10,8 @@ library(kableExtra)
 library(fontawesome)
 ```
 
+`r blogdown::shortcode("aes-header")`
+
 ## Table of Contents
 
 ```{r icontibble, echo=FALSE, message=FALSE}
@@ -43,12 +45,12 @@ tableofcontent <- tibble(
             fatask,
             fadue),
   
-  descr <- c("Weekly readings.",
-             "R/RStudio Training modules.",
+  descr <- c("Weekly readings",
+             "R/RStudio Training modules",
              "Interactive R lessons and other specific content",
              "Additional examples to help with understanding",
-             "Weekly tasks and deliverables.",
-             "Weekly submission information."
+             "Weekly tasks and deliverables",
+             "Weekly submission information"
              ),
   
   .name_repair = "minimal"
@@ -63,8 +65,9 @@ tableofcontent %>%
       "html", 
       escape = FALSE,
       align = 'lccl') %>%
-  column_spec(1, 
-              bold = TRUE)
+  column_spec(1, width = "7em" ,bold = TRUE) %>%
+  column_spec(2:3, width = "5em" ,bold = TRUE) %>%
+  column_spec(1:3, extra_css = 'vertical-align: middle !important;', background = "#212121", color = "#ffffff")
 ```
 </center>
 

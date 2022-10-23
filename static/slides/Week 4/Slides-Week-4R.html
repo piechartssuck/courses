@@ -4,153 +4,36 @@
     <title>Distributions and Central Tendency</title>
     <meta charset="utf-8" />
     <meta name="author" content="Week 4" />
-    <script src="Slides-Week-4R_files/header-attrs-2.11/header-attrs.js"></script>
+    <script src="Slides-Week-4R_files/header-attrs-2.17/header-attrs.js"></script>
     <link href="Slides-Week-4R_files/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
     <script src="Slides-Week-4R_files/tile-view-0.2.6/tile-view.js"></script>
     <link href="Slides-Week-4R_files/animate.css-3.7.2/animate.xaringan.css" rel="stylesheet" />
     <link href="Slides-Week-4R_files/tachyons-4.12.0/tachyons.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="custom.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
+.title[
 # Distributions and Central Tendency
+]
+.subtitle[
 ## EDP 613
+]
+.author[
 ### Week 4
+]
 
 ---
 
 
 &lt;script&gt;
-function resizeIframe(obj) {
+  function resizeIframe(obj) {
     obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
   }
 &lt;/script&gt;
-
-&lt;style&gt;
-section {
-    display: flex;
-    display: -webkit-flex;
-}
-
-section p {
-    margin: auto;
-}
-
-.hljs-github .hljs {
-    background: transparent;
-    color: #b2dfdb;
-}
-
-.hljs-github .hljs-keyword {
-    color: #64b5f6;
-}
-
-.hljs-github .hljs-literal {
-    color: #64b5f6;
-}
-
-.hljs-github .hljs-number {
-    color: #64b5f6;
-}
-
-.hljs-github .hljs-string {
-    color: #b7b3ef;
-}
-
-section {
-    height: 600px;
-    width: 60%;
-    margin: auto;
-    border-radius: 20px;
-    background-color: #212121;
-}
-
-section p {
-    text-align: center;
-    font-size: 30px;
-    background-color: #212121;
-    border-radius: 20px;
-    font-family: Roboto Condensed;
-    font-style: bold;
-    padding: 15px;
-    color: #bff4ee;
-}
-
-#center {
-text-align: center;
-}
-
-.center p {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-.center2 {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-.hvr-sweep-to-left {
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    position: relative;
-    -webkit-transition-property: color;
-    transition-property: color;
-    -webkit-transition-duration: 0.25s;
-    transition-duration: 0.25s;
-  }
-
-.hvr-sweep-to-left:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #761756;
-    -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transform-origin: 100% 50%;
-  transform-origin: 100% 50%;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-}
-
-.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
-  color: white;
-}
-
-.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
-}
-
-.remark-code{line-height: 1.5; font-size: 80%}
-@media print {
-  .has-continuation {
-    display: block;
-  }
-}
-
-&lt;/style&gt;
 
 
 
@@ -159,7 +42,7 @@ text-align: center;
 width: 110px;
 height: 128px;
 z-index: 0;
-background-image: url(/Users/skynet/Documents/WVU/Teaching/GitHub.nosync/Workspace/edp613/static/img/course_hex_alpha.png);
+background-image: url(/Users/skynet/Documents/WVU/Teaching/GitHub.nosync/edp613/static/img/course_hex_alpha.png);
 background-size: contain;
 background-repeat: no-repeat;
 position: absolute;
@@ -283,20 +166,21 @@ count: false
 
 ```
 # A tibble: 87 × 14
-   name    height  mass hair_color  skin_color eye_color birth_year sex   gender
-   &lt;chr&gt;    &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
- 1 Luke S…    172    77 blond       fair       blue            19   male  mascu…
- 2 C-3PO      167    75 &lt;NA&gt;        gold       yellow         112   none  mascu…
- 3 R2-D2       96    32 &lt;NA&gt;        white, bl… red             33   none  mascu…
- 4 Darth …    202   136 none        white      yellow          41.9 male  mascu…
- 5 Leia O…    150    49 brown       light      brown           19   fema… femin…
- 6 Owen L…    178   120 brown, grey light      blue            52   male  mascu…
- 7 Beru W…    165    75 brown       light      blue            47   fema… femin…
- 8 R5-D4       97    32 &lt;NA&gt;        white, red red             NA   none  mascu…
- 9 Biggs …    183    84 black       light      brown           24   male  mascu…
-10 Obi-Wa…    182    77 auburn, wh… fair       blue-gray       57   male  mascu…
-# … with 77 more rows, and 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
-#   films &lt;list&gt;, vehicles &lt;list&gt;, starships &lt;list&gt;
+   name        height  mass hair_…¹ skin_…² eye_c…³ birth…⁴ sex   gender homew…⁵
+   &lt;chr&gt;        &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;     &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;  
+ 1 Luke Skywa…    172    77 blond   fair    blue       19   male  mascu… Tatooi…
+ 2 C-3PO          167    75 &lt;NA&gt;    gold    yellow    112   none  mascu… Tatooi…
+ 3 R2-D2           96    32 &lt;NA&gt;    white,… red        33   none  mascu… Naboo  
+ 4 Darth Vader    202   136 none    white   yellow     41.9 male  mascu… Tatooi…
+ 5 Leia Organa    150    49 brown   light   brown      19   fema… femin… Aldera…
+ 6 Owen Lars      178   120 brown,… light   blue       52   male  mascu… Tatooi…
+ 7 Beru White…    165    75 brown   light   blue       47   fema… femin… Tatooi…
+ 8 R5-D4           97    32 &lt;NA&gt;    white,… red        NA   none  mascu… Tatooi…
+ 9 Biggs Dark…    183    84 black   light   brown      24   male  mascu… Tatooi…
+10 Obi-Wan Ke…    182    77 auburn… fair    blue-g…    57   male  mascu… Stewjon
+# … with 77 more rows, 4 more variables: species &lt;chr&gt;, films &lt;list&gt;,
+#   vehicles &lt;list&gt;, starships &lt;list&gt;, and abbreviated variable names
+#   ¹​hair_color, ²​skin_color, ³​eye_color, ⁴​birth_year, ⁵​homeworld
 ```
 ]
 
@@ -447,20 +331,21 @@ count: false
 
 ```
 # A tibble: 87 × 14
-   name    height  mass hair_color  skin_color eye_color birth_year sex   gender
-   &lt;chr&gt;    &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
- 1 Luke S…    172    77 blond       fair       blue            19   male  mascu…
- 2 C-3PO      167    75 &lt;NA&gt;        gold       yellow         112   none  mascu…
- 3 R2-D2       96    32 &lt;NA&gt;        white, bl… red             33   none  mascu…
- 4 Darth …    202   136 none        white      yellow          41.9 male  mascu…
- 5 Leia O…    150    49 brown       light      brown           19   fema… femin…
- 6 Owen L…    178   120 brown, grey light      blue            52   male  mascu…
- 7 Beru W…    165    75 brown       light      blue            47   fema… femin…
- 8 R5-D4       97    32 &lt;NA&gt;        white, red red             NA   none  mascu…
- 9 Biggs …    183    84 black       light      brown           24   male  mascu…
-10 Obi-Wa…    182    77 auburn, wh… fair       blue-gray       57   male  mascu…
-# … with 77 more rows, and 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
-#   films &lt;list&gt;, vehicles &lt;list&gt;, starships &lt;list&gt;
+   name        height  mass hair_…¹ skin_…² eye_c…³ birth…⁴ sex   gender homew…⁵
+   &lt;chr&gt;        &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;     &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;  
+ 1 Luke Skywa…    172    77 blond   fair    blue       19   male  mascu… Tatooi…
+ 2 C-3PO          167    75 &lt;NA&gt;    gold    yellow    112   none  mascu… Tatooi…
+ 3 R2-D2           96    32 &lt;NA&gt;    white,… red        33   none  mascu… Naboo  
+ 4 Darth Vader    202   136 none    white   yellow     41.9 male  mascu… Tatooi…
+ 5 Leia Organa    150    49 brown   light   brown      19   fema… femin… Aldera…
+ 6 Owen Lars      178   120 brown,… light   blue       52   male  mascu… Tatooi…
+ 7 Beru White…    165    75 brown   light   blue       47   fema… femin… Tatooi…
+ 8 R5-D4           97    32 &lt;NA&gt;    white,… red        NA   none  mascu… Tatooi…
+ 9 Biggs Dark…    183    84 black   light   brown      24   male  mascu… Tatooi…
+10 Obi-Wan Ke…    182    77 auburn… fair    blue-g…    57   male  mascu… Stewjon
+# … with 77 more rows, 4 more variables: species &lt;chr&gt;, films &lt;list&gt;,
+#   vehicles &lt;list&gt;, starships &lt;list&gt;, and abbreviated variable names
+#   ¹​hair_color, ²​skin_color, ³​eye_color, ⁴​birth_year, ⁵​homeworld
 ```
 ]
 
@@ -578,20 +463,21 @@ count: false
 
 ```
 # A tibble: 87 × 14
-   name    height  mass hair_color  skin_color eye_color birth_year sex   gender
-   &lt;chr&gt;    &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
- 1 Luke S…    172    77 blond       fair       blue            19   male  mascu…
- 2 C-3PO      167    75 &lt;NA&gt;        gold       yellow         112   none  mascu…
- 3 R2-D2       96    32 &lt;NA&gt;        white, bl… red             33   none  mascu…
- 4 Darth …    202   136 none        white      yellow          41.9 male  mascu…
- 5 Leia O…    150    49 brown       light      brown           19   fema… femin…
- 6 Owen L…    178   120 brown, grey light      blue            52   male  mascu…
- 7 Beru W…    165    75 brown       light      blue            47   fema… femin…
- 8 R5-D4       97    32 &lt;NA&gt;        white, red red             NA   none  mascu…
- 9 Biggs …    183    84 black       light      brown           24   male  mascu…
-10 Obi-Wa…    182    77 auburn, wh… fair       blue-gray       57   male  mascu…
-# … with 77 more rows, and 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
-#   films &lt;list&gt;, vehicles &lt;list&gt;, starships &lt;list&gt;
+   name        height  mass hair_…¹ skin_…² eye_c…³ birth…⁴ sex   gender homew…⁵
+   &lt;chr&gt;        &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;     &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;  
+ 1 Luke Skywa…    172    77 blond   fair    blue       19   male  mascu… Tatooi…
+ 2 C-3PO          167    75 &lt;NA&gt;    gold    yellow    112   none  mascu… Tatooi…
+ 3 R2-D2           96    32 &lt;NA&gt;    white,… red        33   none  mascu… Naboo  
+ 4 Darth Vader    202   136 none    white   yellow     41.9 male  mascu… Tatooi…
+ 5 Leia Organa    150    49 brown   light   brown      19   fema… femin… Aldera…
+ 6 Owen Lars      178   120 brown,… light   blue       52   male  mascu… Tatooi…
+ 7 Beru White…    165    75 brown   light   blue       47   fema… femin… Tatooi…
+ 8 R5-D4           97    32 &lt;NA&gt;    white,… red        NA   none  mascu… Tatooi…
+ 9 Biggs Dark…    183    84 black   light   brown      24   male  mascu… Tatooi…
+10 Obi-Wan Ke…    182    77 auburn… fair    blue-g…    57   male  mascu… Stewjon
+# … with 77 more rows, 4 more variables: species &lt;chr&gt;, films &lt;list&gt;,
+#   vehicles &lt;list&gt;, starships &lt;list&gt;, and abbreviated variable names
+#   ¹​hair_color, ²​skin_color, ³​eye_color, ⁴​birth_year, ⁵​homeworld
 ```
 ]
 
@@ -715,20 +601,21 @@ count: false
 
 ```
 # A tibble: 87 × 14
-   name    height  mass hair_color  skin_color eye_color birth_year sex   gender
-   &lt;chr&gt;    &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
- 1 Luke S…    172    77 blond       fair       blue            19   male  mascu…
- 2 C-3PO      167    75 &lt;NA&gt;        gold       yellow         112   none  mascu…
- 3 R2-D2       96    32 &lt;NA&gt;        white, bl… red             33   none  mascu…
- 4 Darth …    202   136 none        white      yellow          41.9 male  mascu…
- 5 Leia O…    150    49 brown       light      brown           19   fema… femin…
- 6 Owen L…    178   120 brown, grey light      blue            52   male  mascu…
- 7 Beru W…    165    75 brown       light      blue            47   fema… femin…
- 8 R5-D4       97    32 &lt;NA&gt;        white, red red             NA   none  mascu…
- 9 Biggs …    183    84 black       light      brown           24   male  mascu…
-10 Obi-Wa…    182    77 auburn, wh… fair       blue-gray       57   male  mascu…
-# … with 77 more rows, and 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
-#   films &lt;list&gt;, vehicles &lt;list&gt;, starships &lt;list&gt;
+   name        height  mass hair_…¹ skin_…² eye_c…³ birth…⁴ sex   gender homew…⁵
+   &lt;chr&gt;        &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;     &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;  
+ 1 Luke Skywa…    172    77 blond   fair    blue       19   male  mascu… Tatooi…
+ 2 C-3PO          167    75 &lt;NA&gt;    gold    yellow    112   none  mascu… Tatooi…
+ 3 R2-D2           96    32 &lt;NA&gt;    white,… red        33   none  mascu… Naboo  
+ 4 Darth Vader    202   136 none    white   yellow     41.9 male  mascu… Tatooi…
+ 5 Leia Organa    150    49 brown   light   brown      19   fema… femin… Aldera…
+ 6 Owen Lars      178   120 brown,… light   blue       52   male  mascu… Tatooi…
+ 7 Beru White…    165    75 brown   light   blue       47   fema… femin… Tatooi…
+ 8 R5-D4           97    32 &lt;NA&gt;    white,… red        NA   none  mascu… Tatooi…
+ 9 Biggs Dark…    183    84 black   light   brown      24   male  mascu… Tatooi…
+10 Obi-Wan Ke…    182    77 auburn… fair    blue-g…    57   male  mascu… Stewjon
+# … with 77 more rows, 4 more variables: species &lt;chr&gt;, films &lt;list&gt;,
+#   vehicles &lt;list&gt;, starships &lt;list&gt;, and abbreviated variable names
+#   ¹​hair_color, ²​skin_color, ³​eye_color, ⁴​birth_year, ⁵​homeworld
 ```
 ]
 
@@ -1501,6 +1388,19 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
 (function() {
   "use strict"
   // Replace <script> tags in slides area to make them executable

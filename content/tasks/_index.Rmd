@@ -1,5 +1,9 @@
 ---
 title: "About the Tasks"
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
 menu:
   tasks:
     parent: Overview
@@ -7,6 +11,8 @@ menu:
 type: docs
 weight: 1
 ---
+
+`r blogdown::shortcode("r-walkthrough-header")`
 
 You will get the most of out this class if you:
 
@@ -35,8 +41,9 @@ This is a comprehensive exam covering content you have already been tested or qu
 
 <hr />
 
-### Need Help?
-I always prefer a face to face meeting if possible but since that's not possible, you can schedule a Zoom via the [Calendar](https://calendly.com/nopiecharts) or contact me within [Slack](https://2021edp613.slack.com) by tagging my name `@Dr. Abhik Roy` in a text box along with your message.
+## Need Help?
+
+`r blogdown::shortcode("meetings")`
 
 [^1]: Should we move to an online format, homeworks must be submitted as a single document on the Submission Portal within [ecampus](https://ecampus.wvu.edu/) as a single cohesive document (in either in docx or pdf format).
 

@@ -22,11 +22,7 @@ library(knitr)
 library(kableExtra)
 ```
 
-<style>
-table > tbody > tr:hover > td, table > tbody > tr:hover > th {
-  background-color: #ffffff;
-}
-</style>
+`r blogdown::shortcode("aes-header")`
 
 ### Veritasium + Crash Course Statistics
 This week we're doing something a little different. We first have a video from a science communicator named Derek Muller on his excellent YouTube channel [Veritasium](https://www.youtube.com/channel/UCHnyfMqiRRG1u-2MsSQLbXA). At the end, there will be two videos from Crash Course Statistics that go deeper into the statistics part of the Bayesian approach.
@@ -124,7 +120,7 @@ kable(inferences,
   column_spec(4, width = "5em") %>%
   column_spec(5, width = "20em") %>%
   column_spec(6, width = "10em") %>%
-  row_spec(0:2, extra_css = 'vertical-align: middle !important;', background = "#ffffff")
+  row_spec(0:nrow(inferences), extra_css = 'vertical-align: middle !important;', background = "#212121", color = "#ffffff")
 
 ```
 
