@@ -10,11 +10,36 @@ weight: 1
 
 `r blogdown::shortcode("r-walkthrough-header")`
 
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE}
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+library(fontawesome)
+library(here)
+```
+
 This section consists primarily of preview content, in-class notes, R walkthroughs and related materials. Items are released on a weekly basis.
+
+You can download all of the data sets we'll be using this term below
+
+<center>
+```{r echo=FALSE,eval=TRUE,message=FALSE}
+loc <- here::here("static", "data", "R-data-sets.zip")
+
+downloadthis::download_file(
+  path = loc,
+  output_name = "R data sets",
+  button_label = "&nbsp;&nbsp;&nbsp;<span style='color:#ffffff'>Download</span>",
+  button_type = "primary",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+</center>
 
 <hr />
 
 ### Need Help?
 
 `r blogdown::shortcode("meetings")`
-
