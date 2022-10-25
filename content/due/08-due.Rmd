@@ -64,7 +64,7 @@ Site = c("",
          "https://ebookcentral.proquest.com/lib/wvu/reader.action?docID=1762797&ppg=418",
          "",
          "https://www.datacamp.com",
-         "",
+         "https://ecampus.wvu.edu",
          "",
          "https://ecampus.wvu.edu"
          )

@@ -1,0 +1,63 @@
+---
+title: "Dimensionality and Principal Components"
+linktitle: "Week 10: Dimensionality and Principal Components"
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  due:
+    parent: 'To Do List'
+    weight: 10
+type: docs
+weight: 1
+---
+
+`r blogdown::shortcode("r-walkthrough-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r eval = TRUE, echo = FALSE}
+
+wk_post <- 
+  
+  tibble(
+
+Description = c("Read <i>Principal Component Analysis</i> in Lever, J., Krzywinski, M., & Altman, N. (2017)",
+                "Read <i>What is Principal Component Analysis?</i> in Ringnér, K. (2008)",
+                "Complete the module <span style='color:#ffc787;font-weight:bold'><i>Survey and Measurement Development in R </i></span>",
+                "Complete and submit the associated <i class='fa-brands fa-r-project'></i> task for the module",
+                "Go through the slideshow <span style='color:#6ac4cd;font-weight:bold'>Principal Component Analysis</span>"
+                ),
+
+
+Details = c("<a href='/readings/10-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/readings/10-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/modules/10-module/#data-camp'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/modules/10-module/#r-task'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",   
+            "<a href='/tasks/10-task/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
+            ),
+
+Icon = c("pdf",
+         "pdf",
+         "dc",
+         "R",
+         "slideshow"),
+
+Site = c("",
+         "",
+         "https://www.datacamp.com",
+         "https://ecampus.wvu.edu",
+         ""
+         )
+)
+```
+
+<center>
+`r knitr::spin_child(here::here("content", "post_frame.R"))`
+</center>
