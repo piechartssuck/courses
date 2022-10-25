@@ -98,7 +98,7 @@ Complete and submit the associated <i class="fa-brands fa-r-project"></i> task f
 <a href="/modules/08-module/#r-task"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<img src="/logos/Rscript-ico.png" alt="R icon" width="27">
+<a href="https://ecampus.wvu.edu" target="_blank"><img src="/logos/Rscript-ico.png" alt="R icon" width="27"> </a>
 </td>
 </tr>
 <tr>
