@@ -116,6 +116,6 @@ PDF of the presentation
 
 ### Update the Draft
 
-Please begin and finish work on the third deliverable after receiving feedback on the your third submission. More details can be found [here](/deliverables/04-l4/)
+Please begin and finish work on the fourth deliverable after receiving feedback on the your third submission. More details can be found [here](/deliverables/04-l4/)
 
 [^1]: You will have to unzip this file. If you are unfamiliar with this process, please check the [Unzipping files](/resources/unzipping/) section under Resources for assistance
