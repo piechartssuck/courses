@@ -1,0 +1,1169 @@
+---
+title: "Hypothesis & Estimation"
+subtitle: 'EDP 619 Week 11' 
+author: "Dr. Abhik Roy"
+output: 
+ xaringan::moon_reader:
+   css: ['xaringan-themer.css', 'custom.css']
+   nature:
+     ratio: 16:9
+     highlightStyle: github
+     highlightLines: true
+     countIncrementalSlides: false
+     navigation:
+         scroll: false
+---
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+  MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+    cancel: ["Extension","cancel"],
+    bcancel: ["Extension","cancel"],
+    xcancel: ["Extension","cancel"],
+    cancelto: ["Extension","cancel"]
+  });
+});
+</script>
+
+<style>
+section {
+    display: flex;
+    display: -webkit-flex;
+}
+
+section {
+    height: 600px;
+    width: 60%;
+    margin: auto;
+    border-radius: 21px;
+    background-color: #212121;
+}
+
+.remark-slide-container {
+background: #212121;
+}
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
+}
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
+}
+
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
+}
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
+}
+
+section p {
+    text-align: center;
+    font-size: 30px;
+    background-color: #212121;
+    border-radius: 21px;
+    font-family: Roboto Condensed;
+    font-style: bold;
+    padding: 12px;
+    color: #bff4ee;
+    margin: auto;
+}
+
+#center {
+text-align: center;
+}
+
+#right {
+  text-align: right;
+} 
+
+.center p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.tab {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.tabdbl {
+    display: inline-block;
+    margin-left: 80px;
+}
+
+.tabtpl {
+    display: inline-block;
+    margin-left: 120px;
+}
+
+
+.obr
+{
+    display:block;
+    margin-top:-15px;
+}
+
+.pull-left-left {
+  float: left;
+  width: 27%;
+}
+
+.pull-right-right {
+  float: right;
+  width: 32%;
+}
+
+img.expand:hover {
+  margin: 0 auto;
+  position: relative;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  transform: scale(1.5)             
+  translateX(-35%);
+  z-index: 99;
+  transition:all 0.5s ease-in-out;
+  -webkit-transition:all 0.2s ease-in-out;
+}
+
+.vertline {
+  border-left: 5px solid #212121;
+  height: 100px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+*, *:before, *:after {
+	 box-sizing: border-box;
+	 outline: none;
+}
+
+.hover {
+	 position: relative;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 width: 400px;
+	 height: 65px;
+	 background-color: #e3c0ff;
+	 border-radius: 99px;
+	 box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	 transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+	 overflow: hidden;
+}
+
+ .hover:before, .hover:after {
+	 position: absolute;
+	 top: 0;
+	 display: flex;
+	 align-items: center;
+   justify-content: center;
+	 width: 50%;
+	 height: 100%;
+	 transition: 0.25s linear;
+	 z-index: 1;
+}
+
+ .hover:before {
+	 content: '';
+	 left: 0;
+	 background-color: #ca86ec;
+   color: #212121;
+}
+
+ .hover:after {
+	 content: '';
+	 right: 0;
+	 background-color: #d896ff;
+}
+
+ .hover:hover {
+	 background-color: #cc8bff;
+	 box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+ .hover:hover span {
+	 opacity: 0;
+	 z-index: -3;
+}
+
+ .hover:hover:before {
+	 opacity: 0.5;
+	 transform: translateY(-100%);
+}
+
+ .hover:hover:after {
+	 opacity: 0.5;
+	 transform: translateY(100%);
+}
+
+ .hover span {
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 text-align: center;
+	 width: 100%;
+	 height: 100%;
+	 color: #212121;
+	 font-size: 24px;
+	 font-weight: 700;
+	 opacity: 1;
+	 transition: opacity 0.25s;
+	 z-index: 2;
+   white-space:pre;
+}
+
+ .hover .doc-link {
+	 position: relative;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 text-align: center;
+	 width: 25%;
+	 height: 100%;
+	 color: whitesmoke;
+	 font-size: 24px;
+	 text-decoration: none;
+	 transition: 0.25s;
+}
+ .hover .doc-link i {
+	 text-shadow: 1px 1px rgba(70, 98, 127, 0.7);
+	 transform: scale(1);
+}
+ .hover .doc-link:hover {
+	 background-color: rgba(245, 245, 245, 0.1);
+}
+ .hover .doc-link:hover i {
+	 animation: bounce 0.4s linear;
+}
+ @keyframes bounce {
+	 40% {
+		 transform: scale(1.4);
+	}
+	 60% {
+		 transform: scale(0.8);
+	}
+	 80% {
+		 transform: scale(1.2);
+	}
+	 100% {
+		 transform: scale(1);
+	}
+}
+
+.boxl {
+    width: 50%;
+    margin: 5px;
+    text-align: center;
+}
+
+.boxr {
+    margin: 5px;
+    text-align: center;
+}
+
+.picr {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+</style>
+
+```{r setup, include=FALSE, purl=FALSE}
+library(tidyverse)
+library(pwr)
+library(knitr)
+library(kableExtra)
+library(fontawesome)
+library(here)
+library(showtext)
+font_add_google("Roboto Condensed", "roboto")
+showtext_auto()
+```
+
+```{css echo=FALSE}
+.highlight-last-item > ul > li,
+.highlight-last-item > ol > li {
+  opacity: 0.5;
+}
+.highlight-last-item > ul > li:last-of-type,
+.highlight-last-item > ol > li:last-of-type {
+  opacity: 1;
+}
+```
+
+```{r echo = FALSE, purl=FALSE}
+xaringanthemer::style_duo(
+  primary_color = "#212121",
+  secondary_color = "#bff4ee",
+  link_color = "#b1ead6",
+  text_bold_color = "#00b0cc",
+  table_row_border_color = "#212121",
+  table_row_even_background_color = "#212121",
+  footnote_font_size = "0.6em",
+  header_font_google = xaringanthemer::google_font("Roboto Condensed", "700"),
+  text_font_google   = xaringanthemer::google_font("Roboto Condensed", "400")
+)
+
+xaringanExtra::use_xaringan_extra(c("tile_view", 
+                                    "animate_css", 
+                                    "tachyons"))
+
+xaringanExtra::use_panelset()
+
+xaringanExtra::use_logo(
+  image_url = here::here("static", "img", "course_hex.png"),
+  link_url = "https://edp619.asocialdatascientist.com",
+  position = xaringanExtra::css_position(top = "1em", right = "1em")
+)
+
+opts_chunk$set(dev.args=list(bg="transparent"))
+```
+
+# <span style='color:#bff4ee;'>Welcome!</span>
+
+Before moving on, please make note of the following
+
+--
+
++ This serves as a toolkit of sorts and is meant for those who have taken a first semester course in descriptive & inferential statistics 
+
+--
+
++ We will address some of the basic testing approaches and estimation statistics that you likely covered before
+
+--
+
++ A logical step after reviewing this content is to explore the idea and need for conducting a power analysis for any statistically driven study
+
+--
+
+.footnote[As of this writing, some equations may not show up properly in Firefox. Other browsers such as Chrome and Safari do appear to render them correctly.]
+
+---
+
+## Essental Terms
+
+.center2[
+**Statistic** - Mathematical expression that describes some aspects of a set of scores for a sample
+<br>
+<br>
+**Parameter** - Describes some aspect of a set of scores for a population
+]
+
+---
+
+# First a Brief Intro to Hypothesis Testing 
+
+--
+
+<br>
+<br>
+<br>
+<br>
+<br>
+.pull-left[
+<p id="center" style="color:#ffb3ba; font-weight: bold; border:1px; border-style:solid; border-color:#ffb3ba; border-radius: 25px; padding: 0.3em;">
+<i>Formally</i><br><br>
+Testing an assumption about a population parameter<br>
+&nbsp;
+</p>
+]
+
+
+.pull-right[
+<p id="center" style="color:#bae1ff; font-weight: bold; border:1px; border-style:solid; border-color:#bae1ff; border-radius: 25px; padding: 0.3em;">
+<i>Conversationally</i><br><br>
+An assumption about a particular situation of the world that is testable
+</p>
+]
+
+---
+
+# Parts of a Hypothesis
+
+--
+
+.pull-left[
+<p id="center" style="color:#f9c7ca; font-weight: bold; border:1px; border-style:solid; border-color:#f9c7ca; border-radius: 25px; padding: 0.3em;">
+<i>The Null Hypothesis</i><br>
+</p>
+<ul>
+  <span style="color:#f9c7ca;"><li>what is expected to happen</span></li><br>
+  <span style="color:#f9c7ca;"><li>must be a piece of information that is known</span></li>
+</ul> 
+]
+
+--
+
+.pull-right[
+<p id="center" style="color:#f9c7ca; font-weight: bold; border:1px; border-style:solid; border-color:#f9c7ca; border-radius: 25px; padding: 0.3em;">
+<i>Notation</i><br>
+</p>
+<hr style="height:5px; visibility:hidden;" />
+$$H_0$$
+]
+
+--
+
+<br>
+<br>
+.pull-left[
+<p id="center" style="color:#f7d5b5; font-weight: bold; border:1px; border-style:solid; border-color:#f7d5b5; border-radius: 25px; padding: 0.3em;">
+<i>Alternative Hypothesis</i><br>
+</p>
+<ul>
+  <span style="color:#f7d5b5;"><li>what else could happen</span></li><br>
+  <span style="color:#f7d5b5;"><li>may or may not be known</span></li>
+</ul> 
+]
+
+--
+
+.pull-right[
+<p id="center" style="color:#f7d5b5; font-weight: bold; border:1px; border-style:solid; border-color:#f7d5b5; border-radius: 25px; padding: 0.3em;">
+<i>Notation</i><br>
+</p>
+<hr style="height:5px; visibility:hidden;" />
+$$H_1 \,\,\textrm{or}\,\, H_A$$
+]
+
+---
+
+# Tests of Statistical Significance
+
+--
+
+<br>
+<br>
+.pull-left[
+<p id="center" style="color:#ffb3ba; font-weight: bold; border:1px; border-style:solid; border-color:#ffb3ba; border-radius: 25px; padding: 0.3em;">
+<i>Formally</i><br><br>
+Determination if either <span style="color:#ffffff;">`H_0`</span> or <span style="color:#ffffff;">`H_1`</span> can be rejected<br>
+&nbsp;
+</p>
+]
+
+--
+
+.pull-right[
+<p id="center" style="color:#bae1ff; font-weight: bold; border:1px; border-style:solid; border-color:#bae1ff; border-radius: 25px; padding: 0.3em;">
+<i>Conversationally</i><br><br>
+A test to figure out whether you can reasonably say if your initial assumption won't happen
+</p>
+]
+
+--
+
+<center>
+<br>
+<p id="center" style="color:#ccfaca; font-weight: bold; border:1px; border-style:solid; border-color:#ccfaca; border-radius: 25px; padding: 0.3em; width: 525px;">
+<i>Interpretation</i><br><br>
+If results from a study goes the way that was expected, then nothing new was discovered<sup>1</sup>
+</p>
+<br>
+</center>
+
+.footnote[<sup>1</sup> Notice that the term *unimportant* is not included within the <span style="color:#ccfaca;"><i>Interpretation</i></span>. Non results are important!]
+
+---
+
+## Essential Term
+
+.center2[
+A **(statistical) estimation ** is a sample statistic is used to estimate the value of an unknown population parameter
+]
+
+---
+
+# Positive and Negative Outcomes
+
+--
+
+<center>
+<br>
+<p id="center" style="color:#f0fffa; font-weight: bold; border:1px; border-style:solid; border-color:#f0fffa; border-radius: 25px; padding: 0.3em; width: 525px;">
+<i>Assumption</i><br><br>
+We assume nothing out of the ordinary is going to happen - aka <span style="color:#ffffff;">`H_0`</span> is expected
+</p>
+<br>
+</center>
+
+--
+
+<br>
+.pull-left[
+<p id="center" style="color:#bcd7f8; font-weight: bold; border:1px; border-style:solid; border-color:#bcd7f8; border-radius: 25px; padding: 0.3em;">
+If <span style="color:#ffffff;">`H_0`</span> happens<br><br>
+then we have a <b><i>negative</b></i> outcome because what you expected to happen happened
+</p>
+]
+
+--
+
+.pull-right[
+<p id="center" style="color:#f8bcd7; font-weight: bold; border:1px; border-style:solid; border-color:#f8bcd7; border-radius: 25px; padding: 0.3em;">
+If <span style="color:#ffffff;">`H_1`</span> happens<br><br>
+then we have a <b><i>positive</b></i> outcome because something that was expected to happen didn't happen
+</p>
+]
+
+---
+
+## Example
+
+--
+
+<center>
+<br>
+<p id="center" style="color:#f0fffa; font-weight: bold; border:1px; border-style:solid; border-color:#f0fffa; border-radius: 25px; padding: 0.3em; width: 525px;">
+<i>Experiment</i><br><br>
+Over the span of one year, a group of participants with ADHD in a drug study receives a daily experimental pill that is intended to help them focus for a longer timeframe than their current medication
+</p>
+<br>
+</center>
+
+--
+
+.pull-left[
+<p id="center" style="color:#bcd7f8; font-weight: bold; border:1px; border-style:solid; border-color:#bcd7f8; border-radius: 25px; padding: 0.3em;">
+If <span style="color:#ffffff;">`H_0`</span> happens<br><br>
+The group of people <b><i>did not</b></i> report being focused for a longer timeframe than their current medication resulting in a <b><i>negative</b></i> outcome because that was an <b><i>expected</b></i> outcome
+</p>
+]
+
+--
+
+.pull-right[
+<p id="center" style="color:#f8bcd7; font-weight: bold; border:1px; border-style:solid; border-color:#f8bcd7; border-radius: 25px; padding: 0.3em;">
+If <span style="color:#ffffff;">`H_1`</span> happens<br><br>
+The group of people <i>did</i> report being focused for a longer timeframe than their current medication resulting in a <b><i>positive</b></i> outcome because that was an <i>unexpected</i> outcome
+</p>
+]
+
+---
+
+# Think Big
+
+.center2[No matter what you have heard or may be told in the future, both <i style='color:#f4bfc5;'><b>Type I Errors</b> and <i style='color:#f4bfc5;'><b>Type II Errors</b></i> are not represented by a single figure, rather they each contain a different range of probabilities]
+
+---
+
+# Formal Table of Statistical Error Types
+
+--
+
+.center2[
+```{r eval = TRUE, echo = FALSE}
+errors <- tibble(
+Decision = c("Reject Null",
+             "Fail to Reject Null"),
+
+`Null is True` = c(
+  "<i style='color:#f4bfc5;'><i>False Positive<br><b>Type I Error</b></i>",
+  "<i style='color:#bfe0f4;'><i>Correct Outcome<br><b>True Negative</b></i>"
+  ),
+
+`Null is False` = c(
+  "<i style='color:#bfe0f4;'>Correct Outcome<br><b>True Positive</b></i>",
+  "<i style='color:#f4bfc5;'>False Negative<br><b>Type II Error</b></i>")
+)
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(errors, 
+      escape = FALSE,
+      align = 'lll') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "10em") %>%
+  row_spec(0:2, background = "#212121")
+```
+]
+
+---
+
+# Nutshell Table of Statistical Error Types
+
+--
+
+<br>
+<br>
+<br>
+```{r eval = TRUE, echo = FALSE}
+errors <- tibble(
+Decision = c(
+  "",
+  "",
+  "You changed your mind",
+  "",
+  "",
+  "",
+  "",
+  "You didn't change your mind",
+  "",
+  "",
+  "",
+  ""),
+
+`Your first thought was right` = c(
+  "",
+  "",
+  "<span style='color:#f4bfc5;'>but it was likely the wrong decision</span><br><br>
+   <i style='color:#f4bfc5;'><i>False Positive<br><b>Type I Error</b></i>", 
+  "",
+  "",
+  "",
+  "",
+  "<span style='color:#bfe0f4;'>and it was likely the right decision</span><br><br>
+   <i style='color:#bfe0f4;'><i>Correct Outcome<br><b>True Negative</b></i>", 
+  "",
+  "",
+  "",
+  ""),
+
+`Your first thought was wrong` = c(
+  "",
+  "",
+  "<span style='color:#bfe0f4;'>and it was likely the right decision</span><br><br>
+   <i style='color:#bfe0f4;'>Correct Outcome<br><b>True Positive</b></i>",
+  "",
+  "",
+  "",
+  "",
+  "<span style='color:#f4bfc5;'>but it was likely the wrong decision</span><br><br>
+   <i style='color:#f4bfc5;'>False Negative<br><b>Type II Error</b></i>",
+  "",
+  "",
+  "",
+  ""),
+)
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(errors, 
+      escape = FALSE,
+      align = 'lll',
+      col.names = c("", "", "")) %>%
+  kable_styling(full_width = FALSE,
+                bootstrap_options = c('condensed')) %>%
+  column_spec(1, width = "12em") %>%
+  column_spec(2:3, width = "15em") %>%
+  row_spec(0:2, background = "#212121", extra_css = 'vertical-align: middle !important;')
+```
+
+---
+
+## Example
+
+<center>
+<img src="img/type1-type2-error.svg">
+</center>
+
+---
+
+## Term
+
+--
+
+<br>
+<br>
+<br>
+.pull-left[
+<p id="center" style="color:#f7d5b5; font-weight: bold; border:1px; border-style:solid; border-color:#f7d5b5; border-radius: 25px; padding: 0.3em;">
+<i>Alpha</i><br>
+</p>
+<ul>
+  <span style="color:#f7d5b5;"><li>rejecting <span style="color:#ffffff;">`H_0`</span> when it is true</span></li><br>
+  <span style="color:#f7d5b5;"><li>the probability of making a <b style='color:#f4bfc5;'><i>Type I Error</i></b></span></li><br>
+  <span style="color:#f7d5b5;"><li>the chance of making a wrong decision when what was initially expected to happen actually happened</span></li>
+</ul> 
+]
+
+--
+
+.pull-right[
+<p id="center" style="color:#f7d5b5; font-weight: bold; border:1px; border-style:solid; border-color:#f7d5b5; border-radius: 35px; padding: 0.3em;">
+<i>Notation</i><br>
+</p>
+<hr style="height:35px; visibility:hidden;" />
+$$\alpha$$
+]
+
+---
+
+## Example
+
+<br>
+<center>
+If an airplane
+</center>
+<br>
+
+--
+
+<br>
+.pull-left[
+<center>
+looks like this
+<br>
+<br>
+<img src="img/metal-plane.png" width="220px"/>
+<br>
+<br>
+then a low risk of failure - <i>small</i> `\alpha` <i>level</i> - is probably acceptable
+</center>
+]
+
+--
+
+.pull-right[
+<center>
+looks like this
+<br>
+<br>
+<img src="img/paper-plane.png" width="200px"/>
+<br>
+<br>
+then a higher risk of failure -  <i>large</i> `\alpha` <i>level</i> - is probably acceptable
+</center>
+]
+
+
+---
+
+## Term
+
+--
+
+.pull-left[
+<p id="center" style="color:#d5b5f7; font-weight: bold; border:1px; border-style:solid; border-color:#d5b5f7; border-radius: 25px; padding: 0.3em;">
+<i>Beta</i><br>
+</p>
+<ul>
+  <span style="color:#d5b5f7;"><li>the probability of not rejecting <span style="color:#ffffff;">`H_0`</span> when it is false</span></li><br>
+  <span style="color:#d5b5f7;"><li>the chance associated with making a <b style='color:#f4bfc5;'><i>Type II Error</i></b></span></li><br>
+  <span style="color:#d5b5f7;"><li>the possibility of making a wrong decision when something unexpected happened</span></li>
+</ul> 
+]
+
+.pull-right[
+<p id="center" style="color:#d5b5f7; font-weight: bold; border:1px; border-style:solid; border-color:#d5b5f7; border-radius: 35px; padding: 0.3em;">
+<i>Notation</i><br>
+</p>
+<hr style="height:35px; visibility:hidden;" />
+$$\beta$$
+]
+
+--
+
+.pull-left[
+<p id="center" style="color:#b5d7f7; font-weight: bold; border:1px; border-style:solid; border-color:#b5d7f7; border-radius: 25px; padding: 0.3em;">
+<i>Statistical Power</i><br>
+</p>
+<ul>
+  <span style="color:#b5d7f7;"><li>the probability of not rejecting <span style="color:#ffffff;">`H_0`</span> when it is false</span></li><br>
+  <span style="color:#b5d7f7;"><li>the chance associated with <b>NOT</b> making a <b style='color:#f4bfc5;'><i>Type II Error</i></b></span></li><br>
+  <span style="color:#b5d7f7;"><li>the possibility of making the right decision when something unexpected happened</span></li>
+</ul> 
+]
+
+.pull-right[
+<p id="center" style="color:#b5d7f7; font-weight: bold; border:1px; border-style:solid; border-color:#b5d7f7; border-radius: 35px; padding: 0.3em;">
+<i>Notation</i><br>
+</p>
+<hr style="height:35px; visibility:hidden;" />
+$$1 - \beta$$
+]
+
+---
+  
+# Decision Making
+
+```{r eval = TRUE, echo = FALSE}
+decision_gen <- tibble(  
+
+`Reality` = c(
+  "",
+  "",
+  "",
+  "`H_0` is true",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "`H_0` is false",
+  "",
+  ""),
+
+"Rejected `H_0`" = c(
+  "",
+  "",
+  "<i style='color:#f4bfc5;'><b>Type I Error</b></i>",
+  "`alpha`",
+  "<span style='color:#f4eebf;'><b><i>Level of Significance</b></i></span>",
+  "",
+  "",
+  "",
+  "<i style='color:#bfe0f4;'><b>Correct Outcome</b></i>",
+  "`1-beta`",
+  "<span style='color:#f4eebf;'><b><i>Statistical Power!</b></i></span>",
+  ""),
+
+"Did Not Reject `H_0`" = c(
+  "",
+  "",
+  "<i style='color:#bfe0f4;'><b>Correct Decision</b></i>",
+  "`1-alpha`", 
+  "<span style='color:#f4eebf;'><b><i>Level of Confidence</b></i></span>",
+  "",
+  "",
+  "",
+  "<i style='color:#f4bfc5;'><b>Type II Error</b></i>",
+  "`beta`",
+  "<span style='color:#f4eebf;'><b><i>Rate of a Type II Error</b></i></span>",
+  "")
+)
+```
+
+<br>
+<br>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(decision_gen, 
+      escape = FALSE,
+      align = 'lcc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1:3, width = "10em") %>%
+  row_spec(0, extra_css = "border-bottom: solid;
+           border-bottom-width:1px;
+           border-bottom-color: #666666;")
+```
+
+---
+
+# Decision Making
+
+ |  | 
+--------|---------|---------
+Null | $H_0 =$ | Forecast says its NOT going to rain
+Alternative | $H_1 =$ | Something else will happen
+ |  | 
+<br style="line-height: 3px" />
+
+--
+
+```{r eval = TRUE, echo = FALSE}
+example_gen <- tibble(
+Reality = c("Forecast was right",
+             "Forecast was wrong"),
+
+`Rejected forecast` = c("Took an umbrella AND you're dry but may look silly or possibly fancy",
+                    "Took an umbrella AND you're dry"),
+
+`Did not reject the forecast` = c("Did not take an umbrella AND you're dry",
+             "Did not take an umbrella AND you're wet")
+)
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(example_gen, 
+      escape = FALSE,
+      format = "html",
+      align = 'lll') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "10em") %>%
+  row_spec(0, extra_css = "border-bottom: solid;
+           border-bottom-width:1px;
+           border-bottom-color: #666666;") %>%
+  row_spec(2, extra_css = "border-bottom: solid;
+           border-bottom-width:1px;
+           border-bottom-color: #666666;") %>%
+  footnote(
+    general = c(
+      "<small><i>You could have also gotten wet from snow, a flood, etc. so again <b>the alternative hypothesis generally does not imply the opposite!</b></i></small>"
+    ),
+    general_title = "<small>Note: </small>",
+    footnote_as_chunk = T ,
+    escape = F
+  )
+```
+<br style="line-height: 3px" />
+
+---
+
+# Estimation
+
+.center2[
+**(Statistical) Estimation** - a sample statistic is used to estimate the value of an unknown population parameter
+]
+  
+---
+
+## Selecting a Sample Mean
+
+<br>
+<br>
+<br>
+
+```{r eval = TRUE, echo = FALSE}
+sig_est <- tibble(
+Classification = c("Process",
+             "Outcomes"),
+
+`Hypothesis Testing` = c("Determine the probability of getting that mean if the Null is true",
+             "Gain information about the population mean"),
+
+`Point/Interval Estimation` = c("Estimate the value of a population mean",
+                    "Gain information about the population mean")
+)
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(sig_est, 
+      escape = FALSE,
+      align = 'lll', 
+      format = "html") %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "10em") %>%
+  row_spec(0, extra_css = "border-bottom: solid;
+           border-bottom-width:1px;
+           border-bottom-color: #666666;")
+```
+
+---
+
+# Updating Estimation for Sample Means
+
+--
+
+.center2[
+**Point estimation** - use of sample data to calculate a single *mean* value
+
+**Interval estimation** - use of sample data to calculate a possible range of *mean* values
+]
+
+---
+
+# The Characteristic of Hypothesis Testing and Estimation
+
+```{r eval = TRUE, echo = FALSE}
+hyp_est <- tibble(
+Question = c("Do we know the population mean?",
+             "What is the process use dto determine?",
+             "What is learned?",
+             "What is our decision?"),
+
+`Hypothesis Testing` = c("Yes its the Null hypothesis",
+             "The chance of obtaining a sample mean", 
+             "Whether the population mean is likely correct",
+             "To retain or reject the null hypothesis"),
+
+`Point/Interval Estimation` = c("No we're trying to estimate it",
+                    "The value of a population mean",
+                    "The range of values within which the population mean is probably contained",
+                    "No actual decison")
+)
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(hyp_est, 
+      escape = FALSE,
+      align = 'lll') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "10em") %>%
+  column_spec(3, width = "10em") %>%
+  row_spec(0, extra_css = "border-bottom: solid;
+           border-bottom-width:1px;
+           border-bottom-color: #666666;")
+```
+
+---
+
+# Confidence
+
+--
+
+.center2[
+**Confidence Interval** - an interval that contains an unknown parameter (e.g. $\mu$) with certain degree of confidence
+<br>
+<br>
+**Level of Confidence** - probability or likelihood that an interval estimate will contain an unknown population parameter
+]
+
+---
+
+# Determining the Confidence Interval
+
+1. Calculate the <i>standard error of the mean</i> $$\sigma_{\overline{Y}} =\dfrac{\sigma}{\sqrt{N}}$$
+
+--
+
+2. Decide on a <i>level of confidence</i> 
+
+```{r eval = TRUE, echo = FALSE}
+conf <- tibble(
+Probability = c("0.90",
+                "0.95",
+                "0.99"),
+
+"`z`-score" = c("1.645",
+                "1.96", 
+                "2.576")
+)
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(conf, 
+      escape = FALSE,
+      align = 'cc') %>%
+  kable_styling(full_width = FALSE) %>%
+  row_spec(0, extra_css = "border-bottom: solid;
+           border-bottom-width:1px;
+           border-bottom-color: #666666;")
+```
+
+<br>
+<br>
+<center>
+Again its typical to have a 95% level of confidence thereby making \[\alpha = 0.05\]
+</center>
+
+---
+
+# Determining the Confidence Interval (continued)
+
+<ol start=3>
+<li> Calculate the <i>confidence interval</i> \[CI = \overline{Y} \pm z\cdot\sigma_{\overline{Y}}\]
+</ol>
+
+--
+
+<ol start=4>
+<li> Interpret the results
+</ol>
+
+---
+
+# Example
+
+IQ scores in the general healthy population are approximately normally distributed with $100 ± 15$. In a sample of 100 students a sample mean IQ of 103. Find the 90% confidence interval for this data.
+
+--
+
+Firstly we have $N = 100$, $\mu=100$, $\sigma = 15$, and $\overline{Y} = 103$.
+
+--
+
+1. $$\sigma_{\overline{Y}} = \dfrac{\sigma}{\sqrt{N}} =\dfrac{15}{\sqrt{100}} = 1.50$$
+
+--
+
+<br>
+<br>
+<ol start=2>
+<li> 
+We choose a 90% level of confidence
+</ol>
+
+$$z\cdot \sigma_{\overline{Y}} = 1.645\cdot 1.50 = 2.47$$
+
+--
+
+<br>
+<ol start=3>
+<li> 
+<center>
+\[ 90\%\, CI = 103\pm2.47 = (105.47, 100.53) \]
+</center>
+</ol>
+
+--
+
+<br>
+<ol start=4>
+<li> <center>So we are 90% confident that the overall mean IQ is between `100.53` and `105.47`</center>
+</ol>
+
+---
+
+## Thats it!
+
+If you have any questions, please reach out
+
+--
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<center>
+<br><br>
+<div class="fade_rule"></div>  
+<br><br>
+</center>
+
+<center>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><br />This work is licensed under a <br /><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>
+</center>

@@ -48,7 +48,9 @@ This task involves a multi-step process to address the underlying research or ev
 
 4. Incorporate any changes including any the feedback given in your third deliverable in your online survey and update the skeleton accordingly. If any items receive an updated index, please record that in the `ReIndex` column. 
 
-5. Rename the document by following the [submission guidelines](/tasks/#submission-formatting), save it in `xlsx` format, and submit this document to <a target="_blank" href="https://ecampus.wvu.edu/">eCampus</a><br><br>
+5. Write a two to three paragraph synopsis describing those who assessed the instrument and summarize their contributions. Then provide your approach to accepting or declining their feedback, including those that may have conflicted.
+
+6. Rename both documents by following the [submission guidelines](/tasks/#submission-formatting), save the first in `xlsx` and second in `docx` format, respectively, and submitting each to <a target="_blank" href="https://ecampus.wvu.edu/">eCampus</a><br><br>
 
 <center>
 <p id="rounded_corners">

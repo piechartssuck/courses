@@ -541,9 +541,7 @@ tibble::tribble(
   "The program has been delivered to all principals in the county. What kind of evaluative feedback should the ASDC seek?"," "," "
 ) %>%
  knitr::kable(escape = FALSE)%>%
-  row_spec(0, color = "white", background = "#212121") %>%
-  row_spec(2, color = "white", background = "#212121") %>%
-  row_spec(4, color = "white", background = "#212121")
+  row_spec(0:4, color = "white", background = "#212121")
 ```
 
 ---

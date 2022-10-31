@@ -1,0 +1,59 @@
+---
+title: "Getting Ready for Analysis"
+linktitle: "Week 11: Getting Ready for Analysis"
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  due:
+    parent: 'To Do List'
+    weight: 11
+type: docs
+weight: 1
+---
+
+`r blogdown::shortcode("r-walkthrough-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r eval = TRUE, echo = FALSE}
+
+wk_post <- 
+  
+  tibble(
+
+Description = c("Read <i>A Sample/Population Size Activity: Is it the sample size of the sample as a fraction of the population that matters?</i> in Smith, M.H. (2017)",
+                "Read <i>Understanding Statistical Power and Significance Testing: An Interactive Visualization</i> in Magnusson, K. (2018))",
+                "Complete the module <span style='color:#ffc787;font-weight:bold'><i>Analyzing Survey Data in R </i></span>",
+                "Go through the slideshow <span style='color:#6ac4cd;font-weight:bold'>Hypothesis & Estimation</span>"
+                ),
+
+
+Details = c("<a href='/readings/10-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/readings/10-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/modules/10-module/#data-camp'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/tasks/11-task/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
+            ),
+
+Icon = c("journal",
+         "visualization",
+         "dc",
+         "slideshow"),
+
+Site = c("https://www.tandfonline.com/doi/full/10.1080/10691898.2004.11910735",
+         "https://rpsychologist.com/d3/nhst/",
+         "https://www.datacamp.com",
+         ""
+         )
+)
+```
+
+<center>
+`r knitr::spin_child(here::here("content", "post_frame.R"))`
+</center>
