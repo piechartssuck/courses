@@ -100,10 +100,10 @@ Administer the instrument on a standard two-week cycle unless other arrangements
 <br>
 
 <div id="anchorwk11">
-<details><summary>Week 11: Test for Validity and Reliability</summary>
+<details><summary>Week 12: Test for Validity and Reliability</summary>
 <br>
 <p>
-Use the collected data to conduct an EFA, CFA, or PCA to assess instrument validity and reliability. Submit a one paragraph descriptive summary of the findings and Rmarkdown file.
+Use the collected data to conduct an EFA and PCA to assess instrument validity and reliability. Submit a one paragraph descriptive summary of the findings and Rmarkdown PDF output.
 </p>
 </details>
 </div>
