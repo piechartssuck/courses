@@ -58,7 +58,7 @@ Read <i>Understanding Statistical Power and Significance Testing: An Interactive
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Complete the module <span style="color:#ffc787;font-weight:bold"><i>Survey and Measurement Development in R </i></span>
+Complete the module <span style="color:#ffc787;font-weight:bold"><i>Analyzing Survey Data in R </i></span>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/modules/10-module/#data-camp"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>

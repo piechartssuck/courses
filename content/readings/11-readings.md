@@ -55,7 +55,7 @@ Smith, M.H. (2017)
 Magnusson, K. (2018)
 </td>
 <td style="text-align:center;width: 10em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://rpsychologist.com/d3/nhst/" target="_blank"><img src="/logos/dataviz-ico.png" alt="Data Visualization icon" width="25px"></a>
+<a href="https://rpsychologist.com/d3/nhst/" target="_blank"><img src="/logos/dataviz-ico.png" alt="Data Visualization icon" width="26px"></a>
 </td>
 </tr>
 </tbody>
