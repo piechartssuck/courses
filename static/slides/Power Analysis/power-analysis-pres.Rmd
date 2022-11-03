@@ -443,7 +443,7 @@ If you would like a deeper dive on either area, tale a look at the videos below
 
 .center2[***(Statistical) Power*** is the probability of avoiding a Type II error]
 
---
+---
 
 # Terminology is Important!
 

@@ -23,7 +23,7 @@ ul {
 }
 </style>
 
-Download the following to 
+Please download the following
 
 <center>
 ```{r echo=FALSE,eval=TRUE,message=FALSE}

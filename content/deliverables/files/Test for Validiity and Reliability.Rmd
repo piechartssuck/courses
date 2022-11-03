@@ -1,0 +1,51 @@
+---
+title: "Test for Validity and Reliability"
+author: "Erase this and put your name here"
+output: pdf_document
+urlcolor: blue
+---
+
+```{r setup, include=FALSE}
+pacman::p_load("tidyverse", "tidymodels", "patchwork", "corrr", "psych", "mice", "naniar", "reactable")
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Note
+
+## 1. Load Survey Data
+
+```{r}
+# Use this space to bring in your Qualtrics, simulated, or requested data set 
+```
+
+
+## 2. Determine Missingness
+
+```{r}
+# Use this space to determine if your response data set is MNAR or MAR (MCAR) and conduct a multiple imputation if necessary. It may be easier to copy and paste empty code chunks so you don't have everything in one place, but it is not required.
+# Interpret the results below
+```
+
+
+## 3. Reliability
+
+```{r}
+# Use this space to assess if any of your items need to be reverse coded. Then compute the internal consistency. It may be easier to copy and paste empty code chunks so you don't have everything in one place, but it is not required. 
+# Interpret the results below
+```
+
+
+## 4. Validity
+
+```{r}
+# Use this space to conduct a factor analysis to assess survey validity. It may be easier to copy and paste empty code chunks so you don't have everything in one place, but it is not required.
+# Interpret the results below
+```
+
+
+## 5. Reduce Dimensionality 
+
+```{r}
+# Use this space to conduct a PCA, namely plot the rotation matrix overlaying the corresponding scatterplot with scaling/centering and plot the variance explained. It may be easier to copy and paste empty code chunks so you don't have everything in one place, but it is not required.
+# Interpret the results below
+```

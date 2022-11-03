@@ -1,0 +1,67 @@
+---
+title: "Response Rates"
+linktitle: "Week 12: Response Rates"
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  due:
+    parent: 'To Do List'
+    weight: 12
+type: docs
+weight: 1
+---
+
+`r blogdown::shortcode("r-walkthrough-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r eval = TRUE, echo = FALSE}
+
+wk_post <- 
+  
+  tibble(
+
+Description = c("Read <i>Applying Item Response Theory (IRT) Modeling to Questionnaire Development, Evaluation, and Refinement</i> in Edelen, M.O. & Reeve, B.B. (2006)",
+                "Read <i>Power Analysis in Survey Research: Importance and Use for Health Educators</i> in Price et al. (2005)",
+                "Complete the module <span style='color:#ffc787;font-weight:bold'><i>Introduction to Text Analysis in R</i></span>",
+                "Watch a video on Power Analysis",
+                "Go through the slideshow <span style='color:#6ac4cd;font-weight:bold'>With Great Power...</span>",
+                "Review <span style='color:#6acda5;font-weight:bold'>Test for Validity and Reliability</span> and submit it by the end of Week 13"
+                ),
+
+
+Details = c("<a href='/readings/12-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/readings/12-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/modules/12-module/#data-camp'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/tasks/12-task/#power-analysis'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/tasks/12-task/#avoiding-a-terrible-error'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/deliverables/06-l6/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
+            ),
+
+Icon = c("pdf",
+         "pdf",
+         "dc",
+         "youtube",
+         "slideshow",
+         "R"),
+
+Site = c("",
+         "",
+         "https://www.datacamp.com",
+         "https://youtu.be/VX_M3tIyiYk",
+         "",
+         "https://ecampus.wvu.edu"
+         )
+)
+```
+
+<center>
+`r knitr::spin_child(here::here("content", "post_frame.R"))`
+</center>

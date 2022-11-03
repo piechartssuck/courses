@@ -1,0 +1,76 @@
+---
+title: "Test for Validity and Reliability"
+linktitle: " Test for Validity and Reliability"
+menu:
+  tasks:
+    parent: Deliverables
+    weight: 6
+type: docs
+weight: 6
+editor_options: 
+  chunk_output_type: console
+---
+
+`r blogdown::shortcode("r-walkthrough-header")`
+
+```{r setup, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+
+image_link <- function(image,url,...){
+  htmltools::a(
+    href=url,
+    htmltools::img(src=image,...)
+    )
+}
+```
+
+<style>
+ul {
+    margin-left: 1.5em
+}
+</style>
+
+1. Please download the following
+    <br>
+    <center>
+    ```{r echo=FALSE,eval=TRUE,message=FALSE}
+    loc <- here::here("static", "rtasks", "Test for Validiity and Reliability.Rmd")
+
+    downloadthis::download_file(
+      path = loc,
+      output_name = "Test for Validity and Reliability Rmarkdown file",
+      button_label = "&nbsp;&nbsp;&nbsp;<span style='color:#ffffff'>Download</span>",
+      button_type = "primary",
+      has_icon = TRUE,
+      icon = "fa fa-save",
+      class = "hvr-sweep-to-left"
+      )
+    ```
+    </center>
+    <br>
+    While a power analysis is ideal for this situation as first step, the point of the task is to get you familiar with a workflow for quantitatively driven surveys.
+
+2. If you have <b>30 or more responses</b> and <b>more than two columns of quantitative data</b>, then please move to step 3. Otherwise if you
+
+  + only lack a sufficient number of responses but have more than two columns of quantitative data, then simulate the remaining data preferably within Qualtrics
+      * [Excel](https://support.microsoft.com/en-us/office/randbetween-function-4cc7f0d1-87dc-4eb7-987f-a469ab381685){target="_blank"}
+      
+      * [Qualtrics](https://www.qualtrics.com/support/survey-platform/survey-module/survey-tools/generating-test-responses/){target="_blank"}
+      
+      * R (there are many ways to accomplish like [this](https://www.crumplab.com/programmingforpsych/simulating-and-analyzing-data-in-r.html){target="_blank"} or [that](https://github.com/markolalovic/responsesR))[^out]
+      
+  + do not have more than two columns of quantitative data, then please reach out to me via Slack and I will provide a unique real world survey data set you can use for this task 
+  
+3. Open the mostly empty Rmarkdown file `Test for Validity and Reliability.Rmd`, read through the directions, and include your syntax to receive credit. It is suggested that you open a separate script and test your R code as needed
+
+4. Save the resulting PDF file by adding your first initial and last name to the beginning of the filename. For example, my submission would be `aroy Test for Validity and Reliability.pdf`
+
+5. Submit your PDF output to eCampus in the Submission Portal by the end of Week 13
+
+<center>
+<p id="rounded_corners">
+All incremental deliverables can be found on the main <a href="/tasks/#deliverables">Tasks</a> page
+<p>
+</center>
+
+[^out]: Please reach out if you would prefer to simulate data in R but are not able to do so. 

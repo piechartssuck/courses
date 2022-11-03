@@ -29,15 +29,15 @@ wk_post <-
   tibble(
 
 Description = c("Read <i>A Sample/Population Size Activity: Is it the sample size of the sample as a fraction of the population that matters?</i> in Smith, M.H. (2017)",
-                "Read <i>Understanding Statistical Power and Significance Testing: An Interactive Visualization</i> in Magnusson, K. (2018))",
+                "Read <i>Understanding Statistical Power and Significance Testing: An Interactive Visualization</i> in Magnusson, K. (2018)",
                 "Complete the module <span style='color:#ffc787;font-weight:bold'><i>Analyzing Survey Data in R </i></span>",
                 "Go through the slideshow <span style='color:#6ac4cd;font-weight:bold'>Hypothesis & Estimation</span>"
                 ),
 
 
-Details = c("<a href='/readings/10-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
-            "<a href='/readings/10-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
-            "<a href='/modules/10-module/#data-camp'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+Details = c("<a href='/readings/11-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/readings/11-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/modules/11-module/#data-camp'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/tasks/11-task/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
             ),
 
