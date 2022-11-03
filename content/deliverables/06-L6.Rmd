@@ -30,27 +30,52 @@ ul {
 }
 </style>
 
-1. Please download the following
+1. Please download one of the following
     <br>
     <center>
+    <div class="holder">
+    <div class="left">
     ```{r echo=FALSE,eval=TRUE,message=FALSE}
-    loc <- here::here("static", "rtasks", "Test for Validiity and Reliability.Rmd")
+    loc <- here::here("static", "rtasks", "Test for Validity and Reliability with gifs.zip")
 
     downloadthis::download_file(
       path = loc,
-      output_name = "Test for Validity and Reliability Rmarkdown file",
-      button_label = "&nbsp;&nbsp;&nbsp;<span style='color:#ffffff'>Download</span>",
+      output_name = "Test for Validity and Reliability Rmarkdown files",
+      button_label = "&nbsp;&nbsp;&nbsp;<span style='color:#ffffff'>Download with gifs<br><br><i>larger</i></span>",
       button_type = "primary",
       has_icon = TRUE,
       icon = "fa fa-save",
       class = "hvr-sweep-to-left"
       )
     ```
+    </div>
+    <div class="right">
+    ```{r echo=FALSE,eval=TRUE,message=FALSE}
+    loc <- here::here("static", "rtasks", "Test for Validity and Reliability without gifs.zip")
+
+    downloadthis::download_file(
+      path = loc,
+      output_name = "Test for Validity and Reliability Rmarkdown files",
+      button_label = "&nbsp;&nbsp;&nbsp;<span style='color:#ffffff'>Download without gifs<br><br><i>smaller</i></span>",
+      button_type = "primary",
+      has_icon = TRUE,
+      icon = "fa fa-save",
+      class = "hvr-sweep-to-left"
+      )
+    ```
+    </div>
+    </div>
     </center>
     <br>
     While a power analysis is ideal for this situation as first step, the point of the task is to get you familiar with a workflow for quantitatively driven surveys.
 
-2. If you have <b>30 or more responses</b> and <b>more than two columns of quantitative data</b>, then please move to step 3. Otherwise if you
+2. Download your response data set using numerical values as a `csv` file . A step-by-step explanation can be found on the Qualtrics site [Exporting Response Data](https://www.qualtrics.com/support/survey-platform/data-and-analysis-module/data/download-data/export-data-overview/) and by viewing the gif below
+
+<center>
+![](/img/gifs/exportqualtricsdata.gif){width=85%}
+</center>
+
+3. If you have <b>30 or more responses</b> and <b>more than two columns of quantitative data</b>, then please move to step 4. Otherwise if you
 
   + only lack a sufficient number of responses but have more than two columns of quantitative data, then simulate the remaining data preferably within Qualtrics
       * [Excel](https://support.microsoft.com/en-us/office/randbetween-function-4cc7f0d1-87dc-4eb7-987f-a469ab381685){target="_blank"}
@@ -60,12 +85,25 @@ ul {
       * R (there are many ways to accomplish like [this](https://www.crumplab.com/programmingforpsych/simulating-and-analyzing-data-in-r.html){target="_blank"} or [that](https://github.com/markolalovic/responsesR))[^out]
       
   + do not have more than two columns of quantitative data, then please reach out to me via Slack and I will provide a unique real world survey data set you can use for this task 
+
+4. Please do one of the following to wrangle your data set
+
+  + Manual approach: Open the `csv` file with your data and manually delete rows 2 and 3 as well as any columns that will not apply to the quantitative analysis
   
-3. Open the mostly empty Rmarkdown file `Test for Validity and Reliability.Rmd`, read through the directions, and include your syntax to receive credit. It is suggested that you open a separate script and test your R code as needed
+  + Automated approach: Open the test script `Test for Validity and Reliability Testing Script.R` and change the applicable values as needed
+  <br>
+  <br>
+  <i>Note that just because a column has numbers in it, it may not be relevant to the analysis as it could be an item intended to filter your population, a skip logic type, or something else.</i> For a better idea of the process noted above, take a look at the following gif
+  
+<center>
+![](/img/gifs/wranglequaltricsdata.gif){width=85%}
+</center>
 
-4. Save the resulting PDF file by adding your first initial and last name to the beginning of the filename. For example, my submission would be `aroy Test for Validity and Reliability.pdf`
+5. Open the mostly empty Rmarkdown file `Test for Validity and Reliability.Rmd`, read through the directions, and include your syntax to receive credit. It is suggested that you open the test script `Test for Validity and Reliability Testing Script.R` and use the example data set `Test_Survey_Data.csv` to see how this 
 
-5. Submit your PDF output to eCampus in the Submission Portal by the end of Week 13
+6. Save the resulting PDF file by adding your first initial and last name to the beginning of the filename. For example, my submission would be `aroy Test for Validity and Reliability.pdf`
+
+7. Submit your PDF output to eCampus in the Submission Portal by the end of Week 13
 
 <center>
 <p id="rounded_corners">
@@ -73,4 +111,4 @@ All incremental deliverables can be found on the main <a href="/tasks/#deliverab
 <p>
 </center>
 
-[^out]: Please reach out if you would prefer to simulate data in R but are not able to do so. 
+[^out]: Please reach out if you would prefer to simulate data in R but are not able to do so.
