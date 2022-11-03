@@ -1,6 +1,7 @@
 ---
 title: "Response Rates"
 linktitle: "Week 12: Response Rates"
+toc: true
 output:
   rmarkdown::html_document:
     toc: true
@@ -17,6 +18,24 @@ weight: 1
 ```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
 source(here::here("content", "com_libs.R"))
 ```
+
+### Download Literature
+
+<center>
+```{r echo=FALSE,eval=TRUE,message=FALSE}
+loc <- here::here("static", "readings", "EDP619Week12Readings.zip")
+
+downloadthis::download_file(
+  path = loc,
+  output_name = "Week 12 Readings",
+  button_label = "&nbsp;&nbsp;&nbsp;<span style='color:#ffffff'>Download</span>",
+  button_type = "primary",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+</center>
 
 ### Read Some Text
 
