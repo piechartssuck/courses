@@ -86,11 +86,11 @@ ul {
       
   + do not have more than two columns of quantitative data, then please reach out to me via Slack and I will provide a unique real world survey data set you can use for this task 
 
-4. Please do one of the following to wrangle your data set
+4. Do one of the following to wrangle your data set
 
-  + Manual approach: Open the `csv` file with your data and manually delete rows 2 and 3 as well as any columns that will not apply to the quantitative analysis
+  + *Manual approach:* Open the `csv` file with your data and manually delete rows 2 and 3 as well as any columns that will not apply to the quantitative analysis
   
-  + Automated approach: Open the test script `Test for Validity and Reliability Testing Script.R` and change the applicable values as needed
+  + *Automated approach:* Open the test script `Test for Validity and Reliability Testing Script.R`, change the applicable values as needed, and then run it
   <br>
   <br>
   <i>Note that just because a column has numbers in it, it may not be relevant to the analysis as it could be an item intended to filter your population, a skip logic type, or something else.</i> For a better idea of the process noted above, take a look at the following gif
@@ -99,7 +99,7 @@ ul {
 ![](/img/gifs/wranglequaltricsdata.gif){width=85%}
 </center>
 
-5. Open the mostly empty Rmarkdown file `Test for Validity and Reliability.Rmd`, read through the directions, and include your syntax to receive credit. It is suggested that you open the test script `Test for Validity and Reliability Testing Script.R` and use the example data set `Test_Survey_Data.csv` to see how this 
+5. Open the mostly empty Rmarkdown file `Test for Validity and Reliability.Rmd`, read through the directions, and include your syntax to receive credit. It is suggested that you use the example data set `Test_Survey_Data.csv` with the default test script `Test for Validity and Reliability Testing Script.R` to see how this is done and which values likely need to be tweaked
 
 6. Save the resulting PDF file by adding your first initial and last name to the beginning of the filename. For example, my submission would be `aroy Test for Validity and Reliability.pdf`
 
