@@ -1,13 +1,13 @@
 ---
-title: "Qualifying Qualitatives"
-linktitle: "Week 9: Qualifying Qualitatives"
+title: "Qualitative Platforms"
+linktitle: "Week 10: Qualitative Platforms"
 output:
   rmarkdown::html_document:
     toc: true
 menu:
   due:
     parent: 'To Do List'
-    weight: 9
+    weight: 10
 type: docs
 weight: 1
 ---
@@ -36,57 +36,35 @@ Type<sup>2</sup>
 <tbody>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Read <i>Addressing the Challenges Related to Transforming Qualitative Into Quantitative Data in Qualitative Comparative Analysis</i> in Block, D.d. & Vis, B. (2019)
+Review the <i>Comparison Chart</i> for comparing QDA tools at NYU Libraries
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/readings/09-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
+<a href="/readings/10-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/readings/09-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="PDF icon" width="32"> </a>
+<a href="/readings/10-readings/#download-literature" target="_blank"><img src="/logos/webpage-ico.png" alt="Webpage icon" width="27"> </a>
 </td>
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Read <i>Simultaneous and Sequential Qualitative Mixed Method Designs</i> in Morse, J.M. (2010)
+Download and install <b>Taguette</b> if you have not done so already
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/readings/09-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
+<a href="/tasks/10-task/#taguette"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/readings/09-readings/#download-literature" target="_blank"><img src="/logos/pdf-ico.png" alt="PDF icon" width="32"> </a>
+<a href="https://www.taguette.org/install.html" target="_blank"><img src="/logos/webpage-ico.png" alt="Webpage icon" width="27"> </a>
 </td>
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Finish the module <span style="color:#ffc787;font-weight:bold"><i>Introduction to Text Analysis in R</i></span>
+Go through the <i>Getting started with Taguette</i> guide to get yourself a bit familiarized with the platform
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/modules/09-module/#data-camp"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
+<a href="/tasks/10-task/#taguette"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://www.datacamp.com" target="_blank"><img src="/logos/dc-ico.png" alt="DataCamp icon" width="24"> </a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Finish the associated <i class="fa-brands fa-r-project"></i> task for the module
-</td>
-<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/modules/09-module/#r-task"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
-</td>
-<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<img src="/logos/Rscript-ico.png" alt="R icon" width="27">
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Review the slideshow <span style="color:#6ac4cd;font-weight:bold">A Brief Overview of Qualitative Data Analysis</span> after class
-</td>
-<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/tasks/09-task/#inclassnotes"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
-</td>
-<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<img src="/logos/slideshow-ico.png" alt="Slideshow icon" width="26">
+<a href="https://www.taguette.org/getting-started.html" target="_blank"><img src="/logos/webpage-ico.png" alt="Webpage icon" width="27"> </a>
 </td>
 </tr>
 <tr>
