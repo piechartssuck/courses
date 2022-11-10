@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Getting Familiar with Preprocessing</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr. Abhik Roy" />
+    <script src="Slides-Week-11-pres_files/header-attrs-2.18/header-attrs.js"></script>
+    <link href="Slides-Week-11-pres_files/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
+    <script src="Slides-Week-11-pres_files/tile-view-0.2.6/tile-view.js"></script>
+    <link href="Slides-Week-11-pres_files/animate.css-3.7.2/animate.xaringan.css" rel="stylesheet" />
+    <link href="Slides-Week-11-pres_files/tachyons-4.12.0/tachyons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Getting Familiar with Preprocessing
+]
+.subtitle[
+## EDP 618 Week 11
+]
+.author[
+### Dr. Abhik Roy
+]
+
+---
+
+
+&lt;script&gt;
+  function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+  }
+&lt;/script&gt;
+
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/x-mathjax-config"&gt;
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+  MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+    cancel: ["Extension","cancel"],
+    bcancel: ["Extension","cancel"],
+    xcancel: ["Extension","cancel"],
+    cancelto: ["Extension","cancel"]
+  });
+});
+&lt;/script&gt;
+
+&lt;style&gt;
+section {
+    display: flex;
+    display: -webkit-flex;
+}
+
+section {
+    height: 600px;
+    width: 60%;
+    margin: auto;
+    border-radius: 21px;
+    background-color: #212121;
+}
+
+.remark-slide-container {
+background: #212121;
+}
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
+}
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
+}
+
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
+}
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
+}
+
+section p {
+    text-align: center;
+    font-size: 30px;
+    background-color: #212121;
+    border-radius: 21px;
+    font-family: Roboto Condensed;
+    font-style: bold;
+    padding: 12px;
+    color: #bff4ee;
+    margin: auto;
+}
+
+#center {
+text-align: center;
+}
+
+#right {
+  text-align: right;
+} 
+
+.center p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.tab {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.obr
+{
+    display:block;
+    margin-top:-15px;
+}
+
+.container {
+  display: flex;
+}
+
+.container &gt; div {
+  flex: 1; /*grow*/
+  margin-right: 40px;
+}
+
+td, th, tr, table {
+    border: 0 !important;
+    border-spacing:0 !important;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: unset !important;
+    color: unset !important;
+  }
+
+tbody &gt; td &gt; tr:hover {
+      background-color: unset !important;
+      color: unset !important;
+  }
+&lt;/style&gt;
+
+&lt;style type="text/css"&gt;
+.highlight-last-item &gt; ul &gt; li,
+.highlight-last-item &gt; ol &gt; li {
+  opacity: 0.5;
+}
+.highlight-last-item &gt; ul &gt; li:last-of-type,
+.highlight-last-item &gt; ol &gt; li:last-of-type {
+  opacity: 1;
+}
+&lt;/style&gt;
+
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 110px;
+height: 128px;
+z-index: 0;
+background-image: url(/Users/skynet/Documents/WVU/Teaching/GitHub.nosync/edp618/static/img/course_hex.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:1em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('a')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = 'https://edp618.asocialdatascientist.com'
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 110px;
+height: 128px;
+z-index: 0;
+background-image: url(/Users/skynet/Documents/WVU/Teaching/GitHub.nosync/edp618/static/img/course_hex.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:1em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('a')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = 'https://edp612.asocialdatascientist.com'
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+---
+
+class: highlight-last-item
+layout: true
+
+---
+
+## Preprocessing
+
+---
+
+### Spreadsheets
+
+--
+
++ Enter variables in columns
+
+--
+
++ Limit yourself to one value (piece of information) per cell
+
+--
+
++ Try to avoid using multiple sheets if possible
+
+--
+
++ Do not create a table within a sheet
+
+--
+
++ Avoid merging cells
+
+--
+
++ For dates, follow ISO 8601 formatting **YYYYMMDD** or ISO 8601 extended formatting **YYYYMMDDhhmmss** (e.g. Nov 7, 2022 becomes 20221107)
+
+--
+
++ Always save as a `.csv` file!
+
+---
+
+### Anonymizing Data
+
+--
+
+What is good and bad about these anonymiziation attempts?
+
+--
+
+.pull-left[So my first workplace was &lt;i&gt;X&lt;/i&gt; which was about &lt;i&gt;X&lt;/i&gt;
+minutes from my home in &lt;i&gt;X&lt;/i&gt;. My best colleagues from day one were
+&lt;i&gt;X&lt;/i&gt;, &lt;i&gt;X&lt;/i&gt; and &lt;i&gt;X&lt;/i&gt; and in fact, I am still very good friends with &lt;i&gt;X&lt;/i&gt; to this
+day. &lt;i&gt;X&lt;/i&gt; lives in the some parish still with her husband &lt;i&gt;X&lt;/i&gt; and their &lt;i&gt;X&lt;/i&gt;
+&lt;i&gt;X&lt;/i&gt;.]
+
+.pull-right[&lt;i&gt;So my first workplace was [name] which was about
+20 minutes from my home in Norwich. My best colleagues from day
+one were Anna, Julie, and Louise and in fact, I am still very good
+friends with Julie to this day. She lives in the some parish still with
+her husband Owen and their son Ryan.&lt;/i&gt;]
+
+---
+
+### Tips
+
+--
+
++ Switch direct identifiers (name, dote, place) or generalize them 
+
+  - **Anna** to **[Beth]** or **[Friend 1]**
+
+  - **Julie** to **[Nicole]** or **[Friend 2]**
+  
+--
+
++ Remote or generalize indirect identifiers, which con ID when combined
+
+  - **born in 1986** to **born in [the 1980s]**
+  
+  - **a white data librarian** to **white [academic] librarian**
+  
+  - **in Morgantown** to **in [a Northern Region]**, **[West Virginia]**, or **[Appalachia]**
+  
+--
+
++ Consider removing sensitive and/or 
+
+  - **my teacher is the worst** to **[comment redacted]**
+  
+  - **I hid all of my lottery winnings under my bed** to **[location redacted]**
+  
+---
+
+## Taguette
+
+--
+
+- Free and open source
+
+--
+
+- Custom toggling options
+
+--
+
+- Lower barrier to entry
+
+--
+
+- Data and tags stay your own or can be shared
+
+--
+
+- Mostly easy to import and export
+
+--
+
+- Does not currently support audio, video, image, or spreadsheet files
+
+---
+
+Taguette uses [Calibre](https://calibre-ebook.com/) to convert your documents to HTML for tagging. It
+can work with
+
+--
+
+- Microsoft Word files (`.docx`)
+
+--
+
+- LibreOffice files (`.odt`)
+
+--
+
+- PDFs (`.pdf`)
+
+--
+
+- Plain text (`.txt`)
+
+--
+
+- Rich text (`.rtf`)
+
+--
+
+- HTML (`.html`)
+
+---
+
+## Task (Part I)
+
+--
+
+1. Open up Taguette (preferably using the [server](https://app.taguette.org/) but a local copy will do)
+
+--
+
+2. Find a partner and settle on one of the open text data sets
+
+--
+
+3. Select **Create a new project**, name it whatever you want, and add your name
+
+--
+
+4. Add codes to the text
+
+--
+
+5. After finishing, go to **Project info &gt; Export project** and send that file to your partner
+
+--
+
+6. Load your partner's project by selecting **Home &gt; Import a project file**
+
+---
+
+## Before You Go!
+
+--
+
+1. Open RStudio
+
+--
+
+2. In the Console, run `install.packages("remotes")`
+
+--
+
+3. Then run `remotes::install_github("ropenscilabs/qcoder")`
+
+--
+
+4. Take a look at the examples on the [`qcoder` documentation page ](https://docs.ropensci.org/qcoder/)
+
+---
+
+#  That’s It! 
+
+Any questions?
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;center&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;div class="fade_rule"&gt;&lt;/div&gt;  
+&lt;br&gt;&lt;br&gt;
+&lt;/center&gt;
+
+&lt;center&gt;
+&lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;&lt;img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;This work is licensed under a &lt;br /&gt;&lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License&lt;/a&gt;
+&lt;/center&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"navigation": {
+"scroll": false
+}
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

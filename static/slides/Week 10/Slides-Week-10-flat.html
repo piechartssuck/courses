@@ -4,7 +4,7 @@
     <title>Cohen’s Kappa</title>
     <meta charset="utf-8" />
     <meta name="author" content="Dr. Abhik Roy" />
-    <script src="Slides-Week-10-flat_files/header-attrs-2.17/header-attrs.js"></script>
+    <script src="Slides-Week-10-flat_files/header-attrs-2.18/header-attrs.js"></script>
     <link href="Slides-Week-10-flat_files/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
     <script src="Slides-Week-10-flat_files/tile-view-0.2.6/tile-view.js"></script>
     <link href="Slides-Week-10-flat_files/animate.css-3.7.2/animate.xaringan.css" rel="stylesheet" />
@@ -22,7 +22,7 @@ class: center, middle, inverse, title-slide
 # Cohen’s Kappa
 ]
 .subtitle[
-## EDP 612 Week 8
+## EDP 618 Week 10
 ]
 .author[
 ### Dr. Abhik Roy
@@ -30,6 +30,12 @@ class: center, middle, inverse, title-slide
 
 ---
 
+
+&lt;script&gt;
+  function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+  }
+&lt;/script&gt;
 
 &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"&gt;&lt;/script&gt;
 
@@ -50,13 +56,59 @@ section {
     display: -webkit-flex;
 }
 
-
 section {
     height: 600px;
     width: 60%;
     margin: auto;
     border-radius: 21px;
     background-color: #212121;
+}
+
+.remark-slide-container {
+background: #212121;
+}
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
+}
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
+}
+
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
+}
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
 }
 
 section p {
@@ -72,10 +124,12 @@ section p {
 }
 
 #center {
-
 text-align: center;
-
 }
+
+#right {
+  text-align: right;
+} 
 
 .center p {
   margin: 0;
@@ -100,9 +154,33 @@ text-align: center;
     margin-left: 40px;
 }
 
+.obr
+{
+    display:block;
+    margin-top:-15px;
+}
+
+.container {
+  display: flex;
+}
+
+.container &gt; div {
+  flex: 1; /*grow*/
+  margin-right: 40px;
+}
+
 td, th, tr, table {
     border: 0 !important;
     border-spacing:0 !important;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: unset !important;
+    color: unset !important;
+  }
+
+tbody &gt; td &gt; tr:hover {
+      background-color: unset !important;
+      color: unset !important;
   }
 &lt;/style&gt;
 
@@ -116,6 +194,41 @@ td, th, tr, table {
   opacity: 1;
 }
 &lt;/style&gt;
+
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 110px;
+height: 128px;
+z-index: 0;
+background-image: url(/Users/skynet/Documents/WVU/Teaching/GitHub.nosync/edp618/static/img/course_hex.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:1em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('a')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = 'https://edp618.asocialdatascientist.com'
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
 
 
 
@@ -153,10 +266,7 @@ top:1em;right:1em;
 })()</script>
 </div>
 
----
-
 #  &lt;span style="color:#d9534f;font-weight:bold;"&gt;Reliability&lt;/span&gt; and &lt;span style="color:#428bca;font-weight:bold;"&gt;Validity&lt;/span&gt; 
-
 --
 
 &lt;br&gt;

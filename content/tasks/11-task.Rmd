@@ -1,6 +1,6 @@
 ---
-title: "Evaluating Interventions"
-linktitle: "Week 5: Evaluating Interventions"
+title: "Analyzing Open Text Part I"
+linktitle: "Week 11: Analyzing Open Text Part I"
 toc: true
 output:
   rmarkdown::html_document:
@@ -8,7 +8,7 @@ output:
 menu:
   tasks:
     parent: Tasks
-    weight: 5
+    weight: 11
 type: docs
 weight: 1
 ---
@@ -24,25 +24,6 @@ img {
 max-width:100%;
 }
 </style>
-
-### Downloads
-
-Download a copy of everything you need to follow along with the presentation^[You will have to unzip this file. If you are unfamiliar with this process, please check the [Unzipping files](/resources/unzipping/) section under Resources for assistance]
-
-<center>
-```{r echo=FALSE,eval=TRUE,message=FALSE,purl=FALSE}
-loc <- here::here("static", "slides", "Week 4", "EDP618Week4Materials.zip")
-
-downloadthis::download_file(
-  path = loc,
-  output_name = "Week 5 Presentation Materials",
-  button_type = "primary",
-  has_icon = TRUE,
-  icon = "fa fa-save",
-  class = "hvr-sweep-to-left"
-  )
-```
-</center>
 
 ### In Class Notes
 
@@ -72,18 +53,19 @@ downloadthis::download_file(
 
 <div class="bigcol">
 ```{r echo = FALSE, out.width="140%", fig.align='left'}
-knitr::include_url("/slides/Week 4/Slides-Week-4-pres.html")
+knitr::include_url("/slides/Week 11/Slides-Week-11-pres.html")
 ```
 </div>
+
 
 <div class="smallcol">
 ```{r echo = FALSE, fig.align='right'}
 html_link <- function() {
-  paste0("<a href='/slides/Week 4/Slides-Week-4-pres.html' target='_blank'>", "<img src='/logos/web-ico.png' alt='Survey Design Page' width='35'>", "</a>")
+  paste0("<a href='/slides/Week 11/Slides-Week-11-pres.html' target='_blank'>", "<img src='/logos/web-ico.png' alt='Cohen's Kappa Page' width='35'>", "</a>")
 }
 
 pdf_link <- function() {
- paste0("<a href='/slides/Week 4/Slides-Week-4-flat.pdf' target='_blank'>", "<img src='/logos/pdf-ico.png' alt='Survey Design PDF' width='35'>", "</a>")
+ paste0("<a href='/slides/Week 11/Slides-Week-11-flat.pdf' target='_blank'>", "<img src='/logos/pdf-ico.png' alt='Cohen's Kappa PDF' width='35'>", "</a>")
 }
 
 tibble(
@@ -110,22 +92,6 @@ tibble(
 </div>
 </center>
 
-### Construct a Survey for Mixing
+### Revise and Resubmit
 
-1. Outline a mixed study where a survey is necessary for data collection
-
-2. Create a ten item survey in [Qualtrics](wvu.ca1.qualtrics.com/)
-
-3. Save it as [**QSF**](https://www.qualtrics.com/support/survey-platform/survey-module/survey-tools/import-and-export-surveys/#ExportingaSurveyasaQSF) file
-
-4. Create a short presentation describing your mixed study detailing the methods
-
-5. Add your name to both files 
-
-6. Submit both files the channel <a href="https://edp618fall2022.slack.com/archives/C04301TTQ9J" target="_blank" style='color:#ff8384;'>#wk5-survey</a> by Sunday (11/25/2022) at 11:59 PM
-
-7. Review all submissions prior to next week's class and be prepared to critique each
-
-### Develop a Draft
-
-Please begin and finish work on the third deliverable after recieving feedback on the your second submission. More details can be found [here](/deliverables/03-l3/)
+Please begin on the final deliverable after receiving feedback on the your fifth submission. More details can be found [here](/deliverables/06-l6/)

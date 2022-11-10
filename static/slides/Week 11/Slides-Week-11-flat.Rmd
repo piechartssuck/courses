@@ -1,0 +1,456 @@
+---
+title: "Getting Familiar with Preprocessing"
+subtitle: "EDP 618 Week 11"
+author: "Dr. Abhik Roy"
+output: 
+ xaringan::moon_reader:
+   css: ['xaringan-themer.css', 'custom.css']
+   nature:
+     ratio: 16:9
+     highlightStyle: github
+     highlightLines: true
+     countIncrementalSlides: false
+     navigation:
+         scroll: false
+---
+
+<script>
+  function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+  }
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+  MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+    cancel: ["Extension","cancel"],
+    bcancel: ["Extension","cancel"],
+    xcancel: ["Extension","cancel"],
+    cancelto: ["Extension","cancel"]
+  });
+});
+</script>
+
+<style>
+section {
+    display: flex;
+    display: -webkit-flex;
+}
+
+section {
+    height: 600px;
+    width: 60%;
+    margin: auto;
+    border-radius: 21px;
+    background-color: #212121;
+}
+
+.remark-slide-container {
+background: #212121;
+}
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
+}
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
+}
+
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
+}
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
+}
+
+section p {
+    text-align: center;
+    font-size: 30px;
+    background-color: #212121;
+    border-radius: 21px;
+    font-family: Roboto Condensed;
+    font-style: bold;
+    padding: 12px;
+    color: #bff4ee;
+    margin: auto;
+}
+
+#center {
+text-align: center;
+}
+
+#right {
+  text-align: right;
+} 
+
+.center p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.tab {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.obr
+{
+    display:block;
+    margin-top:-15px;
+}
+
+.container {
+  display: flex;
+}
+
+.container > div {
+  flex: 1; /*grow*/
+  margin-right: 40px;
+}
+
+td, th, tr, table {
+    border: 0 !important;
+    border-spacing:0 !important;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: unset !important;
+    color: unset !important;
+  }
+
+tbody > td > tr:hover {
+      background-color: unset !important;
+      color: unset !important;
+  }
+</style>
+
+```{css echo=FALSE}
+.highlight-last-item > ul > li,
+.highlight-last-item > ol > li {
+  opacity: 0.5;
+}
+.highlight-last-item > ul > li:last-of-type,
+.highlight-last-item > ol > li:last-of-type {
+  opacity: 1;
+}
+```
+
+
+```{r echo = FALSE, purl=FALSE}
+xaringanthemer::style_duo(
+  primary_color = "#212121",
+  secondary_color = "#bff4ee",
+  link_color = "#b1ead6",
+  text_bold_color = "#4dc6e2",
+  table_row_border_color = "#212121",
+  table_row_even_background_color = "#212121",
+  footnote_font_size = "0.6em",
+  header_font_google = xaringanthemer::google_font("Roboto Condensed", "700"),
+  text_font_google   = xaringanthemer::google_font("Roboto Condensed", "400")
+)
+
+xaringanExtra::use_xaringan_extra(c("tile_view", 
+                                    "animate_css", 
+                                    "tachyons"))
+
+xaringanExtra::use_logo(
+  image_url = here::here("static", "img", "course_hex.png"),
+  link_url = "https://edp618.asocialdatascientist.com",
+  position = xaringanExtra::css_position(top = "1em", right = "1em")
+)
+```
+
+```{r setup, include=FALSE, purl=FALSE}
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+library(fontawesome)
+library(here)
+library(clt)
+library(showtext)
+font_add_google("Roboto Condensed", "roboto")
+showtext_auto()
+```
+
+```{r echo = FALSE, purl=FALSE}
+xaringanthemer::style_duo(
+  primary_color = "#212121",
+  secondary_color = "#bff4ee",
+  table_row_border_color = "#212121",
+  table_row_even_background_color = "#212121",
+  footnote_font_size = "0.6em",
+  header_font_google = xaringanthemer::google_font("Roboto Condensed", "700"),
+  text_font_google   = xaringanthemer::google_font("Roboto Condensed", "400")
+)
+
+xaringanExtra::use_xaringan_extra(c("tile_view", 
+                                    "animate_css", 
+                                    "tachyons"))
+
+xaringanExtra::use_logo(
+  image_url = here::here("static", "img", "course_hex.png"),
+  link_url = "https://edp612.asocialdatascientist.com",
+  position = xaringanExtra::css_position(top = "1em", right = "1em")
+)
+
+```
+
+## Preprocessing
+
+---
+
+### Spreadsheets
+
+--
+
++ Enter variables in columns
+
+--
+
++ Limit yourself to one value (piece of information) per cell
+
+--
+
++ Try to avoid using multiple sheets if possible
+
+--
+
++ Do not create a table within a sheet
+
+--
+
++ Avoid merging cells
+
+--
+
++ For dates, follow ISO 8601 formatting **YYYYMMDD** or ISO 8601 extended formatting **YYYYMMDDhhmmss** (e.g. Nov 7, 2022 becomes 20221107)
+
+--
+
++ Always save as a `.csv` file!
+
+---
+
+### Anonymizing Data
+
+--
+
+What is good and bad about these anonymiziation attempts?
+
+--
+
+.pull-left[So my first workplace was <i>X</i> which was about <i>X</i>
+minutes from my home in <i>X</i>. My best colleagues from day one were
+<i>X</i>, <i>X</i> and <i>X</i> and in fact, I am still very good friends with <i>X</i> to this
+day. <i>X</i> lives in the some parish still with her husband <i>X</i> and their <i>X</i>
+<i>X</i>.]
+
+.pull-right[<i>So my first workplace was [name] which was about
+20 minutes from my home in Norwich. My best colleagues from day
+one were Anna, Julie, and Louise and in fact, I am still very good
+friends with Julie to this day. She lives in the some parish still with
+her husband Owen and their son Ryan.</i>]
+
+---
+
+### Tips
+
+--
+
++ Switch direct identifiers (name, dote, place) or generalize them 
+
+  - **Anna** to **[Beth]** or **[Friend 1]**
+
+  - **Julie** to **[Nicole]** or **[Friend 2]**
+  
+--
+
++ Remote or generalize indirect identifiers, which con ID when combined
+
+  - **born in 1986** to **born in [the 1980s]**
+  
+  - **a white data librarian** to **white [academic] librarian**
+  
+  - **in Morgantown** to **in [a Northern Region]**, **[West Virginia]**, or **[Appalachia]**
+  
+--
+
++ Consider removing sensitive and/or 
+
+  - **my teacher is the worst** to **[comment redacted]**
+  
+  - **I hid all of my lottery winnings under my bed** to **[location redacted]**
+  
+---
+
+## Taguette
+
+--
+
+- Free and open source
+
+--
+
+- Custom toggling options
+
+--
+
+- Lower barrier to entry
+
+--
+
+- Data and tags stay your own or can be shared
+
+--
+
+- Mostly easy to import and export
+
+--
+
+- Does not currently support audio, video, image, or spreadsheet files
+
+---
+
+Taguette uses [Calibre](https://calibre-ebook.com/) to convert your documents to HTML for tagging. It
+can work with
+
+--
+
+- Microsoft Word files (`.docx`)
+
+--
+
+- LibreOffice files (`.odt`)
+
+--
+
+- PDFs (`.pdf`)
+
+--
+
+- Plain text (`.txt`)
+
+--
+
+- Rich text (`.rtf`)
+
+--
+
+- HTML (`.html`)
+
+---
+
+## Task (Part I)
+
+--
+
+1. Open up Taguette (preferably using the [server](https://app.taguette.org/) but a local copy will do)
+
+--
+
+2. Find a partner and settle on one of the open text data sets
+
+--
+
+3. Select **Create a new project**, name it whatever you want, and add your name
+
+--
+
+4. Add codes to the text
+
+--
+
+5. After finishing, go to **Project info > Export project** and send that file to your partner
+
+--
+
+6. Load your partner's project by selecting **Home > Import a project file**
+
+---
+
+## Before You Go!
+
+--
+
+1. Open RStudio
+
+--
+
+2. In the Console, run `install.packages("remotes")`
+
+--
+
+3. Then run `remotes::install_github("ropenscilabs/qcoder")`
+
+--
+
+4. Take a look at the examples on the [`qcoder` documentation page ](https://docs.ropensci.org/qcoder/)
+
+---
+
+#  That’s It! 
+
+Any questions?
+
+--
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<center>
+<br><br>
+<div class="fade_rule"></div>  
+<br><br>
+</center>
+
+<center>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><br />This work is licensed under a <br /><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>
+</center>

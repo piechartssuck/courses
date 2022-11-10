@@ -29,6 +29,8 @@ wk_post <-
   tibble(
 
 Description = c("Review the <i>Comparison Chart</i> for comparing QDA tools at NYU Libraries",
+               "Begin the module <span style='color:#ffc787;font-weight:bold'><i>Communicating with Data in the Tidyverse</i></span>",
+                "Review the slideshow <span style='color:#6ac4cd;font-weight:bold'>A Brief Overview of Qualitative Data Analysis</span> after class",
                 "Download and install <b>Taguette</b> if you have not done so already",
                 "Go through the <i>Getting started with Taguette</i> guide to get yourself a bit familiarized with the platform",
                 "Submit your fifth deliverable <span style='color:#6acda5;font-weight:bold'>Refine the Draft</span> after recieving feedback on the fourth submission"
@@ -36,17 +38,23 @@ Description = c("Review the <i>Comparison Chart</i> for comparing QDA tools at N
 
 
 Details = c("<a href='/readings/10-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+             "<a href='/modules/10-module/#data-camp'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/tasks/10-task/#inclassnotes'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/tasks/10-task/#taguette'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/tasks/10-task/#taguette'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/deliverables/05-l5/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
             ),
 
 Icon = c("webpage",
+         "dc",
+         "slideshow",
          "webpage",
          "webpage",
          "ecampus"),
 
 Site = c("/readings/10-readings/#download-literature",
+         "https://www.datacamp.com",
+         "",
          "https://www.taguette.org/install.html",
          "https://www.taguette.org/getting-started.html",
          "https://ecampus.wvu.edu/")

@@ -4,7 +4,7 @@ menu:
   resources:
     parent: References
 type: docs
-weight: 5
+weight: 3
 output:
   blogdown::html_page:
       toc: TRUE

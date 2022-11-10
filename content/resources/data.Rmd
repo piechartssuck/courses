@@ -4,7 +4,7 @@ menu:
   resources:
     parent: References
 type: docs
-weight: 2
+weight: 1
 ---
 
 There are a ton of places to find data related to whatever you want. The ones below are some of the more larger repositories:

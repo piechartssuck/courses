@@ -8,7 +8,7 @@ output:
   rmarkdown::html_document:
     toc: true
 type: docs
-weight: 9
+weight: 5
 ---
 
 {{% r-walkthrough-header %}}

@@ -1,0 +1,103 @@
+---
+title: "Qualifying Qualitatives"
+linktitle: "Week 9: Qualifying Qualitatives"
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  trainings:
+    parent: Modules
+    weight: 9
+type: docs
+weight: 1
+---
+
+`r blogdown::shortcode("r-walkthrough-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+## Data Camp
+
+Please finish up the following module
+
+```{r eval = TRUE, echo = FALSE, message=FALSE}
+dc_schedule <-  
+  read_csv(here::here("content", "dc.csv"),
+           show_col_types = FALSE) %>%
+  as_tibble() %>%
+  mutate(Required = case_when(
+    Required == "checked" ~ as.character(fontawesome::fa("circle-check", fill = "#428bca", height = "15px")),
+    Required == "unchecked" ~ as.character(fontawesome::fa("circle-xmark", fill = "#d9534f", height = "15px"))
+              )) %>%
+  mutate(Task = case_when(
+    Task == "checked" ~ as.character(fontawesome::fa("circle-check", fill = "#428bca", height = "15px")),
+    Task == "unchecked" ~ as.character(fontawesome::fa("circle-xmark", fill = "#d9534f", height = "15px"))
+      )
+    ) %>%
+  filter(Set == 6) %>% #CHANGE HERE
+  select(-Set) %>%
+  mutate(across(everything(), as.character)) %>%
+  mutate(across(everything(), str_squish)) %>%
+  rename(`Due by` = Due) %>%
+#  filter_all(any_vars(!is.na(.))) %>% 
+  mutate(
+    across(everything(), ~replace_na(.x, ""))
+    ) %>%
+  select_if(~!all(is.na(.)))
+  
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(dc_schedule, 
+      "html", 
+      escape = FALSE,
+      align = 'ccccll') %>%
+  kable_paper(full_width = TRUE) %>%
+  column_spec(1, width = "5em") %>%
+  column_spec(2, width = "5em") %>%
+  column_spec(3, width = "5em") %>%
+  column_spec(4, width = "5em") %>%
+  column_spec(5, width = "8em") %>%
+  column_spec(6, width = "8em") %>%
+  row_spec(0:nrow(dc_schedule), extra_css = 'vertical-align: middle !important;', color = "#f7f7f7", background = "transparent")
+```
+</center>
+
+## R Task
+
+Please follow the directions listed below
+
+1. Download the task files
+
+<center>
+```{r echo=FALSE,eval=TRUE,message=FALSE}
+loc <- here::here("static", "rtasks", "Joins.zip")
+
+downloadthis::download_file(
+  path = loc,
+  output_name = "Joins Task",
+  button_label = "&nbsp;&nbsp;&nbsp;<span style='color:#ffffff'>Download</span>",
+  button_type = "primary",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+</center>
+<br>
+
+2. [Unzip](/resources/unzipping) them on your computer
+
+3. Open the file `Joins Install.R` and run the syntax to install the packages you will need for this task
+
+4. Open the file `Joins walkthrough.Rmd` in RStudio
+
+5. After finishing the walkthrough, open the mostly empty Rmarkdown file `Joins Report.Rmd`, read through the body, and please make changes as directed to receive credit
+
+6. Save the resulting PDF file by adding your first initial and last name to the beginning of the filename. For example, my submission would be `aroy Joins walkthrough.pdf`
+
+8. Submit the script to [eCampus](https://ecampus.wvu.edu) in the Submission Portal
