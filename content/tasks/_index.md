@@ -127,7 +127,7 @@ Week 13: Revise and Resubmit
 </summary>
 <br>
 <p>
-Finalize your paper between 1500 - 2000 words and create a one page infographic summarizing your intended study to accompany teh submission.
+Finalize your paper between 1750 - 2000 words and create a one page infographic summarizing your intended study to accompany the submission.
 </p>
 </details>
 

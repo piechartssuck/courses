@@ -31,14 +31,14 @@ wk_post <-
 Description = c("Look at an excellent collection of reviews of commercially available and free/open source qualitative softwares by going to <i>Choosing an appropriate CAQDAS package</i> over at Surrey University",
                  "Finish the module <span style='color:#ffc787;font-weight:bold'><i>Communicating with Data in the Tidyverse</i></span>",
                 "Review the slideshow <span style='color:#6ac4cd;font-weight:bold'>Getting Familiar with Preprocessing</span> after class",
-                "Begin your sixth deliverable <span style='color:#6acda5;font-weight:bold'>Refine the Draft</span> after recieving feedback on the fifth submission"
+                "Begin your sixth deliverable <span style='color:#6acda5;font-weight:bold'>Revise and Resubmit/span> after recieving feedback on the fifth submission"
                 ),
 
 
 Details = c("<a href='/readings/11-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/modules/11-module/#data-camp'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/tasks/11-task/#inclassnotes'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
-            "<a href='/deliverables/05-l5/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
+            "<a href='/deliverables/06-l6/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
             ),
 
 Icon = c("webpage",
