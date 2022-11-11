@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Principal Component Analysis</title>
+    <title>Power and Design</title>
     <meta charset="utf-8" />
     <meta name="author" content="Dr. Abhik Roy" />
-    <script src="power-analysis-flat_files/header-attrs-2.17/header-attrs.js"></script>
+    <script src="power-analysis-flat_files/header-attrs-2.18/header-attrs.js"></script>
     <link href="power-analysis-flat_files/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
     <script src="power-analysis-flat_files/tile-view-0.2.6/tile-view.js"></script>
     <link href="power-analysis-flat_files/animate.css-3.7.2/animate.xaringan.css" rel="stylesheet" />
@@ -12,13 +12,25 @@
     <link href="power-analysis-flat_files/panelset-0.2.6/panelset.css" rel="stylesheet" />
     <script src="power-analysis-flat_files/panelset-0.2.6/panelset.js"></script>
     <script src="power-analysis-flat_files/htmlwidgets-1.5.4/htmlwidgets.js"></script>
-    <script src="power-analysis-flat_files/plotly-binding-4.10.0/plotly.js"></script>
-    <script src="power-analysis-flat_files/typedarray-0.1/typedarray.min.js"></script>
-    <script src="power-analysis-flat_files/jquery-3.5.1/jquery.min.js"></script>
+    <link href="power-analysis-flat_files/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+    <script src="power-analysis-flat_files/datatables-binding-0.26/datatables.js"></script>
+    <script src="power-analysis-flat_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+    <link href="power-analysis-flat_files/dt-core-1.12.1/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="power-analysis-flat_files/dt-core-1.12.1/css/jquery.dataTables.extra.css" rel="stylesheet" />
+    <script src="power-analysis-flat_files/dt-core-1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="power-analysis-flat_files/jszip-1.12.1/jszip.min.js"></script>
+    <script src="power-analysis-flat_files/pdfmake-1.12.1/pdfmake.js"></script>
+    <script src="power-analysis-flat_files/pdfmake-1.12.1/vfs_fonts.js"></script>
+    <link href="power-analysis-flat_files/dt-ext-buttons-1.12.1/css/buttons.dataTables.min.css" rel="stylesheet" />
+    <script src="power-analysis-flat_files/dt-ext-buttons-1.12.1/js/dataTables.buttons.min.js"></script>
+    <script src="power-analysis-flat_files/dt-ext-buttons-1.12.1/js/buttons.html5.min.js"></script>
+    <script src="power-analysis-flat_files/dt-ext-buttons-1.12.1/js/buttons.colVis.min.js"></script>
+    <script src="power-analysis-flat_files/dt-ext-buttons-1.12.1/js/buttons.print.min.js"></script>
     <link href="power-analysis-flat_files/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
     <script src="power-analysis-flat_files/crosstalk-1.2.0/js/crosstalk.min.js"></script>
-    <link href="power-analysis-flat_files/plotly-htmlwidgets-css-2.5.1/plotly-htmlwidgets.css" rel="stylesheet" />
-    <script src="power-analysis-flat_files/plotly-main-2.5.1/plotly-latest.min.js"></script>
+    <script src="power-analysis-flat_files/kePrint-0.0.1/kePrint.js"></script>
+    <link href="power-analysis-flat_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
+    <script src="power-analysis-flat_files/twitter-widget-0.0.1/widgets.js"></script>
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
     <link rel="stylesheet" href="custom.css" type="text/css" />
   </head>
@@ -27,10 +39,10 @@
 class: center, middle, inverse, title-slide
 
 .title[
-# Principal Component Analysis
+# Power and Design
 ]
 .subtitle[
-## EDP 619 Week 10
+## EDP 619 Week 13
 ]
 .author[
 ### Dr. Abhik Roy
@@ -39,79 +51,107 @@ class: center, middle, inverse, title-slide
 ---
 
 
-&lt;style&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"&gt;&lt;/script&gt;
 
+&lt;script type="text/x-mathjax-config"&gt;
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+  MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+    cancel: ["Extension","cancel"],
+    bcancel: ["Extension","cancel"],
+    xcancel: ["Extension","cancel"],
+    cancelto: ["Extension","cancel"]
+  });
+});
+&lt;/script&gt;
+
+&lt;style&gt;
 section {
     display: flex;
     display: -webkit-flex;
-}
-
-section p {
-    margin: auto;
 }
 
 section {
     height: 600px;
     width: 60%;
     margin: auto;
-    border-radius: 20px;
+    border-radius: 21px;
     background-color: #212121;
+}
+
+.remark-slide-container {
+background: #212121;
+}
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
+}
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
+}
+
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
+}
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
 }
 
 section p {
     text-align: center;
     font-size: 30px;
     background-color: #212121;
-    border-radius: 20px;
+    border-radius: 21px;
     font-family: Roboto Condensed;
     font-style: bold;
-    padding: 15px;
+    padding: 12px;
     color: #bff4ee;
+    margin: auto;
 }
 
-.centerTop {
-  margin: 0;
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+#center {
+text-align: center;
 }
 
-.centerCenter {
+#right {
+  text-align: right;
+} 
+
+.center p {
   margin: 0;
   position: absolute;
   top: 50%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-}
-
-.centerBottom {
-  margin: 0;
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-.alignr {
-text-align: right;
-}
-
-.footsbs {
-   width: 100%;
-   text-align: center;
-   display: block;
-   margin: auto;
-   padding-left: 30px;
-   padding-right: 30px;
-}
-
-.footsbsimg {
-padding-left: 5px;
-padding-right: 5px;
 }
 
 .center2 {
@@ -123,6 +163,197 @@ padding-right: 5px;
   transform: translate(-50%, -50%);
 }
 
+.tab {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.tabdbl {
+    display: inline-block;
+    margin-left: 80px;
+}
+
+.tabtpl {
+    display: inline-block;
+    margin-left: 120px;
+}
+
+
+.obr
+{
+    display:block;
+    margin-top:-15px;
+}
+
+.pull-left-left {
+  float: left;
+  width: 27%;
+}
+
+.pull-right-right {
+  float: right;
+  width: 32%;
+}
+
+img.expand:hover {
+  margin: 0 auto;
+  position: relative;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  transform: scale(1.5)             
+  translateX(-35%);
+  z-index: 99;
+  transition:all 0.5s ease-in-out;
+  -webkit-transition:all 0.2s ease-in-out;
+}
+
+.vertline {
+  border-left: 5px solid #212121;
+  height: 100px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+*, *:before, *:after {
+	 box-sizing: border-box;
+	 outline: none;
+}
+
+.hover {
+	 position: relative;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 width: 400px;
+	 height: 65px;
+	 background-color: #e3c0ff;
+	 border-radius: 99px;
+	 box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	 transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+	 overflow: hidden;
+}
+
+ .hover:before, .hover:after {
+	 position: absolute;
+	 top: 0;
+	 display: flex;
+	 align-items: center;
+   justify-content: center;
+	 width: 50%;
+	 height: 100%;
+	 transition: 0.25s linear;
+	 z-index: 1;
+}
+
+ .hover:before {
+	 content: '';
+	 left: 0;
+	 background-color: #ca86ec;
+   color: #212121;
+}
+
+ .hover:after {
+	 content: '';
+	 right: 0;
+	 background-color: #d896ff;
+}
+
+ .hover:hover {
+	 background-color: #cc8bff;
+	 box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+ .hover:hover span {
+	 opacity: 0;
+	 z-index: -3;
+}
+
+ .hover:hover:before {
+	 opacity: 0.5;
+	 transform: translateY(-100%);
+}
+
+ .hover:hover:after {
+	 opacity: 0.5;
+	 transform: translateY(100%);
+}
+
+ .hover span {
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 text-align: center;
+	 width: 100%;
+	 height: 100%;
+	 color: #212121;
+	 font-size: 24px;
+	 font-weight: 700;
+	 opacity: 1;
+	 transition: opacity 0.25s;
+	 z-index: 2;
+   white-space:pre;
+}
+
+ .hover .doc-link {
+	 position: relative;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 text-align: center;
+	 width: 25%;
+	 height: 100%;
+	 color: whitesmoke;
+	 font-size: 24px;
+	 text-decoration: none;
+	 transition: 0.25s;
+}
+ .hover .doc-link i {
+	 text-shadow: 1px 1px rgba(70, 98, 127, 0.7);
+	 transform: scale(1);
+}
+ .hover .doc-link:hover {
+	 background-color: rgba(245, 245, 245, 0.1);
+}
+ .hover .doc-link:hover i {
+	 animation: bounce 0.4s linear;
+}
+ @keyframes bounce {
+	 40% {
+		 transform: scale(1.4);
+	}
+	 60% {
+		 transform: scale(0.8);
+	}
+	 80% {
+		 transform: scale(1.2);
+	}
+	 100% {
+		 transform: scale(1);
+	}
+}
+
+.boxl {
+    width: 50%;
+    margin: 5px;
+    text-align: center;
+}
+
+.boxr {
+    margin: 5px;
+    text-align: center;
+}
+
+.picr {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 &lt;/style&gt;
 
 
@@ -172,9 +403,10 @@ top:1em;right:1em;
 })()</script>
 </div>
 
+
 # Welcome! 
 
-There are a lot of things going on behind the scenes when using PCAs and this is just a very brief introduction without any audio. I have tried to minimize the jargon and complexity, though some items may not be as clear as others. If you have questions, please feel free to reach out.
+This is an absolutely minimalist overview of power analysis and the reasons it matters. If you want a deeper dive, consider enrolling in an advanced statistics course like [Power and Sample Size for Multilevel and Longitudinal Study Designs](https://www.coursera.org/learn/power-sample-size) for free. In the meantime, remember that you can explore power and its relationships interactively at [Understanding Statistical Power and Significance Testing](https://rpsychologist.com/d3/nhst/).
 
 Additionally you may notice the following icons in the footnotes. These contain links to external sites that provide extra materials that may be of interest to you. 
 &lt;br&gt;
@@ -191,63 +423,1243 @@ Additionally you may notice the following icons in the footnotes. These contain 
 &lt;/div&gt;
 &lt;/center&gt;
 
-&lt;!-- 
-Some information about the audio files. Firstly and importantly, I'm no Morgan Freeman but each page will have some audio that will hopefully help you understand a bit more about what's on the page
+---
 
+# Something Important
 
-&lt;center&gt;
-&lt;audio controls preload="auto"&gt;
-  &lt;source src="audio/criteria/S1_Introduction.mp3" type="audio/mpeg"&gt;
-  Your browser does not support embedded audio.
-&lt;audio&gt;
-&lt;/center&gt;
---&gt;
+.center2[&lt;span style="color:#8ec9bb; font-weight: bold; font-style: italic;"&gt;(Statistical) Power&lt;/span&gt; and its corresponding analysis are by far one of the most misunderstood concepts, in that a lot of people think they know what it is but simply miss the point.]
+
+.footnote[Please note that you will need to recall some concepts covered in an introductory statistics course]
 
 ---
 
 # Prerequisites
 
-This slideshow assumes that you have a basic understanding of variance and correlations. For a refresher, please take a look at both reviews below
+Before going ahead, make sure that you have a basic understanding of sampling and hypothesis testing. For a refresher, please take a look at both reviews on the next page
+
+---
+
+## Review
+
+If you would like a deeper dive on either area, please click on the icons below
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+--
+
+&lt;br&gt;
+.pull-left[
+&lt;center&gt;
+
+&lt;span style="color:#00b0cc; font-weight: bold; font-style: italic;"&gt;Sampling&lt;/span&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;/center&gt;
+&lt;center&gt;
+ &lt;a href="https://youtu.be/67zCIqdeXpo"&gt;
+&lt;img src="img/youtube-ico.png" height="100px" style="background-color:#212121;"/&gt;
+&lt;/a&gt;
+&lt;/center&gt;
+]
+
+
+--
+
+.pull-right[
+&lt;center&gt;
+
+&lt;span style="color:#00b0cc; font-weight: bold; font-style: italic;"&gt;Hypothesis Testing&lt;/span&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;/center&gt;
+&lt;center&gt;
+ &lt;a href="https://youtu.be/0oc49DyA3hU"&gt;
+&lt;img src="img/youtube-ico.png" height="100px" style="background-color:#212121;"/&gt;
+&lt;/a&gt;
+&lt;/center&gt;
+]
+
+---
+
+# &lt;span style="color:#8ec9bb; font-weight: bold; font-style: italic;"&gt;(Statistical) Power&lt;/span&gt;
+
+---
+
+# Definition
+
+--
+
+.center2[&lt;span style="color:#8ec9bb; font-weight: bold; font-style: italic;"&gt;(Statistical) Power&lt;/span&gt; is the probability of avoiding a Type II error &lt;i&gt;aka&lt;/i&gt; detecting an effect if it exists]
+
+
+---
+
+# Dodging False Negatives  
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;center&gt;
+&lt;img src="img/powerdodge.png" width="75%"/&gt;
+&lt;/center&gt;
+
+---
+
+# Influences
+
+--
+
+&gt; Effect size
+
+--
+
+&gt; Sample size
+
+--
+
+&gt; Significance level
+
+---
+
+## Some Things You Should Be Aware of
 
 --
 
 .pull-left[
-.bg-washed.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
-**Variance** is essentially a measure of the spread between points in a data set. Specifically it tells us how far each data point in a set is from the mean and by proxy from every other data point in that set.&lt;br&gt;&lt;br&gt;
-&lt;center&gt;
-&lt;img src="img/variance_card.png" height="180px" style="background-color:#212121;"/&gt;
-&lt;/center&gt;&lt;br&gt;]
+Power is usually set at 80%, but that is not a hard rule by any means
 ]
 
 --
 
 .pull-right[
-.bg-washed.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
-**Correlation** gives you an idea of the strength or weakness of the relationship between two variables. In a survey where each item is set to measure a single construct, these are essentially the applicable questions.&lt;br&gt;
-&lt;center&gt;
-&lt;img src="img/correlation_card.png" height="180px" style="background-color:#212121;"/&gt;
-&lt;/center&gt;&lt;br&gt;]
+This means if there are actual effects detected in 100 different studies with 80% power, then 80 out of 100 statistical tests will actually detect them
+]
+
+--
+
+.pull-left[
+If you have an *underpowered* design, you may not be able detect a true effect
+]
+
+--
+
+.pull-right[
+If you have an *overpowered* design, you may detect very small effects that are of no practical relevance&lt;sup&gt;1&lt;/sup&gt;
+]
+
+.footnote[The real problem isn't that *overpowered* experiments may reveal tiny significant effects, rather it is that many academic fields and popular science reporting standard in general emphasize "statistical significance" - *a meaningless term itself* - over effect sizes - aka practical significance. And if you're wondering, by "statistical significance" I mean the *p*-value which is [generally garbage](https://www.tandfonline.com/doi/full/10.1080/00031305.2019.1583913), should be used sparingly, and if you must use it, never report the findings by themselves because they are useless]
+
+--
+
+.pull-left[
+We want the Type I error rate to be reasonably low which is why you often see a default of `\(\alpha = 0.05\)`
+]
+
+--
+
+.pull-right[
+We want power to be high enough to minimize a Type II error ( `\(\beta\)` ) so we reduce the chance of missing an effect
 ]
 
 ---
 
-# More Review
+# Using &lt;span style="color:#8ec9bb; font-weight: bold; font-style: italic;"&gt;(Statistical) Power&lt;/span&gt;
 
-If you would like a deeper dive on either area, tale a look at the videos below
+
+.center2[A ***power analysis*** is the procedure that researchers can use to determine if the test contains enough power to make a reasonable conclusion. It can also be used to calculate the number of samples required to achieve a specified level of power]
+
+---
+
+## In a Nutshell
+
+--
+
+.center2[A ***power analysis*** is a calculation that can help you to determine a minimum sample size for your study]
+
+---
+
+## Four Components
+
+--
+
+.pull-left[
+&lt;br&gt;
+&lt;p id="center" style="color:#74cbda; font-weight: bold; border:1px; border-style:solid; border-color:#74cbda; border-radius: 25px; padding: 0.3em;"&gt;
+&lt;i&gt;Expected effect size&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+standardized way of expressing the magnitude of the expected result of your study typically based on similar studies or a pilot study
+&lt;/p&gt;
+]
+
+--
+
+.pull-right[
+&lt;br&gt;
+&lt;p id="center" style="color:#bca0dc; font-weight: bold; border:1px; border-style:solid; border-color:#bca0dc; border-radius: 25px; padding: 0.3em;"&gt;
+&lt;i&gt;Sample size&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+the minimum number of observations needed to observe an effect of a certain size with a given power level
+&lt;/p&gt;
+]
+
+--
+
 &lt;br&gt;
 &lt;br&gt;
+.pull-left[
+&lt;p id="center" style="color:#e69288; font-weight: bold; border:1px; border-style:solid; border-color:#e69288; border-radius: 25px; padding: 0.3em;"&gt;
+&lt;i&gt;Significance level ( `\alpha` )&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+the maximum risk of rejecting a true null hypothesis that you are willing to take - typically set at 5% or lower
+&lt;/p&gt;
+]
+
+--
+
+.pull-right[
+&lt;p id="center" style="color:#8ec9bb; font-weight: bold; border:1px; border-style:solid; border-color:#8ec9bb; border-radius: 25px; padding: 0.3em;"&gt;
+&lt;i&gt;(Statistical) Power&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+the likelihood that a test will detect an effect of a certain size if there is one - typically set at 80% or higher
+&lt;/p&gt;
+]
+
+--
+
+.footnote[If you have any of the three parameters above, then you can also calculate the fourth one]
+
+---
+
+# A Rundown of Power Analysis in <svg aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:steelblue;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+
+---
+
+## Getting Ready
+
+To follow along, please make sure to do the following
+
+--
+
+1. Open up a blank `.R` script 
+
+--
+
+2. Run `install.packages("pwr", dependencies = TRUE)` in the Console
+
+--
+
+3. Load up the `pwr` package by running
+    
+    ```r
+    library(pwr)
+    ```
+    
+    
+
+---
+
+## List of Commands
+
+
+
+<div id="htmlwidget-e9ba68a98a66f8bb9e1a" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e9ba68a98a66f8bb9e1a">{"x":{"filter":"none","vertical":false,"extensions":["Buttons"],"data":[["&lt;kbd&gt;pwr.2p.test&lt;/kbd&gt;","&lt;kbd&gt;pwr.2p2n.test&lt;/kbd&gt;","&lt;kbd&gt;pwr.anova.test&lt;/kbd&gt;","&lt;kbd&gt;pwr.chisq.test&lt;/kbd&gt;","&lt;kbd&gt;pwr.f2.test&lt;/kbd&gt;","&lt;kbd&gt;pwr.p.test&lt;/kbd&gt;","&lt;kbd&gt;pwr.r.test&lt;/kbd&gt;","&lt;kbd&gt;pwr.t.test&lt;/kbd&gt;","&lt;kbd&gt;pwr.t2n.test&lt;/kbd&gt;"],["Two proportions (equal &lt;i&gt;n&lt;/i&gt;)","Two proportions (unequal &lt;i&gt;n&lt;/i&gt;)","Balanced one-way ANOVA","Chi-square test","General linear model","Proportion (one sample)","Correlation","&lt;i&gt;t&lt;/i&gt;-tests (one sample, two samples, paired)","&lt;i&gt;t&lt;/i&gt;-test (two samples with unequal &lt;i&gt;n&lt;/i&gt;)"]],"container":"<table class=\"FALSE\">\n  <thead>\n    <tr>\n      <th>Syntax<\/th>\n      <th>Description<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"searching":false,"autoWidth":false,"dom":"Brti","buttons":["copy","csv","excel","pdf"],"lengthMenu":false,"initComplete":"function(settings, json) {\n$(this.api().table().header()).css({'color': '#fff'});\n}","columnDefs":[],"order":[],"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[0]; $(this.api().cell(row, 0).node()).css({'color':'white','background-color':'#212121'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'color':'white','background-color':'#212121'});\n}"},"callback":"function(table) {\n$(\"button.buttons-copy\").css(\"color\",\"#bb86fc\"); \n                           $(\"button.buttons-csv\").css(\"color\",\"#bb86fc\"); \n                           $(\"button.buttons-excel\").css(\"color\",\"#bb86fc\"); \n                           $(\"button.buttons-pdf\").css(\"color\",\"#bb86fc\"); \n                            return table;\n}"},"evals":["options.initComplete","options.rowCallback","callback"],"jsHooks":[]}</script>
+
+---
+
+### *t*-test
+
+---
+
+#### &lt;span style="color:#bff4ee"&gt;Equal Groups&lt;/span&gt;
+
+&lt;center&gt;&lt;kbd&gt;pwr.t.test(n=, d=, sig.level=, power=, type=, alternative=)&lt;/kbd&gt;&lt;/center&gt;
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;table class="table table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;vertical-align: middle !important;"&gt; Option &lt;/th&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;vertical-align: middle !important;"&gt; Description &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;kbd&gt;n&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; background-color: #212121 !important;vertical-align: middle !important;"&gt; Sample size &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;kbd&gt;d&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; background-color: #212121 !important;vertical-align: middle !important;"&gt; Power level &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;sig.level&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Significance level (default of 0.05) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;type&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Choice of &lt;i&gt;t&lt;/i&gt;-test - either &lt;kbd&gt;"two.sample"&lt;/kbd&gt; (default), &lt;kbd&gt;"one.sample"&lt;/kbd&gt;, or &lt;kbd&gt;"paired"&lt;/kbd&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;alternative&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Choice of direction - either &lt;kbd&gt;"two.sided"&lt;/kbd&gt; (default), &lt;kbd&gt;"less"&lt;/kbd&gt;, or &lt;kbd&gt;"greater"&lt;/kbd&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+
+count: false
+ 
+
+.panel1-sw1-auto[
+
+```r
+# Equal Groups
+
+*pwr.t.test(d = 0.8,
+*          sig.level = 0.05,
+*          power = 0.8,
+*          type = "two.sample",
+*          alternative = "two.sided")
+```
+]
+ 
+.panel2-sw1-auto[
+
+```
+## 
+##      Two-sample t test power calculation 
+## 
+##               n = 25.52458
+##               d = 0.8
+##       sig.level = 0.05
+##           power = 0.8
+##     alternative = two.sided
+## 
+## NOTE: n is number in *each* group
+```
+]
+
+&lt;style&gt;
+.panel1-sw1-auto {
+  color: white;
+  width: 44.1%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw1-auto {
+  color: white;
+  width: 53.9%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw1-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+#### &lt;span style="color:#bff4ee"&gt;Unequal Groups&lt;/span&gt;
+
+&lt;center&gt;&lt;kbd&gt;pwr.t2n.test(n1=, n2=, d=, sig.level=, power=, type=, alternative=)&lt;/kbd&gt;&lt;/center&gt;
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;table class="table table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;vertical-align: middle !important;"&gt; Option &lt;/th&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;vertical-align: middle !important;"&gt; Description &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;kbd&gt;n1&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; background-color: #212121 !important;vertical-align: middle !important;"&gt; One sample size &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;kbd&gt;n2&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; background-color: #212121 !important;vertical-align: middle !important;"&gt; The other sample size &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;d&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Power level &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;sig.level&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Significance level (default of 0.05) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;type&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Choice of &lt;i&gt;t&lt;/i&gt;-test - either &lt;kbd&gt;"two.sample"&lt;/kbd&gt; (default), &lt;kbd&gt;"one.sample"&lt;/kbd&gt;, or &lt;kbd&gt;"paired"&lt;/kbd&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;alternative&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Choice of direction - either &lt;kbd&gt;"two.sided"&lt;/kbd&gt; (default), &lt;kbd&gt;"less"&lt;/kbd&gt;, or &lt;kbd&gt;"greater"&lt;/kbd&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+
+count: false
+ 
+
+.panel1-sw2-auto[
+
+```r
+# Unequal Groups
+
+*pwr.t2n.test(n1 = 28,
+*            n2 = 35,
+*            d = 0.5)
+```
+]
+ 
+.panel2-sw2-auto[
+
+```
+## 
+##      t test power calculation 
+## 
+##              n1 = 28
+##              n2 = 35
+##               d = 0.5
+##       sig.level = 0.05
+##           power = 0.4924588
+##     alternative = two.sided
+```
+]
+
+&lt;style&gt;
+.panel1-sw2-auto {
+  color: white;
+  width: 44.1%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw2-auto {
+  color: white;
+  width: 53.9%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw2-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+### ANOVA
+
+--
+
+&lt;center&gt;&lt;kbd&gt;pwr.anova.test(k=, n=, f=, sig.level=, power=)&lt;/kbd&gt;&lt;/center&gt;
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;table class="table table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;vertical-align: middle !important;"&gt; Option &lt;/th&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;vertical-align: middle !important;"&gt; Description &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;kbd&gt;k&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; background-color: #212121 !important;vertical-align: middle !important;"&gt; Number of groups &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;kbd&gt;n&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; background-color: #212121 !important;vertical-align: middle !important;"&gt; Common sample size in each group &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;f&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Effect size &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;sig.level&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Significance level (default of 0.05) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;power&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Power level &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+
+count: false
+ 
+
+.panel1-sw3-auto[
+
+```r
+*pwr.anova.test(k = 3,
+*              f = 0.25,
+*              sig.level = 0.05,
+*              power = 0.9)
+```
+]
+ 
+.panel2-sw3-auto[
+
+```
+## 
+##      Balanced one-way analysis of variance power calculation 
+## 
+##               k = 3
+##               n = 68.49707
+##               f = 0.25
+##       sig.level = 0.05
+##           power = 0.9
+## 
+## NOTE: n is number in each group
+```
+]
+
+&lt;style&gt;
+.panel1-sw3-auto {
+  color: white;
+  width: 44.1%;
+  hight: 32%;
+  float: below;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw3-auto {
+  color: white;
+  width: 53.9%;
+  hight: 32%;
+  float: below;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw3-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: below;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+### Correlations
+
+--
+
+&lt;center&gt;&lt;kbd&gt;pwr.r.test(n=, r=, sig.level=, power=, alternative=)&lt;/kbd&gt;&lt;/center&gt;
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;table class="table table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;vertical-align: middle !important;"&gt; Option &lt;/th&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;vertical-align: middle !important;"&gt; Description &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;kbd&gt;n&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; background-color: #212121 !important;vertical-align: middle !important;"&gt; Sample size &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;kbd&gt;r&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; background-color: #212121 !important;vertical-align: middle !important;"&gt; Effect size &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;sig.level&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Significance level (default of 0.05) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;power&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Power level &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;alternative&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Choice of direction - either &lt;kbd&gt;"two.sided"&lt;/kbd&gt; (default), &lt;kbd&gt;"less"&lt;/kbd&gt;, or &lt;kbd&gt;"greater"&lt;/kbd&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+
+count: false
+ 
+
+.panel1-sw4-auto[
+
+```r
+*pwr.r.test(r = 0.40,
+*          sig.level = 0.05,
+*          power = 0.80,
+*          alternative = "greater")
+```
+]
+ 
+.panel2-sw4-auto[
+
+```
+## 
+##      approximate correlation power calculation (arctangh transformation) 
+## 
+##               n = 36.50995
+##               r = 0.4
+##       sig.level = 0.05
+##           power = 0.8
+##     alternative = greater
+```
+]
+
+&lt;style&gt;
+.panel1-sw4-auto {
+  color: white;
+  width: 44.1%;
+  hight: 32%;
+  float: below;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw4-auto {
+  color: white;
+  width: 53.9%;
+  hight: 32%;
+  float: below;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw4-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: below;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+### General Linear Models
+
+--
+
+&lt;center&gt;&lt;kbd&gt;pwr.f2.test(u=, v=, f2=, sig.level=, power=) &lt;/kbd&gt;&lt;/center&gt;
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;table class="table table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;vertical-align: middle !important;"&gt; Option &lt;/th&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;vertical-align: middle !important;"&gt; Description &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;kbd&gt;u&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; background-color: #212121 !important;vertical-align: middle !important;"&gt; Numerator of degrees of freedom (df) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;kbd&gt;v&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; background-color: #212121 !important;vertical-align: middle !important;"&gt; Denominator of degrees of freedom (df) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;f2&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Effect size &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;sig.level&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Significance level (default of 0.05) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;power&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Power level &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+
+count: false
+ 
+
+.panel1-sw5-auto[
+
+```r
+*pwr.f2.test(u = 2,
+*           f2 = 0.3/(1 - 0.3),
+*           sig.level = 0.001,
+*           power = 0.8)
+```
+]
+ 
+.panel2-sw5-auto[
+
+```
+## 
+##      Multiple regression power calculation 
+## 
+##               u = 2
+##               v = 49.88971
+##              f2 = 0.4285714
+##       sig.level = 0.001
+##           power = 0.8
+```
+]
+
+&lt;style&gt;
+.panel1-sw5-auto {
+  color: white;
+  width: 44.1%;
+  hight: 32%;
+  float: below;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw5-auto {
+  color: white;
+  width: 53.9%;
+  hight: 32%;
+  float: below;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw5-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: below;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+### Tests of Proportions
+
+---
+
+#### &lt;span style="color:#bff4ee"&gt;Equal Groups&lt;/span&gt;
+
+&lt;center&gt;&lt;kbd&gt;pwr.2p.test(h=, n=, sig.level=, power=)&lt;/kbd&gt;&lt;/center&gt;
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;table class="table table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;vertical-align: middle !important;"&gt; Option &lt;/th&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;vertical-align: middle !important;"&gt; Description &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;kbd&gt;h&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; background-color: #212121 !important;vertical-align: middle !important;"&gt; Effect size &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;kbd&gt;n&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; background-color: #212121 !important;vertical-align: middle !important;"&gt; Sample size &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;sig.level&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Significance level (default of 0.05) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;power&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Power level &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+
+count: false
+ 
+
+.panel1-sw6-auto[
+
+```r
+# Equal Groups
+
+*pwr.2p.test(h = ES.h(p1 = 0.55, p2 = 0.50),
+*           sig.level = 0.05,
+*           power = 0.80)
+```
+]
+ 
+.panel2-sw6-auto[
+
+```
+## 
+##      Difference of proportion power calculation for binomial distribution (arcsine transformation) 
+## 
+##               h = 0.1001674
+##               n = 1564.529
+##       sig.level = 0.05
+##           power = 0.8
+##     alternative = two.sided
+## 
+## NOTE: same sample sizes
+```
+]
+
+&lt;style&gt;
+.panel1-sw6-auto {
+  color: white;
+  width: 44.1%;
+  hight: 32%;
+  float: below;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw6-auto {
+  color: white;
+  width: 53.9%;
+  hight: 32%;
+  float: below;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw6-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: below;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+#### &lt;span style="color:#bff4ee"&gt;Unequal Groups&lt;/span&gt;
+
+&lt;center&gt;&lt;kbd&gt;pwr.2p2n.test(h =, n1 =, n2 =, sig.level=, power=)&lt;/kbd&gt;&lt;/center&gt;
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;table class="table table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;vertical-align: middle !important;"&gt; Option &lt;/th&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;vertical-align: middle !important;"&gt; Description &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;kbd&gt;h&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; background-color: #212121 !important;vertical-align: middle !important;"&gt; Effect size &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;kbd&gt;n1&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; background-color: #212121 !important;vertical-align: middle !important;"&gt; One sample size &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;n2&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; The other sample size &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;sig.level&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Significance level (default of 0.05) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;power&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Power level &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;alternative&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Choice of direction - either &lt;kbd&gt;"two.sided"&lt;/kbd&gt; (default), &lt;kbd&gt;"less"&lt;/kbd&gt;, or &lt;kbd&gt;"greater"&lt;/kbd&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+
+count: false
+ 
+
+.panel1-sw7-auto[
+
+```r
+# Unequal Groups
+
+*pwr.2p2n.test(h = 0.2,
+*             n1 = 763,
+*             power = 0.8,
+*             sig.level = 0.05,
+*             alternative = "greater")
+```
+]
+ 
+.panel2-sw7-auto[
+
+```
+## 
+##      difference of proportion power calculation for binomial distribution (arcsine transformation) 
+## 
+##               h = 0.2
+##              n1 = 763
+##              n2 = 193.8285
+##       sig.level = 0.05
+##           power = 0.8
+##     alternative = greater
+## 
+## NOTE: different sample sizes
+```
+]
+
+&lt;style&gt;
+.panel1-sw7-auto {
+  color: white;
+  width: 44.1%;
+  hight: 32%;
+  float: below;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw7-auto {
+  color: white;
+  width: 53.9%;
+  hight: 32%;
+  float: below;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw7-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: below;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+### Chi-square
+
+--
+
+&lt;center&gt;&lt;kbd&gt;pwr.chisq.test(w =, N =, df =, sig.level =, power = )&lt;/kbd&gt;&lt;/center&gt;
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;table class="table table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;vertical-align: middle !important;"&gt; Option &lt;/th&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;vertical-align: middle !important;"&gt; Description &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;kbd&gt;w&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; background-color: #212121 !important;vertical-align: middle !important;"&gt; Effect size &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;kbd&gt;N&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; background-color: #212121 !important;vertical-align: middle !important;"&gt; Total sample size &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;df&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Degrees of freedom &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;sig.level&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Significance level (default of 0.05) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;power&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Power level &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+
+count: false
+ 
+
+.panel1-sw8-auto[
+
+```r
+*pwr.chisq.test(w = 0.1,
+*              power = 0.9,
+*              df = 1,
+*              sig.level = 0.01)
+```
+]
+ 
+.panel2-sw8-auto[
+
+```
+## 
+##      Chi squared power calculation 
+## 
+##               w = 0.1
+##               N = 1487.939
+##              df = 1
+##       sig.level = 0.01
+##           power = 0.9
+## 
+## NOTE: N is the number of observations
+```
+]
+
+&lt;style&gt;
+.panel1-sw8-auto {
+  color: white;
+  width: 44.1%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw8-auto {
+  color: white;
+  width: 53.9%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw8-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+# Power Analysis Plots
+
+--
+
+.center2[**Power curves** are line plots that show how the change in variables, such as effect size and sample size, impact the power of the statistical test]
+
+.footnote[Unfortunately we do not have the bandwidth to cover power curves here, but an example and annotated script is provided on the next slide should you be interested]
+
+---
+
+## Example
+
+
+```
+## Warning: The `size` argument of `element_line()` is deprecated as of ggplot2 3.4.0.
+## ℹ Please use the `linewidth` argument instead.
+```
+
+&lt;img src="power-analysis-flat_files/figure-html/unnamed-chunk-14-1.png" style="display: block; margin: auto;" /&gt;
+
+.footnote[
+&lt;div class='footsbs'&gt;
+&lt;a href="https://edp619.asocialdatascientist.com/slides/power%20analysis/scripts/powercurves_proptest.R.zip" target='_blank' download="Powercurves Example script"&gt;
+&lt;img src="img/Rscript-ico.png" alt="Rscript icon" width='36'&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+]
+
+https://edp619.asocialdatascientist.com/slides/power%20analysis/scripts/powercurves_proptest.R.zip
+---
+
+# Note: Choosing a Starting Effect Size
+
+--
+
+&gt; Estimating an expected effect size is the most difficult parameter to determine
+
+--
+
+&gt; It requires that you have experience with the content and context of a study and any corresponding measures (e.g. using previous studies and results to calculate possible effect sizes )
+
+--
+
+&gt; If you don't have access to this information or if a study is completely novel, Cohen (1988) created some basic estimations and benchmarks. Much like other guidelines such as *p*-values (ugh), Cohen's Kappa, etc, these serve as a starting point and by no means should they be treated as static rules!
+
+--
+
+&lt;table class="table table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Approach &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; Variable &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; Small Effect &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; Medium Effect &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; Large Effect &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 10em; "&gt; &lt;i&gt;t&lt;/i&gt;-test &lt;/td&gt;
+   &lt;td style="text-align:center;width: 7em; "&gt; &lt;kbd&gt;d&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;width: 7em; "&gt; 0.20 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 7em; "&gt; 0.50 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 7em; "&gt; 0.80 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 10em; "&gt; ANOVA &lt;/td&gt;
+   &lt;td style="text-align:center;width: 7em; "&gt; &lt;kbd&gt;f&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;width: 7em; "&gt; 0.10 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 7em; "&gt; 0.25 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 7em; "&gt; 0.40 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 10em; "&gt; General Linear Models &lt;/td&gt;
+   &lt;td style="text-align:center;width: 7em; "&gt; &lt;kbd&gt;f2&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;width: 7em; "&gt; 0.02 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 7em; "&gt; 0.15 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 7em; "&gt; 0.35 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 10em; "&gt; Tests of Proportions &lt;/td&gt;
+   &lt;td style="text-align:center;width: 7em; "&gt; &lt;kbd&gt;h&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;width: 7em; "&gt; 0.20 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 7em; "&gt; 0.50 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 7em; "&gt; 0.80 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 10em; "&gt; Chi-square &lt;/td&gt;
+   &lt;td style="text-align:center;width: 7em; "&gt; &lt;kbd&gt;w&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;width: 7em; "&gt; 0.10 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 7em; "&gt; 0.30 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 7em; "&gt; 0.50 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+.footnote[
+&lt;div class='footsbs'&gt;
+&lt;a href="https://edp619.asocialdatascientist.com/slides/power%20analysis/files/Cohen%20(1988).pdf" target='_blank' download="Statistical Power Analysis for the Behavioral Sciences pdf"&gt;
+&lt;img src="img/pdf-ico.png" alt="PDF icon" width='36'&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+]
+
+---
+
+# Terminology is Important!
+
+.pull-left[
+How you describe power is important!
+] 
+
+.pull-right[
+<blockquote class="twitter-tweet" data-width="550" data-lang="en" data-dnt="true" data-theme="light"><p lang="en" dir="ltr">Please stop saying studies are underpowered without clarifying *what* the design is underpowered for. It’s a vague descriptor that allows critique without any concrete reasoning behind it. Studies aren’t underpowered. Designs are underpowered *for some effects in some tests*. &gt;</p>&mdash; Richard D. Morey (@richarddmorey) <a href="https://twitter.com/richarddmorey/status/1076204872091893760?ref_src=twsrc%5Etfw">December 21, 2018</a></blockquote>
+
+]
+
+--
+
+&lt;br&gt;
+.pull-left[
+For more on this, click the graphic to the right
+] 
+
+.pull-right[
+&lt;a href="https://towardsdatascience.com/why-you-shouldnt-say-this-study-is-underpowered-627f002ddf35"&gt;
+&lt;img src="img/tds.png" width="50%" /&gt;
+&lt;/a&gt;
+]
+
+---
+
+# Additional Resources
+
+If you would like a different view of power and its use, please click on the icons below
 &lt;br&gt;
 &lt;br&gt;
 
 --
 
+&lt;br&gt;
+&lt;br&gt;
 .pull-left[
 &lt;center&gt;
 
-**Variance**
+&lt;span style="color:#8ec9bb; font-weight: bold; font-style: italic;"&gt;(Statistical) Power&lt;/span&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
 &lt;/center&gt;
 &lt;center&gt;
- &lt;a href="https://youtu.be/SzZ6GpcfoQY"&gt;
+ &lt;a href="https://youtu.be/Rsc5znwR5FA"&gt;
 &lt;img src="img/youtube-ico.png" height="100px" style="background-color:#212121;"/&gt;
 &lt;/a&gt;
 &lt;/center&gt;
@@ -258,498 +1670,17 @@ If you would like a deeper dive on either area, tale a look at the videos below
 .pull-right[
 &lt;center&gt;
 
-**Correlation**
+&lt;span style="color:#00b0cc; font-weight: bold; font-style: italic;"&gt;Power Analysis&lt;/span&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
 &lt;/center&gt;
 &lt;center&gt;
- &lt;a href="https://youtu.be/xZ_z8KWkhXE"&gt;
+ &lt;a href="https://youtu.be/VX_M3tIyiYk"&gt;
 &lt;img src="img/youtube-ico.png" height="100px" style="background-color:#212121;"/&gt;
 &lt;/a&gt;
 &lt;/center&gt;
 ]
-
-.pull-right[
-&lt;center&gt;
-
----
-
-# From Basic to Better
-
---
-
-&lt;br&gt;
-&lt;br&gt;
-&lt;center&gt;
-correlations are great but they don't...
-&lt;/center&gt;
-&lt;br&gt;
-&lt;br&gt;
-
---
-
-.centerCenter[
-&lt;br&gt;
-&lt;br&gt;
-1. tell you how every question is related to every other question 
-
-2. differentiate between relevant data and noise
-]
-
---
-
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;center&gt;
-...enter a method called &lt;b&gt;&lt;i&gt;Principle Component Analysis&lt;/i&gt;&lt;/b&gt; 
-&lt;/center&gt;
-
----
-
-# Principle Component Analysis (PCA)
-
----
-
-## Steps in a Nutshell
-
---
-
-&lt;center&gt;
-The basic idea of a PCA can be broken into two steps
-&lt;/center&gt;
-&lt;br&gt;
-&lt;br&gt;
-
---
-
-.pull-left[
-Locate the directions, or *components*, in a data set with high variance&lt;br&gt;&lt;br&gt;
-&lt;center&gt;
-&lt;img src="img/pc_card.png" height="300px" style="background-color:#212121;"/&gt;
-&lt;/center&gt;
-]
-
---
-
-.pull-right[
-Find a limited number of components with high variance that in aggregate can explain most of the overall variance in the data&lt;br&gt;&lt;br&gt;
-&lt;center&gt;
-&lt;img src="img/pca_card.png" height="300px" style="background-color:#212121;"/&gt;
-&lt;/center&gt;
-]
-
----
-
-## Reducing Complexity
-
---
-
-&lt;center&gt;
-First an overview of some terms: 
-&lt;/center&gt;
-&lt;br&gt;
-&lt;br&gt;
-
---
-
-.pull-left[
-***Dimensionality*** - The number of input variables, or *features* in a dataset. In a spreadsheet, you can think of these as the column names.&lt;br&gt;&lt;br&gt;
-&lt;center&gt;
-&lt;img src="img/dimensionality_spreadsheet.png" height="300px" style="background-color:#212121;"/&gt;
-&lt;/center&gt;
-]
-
---
-
-.pull-right[
-***Dimensionality Reduction*** - Statistical techniques used to reduce the number of input variables.&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
-&lt;center&gt;
-&lt;img src="img/pca_dim_red.png" height="200px" style="background-color:#212121;"/&gt;
-&lt;/center&gt;
-]
-
----
-
-## The Problem with Dimensions
-
-***Curse of Dimensionality*** - In brief terms, this refers to a few aspects
-
---
-
-+ *statistical*. the error rate increases as the number of features increases
-
---
-
-+ *computational*. algorithms are harder to design and and exponentially take more time to run in high dimensions
-
---
-
-+ *practical*. higher number of dimensions theoretically allow more information to be stored, but in reality it rarely helps due to the higher possibility of noise and redundancy in real-world data
-
---
-
-&lt;br&gt;
-&lt;br&gt;
-&lt;center&gt;
-&lt;img src="img/curse_example.png" height="250px" style="background-color:#212121;"/&gt;
-&lt;/center&gt;
-
----
-
-## Fundamentals of What PCAs Can and Cannot Do
-
-PCAs are one of the most traditional methods used for dimension reduction.
-
---
-
-.pull-left[
-&lt;center&gt;
-
-**Primary benefit**
-&lt;/center&gt;
-It transforms the data into the most informative space, thereby allowing the use of lesser dimensions which retain needed information from the data while shedding much of the noise
-]
-
---
-  
-.pull-right[
-&lt;center&gt;
-
-**Primary drawback**
-&lt;/center&gt;
-It assumes linearity so any nonlinear relationship in a given data set is lost possibly causing loss in accuracy and the ability to estimate the likelihood of causality.
-]
-
---
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;hr style="width:30%"&gt;
-.centerBottom[
-Note as with most other procedures: *what you gain in efficiency, you lose in precision*. In a nutshell, there is no known perfect method that can both get rid of all of the noise and leave only relevant information. However with an ever growing machine learning library of approaches, we could get pretty close well within your lifetime!
-]
-
----
-
-## How Do PCAs Work?
-
---
-
-Before moving on please note that this is a nutshell explanation of the steps and avoids the mathematics&lt;sup&gt;1&lt;/sup&gt;. If you are interested in a more nuanced introduction coupled with the mathematics, watch this amazing lecture by Josh Starmer from [StatQuest](https://statquest.org/about/)&lt;sup&gt;2&lt;/sup&gt;.
-
-&lt;center&gt;
- &lt;a href="https://youtu.be/_C9-Bn-7KO4"&gt;
-&lt;img src="img/youtube-ico.png" height="100px" style="background-color:#212121;"/&gt;
-&lt;/a&gt;
-&lt;/center&gt;
-
-.footnote[
-[1] &lt;a href="https://www.stat.cmu.edu/~cshalizi/ADAfaEPoV/ADAfaEPoV.pdf#chapter.1" target='_blank'&gt;
-&lt;img src="img/pdf-ico.png" alt="PDF icon" width='35' style="padding-right: 10px ; padding-left: 5px;"&gt;
-&lt;/a&gt;
-[2]&lt;a href="https://www.youtube.com/c/joshstarmer/videos" target='_blank'&gt;
-   &lt;img src="img/video-ico.png" alt="Video Icon" width='22' style="padding-right: 10px ; padding-left: 5px;"&gt;
-&lt;/a&gt;
-]
-
----
-
-
-
-
-
-
-
-
-
-
-
-## OK Now Really How Do PCAs Work?
-
---
-
-.center2[
-Let's look at a data set with 205 points randomly scattered in three-dimensions. Keep in mind that as you move along, the &lt;i&gt;PCA is carving out new dimensions which you will be able to see and interact with&lt;/i&gt;.
-]
-
-
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;center&gt;
-When applying a PCA, it locates the...
-&lt;/center&gt;
-
----
-
-&lt;ol start="1"&gt;
-&lt;li&gt;center point of data in multi-dimensional space
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-
-.panelset.sideways[
-
-.panel[.panel-name[Look]
-&lt;center&gt;
-&lt;img src="img/pca1.png" width="60%"&gt;
-&lt;/center&gt;
-]
-
-.panel[.panel-name[Interact]
-<div id="htmlwidget-ad62623d7005e907ddf4" style="width:504px;height:504px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-ad62623d7005e907ddf4">{"x":{"visdat":{"4e1e5a3e50e3":["function () ","plotlyVisDat"],"4e1e3130955e":["function () ","data"],"4e1e6c9e678c":["function () ","data"],"4e1e13a0500a":["function () ","data"]},"cur_data":"4e1e13a0500a","attrs":{"4e1e5a3e50e3":{"x":{},"y":{},"z":{},"marker":{"size":2.6,"color":"#3399ff"},"name":"data","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter3d","mode":"markers","inherit":true},"4e1e3130955e":{"name":"x axis","x":{},"y":{},"z":{},"hoverinfo":"x","mode":"lines","type":"scatter3d","textfont":{"family":"Roboto Condensed"},"line":{"width":5,"color":"#e2dded"},"inherit":false},"4e1e6c9e678c":{"name":"y axis","x":{},"y":{},"z":{},"mode":"lines","type":"scatter3d","line":{"width":5,"color":"#e2dded"},"inherit":false},"4e1e13a0500a":{"name":"z axis","x":{},"y":{},"z":{},"mode":"lines","type":"scatter3d","line":{"width":5,"color":"#e2dded"},"inherit":false}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"scene":{"xaxis":{"title":"x","hoverformat":".2f"},"yaxis":{"title":"y","hoverformat":".2f"},"zaxis":{"title":"z","hoverformat":".2f"}},"font":{"family":"Roboto Condensed"},"plot_bgcolor":"rgba(0, 0, 0, 0)","paper_bgcolor":"rgba(0, 0, 0, 0)","fig_bgcolor":"rgba(0, 0, 0, 0)","legend":{"itemsizing":"constant","font":{"family":"Roboto Condensed","size":16,"color":"#f7f7f7"}},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[-0.0128132872300608,-6.07898627391509,-12.1795649544755,-2.9544064920881,3.16031859839958,6.29330265036564,7.40205859719725,5.7299263955791,-3.80614891466518,-3.54410936849384,2.19549757942208,3.88096232774071,6.11650973117946,2.64551694498356,-4.88499062626588,-0.594959301022119,1.69396259137245,-6.73060498842744,-0.464055572207701,-0.322750561622915,5.17460645947951,-1.73495767042154,5.74431896207611,4.90045061009014,-7.27827019142072,7.1949349003775,4.02893160599829,-1.26669464884559,-3.93467880821851,-5.74821851113627,-1.02464300072645,-8.20331652003069,-0.177926733014997,4.27562014731059,4.11841409245402,-2.03527145932531,-4.68478801816928,-7.51746675069802,-5.21266971277068,-3.69919760887984,-7.2783206880883,-0.409824050957117,2.85546886377164,2.724650077616,2.59710706728881,-0.270309400410294,-4.66576900663971,-0.947994924171628,3.83814844389329,-5.8023286063124,8.94838659899194,-5.15212573725293,-7.26319881321187,9.82202122076565,-0.519978271430931,7.07263350654286,0.834040528500334,-0.557096645879611,-1.12944801040623,0.994988447893366,4.99006792555233,-7.73846952170412,-6.04194365936371,-11.2360545850471,3.18404257600924,-9.15603149096802,-1.51813756827702,-6.97384390264587,-1.37128881080201,4.8916462940772,8.64625760640516,3.59192127920501,-0.610657647670126,-9.09212874939766,4.45604962414806,2.63317997666228,7.55169474909204,5.75390107384572,-2.8334857346603,5.43175667869849,-3.04348544891161,-1.7903231642039,1.89300155236592,4.01658996302778,3.12028988890778,3.84384952623557,11.2931129741307,-1.01121625221732,7.33875214018271,8.68656290671273,-4.2374229006085,7.37992121208325,2.50383610830865,6.75218631912445,-1.83334606524404,2.82810509724457,-8.4842083946269,9.17612011964376,-10.0970428386007,3.01621018355555,-6.05396918509528,7.39065177552567,-0.983913632687803,6.89792654838891,-5.29753668383007,3.61293418607484,-10.1428285377773,2.06351422546489,-0.623485834831954,10.8099981714547,-5.29934471685074,1.94166785181263,2.07745333554082,3.67157115539397,2.39681705679082,-2.49965246755541,-10.7905331319306,1.19809967404042,5.72688336350343,0.125596842416236,-6.51465629187822,-8.51550857433459,7.17998018203791,3.3641311055998,1.39160636477293,-4.85728158773871,-2.4321995310726,-5.03429512913049,0.612935689656081,3.22877578711455,1.40185551546693,-0.480641816883474,-0.917038076386127,9.28086765483477,3.56220721728685,1.06532560541584,0.614476068612796,5.67506806133092,-3.03974827211202,10.5163730479515,-0.658292918739563,-8.11320905276724,4.22541989543186,0.742900146779409,-6.2651801141951,5.35217741011555,9.05219544233968,-5.65302433159079,1.45387910981939,-6.03230017130635,10.2458315466851,-5.39165584428608,2.48821550090115,-8.48767012623881,-8.6043217465593,-1.49562206060572,0.373725715171276,-10.4580192505146,5.76203260140932,-0.239929840296053,5.63469089171598,0.808404480413809,4.52127989646437,-5.65286491442169,1.60878346398133,4.60346599620029,-11.1296911214197,4.15022821426521,-3.20264490949411,-12.0027520729143,0.73420260939833,-10.8630031208765,8.35237562376202,-3.72718416474407,-7.20507956087546,-3.22255210804131,2.26322342691726,6.56192896164228,-9.75963912511859,8.9159435567934,-4.48686700042025,-2.6792213719835,-8.47449806637533,4.05076606694803,-9.83591032496636,-9.54691472142857,1.09711410787819,3.55382919764246,1.97279111378689,1.88910278920053,0.0867947953527393,-8.25055061344119,-6.31521160704238,-1.97778389768298,5.62235187469502,2.48542505371217,2.08541930328496,-3.3080755756894,-0.346077958977631,-6.32751766771614,-4.54111848790505,-5.57743075608365,-4.89416902999638,2.50195393689627,2.69779542047425],"y":[6.05383812464929,1.17306629095318,-2.77049231818067,5.52070392729781,6.36773080770971,-0.0191118246443989,6.31284885353033,-3.25757999903026,5.65439969667123,-1.31175804050666,-5.49635214432492,3.81645478136494,-2.72999982043173,1.90209829560449,5.10916909238961,3.49573700593325,3.55500371605081,2.59144874679952,1.13959488776088,-1.74920745241246,-0.215949362477255,-7.54484212815682,-0.32672050416473,1.75816909696219,0.66353397931393,2.53800637431859,3.02803256225118,4.08783441069787,-1.10862662097604,2.66227447178448,-4.27284022513449,-2.45445425365241,-0.965457390655585,-0.90213438948785,0.931403820920921,-2.20851336229142,2.9711599514826,0.0918181090392188,2.09811408840484,-4.2205884984992,-0.529501402317713,-4.64608761892367,-5.84980684381594,-2.55440481568346,1.70974334590024,0.803314689295858,2.96658408997669,-1.89234064221019,0.133190019996086,1.74884727782679,6.07057453825665,-5.98011759895039,1.27803427736586,5.34490471321796,4.76828857259755,-2.27857565633425,3.81012912357475,-2.9365141908822,-4.57258994653032,2.0913269610052,3.32897907187465,2.6341618723561,-7.19001572623917,-0.478428651037407,-4.82781046956145,-4.31177748955476,4.34794780504119,-4.63434341071244,-6.20653588447749,7.29705254499944,6.37586996953168,-1.08609005285063,-3.67381780560512,-1.42630172533095,-4.83396944975667,3.9198466523315,5.40497815092546,0.484120788950358,-1.77054089482976,-1.35043990902363,-0.761173862970222,6.11521701079545,-1.93502215410841,7.27150917243829,7.30315089157642,7.31718690311873,4.05936286714134,-0.447226690324784,-2.56199778796329,-1.49896848023958,-4.55167182813047,7.98648992423828,-3.60611261814326,5.56262360641879,-2.88502893846587,3.64743944998344,-7.31664074967661,1.73974841106207,-5.26150836380825,-4.77478618718689,-7.17267033617982,-3.4301316689015,4.49536445751941,3.21213224141203,0.180947259541181,-1.35772897296447,-5.54437254369715,3.08278621121756,0.734850166735126,6.66136266855756,-2.91812511433793,-6.85398961122115,0.0709339929516803,-4.20957478812499,7.22172334938919,6.1376306566797,-0.176854816488984,-5.27766494515251,-5.25084736138596,-7.55781127889685,4.1859502367524,1.24094794892778,2.43885478699727,4.97755790262848,2.17994526360607,-4.85281597129484,-0.674401217112972,-3.28138022340839,4.77915581531892,-4.25979813029101,-6.09378966639671,-0.696872885448067,-0.881155406777355,0.842083219841286,-3.61487279386392,-2.89832884388989,-1.10456984807137,0.295762614724244,4.78712113240977,3.80368048324992,4.96334555753813,-3.56687875372065,2.72224288886451,0.595010801732886,3.39202680495985,2.07700552009463,5.77125298153552,-6.8182692626192,5.24133434245893,-1.10912466952812,-1.17306241580653,2.56574519302857,-6.37155849070818,-4.98949874291437,-5.48687213409619,-3.29533591541967,-0.505633817066101,-4.876896931895,-4.76035813829655,0.759488881499783,5.94372967878283,1.61933260306602,2.36186326515716,2.05019225624147,1.10874661921799,-3.26294222687249,-2.83525805149976,4.9913773296571,-1.33895293481546,-2.81540334319119,-3.93242111010246,-3.02474849302394,4.6640317664089,-3.97132640493827,0.85566193845404,4.43823787739353,2.13913523042344,-3.43871592338052,-2.0701261750791,1.74077097488773,-1.34216332851605,4.15351015740202,-0.410107519326606,4.4332008730399,-5.20596160745285,-6.74875630384676,-2.776445745329,-5.23188099023689,1.72975952287662,-1.41275561220686,2.66117074910665,2.87117395328139,-5.12954994891251,-0.283782945025231,5.58229988573031,4.83566036781341,4.28747971617112,2.85500041838629,5.33111429878474,-6.04145139014589,-0.401745765721786,3.88342394493329,3.43089394652139,2.26371614440662,-3.98146871300776],"z":[6.53519326027037,0.796690501998174,-4.44637608071097,3.28816008929481,5.14732032510999,0.756641143093453,5.98897687956374,-1.02696975116918,5.33991532008395,-1.78409335693735,-6.09241163093802,1.73016438225151,-3.03598024304211,4.79132721703657,3.58346749202161,4.45365720910468,2.1878599603493,2.29579066814908,1.85517364260863,-0.626732350062741,-0.80531162257763,-6.3159174684362,-1.39416554641483,-0.118622168522835,-0.56040435301452,1.37658571899205,2.20579886348188,1.48286911511186,0.387817682209155,2.67065810517195,-3.85665234548965,-2.03347452621281,0.859720571027106,-0.746522107916483,0.881305458442352,-3.7473342426435,0.997370617962569,-1.41780265000063,1.1198158734178,-4.22545113428176,-1.45200396361714,-2.76117664855061,-4.04949883939181,-3.37175463505331,3.45485441947483,1.87953335273781,0.813089074120713,-1.38516660346379,-0.0365325938594671,1.22025658599348,7.44407828965076,-7.44588444412493,-1.47770856334419,5.99185535155391,2.60685510287407,-1.52426320444833,2.47179375492395,-4.34029187689358,-6.14597063540797,2.0666375235278,1.77898250993119,1.34790987880118,-8.60053216655857,-2.322012915107,-2.61660680874303,-4.69691770647927,2.45700383953171,-4.80716728358452,-4.98299545900868,8.22628925487522,7.84030871944829,0.0491253265228209,-1.34487539088097,-3.49267159984129,-3.06168019834916,5.02188160752771,6.84967603546183,2.2425903104375,-3.99153700675211,-0.749087100138302,-0.20497223669194,6.76701231072203,-2.4979207378251,8.2221471547372,7.02012336641073,6.41689476854545,5.00253338566959,-0.12864005595309,-2.24627367418532,-1.56543595556758,-3.65993466167815,8.31159621559502,-1.41533882449938,5.47187913458985,-1.85215136834982,1.44038376899752,-8.98329766325291,3.00125717420019,-5.33516629426358,-5.45902781212859,-7.64199739540787,-2.01776276387994,2.97720221383812,5.15168933771152,-2.27545011452192,1.36803903952963,-6.94405446933285,5.56208479050283,3.31155935164365,7.57222350458359,-1.28204166261681,-5.69530996291762,-1.55087247995594,-1.58921032430145,6.02392502952098,6.33209555926999,-1.96387732662189,-3.65465948548858,-4.12185371827755,-7.6355221880705,2.44683752003382,-0.063689287543694,3.39321373198618,6.50081370166459,4.72632395078731,-6.53037265493492,-0.355399739039787,-5.69052494553911,4.85552382967621,-2.43573887951506,-5.18446579609297,-0.362879274919049,-2.46354321507841,1.0021098695493,-2.84871681835943,-5.09050374535881,-2.03709613673171,1.2091272813172,2.62549073026392,4.30673996980936,5.28894008036138,-3.54634250697855,2.10595755064496,1.17036136995774,3.79899260778176,1.02888688675465,6.28625278806319,-7.61310083491301,4.14792670336328,0.451418192813065,0.818299656754108,0.951424114500523,-5.56417022333453,-5.52692432320309,-5.79111722997998,-2.09698771490911,-1.59618530124908,-5.01596616676357,-4.13266125043107,1.07886707254604,7.92216290292399,-1.05135297875531,4.49941908920823,3.05208613144183,3.14746449756315,-2.5713950534537,-5.06351447330213,6.32570048607981,-0.524249289616567,-4.36966477410018,-5.10639280665549,-4.86050721607068,4.18719373091619,-5.52276123052326,0.125817169013415,2.94569137570905,2.82578604167784,-2.10978043230786,-3.14231858176711,3.13838737996759,-3.48940540184462,3.05379013615583,0.156988796451717,4.12105832987845,-7.20300966001069,-8.50361835232566,-3.332044270152,-5.23985178244815,0.203468190399394,-3.54499136278124,2.23409303239792,1.77285612200714,-6.91917313538451,-2.67231274813107,4.23186793142622,3.37647974565584,2.976340362447,3.33832613555912,5.84883560487555,-6.81703657912958,-2.71816819989364,4.31786682448051,3.58387851665276,3.06163914833712,-1.71807813923957],"marker":{"color":"#3399ff","size":2.6,"line":{"color":"rgba(31,119,180,1)"}},"name":"data","type":"scatter3d","mode":"markers","error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"frame":null},{"name":"x axis","x":[-15,15],"y":[0,0],"z":[0,0],"hoverinfo":["x","x"],"mode":"lines+text","type":"scatter3d","textfont":{"family":"Roboto Condensed"},"line":{"color":"#e2dded","width":5},"marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"frame":null},{"name":"y axis","x":[0,0],"y":[-15,15],"z":[0,0],"mode":"lines","type":"scatter3d","line":{"color":"#e2dded","width":5},"marker":{"color":"rgba(44,160,44,1)","line":{"color":"rgba(44,160,44,1)"}},"error_y":{"color":"rgba(44,160,44,1)"},"error_x":{"color":"rgba(44,160,44,1)"},"frame":null},{"name":"z axis","x":[0,0],"y":[0,0],"z":[-15,15],"mode":"lines","type":"scatter3d","line":{"color":"#e2dded","width":5},"marker":{"color":"rgba(214,39,40,1)","line":{"color":"rgba(214,39,40,1)"}},"error_y":{"color":"rgba(214,39,40,1)"},"error_x":{"color":"rgba(214,39,40,1)"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
-]
-
-]
-
----
-
-&lt;ol start="2"&gt;
-&lt;li&gt;direction with the greatest variance. This is called the &lt;b&gt;1st component&lt;/b&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-
-&lt;center&gt;
-&lt;img src="img/pca1.png" width="60%"&gt;
-&lt;/center&gt;
-
-
----
-
-&lt;ol start="3"&gt;
-&lt;li&gt;direction that is perpendicular, or &lt;i&gt;orthogonal&lt;/i&gt; to the 1st component with the greatest variance. This is called the &lt;b&gt;2nd component&lt;/b&gt;.
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-
-&lt;center&gt;
-&lt;img src="img/pca3.png" width="60%"&gt;
-&lt;/center&gt;
-
----
-
-&lt;ol start="4"&gt;
-&lt;li&gt;direction that is perpendicular, or &lt;i&gt;orthogonal&lt;/i&gt; to the 1st and 2nd component with the greatest variance. This is called the &lt;b&gt;3rd component&lt;/b&gt;.
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-
-&lt;center&gt;
-&lt;img src="img/pca4.png" width="60%"&gt;
-&lt;/center&gt;
-
-
----
-
-&gt; and it keeps going like this for as many dimensions as we have in a data set...
-&lt;br&gt;
-&lt;br&gt;
-
---
-
-&gt; so you can probably imagine that big data sets with hundreds or thousands of columns and rows can take quite a bit of time...
-&lt;br&gt;
-&lt;br&gt;
-
---
-
-&gt; but there are many other methods of reducing dimensions like
-
-
-
----
-
-.pull-left[
-[Hierarchical Clustering](https://uc-r.github.io/hc_clustering)&lt;sup&gt;3&lt;/sup&gt;
-]
-
-.pull-right[
-![](power-analysis-flat_files/figure-html/unnamed-chunk-5-1.png)&lt;!-- --&gt;
-]
-
-.footnote[
-&lt;div class='footsbs'&gt;
-[3] 
-&lt;a href="https://uc-r.github.io/hc_clustering" target='_blank'&gt;
-&lt;img src="img/rmd-logo.png" alt="Rmarkdown icon" width='35' style="padding-right: 10px ; padding-left: 5px;"&gt;
-&lt;/a&gt;
-&lt;a href="scripts/hc.zip" target='_blank' download="Hierarchical Clustering script"&gt;
-&lt;img src="img/Rscript-ico.png" alt="Rscript icon" width='36'&gt;
-&lt;/a&gt; 
-&lt;/div&gt;
-]
-
----
-
-.pull-left[
-[K-means Clustering](https://uc-r.github.io/kmeans_clustering)&lt;sup&gt;4&lt;/sup&gt;
-]
-
-.pull-right[
-![](power-analysis-flat_files/figure-html/unnamed-chunk-6-1.png)&lt;!-- --&gt;
-]
-
-.footnote[
-&lt;div class='footsbs'&gt;
-[4] &lt;a href="https://uc-r.github.io/kmeans_clustering" target='_blank'&gt;
-&lt;img src="img/rmd-logo.png" alt="Rmarkdown icon" width='35' style="padding-right: 10px; padding-left: 5px;"&gt;
-&lt;/a&gt;
-&lt;a href="scripts/kmeans.zip" target='_blank' download="K-means script"&gt;
-&lt;img src="img/Rscript-ico.png" alt="Rscript icon" width='36'&gt;
-&lt;/a&gt;
-&lt;/div&gt;
-]
-
----
-
-.pull-left[
-[t-Distributed Stochastic Neighbor Embedding (t-SNE)](https://rpubs.com/marwahsi/tnse)&lt;sup&gt;5&lt;/sup&gt;
-]
-
-.pull-right[
-![](power-analysis-flat_files/figure-html/unnamed-chunk-7-1.png)&lt;!-- --&gt;
-]
-
-.footnote[
-&lt;div class='footsbs'&gt;
-[5] &lt;a href="https://rpubs.com/marwahsi/tnse" target='_blank'&gt;
-&lt;img src="img/rmd-logo.png" alt="Rmarkdown icon" width='35' style="padding-right: 10px; padding-left: 5px;"&gt;
-&lt;/a&gt;
-&lt;a href="https://distill.pub/2016/misread-tsne/" target='_blank'&gt;
-&lt;img src="img/html-ico.png" alt="HTML icon" width='35' style="padding-right: 10px;"&gt;
-&lt;/a&gt;
-&lt;a href="scripts/tsne.zip" target='_blank' download="t-SNE script"&gt;
-&lt;img src="img/Rscript-ico.png" alt="Rscript icon" width='36'&gt;
-&lt;/a&gt;
-&lt;/div&gt;
-]
-
----
-
-Below is an animation of the t-SNE process which shows a complex data set, data reduction and then clustering&lt;sup&gt;6&lt;/sup&gt;
-
-
-
-&lt;center&gt;
-&lt;img src="img/tsne_anim.gif" style="background-color:#212121;"/&gt;
-&lt;/center&gt;
-         
-.footnote[
-&lt;div class='footsbs'&gt;
-[6]
-&lt;a href="https://hypercompetent.github.io/post/gganimate-tweenr-tsne-plot/" target='_blank'&gt;
-&lt;img src="img/html-ico.png" alt="HTML icon" width='35' style="padding-right: 10px; padding-left: 5px;"&gt;
-&lt;/a&gt;
-&lt;a href="scripts/tsne_anim.zip" target='_blank' download="t-SNE animation bundle"&gt;
-&lt;img src="img/Rscript-ico.png" alt="Rscript icon" width='36'&gt;
-&lt;/a&gt;
-&lt;/div&gt;
-]
-
----
-
-And just for fun here are two [pca](https://rpubs.com/marwahsi/tnse) rotations of the example data set&lt;sup&gt;7&lt;/sup&gt;
-&lt;br&gt;
-
-.pull-left[
-![](power-analysis-flat_files/figure-html/unnamed-chunk-9-1.png)&lt;!-- --&gt;
-]
-
-.pull-right[
-![](power-analysis-flat_files/figure-html/unnamed-chunk-10-1.png)&lt;!-- --&gt;
-]
-
-.footnote[
-&lt;div class='footsbs'&gt;
-[7]
-&lt;a href="https://uc-r.github.io/pca" target='_blank'&gt;
-&lt;img src="img/rmd-logo.png" alt="Rmarkdown icon" width='35' style="padding-right: 10px; padding-left: 5px;"&gt;
-&lt;/a&gt;
-&lt;a href="scripts/pca.zip" target='_blank' download="PCA script"&gt;
-&lt;img src="img/Rscript-ico.png" alt="Rscript icon" width='36'&gt;
-&lt;/a&gt;
-&lt;/div&gt;
-]
-
----
-
-## Surveys and PCAs
-
-In general, using a PCA in survey data analysis helps you to understand
-
---
-
-+  how each item is similar to all others and the strength of that relationship
-
---
-
-+ which items are should likely be kept or removed
-
----
-
-# But Wait There's More!
-
-Again this is just the tip of the iceberg. To really see the power of PCAs, take a look at machine learning. This is just one of many ways to deal with classification and dimensionality. Here are a couple resources. At this time, its good just to ignore the coding and to simply get a basic idea of each. 
-
-.footnote[
-[8] If you cannot see the entire page, please load the site in a private window. Directions on how to do this are provided for
-&lt;center&gt;
-&lt;div class='footsbs'&gt;
-&lt;a href="https://support.google.com/chrome/answer/95464" target='_blank'&gt;
-&lt;img src="img/chrome-ico.png" alt="Chrome icon" width='35' style="padding-right: 10px;"&gt;
-&lt;/a&gt;
-&lt;a href="https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history" target='_blank' download="PCA script"&gt;
-&lt;img src="img/firefox-ico.png" alt="Firefox icon" width='35' style="padding-right: 10px;"&gt;
-&lt;/a&gt;
-&lt;a href="https://support.apple.com/guide/safari/browse-privately-ibrw1069/mac" target='_blank' download="PCA script"&gt;
-&lt;img src="img/safari-ico.png" alt="Safari icon" width='35'&gt;
-&lt;/a&gt;
-&lt;/dvv&gt;
-&lt;/center&gt;
-]
-
---
-
-+ [11 Dimensionality reduction techniques you should know in 2021](https://towardsdatascience.com/11-dimensionality-reduction-techniques-you-should-know-in-2021-dcb9500d388b)&lt;sup&gt;8&lt;/sup&gt;
-
---
-
-+ [Understanding Dimension Reduction and Principal Component Analysis in R for Data Science](https://towardsdatascience.com/understanding-dimension-reduction-and-principal-component-analysis-in-r-e3fbd02b29ae)&lt;sup&gt;8&lt;/sup&gt;
-
---
-
-+ [Workshop: Dimension reduction with R](https://rpubs.com/Saskia/520216)
 
 ---
 

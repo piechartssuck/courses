@@ -446,7 +446,6 @@ If you do not know what covariance is or need a refresher, please go through thi
 
 ---
 
-
 ## Thats it!
 
 If you have any questions, please reach out

@@ -5,6 +5,7 @@ wk_post %>%
     str_detect(`Icon`, "ecampus") ~ '<img src="/logos/wvu-gold-ico.png" alt="WVU icon" width="26">',
     str_detect(`Icon`, "journal") ~ '<img src="/logos/library-ico.png" alt="Jpurnal icon" width="26">',
     str_detect(`Icon`, "library") ~ '<img src="/logos/library-ico.png" alt="Library icon" width="25">',
+    str_detect(`Icon`, "list") ~ '<img src="/logos/list-ico.png" alt="List icon" width="25">',
     str_detect(`Icon`, "offsite") ~ '<img src="/logos/web-ico.png" alt="Web icon" width="26">',
     str_detect(`Icon`, "pdf") ~ '<img src="/logos/pdf-ico.png" alt="PDF icon" width="32">',
     str_detect(`Icon`, "qualtrics") ~ '<img src="/logos/qualtrics-ico.png" alt="Qualtrics icon" width="29">',

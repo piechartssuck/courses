@@ -1,0 +1,10 @@
+﻿Syntax,Description
+`pwr.2p.test`,Two proportions (equal <i>n</i>)
+`pwr.2p2n.test`,Two proportions (unequal <i>n</i>)
+`pwr.anova.test`,Balanced one-way ANOVA
+`pwr.chisq.test`,Chi-square test
+`pwr.f2.test`,General linear model
+`pwr.p.test`,Proportion (one sample)
+`pwr.r.test`,Correlation
+`pwr.t.test`,"<i>t</i>-tests (one sample, two samples, paired)"
+`pwr.t2n.test`,<i>t</i>-test (two samples with unequal <i>n</i>)

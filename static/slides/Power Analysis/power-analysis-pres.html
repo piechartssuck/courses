@@ -4,13 +4,32 @@
     <title>Power and Design</title>
     <meta charset="utf-8" />
     <meta name="author" content="Dr. Abhik Roy" />
-    <script src="power-analysis-pres_files/header-attrs-2.17/header-attrs.js"></script>
+    <script src="power-analysis-pres_files/header-attrs-2.18/header-attrs.js"></script>
     <link href="power-analysis-pres_files/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
     <script src="power-analysis-pres_files/tile-view-0.2.6/tile-view.js"></script>
     <link href="power-analysis-pres_files/animate.css-3.7.2/animate.xaringan.css" rel="stylesheet" />
     <link href="power-analysis-pres_files/tachyons-4.12.0/tachyons.min.css" rel="stylesheet" />
     <link href="power-analysis-pres_files/panelset-0.2.6/panelset.css" rel="stylesheet" />
     <script src="power-analysis-pres_files/panelset-0.2.6/panelset.js"></script>
+    <script src="power-analysis-pres_files/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+    <link href="power-analysis-pres_files/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+    <script src="power-analysis-pres_files/datatables-binding-0.26/datatables.js"></script>
+    <script src="power-analysis-pres_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+    <link href="power-analysis-pres_files/dt-core-1.12.1/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="power-analysis-pres_files/dt-core-1.12.1/css/jquery.dataTables.extra.css" rel="stylesheet" />
+    <script src="power-analysis-pres_files/dt-core-1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="power-analysis-pres_files/jszip-1.12.1/jszip.min.js"></script>
+    <script src="power-analysis-pres_files/pdfmake-1.12.1/pdfmake.js"></script>
+    <script src="power-analysis-pres_files/pdfmake-1.12.1/vfs_fonts.js"></script>
+    <link href="power-analysis-pres_files/dt-ext-buttons-1.12.1/css/buttons.dataTables.min.css" rel="stylesheet" />
+    <script src="power-analysis-pres_files/dt-ext-buttons-1.12.1/js/dataTables.buttons.min.js"></script>
+    <script src="power-analysis-pres_files/dt-ext-buttons-1.12.1/js/buttons.html5.min.js"></script>
+    <script src="power-analysis-pres_files/dt-ext-buttons-1.12.1/js/buttons.colVis.min.js"></script>
+    <script src="power-analysis-pres_files/dt-ext-buttons-1.12.1/js/buttons.print.min.js"></script>
+    <link href="power-analysis-pres_files/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+    <script src="power-analysis-pres_files/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+    <script src="power-analysis-pres_files/kePrint-0.0.1/kePrint.js"></script>
+    <link href="power-analysis-pres_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
     <script src="power-analysis-pres_files/twitter-widget-0.0.1/widgets.js"></script>
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
     <link rel="stylesheet" href="custom.css" type="text/css" />
@@ -23,7 +42,7 @@ class: center, middle, inverse, title-slide
 # Power and Design
 ]
 .subtitle[
-## EDP 619 Week 12
+## EDP 619 Week 13
 ]
 .author[
 ### Dr. Abhik Roy
@@ -393,7 +412,9 @@ layout: true
 
 # Welcome! 
 
-This is a fairly simple overview of power analysis and the reasons it matters. Please note that you will need to recall some first concepts covered in an introductory statistics course
+This is an absolutely minimalist overview of power analysis and the reasons it matters. If you want a deeper dive, consider enrolling in an advanced statistics course like [Power and Sample Size for Multilevel and Longitudinal Study Designs](https://www.coursera.org/learn/power-sample-size) for free. In the meantime, remember that you can explore power and its relationships interactively at [Understanding Statistical Power and Significance Testing](https://rpsychologist.com/d3/nhst/).
+
+Additionally you may notice the following icons in the footnotes. These contain links to external sites that provide extra materials that may be of interest to you. 
 &lt;br&gt;
 &lt;br&gt;
 &lt;br&gt;
@@ -410,16 +431,23 @@ This is a fairly simple overview of power analysis and the reasons it matters. P
 
 ---
 
+# Something Important
+
+.center2[&lt;span style="color:#8ec9bb; font-weight: bold; font-style: italic;"&gt;(Statistical) Power&lt;/span&gt; and its corresponding analysis are by far one of the most misunderstood concepts, in that a lot of people think they know what it is but simply miss the point.]
+
+.footnote[Please note that you will need to recall some concepts covered in an introductory statistics course]
+
+---
+
 # Prerequisites
 
-This slideshow assumes that you have a basic understanding of sampling and hypothesis testing. For a refresher, please take a look at both reviews on the next page
+Before going ahead, make sure that you have a basic understanding of sampling and hypothesis testing. For a refresher, please take a look at both reviews on the next page
 
 ---
 
 ## Review
 
-If you would like a deeper dive on either area, tale a look at the videos below
-&lt;br&gt;
+If you would like a deeper dive on either area, take a look at the videos below
 &lt;br&gt;
 &lt;br&gt;
 &lt;br&gt;
@@ -429,7 +457,7 @@ If you would like a deeper dive on either area, tale a look at the videos below
 .pull-left[
 &lt;center&gt;
 
-**Sampling**
+***Sampling***
 &lt;/center&gt;
 &lt;p align="center"&gt;
     &lt;iframe width="450" height="252" src="https://www.youtube.com/embed/67zCIqdeXpo" title="Sample Size and Effective Sample Size, Clearly Explained!!!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
@@ -441,7 +469,7 @@ If you would like a deeper dive on either area, tale a look at the videos below
 .pull-right[
 &lt;center&gt;
 
-**Correlation**
+***Hypothesis Testing***
 &lt;/center&gt;
 &lt;p align="center"&gt;
     &lt;iframe width="450" height="252" src="https://www.youtube.com/embed/0oc49DyA3hU" title="Hypothesis Testing and The Null Hypothesis, Clearly Explained!!!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
@@ -450,39 +478,18 @@ If you would like a deeper dive on either area, tale a look at the videos below
 
 ---
 
-# A Rundown
-
---
-
-.center2[***(Statistical) Power*** is the probability of avoiding a Type II error]
+# &lt;span style="color:#8ec9bb; font-weight: bold; font-style: italic;"&gt;(Statistical) Power&lt;/span&gt;
 
 ---
 
-# Terminology is Important!
-
-Let's begin with this fantastic tweet from Dr. Richard Morey
-
-
-```r
-include_tweet("https://twitter.com/richarddmorey/status/1076204872091893760")
-```
-
-<blockquote class="twitter-tweet" data-width="550" data-lang="en" data-dnt="true" data-theme="light"><p lang="en" dir="ltr">Please stop saying studies are underpowered without clarifying *what* the design is underpowered for. It’s a vague descriptor that allows critique without any concrete reasoning behind it. Studies aren’t underpowered. Designs are underpowered *for some effects in some tests*. &gt;</p>&mdash; Richard D. Morey (@richarddmorey) <a href="https://twitter.com/richarddmorey/status/1076204872091893760?ref_src=twsrc%5Etfw">December 21, 2018</a></blockquote>
-
+# Definition
 
 --
 
-Power is by far one of the most misunderstood concepts in that a lot of people think they know it but simply miss the point. In this session, you'll be introduced to the basic premise of statistical power and how to actually conduct various types of power analyses. While I would love to rant about how people who should know better frequently misuse and perpetuate misinformation about power, this is not the proper forum. However if you are interested, please take a look at Dr. Morey's follow-up to the above tweet by clicking on the image below. He does an absolutely excellent job describing this high level concept to a general audience who have a very basic understanding of statistics.
+.center2[&lt;span style="color:#8ec9bb; font-weight: bold; font-style: italic;"&gt;(Statistical) Power&lt;/span&gt; is the probability of avoiding a Type II error &lt;i&gt;aka&lt;/i&gt; detecting an effect if it exists]
 
-
-&lt;center&gt;
-&lt;a href="https://towardsdatascience.com/why-you-shouldnt-say-this-study-is-underpowered-627f002ddf35"&gt;
-&lt;img src="img/tds.png"/&gt;
-&lt;/a&gt;
-&lt;/center&gt;
 
 ---
-
 
 # Dodging False Negatives  
 
@@ -491,11 +498,1170 @@ Power is by far one of the most misunderstood concepts in that a lot of people t
 &lt;br&gt;
 &lt;br&gt;
 &lt;center&gt;
-&lt;img src="img/powerdodge.gif"/&gt;
+&lt;img src="img/powerdodge.gif" width="75%"/&gt;
 &lt;/center&gt;
+
+
+---
+
+# Influences
+
+--
+
+&gt; Effect size
+
+--
+
+&gt; Sample size
+
+--
+
+&gt; Significance level
+
+---
+
+## Some Things You Should Be Aware of
+
+--
+
+.pull-left[
+Power is usually set at 80%, but that is not a hard rule by any means
+]
+
+--
+
+.pull-right[
+This means if there are actual effects detected in 100 different studies with 80% power, then 80 out of 100 statistical tests will actually detect them
+]
+
+--
+
+.pull-left[
+If you have an *underpowered* design, you may not be able detect a true effect
+]
+
+--
+
+.pull-right[
+If you have an *overpowered* design, you may detect very small effects that are of no practical relevance&lt;sup&gt;1&lt;/sup&gt;
+]
+
+.footnote[The real problem isn't that *overpowered* experiments may reveal tiny significant effects, rather it is that many academic fields and popular science reporting standard in general emphasize "statistical significance" - *a meaningless term itself* - over effect sizes - aka practical significance. And if you're wondering, by "statistical significance" I mean the *p*-value which is [generally garbage](https://www.tandfonline.com/doi/full/10.1080/00031305.2019.1583913), should be used sparingly, and if you must use it, never report the findings by themselves because they are useless]
+
+--
+
+.pull-left[
+We want the Type I error rate to be reasonably low which is why you often see a default of `\(\alpha = 0.05\)`
+]
+
+--
+
+.pull-right[
+We want power to be high enough to minimize a Type II error ( `\(\beta\)` ) so we reduce the chance of missing an effect
+]
+
+---
+
+# Using &lt;span style="color:#8ec9bb; font-weight: bold; font-style: italic;"&gt;(Statistical) Power&lt;/span&gt;
+
+
+.center2[A ***power analysis*** is the procedure that researchers can use to determine if the test contains enough power to make a reasonable conclusion. It can also be used to calculate the number of samples required to achieve a specified level of power]
+
+---
+
+## In a Nutshell
+
+--
+
+.center2[A ***power analysis*** is a calculation that can help you to determine a minimum sample size for your study]
+
+---
+
+## Four Components
+
+--
+
+.pull-left[
+&lt;br&gt;
+&lt;p id="center" style="color:#74cbda; font-weight: bold; border:1px; border-style:solid; border-color:#74cbda; border-radius: 25px; padding: 0.3em;"&gt;
+&lt;i&gt;Expected effect size&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+standardized way of expressing the magnitude of the expected result of your study typically based on similar studies or a pilot study
+&lt;/p&gt;
+]
+
+--
+
+.pull-right[
+&lt;br&gt;
+&lt;p id="center" style="color:#bca0dc; font-weight: bold; border:1px; border-style:solid; border-color:#bca0dc; border-radius: 25px; padding: 0.3em;"&gt;
+&lt;i&gt;Sample size&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+the minimum number of observations needed to observe an effect of a certain size with a given power level
+&lt;/p&gt;
+]
+
+--
+
 &lt;br&gt;
 &lt;br&gt;
-For now, the only thing you should note is that studies are be underpowered - this is something people say when they don't really understand power. Instead ***designs are underpowered***
+.pull-left[
+&lt;p id="center" style="color:#e69288; font-weight: bold; border:1px; border-style:solid; border-color:#e69288; border-radius: 25px; padding: 0.3em;"&gt;
+&lt;i&gt;Significance level ( `\alpha` )&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+the maximum risk of rejecting a true null hypothesis that you are willing to take - typically set at 5% or lower
+&lt;/p&gt;
+]
+
+--
+
+.pull-right[
+&lt;p id="center" style="color:#8ec9bb; font-weight: bold; border:1px; border-style:solid; border-color:#8ec9bb; border-radius: 25px; padding: 0.3em;"&gt;
+&lt;i&gt;(Statistical) Power&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+the likelihood that a test will detect an effect of a certain size if there is one - typically set at 80% or higher
+&lt;/p&gt;
+]
+
+--
+
+.footnote[If you have any of the three parameters above, then you can also calculate the fourth one]
+
+---
+
+# A Rundown of Power Analysis in <svg aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:steelblue;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+
+---
+
+## Getting Ready
+
+To follow along, please make sure to do the following
+
+--
+
+1. Open up a blank `.R` script 
+
+--
+
+2. Run `install.packages("pwr", dependencies = TRUE)` in the Console
+
+--
+
+3. Load up the `pwr` package by running
+    
+    ```r
+    library(pwr)
+    ```
+    
+    
+
+---
+
+## List of Commands
+
+
+
+<div id="htmlwidget-90db924ccca93510f6de" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-90db924ccca93510f6de">{"x":{"filter":"none","vertical":false,"extensions":["Buttons"],"data":[["&lt;kbd&gt;pwr.2p.test&lt;/kbd&gt;","&lt;kbd&gt;pwr.2p2n.test&lt;/kbd&gt;","&lt;kbd&gt;pwr.anova.test&lt;/kbd&gt;","&lt;kbd&gt;pwr.chisq.test&lt;/kbd&gt;","&lt;kbd&gt;pwr.f2.test&lt;/kbd&gt;","&lt;kbd&gt;pwr.p.test&lt;/kbd&gt;","&lt;kbd&gt;pwr.r.test&lt;/kbd&gt;","&lt;kbd&gt;pwr.t.test&lt;/kbd&gt;","&lt;kbd&gt;pwr.t2n.test&lt;/kbd&gt;"],["Two proportions (equal &lt;i&gt;n&lt;/i&gt;)","Two proportions (unequal &lt;i&gt;n&lt;/i&gt;)","Balanced one-way ANOVA","Chi-square test","General linear model","Proportion (one sample)","Correlation","&lt;i&gt;t&lt;/i&gt;-tests (one sample, two samples, paired)","&lt;i&gt;t&lt;/i&gt;-test (two samples with unequal &lt;i&gt;n&lt;/i&gt;)"]],"container":"<table class=\"FALSE\">\n  <thead>\n    <tr>\n      <th>Syntax<\/th>\n      <th>Description<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"searching":false,"autoWidth":false,"dom":"Brti","buttons":["copy","csv","excel","pdf"],"lengthMenu":false,"initComplete":"function(settings, json) {\n$(this.api().table().header()).css({'color': '#fff'});\n}","columnDefs":[],"order":[],"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[0]; $(this.api().cell(row, 0).node()).css({'color':'white','background-color':'#212121'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'color':'white','background-color':'#212121'});\n}"},"callback":"function(table) {\n$(\"button.buttons-copy\").css(\"color\",\"#bb86fc\"); \n                           $(\"button.buttons-csv\").css(\"color\",\"#bb86fc\"); \n                           $(\"button.buttons-excel\").css(\"color\",\"#bb86fc\"); \n                           $(\"button.buttons-pdf\").css(\"color\",\"#bb86fc\"); \n                            return table;\n}"},"evals":["options.initComplete","options.rowCallback","callback"],"jsHooks":[]}</script>
+
+---
+
+### *t*-test
+
+---
+
+#### &lt;span style="color:#bff4ee"&gt;Equal Groups&lt;/span&gt;
+
+&lt;center&gt;&lt;kbd&gt;pwr.t.test(n=, d=, sig.level=, power=, type=, alternative=)&lt;/kbd&gt;&lt;/center&gt;
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;table class="table table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;vertical-align: middle !important;"&gt; Option &lt;/th&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;vertical-align: middle !important;"&gt; Description &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;kbd&gt;n&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; background-color: #212121 !important;vertical-align: middle !important;"&gt; Sample size &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;kbd&gt;d&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; background-color: #212121 !important;vertical-align: middle !important;"&gt; Power level &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;sig.level&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Significance level (default of 0.05) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;type&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Choice of &lt;i&gt;t&lt;/i&gt;-test - either &lt;kbd&gt;"two.sample"&lt;/kbd&gt; (default), &lt;kbd&gt;"one.sample"&lt;/kbd&gt;, or &lt;kbd&gt;"paired"&lt;/kbd&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;alternative&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Choice of direction - either &lt;kbd&gt;"two.sided"&lt;/kbd&gt; (default), &lt;kbd&gt;"less"&lt;/kbd&gt;, or &lt;kbd&gt;"greater"&lt;/kbd&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+
+count: false
+ 
+
+.panel1-sw1-auto[
+
+```r
+# Equal Groups
+
+*pwr.t.test(d = 0.8,
+*          sig.level = 0.05,
+*          power = 0.8,
+*          type = "two.sample",
+*          alternative = "two.sided")
+```
+]
+ 
+.panel2-sw1-auto[
+
+```
+## 
+##      Two-sample t test power calculation 
+## 
+##               n = 25.52458
+##               d = 0.8
+##       sig.level = 0.05
+##           power = 0.8
+##     alternative = two.sided
+## 
+## NOTE: n is number in *each* group
+```
+]
+
+&lt;style&gt;
+.panel1-sw1-auto {
+  color: white;
+  width: 44.1%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw1-auto {
+  color: white;
+  width: 53.9%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw1-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+#### &lt;span style="color:#bff4ee"&gt;Unequal Groups&lt;/span&gt;
+
+&lt;center&gt;&lt;kbd&gt;pwr.t2n.test(n1=, n2=, d=, sig.level=, power=, type=, alternative=)&lt;/kbd&gt;&lt;/center&gt;
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;table class="table table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;vertical-align: middle !important;"&gt; Option &lt;/th&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;vertical-align: middle !important;"&gt; Description &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;kbd&gt;n1&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; background-color: #212121 !important;vertical-align: middle !important;"&gt; One sample size &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;kbd&gt;n2&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; background-color: #212121 !important;vertical-align: middle !important;"&gt; The other sample size &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;d&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Power level &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;sig.level&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Significance level (default of 0.05) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;type&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Choice of &lt;i&gt;t&lt;/i&gt;-test - either &lt;kbd&gt;"two.sample"&lt;/kbd&gt; (default), &lt;kbd&gt;"one.sample"&lt;/kbd&gt;, or &lt;kbd&gt;"paired"&lt;/kbd&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;alternative&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Choice of direction - either &lt;kbd&gt;"two.sided"&lt;/kbd&gt; (default), &lt;kbd&gt;"less"&lt;/kbd&gt;, or &lt;kbd&gt;"greater"&lt;/kbd&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+
+count: false
+ 
+
+.panel1-sw2-auto[
+
+```r
+# Unequal Groups
+
+*pwr.t2n.test(n1 = 28,
+*            n2 = 35,
+*            d = 0.5)
+```
+]
+ 
+.panel2-sw2-auto[
+
+```
+## 
+##      t test power calculation 
+## 
+##              n1 = 28
+##              n2 = 35
+##               d = 0.5
+##       sig.level = 0.05
+##           power = 0.4924588
+##     alternative = two.sided
+```
+]
+
+&lt;style&gt;
+.panel1-sw2-auto {
+  color: white;
+  width: 44.1%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw2-auto {
+  color: white;
+  width: 53.9%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw2-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+### ANOVA
+
+--
+
+&lt;center&gt;&lt;kbd&gt;pwr.anova.test(k=, n=, f=, sig.level=, power=)&lt;/kbd&gt;&lt;/center&gt;
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;table class="table table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;vertical-align: middle !important;"&gt; Option &lt;/th&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;vertical-align: middle !important;"&gt; Description &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;kbd&gt;k&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; background-color: #212121 !important;vertical-align: middle !important;"&gt; Number of groups &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;kbd&gt;n&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; background-color: #212121 !important;vertical-align: middle !important;"&gt; Common sample size in each group &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;f&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Effect size &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;sig.level&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Significance level (default of 0.05) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;power&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Power level &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+
+count: false
+ 
+
+.panel1-sw3-auto[
+
+```r
+*pwr.anova.test(k = 3,
+*              f = 0.25,
+*              sig.level = 0.05,
+*              power = 0.9)
+```
+]
+ 
+.panel2-sw3-auto[
+
+```
+## 
+##      Balanced one-way analysis of variance power calculation 
+## 
+##               k = 3
+##               n = 68.49707
+##               f = 0.25
+##       sig.level = 0.05
+##           power = 0.9
+## 
+## NOTE: n is number in each group
+```
+]
+
+&lt;style&gt;
+.panel1-sw3-auto {
+  color: white;
+  width: 44.1%;
+  hight: 32%;
+  float: below;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw3-auto {
+  color: white;
+  width: 53.9%;
+  hight: 32%;
+  float: below;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw3-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: below;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+### Correlations
+
+--
+
+&lt;center&gt;&lt;kbd&gt;pwr.r.test(n=, r=, sig.level=, power=, alternative=)&lt;/kbd&gt;&lt;/center&gt;
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;table class="table table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;vertical-align: middle !important;"&gt; Option &lt;/th&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;vertical-align: middle !important;"&gt; Description &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;kbd&gt;n&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; background-color: #212121 !important;vertical-align: middle !important;"&gt; Sample size &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;kbd&gt;r&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; background-color: #212121 !important;vertical-align: middle !important;"&gt; Effect size &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;sig.level&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Significance level (default of 0.05) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;power&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Power level &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;alternative&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Choice of direction - either &lt;kbd&gt;"two.sided"&lt;/kbd&gt; (default), &lt;kbd&gt;"less"&lt;/kbd&gt;, or &lt;kbd&gt;"greater"&lt;/kbd&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+
+count: false
+ 
+
+.panel1-sw4-auto[
+
+```r
+*pwr.r.test(r = 0.40,
+*          sig.level = 0.05,
+*          power = 0.80,
+*          alternative = "greater")
+```
+]
+ 
+.panel2-sw4-auto[
+
+```
+## 
+##      approximate correlation power calculation (arctangh transformation) 
+## 
+##               n = 36.50995
+##               r = 0.4
+##       sig.level = 0.05
+##           power = 0.8
+##     alternative = greater
+```
+]
+
+&lt;style&gt;
+.panel1-sw4-auto {
+  color: white;
+  width: 44.1%;
+  hight: 32%;
+  float: below;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw4-auto {
+  color: white;
+  width: 53.9%;
+  hight: 32%;
+  float: below;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw4-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: below;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+### General Linear Models
+
+--
+
+&lt;center&gt;&lt;kbd&gt;pwr.f2.test(u=, v=, f2=, sig.level=, power=) &lt;/kbd&gt;&lt;/center&gt;
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;table class="table table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;vertical-align: middle !important;"&gt; Option &lt;/th&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;vertical-align: middle !important;"&gt; Description &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;kbd&gt;u&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; background-color: #212121 !important;vertical-align: middle !important;"&gt; Numerator of degrees of freedom (df) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;kbd&gt;v&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; background-color: #212121 !important;vertical-align: middle !important;"&gt; Denominator of degrees of freedom (df) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;f2&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Effect size &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;sig.level&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Significance level (default of 0.05) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;power&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Power level &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+
+count: false
+ 
+
+.panel1-sw5-auto[
+
+```r
+*pwr.f2.test(u = 2,
+*           f2 = 0.3/(1 - 0.3),
+*           sig.level = 0.001,
+*           power = 0.8)
+```
+]
+ 
+.panel2-sw5-auto[
+
+```
+## 
+##      Multiple regression power calculation 
+## 
+##               u = 2
+##               v = 49.88971
+##              f2 = 0.4285714
+##       sig.level = 0.001
+##           power = 0.8
+```
+]
+
+&lt;style&gt;
+.panel1-sw5-auto {
+  color: white;
+  width: 44.1%;
+  hight: 32%;
+  float: below;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw5-auto {
+  color: white;
+  width: 53.9%;
+  hight: 32%;
+  float: below;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw5-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: below;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+### Tests of Proportions
+
+---
+
+#### &lt;span style="color:#bff4ee"&gt;Equal Groups&lt;/span&gt;
+
+&lt;center&gt;&lt;kbd&gt;pwr.2p.test(h=, n=, sig.level=, power=)&lt;/kbd&gt;&lt;/center&gt;
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;table class="table table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;vertical-align: middle !important;"&gt; Option &lt;/th&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;vertical-align: middle !important;"&gt; Description &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;kbd&gt;h&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; background-color: #212121 !important;vertical-align: middle !important;"&gt; Effect size &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;kbd&gt;n&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; background-color: #212121 !important;vertical-align: middle !important;"&gt; Sample size &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;sig.level&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Significance level (default of 0.05) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;power&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Power level &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+
+count: false
+ 
+
+.panel1-sw6-auto[
+
+```r
+# Equal Groups
+
+*pwr.2p.test(h = ES.h(p1 = 0.55, p2 = 0.50),
+*           sig.level = 0.05,
+*           power = 0.80)
+```
+]
+ 
+.panel2-sw6-auto[
+
+```
+## 
+##      Difference of proportion power calculation for binomial distribution (arcsine transformation) 
+## 
+##               h = 0.1001674
+##               n = 1564.529
+##       sig.level = 0.05
+##           power = 0.8
+##     alternative = two.sided
+## 
+## NOTE: same sample sizes
+```
+]
+
+&lt;style&gt;
+.panel1-sw6-auto {
+  color: white;
+  width: 44.1%;
+  hight: 32%;
+  float: below;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw6-auto {
+  color: white;
+  width: 53.9%;
+  hight: 32%;
+  float: below;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw6-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: below;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+#### &lt;span style="color:#bff4ee"&gt;Unequal Groups&lt;/span&gt;
+
+&lt;center&gt;&lt;kbd&gt;pwr.2p2n.test(h =, n1 =, n2 =, sig.level=, power=)&lt;/kbd&gt;&lt;/center&gt;
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;table class="table table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;vertical-align: middle !important;"&gt; Option &lt;/th&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;vertical-align: middle !important;"&gt; Description &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;kbd&gt;h&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; background-color: #212121 !important;vertical-align: middle !important;"&gt; Effect size &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;kbd&gt;n1&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; background-color: #212121 !important;vertical-align: middle !important;"&gt; One sample size &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;n2&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; The other sample size &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;sig.level&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Significance level (default of 0.05) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;power&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Power level &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;alternative&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Choice of direction - either &lt;kbd&gt;"two.sided"&lt;/kbd&gt; (default), &lt;kbd&gt;"less"&lt;/kbd&gt;, or &lt;kbd&gt;"greater"&lt;/kbd&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+
+count: false
+ 
+
+.panel1-sw7-auto[
+
+```r
+# Unequal Groups
+
+*pwr.2p2n.test(h = 0.2,
+*             n1 = 763,
+*             power = 0.8,
+*             sig.level = 0.05,
+*             alternative = "greater")
+```
+]
+ 
+.panel2-sw7-auto[
+
+```
+## 
+##      difference of proportion power calculation for binomial distribution (arcsine transformation) 
+## 
+##               h = 0.2
+##              n1 = 763
+##              n2 = 193.8285
+##       sig.level = 0.05
+##           power = 0.8
+##     alternative = greater
+## 
+## NOTE: different sample sizes
+```
+]
+
+&lt;style&gt;
+.panel1-sw7-auto {
+  color: white;
+  width: 44.1%;
+  hight: 32%;
+  float: below;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw7-auto {
+  color: white;
+  width: 53.9%;
+  hight: 32%;
+  float: below;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw7-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: below;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+### Chi-square
+
+--
+
+&lt;center&gt;&lt;kbd&gt;pwr.chisq.test(w =, N =, df =, sig.level =, power = )&lt;/kbd&gt;&lt;/center&gt;
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;table class="table table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;vertical-align: middle !important;"&gt; Option &lt;/th&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;vertical-align: middle !important;"&gt; Description &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;kbd&gt;w&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; background-color: #212121 !important;vertical-align: middle !important;"&gt; Effect size &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;kbd&gt;N&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; background-color: #212121 !important;vertical-align: middle !important;"&gt; Total sample size &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;df&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Degrees of freedom &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;sig.level&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Significance level (default of 0.05) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 7em; "&gt; &lt;kbd&gt;power&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Power level &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+
+count: false
+ 
+
+.panel1-sw8-auto[
+
+```r
+*pwr.chisq.test(w = 0.1,
+*              power = 0.9,
+*              df = 1,
+*              sig.level = 0.01)
+```
+]
+ 
+.panel2-sw8-auto[
+
+```
+## 
+##      Chi squared power calculation 
+## 
+##               w = 0.1
+##               N = 1487.939
+##              df = 1
+##       sig.level = 0.01
+##           power = 0.9
+## 
+## NOTE: N is the number of observations
+```
+]
+
+&lt;style&gt;
+.panel1-sw8-auto {
+  color: white;
+  width: 44.1%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw8-auto {
+  color: white;
+  width: 53.9%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw8-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+# Power Analysis Plots
+
+--
+
+.center2[**Power curves** are line plots that show how the change in variables, such as effect size and sample size, impact the power of the statistical test]
+
+.footnote[Unfortunately we do not have the bandwidth to cover power curves here, but an example and annotated script is provided on the next slide should you be interested]
+
+---
+
+## Example
+
+
+```
+## Warning: The `size` argument of `element_line()` is deprecated as of ggplot2 3.4.0.
+## ℹ Please use the `linewidth` argument instead.
+```
+
+&lt;img src="power-analysis-pres_files/figure-html/unnamed-chunk-14-1.png" style="display: block; margin: auto;" /&gt;
+
+.footnote[
+&lt;div class='footsbs'&gt;
+&lt;a href="scripts/powercurves_proptest.R.zip" target='_blank' download="Powercurves Example script"&gt;
+&lt;img src="img/Rscript-ico.png" alt="Rscript icon" width='36'&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+]
+    
+---
+
+# Note: Choosing a Starting Effect Size
+
+--
+
+&gt; Estimating an expected effect size is the most difficult parameter to determine
+
+--
+
+&gt; It requires that you have experience with the content and context of a study and any corresponding measures (e.g. using previous studies and results to calculate possible effect sizes )
+
+--
+
+&gt; If you don't have access to this information or if a study is completely novel, Cohen (1988) created some basic estimations and benchmarks. Much like other guidelines such as *p*-values (ugh), Cohen's Kappa, etc, these serve as a starting point and by no means should they be treated as static rules!
+
+--
+
+&lt;table class="table table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Approach &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; Variable &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; Small Effect &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; Medium Effect &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; Large Effect &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 10em; "&gt; &lt;i&gt;t&lt;/i&gt;-test &lt;/td&gt;
+   &lt;td style="text-align:center;width: 7em; "&gt; &lt;kbd&gt;d&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;width: 7em; "&gt; 0.20 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 7em; "&gt; 0.50 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 7em; "&gt; 0.80 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 10em; "&gt; ANOVA &lt;/td&gt;
+   &lt;td style="text-align:center;width: 7em; "&gt; &lt;kbd&gt;f&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;width: 7em; "&gt; 0.10 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 7em; "&gt; 0.25 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 7em; "&gt; 0.40 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 10em; "&gt; General Linear Models &lt;/td&gt;
+   &lt;td style="text-align:center;width: 7em; "&gt; &lt;kbd&gt;f2&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;width: 7em; "&gt; 0.02 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 7em; "&gt; 0.15 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 7em; "&gt; 0.35 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 10em; "&gt; Tests of Proportions &lt;/td&gt;
+   &lt;td style="text-align:center;width: 7em; "&gt; &lt;kbd&gt;h&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;width: 7em; "&gt; 0.20 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 7em; "&gt; 0.50 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 7em; "&gt; 0.80 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 10em; "&gt; Chi-square &lt;/td&gt;
+   &lt;td style="text-align:center;width: 7em; "&gt; &lt;kbd&gt;w&lt;/kbd&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;width: 7em; "&gt; 0.10 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 7em; "&gt; 0.30 &lt;/td&gt;
+   &lt;td style="text-align:center;width: 7em; "&gt; 0.50 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+.footnote[
+&lt;div class='footsbs'&gt;
+&lt;a href="files/Cohen%20(1988).pdf" target='_blank' download="Statistical Power Analysis for the Behavioral Sciences pdf"&gt;
+&lt;img src="img/pdf-ico.png" alt="PDF icon" width='36'&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+]
+
+---
+
+# Terminology is Important!
+
+.pull-left[
+How you describe power is important!
+] 
+
+.pull-right[
+<blockquote class="twitter-tweet" data-width="550" data-lang="en" data-dnt="true" data-theme="light"><p lang="en" dir="ltr">Please stop saying studies are underpowered without clarifying *what* the design is underpowered for. It’s a vague descriptor that allows critique without any concrete reasoning behind it. Studies aren’t underpowered. Designs are underpowered *for some effects in some tests*. &gt;</p>&mdash; Richard D. Morey (@richarddmorey) <a href="https://twitter.com/richarddmorey/status/1076204872091893760?ref_src=twsrc%5Etfw">December 21, 2018</a></blockquote>
+
+]
+
+--
+
+&lt;br&gt;
+.pull-left[
+For more on this, click the graphic to the right
+] 
+
+.pull-right[
+&lt;a href="https://towardsdatascience.com/why-you-shouldnt-say-this-study-is-underpowered-627f002ddf35"&gt;
+&lt;img src="img/tds.png" width="50%" /&gt;
+&lt;/a&gt;
+]
+
+---
+
+## Additional Resources
+
+If you would like a different view of power and its use, please take a look at the videos below
+&lt;br&gt;
+&lt;br&gt;
+
+--
+
+.pull-left[
+&lt;center&gt;
+
+&lt;span style="color:#8ec9bb; font-weight: bold; font-style: italic;"&gt;(Statistical) Power&lt;/span&gt;
+&lt;/center&gt;
+&lt;p align="center"&gt;
+    &lt;iframe width="450" height="252" src="https://www.youtube.com/embed/Rsc5znwR5FA" title="Statistical Power, Clearly Explained!!!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/p&gt;
+]
+
+--
+
+.pull-right[
+&lt;center&gt;
+
+***Power analysis***
+&lt;/center&gt;
+&lt;p align="center"&gt;
+    &lt;iframe width="450" height="252" src="https://www.youtube.com/embed/VX_M3tIyiYk" title="Power Analysis, Clearly Explained!!!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/p&gt;
+]
 
 ---
 

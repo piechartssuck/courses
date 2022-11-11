@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Causality and Validity</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr. Abhik Roy" />
+    <script src="causality-validity-pres_files/header-attrs-2.18/header-attrs.js"></script>
+    <link href="causality-validity-pres_files/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
+    <script src="causality-validity-pres_files/tile-view-0.2.6/tile-view.js"></script>
+    <link href="causality-validity-pres_files/animate.css-3.7.2/animate.xaringan.css" rel="stylesheet" />
+    <link href="causality-validity-pres_files/tachyons-4.12.0/tachyons.min.css" rel="stylesheet" />
+    <link href="causality-validity-pres_files/panelset-0.2.6/panelset.css" rel="stylesheet" />
+    <script src="causality-validity-pres_files/panelset-0.2.6/panelset.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Causality and Validity
+]
+.subtitle[
+## EDP 619 Week 12
+]
+.author[
+### Dr. Abhik Roy
+]
+
+---
+
+
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/x-mathjax-config"&gt;
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+  MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+    cancel: ["Extension","cancel"],
+    bcancel: ["Extension","cancel"],
+    xcancel: ["Extension","cancel"],
+    cancelto: ["Extension","cancel"]
+  });
+});
+&lt;/script&gt;
+
+&lt;style&gt;
+section {
+    display: flex;
+    display: -webkit-flex;
+}
+
+section {
+    height: 600px;
+    width: 60%;
+    margin: auto;
+    border-radius: 21px;
+    background-color: #212121;
+}
+
+.remark-slide-container {
+background: #212121;
+}
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
+}
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
+}
+
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
+}
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
+}
+
+section p {
+    text-align: center;
+    font-size: 30px;
+    background-color: #212121;
+    border-radius: 21px;
+    font-family: Roboto Condensed;
+    font-style: bold;
+    padding: 12px;
+    color: #bff4ee;
+    margin: auto;
+}
+
+#center {
+text-align: center;
+}
+
+#right {
+  text-align: right;
+} 
+
+.center p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.tab {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.tabdbl {
+    display: inline-block;
+    margin-left: 80px;
+}
+
+.tabtpl {
+    display: inline-block;
+    margin-left: 120px;
+}
+
+
+.obr
+{
+    display:block;
+    margin-top:-15px;
+}
+
+.pull-left-left {
+  float: left;
+  width: 27%;
+}
+
+.pull-right-right {
+  float: right;
+  width: 32%;
+}
+
+img.expand:hover {
+  margin: 0 auto;
+  position: relative;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  transform: scale(1.5)             
+  translateX(-35%);
+  z-index: 99;
+  transition:all 0.5s ease-in-out;
+  -webkit-transition:all 0.2s ease-in-out;
+}
+
+.vertline {
+  border-left: 5px solid #212121;
+  height: 100px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+*, *:before, *:after {
+	 box-sizing: border-box;
+	 outline: none;
+}
+
+.hover {
+	 position: relative;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 width: 400px;
+	 height: 65px;
+	 background-color: #e3c0ff;
+	 border-radius: 99px;
+	 box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	 transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+	 overflow: hidden;
+}
+
+ .hover:before, .hover:after {
+	 position: absolute;
+	 top: 0;
+	 display: flex;
+	 align-items: center;
+   justify-content: center;
+	 width: 50%;
+	 height: 100%;
+	 transition: 0.25s linear;
+	 z-index: 1;
+}
+
+ .hover:before {
+	 content: '';
+	 left: 0;
+	 background-color: #ca86ec;
+   color: #212121;
+}
+
+ .hover:after {
+	 content: '';
+	 right: 0;
+	 background-color: #d896ff;
+}
+
+ .hover:hover {
+	 background-color: #cc8bff;
+	 box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+ .hover:hover span {
+	 opacity: 0;
+	 z-index: -3;
+}
+
+ .hover:hover:before {
+	 opacity: 0.5;
+	 transform: translateY(-100%);
+}
+
+ .hover:hover:after {
+	 opacity: 0.5;
+	 transform: translateY(100%);
+}
+
+ .hover span {
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 text-align: center;
+	 width: 100%;
+	 height: 100%;
+	 color: #212121;
+	 font-size: 24px;
+	 font-weight: 700;
+	 opacity: 1;
+	 transition: opacity 0.25s;
+	 z-index: 2;
+   white-space:pre;
+}
+
+ .hover .doc-link {
+	 position: relative;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 text-align: center;
+	 width: 25%;
+	 height: 100%;
+	 color: whitesmoke;
+	 font-size: 24px;
+	 text-decoration: none;
+	 transition: 0.25s;
+}
+ .hover .doc-link i {
+	 text-shadow: 1px 1px rgba(70, 98, 127, 0.7);
+	 transform: scale(1);
+}
+ .hover .doc-link:hover {
+	 background-color: rgba(245, 245, 245, 0.1);
+}
+ .hover .doc-link:hover i {
+	 animation: bounce 0.4s linear;
+}
+ @keyframes bounce {
+	 40% {
+		 transform: scale(1.4);
+	}
+	 60% {
+		 transform: scale(0.8);
+	}
+	 80% {
+		 transform: scale(1.2);
+	}
+	 100% {
+		 transform: scale(1);
+	}
+}
+
+.boxl {
+    width: 50%;
+    margin: 5px;
+    text-align: center;
+}
+
+.boxr {
+    margin: 5px;
+    text-align: center;
+}
+
+.picr {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+&lt;/style&gt;
+
+
+
+&lt;style type="text/css"&gt;
+.highlight-last-item &gt; ul &gt; li,
+.highlight-last-item &gt; ol &gt; li {
+  opacity: 0.5;
+}
+.highlight-last-item &gt; ul &gt; li:last-of-type,
+.highlight-last-item &gt; ol &gt; li:last-of-type {
+  opacity: 1;
+}
+&lt;/style&gt;
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 110px;
+height: 128px;
+z-index: 0;
+background-image: url(/Users/skynet/Documents/WVU/Teaching/GitHub.nosync/edp619/static/img/course_hex.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:1em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('a')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = 'https://edp619.asocialdatascientist.com'
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+---
+
+class: highlight-last-item
+layout: true
+
+---
+
+# Experiments and Causation 
+
+---
+
+## Cause 
+
+--
+
++ Variable that produces an effect or result
+
+--
+
++ Most causes are **inus** 
+	
+.pull-left[
+&gt; A cause is an insufficient (**i**) 
+
+&gt; but non-redundant (**n**) 
+
+&gt; part of an unnecessary (**u**) but
+
+&gt; sufficient condition (**s**)
+]
+
+--
+
+.pull-right[
+Example
+]
+
+--
+
+- A given event may have many different causes
+	
+--
+
+- Many factors are required for an effect to occur, but they can rarely be fully known and how they relate to one another
+
+---
+
+## Effect 
+
+--
+
++ **Probabilistic Outcomes**. difference between what did happen and what would have happened
+
+--
+
++ **Counterfactual**. generally requires some necessary factor without which the outcome would not have occurred
+	
+---
+
+## Counterfactual 
+
+--
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;center&gt;&lt;i&gt;Knowledge of what would have happened in the absence of a suspected causal agent&lt;/i&gt;&lt;/center&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+--
+
+.pull-left[Physically impossible since we cannot simultaneously receive and not receive a treatment]
+
+--
+
+.pull-right[So the central task of all cause-probing research is to approximate the physically impossible counterfactual]
+
+
+---
+
+# Criteria to Establish Causality
+
+--
+
+1. **Temporal precedence**. cause preceded effect
+
+--
+
+2. **Covariation**. cause and effect move together
+
+--
+
+3. **No plausible alternative explanations**. no other variable or factor is causing the outcome
+
+---
+
+# Cause, Effect, and Causal Relationships in Experiments
+
+--
+
++ **Temporal precedence**. presumed causes are manipulated to observe their effect
+
+--
+
++ **Covariation**. variability in cause related to variation in an effect
+
+--
+
++ **No plausible alternative explanations**. elements of design and extra-study knowledge are used to account for and reduce the plausibility of alternative explanations
+
+---
+
+# Causation, Correlation, and Confounds 
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;center&gt;&lt;span style="color:#ff8080; font-weight: bold; font-size: 1.2em;"&gt;Correlation does not prove Causation!&lt;/span&gt;&lt;/center&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+--
+
+.pull-left[.tabtpl[Fails **Temporal precedence** &lt;br&gt;&lt;br&gt;&lt;span style="color:#ffb3c2;"&gt;Correlations do not meet the first premise of causal logic since we cannot determine direction&lt;/span&gt;]]
+
+--
+
+.pull-right[.tabtpl[Fails **No plausible alternative explanations**&lt;br&gt;&lt;br&gt;&lt;span style="color:#ffb3c2;"&gt;These relationships are often due to a third variable (i.e., a confound)&lt;/span&gt;]]
+
+---
+
+## Correlations: Making Some Sense Out Of a Mess
+
+--
+
+
+
+
+
+
+
+
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;img src="causality-validity-pres_files/figure-html/unnamed-chunk-7-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Manipulable and Nonmanipulable Causes 
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+--
+
+
+.pull-left[Experiments involve causal agents that can be *manipulated*]
+
+--
+
+.pull-right[Rigid criteria (e.g., ethnicity, gender) are *non manipulable* causes in experiments because they cannot be deliberately varied]
+
+---
+
+# Causal Description and Causal Explanation 
+
+--
+
++ **Causal description**. identifying that a causal relationship exists between `X` and `Y`
+
+--
+
++ **Molar causation**. the overall relationship between a treatment package and its effects
+
+--
+
++ **Causal explanation**. explaining how `X` causes `Y`
+
+--
+
++ **Molecular causation**. knowing which parts of a treatment are responsible for which parts of an effect
+
+---
+
+# Causal Models (1)
+&lt;br&gt;
+&lt;br&gt;
+.pull-left[
+&lt;center&gt;
+&lt;img src="img/causal_descdir.png" alt="causality" style="width: 450px;"/&gt;
+&lt;center&gt;
+]
+
+--
+
+.pull-right[
+&lt;center&gt;
+&lt;img src="img/causal_expindir.png" alt="causality" style="width: 450px;"/&gt;
+&lt;center&gt;
+]
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;center&gt;
+&lt;img src="img/causal_expdirindir.png" alt="causality" style="width: 450px;"/&gt;
+&lt;center&gt;
+
+---
+
+# Causal Models (2)
+&lt;br&gt;
+&lt;br&gt;
+
+--
+
+
+.pull-left[&lt;img src="img/moderator.png" alt="moderator model" style="width: 450px;"/&gt;]
+
+
+--
+
+.pull-right[&lt;img src="img/moderator-ex.png" alt="moderator example" style="width: 500px;"/&gt;]
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+--
+
+.pull-left[&lt;img src="img/mediator.png" alt="mediator model" style="width: 450px;"/&gt;]
+
+--
+
+.pull-right[&lt;img src="img/mediator-ex.png" alt="mediator example" style="width: 500px;"/&gt;]
+
+---
+
+# Modern Descriptions of Experiments 
+
+---
+
+# Randomized Experiment 
+
+--
+
++ Units are assigned to conditions randomly
+
+--
+
++ Randomly assigned units are probabilistically equivalent based on expectancy (if certain conditions are met)
+	
+--
+
++ Under the appropriate conditions, randomized experiments provide unbiased estimates of an effect
+
+---
+
+## Quasi-Experiment 
+
+--
+
+&gt; Shares all features of randomized experiments except assignment
+
+--
+
+&gt; Assignment to conditions occurs by self-selection
+
+--
+
+&gt; Greater emphasis on enumerating and ruling out alternative explanations through 
+  + logic&lt;br&gt;&lt;br&gt;
+  + reasoning&lt;br&gt;&lt;br&gt;
+  + design&lt;br&gt;&lt;br&gt;
+  + measurement
+
+---
+
+## Natural Experiment 
+
+&gt; Naturally-occurring contrast between a treatment and comparison condition
+
+--
+
+&gt; Typically concern nonmanipulable causes
+
+--
+
+&gt; Requires constructing a counterfactual rather than manipulating one
+
+---
+
+# Nonexperimental Designs 
+
++ Often called correlational or passive designs (i.e., cross-sectional)
+
+--
+
++ Statistical controls often used in place of structural design elements
+
+--
+
++ Generally do not support strong causal inferences
+
+---
+
+# Experiments and the Generalization of Causal Connections 
+
+--
+
++ Most experiments are localized but have general aspirations 
+
+--
+
++ Limited samples of **utos** 
+  &gt; units (**u**)&lt;br&gt;&lt;br&gt; 
+  &gt; treatments (**t**)&lt;br&gt;&lt;br&gt; 
+  &gt; observations (**o**)&lt;br&gt;&lt;br&gt; 
+  &gt; settings (**s**)
+
+--
+
++ Known as **local molar causal validity**
+
+---
+
+# Construct Validity: Causal Generalization as Representation 
+
+--
+
++ Premised on generalizing from particular sampled instances of units, treatments, observations, and settings to the abstract, higher order constructs that sampled instances represent
+
+---
+
+# External Validity: Causal Generalization as Extrapolation 
+
+--
+
++ Inferring a causal relationship to unsampled units, treatments, observations, and settings from sampled instances
+
+--
+
++ Enhanced when probability sampling methods are used
+
+--
+
+.pull-left[.tabtpl[&lt;span style = "line-height:4.5em;"&gt;Broad &amp;#8594; Narrow&lt;/span&gt;]]
+
+
+.pull-right[.tabtpl[&lt;span style = "line-height:4.5em;"&gt;Narrow &amp;#8594; Broad&lt;/span&gt;]]
+
+---
+
+# Approaches to Making Causal Generalizations
+
+--
+
++ Applying probability sampling techniques
+
+--
+
++ Arguing causal reasoning
+
+--
+
++ Employing interpolation and extrapolation
+
+--
+
++ Establishing discrimination
+
+--
+
++ Implementing a Grounded Theory approach
+
+--
+
++ Ruling out irrelevancies
+
+--
+
++ Uncovering heterogeneous instances
+
+--
+
++ Using targeted purposive sampling
+
+--
+
++ Utilizing surface and structural similarity in analogical reasoning
+
+
+---
+
+
+# Validity
+
+--
+
+&gt; Approximate truthfulness of correctness of an inference
+
+--
+
+&gt;  Not an all or none, either or, condition, rather a matter of degree
+
+--
+
+&gt; Efforts to increase one type of validity often reduce others
+
+---
+
+## Statistical Conclusion Validity
+
+
+.center2[ 
+Validity of inferences about the covariation between a treatment (cause) and corresponding outcome (effect)
+]
+
+---
+
+## Internal Validity
+
+ 
+.center2[Validity of inferences about whether observed covariation between `A` (treatment/cause) and `Y` (outcome/effect) reflects a causal relationship from `X` to `Y` as those variables were manipulated or measured]
+
+---
+
+## Construct Validity
+
+
+.center2[Validity of inferences about the higher order constructs that represent sampling particulars]
+
+---
+
+## External Validity 
+
+
+.center2[Validity of inferences about whether a cause-effect relationship holds over variations in units, treatments, observations, and settings]
+
+---
+
+## Internal Validity
+
+--
+
+.center2[Inferences about whether the observed covariation between `X` and `Y` reflects a causal relationship from `X` to `Y` in the form in which the variables were manipulated or measured]
+
+
+---
+
+### Note
+
+.center2[In most cause-probing studies, internal validity is the primary focus]
+
+---
+
+# Threats to Validity 
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;center&gt;
+&lt;b&gt;Reasons why an inference may be partly or wholly incorrect&lt;/b&gt;
+&lt;/center&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;hr style="width:25%"&gt; 
+
+
+--
+
+&lt;br&gt;
+&lt;center&gt;
+&lt;b&gt;Design controls can be used to reduce many validity threats, but not in all instances&lt;/b&gt;
+&lt;/center&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;hr style="width:25%"&gt; 
+
+--
+
+&lt;br&gt;
+&lt;center&gt;
+&lt;b&gt;Generally context-dependent&lt;/b&gt;
+&lt;/center&gt;
+
+---
+
+## Threats to Internal Validity
+
+---
+
+### Single Group Studies (1)
+
+--
+
+.pull-left[
+&lt;br&gt;
+&lt;p id="center" style="color:#f7c1e5; font-weight: bold; border:1px; border-style:solid; border-color:#f7c1e5; border-radius: 25px; padding: 0.3em;"&gt;
+&lt;i&gt;History&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+an unrelated event influences the outcomes
+&lt;/p&gt;
+]
+
+
+.pull-right[
+&lt;br&gt;
+&lt;p id="center" style="color:#f7c1e5; border:1px; border-style:solid; border-color:#f7c1e5; border-radius: 25px; padding: 0.3em;"&gt;
+&lt;i&gt;Example&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+A week before the closing of a survey on worker well-being, a new CEO takes over and announces to all employees in an email that there will be layoffs resulting in a 20% reduction in the total number of workers. As a result survey responses moving forward are skewed.
+&lt;/p&gt;
+]
+
+--
+
+.pull-left[
+&lt;br&gt;
+&lt;p id="center" style="color:#bca0dc; font-weight: bold; border:1px; border-style:solid; border-color:#bca0dc; border-radius: 25px; padding: 0.3em;"&gt;
+&lt;i&gt;Maturation&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+ the outcomes of a study vary as a natural result of time.
+&lt;/p&gt;
+]
+
+.pull-right[
+&lt;br&gt;
+&lt;p id="center" style="color:#bca0dc; border:1px; border-style:solid; border-color:#bca0dc; border-radius: 25px; padding: 0.3em;"&gt;
+&lt;i&gt;Example&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+Most participants are new to their job at the time of an employee ability survey assessment. A month later, their productivity has improved as a result of time spent working in the position
+&lt;/p&gt;
+]
+
+---
+
+### Single Group Studies (2)
+
+--
+
+.pull-left[
+&lt;p id="center" style="color:#e69288; font-weight: bold; border:1px; border-style:solid; border-color:#e69288; border-radius: 25px; padding: 0.3em;"&gt;
+&lt;i&gt;Instrumentation&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+different measures are used in pre-test and post-test phases
+&lt;/p&gt;
+]
+
+.pull-right[
+&lt;p id="center" style="color:#e69288;  border:1px; border-style:solid; border-color:#e69288; border-radius: 25px; padding: 0.3em;"&gt;
+&lt;i&gt;Example&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+survey participants are given 5 minutes to complete a pre-test survey prior to a training session causing some to leave some items blank. However the same participants are asked to fill out a post-test survey with identical questions, but are afforded 15 minutes for completion allowing everyone adequate time to address all items
+&lt;/p&gt;
+]
+
+--
+
+.pull-left[
+&lt;p id="center" style="color:#78c1c9; font-weight: bold; border:1px; border-style:solid; border-color:#78c1c9; border-radius: 25px; padding: 0.3em; width: 525px;"&gt;
+&lt;i&gt;Testing&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+a pre-test influences the outcomes of the post-test
+&lt;/p&gt;
+]
+
+
+.pull-right[
+&lt;p id="center" style="color:#78c1c9; border:1px; border-style:solid; border-color:#78c1c9; border-radius: 25px; padding: 0.3em; width: 525px;"&gt;
+&lt;i&gt;Example&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+low-performing students are given an self-reported survey of skills prior to a six week math and science camp. After the camp comes to a close, the same participants are asked to fill out an identical survey. Outcomes indicate higher self-reported scores due to the familiarity and/or awareness of the survey's purpose. 
+&lt;/p&gt;
+]
+
+---
+
+### Countering Threats to Single Group Studies
+
+--
+
+&gt; Adding a comparable control group counters all threats to single-group studies. If comparable control and treatment groups each face the same threats, the outcomes of the study won’t be affected by them
+
+--
+
+&gt; A large sample size counters testing, because results would be more sensitive to any variability in the outcomes
+
+--
+
+&gt; Using filler-tasks or questionnaires to hide the purpose of study also counters testing threats
+
+---
+
+### Multi-group Studies (1)
+
+--
+
+.pull-left[
+&lt;p id="center" style="color:#74cbda; font-weight: bold; border:1px; border-style:solid; border-color:#74cbda; border-radius: 25px; padding: 0.3em;"&gt;
+&lt;i&gt;Attrition&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+unexplained or uncontrollable dropout from participants
+&lt;/p&gt;
+]
+
+
+.pull-right[
+&lt;p id="center" style="color:#74cbda; border:1px; border-style:solid; border-color:#74cbda; border-radius: 25px; padding: 0.3em;"&gt;
+&lt;i&gt;Example&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+due to an error in your survey's functionality that was caught a day after the initial launch, 20% of participants provided unusable data. Almost all of the responses were from a control group making it impossible hard to compare the responses with those from a treatment groups that did not experience said error.
+&lt;/p&gt;
+]
+
+--
+
+.pull-left[
+&lt;p id="center" style="color:#8ec9bb; font-weight: bold; border:1px; border-style:solid; border-color:#8ec9bb; border-radius: 25px; padding: 0.3em;"&gt;
+&lt;i&gt;Regression to the mean&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+there is a statistical tendency for people who score extremely low or high on a test to score closer to the middle the next time
+&lt;/p&gt;
+]
+
+
+.pull-right[
+&lt;p id="center" style="color:#8ec9bb; border:1px; border-style:solid; border-color:#8ec9bb; border-radius: 25px; padding: 0.3em;"&gt;
+&lt;i&gt;Example&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+Participants are placed into groups based on their initial scores on a survey following a training. As a result, it is difficult to determine whether the outcomes would be due to the treatment or statistical norms
+&lt;/p&gt;
+]
+
+---
+
+
+### Multi-group Studies (2)
+
+--
+
+.pull-left[
+&lt;p id="center" style="color:#fbc1ae; font-weight: bold; border:1px; border-style:solid; border-color:#fbc1ae; border-radius: 25px; padding: 0.3em;"&gt;
+&lt;i&gt;Selection bias&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+groups are not comparable at the beginning of the study
+&lt;/p&gt;
+]
+
+
+.pull-right[
+&lt;p id="center" style="color:#fbc1ae; border:1px; border-style:solid; border-color:#fbc1ae; border-radius: 25px; padding: 0.3em;"&gt;
+&lt;i&gt;Example&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+Scores on a survey administered to assess loneliness groups participants into two groups: high and low. Without the researchers' awareness, the groups also happen to consist of extroverts and introverts, respectively. Since there are already systematic differences between the groups at the baseline, any improvements or declines in group assessments may be due to reasons other than a treatment intended to address loneliness.
+&lt;/p&gt;
+]
+
+--
+
+.pull-left[
+&lt;p id="center" style="color:#91eeaa; font-weight: bold; border:1px; border-style:solid; border-color:#8ec9bb; border-radius: 25px; padding: 0.3em;"&gt;
+&lt;i&gt;Social interaction&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+participants from different groups may compare notes and either figure out the aim of the study or feel resentful of others.
+&lt;/p&gt;
+]
+
+
+.pull-right[
+&lt;p id="center" style="color:#91eeaa; border:1px; border-style:solid; border-color:#8ec9bb; border-radius: 25px; padding: 0.3em;"&gt;
+&lt;i&gt;Example&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+Two groups of participants in a single-blind study are asked to take a pre-screening survey at different times. After submitting their responses, some of the individuals in the first group discover that participants who answered the items on the survey in a certain way guaranteed that they were placed into the experimental group. The information is passed along to most participants in the second group ensuring their admittance as well.
+&lt;/p&gt;
+]
+
+---
+
+### Countering Threats to Multi-Group Studies
+
+--
+
+&gt;  Blinding participants to the aim of the study counters the effects of social interaction.
+
+--
+
+&gt; Random assignment of participants to groups counters selection bias and regression to the mean by making groups comparable at the start of the study.
+    
+---
+
+# Estimating Internal Validity in Experiments 
+
+--
+
+&gt; By definition randomized experiments eliminate selection through random assignment to conditions
+
+--
+
+&gt; Most other threats are likely probabilistically distributed as well
+
+--
+
+&gt; Typically only two likely validity threats arise from experiments
+
+--
+
+
+.pull-left[.tabtpl[&lt;span style="color:#74cbda; font-weight: bold; font-style:italic; line-height:4.5em;"&gt;Attrition&lt;/span&gt;]]
+
+--
+
+.pull-right[.tabtpl[&lt;span style="color:#78c1c9; font-weight: bold; font-style:italic; line-height:4.5em;"&gt;Testing&lt;/span&gt;]]
+
+---
+
+# Estimating Internal Validity in Quasi-Experiments
+
+--
+
+&gt; Differences between groups tend to be more systematic than random
+
+--
+
+&gt; All threats should be made explicit and then ruled out one by one
+	
+--
+
+&gt; Once identified, threats can be systematically examined
+
+---
+
+## Thats it!
+
+If you have any questions, please reach out
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;center&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;div class="fade_rule"&gt;&lt;/div&gt;  
+&lt;br&gt;&lt;br&gt;
+&lt;/center&gt;
+
+&lt;center&gt;
+&lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;&lt;img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;This work is licensed under a &lt;br /&gt;&lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License&lt;/a&gt;
+&lt;/center&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"navigation": {
+"scroll": false
+}
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

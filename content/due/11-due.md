@@ -39,7 +39,7 @@ Type<sup>2</sup>
 Read <i>A Sample/Population Size Activity: Is it the sample size of the sample as a fraction of the population that matters?</i> in Smith, M.H. (2017)
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/readings/10-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
+<a href="/readings/11-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://www.tandfonline.com/doi/full/10.1080/10691898.2004.11910735" target="_blank"><img src="/logos/library-ico.png" alt="Jpurnal icon" width="26"> </a>
@@ -47,10 +47,10 @@ Read <i>A Sample/Population Size Activity: Is it the sample size of the sample a
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Read <i>Understanding Statistical Power and Significance Testing: An Interactive Visualization</i> in Magnusson, K. (2018))
+Read <i>Understanding Statistical Power and Significance Testing: An Interactive Visualization</i> in Magnusson, K. (2018)
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/readings/10-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
+<a href="/readings/11-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://rpsychologist.com/d3/nhst/" target="_blank"><img src="/logos/dataviz-ico.png" alt="Data visualization icon" width="28"> </a>
@@ -61,7 +61,7 @@ Read <i>Understanding Statistical Power and Significance Testing: An Interactive
 Complete the module <span style="color:#ffc787;font-weight:bold"><i>Analyzing Survey Data in R </i></span>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/modules/10-module/#data-camp"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
+<a href="/modules/11-module/#data-camp"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://www.datacamp.com" target="_blank"><img src="/logos/dc-ico.png" alt="DataCamp icon" width="24"> </a>

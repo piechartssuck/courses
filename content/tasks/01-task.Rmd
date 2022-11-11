@@ -67,18 +67,18 @@ You may end up using a survey in this course so its a good idea to go to the [WV
 
 <div class="bigcol">
 ```{r echo = FALSE, out.width="140%", fig.align='left'}
-knitr::include_url("/slides/Criterial%20and%20Interpretive%20Evaluation/Criterial-and-Interpretive-Eval-pres.html")
+knitr::include_url("/slides/What%20is%20PE/What-is-PE-pres.html")
 ```
 </div>
 
 <div class="smallcol">
 ```{r echo = FALSE, fig.align='right'}
 html_link <- function() {
-  paste0("<a href='/slides/Criterial%20and%20Interpretive%20Evaluation/Criterial-and-Interpretive-Eval-pres.html' target='_blank'>", "<img src='/logos/web-ico.png' alt='Criteria for Evaluations Page' width='35'>", "</a>")
+  paste0("<a href='/slides/What%20is%20PE/What-is-PE-pres.html' target='_blank'>", "<img src='/logos/web-ico.png' alt='Criteria for Evaluations Page' width='35'>", "</a>")
 }
 
 pdf_link <- function() {
- paste0("<a href='/slides/Criterial%20and%20Interpretive%20Evaluation/Criterial-and-Interpretive-Eval-flat.pdf' target='_blank'>", "<img src='/logos/pdf-ico.png' alt='Criteria for Evaluations PDF' width='35'>", "</a>")
+ paste0("<a href='/slides/What%20is%20PE/What-is-PE-flat.pdf' target='_blank'>", "<img src='/logos/pdf-ico.png' alt='Criteria for Evaluations PDF' width='35'>", "</a>")
 }
 
 tibble(

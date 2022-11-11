@@ -257,9 +257,6 @@ If you would like a deeper dive on either area, tale a look at the videos below
 </center>
 ]
 
-.pull-right[
-<center>
-
 ---
 
 # From Basic to Better
@@ -1098,7 +1095,7 @@ HC
 <a href="https://uc-r.github.io/hc_clustering" target='_blank'>
 <img src="img/rmd-logo.png" alt="Rmarkdown icon" width='35' style="padding-right: 10px ; padding-left: 5px;">
 </a>
-<a href="scripts/hc.zip" target='_blank' download="Hierarchical Clustering script">
+<a href="https://edp619.asocialdatascientist.com/slides/pca/scripts/hc.zip" target='_blank' download="Hierarchical Clustering script">
 <img src="img/Rscript-ico.png" alt="Rscript icon" width='36'>
 </a> 
 </div>
@@ -1121,7 +1118,7 @@ km
 [4] <a href="https://uc-r.github.io/kmeans_clustering" target='_blank'>
 <img src="img/rmd-logo.png" alt="Rmarkdown icon" width='35' style="padding-right: 10px; padding-left: 5px;">
 </a>
-<a href="scripts/kmeans.zip" target='_blank' download="K-means script">
+<a href="https://edp619.asocialdatascientist.com/slides/pca/scripts/kmeans.zip" target='_blank' download="K-means script">
 <img src="img/Rscript-ico.png" alt="Rscript icon" width='36'>
 </a>
 </div>
@@ -1147,7 +1144,7 @@ TSNE
 <a href="https://distill.pub/2016/misread-tsne/" target='_blank'>
 <img src="img/html-ico.png" alt="HTML icon" width='35' style="padding-right: 10px;">
 </a>
-<a href="scripts/tsne.zip" target='_blank' download="t-SNE script">
+<a href="https://edp619.asocialdatascientist.com/slides/pca/scripts/tsne.zip" target='_blank' download="t-SNE script">
 <img src="img/Rscript-ico.png" alt="Rscript icon" width='36'>
 </a>
 </div>
@@ -1334,7 +1331,7 @@ anim_save("img/tsne_anim.gif", tsne_anim)
 <a href="https://hypercompetent.github.io/post/gganimate-tweenr-tsne-plot/" target='_blank'>
 <img src="img/html-ico.png" alt="HTML icon" width='35' style="padding-right: 10px; padding-left: 5px;">
 </a>
-<a href="scripts/tsne_anim.zip" target='_blank' download="t-SNE animation bundle">
+<a href="https://edp619.asocialdatascientist.com/slides/pca/scripts/tsne_anim.zip" target='_blank' download="t-SNE animation bundle">
 <img src="img/Rscript-ico.png" alt="Rscript icon" width='36'>
 </a>
 </div>
@@ -1363,7 +1360,7 @@ PCA34
 <a href="https://uc-r.github.io/pca" target='_blank'>
 <img src="img/rmd-logo.png" alt="Rmarkdown icon" width='35' style="padding-right: 10px; padding-left: 5px;">
 </a>
-<a href="scripts/pca.zip" target='_blank' download="PCA script">
+<a href="https://edp619.asocialdatascientist.com/slides/pca/scripts/pca.zip" target='_blank' download="PCA script">
 <img src="img/Rscript-ico.png" alt="Rscript icon" width='36'>
 </a>
 </div>

@@ -52,8 +52,8 @@ paper <- tibble(
   Arrow = c("internal",
             "internal"),
   
-  Icon = c("", 
-           ""),
+  Icon = c("pdf",
+           "pdf"),
   
   Site = c(
     "",
@@ -73,6 +73,7 @@ paper %>%
     str_detect(`Icon`, "slack") ~ '<img src="/logos/slack-ico.png" alt="Slack icon" width="25px">',
     str_detect(`Icon`, "ecampus") ~ '<img src="/logos/wvu-gold-ico.png" alt="Slack icon" width="25px">',
     str_detect(`Icon`, "library") ~ '<img src="/logos/library-ico.png" alt="Slack icon" width="25px">',
+    str_detect(`Icon`, "pdf") ~ '<img src="/logos/pdf-ico.png" alt="Slack icon" width="25px">',
     TRUE ~ NA_character_
     )
   ) %>%

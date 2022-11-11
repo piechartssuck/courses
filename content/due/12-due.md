@@ -69,24 +69,13 @@ Complete the module <span style="color:#ffc787;font-weight:bold"><i>Introduction
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Watch a video on Power Analysis
+Watch a video on Power Analysis to prepare yourself for next week’s task
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/tasks/12-task/#power-analysis"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://youtu.be/VX_M3tIyiYk" target="_blank"><img src="/logos/youtube-ico.png" alt="YouTube icon" width="28"> </a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Go through the slideshow <span style="color:#6ac4cd;font-weight:bold">With Great Power…</span>
-</td>
-<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/tasks/12-task/#avoiding-a-terrible-error"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
-</td>
-<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<img src="/logos/slideshow-ico.png" alt="Slideshow icon" width="26">
 </td>
 </tr>
 <tr>

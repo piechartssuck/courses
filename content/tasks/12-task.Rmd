@@ -19,19 +19,8 @@ weight: 1
 source(here::here("content", "com_libs.R"))
 ```
 
-## Power Analysis 
+## The Perfect Balance
 
-Please watch this wonderful video describing Power Analysis
-
-<p align="center">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/VX_M3tIyiYk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
-
-## Avoiding a Terrible Error 
-
-*posting today*
-
-<!--
 ```{=html}
 <center>
 <div class="wrapper">
@@ -58,18 +47,18 @@ Please watch this wonderful video describing Power Analysis
 
 <div class="bigcol">
 ```{r echo = FALSE, out.width="140%", fig.align='left'}
-knitr::include_url("/slides/Hypothesis%20and%20Estimation/hypothesis-and-estimation-pres.html")
+knitr::include_url("/slides/Causality%20and%20Validity/causality-validity-pres.html")
 ```
 </div>
 
 <div class="smallcol">
 ```{r echo = FALSE, fig.align='right'}
 html_link <- function() {
-  paste0("<a href='/slides/Hypothesis%20and%20Estimation/hypothesis-and-estimation-pres.html' target='_blank'>", "<img src='/logos/web-ico.png' alt='PCA presentation' width='35'>", "</a>")
+  paste0("<a href='/slides/Causality%20and%20Validity/causality-validity-pres.html' target='_blank'>", "<img src='/logos/web-ico.png' alt='PCA presentation' width='35'>", "</a>")
 }
 
 pdf_link <- function() {
- paste0("<a href='/slides/Hypothesis%20and%20Estimation/hypothesis-and-estimation-flat.pdf' target='_blank'>", "<img src='/logos/pdf-ico.png' alt='PCA presentation PDF' width='35'>", "</a>")
+ paste0("<a href='/slides/Causality%20and%20Validity/causality-validity-flat.pdf' target='_blank'>", "<img src='/logos/pdf-ico.png' alt='PCA presentation PDF' width='35'>", "</a>")
 }
 
 tibble(
@@ -95,4 +84,11 @@ tibble(
 <div class="clear">
 </div>
 </center>
--->
+
+## Power 
+
+Please watch the following that describes <span style="color:#8ec9bb; font-weight: bold; font-style: italic;">(Statistical) Power</span> to prepare yourself for next week's focus
+
+<p align="center">
+  <iframe width="560" height="315" src="https://youtu.be/Rsc5znwR5FA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>

@@ -31,8 +31,8 @@ wk_post <-
 Description = c("Read <i>Applying Item Response Theory (IRT) Modeling to Questionnaire Development, Evaluation, and Refinement</i> in Edelen, M.O. & Reeve, B.B. (2006)",
                 "Read <i>Power Analysis in Survey Research: Importance and Use for Health Educators</i> in Price et al. (2005)",
                 "Complete the module <span style='color:#ffc787;font-weight:bold'><i>Introduction to Text Analysis in R</i></span>",
-                "Watch a video on Power Analysis",
-                "Go through the slideshow <span style='color:#6ac4cd;font-weight:bold'>With Great Power...</span>",
+                "Go through the slideshow <span style='color:#6ac4cd;font-weight:bold'>Causality and Validity</span>"
+                "Watch a video on <span style='color:#8ec9bb; font-weight: bold; font-style: italic;'>(Statistical) Power</span> to prepare yourself for next week's task",
                 "Review <span style='color:#6acda5;font-weight:bold'>Test for Validity and Reliability</span> and submit it by the end of Week 13"
                 ),
 
@@ -40,23 +40,23 @@ Description = c("Read <i>Applying Item Response Theory (IRT) Modeling to Questio
 Details = c("<a href='/readings/12-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/readings/12-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/modules/12-module/#data-camp'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
-            "<a href='/tasks/12-task/#power-analysis'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
-            "<a href='/tasks/12-task/#avoiding-a-terrible-error'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/tasks/12-task/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
+            "<a href='/tasks/12-task/#power'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/deliverables/06-l6/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
             ),
 
 Icon = c("pdf",
          "pdf",
          "dc",
-         "youtube",
          "slideshow",
+         "youtube",
          "R"),
 
 Site = c("",
          "",
          "https://www.datacamp.com",
-         "https://youtu.be/VX_M3tIyiYk",
          "",
+         "https://youtu.be/VX_M3tIyiYk",
          "https://ecampus.wvu.edu"
          )
 )
