@@ -101,6 +101,8 @@ downloadthis::download_file(
 
 2. Open the file `Reverse Coding and Internal Consistency install.R` and run the syntax to install the packages you will need for this task. If you are asked to update any packages, please select `1: All`. 
 
+3. 
+
 3. Now please go ahead and load up the following libraries
 
 <div class = "rounded">

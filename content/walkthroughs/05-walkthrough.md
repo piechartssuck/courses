@@ -117,7 +117,9 @@ The following download contains files that are provided to help you to understan
 
 2.  Open the file `Reverse Coding and Internal Consistency install.R` and run the syntax to install the packages you will need for this task. If you are asked to update any packages, please select `1: All`.
 
-3.  Now please go ahead and load up the following libraries
+3.  
+
+4.  Now please go ahead and load up the following libraries
 
 <div class="rounded">
 
@@ -1081,7 +1083,7 @@ Poor
 </tr>
 <tr>
 <td style="text-align:center;width: 15em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-`\alpha &lt; 0.50`
+\`
 </td>
 <td style="text-align:center;width: 15em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 Unacceptable

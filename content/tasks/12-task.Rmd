@@ -90,5 +90,5 @@ tibble(
 Please watch the following that describes <span style="color:#8ec9bb; font-weight: bold; font-style: italic;">(Statistical) Power</span> to prepare yourself for next week's focus
 
 <p align="center">
-  <iframe width="560" height="315" src="https://youtu.be/Rsc5znwR5FA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/Rsc5znwR5FA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>

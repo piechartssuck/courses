@@ -1,6 +1,6 @@
 ---
-title: "Determing What You Can Determine"
-linktitle: "Week 13: Determing What You Can Determine"
+title: "Determining What You Can Determine"
+linktitle: "Week 13: Determining What You Can Determine"
 output:
   rmarkdown::html_document:
     toc: true

@@ -53,7 +53,7 @@ Link
 Lever, J., Krzywinski, M., & Altman, N. (2017)
 </td>
 <td style="text-align:center;width: 10em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Please check this week’s download
+<a href="NA" target="_blank"><img src="/logos/pdf-ico.png" alt="Slack icon" width="25px"></a>
 </td>
 </tr>
 <tr>
@@ -64,7 +64,7 @@ Please check this week’s download
 Ringnér, K. (2008)
 </td>
 <td style="text-align:center;width: 10em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Please check this week’s download
+<a href="NA" target="_blank"><img src="/logos/pdf-ico.png" alt="Slack icon" width="25px"></a>
 </td>
 </tr>
 </tbody>
