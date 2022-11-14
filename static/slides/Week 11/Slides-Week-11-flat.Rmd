@@ -427,7 +427,11 @@ can work with
 
 --
 
-4. Take a look at the examples on the [`qcoder` documentation page ](https://docs.ropensci.org/qcoder/)
+4. 4. Finally run `install.packages("textreadr")`
+
+--
+
+5. Take a look at the examples on the [`qcoder` documentation page ](https://docs.ropensci.org/qcoder/)
 
 ---
 
