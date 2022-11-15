@@ -133,7 +133,7 @@ Week 12: Test for Validity and Reliability
 </summary>
 <br>
 <p>
-Use the collected data to conduct an EFA and PCA to assess instrument validity and reliability. Submit a one paragraph descriptive summary of the findings and Rmarkdown PDF output.
+Use the collected data to conduct an EFA and PCA to assess instrument validity and reliability. Submit a one paragraph descriptive summary of the findings and Rmarkdown PDF output. This serves as the R Survey EDA as well.
 </p>
 </details>
 
@@ -175,15 +175,15 @@ After reviewing feedback, create a short one minute summary describing the resea
 
 When submitting any task, please
 
--   put your name in the upper left-hand corner
+- put your name in the upper left-hand corner
 
--   use the following format: first initial + last name + exact name of the task. For example if I were submitting the week 2 deliverable, the it should be named
+- use the following format: first initial + last name + exact name of the task. For example if I were submitting the week 2 deliverable, the it should be named
 
-    > `aroy Establish a Sampling Frame.docx`
+  > `aroy Establish a Sampling Frame.docx`
 
-    or
+  or
 
-    > `aroy Establish a Sampling Frame.pdf`
+  > `aroy Establish a Sampling Frame.pdf`
 
 ## Academic Calendar and Availibility
 

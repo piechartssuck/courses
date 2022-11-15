@@ -30,6 +30,8 @@ ul {
 }
 </style>
 
+This task serves as your sixth deliverable and R Survey EDA
+
 1. Please download one of the following
     <br>
     <center>
