@@ -1,0 +1,67 @@
+---
+title: "Analyzing Open Text Part II"
+linktitle: "Week 12: Analyzing Open Text Part II"
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  trainings:
+    parent: Modules
+    weight: 12
+type: docs
+weight: 1
+---
+
+`r blogdown::shortcode("r-walkthrough-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+## Data Camp
+
+Please finish up the following module
+
+```{r eval = TRUE, echo = FALSE, message=FALSE}
+dc_schedule <-  
+  read_csv(here::here("content", "dc.csv"),
+           show_col_types = FALSE) %>%
+  as_tibble() %>%
+  mutate(Required = case_when(
+    Required == "checked" ~ as.character(fontawesome::fa("circle-check", fill = "#428bca", height = "15px")),
+    Required == "unchecked" ~ as.character(fontawesome::fa("circle-xmark", fill = "#d9534f", height = "15px"))
+              )) %>%
+  mutate(Task = case_when(
+    Task == "checked" ~ as.character(fontawesome::fa("circle-check", fill = "#428bca", height = "15px")),
+    Task == "unchecked" ~ as.character(fontawesome::fa("circle-xmark", fill = "#d9534f", height = "15px"))
+      )
+    ) %>%
+  filter(Set == 8) %>% #CHANGE HERE
+  select(-Set) %>%
+  mutate(across(everything(), as.character)) %>%
+  mutate(across(everything(), str_squish)) %>%
+  rename(`Due by` = Due) %>%
+#  filter_all(any_vars(!is.na(.))) %>% 
+  mutate(
+    across(everything(), ~replace_na(.x, ""))
+    ) %>%
+  select_if(~!all(is.na(.)))
+  
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(dc_schedule, 
+      "html", 
+      escape = FALSE,
+      align = 'ccccll') %>%
+  kable_paper(full_width = TRUE) %>%
+  column_spec(1, width = "5em") %>%
+  column_spec(2, width = "5em") %>%
+  column_spec(3, width = "5em") %>%
+  column_spec(4, width = "5em") %>%
+  column_spec(5, width = "8em") %>%
+  column_spec(6, width = "8em") %>%
+  row_spec(0:nrow(dc_schedule), extra_css = 'vertical-align: middle !important;', color = "#f7f7f7", background = "transparent")
+```
+</center>

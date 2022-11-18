@@ -1,0 +1,3652 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Topic Modeling</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr. Abhik Roy" />
+    <script src="Slides-Week-12-flat_files/header-attrs-2.18/header-attrs.js"></script>
+    <link href="Slides-Week-12-flat_files/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
+    <script src="Slides-Week-12-flat_files/tile-view-0.2.6/tile-view.js"></script>
+    <link href="Slides-Week-12-flat_files/animate.css-3.7.2/animate.xaringan.css" rel="stylesheet" />
+    <link href="Slides-Week-12-flat_files/tachyons-4.12.0/tachyons.min.css" rel="stylesheet" />
+    <script src="Slides-Week-12-flat_files/kePrint-0.0.1/kePrint.js"></script>
+    <link href="Slides-Week-12-flat_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Topic Modeling
+]
+.subtitle[
+## EDP 618 Week 12
+]
+.author[
+### Dr. Abhik Roy
+]
+
+---
+
+
+&lt;script&gt;
+  function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+  }
+&lt;/script&gt;
+
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/x-mathjax-config"&gt;
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+  MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+    cancel: ["Extension","cancel"],
+    bcancel: ["Extension","cancel"],
+    xcancel: ["Extension","cancel"],
+    cancelto: ["Extension","cancel"]
+  });
+});
+&lt;/script&gt;
+
+&lt;style&gt;
+section {
+    display: flex;
+    display: -webkit-flex;
+}
+
+section {
+    height: 600px;
+    width: 60%;
+    margin: auto;
+    border-radius: 21px;
+    background-color: #212121;
+}
+
+.remark-slide-container {
+background: #212121;
+}
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
+}
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
+}
+
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
+}
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
+}
+
+section p {
+    text-align: center;
+    font-size: 30px;
+    background-color: #212121;
+    border-radius: 21px;
+    font-family: Roboto Condensed;
+    font-style: bold;
+    padding: 12px;
+    color: #bff4ee;
+    margin: auto;
+}
+
+#center {
+text-align: center;
+}
+
+#right {
+  text-align: right;
+} 
+
+.center p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.tab {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.obr
+{
+    display:block;
+    margin-top:-15px;
+}
+
+.container {
+  display: flex;
+}
+
+.container &gt; div {
+  flex: 1; /*grow*/
+  margin-right: 40px;
+}
+
+td, th, tr, table {
+    border: 0 !important;
+    border-spacing:0 !important;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: unset !important;
+    color: unset !important;
+  }
+
+tbody &gt; td &gt; tr:hover {
+      background-color: unset !important;
+      color: unset !important;
+  }
+  
+.remarkwidth code[class="remark-code"] {
+	white-space: pre-wrap;
+	padding-left:a 1.85em;
+	text-indent: -1.85em;
+}
+
+.left-code {
+  color: #777;
+  width: 60%;
+  height: 92%;
+  float: left;
+}
+.right-plot {
+  width: 38%;
+  float: right;
+  padding-left: 1%;
+}
+&lt;/style&gt;
+
+&lt;style type="text/css"&gt;
+.highlight-last-item &gt; ul &gt; li,
+.highlight-last-item &gt; ol &gt; li {
+  opacity: 0.5;
+}
+.highlight-last-item &gt; ul &gt; li:last-of-type,
+.highlight-last-item &gt; ol &gt; li:last-of-type {
+  opacity: 1;
+}
+&lt;/style&gt;
+
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 110px;
+height: 128px;
+z-index: 0;
+background-image: url(/Users/skynet/Documents/WVU/Teaching/GitHub.nosync/edp618/static/img/course_hex.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:1em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('a')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = 'https://edp618.asocialdatascientist.com'
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+
+
+
+
+# Getting Prepped
+
+---
+
+## Opening a Script Setting the Working Directory
+
+1. Open up RStudio
+
+--
+
+2. Go to `File &gt; New File &gt; R Script`
+
+--
+
+3. Go to `File &gt; Save As` and save the R Script in the same folder as the `csv` file. Name it whatever you want (e.g. **Week 12 R Walkthrough**)
+
+--
+
+4. Run `Week 12 install.R`
+
+--
+
+5. Run the following command in your RStudio console
+    
+    ```r
+    setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+    ```
+
+---
+
+## Loading Packages
+
+--
+
+1. Please load up the following packages by placing these at the top of your script&lt;br&gt;
+    
+    ```r
+    library(tidyverse)
+    library(tidytext)
+    library(tm)
+    library(textclean)
+    library(topicmodels)
+    library(ldatuning)
+    library(stopwords)
+    library(textstem)
+    library(broom)
+    ```
+.footnote[Alternatively if you have the **pacman** package, run `pacman::p_install("tidyverse", "tidytext", "tm", "textclean", "topicmodels", "ldatuning", "stopwords", "textstem", "broom")`]
+
+--
+
+2. You may also want to put 
+    
+    ```r
+    setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+    ```
+    below the library list so its there
+
+---
+
+# Before We Begin
+
+--
+
+This is the process we'll cover lightly. There is a lot more going on under the hood and you may not be able to recognize all of the terms, but if you can get a basic understanding of the process, the rest can be filled in by conducting a topic model!
+
+&lt;center&gt;
+&lt;img src="img/tmwf.png" alt="Basic Topic Modeling Process" width='450'&gt;&lt;/a&gt;
+&lt;/center&gt;
+
+---
+
+Additionally here are a few things we won't be covering in this session so please read over the areas you lack familiarity with. Given that, it is absolutely fine if you cannot fully understand all of these ideas right now - they will hopefully become apparent as we progress
+
+--
+
+.pull-left[
+&lt;center&gt;
+&lt;img src="img/bow.png" alt="Bag of Words Definition" width='350'&gt;&lt;/a&gt;
+&lt;/center&gt;
+]
+
+--
+
+.pull-right[
+&lt;center&gt;
+&lt;img src="img/classification.png" alt="Classification Definition" width='350'&gt;&lt;/a&gt;
+&lt;/center&gt;
+]
+
+--
+
+&lt;br&gt;
+.pull-left[
+&lt;center&gt;
+&lt;img src="img/standardization.png" alt="Standardization Definition" width='350'&gt;&lt;/a&gt;
+&lt;/center&gt;
+]
+
+--
+
+.pull-right[
+&lt;center&gt;
+&lt;img src="img/tokenization.png" alt="Tokenization Definition" width='350'&gt;&lt;/a&gt;
+&lt;/center&gt;
+]
+
+---
+
+## Assessing Data 
+
+--
+
+1. You can retrieve both the *exercising with dogs* data set and <svg aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:steelblue;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg> *script* by clicking on the icon below&lt;br&gt;
+&lt;br&gt;
+&lt;center&gt;
+&lt;a href="files/topic_modeling_files.zip" target='_blank' download="Topic Modeling Files"&gt;
+&lt;img src="img/zip-ico.png" alt="Paper" width='45'&gt;&lt;/a&gt;
+&lt;/center&gt;
+
+--
+
+2. Bring in the pdf data using
+    
+    ```r
+    exwdogs &lt;- 
+      pdftools::pdf_text("exercising_with_dogs.pdf")
+    ```
+  
+--
+  
+3. Load up the stopwords using
+    
+    ```r
+    data("stop_words")
+    ```
+
+--
+
+.footnote[Take a look at the various types of files that can be imported in the tidyverse &lt;a href="files/data-import.pdf" target='_blank' download="Data import with the tidyverse"&gt;
+&lt;img src="img/pdf-ico.png" alt="PDF icon" width='45'&gt;&lt;/a&gt;]
+
+---
+
+# *Topic Modeling*
+
+--
+
+.center2[&lt;i&gt;A type of probabilistic statistical model for (a) discovering the abstract "topics" - or hidden semantic structures - that occur in a collection of documents and (b) dimensionality reduction&lt;/i&gt;]
+
+
+---
+
+### The Most Annoying Thing About Data
+
+--
+
+.center2[&lt;b&gt;The 80/20 Rule&lt;/b&gt;&lt;sup&gt;1&lt;/sup&gt;: &lt;i&gt;Most data scientists spend only 20 percent of their time on actual data analysis and 80 percent of their time finding, cleaning, and reorganizing huge amounts of data&lt;/i&gt;]
+
+.footnote[&lt;sup&gt;1&lt;/sup&gt; Loosely based on an idea called **Pareto's Principle** which states that *roughly 80% of outcomes come from 20% of causes*]
+
+---
+
+.center2[&lt;b&gt;&lt;span style = "font-size:2.75rem"&gt;Step 1: Assessing Data&lt;/span&gt;&lt;/b&gt;]
+
+---
+
+1. Take a look at the data set and think about categorizing terms that may skew how terms are assessed
+
+--
+
+.pull-left[&lt;span class = "tab"&gt;the names of the dogs are not important so we could replace all of them simply with the word &lt;b&gt;dog&lt;/b&gt;&lt;/span&gt;]
+
+--
+
+.pull-right[&lt;span class = "tab"&gt;canines are prevalent in the data so we could Remove the word &lt;s&gt;&lt;b&gt;dog&lt;/b&gt;&lt;/s&gt; altogether&lt;/span&gt;]
+&lt;br&gt;
+
+--
+
+&lt;ol start="2"&gt;
+&lt;li&gt; Open up an empty text document and try going through on your own to consider terms that could be collapsed
+&lt;/ol&gt;
+
+--
+
+&lt;ol start="3"&gt;
+&lt;li&gt; Open up &lt;span style="font-family:'Source Code Pro'; color:#b7b3ef"&gt;Week 12 script.R&lt;/span&gt;
+&lt;/ol&gt;
+
+---
+
+.center2[&lt;b&gt;&lt;span style = "font-size:2.75rem"&gt;Step 2: Preprocessing&lt;/span&gt;&lt;/b&gt;]
+
+---
+
+&lt;span style = "font-size:1.75rem;"&gt;&lt;b&gt;Cleaning&lt;/b&gt; Raw Text&lt;/b&gt;&lt;/span&gt;
+
+---
+
+
+count: false
+ 
+
+.panel1-sw1a-auto[
+
+```r
+*exwdogs
+```
+]
+ 
+.panel2-sw1a-auto[
+
+```
+## [1] "Data Exemplar for use with:\n\nEncounters With Dogs as an Exercise in Analysing\nMulti-Species Ethnography\n\nData Collected by: Dr. Samantha Hurn\n\nIncluded are three forms of data from the same setting at various stages of the analysis process. The\nfirst are the initial rough fieldnotes taken by Samantha whilst conducting participant observation\nin the Sri Ranganatha temple, one of three temples at the Skanda Vale ashram in west Wales. The\nsecond are expanded notes with thick description of the same encounter. The third is a selected\nsection of writing combining reflexive analysis of the thick description with some relevant theoret-\nical connections incorporating both human and canine perspectives, also known as multi-species\nethnography\n\n\nDataset Exemplar\n\nStage 1\n\nOriginal ‘rough’ fieldnotes (written in notebook immediately after these interactions occurred\nand while I was still in situ):\n\nCrazy paving day 2. Sri Ranganatha temple. Unbearably hot. Joined by Shakti – thirsty, drank my\ncement mixing water, then came over for scratches. Overwhelmed by how much I miss Max. First\ntime I have touched another dog since his death. Strong mnemonic (smell, touch – do Bernese\nMountain Dogs have double coat too? Felt like it …). She seemed to recognise something was up.\nVery much a person like Max. Cried and made her fur damp. She stayed with me ’til I stopped\ncrying, then went to entrance and lay down. So hot. How does she cope in here? Why does she\ncome inside? And the incense? Need to look into canine olfaction and hearing … Would dogs find\nthe pujas stressful (incense and bell ringing – loud and smelly)?! What about animals in temples?\nCommon in south Asia. I like being in here despite the heat – meditative, calming. Good place for\nseva, or is it if I get something in return? Is enjoying the work contrary to selfless service? Swami\nN came back. Explained purification by water. Shakti polluting? Remembered Maya’s comment.\nHe thought it funny, didn’t seem to take offence. Said she lived up to her name. Isn’t Shakti divine\nmother? Should have asked him! He wants to breed a litter (and said I could maybe have one of\nthe pups which was exciting!!! Then felt guilty about Max – am I ready for another dog yet …?).\nTalked more about Max and Shakti (and his former husky). Swami went to check my crazy ­paving\n\n\n                                                 1\n"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+## [2] "(I was worried the cement was too sandy) and I carried on trying to talk to him, forgetting he usu-\nally reads lips, wanting to ask about reincarnation and hierarchy of species versus individuals. Felt\nstupid when realised he couldn’t hear me. Made me wonder if he is drawn to Shakti because of his\nhearing – non-verbal communication (but didn’t ask, it felt too personal/intrusive, maybe broach it\ntomorrow depending on how the conversation goes?). But also wondered about comfort of being\nable to live closely with another being in a monastic community (with emphasis on s­ eparation/focus\non relationship with god) …? Shakti sniffed air then almost immediately we heard barks – did she\nsmell him coming? Marmaduke dragging Brother D along track, typical hound on a scent! But is\nhe ‘typical hound’? Not all hounds the same. Is Shakti a ‘typical’ Bernese Mountain Dog? Need to\ncheck the breed characteristics. But also important to emphasise individuals as per Ingold’s ‘bioso-\ncial becoming’. Remember to ask Swami B and others during interviews later about reincarnation\nand animals …\n\n\nStage 2\n\nExpanded fieldnotes/thick description (written when I was back in my accommodation,\n­approx. 1 hour after leaving the temple):\n\nShakti, a large Bernese Mountain Dog, entered the temple and padded over to where I had been\nhard at work laying crazy paving slabs on the temple floor. The corrugated plastic roof overhead\namplified what, outside, was a glorious summer’s day, and made the ambient temperature inside\nthe temple almost unbearably hot. I sat back on my heels, and wiping the concrete dust from my\nsweaty face rose slowly to my feet as she approached, surprised that such a hirsute creature would\nenter this space of her own volition. For a moment I flattered myself with the possibility that she\nhad come to say hello. Her true motivation was soon revealed however, as while she acknowledged\nme with a sidelong glance and the faintest wag of her heavy tail as she walked past, she didn’t stop\nwalking until she had reached the bucket of water which sat at the edge of my workspace in read-\niness for mixing the next batch of concrete. Lowering her muzzle into the tepid water, she drank\ndeeply. When her thirst had been satisfied, she ambled over to where I stood, her tail generously\nsweeping from side to side. She smiled up at me with gentle eyes, before sitting on my feet, lean-\ning her bulk into my legs for support. I bent down and scratched her chest, as I had seen Swami\nNarayana (her human companion) do on many occasions, and as I did so, the residual water from\nher jowls trickled down my bare forearm. It was wonderfully cooling and contrasted starkly with\nthe dense, oily heat of her fur. Her pungent body odour and the coarse, slightly matted texture of her\nthick coat acted as a powerful mnemonic. I recoiled as the memories of Max, my beloved German\nShepherd Dog who had died the previous year, flooded my consciousness and I was overcome by\nthe simultaneous pain of the loss and joy of being reconnected to him, albeit via an intermediary.\nShakti nudged the hand I had retracted and I refocussed my attention on her, realising her head\nwas damp with my tears. She looked up at me and held my gaze again, tail oscillating gently until\nI wiped my eyes and exhaled. I looked around the temple, at the murthi’s (statues) of the different\naspects of the Hindu pantheon, bedecked with marigold garlands and anointed with sandalwood\npaste and red vermillion powder after the morning’s mahabishekam (ritual anointing and purifi-\ncation) ceremony. I felt a sense of calm serenity in their presence as well as Shakti’s, and even in\nspite of the heat it was a pleasure to spend time in here, meditating as I engaged in the work of\nseva (selfless service). But how might this inherently anthropocentric space appear to a nonhuman\n\n                                                  2\n"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+## [3] "other? Certainly Hindu and Buddhist temples across south Asia provide sanctuary and hospitality\nfor pilgrims regardless of species and are consequently frequented by animals including street dogs\nand troops of monkeys. Shakti made her way slowly back to flop down heavily in the dusty shade at\nthe entrance to the temple. Raising her muzzle, eyes half closed, she sniffed the air before lowering\nher head onto the outstretched paws. I found myself remembering how Max hated being indoors\nduring the summer, and I wondered what Shakti must be feeling in the heat of the temple where\nthe air was also heavy with incense. Why was she drawn to stay inside rather than seeking cooler\nshade in the landscaped grounds beyond the walls? How did the overwhelming perfume from the\nperpetually smoking incense impact on her ability to read the world through smell? While she was\nnever present during the puja or mahabishekam ceremonies, Shakti could often be found in the\ntemple during the day. Was she here because Swami Narayana was the temple caretaker? Did she\nfeel a connection to him here even when he was not physically present? As if in response to my\nthoughts, her tail began to sweep back and forth on the floor and Swami Narayana appeared. I asked\nhim why Shakti was allowed in the temple when there were such strict purity rules. “Well, she isn’t\nreally. But it’s alright here because the water purifies the space – that’s why you can wear shoes in\nhere and not the other temples.” I felt disappointed by this explanation, by the possibility of Shakti\nbeing regarded as a polluting presence and was reminded of an observation a former colleague had\nmade following her own visit to the ashram. “It was such a privilege to meet Shakti! I felt as though\nI was in the presence of enlightenment, like meeting the Buddha!”\n\nI recounted this anecdote to Swami Narayana. He laughed and reached down to scratch Shakti\nbehind her ear, looking slightly puzzled by the wet patch on her head. “Well, I’m not sure about\nthat, but she certainly is a very gentle, sensitive dog – she lives up to her name!” (Shakti has vari-\nous meanings, but in this context she represents the personification of divine feminine power, the\nMother goddess). He went on to tell me about his plans to breed a litter of puppies from Shakti if a\nsuitable mate could be found, and as he did so he wiped the moisture from his hand onto his trou-\nsers. When he had finished describing his attempts at canine match making I explained the reason\nfor Shakti’s damp head and that she reminded me of Max in so many ways, not just the physical\nand olfactory resemblance but because he too had been wise beyond his species, a person in a very\nreal sense. We talked for a few minutes about what a privilege it was to be able to share our lives\nwith truly exceptional dogs before lapsing into silent contemplation. Swami Narayana turned and\nwent inside to examine my handiwork and I started to try and articulate a question about where he\nthought Shakti might be on her path towards enlightenment. Was her canine form a limiting fac-\ntor? Was being reincarnated as a human always preferable? Did it always indicate a higher state of\nspiritual evolution? However, I realised that the Swarmi, being hard of hearing, was unaware that\nI was trying to speak with him and as it didn’t seem right to shout across the temple my questions\ntrailed off mid-sentence and remained unanswered. I made a mental note to ask how he and other\nmembers of the community, and especially those who were not directly involved with the care of\nthe nonhuman residents, saw other animals vis a vis humans, given the community’s belief in re-\nincarnation and a hierarchy of species. Unlike her human carer, Shakti had excellent hearing. In a\nseemingly preemptive act she got to her feet and sniffed the air again. As she did so the silence was\nbroken by distant peals of hound music echoing through the valley. Shakti turned and moved inside\nthe temple. I got the sense she wanted to avoid a potential encounter with the originator of such\na commotion! The barks grew louder and closer. I looked in the direction of the sound and saw a\nlarge beagle come into view. He was attached to a length of rope, the end of which was held tightly\nby one of the novice monks, Brother Danny. The beagle, Marmaduke, was on a scent, nose to the\n\n\n                                                  3\n"
+## [4] "ground, tail aloft. The rope connecting him to Brother Danny was taut and Brother Danny appeared\nan unwilling participant in Marmaduke’s olfactory quest. Marmaduke embodied the antithesis of\nShakti’s calm disposition, and I wondered if it was coincidence that he was the only animal on the\nashram (as far as I could ascertain) who had an English name? He was a testosterone-charged,\nfrantic creature, always on the move and very vocal. Their differences in personality and demea-\nnour might easily have been dismissed on the grounds of breed, and yet during the 8 years i spent\nresearching mounted foxhunting, I was frequently struck by the diversity which existed within the\noutwardly homogenous ‘pack’ of foxhounds […]\n\n\nStage 3\n\nMulti-species ethnography (selected section combining reflexive analysis of thick description\nwith some relevant theoretical connections incorporating both human and canine perspectives):\n\nExample: …Shakti nudged the hand I had retracted and I refocussed my attention on her, realising\nher head was damp with my tears. The cynic might dismiss her actions as entirely self-interested,\nmotivated by a hedonistic desire for the caresses to be resumed. Certainly, there is plenty of ev-\nidence that dogs, like many other human and nonhuman animals, are pleasure seekers (e.g. Bal-\ncombe 2006). However, dogs are also widely employed in a range of animal assisted interventions\nand professions, and one of the reasons they are used more frequently than any other species is\nbecause they are adept at reading our various forms of non-verbal communication. The mutualistic\nability is arguably in part a direct result of our close co-evolution. We have selectively bred dogs\nwho are able to interpret and attend to our needs. But dogs have also influenced the process of\ndomestication, taking active roles in shaping their relationships with humans (e.g. Haraway 2003)\nand other domesticates. So, it is most likely that Shakti’s nudges were a combination of care and\nself-interest. Indeed, as Shakti looked up at me and held my gaze again, tail oscillating gently as\nI wiped my eyes and exhaled, her actions made me feel as though she cared. Building on Puig’s\nwork, Van Dooren’s tripartite definition of care conceives of it as a combination of affective state,\nethical obligation and practical labour; “As an affective state, caring is an embodied phenomenon,\nthe product of intellectual and emotional competencies: to care is to be affected by another, to be\nemotionally at stake in them in some way. As an ethical obligation, to care is to become subject to\nanother, to recognise an obligation to look after another. Finally, as a practical labour, caring […]\nrequires that we get involved in some concrete way, that we do something (wherever possible) to\ntake care of another” (Van Dooren 2014: 291–292). On the basis of our brief exchange, it seemed\nto me as though Shakti fulfilled all three of these criteria. The way she interacted with me suggested\nshe was clearly affected by my emotional outburst, she recognised an obligation to do something\nand consequently took steps to provide comfort and reassurance. Her gaze was particularly pow-\nerful and penetrating, but while prolonged eye contact might be thought of as a potential act of\nintimidation, canine communication is extremely complex and very few instances of eye contact\nare actually threatening. Dogs communicate a great deal through their eyes, and Shakti’s eyes were\nkind and concerned. Indeed, dogs, like many other animals including humans, posses not only\nself-awareness and a theory of mind (i.e. the ability to recognise that other individuals are also\nthinking, feeling beings) but also the ability to empathise with the predicaments and emotional\nstates of those with whom they are interacting. They can sense and respond appropriately to the\n\n\n                                                  4\n"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+## [5] "emotional and/or physical states of distressed human (e.g. Custance and Mayer 2012) and the cues\nof human handlers, as well as working autonomously in response to the specific and highly special-\nised situations within which they are employed (e.g. Coulter 2015). The power of canine capacities\nto sense and understand human internal states is exemplified by those dogs who predict and alert\ntheir chronically ill human companions to, for example, impending epileptic seizures or hypoglyce-\nmic episodes (e.g. Hardin et al. 2015). By holding my gaze, gently wagging her tail and nudging me\nit seemed as though Shakti was assessing my emotional state, reassuring me with her eyes and tail,\nand waiting until I was more emotionally stable before leaving me to go about her business. The\nphysical contact from the nudging and caresses also had a role to play. Indeed, numerous studies\nhave documented increases in oxytocin (commonly known as the ‘bonding hormone’) levels as a\nresult of both tactile and eye contact between humans and dogs in certain contexts (e.g. Nagasawa\net al. 2009). Not only can stroking a dog induce positive physiological and emotional responses\nin humans, such as lowered blood pressure and a sense of calm, but the process can go both ways.\nDogs also benefit from increased levels of oxytocin during positive interactions with humans with\nwhom they have some positive connection.\n\nIt’s a daunting task for us, as humans, to even attempt to understand what it must be like to have\nsuch powerfully sensitive senses, to be able to smell fear, sadness, or hypoglycemia. And yet maybe\nthis is as much a problem of ontology as it is physiology, something which the recent ontological\nturn in the social sciences has foregrounded (e.g. Kohn 2015, 2013 cf. Descola 2014). In oth-\ner cultural contexts, individuals are able to transcend the limitations of their human form, either\nthrough meditation, trance, shape shifting or the ingestion of certain psychotropic substances. In\nthese altered states of consciousness and/or physicality, it is possible to experience and understand\nthe nature of other life forms. And this is not just restricted to human shamans. For the Runa of the\nEcuadorian Amazon for example (Kohn 2007), dogs are also fed hallucinogens to enable them to\nengage in ontological translation between their own way of being in the world, and the lifeworlds\nof others with whom they interact, including jaguars and humans …\n\n\n\n\n                                                 5\n"
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1a-auto[
+
+```r
+exwdogs %&gt;%
+*read_lines()   # Parse text into individual lines
+```
+]
+ 
+.panel2-sw1a-auto[
+
+```
+##   [1] "Data Exemplar for use with:"                                                                           
+##   [2] ""                                                                                                      
+##   [3] "Encounters With Dogs as an Exercise in Analysing"                                                      
+##   [4] "Multi-Species Ethnography"                                                                             
+##   [5] ""                                                                                                      
+##   [6] "Data Collected by: Dr. Samantha Hurn"                                                                  
+##   [7] ""                                                                                                      
+##   [8] "Included are three forms of data from the same setting at various stages of the analysis process. The" 
+##   [9] "first are the initial rough fieldnotes taken by Samantha whilst conducting participant observation"    
+##  [10] "in the Sri Ranganatha temple, one of three temples at the Skanda Vale ashram in west Wales. The"       
+##  [11] "second are expanded notes with thick description of the same encounter. The third is a selected"       
+##  [12] "section of writing combining reflexive analysis of the thick description with some relevant theoret-"  
+##  [13] "ical connections incorporating both human and canine perspectives, also known as multi-species"        
+##  [14] "ethnography"                                                                                           
+##  [15] ""                                                                                                      
+##  [16] ""                                                                                                      
+##  [17] "Dataset Exemplar"                                                                                      
+##  [18] ""                                                                                                      
+##  [19] "Stage 1"                                                                                               
+##  [20] ""                                                                                                      
+##  [21] "Original ‘rough’ fieldnotes (written in notebook immediately after these interactions occurred"        
+##  [22] "and while I was still in situ):"                                                                       
+##  [23] ""                                                                                                      
+##  [24] "Crazy paving day 2. Sri Ranganatha temple. Unbearably hot. Joined by Shakti – thirsty, drank my"       
+##  [25] "cement mixing water, then came over for scratches. Overwhelmed by how much I miss Max. First"          
+##  [26] "time I have touched another dog since his death. Strong mnemonic (smell, touch – do Bernese"           
+##  [27] "Mountain Dogs have double coat too? Felt like it …). She seemed to recognise something was up."        
+##  [28] "Very much a person like Max. Cried and made her fur damp. She stayed with me ’til I stopped"           
+##  [29] "crying, then went to entrance and lay down. So hot. How does she cope in here? Why does she"           
+##  [30] "come inside? And the incense? Need to look into canine olfaction and hearing … Would dogs find"        
+##  [31] "the pujas stressful (incense and bell ringing – loud and smelly)?! What about animals in temples?"     
+##  [32] "Common in south Asia. I like being in here despite the heat – meditative, calming. Good place for"     
+##  [33] "seva, or is it if I get something in return? Is enjoying the work contrary to selfless service? Swami" 
+##  [34] "N came back. Explained purification by water. Shakti polluting? Remembered Maya’s comment."            
+##  [35] "He thought it funny, didn’t seem to take offence. Said she lived up to her name. Isn’t Shakti divine"  
+##  [36] "mother? Should have asked him! He wants to breed a litter (and said I could maybe have one of"         
+##  [37] "the pups which was exciting!!! Then felt guilty about Max – am I ready for another dog yet …?)."       
+##  [38] "Talked more about Max and Shakti (and his former husky). Swami went to check my crazy ­paving"         
+##  [39] ""                                                                                                      
+##  [40] ""                                                                                                      
+##  [41] "                                                 1"                                                    
+##  [42] "(I was worried the cement was too sandy) and I carried on trying to talk to him, forgetting he usu-"   
+##  [43] "ally reads lips, wanting to ask about reincarnation and hierarchy of species versus individuals. Felt" 
+##  [44] "stupid when realised he couldn’t hear me. Made me wonder if he is drawn to Shakti because of his"      
+##  [45] "hearing – non-verbal communication (but didn’t ask, it felt too personal/intrusive, maybe broach it"   
+##  [46] "tomorrow depending on how the conversation goes?). But also wondered about comfort of being"           
+##  [47] "able to live closely with another being in a monastic community (with emphasis on s­ eparation/focus"  
+##  [48] "on relationship with god) …? Shakti sniffed air then almost immediately we heard barks – did she"      
+##  [49] "smell him coming? Marmaduke dragging Brother D along track, typical hound on a scent! But is"          
+##  [50] "he ‘typical hound’? Not all hounds the same. Is Shakti a ‘typical’ Bernese Mountain Dog? Need to"      
+##  [51] "check the breed characteristics. But also important to emphasise individuals as per Ingold’s ‘bioso-"  
+##  [52] "cial becoming’. Remember to ask Swami B and others during interviews later about reincarnation"        
+##  [53] "and animals …"                                                                                         
+##  [54] ""                                                                                                      
+##  [55] ""                                                                                                      
+##  [56] "Stage 2"                                                                                               
+##  [57] ""                                                                                                      
+##  [58] "Expanded fieldnotes/thick description (written when I was back in my accommodation,"                   
+##  [59] "­approx. 1 hour after leaving the temple):"                                                            
+##  [60] ""                                                                                                      
+##  [61] "Shakti, a large Bernese Mountain Dog, entered the temple and padded over to where I had been"          
+##  [62] "hard at work laying crazy paving slabs on the temple floor. The corrugated plastic roof overhead"      
+##  [63] "amplified what, outside, was a glorious summer’s day, and made the ambient temperature inside"         
+##  [64] "the temple almost unbearably hot. I sat back on my heels, and wiping the concrete dust from my"        
+##  [65] "sweaty face rose slowly to my feet as she approached, surprised that such a hirsute creature would"    
+##  [66] "enter this space of her own volition. For a moment I flattered myself with the possibility that she"   
+##  [67] "had come to say hello. Her true motivation was soon revealed however, as while she acknowledged"       
+##  [68] "me with a sidelong glance and the faintest wag of her heavy tail as she walked past, she didn’t stop"  
+##  [69] "walking until she had reached the bucket of water which sat at the edge of my workspace in read-"      
+##  [70] "iness for mixing the next batch of concrete. Lowering her muzzle into the tepid water, she drank"      
+##  [71] "deeply. When her thirst had been satisfied, she ambled over to where I stood, her tail generously"     
+##  [72] "sweeping from side to side. She smiled up at me with gentle eyes, before sitting on my feet, lean-"    
+##  [73] "ing her bulk into my legs for support. I bent down and scratched her chest, as I had seen Swami"       
+##  [74] "Narayana (her human companion) do on many occasions, and as I did so, the residual water from"         
+##  [75] "her jowls trickled down my bare forearm. It was wonderfully cooling and contrasted starkly with"       
+##  [76] "the dense, oily heat of her fur. Her pungent body odour and the coarse, slightly matted texture of her"
+##  [77] "thick coat acted as a powerful mnemonic. I recoiled as the memories of Max, my beloved German"         
+##  [78] "Shepherd Dog who had died the previous year, flooded my consciousness and I was overcome by"           
+##  [79] "the simultaneous pain of the loss and joy of being reconnected to him, albeit via an intermediary."    
+##  [80] "Shakti nudged the hand I had retracted and I refocussed my attention on her, realising her head"       
+##  [81] "was damp with my tears. She looked up at me and held my gaze again, tail oscillating gently until"     
+##  [82] "I wiped my eyes and exhaled. I looked around the temple, at the murthi’s (statues) of the different"   
+##  [83] "aspects of the Hindu pantheon, bedecked with marigold garlands and anointed with sandalwood"           
+##  [84] "paste and red vermillion powder after the morning’s mahabishekam (ritual anointing and purifi-"        
+##  [85] "cation) ceremony. I felt a sense of calm serenity in their presence as well as Shakti’s, and even in"  
+##  [86] "spite of the heat it was a pleasure to spend time in here, meditating as I engaged in the work of"     
+##  [87] "seva (selfless service). But how might this inherently anthropocentric space appear to a nonhuman"     
+##  [88] ""                                                                                                      
+##  [89] "                                                  2"                                                   
+##  [90] "other? Certainly Hindu and Buddhist temples across south Asia provide sanctuary and hospitality"       
+##  [91] "for pilgrims regardless of species and are consequently frequented by animals including street dogs"   
+##  [92] "and troops of monkeys. Shakti made her way slowly back to flop down heavily in the dusty shade at"     
+##  [93] "the entrance to the temple. Raising her muzzle, eyes half closed, she sniffed the air before lowering" 
+##  [94] "her head onto the outstretched paws. I found myself remembering how Max hated being indoors"           
+##  [95] "during the summer, and I wondered what Shakti must be feeling in the heat of the temple where"         
+##  [96] "the air was also heavy with incense. Why was she drawn to stay inside rather than seeking cooler"      
+##  [97] "shade in the landscaped grounds beyond the walls? How did the overwhelming perfume from the"           
+##  [98] "perpetually smoking incense impact on her ability to read the world through smell? While she was"      
+##  [99] "never present during the puja or mahabishekam ceremonies, Shakti could often be found in the"          
+## [100] "temple during the day. Was she here because Swami Narayana was the temple caretaker? Did she"          
+## [101] "feel a connection to him here even when he was not physically present? As if in response to my"        
+## [102] "thoughts, her tail began to sweep back and forth on the floor and Swami Narayana appeared. I asked"    
+## [103] "him why Shakti was allowed in the temple when there were such strict purity rules. “Well, she isn’t"   
+## [104] "really. But it’s alright here because the water purifies the space – that’s why you can wear shoes in" 
+## [105] "here and not the other temples.” I felt disappointed by this explanation, by the possibility of Shakti"
+## [106] "being regarded as a polluting presence and was reminded of an observation a former colleague had"      
+## [107] "made following her own visit to the ashram. “It was such a privilege to meet Shakti! I felt as though" 
+## [108] "I was in the presence of enlightenment, like meeting the Buddha!”"                                     
+## [109] ""                                                                                                      
+## [110] "I recounted this anecdote to Swami Narayana. He laughed and reached down to scratch Shakti"            
+## [111] "behind her ear, looking slightly puzzled by the wet patch on her head. “Well, I’m not sure about"      
+## [112] "that, but she certainly is a very gentle, sensitive dog – she lives up to her name!” (Shakti has vari-"
+## [113] "ous meanings, but in this context she represents the personification of divine feminine power, the"    
+## [114] "Mother goddess). He went on to tell me about his plans to breed a litter of puppies from Shakti if a"  
+## [115] "suitable mate could be found, and as he did so he wiped the moisture from his hand onto his trou-"     
+## [116] "sers. When he had finished describing his attempts at canine match making I explained the reason"      
+## [117] "for Shakti’s damp head and that she reminded me of Max in so many ways, not just the physical"         
+## [118] "and olfactory resemblance but because he too had been wise beyond his species, a person in a very"     
+## [119] "real sense. We talked for a few minutes about what a privilege it was to be able to share our lives"   
+## [120] "with truly exceptional dogs before lapsing into silent contemplation. Swami Narayana turned and"       
+## [121] "went inside to examine my handiwork and I started to try and articulate a question about where he"     
+## [122] "thought Shakti might be on her path towards enlightenment. Was her canine form a limiting fac-"        
+## [123] "tor? Was being reincarnated as a human always preferable? Did it always indicate a higher state of"    
+## [124] "spiritual evolution? However, I realised that the Swarmi, being hard of hearing, was unaware that"     
+## [125] "I was trying to speak with him and as it didn’t seem right to shout across the temple my questions"    
+## [126] "trailed off mid-sentence and remained unanswered. I made a mental note to ask how he and other"        
+## [127] "members of the community, and especially those who were not directly involved with the care of"        
+## [128] "the nonhuman residents, saw other animals vis a vis humans, given the community’s belief in re-"       
+## [129] "incarnation and a hierarchy of species. Unlike her human carer, Shakti had excellent hearing. In a"    
+## [130] "seemingly preemptive act she got to her feet and sniffed the air again. As she did so the silence was" 
+## [131] "broken by distant peals of hound music echoing through the valley. Shakti turned and moved inside"     
+## [132] "the temple. I got the sense she wanted to avoid a potential encounter with the originator of such"     
+## [133] "a commotion! The barks grew louder and closer. I looked in the direction of the sound and saw a"       
+## [134] "large beagle come into view. He was attached to a length of rope, the end of which was held tightly"   
+## [135] "by one of the novice monks, Brother Danny. The beagle, Marmaduke, was on a scent, nose to the"         
+## [136] ""                                                                                                      
+## [137] ""                                                                                                      
+## [138] "                                                  3"                                                   
+## [139] "ground, tail aloft. The rope connecting him to Brother Danny was taut and Brother Danny appeared"      
+## [140] "an unwilling participant in Marmaduke’s olfactory quest. Marmaduke embodied the antithesis of"         
+## [141] "Shakti’s calm disposition, and I wondered if it was coincidence that he was the only animal on the"    
+## [142] "ashram (as far as I could ascertain) who had an English name? He was a testosterone-charged,"          
+## [143] "frantic creature, always on the move and very vocal. Their differences in personality and demea-"      
+## [144] "nour might easily have been dismissed on the grounds of breed, and yet during the 8 years i spent"     
+## [145] "researching mounted foxhunting, I was frequently struck by the diversity which existed within the"     
+## [146] "outwardly homogenous ‘pack’ of foxhounds […]"                                                          
+## [147] ""                                                                                                      
+## [148] ""                                                                                                      
+## [149] "Stage 3"                                                                                               
+## [150] ""                                                                                                      
+## [151] "Multi-species ethnography (selected section combining reflexive analysis of thick description"         
+## [152] "with some relevant theoretical connections incorporating both human and canine perspectives):"         
+## [153] ""                                                                                                      
+## [154] "Example: …Shakti nudged the hand I had retracted and I refocussed my attention on her, realising"      
+## [155] "her head was damp with my tears. The cynic might dismiss her actions as entirely self-interested,"     
+## [156] "motivated by a hedonistic desire for the caresses to be resumed. Certainly, there is plenty of ev-"    
+## [157] "idence that dogs, like many other human and nonhuman animals, are pleasure seekers (e.g. Bal-"         
+## [158] "combe 2006). However, dogs are also widely employed in a range of animal assisted interventions"       
+## [159] "and professions, and one of the reasons they are used more frequently than any other species is"       
+## [160] "because they are adept at reading our various forms of non-verbal communication. The mutualistic"      
+## [161] "ability is arguably in part a direct result of our close co-evolution. We have selectively bred dogs"  
+## [162] "who are able to interpret and attend to our needs. But dogs have also influenced the process of"       
+## [163] "domestication, taking active roles in shaping their relationships with humans (e.g. Haraway 2003)"     
+## [164] "and other domesticates. So, it is most likely that Shakti’s nudges were a combination of care and"     
+## [165] "self-interest. Indeed, as Shakti looked up at me and held my gaze again, tail oscillating gently as"   
+## [166] "I wiped my eyes and exhaled, her actions made me feel as though she cared. Building on Puig’s"         
+## [167] "work, Van Dooren’s tripartite definition of care conceives of it as a combination of affective state," 
+## [168] "ethical obligation and practical labour; “As an affective state, caring is an embodied phenomenon,"    
+## [169] "the product of intellectual and emotional competencies: to care is to be affected by another, to be"   
+## [170] "emotionally at stake in them in some way. As an ethical obligation, to care is to become subject to"   
+## [171] "another, to recognise an obligation to look after another. Finally, as a practical labour, caring […]" 
+## [172] "requires that we get involved in some concrete way, that we do something (wherever possible) to"       
+## [173] "take care of another” (Van Dooren 2014: 291–292). On the basis of our brief exchange, it seemed"       
+## [174] "to me as though Shakti fulfilled all three of these criteria. The way she interacted with me suggested"
+## [175] "she was clearly affected by my emotional outburst, she recognised an obligation to do something"       
+## [176] "and consequently took steps to provide comfort and reassurance. Her gaze was particularly pow-"        
+## [177] "erful and penetrating, but while prolonged eye contact might be thought of as a potential act of"      
+## [178] "intimidation, canine communication is extremely complex and very few instances of eye contact"         
+## [179] "are actually threatening. Dogs communicate a great deal through their eyes, and Shakti’s eyes were"    
+## [180] "kind and concerned. Indeed, dogs, like many other animals including humans, posses not only"           
+## [181] "self-awareness and a theory of mind (i.e. the ability to recognise that other individuals are also"    
+## [182] "thinking, feeling beings) but also the ability to empathise with the predicaments and emotional"       
+## [183] "states of those with whom they are interacting. They can sense and respond appropriately to the"       
+## [184] ""                                                                                                      
+## [185] ""                                                                                                      
+## [186] "                                                  4"                                                   
+## [187] "emotional and/or physical states of distressed human (e.g. Custance and Mayer 2012) and the cues"      
+## [188] "of human handlers, as well as working autonomously in response to the specific and highly special-"    
+## [189] "ised situations within which they are employed (e.g. Coulter 2015). The power of canine capacities"    
+## [190] "to sense and understand human internal states is exemplified by those dogs who predict and alert"      
+## [191] "their chronically ill human companions to, for example, impending epileptic seizures or hypoglyce-"    
+## [192] "mic episodes (e.g. Hardin et al. 2015). By holding my gaze, gently wagging her tail and nudging me"    
+## [193] "it seemed as though Shakti was assessing my emotional state, reassuring me with her eyes and tail,"    
+## [194] "and waiting until I was more emotionally stable before leaving me to go about her business. The"       
+## [195] "physical contact from the nudging and caresses also had a role to play. Indeed, numerous studies"      
+## [196] "have documented increases in oxytocin (commonly known as the ‘bonding hormone’) levels as a"           
+## [197] "result of both tactile and eye contact between humans and dogs in certain contexts (e.g. Nagasawa"     
+## [198] "et al. 2009). Not only can stroking a dog induce positive physiological and emotional responses"       
+## [199] "in humans, such as lowered blood pressure and a sense of calm, but the process can go both ways."      
+## [200] "Dogs also benefit from increased levels of oxytocin during positive interactions with humans with"     
+## [201] "whom they have some positive connection."                                                              
+## [202] ""                                                                                                      
+## [203] "It’s a daunting task for us, as humans, to even attempt to understand what it must be like to have"    
+## [204] "such powerfully sensitive senses, to be able to smell fear, sadness, or hypoglycemia. And yet maybe"   
+## [205] "this is as much a problem of ontology as it is physiology, something which the recent ontological"     
+## [206] "turn in the social sciences has foregrounded (e.g. Kohn 2015, 2013 cf. Descola 2014). In oth-"         
+## [207] "er cultural contexts, individuals are able to transcend the limitations of their human form, either"   
+## [208] "through meditation, trance, shape shifting or the ingestion of certain psychotropic substances. In"    
+## [209] "these altered states of consciousness and/or physicality, it is possible to experience and understand" 
+## [210] "the nature of other life forms. And this is not just restricted to human shamans. For the Runa of the" 
+## [211] "Ecuadorian Amazon for example (Kohn 2007), dogs are also fed hallucinogens to enable them to"          
+## [212] "engage in ontological translation between their own way of being in the world, and the lifeworlds"     
+## [213] "of others with whom they interact, including jaguars and humans …"                                     
+## [214] ""                                                                                                      
+## [215] ""                                                                                                      
+## [216] ""                                                                                                      
+## [217] ""                                                                                                      
+## [218] "                                                 5"
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1a-auto[
+
+```r
+exwdogs %&gt;%
+read_lines() %&gt;%  # Parse text into individual lines
+*as_tibble_col("text")   # Create a single tidy column
+```
+]
+ 
+.panel2-sw1a-auto[
+
+```
+## # A tibble: 218 × 1
+##    text                                                                                                  
+##    &lt;chr&gt;                                                                                                 
+##  1 "Data Exemplar for use with:"                                                                         
+##  2 ""                                                                                                    
+##  3 "Encounters With Dogs as an Exercise in Analysing"                                                    
+##  4 "Multi-Species Ethnography"                                                                           
+##  5 ""                                                                                                    
+##  6 "Data Collected by: Dr. Samantha Hurn"                                                                
+##  7 ""                                                                                                    
+##  8 "Included are three forms of data from the same setting at various stages of the analysis process. Th…
+##  9 "first are the initial rough fieldnotes taken by Samantha whilst conducting participant observation"  
+## 10 "in the Sri Ranganatha temple, one of three temples at the Skanda Vale ashram in west Wales. The"     
+## # … with 208 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1a-auto[
+
+```r
+exwdogs %&gt;%
+read_lines() %&gt;%  # Parse text into individual lines
+as_tibble_col("text") %&gt;%  # Create a single tidy column
+*slice(24:n())   # Remove unnecessary text
+```
+]
+ 
+.panel2-sw1a-auto[
+
+```
+## # A tibble: 195 × 1
+##    text                                                                                                 
+##    &lt;chr&gt;                                                                                                
+##  1 Crazy paving day 2. Sri Ranganatha temple. Unbearably hot. Joined by Shakti – thirsty, drank my      
+##  2 cement mixing water, then came over for scratches. Overwhelmed by how much I miss Max. First         
+##  3 time I have touched another dog since his death. Strong mnemonic (smell, touch – do Bernese          
+##  4 Mountain Dogs have double coat too? Felt like it …). She seemed to recognise something was up.       
+##  5 Very much a person like Max. Cried and made her fur damp. She stayed with me ’til I stopped          
+##  6 crying, then went to entrance and lay down. So hot. How does she cope in here? Why does she          
+##  7 come inside? And the incense? Need to look into canine olfaction and hearing … Would dogs find       
+##  8 the pujas stressful (incense and bell ringing – loud and smelly)?! What about animals in temples?    
+##  9 Common in south Asia. I like being in here despite the heat – meditative, calming. Good place for    
+## 10 seva, or is it if I get something in return? Is enjoying the work contrary to selfless service? Swami
+## # … with 185 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1a-auto[
+
+```r
+exwdogs %&gt;%
+read_lines() %&gt;%  # Parse text into individual lines
+as_tibble_col("text") %&gt;%  # Create a single tidy column
+slice(24:n()) %&gt;%  # Remove unnecessary text
+*mutate(text = textclean::replace_non_ascii(text))   # Convert to a standard format
+```
+]
+ 
+.panel2-sw1a-auto[
+
+```
+## # A tibble: 195 × 1
+##    text                                                                                                 
+##    &lt;chr&gt;                                                                                                
+##  1 Crazy paving day 2. Sri Ranganatha temple. Unbearably hot. Joined by Shakti - thirsty, drank my      
+##  2 cement mixing water, then came over for scratches. Overwhelmed by how much I miss Max. First         
+##  3 time I have touched another dog since his death. Strong mnemonic (smell, touch - do Bernese          
+##  4 Mountain Dogs have double coat too? Felt like it ...). She seemed to recognise something was up.     
+##  5 Very much a person like Max. Cried and made her fur damp. She stayed with me 'til I stopped          
+##  6 crying, then went to entrance and lay down. So hot. How does she cope in here? Why does she          
+##  7 come inside? And the incense? Need to look into canine olfaction and hearing ... Would dogs find     
+##  8 the pujas stressful (incense and bell ringing - loud and smelly)?! What about animals in temples?    
+##  9 Common in south Asia. I like being in here despite the heat - meditative, calming. Good place for    
+## 10 seva, or is it if I get something in return? Is enjoying the work contrary to selfless service? Swami
+## # … with 185 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1a-auto[
+
+```r
+exwdogs %&gt;%
+read_lines() %&gt;%  # Parse text into individual lines
+as_tibble_col("text") %&gt;%  # Create a single tidy column
+slice(24:n()) %&gt;%  # Remove unnecessary text
+mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standard format
+*mutate(text = str_to_lower(text))   # Convert all words to lower case
+```
+]
+ 
+.panel2-sw1a-auto[
+
+```
+## # A tibble: 195 × 1
+##    text                                                                                                 
+##    &lt;chr&gt;                                                                                                
+##  1 crazy paving day 2. sri ranganatha temple. unbearably hot. joined by shakti - thirsty, drank my      
+##  2 cement mixing water, then came over for scratches. overwhelmed by how much i miss max. first         
+##  3 time i have touched another dog since his death. strong mnemonic (smell, touch - do bernese          
+##  4 mountain dogs have double coat too? felt like it ...). she seemed to recognise something was up.     
+##  5 very much a person like max. cried and made her fur damp. she stayed with me 'til i stopped          
+##  6 crying, then went to entrance and lay down. so hot. how does she cope in here? why does she          
+##  7 come inside? and the incense? need to look into canine olfaction and hearing ... would dogs find     
+##  8 the pujas stressful (incense and bell ringing - loud and smelly)?! what about animals in temples?    
+##  9 common in south asia. i like being in here despite the heat - meditative, calming. good place for    
+## 10 seva, or is it if i get something in return? is enjoying the work contrary to selfless service? swami
+## # … with 185 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1a-auto[
+
+```r
+exwdogs %&gt;%
+read_lines() %&gt;%  # Parse text into individual lines
+as_tibble_col("text") %&gt;%  # Create a single tidy column
+slice(24:n()) %&gt;%  # Remove unnecessary text
+mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standard format
+mutate(text = str_to_lower(text)) %&gt;%  # Convert all words to lower case
+*mutate(text = str_remove_all(text, "[[:digit:]]"))   # Remove all numbers
+```
+]
+ 
+.panel2-sw1a-auto[
+
+```
+## # A tibble: 195 × 1
+##    text                                                                                                 
+##    &lt;chr&gt;                                                                                                
+##  1 crazy paving day . sri ranganatha temple. unbearably hot. joined by shakti - thirsty, drank my       
+##  2 cement mixing water, then came over for scratches. overwhelmed by how much i miss max. first         
+##  3 time i have touched another dog since his death. strong mnemonic (smell, touch - do bernese          
+##  4 mountain dogs have double coat too? felt like it ...). she seemed to recognise something was up.     
+##  5 very much a person like max. cried and made her fur damp. she stayed with me 'til i stopped          
+##  6 crying, then went to entrance and lay down. so hot. how does she cope in here? why does she          
+##  7 come inside? and the incense? need to look into canine olfaction and hearing ... would dogs find     
+##  8 the pujas stressful (incense and bell ringing - loud and smelly)?! what about animals in temples?    
+##  9 common in south asia. i like being in here despite the heat - meditative, calming. good place for    
+## 10 seva, or is it if i get something in return? is enjoying the work contrary to selfless service? swami
+## # … with 185 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1a-auto[
+
+```r
+exwdogs %&gt;%
+read_lines() %&gt;%  # Parse text into individual lines
+as_tibble_col("text") %&gt;%  # Create a single tidy column
+slice(24:n()) %&gt;%  # Remove unnecessary text
+mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standard format
+mutate(text = str_to_lower(text)) %&gt;%  # Convert all words to lower case
+mutate(text = str_remove_all(text, "[[:digit:]]")) %&gt;%  # Remove all numbers
+*mutate(text = str_remove_all(text, "[[:punct:]]"))   # Remove all punctuation
+```
+]
+ 
+.panel2-sw1a-auto[
+
+```
+## # A tibble: 195 × 1
+##    text                                                                                              
+##    &lt;chr&gt;                                                                                             
+##  1 crazy paving day  sri ranganatha temple unbearably hot joined by shakti  thirsty drank my         
+##  2 cement mixing water then came over for scratches overwhelmed by how much i miss max first         
+##  3 time i have touched another dog since his death strong mnemonic smell touch  do bernese           
+##  4 mountain dogs have double coat too felt like it  she seemed to recognise something was up         
+##  5 very much a person like max cried and made her fur damp she stayed with me til i stopped          
+##  6 crying then went to entrance and lay down so hot how does she cope in here why does she           
+##  7 come inside and the incense need to look into canine olfaction and hearing  would dogs find       
+##  8 the pujas stressful incense and bell ringing  loud and smelly what about animals in temples       
+##  9 common in south asia i like being in here despite the heat  meditative calming good place for     
+## 10 seva or is it if i get something in return is enjoying the work contrary to selfless service swami
+## # … with 185 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1a-auto[
+
+```r
+exwdogs %&gt;%
+read_lines() %&gt;%  # Parse text into individual lines
+as_tibble_col("text") %&gt;%  # Create a single tidy column
+slice(24:n()) %&gt;%  # Remove unnecessary text
+mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standard format
+mutate(text = str_to_lower(text)) %&gt;%  # Convert all words to lower case
+mutate(text = str_remove_all(text, "[[:digit:]]")) %&gt;%  # Remove all numbers
+mutate(text = str_remove_all(text, "[[:punct:]]")) %&gt;%  # Remove all punctuation
+*mutate(text = str_remove_all(text, "stage"))   # Remove term
+```
+]
+ 
+.panel2-sw1a-auto[
+
+```
+## # A tibble: 195 × 1
+##    text                                                                                              
+##    &lt;chr&gt;                                                                                             
+##  1 crazy paving day  sri ranganatha temple unbearably hot joined by shakti  thirsty drank my         
+##  2 cement mixing water then came over for scratches overwhelmed by how much i miss max first         
+##  3 time i have touched another dog since his death strong mnemonic smell touch  do bernese           
+##  4 mountain dogs have double coat too felt like it  she seemed to recognise something was up         
+##  5 very much a person like max cried and made her fur damp she stayed with me til i stopped          
+##  6 crying then went to entrance and lay down so hot how does she cope in here why does she           
+##  7 come inside and the incense need to look into canine olfaction and hearing  would dogs find       
+##  8 the pujas stressful incense and bell ringing  loud and smelly what about animals in temples       
+##  9 common in south asia i like being in here despite the heat  meditative calming good place for     
+## 10 seva or is it if i get something in return is enjoying the work contrary to selfless service swami
+## # … with 185 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1a-auto[
+
+```r
+exwdogs %&gt;%
+read_lines() %&gt;%  # Parse text into individual lines
+as_tibble_col("text") %&gt;%  # Create a single tidy column
+slice(24:n()) %&gt;%  # Remove unnecessary text
+mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standard format
+mutate(text = str_to_lower(text)) %&gt;%  # Convert all words to lower case
+mutate(text = str_remove_all(text, "[[:digit:]]")) %&gt;%  # Remove all numbers
+mutate(text = str_remove_all(text, "[[:punct:]]")) %&gt;%  # Remove all punctuation
+mutate(text = str_remove_all(text, "stage")) %&gt;%  # Remove term
+*mutate(text = str_replace_all(text, "sri ranganatha temple", "temple"))   # Replace term
+```
+]
+ 
+.panel2-sw1a-auto[
+
+```
+## # A tibble: 195 × 1
+##    text                                                                                              
+##    &lt;chr&gt;                                                                                             
+##  1 crazy paving day  temple unbearably hot joined by shakti  thirsty drank my                        
+##  2 cement mixing water then came over for scratches overwhelmed by how much i miss max first         
+##  3 time i have touched another dog since his death strong mnemonic smell touch  do bernese           
+##  4 mountain dogs have double coat too felt like it  she seemed to recognise something was up         
+##  5 very much a person like max cried and made her fur damp she stayed with me til i stopped          
+##  6 crying then went to entrance and lay down so hot how does she cope in here why does she           
+##  7 come inside and the incense need to look into canine olfaction and hearing  would dogs find       
+##  8 the pujas stressful incense and bell ringing  loud and smelly what about animals in temples       
+##  9 common in south asia i like being in here despite the heat  meditative calming good place for     
+## 10 seva or is it if i get something in return is enjoying the work contrary to selfless service swami
+## # … with 185 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1a-auto[
+
+```r
+exwdogs %&gt;%
+read_lines() %&gt;%  # Parse text into individual lines
+as_tibble_col("text") %&gt;%  # Create a single tidy column
+slice(24:n()) %&gt;%  # Remove unnecessary text
+mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standard format
+mutate(text = str_to_lower(text)) %&gt;%  # Convert all words to lower case
+mutate(text = str_remove_all(text, "[[:digit:]]")) %&gt;%  # Remove all numbers
+mutate(text = str_remove_all(text, "[[:punct:]]")) %&gt;%  # Remove all punctuation
+mutate(text = str_remove_all(text, "stage")) %&gt;%  # Remove term
+mutate(text = str_replace_all(text, "sri ranganatha temple", "temple")) %&gt;%  # Replace term
+*mutate(text = str_replace_all(text, "shakti", "dog"))   # Replace term
+```
+]
+ 
+.panel2-sw1a-auto[
+
+```
+## # A tibble: 195 × 1
+##    text                                                                                              
+##    &lt;chr&gt;                                                                                             
+##  1 crazy paving day  temple unbearably hot joined by dog  thirsty drank my                           
+##  2 cement mixing water then came over for scratches overwhelmed by how much i miss max first         
+##  3 time i have touched another dog since his death strong mnemonic smell touch  do bernese           
+##  4 mountain dogs have double coat too felt like it  she seemed to recognise something was up         
+##  5 very much a person like max cried and made her fur damp she stayed with me til i stopped          
+##  6 crying then went to entrance and lay down so hot how does she cope in here why does she           
+##  7 come inside and the incense need to look into canine olfaction and hearing  would dogs find       
+##  8 the pujas stressful incense and bell ringing  loud and smelly what about animals in temples       
+##  9 common in south asia i like being in here despite the heat  meditative calming good place for     
+## 10 seva or is it if i get something in return is enjoying the work contrary to selfless service swami
+## # … with 185 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1a-auto[
+
+```r
+exwdogs %&gt;%
+read_lines() %&gt;%  # Parse text into individual lines
+as_tibble_col("text") %&gt;%  # Create a single tidy column
+slice(24:n()) %&gt;%  # Remove unnecessary text
+mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standard format
+mutate(text = str_to_lower(text)) %&gt;%  # Convert all words to lower case
+mutate(text = str_remove_all(text, "[[:digit:]]")) %&gt;%  # Remove all numbers
+mutate(text = str_remove_all(text, "[[:punct:]]")) %&gt;%  # Remove all punctuation
+mutate(text = str_remove_all(text, "stage")) %&gt;%  # Remove term
+mutate(text = str_replace_all(text, "sri ranganatha temple", "temple")) %&gt;%  # Replace term
+mutate(text = str_replace_all(text, "shakti", "dog")) %&gt;%  # Replace term
+*mutate(text = str_replace_all(text, "foxhounds", "dog"))   # Replace term
+```
+]
+ 
+.panel2-sw1a-auto[
+
+```
+## # A tibble: 195 × 1
+##    text                                                                                              
+##    &lt;chr&gt;                                                                                             
+##  1 crazy paving day  temple unbearably hot joined by dog  thirsty drank my                           
+##  2 cement mixing water then came over for scratches overwhelmed by how much i miss max first         
+##  3 time i have touched another dog since his death strong mnemonic smell touch  do bernese           
+##  4 mountain dogs have double coat too felt like it  she seemed to recognise something was up         
+##  5 very much a person like max cried and made her fur damp she stayed with me til i stopped          
+##  6 crying then went to entrance and lay down so hot how does she cope in here why does she           
+##  7 come inside and the incense need to look into canine olfaction and hearing  would dogs find       
+##  8 the pujas stressful incense and bell ringing  loud and smelly what about animals in temples       
+##  9 common in south asia i like being in here despite the heat  meditative calming good place for     
+## 10 seva or is it if i get something in return is enjoying the work contrary to selfless service swami
+## # … with 185 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1a-auto[
+
+```r
+exwdogs %&gt;%
+read_lines() %&gt;%  # Parse text into individual lines
+as_tibble_col("text") %&gt;%  # Create a single tidy column
+slice(24:n()) %&gt;%  # Remove unnecessary text
+mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standard format
+mutate(text = str_to_lower(text)) %&gt;%  # Convert all words to lower case
+mutate(text = str_remove_all(text, "[[:digit:]]")) %&gt;%  # Remove all numbers
+mutate(text = str_remove_all(text, "[[:punct:]]")) %&gt;%  # Remove all punctuation
+mutate(text = str_remove_all(text, "stage")) %&gt;%  # Remove term
+mutate(text = str_replace_all(text, "sri ranganatha temple", "temple")) %&gt;%  # Replace term
+mutate(text = str_replace_all(text, "shakti", "dog")) %&gt;%  # Replace term
+mutate(text = str_replace_all(text, "foxhounds", "dog")) %&gt;%  # Replace term
+*mutate(text = str_replace_all(text, "swami", "dog"))   # Replace term
+```
+]
+ 
+.panel2-sw1a-auto[
+
+```
+## # A tibble: 195 × 1
+##    text                                                                                            
+##    &lt;chr&gt;                                                                                           
+##  1 crazy paving day  temple unbearably hot joined by dog  thirsty drank my                         
+##  2 cement mixing water then came over for scratches overwhelmed by how much i miss max first       
+##  3 time i have touched another dog since his death strong mnemonic smell touch  do bernese         
+##  4 mountain dogs have double coat too felt like it  she seemed to recognise something was up       
+##  5 very much a person like max cried and made her fur damp she stayed with me til i stopped        
+##  6 crying then went to entrance and lay down so hot how does she cope in here why does she         
+##  7 come inside and the incense need to look into canine olfaction and hearing  would dogs find     
+##  8 the pujas stressful incense and bell ringing  loud and smelly what about animals in temples     
+##  9 common in south asia i like being in here despite the heat  meditative calming good place for   
+## 10 seva or is it if i get something in return is enjoying the work contrary to selfless service dog
+## # … with 185 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1a-auto[
+
+```r
+exwdogs %&gt;%
+read_lines() %&gt;%  # Parse text into individual lines
+as_tibble_col("text") %&gt;%  # Create a single tidy column
+slice(24:n()) %&gt;%  # Remove unnecessary text
+mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standard format
+mutate(text = str_to_lower(text)) %&gt;%  # Convert all words to lower case
+mutate(text = str_remove_all(text, "[[:digit:]]")) %&gt;%  # Remove all numbers
+mutate(text = str_remove_all(text, "[[:punct:]]")) %&gt;%  # Remove all punctuation
+mutate(text = str_remove_all(text, "stage")) %&gt;%  # Remove term
+mutate(text = str_replace_all(text, "sri ranganatha temple", "temple")) %&gt;%  # Replace term
+mutate(text = str_replace_all(text, "shakti", "dog")) %&gt;%  # Replace term
+mutate(text = str_replace_all(text, "foxhounds", "dog")) %&gt;%  # Replace term
+mutate(text = str_replace_all(text, "swami", "dog")) %&gt;%  # Replace term
+*mutate(text = str_replace_all(text, "max", "dog"))   # Replace term
+```
+]
+ 
+.panel2-sw1a-auto[
+
+```
+## # A tibble: 195 × 1
+##    text                                                                                            
+##    &lt;chr&gt;                                                                                           
+##  1 crazy paving day  temple unbearably hot joined by dog  thirsty drank my                         
+##  2 cement mixing water then came over for scratches overwhelmed by how much i miss dog first       
+##  3 time i have touched another dog since his death strong mnemonic smell touch  do bernese         
+##  4 mountain dogs have double coat too felt like it  she seemed to recognise something was up       
+##  5 very much a person like dog cried and made her fur damp she stayed with me til i stopped        
+##  6 crying then went to entrance and lay down so hot how does she cope in here why does she         
+##  7 come inside and the incense need to look into canine olfaction and hearing  would dogs find     
+##  8 the pujas stressful incense and bell ringing  loud and smelly what about animals in temples     
+##  9 common in south asia i like being in here despite the heat  meditative calming good place for   
+## 10 seva or is it if i get something in return is enjoying the work contrary to selfless service dog
+## # … with 185 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1a-auto[
+
+```r
+exwdogs %&gt;%
+read_lines() %&gt;%  # Parse text into individual lines
+as_tibble_col("text") %&gt;%  # Create a single tidy column
+slice(24:n()) %&gt;%  # Remove unnecessary text
+mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standard format
+mutate(text = str_to_lower(text)) %&gt;%  # Convert all words to lower case
+mutate(text = str_remove_all(text, "[[:digit:]]")) %&gt;%  # Remove all numbers
+mutate(text = str_remove_all(text, "[[:punct:]]")) %&gt;%  # Remove all punctuation
+mutate(text = str_remove_all(text, "stage")) %&gt;%  # Remove term
+mutate(text = str_replace_all(text, "sri ranganatha temple", "temple")) %&gt;%  # Replace term
+mutate(text = str_replace_all(text, "shakti", "dog")) %&gt;%  # Replace term
+mutate(text = str_replace_all(text, "foxhounds", "dog")) %&gt;%  # Replace term
+mutate(text = str_replace_all(text, "swami", "dog")) %&gt;%  # Replace term
+mutate(text = str_replace_all(text, "max", "dog")) %&gt;%  # Replace term
+*mutate(text = lemmatize_strings(text))   # Lemmatize term
+```
+]
+ 
+.panel2-sw1a-auto[
+
+```
+## # A tibble: 195 × 1
+##    text                                                                                         
+##    &lt;chr&gt;                                                                                        
+##  1 crazy pave day temple unbearably hot join by dog thirsty drink my                            
+##  2 cement mix water then come over for scratch overwhelm by how much i miss dog first           
+##  3 time i have touch another dog since his death strong mnemonic smell touch do bernese         
+##  4 mountain dog have double coat too feel like it she seem to recognise something be up         
+##  5 very much a person like dog cry and make her fur damp she stay with me til i stop            
+##  6 cry then go to entrance and lie down so hot how do she cope in here why do she               
+##  7 come inside and the incense need to look into canine olfaction and hear would dog find       
+##  8 the pujas stressful incense and bell ring loud and smelly what about animal in temple        
+##  9 common in south asia i like be in here despite the heat meditative calm good place for       
+## 10 seva or be it if i get something in return be enjoy the work contrary to selfless service dog
+## # … with 185 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1a-auto[
+
+```r
+exwdogs %&gt;%
+read_lines() %&gt;%  # Parse text into individual lines
+as_tibble_col("text") %&gt;%  # Create a single tidy column
+slice(24:n()) %&gt;%  # Remove unnecessary text
+mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standard format
+mutate(text = str_to_lower(text)) %&gt;%  # Convert all words to lower case
+mutate(text = str_remove_all(text, "[[:digit:]]")) %&gt;%  # Remove all numbers
+mutate(text = str_remove_all(text, "[[:punct:]]")) %&gt;%  # Remove all punctuation
+mutate(text = str_remove_all(text, "stage")) %&gt;%  # Remove term
+mutate(text = str_replace_all(text, "sri ranganatha temple", "temple")) %&gt;%  # Replace term
+mutate(text = str_replace_all(text, "shakti", "dog")) %&gt;%  # Replace term
+mutate(text = str_replace_all(text, "foxhounds", "dog")) %&gt;%  # Replace term
+mutate(text = str_replace_all(text, "swami", "dog")) %&gt;%  # Replace term
+mutate(text = str_replace_all(text, "max", "dog")) %&gt;%  # Replace term
+mutate(text = lemmatize_strings(text)) %&gt;%  # Lemmatize term
+*mutate(text = str_remove_all(text, c("dog")))   # Remove term
+```
+]
+ 
+.panel2-sw1a-auto[
+
+```
+## # A tibble: 195 × 1
+##    text                                                                                        
+##    &lt;chr&gt;                                                                                       
+##  1 "crazy pave day temple unbearably hot join by  thirsty drink my"                            
+##  2 "cement mix water then come over for scratch overwhelm by how much i miss  first"           
+##  3 "time i have touch another  since his death strong mnemonic smell touch do bernese"         
+##  4 "mountain  have double coat too feel like it she seem to recognise something be up"         
+##  5 "very much a person like  cry and make her fur damp she stay with me til i stop"            
+##  6 "cry then go to entrance and lie down so hot how do she cope in here why do she"            
+##  7 "come inside and the incense need to look into canine olfaction and hear would  find"       
+##  8 "the pujas stressful incense and bell ring loud and smelly what about animal in temple"     
+##  9 "common in south asia i like be in here despite the heat meditative calm good place for"    
+## 10 "seva or be it if i get something in return be enjoy the work contrary to selfless service "
+## # … with 185 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1a-auto[
+
+```r
+exwdogs %&gt;%
+read_lines() %&gt;%  # Parse text into individual lines
+as_tibble_col("text") %&gt;%  # Create a single tidy column
+slice(24:n()) %&gt;%  # Remove unnecessary text
+mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standard format
+mutate(text = str_to_lower(text)) %&gt;%  # Convert all words to lower case
+mutate(text = str_remove_all(text, "[[:digit:]]")) %&gt;%  # Remove all numbers
+mutate(text = str_remove_all(text, "[[:punct:]]")) %&gt;%  # Remove all punctuation
+mutate(text = str_remove_all(text, "stage")) %&gt;%  # Remove term
+mutate(text = str_replace_all(text, "sri ranganatha temple", "temple")) %&gt;%  # Replace term
+mutate(text = str_replace_all(text, "shakti", "dog")) %&gt;%  # Replace term
+mutate(text = str_replace_all(text, "foxhounds", "dog")) %&gt;%  # Replace term
+mutate(text = str_replace_all(text, "swami", "dog")) %&gt;%  # Replace term
+mutate(text = str_replace_all(text, "max", "dog")) %&gt;%  # Replace term
+mutate(text = lemmatize_strings(text)) %&gt;%  # Lemmatize term
+mutate(text = str_remove_all(text, c("dog"))) %&gt;%  # Remove term
+*mutate(text = str_remove_all(text, c("human")))   # Remove term
+```
+]
+ 
+.panel2-sw1a-auto[
+
+```
+## # A tibble: 195 × 1
+##    text                                                                                        
+##    &lt;chr&gt;                                                                                       
+##  1 "crazy pave day temple unbearably hot join by  thirsty drink my"                            
+##  2 "cement mix water then come over for scratch overwhelm by how much i miss  first"           
+##  3 "time i have touch another  since his death strong mnemonic smell touch do bernese"         
+##  4 "mountain  have double coat too feel like it she seem to recognise something be up"         
+##  5 "very much a person like  cry and make her fur damp she stay with me til i stop"            
+##  6 "cry then go to entrance and lie down so hot how do she cope in here why do she"            
+##  7 "come inside and the incense need to look into canine olfaction and hear would  find"       
+##  8 "the pujas stressful incense and bell ring loud and smelly what about animal in temple"     
+##  9 "common in south asia i like be in here despite the heat meditative calm good place for"    
+## 10 "seva or be it if i get something in return be enjoy the work contrary to selfless service "
+## # … with 185 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1a-auto[
+
+```r
+exwdogs %&gt;%
+read_lines() %&gt;%  # Parse text into individual lines
+as_tibble_col("text") %&gt;%  # Create a single tidy column
+slice(24:n()) %&gt;%  # Remove unnecessary text
+mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standard format
+mutate(text = str_to_lower(text)) %&gt;%  # Convert all words to lower case
+mutate(text = str_remove_all(text, "[[:digit:]]")) %&gt;%  # Remove all numbers
+mutate(text = str_remove_all(text, "[[:punct:]]")) %&gt;%  # Remove all punctuation
+mutate(text = str_remove_all(text, "stage")) %&gt;%  # Remove term
+mutate(text = str_replace_all(text, "sri ranganatha temple", "temple")) %&gt;%  # Replace term
+mutate(text = str_replace_all(text, "shakti", "dog")) %&gt;%  # Replace term
+mutate(text = str_replace_all(text, "foxhounds", "dog")) %&gt;%  # Replace term
+mutate(text = str_replace_all(text, "swami", "dog")) %&gt;%  # Replace term
+mutate(text = str_replace_all(text, "max", "dog")) %&gt;%  # Replace term
+mutate(text = lemmatize_strings(text)) %&gt;%  # Lemmatize term
+mutate(text = str_remove_all(text, c("dog"))) %&gt;%  # Remove term
+mutate(text = str_remove_all(text, c("human"))) %&gt;%  # Remove term
+*mutate(text = str_squish(text))   # Remove whitespace
+```
+]
+ 
+.panel2-sw1a-auto[
+
+```
+## # A tibble: 195 × 1
+##    text                                                                                     
+##    &lt;chr&gt;                                                                                    
+##  1 crazy pave day temple unbearably hot join by thirsty drink my                            
+##  2 cement mix water then come over for scratch overwhelm by how much i miss first           
+##  3 time i have touch another since his death strong mnemonic smell touch do bernese         
+##  4 mountain have double coat too feel like it she seem to recognise something be up         
+##  5 very much a person like cry and make her fur damp she stay with me til i stop            
+##  6 cry then go to entrance and lie down so hot how do she cope in here why do she           
+##  7 come inside and the incense need to look into canine olfaction and hear would find       
+##  8 the pujas stressful incense and bell ring loud and smelly what about animal in temple    
+##  9 common in south asia i like be in here despite the heat meditative calm good place for   
+## 10 seva or be it if i get something in return be enjoy the work contrary to selfless service
+## # … with 185 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1a-auto[
+
+```r
+exwdogs %&gt;%
+read_lines() %&gt;%  # Parse text into individual lines
+as_tibble_col("text") %&gt;%  # Create a single tidy column
+slice(24:n()) %&gt;%  # Remove unnecessary text
+mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standard format
+mutate(text = str_to_lower(text)) %&gt;%  # Convert all words to lower case
+mutate(text = str_remove_all(text, "[[:digit:]]")) %&gt;%  # Remove all numbers
+mutate(text = str_remove_all(text, "[[:punct:]]")) %&gt;%  # Remove all punctuation
+mutate(text = str_remove_all(text, "stage")) %&gt;%  # Remove term
+mutate(text = str_replace_all(text, "sri ranganatha temple", "temple")) %&gt;%  # Replace term
+mutate(text = str_replace_all(text, "shakti", "dog")) %&gt;%  # Replace term
+mutate(text = str_replace_all(text, "foxhounds", "dog")) %&gt;%  # Replace term
+mutate(text = str_replace_all(text, "swami", "dog")) %&gt;%  # Replace term
+mutate(text = str_replace_all(text, "max", "dog")) %&gt;%  # Replace term
+mutate(text = lemmatize_strings(text)) %&gt;%  # Lemmatize term
+mutate(text = str_remove_all(text, c("dog"))) %&gt;%  # Remove term
+mutate(text = str_remove_all(text, c("human"))) %&gt;%  # Remove term
+mutate(text = str_squish(text)) %&gt;%  # Remove whitespace
+*mutate(text = na_if(text, ""))   # Replace blanks with NA
+```
+]
+ 
+.panel2-sw1a-auto[
+
+```
+## # A tibble: 195 × 1
+##    text                                                                                     
+##    &lt;chr&gt;                                                                                    
+##  1 crazy pave day temple unbearably hot join by thirsty drink my                            
+##  2 cement mix water then come over for scratch overwhelm by how much i miss first           
+##  3 time i have touch another since his death strong mnemonic smell touch do bernese         
+##  4 mountain have double coat too feel like it she seem to recognise something be up         
+##  5 very much a person like cry and make her fur damp she stay with me til i stop            
+##  6 cry then go to entrance and lie down so hot how do she cope in here why do she           
+##  7 come inside and the incense need to look into canine olfaction and hear would find       
+##  8 the pujas stressful incense and bell ring loud and smelly what about animal in temple    
+##  9 common in south asia i like be in here despite the heat meditative calm good place for   
+## 10 seva or be it if i get something in return be enjoy the work contrary to selfless service
+## # … with 185 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1a-auto[
+
+```r
+exwdogs %&gt;%
+read_lines() %&gt;%  # Parse text into individual lines
+as_tibble_col("text") %&gt;%  # Create a single tidy column
+slice(24:n()) %&gt;%  # Remove unnecessary text
+mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standard format
+mutate(text = str_to_lower(text)) %&gt;%  # Convert all words to lower case
+mutate(text = str_remove_all(text, "[[:digit:]]")) %&gt;%  # Remove all numbers
+mutate(text = str_remove_all(text, "[[:punct:]]")) %&gt;%  # Remove all punctuation
+mutate(text = str_remove_all(text, "stage")) %&gt;%  # Remove term
+mutate(text = str_replace_all(text, "sri ranganatha temple", "temple")) %&gt;%  # Replace term
+mutate(text = str_replace_all(text, "shakti", "dog")) %&gt;%  # Replace term
+mutate(text = str_replace_all(text, "foxhounds", "dog")) %&gt;%  # Replace term
+mutate(text = str_replace_all(text, "swami", "dog")) %&gt;%  # Replace term
+mutate(text = str_replace_all(text, "max", "dog")) %&gt;%  # Replace term
+mutate(text = lemmatize_strings(text)) %&gt;%  # Lemmatize term
+mutate(text = str_remove_all(text, c("dog"))) %&gt;%  # Remove term
+mutate(text = str_remove_all(text, c("human"))) %&gt;%  # Remove term
+mutate(text = str_squish(text)) %&gt;%  # Remove whitespace
+mutate(text = na_if(text, "")) %&gt;%  # Replace blanks with NA
+*drop_na()  # Drop all columns with NA
+```
+]
+ 
+.panel2-sw1a-auto[
+
+```
+## # A tibble: 167 × 1
+##    text                                                                                     
+##    &lt;chr&gt;                                                                                    
+##  1 crazy pave day temple unbearably hot join by thirsty drink my                            
+##  2 cement mix water then come over for scratch overwhelm by how much i miss first           
+##  3 time i have touch another since his death strong mnemonic smell touch do bernese         
+##  4 mountain have double coat too feel like it she seem to recognise something be up         
+##  5 very much a person like cry and make her fur damp she stay with me til i stop            
+##  6 cry then go to entrance and lie down so hot how do she cope in here why do she           
+##  7 come inside and the incense need to look into canine olfaction and hear would find       
+##  8 the pujas stressful incense and bell ring loud and smelly what about animal in temple    
+##  9 common in south asia i like be in here despite the heat meditative calm good place for   
+## 10 seva or be it if i get something in return be enjoy the work contrary to selfless service
+## # … with 157 more rows
+```
+]
+
+&lt;style&gt;
+.panel1-sw1a-auto {
+  color: white;
+  width: 98%;
+  hight: 32%;
+  float: top;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw1a-auto {
+  color: white;
+  width: 0%;
+  hight: 32%;
+  float: top;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw1a-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: top;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+### Assigning a Variable 
+
+Let's save the entire cleaning process 
+
+
+```r
+exwdogs_cleaned &lt;-
+  exwdogs %&gt;%
+  read_lines() %&gt;%
+  as_tibble_col("text") %&gt;%
+  slice(24:n()) %&gt;%
+  mutate(text = textclean::replace_non_ascii(text)) %&gt;%
+  mutate(text = str_to_lower(text)) %&gt;%
+  mutate(text = str_remove_all(text, "[[:digit:]]")) %&gt;%
+  mutate(text = str_remove_all(text, "[[:punct:]]")) %&gt;%
+  mutate(text = str_remove_all(text, "stage")) %&gt;%
+  mutate(text = str_replace_all(text, "sri ranganatha temple", "temple")) %&gt;%
+  mutate(text = str_replace_all(text, "shakti", "dog")) %&gt;%
+  mutate(text = str_replace_all(text, "foxhounds", "dog")) %&gt;%
+  mutate(text = str_replace_all(text, "swami", "dog")) %&gt;%
+  mutate(text = str_replace_all(text, "max", "dog")) %&gt;%
+  mutate(text = lemmatize_strings(text)) %&gt;%
+  mutate(text = str_remove_all(text, c("dog"))) %&gt;%
+  mutate(text = str_remove_all(text, c("human"))) %&gt;%
+  mutate(text = str_squish(text)) %&gt;%
+  mutate(text = na_if(text, "")) %&gt;%
+  drop_na()
+```
+
+---
+
+### What Just Happened?
+
+--
+
+Let's try doing something similar but with shorter and simpler text taken from the very funny skit [Sharknado Pitch Meeting](https://youtu.be/CYootnc0uew)
+
+
+```r
+example_text &lt;- 
+  c("Excerpt from Sharknado Pitch Meeting. 
+     Creator: Ryan George. 
+    
+     (1) It’s peer reviewed. 
+     (2) Multiple scientists looked over that and approved of it? 
+     (3) No some drunk guy on the pier checked it out. He loved it!
+     (4) That is technically peer reviewed. I think we’re good.
+    
+     --The End--
+    ")
+```
+
+---
+
+1. Take a look at the raw text data
+.remarkwidth[
+
+```r
+example_text
+```
+
+```
+## [1] "Excerpt from Sharknado Pitch Meeting. \n     Creator: Ryan George. \n    \n     (1) It’s peer reviewed. \n     (2) Multiple scientists looked over that and approved of it? \n     (3) No some drunk guy on the pier checked it out. He loved it!\n     (4) That is technically peer reviewed. I think we’re good.\n    \n     --The End--\n    "
+```
+]
+
+--
+
+2. Then we wrangle using a very similar process 
+
+---
+
+
+count: false
+ 
+
+.panel1-sw1b-auto[
+
+```r
+*example_text
+```
+]
+ 
+.panel2-sw1b-auto[
+
+```
+## [1] "Excerpt from Sharknado Pitch Meeting. \n     Creator: Ryan George. \n    \n     (1) It’s peer reviewed. \n     (2) Multiple scientists looked over that and approved of it? \n     (3) No some drunk guy on the pier checked it out. He loved it!\n     (4) That is technically peer reviewed. I think we’re good.\n    \n     --The End--\n    "
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1b-auto[
+
+```r
+example_text %&gt;%
+* read_lines()   # Parse text into individual lines
+```
+]
+ 
+.panel2-sw1b-auto[
+
+```
+##  [1] "Excerpt from Sharknado Pitch Meeting. "                             
+##  [2] "     Creator: Ryan George. "                                        
+##  [3] "    "                                                               
+##  [4] "     (1) It’s peer reviewed. "                                      
+##  [5] "     (2) Multiple scientists looked over that and approved of it? " 
+##  [6] "     (3) No some drunk guy on the pier checked it out. He loved it!"
+##  [7] "     (4) That is technically peer reviewed. I think we’re good."    
+##  [8] "    "                                                               
+##  [9] "     --The End--"                                                   
+## [10] "    "
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1b-auto[
+
+```r
+example_text %&gt;%
+  read_lines() %&gt;%  # Parse text into individual lines
+* as_tibble_col("text")   # Create a single tidy column
+```
+]
+ 
+.panel2-sw1b-auto[
+
+```
+## # A tibble: 10 × 1
+##    text                                                                 
+##    &lt;chr&gt;                                                                
+##  1 "Excerpt from Sharknado Pitch Meeting. "                             
+##  2 "     Creator: Ryan George. "                                        
+##  3 "    "                                                               
+##  4 "     (1) It’s peer reviewed. "                                      
+##  5 "     (2) Multiple scientists looked over that and approved of it? " 
+##  6 "     (3) No some drunk guy on the pier checked it out. He loved it!"
+##  7 "     (4) That is technically peer reviewed. I think we’re good."    
+##  8 "    "                                                               
+##  9 "     --The End--"                                                   
+## 10 "    "
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1b-auto[
+
+```r
+example_text %&gt;%
+  read_lines() %&gt;%  # Parse text into individual lines
+  as_tibble_col("text") %&gt;%  # Create a single tidy column
+* slice(4:n())   # Remove unnecessary text
+```
+]
+ 
+.panel2-sw1b-auto[
+
+```
+## # A tibble: 7 × 1
+##   text                                                                 
+##   &lt;chr&gt;                                                                
+## 1 "     (1) It’s peer reviewed. "                                      
+## 2 "     (2) Multiple scientists looked over that and approved of it? " 
+## 3 "     (3) No some drunk guy on the pier checked it out. He loved it!"
+## 4 "     (4) That is technically peer reviewed. I think we’re good."    
+## 5 "    "                                                               
+## 6 "     --The End--"                                                   
+## 7 "    "
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1b-auto[
+
+```r
+example_text %&gt;%
+  read_lines() %&gt;%  # Parse text into individual lines
+  as_tibble_col("text") %&gt;%  # Create a single tidy column
+  slice(4:n()) %&gt;%  # Remove unnecessary text
+* mutate(text = textclean::replace_non_ascii(text))   # Convert to a standard format
+```
+]
+ 
+.panel2-sw1b-auto[
+
+```
+## # A tibble: 7 × 1
+##   text                                                            
+##   &lt;chr&gt;                                                           
+## 1 "(1) It's peer reviewed."                                       
+## 2 "(2) Multiple scientists looked over that and approved of it?"  
+## 3 "(3) No some drunk guy on the pier checked it out. He loved it!"
+## 4 "(4) That is technically peer reviewed. I think we're good."    
+## 5 ""                                                              
+## 6 "--The End--"                                                   
+## 7 ""
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1b-auto[
+
+```r
+example_text %&gt;%
+  read_lines() %&gt;%  # Parse text into individual lines
+  as_tibble_col("text") %&gt;%  # Create a single tidy column
+  slice(4:n()) %&gt;%  # Remove unnecessary text
+  mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standard format
+* mutate(text = str_to_lower(text))   # Convert all words to lower case
+```
+]
+ 
+.panel2-sw1b-auto[
+
+```
+## # A tibble: 7 × 1
+##   text                                                            
+##   &lt;chr&gt;                                                           
+## 1 "(1) it's peer reviewed."                                       
+## 2 "(2) multiple scientists looked over that and approved of it?"  
+## 3 "(3) no some drunk guy on the pier checked it out. he loved it!"
+## 4 "(4) that is technically peer reviewed. i think we're good."    
+## 5 ""                                                              
+## 6 "--the end--"                                                   
+## 7 ""
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1b-auto[
+
+```r
+example_text %&gt;%
+  read_lines() %&gt;%  # Parse text into individual lines
+  as_tibble_col("text") %&gt;%  # Create a single tidy column
+  slice(4:n()) %&gt;%  # Remove unnecessary text
+  mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standard format
+  mutate(text = str_to_lower(text)) %&gt;%  # Convert all words to lower case
+* mutate(text = str_remove_all(text, "[[:digit:]]"))   # Remove all numbers
+```
+]
+ 
+.panel2-sw1b-auto[
+
+```
+## # A tibble: 7 × 1
+##   text                                                           
+##   &lt;chr&gt;                                                          
+## 1 "() it's peer reviewed."                                       
+## 2 "() multiple scientists looked over that and approved of it?"  
+## 3 "() no some drunk guy on the pier checked it out. he loved it!"
+## 4 "() that is technically peer reviewed. i think we're good."    
+## 5 ""                                                             
+## 6 "--the end--"                                                  
+## 7 ""
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1b-auto[
+
+```r
+example_text %&gt;%
+  read_lines() %&gt;%  # Parse text into individual lines
+  as_tibble_col("text") %&gt;%  # Create a single tidy column
+  slice(4:n()) %&gt;%  # Remove unnecessary text
+  mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standard format
+  mutate(text = str_to_lower(text)) %&gt;%  # Convert all words to lower case
+  mutate(text = str_remove_all(text, "[[:digit:]]")) %&gt;%  # Remove all numbers
+* mutate(text = str_remove_all(text, "[[:punct:]]"))   # Remove all punctuation
+```
+]
+ 
+.panel2-sw1b-auto[
+
+```
+## # A tibble: 7 × 1
+##   text                                                       
+##   &lt;chr&gt;                                                      
+## 1 " its peer reviewed"                                       
+## 2 " multiple scientists looked over that and approved of it" 
+## 3 " no some drunk guy on the pier checked it out he loved it"
+## 4 " that is technically peer reviewed i think were good"     
+## 5 ""                                                         
+## 6 "the end"                                                  
+## 7 ""
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1b-auto[
+
+```r
+example_text %&gt;%
+  read_lines() %&gt;%  # Parse text into individual lines
+  as_tibble_col("text") %&gt;%  # Create a single tidy column
+  slice(4:n()) %&gt;%  # Remove unnecessary text
+  mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standard format
+  mutate(text = str_to_lower(text)) %&gt;%  # Convert all words to lower case
+  mutate(text = str_remove_all(text, "[[:digit:]]")) %&gt;%  # Remove all numbers
+  mutate(text = str_remove_all(text, "[[:punct:]]")) %&gt;%  # Remove all punctuation
+* mutate(text = str_remove_all(text, "the end"))   # Remove term
+```
+]
+ 
+.panel2-sw1b-auto[
+
+```
+## # A tibble: 7 × 1
+##   text                                                       
+##   &lt;chr&gt;                                                      
+## 1 " its peer reviewed"                                       
+## 2 " multiple scientists looked over that and approved of it" 
+## 3 " no some drunk guy on the pier checked it out he loved it"
+## 4 " that is technically peer reviewed i think were good"     
+## 5 ""                                                         
+## 6 ""                                                         
+## 7 ""
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1b-auto[
+
+```r
+example_text %&gt;%
+  read_lines() %&gt;%  # Parse text into individual lines
+  as_tibble_col("text") %&gt;%  # Create a single tidy column
+  slice(4:n()) %&gt;%  # Remove unnecessary text
+  mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standard format
+  mutate(text = str_to_lower(text)) %&gt;%  # Convert all words to lower case
+  mutate(text = str_remove_all(text, "[[:digit:]]")) %&gt;%  # Remove all numbers
+  mutate(text = str_remove_all(text, "[[:punct:]]")) %&gt;%  # Remove all punctuation
+  mutate(text = str_remove_all(text, "the end")) %&gt;%  # Remove term
+* mutate(text = str_replace_all(text, "multiple scientists", "scientists"))   # Replace term
+```
+]
+ 
+.panel2-sw1b-auto[
+
+```
+## # A tibble: 7 × 1
+##   text                                                       
+##   &lt;chr&gt;                                                      
+## 1 " its peer reviewed"                                       
+## 2 " scientists looked over that and approved of it"          
+## 3 " no some drunk guy on the pier checked it out he loved it"
+## 4 " that is technically peer reviewed i think were good"     
+## 5 ""                                                         
+## 6 ""                                                         
+## 7 ""
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1b-auto[
+
+```r
+example_text %&gt;%
+  read_lines() %&gt;%  # Parse text into individual lines
+  as_tibble_col("text") %&gt;%  # Create a single tidy column
+  slice(4:n()) %&gt;%  # Remove unnecessary text
+  mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standard format
+  mutate(text = str_to_lower(text)) %&gt;%  # Convert all words to lower case
+  mutate(text = str_remove_all(text, "[[:digit:]]")) %&gt;%  # Remove all numbers
+  mutate(text = str_remove_all(text, "[[:punct:]]")) %&gt;%  # Remove all punctuation
+  mutate(text = str_remove_all(text, "the end")) %&gt;%  # Remove term
+  mutate(text = str_replace_all(text, "multiple scientists", "scientists")) %&gt;%  # Replace term
+* mutate(text = str_replace_all(text, "its", "paper"))   # Replace term
+```
+]
+ 
+.panel2-sw1b-auto[
+
+```
+## # A tibble: 7 × 1
+##   text                                                       
+##   &lt;chr&gt;                                                      
+## 1 " paper peer reviewed"                                     
+## 2 " scientists looked over that and approved of it"          
+## 3 " no some drunk guy on the pier checked it out he loved it"
+## 4 " that is technically peer reviewed i think were good"     
+## 5 ""                                                         
+## 6 ""                                                         
+## 7 ""
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1b-auto[
+
+```r
+example_text %&gt;%
+  read_lines() %&gt;%  # Parse text into individual lines
+  as_tibble_col("text") %&gt;%  # Create a single tidy column
+  slice(4:n()) %&gt;%  # Remove unnecessary text
+  mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standard format
+  mutate(text = str_to_lower(text)) %&gt;%  # Convert all words to lower case
+  mutate(text = str_remove_all(text, "[[:digit:]]")) %&gt;%  # Remove all numbers
+  mutate(text = str_remove_all(text, "[[:punct:]]")) %&gt;%  # Remove all punctuation
+  mutate(text = str_remove_all(text, "the end")) %&gt;%  # Remove term
+  mutate(text = str_replace_all(text, "multiple scientists", "scientists")) %&gt;%  # Replace term
+  mutate(text = str_replace_all(text, "its", "paper")) %&gt;%  # Replace term
+* mutate(text = str_replace_all(text, "it", "paper"))   # Replace term
+```
+]
+ 
+.panel2-sw1b-auto[
+
+```
+## # A tibble: 7 × 1
+##   text                                                             
+##   &lt;chr&gt;                                                            
+## 1 " paper peer reviewed"                                           
+## 2 " scientists looked over that and approved of paper"             
+## 3 " no some drunk guy on the pier checked paper out he loved paper"
+## 4 " that is technically peer reviewed i think were good"           
+## 5 ""                                                               
+## 6 ""                                                               
+## 7 ""
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1b-auto[
+
+```r
+example_text %&gt;%
+  read_lines() %&gt;%  # Parse text into individual lines
+  as_tibble_col("text") %&gt;%  # Create a single tidy column
+  slice(4:n()) %&gt;%  # Remove unnecessary text
+  mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standard format
+  mutate(text = str_to_lower(text)) %&gt;%  # Convert all words to lower case
+  mutate(text = str_remove_all(text, "[[:digit:]]")) %&gt;%  # Remove all numbers
+  mutate(text = str_remove_all(text, "[[:punct:]]")) %&gt;%  # Remove all punctuation
+  mutate(text = str_remove_all(text, "the end")) %&gt;%  # Remove term
+  mutate(text = str_replace_all(text, "multiple scientists", "scientists")) %&gt;%  # Replace term
+  mutate(text = str_replace_all(text, "its", "paper")) %&gt;%  # Replace term
+  mutate(text = str_replace_all(text, "it", "paper")) %&gt;%  # Replace term
+* mutate(text = str_replace_all(text, "that", "paper"))   # Replace term
+```
+]
+ 
+.panel2-sw1b-auto[
+
+```
+## # A tibble: 7 × 1
+##   text                                                             
+##   &lt;chr&gt;                                                            
+## 1 " paper peer reviewed"                                           
+## 2 " scientists looked over paper and approved of paper"            
+## 3 " no some drunk guy on the pier checked paper out he loved paper"
+## 4 " paper is technically peer reviewed i think were good"          
+## 5 ""                                                               
+## 6 ""                                                               
+## 7 ""
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1b-auto[
+
+```r
+example_text %&gt;%
+  read_lines() %&gt;%  # Parse text into individual lines
+  as_tibble_col("text") %&gt;%  # Create a single tidy column
+  slice(4:n()) %&gt;%  # Remove unnecessary text
+  mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standard format
+  mutate(text = str_to_lower(text)) %&gt;%  # Convert all words to lower case
+  mutate(text = str_remove_all(text, "[[:digit:]]")) %&gt;%  # Remove all numbers
+  mutate(text = str_remove_all(text, "[[:punct:]]")) %&gt;%  # Remove all punctuation
+  mutate(text = str_remove_all(text, "the end")) %&gt;%  # Remove term
+  mutate(text = str_replace_all(text, "multiple scientists", "scientists")) %&gt;%  # Replace term
+  mutate(text = str_replace_all(text, "its", "paper")) %&gt;%  # Replace term
+  mutate(text = str_replace_all(text, "it", "paper")) %&gt;%  # Replace term
+  mutate(text = str_replace_all(text, "that", "paper")) %&gt;%  # Replace term
+* mutate(text = lemmatize_strings(text))   # Lemmatize term
+```
+]
+ 
+.panel2-sw1b-auto[
+
+```
+## # A tibble: 7 × 1
+##   text                                                         
+##   &lt;chr&gt;                                                        
+## 1 "paper peer review"                                          
+## 2 "scientist look over paper and approve of paper"             
+## 3 "no some drink guy on the pier check paper out he love paper"
+## 4 "paper be technically peer review i think be good"           
+## 5 ""                                                           
+## 6 ""                                                           
+## 7 ""
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1b-auto[
+
+```r
+example_text %&gt;%
+  read_lines() %&gt;%  # Parse text into individual lines
+  as_tibble_col("text") %&gt;%  # Create a single tidy column
+  slice(4:n()) %&gt;%  # Remove unnecessary text
+  mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standard format
+  mutate(text = str_to_lower(text)) %&gt;%  # Convert all words to lower case
+  mutate(text = str_remove_all(text, "[[:digit:]]")) %&gt;%  # Remove all numbers
+  mutate(text = str_remove_all(text, "[[:punct:]]")) %&gt;%  # Remove all punctuation
+  mutate(text = str_remove_all(text, "the end")) %&gt;%  # Remove term
+  mutate(text = str_replace_all(text, "multiple scientists", "scientists")) %&gt;%  # Replace term
+  mutate(text = str_replace_all(text, "its", "paper")) %&gt;%  # Replace term
+  mutate(text = str_replace_all(text, "it", "paper")) %&gt;%  # Replace term
+  mutate(text = str_replace_all(text, "that", "paper")) %&gt;%  # Replace term
+  mutate(text = lemmatize_strings(text)) %&gt;%  # Lemmatize term
+* mutate(text = str_remove_all(text, c("paper")))   # Remove term
+```
+]
+ 
+.panel2-sw1b-auto[
+
+```
+## # A tibble: 7 × 1
+##   text                                               
+##   &lt;chr&gt;                                              
+## 1 " peer review"                                     
+## 2 "scientist look over  and approve of "             
+## 3 "no some drink guy on the pier check  out he love "
+## 4 " be technically peer review i think be good"      
+## 5 ""                                                 
+## 6 ""                                                 
+## 7 ""
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1b-auto[
+
+```r
+example_text %&gt;%
+  read_lines() %&gt;%  # Parse text into individual lines
+  as_tibble_col("text") %&gt;%  # Create a single tidy column
+  slice(4:n()) %&gt;%  # Remove unnecessary text
+  mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standard format
+  mutate(text = str_to_lower(text)) %&gt;%  # Convert all words to lower case
+  mutate(text = str_remove_all(text, "[[:digit:]]")) %&gt;%  # Remove all numbers
+  mutate(text = str_remove_all(text, "[[:punct:]]")) %&gt;%  # Remove all punctuation
+  mutate(text = str_remove_all(text, "the end")) %&gt;%  # Remove term
+  mutate(text = str_replace_all(text, "multiple scientists", "scientists")) %&gt;%  # Replace term
+  mutate(text = str_replace_all(text, "its", "paper")) %&gt;%  # Replace term
+  mutate(text = str_replace_all(text, "it", "paper")) %&gt;%  # Replace term
+  mutate(text = str_replace_all(text, "that", "paper")) %&gt;%  # Replace term
+  mutate(text = lemmatize_strings(text)) %&gt;%  # Lemmatize term
+  mutate(text = str_remove_all(text, c("paper"))) %&gt;%  # Remove term
+* mutate(text = str_squish(text))   # Remove whitespace
+```
+]
+ 
+.panel2-sw1b-auto[
+
+```
+## # A tibble: 7 × 1
+##   text                                             
+##   &lt;chr&gt;                                            
+## 1 "peer review"                                    
+## 2 "scientist look over and approve of"             
+## 3 "no some drink guy on the pier check out he love"
+## 4 "be technically peer review i think be good"     
+## 5 ""                                               
+## 6 ""                                               
+## 7 ""
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1b-auto[
+
+```r
+example_text %&gt;%
+  read_lines() %&gt;%  # Parse text into individual lines
+  as_tibble_col("text") %&gt;%  # Create a single tidy column
+  slice(4:n()) %&gt;%  # Remove unnecessary text
+  mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standard format
+  mutate(text = str_to_lower(text)) %&gt;%  # Convert all words to lower case
+  mutate(text = str_remove_all(text, "[[:digit:]]")) %&gt;%  # Remove all numbers
+  mutate(text = str_remove_all(text, "[[:punct:]]")) %&gt;%  # Remove all punctuation
+  mutate(text = str_remove_all(text, "the end")) %&gt;%  # Remove term
+  mutate(text = str_replace_all(text, "multiple scientists", "scientists")) %&gt;%  # Replace term
+  mutate(text = str_replace_all(text, "its", "paper")) %&gt;%  # Replace term
+  mutate(text = str_replace_all(text, "it", "paper")) %&gt;%  # Replace term
+  mutate(text = str_replace_all(text, "that", "paper")) %&gt;%  # Replace term
+  mutate(text = lemmatize_strings(text)) %&gt;%  # Lemmatize term
+  mutate(text = str_remove_all(text, c("paper"))) %&gt;%  # Remove term
+  mutate(text = str_squish(text)) %&gt;%  # Remove whitespace
+* mutate(text = na_if(text, ""))   # Replace blanks with NA
+```
+]
+ 
+.panel2-sw1b-auto[
+
+```
+## # A tibble: 7 × 1
+##   text                                           
+##   &lt;chr&gt;                                          
+## 1 peer review                                    
+## 2 scientist look over and approve of             
+## 3 no some drink guy on the pier check out he love
+## 4 be technically peer review i think be good     
+## 5 &lt;NA&gt;                                           
+## 6 &lt;NA&gt;                                           
+## 7 &lt;NA&gt;
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1b-auto[
+
+```r
+example_text %&gt;%
+  read_lines() %&gt;%  # Parse text into individual lines
+  as_tibble_col("text") %&gt;%  # Create a single tidy column
+  slice(4:n()) %&gt;%  # Remove unnecessary text
+  mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standard format
+  mutate(text = str_to_lower(text)) %&gt;%  # Convert all words to lower case
+  mutate(text = str_remove_all(text, "[[:digit:]]")) %&gt;%  # Remove all numbers
+  mutate(text = str_remove_all(text, "[[:punct:]]")) %&gt;%  # Remove all punctuation
+  mutate(text = str_remove_all(text, "the end")) %&gt;%  # Remove term
+  mutate(text = str_replace_all(text, "multiple scientists", "scientists")) %&gt;%  # Replace term
+  mutate(text = str_replace_all(text, "its", "paper")) %&gt;%  # Replace term
+  mutate(text = str_replace_all(text, "it", "paper")) %&gt;%  # Replace term
+  mutate(text = str_replace_all(text, "that", "paper")) %&gt;%  # Replace term
+  mutate(text = lemmatize_strings(text)) %&gt;%  # Lemmatize term
+  mutate(text = str_remove_all(text, c("paper"))) %&gt;%  # Remove term
+  mutate(text = str_squish(text)) %&gt;%  # Remove whitespace
+  mutate(text = na_if(text, "")) %&gt;%  # Replace blanks with NA
+* drop_na()  # Drop all columns with NA
+```
+]
+ 
+.panel2-sw1b-auto[
+
+```
+## # A tibble: 4 × 1
+##   text                                           
+##   &lt;chr&gt;                                          
+## 1 peer review                                    
+## 2 scientist look over and approve of             
+## 3 no some drink guy on the pier check out he love
+## 4 be technically peer review i think be good
+```
+]
+
+&lt;style&gt;
+.panel1-sw1b-auto {
+  color: white;
+  width: 98%;
+  hight: 32%;
+  float: top;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw1b-auto {
+  color: white;
+  width: 0%;
+  hight: 32%;
+  float: top;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw1b-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: top;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+---
+
+&lt;span style = "font-size:1.75rem"&gt;&lt;b&gt;Normalization&lt;/b&gt; of Remaining Wording&lt;/span&gt;
+
+--
+
+
+&gt; is used to reduce word randomness which allows some level of standardization to help to reduce the amount of different information that a computer has to process therefore improving efficiency
+
+--
+
+&gt; the overall goal is to reduce inflectional forms and sometimes derivationally related forms of a word to a common base form
+
+--
+
+&gt; two popular normalization techniques are &lt;span style="color:#f5ebd9; font-weight:bold; font-style:italic;"&gt;lemmatization&lt;/span&gt; and &lt;span style="color:#f0b5d3; font-weight:bold; font-style:italic;"&gt;stemming&lt;/span&gt;
+
+---
+
+## &lt;span style="color:#f5ebd9; font-weight:bold; font-style:italic;"&gt;Lemmatization&lt;/span&gt; vs. &lt;span style="color:#f0b5d3; font-weight:bold; font-style:italic;"&gt;Stemming&lt;/span&gt;
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+.pull-left[
+&lt;p id="center" style="color:#f5ebd9; border:1px; border-style:solid; border-color:#f5ebd9; border-radius: 25px; padding: 0.3em; margin-top: -6px"&gt;
+&lt;span style = "font-weight:bold; font-style:italic;"&gt;Lemmatization&lt;/span&gt;&lt;br&gt;&lt;br&gt;
+the process of reducing words to their base word&lt;br&gt;&lt;br&gt;
+(takes more time)
+&lt;/p&gt;
+]
+
+--
+
+.pull-right[
+&lt;p id="center" style="color:#f0b5d3; border:1px; border-style:solid; border-color:#f0b5d3; border-radius: 25px; padding: 0.3em; margin-top: -6px"&gt;
+&lt;span style = "font-weight:bold; font-style:italic;"&gt;Stemming&lt;/span&gt;&lt;br&gt;&lt;br&gt;
+the process of reducing words to their word stem or root form by removing word endings or other affixes&lt;br&gt;&lt;br&gt;
+(takes less time)
+&lt;/p&gt;
+]
+
+--
+
+&lt;br&gt;
+.pull-left[
+&lt;p id="center" style="color:#f5ebd9; border:1px; border-style:solid; border-color:#f5ebd9; border-radius: 25px; padding: 0.3em; margin-top: -6px"&gt;
+&lt;i&gt;Example&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+the term &lt;i&gt;better&lt;/i&gt; has the lemma &lt;i&gt;good&lt;/i&gt;
+&lt;/p&gt;
+]
+
+--
+
+.pull-right[
+&lt;p id="center" style="color:#f0b5d3; border:1px; border-style:solid; border-color:#f0b5d3; border-radius: 25px; padding: 0.3em; margin-top: -6px"&gt;
+&lt;i&gt;Example&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+the term &lt;i&gt;flooding&lt;/i&gt; has the stem &lt;i&gt;flood&lt;/i&gt;
+&lt;/p&gt;
+]
+
+--
+
+.footnote[For a great rundown of this topic, avoid the syntax and read over [Text Normalization for Natural Language Processing (NLP)](https://towardsdatascience.com/text-normalization-for-natural-language-processing-nlp-70a314bfa646)]
+
+---
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;center&gt;
+&lt;img src="img/lemmastem.png" alt="Lemmatization v Stemming Table Example" width='700'&gt;&lt;/a&gt;
+&lt;/center&gt;
+
+---
+
+&lt;span style = "font-size:1.75rem"&gt;&lt;b&gt;Tokenizing&lt;/b&gt; Handled Data&lt;/span&gt;
+
+--
+
+.center2[&lt;i&gt;A process of distinguishing and classifying sections of a string of input characters&lt;/i&gt;]
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+What you should take from this is that &lt;b&gt;unnesting&lt;/b&gt; data successfully is a requirement to be able to **tokenize**. While the next set of commands should look familiar, please consider taking a bit of time to really see what occurs in each step
+
+---
+
+&lt;span style = "font-size:1.75rem"&gt;&lt;b&gt;Filtering stopwords&lt;/b&gt;&lt;/span&gt;
+
+---
+
+
+count: false
+ 
+
+.panel1-sw2-auto[
+
+```r
+*exwdogs_cleaned
+```
+]
+ 
+.panel2-sw2-auto[
+
+```
+## # A tibble: 167 × 1
+##    text                                                                                     
+##    &lt;chr&gt;                                                                                    
+##  1 crazy pave day temple unbearably hot join by thirsty drink my                            
+##  2 cement mix water then come over for scratch overwhelm by how much i miss first           
+##  3 time i have touch another since his death strong mnemonic smell touch do bernese         
+##  4 mountain have double coat too feel like it she seem to recognise something be up         
+##  5 very much a person like cry and make her fur damp she stay with me til i stop            
+##  6 cry then go to entrance and lie down so hot how do she cope in here why do she           
+##  7 come inside and the incense need to look into canine olfaction and hear would find       
+##  8 the pujas stressful incense and bell ring loud and smelly what about animal in temple    
+##  9 common in south asia i like be in here despite the heat meditative calm good place for   
+## 10 seva or be it if i get something in return be enjoy the work contrary to selfless service
+## # … with 157 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw2-auto[
+
+```r
+exwdogs_cleaned %&gt;%
+* unnest_tokens(word, text)
+```
+]
+ 
+.panel2-sw2-auto[
+
+```
+## # A tibble: 2,585 × 1
+##    word      
+##    &lt;chr&gt;     
+##  1 crazy     
+##  2 pave      
+##  3 day       
+##  4 temple    
+##  5 unbearably
+##  6 hot       
+##  7 join      
+##  8 by        
+##  9 thirsty   
+## 10 drink     
+## # … with 2,575 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw2-auto[
+
+```r
+exwdogs_cleaned %&gt;%
+  unnest_tokens(word, text) %&gt;%
+* anti_join(stop_words)
+```
+]
+ 
+.panel2-sw2-auto[
+
+```
+## Joining, by = "word"
+```
+
+```
+## # A tibble: 1,040 × 1
+##    word      
+##    &lt;chr&gt;     
+##  1 crazy     
+##  2 pave      
+##  3 day       
+##  4 temple    
+##  5 unbearably
+##  6 hot       
+##  7 join      
+##  8 thirsty   
+##  9 drink     
+## 10 cement    
+## # … with 1,030 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw2-auto[
+
+```r
+exwdogs_cleaned %&gt;%
+  unnest_tokens(word, text) %&gt;%
+  anti_join(stop_words) %&gt;%
+* count(word, sort = TRUE)
+```
+]
+ 
+.panel2-sw2-auto[
+
+```
+## Joining, by = "word"
+```
+
+```
+## # A tibble: 690 × 2
+##    word          n
+##    &lt;chr&gt;     &lt;int&gt;
+##  1 temple       16
+##  2 feel         11
+##  3 eye          10
+##  4 care          9
+##  5 animal        8
+##  6 tail          8
+##  7 sense         7
+##  8 canine        6
+##  9 emotional     6
+## 10 hear          6
+## # … with 680 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw2-auto[
+
+```r
+exwdogs_cleaned %&gt;%
+  unnest_tokens(word, text) %&gt;%
+  anti_join(stop_words) %&gt;%
+  count(word, sort = TRUE) %&gt;%
+* add_column(document = 1)
+```
+]
+ 
+.panel2-sw2-auto[
+
+```
+## Joining, by = "word"
+```
+
+```
+## # A tibble: 690 × 3
+##    word          n document
+##    &lt;chr&gt;     &lt;int&gt;    &lt;dbl&gt;
+##  1 temple       16        1
+##  2 feel         11        1
+##  3 eye          10        1
+##  4 care          9        1
+##  5 animal        8        1
+##  6 tail          8        1
+##  7 sense         7        1
+##  8 canine        6        1
+##  9 emotional     6        1
+## 10 hear          6        1
+## # … with 680 more rows
+```
+]
+
+&lt;style&gt;
+.panel1-sw2-auto {
+  color: white;
+  width: 49%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw2-auto {
+  color: white;
+  width: 49%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw2-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+### Assign a Variable
+
+Let's save the tokenized data frame
+
+
+```r
+exwdogs_tokens &lt;- 
+  exwdogs_cleaned %&gt;%
+  unnest_tokens(word, text) %&gt;%
+  anti_join(stop_words) %&gt;%
+  count(word, sort = TRUE) %&gt;%
+  add_column(document = 1)
+```
+
+```
+## Joining, by = "word"
+```
+
+---
+
+.center2[&lt;b&gt;&lt;span style = "font-size:2.75rem"&gt;Step 3: Statistical Classification and Modeling&lt;/span&gt;&lt;/b&gt;]
+
+---
+
+&lt;span style = "font-size:1.75rem"&gt;Creating a &lt;b&gt;Term Document Matrix&lt;/b&gt;&lt;/span&gt;
+
+---
+
+
+count: false
+ 
+
+.panel1-sw3-auto[
+
+```r
+*exwdogs_tokens
+```
+]
+ 
+.panel2-sw3-auto[
+
+```
+## # A tibble: 690 × 3
+##    word          n document
+##    &lt;chr&gt;     &lt;int&gt;    &lt;dbl&gt;
+##  1 temple       16        1
+##  2 feel         11        1
+##  3 eye          10        1
+##  4 care          9        1
+##  5 animal        8        1
+##  6 tail          8        1
+##  7 sense         7        1
+##  8 canine        6        1
+##  9 emotional     6        1
+## 10 hear          6        1
+## # … with 680 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw3-auto[
+
+```r
+exwdogs_tokens %&gt;%
+* cast_dtm(document, word, n)
+```
+]
+ 
+.panel2-sw3-auto[
+
+```
+## &lt;&lt;DocumentTermMatrix (documents: 1, terms: 690)&gt;&gt;
+## Non-/sparse entries: 690/0
+## Sparsity           : 0%
+## Maximal term length: 19
+## Weighting          : term frequency (tf)
+```
+]
+
+&lt;style&gt;
+.panel1-sw3-auto {
+  color: white;
+  width: 49%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw3-auto {
+  color: white;
+  width: 49%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw3-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+### Assigning a Variable
+
+
+```r
+exwdogs_dtm &lt;- 
+  exwdogs_tokens %&gt;%
+  cast_dtm(document, word, n)
+```
+
+---
+
+&lt;span style = "font-size:1.75rem"&gt;Calculating &lt;b&gt;Coherence Scores&lt;/b&gt;&lt;/span&gt;
+
+--
+
+.center2[&lt;i&gt;A measure of the degree of semantic similarity between high scoring words in the topic which These measurements help distinguish between topics that are semantically interpretable topics and topics that are artifacts of statistical inference&lt;/i&gt;]
+
+---
+
+
+count: false
+ 
+
+.panel1-sw4-auto[
+
+```r
+*FindTopicsNumber(
+* exwdogs_dtm,
+* topics = seq(from = 2, to = 20, by = 1),
+* metrics = c("Griffiths2004",
+*             "CaoJuan2009",
+*             "Arun2010",
+*             "Deveaud2014"),
+* method = "Gibbs",
+* control = list(seed = 77),
+* mc.cores = 2L,
+* verbose = TRUE
+* )
+```
+]
+ 
+.panel2-sw4-auto[
+
+```
+## fit models... done.
+## calculate metrics:
+##   Griffiths2004... done.
+##   CaoJuan2009... done.
+##   Arun2010... done.
+##   Deveaud2014... done.
+```
+
+```
+##    topics Griffiths2004 CaoJuan2009  Arun2010 Deveaud2014
+## 1      20     -6688.474   0.2052090 0.4799277   0.5538307
+## 2      19     -6696.942   0.2121824 0.4290643   0.5614513
+## 3      18     -6693.262   0.2039372 0.3725720   0.5817356
+## 4      17     -6701.818   0.1907363 0.3078772   0.6106169
+## 5      16     -6713.723   0.1914216 0.2500614   0.6266572
+## 6      15     -6708.545   0.1918066 0.1838665   0.6469355
+## 7      14     -6712.916   0.1909484 0.1713906   0.6652011
+## 8      13     -6722.886   0.1804263 0.1513062   0.6966664
+## 9      12     -6736.857   0.1803755 0.1501857   0.7217591
+## 10     11     -6736.270   0.1741797 0.1340501   0.7522303
+## 11     10     -6770.729   0.1721341 0.1169266   0.7846539
+## 12      9     -6786.378   0.1716797 0.1811266   0.8142702
+## 13      8     -6790.204   0.1593427 0.2011942   0.8650001
+## 14      7     -6834.216   0.1565579 0.2884281   0.9048876
+## 15      6     -6864.600   0.1426944 0.4136949   0.9647630
+## 16      5     -6926.771   0.1401961 0.5906352   1.0133832
+## 17      4     -7000.474   0.1369283 0.8510053   1.0780300
+## 18      3     -7137.233   0.1428789 1.2540143   1.1312334
+## 19      2     -7363.548   0.1076472 1.8127000   1.2483350
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw4-auto[
+
+```r
+FindTopicsNumber(
+  exwdogs_dtm,
+  topics = seq(from = 2, to = 20, by = 1),
+  metrics = c("Griffiths2004",
+              "CaoJuan2009",
+              "Arun2010",
+              "Deveaud2014"),
+  method = "Gibbs",
+  control = list(seed = 77),
+  mc.cores = 2L,
+  verbose = TRUE
+  ) %&gt;%
+* FindTopicsNumber_plot()
+```
+]
+ 
+.panel2-sw4-auto[
+
+```
+## fit models... done.
+## calculate metrics:
+##   Griffiths2004... done.
+##   CaoJuan2009... done.
+##   Arun2010... done.
+##   Deveaud2014... done.
+```
+
+&lt;img src="Slides-Week-12-flat_files/figure-html/sw4_auto_02_output-1.png" width="80%" /&gt;
+]
+
+&lt;style&gt;
+.panel1-sw4-auto {
+  color: white;
+  width: 44.1%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw4-auto {
+  color: white;
+  width: 53.9%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw4-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+### Assigning a Variable
+
+.left-code[
+
+```r
+exwdogs_topic_est &lt;-
+  FindTopicsNumber(
+  exwdogs_dtm,
+  topics = seq(from = 2, to = 20, by = 1), # amend these
+  metrics = c("Griffiths2004", 
+              "CaoJuan2009", 
+              "Arun2010", 
+              "Deveaud2014"),
+  method = "Gibbs",
+  control = list(seed = 77),
+  mc.cores = 2L,
+  verbose = TRUE
+  ) %&gt;%
+  FindTopicsNumber_plot()
+```
+]
+
+--
+
+.right-plot[
+&lt;img src="Slides-Week-12-flat_files/figure-html/topic-est-out-1.png" width="90%" /&gt;
+]
+
+---
+
+
+.pull-left[
+The estimate for a total number of topics can be a lowest single value or range of values. We do this by observing where the metric curves tend to plateau and get as close to each other as possible along the horizontal axis. This is known as a limit&lt;br&gt;&lt;br&gt;
+From the plot, the metrics symbolized by &amp;#9651; and &amp;#65291; are already diverging from each other. While they may head back towards the horizontal axis in the future, the metrics symbolized by &amp;#9723; and &amp;#9675; look to be the closest between 11 and 15&lt;br&gt;&lt;br&gt;
+So let's start by modeling 11 topics!
+]
+
+.pull-right[
+&lt;img src="Slides-Week-12-flat_files/figure-html/unnamed-chunk-13-1.png" width="85%" /&gt;
+]
+
+---
+
+&lt;span style = "font-size:1.75rem"&gt;Applying a &lt;b&gt;Generative Model&lt;/b&gt;&lt;/span&gt;&lt;/b&gt;
+
+---
+
+
+count: false
+ 
+
+.panel1-sw5-auto[
+
+```r
+*LDA(exwdogs_dtm,
+*   k = 11,  # Number of topics
+*   control = list(seed = 1234))
+```
+]
+ 
+.panel2-sw5-auto[
+
+```
+## A LDA_VEM topic model with 11 topics.
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw5-auto[
+
+```r
+LDA(exwdogs_dtm,
+    k = 11,  # Number of topics
+    control = list(seed = 1234)) %&gt;%
+* tidy(matrix = "beta")
+```
+]
+ 
+.panel2-sw5-auto[
+
+```
+## # A tibble: 7,590 × 3
+##    topic term      beta
+##    &lt;int&gt; &lt;chr&gt;    &lt;dbl&gt;
+##  1     1 temple 0.0165 
+##  2     2 temple 0.0221 
+##  3     3 temple 0.0191 
+##  4     4 temple 0.00465
+##  5     5 temple 0.0204 
+##  6     6 temple 0.0173 
+##  7     7 temple 0.00208
+##  8     8 temple 0.0247 
+##  9     9 temple 0.0198 
+## 10    10 temple 0.00473
+## # … with 7,580 more rows
+```
+]
+
+&lt;style&gt;
+.panel1-sw5-auto {
+  color: white;
+  width: 49%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw5-auto {
+  color: white;
+  width: 49%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw5-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+### Assigning a Variable 
+
+Let's save the topics list
+
+
+```r
+exwdogs_topics &lt;- 
+  LDA(exwdogs_dtm, 
+      k = 11, # Amend this to test a certain number of topics
+      control = list(seed = 1234)) %&gt;%
+  tidy(matrix = "beta")
+```
+
+---
+
+.center2[&lt;b&gt;&lt;span style = "font-size:2.75rem"&gt;Step 4: Visualization and Interpretation&lt;/span&gt;&lt;/b&gt;]
+
+---
+
+### Plot the Topics
+
+We'll use the top 10 most impactful terms in each area to fill out each potential topic 
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt; 
+
+---
+
+
+count: false
+ 
+
+.panel1-sw6-auto[
+
+```r
+*exwdogs_topics
+```
+]
+ 
+.panel2-sw6-auto[
+
+```
+## # A tibble: 7,590 × 3
+##    topic term      beta
+##    &lt;int&gt; &lt;chr&gt;    &lt;dbl&gt;
+##  1     1 temple 0.0165 
+##  2     2 temple 0.0221 
+##  3     3 temple 0.0191 
+##  4     4 temple 0.00465
+##  5     5 temple 0.0204 
+##  6     6 temple 0.0173 
+##  7     7 temple 0.00208
+##  8     8 temple 0.0247 
+##  9     9 temple 0.0198 
+## 10    10 temple 0.00473
+## # … with 7,580 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw6-auto[
+
+```r
+exwdogs_topics %&gt;%
+*group_by(topic)
+```
+]
+ 
+.panel2-sw6-auto[
+
+```
+## # A tibble: 7,590 × 3
+## # Groups:   topic [11]
+##    topic term      beta
+##    &lt;int&gt; &lt;chr&gt;    &lt;dbl&gt;
+##  1     1 temple 0.0165 
+##  2     2 temple 0.0221 
+##  3     3 temple 0.0191 
+##  4     4 temple 0.00465
+##  5     5 temple 0.0204 
+##  6     6 temple 0.0173 
+##  7     7 temple 0.00208
+##  8     8 temple 0.0247 
+##  9     9 temple 0.0198 
+## 10    10 temple 0.00473
+## # … with 7,580 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw6-auto[
+
+```r
+exwdogs_topics %&gt;%
+group_by(topic) %&gt;%
+*slice_max(beta, n = 10)
+```
+]
+ 
+.panel2-sw6-auto[
+
+```
+## # A tibble: 110 × 3
+## # Groups:   topic [11]
+##    topic term         beta
+##    &lt;int&gt; &lt;chr&gt;       &lt;dbl&gt;
+##  1     1 temple    0.0165 
+##  2     1 emotional 0.0108 
+##  3     1 eye       0.0105 
+##  4     1 feel      0.0104 
+##  5     1 form      0.00858
+##  6     1 care      0.00812
+##  7     1 tail      0.00808
+##  8     1 species   0.00718
+##  9     1 nudge     0.00690
+## 10     1 inside    0.00666
+## # … with 100 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw6-auto[
+
+```r
+exwdogs_topics %&gt;%
+group_by(topic) %&gt;%
+slice_max(beta, n = 10) %&gt;%
+*ungroup()
+```
+]
+ 
+.panel2-sw6-auto[
+
+```
+## # A tibble: 110 × 3
+##    topic term         beta
+##    &lt;int&gt; &lt;chr&gt;       &lt;dbl&gt;
+##  1     1 temple    0.0165 
+##  2     1 emotional 0.0108 
+##  3     1 eye       0.0105 
+##  4     1 feel      0.0104 
+##  5     1 form      0.00858
+##  6     1 care      0.00812
+##  7     1 tail      0.00808
+##  8     1 species   0.00718
+##  9     1 nudge     0.00690
+## 10     1 inside    0.00666
+## # … with 100 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw6-auto[
+
+```r
+exwdogs_topics %&gt;%
+group_by(topic) %&gt;%
+slice_max(beta, n = 10) %&gt;%
+ungroup() %&gt;%
+*arrange(topic, -beta)
+```
+]
+ 
+.panel2-sw6-auto[
+
+```
+## # A tibble: 110 × 3
+##    topic term         beta
+##    &lt;int&gt; &lt;chr&gt;       &lt;dbl&gt;
+##  1     1 temple    0.0165 
+##  2     1 emotional 0.0108 
+##  3     1 eye       0.0105 
+##  4     1 feel      0.0104 
+##  5     1 form      0.00858
+##  6     1 care      0.00812
+##  7     1 tail      0.00808
+##  8     1 species   0.00718
+##  9     1 nudge     0.00690
+## 10     1 inside    0.00666
+## # … with 100 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw6-auto[
+
+```r
+exwdogs_topics %&gt;%
+group_by(topic) %&gt;%
+slice_max(beta, n = 10) %&gt;%
+ungroup() %&gt;%
+arrange(topic, -beta) %&gt;%
+*mutate(term = reorder_within(term, beta, topic))
+```
+]
+ 
+.panel2-sw6-auto[
+
+```
+## # A tibble: 110 × 3
+##    topic term             beta
+##    &lt;int&gt; &lt;fct&gt;           &lt;dbl&gt;
+##  1     1 temple___1    0.0165 
+##  2     1 emotional___1 0.0108 
+##  3     1 eye___1       0.0105 
+##  4     1 feel___1      0.0104 
+##  5     1 form___1      0.00858
+##  6     1 care___1      0.00812
+##  7     1 tail___1      0.00808
+##  8     1 species___1   0.00718
+##  9     1 nudge___1     0.00690
+## 10     1 inside___1    0.00666
+## # … with 100 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw6-auto[
+
+```r
+exwdogs_topics %&gt;%
+group_by(topic) %&gt;%
+slice_max(beta, n = 10) %&gt;%
+ungroup() %&gt;%
+arrange(topic, -beta) %&gt;%
+mutate(term = reorder_within(term, beta, topic)) %&gt;%
+*ggplot(aes(beta, term, fill = factor(topic)))
+```
+]
+ 
+.panel2-sw6-auto[
+&lt;img src="Slides-Week-12-flat_files/figure-html/sw6_auto_07_output-1.png" width="80%" /&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw6-auto[
+
+```r
+exwdogs_topics %&gt;%
+group_by(topic) %&gt;%
+slice_max(beta, n = 10) %&gt;%
+ungroup() %&gt;%
+arrange(topic, -beta) %&gt;%
+mutate(term = reorder_within(term, beta, topic)) %&gt;%
+ggplot(aes(beta, term, fill = factor(topic))) +
+*geom_col(show.legend = FALSE)
+```
+]
+ 
+.panel2-sw6-auto[
+&lt;img src="Slides-Week-12-flat_files/figure-html/sw6_auto_08_output-1.png" width="80%" /&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw6-auto[
+
+```r
+exwdogs_topics %&gt;%
+group_by(topic) %&gt;%
+slice_max(beta, n = 10) %&gt;%
+ungroup() %&gt;%
+arrange(topic, -beta) %&gt;%
+mutate(term = reorder_within(term, beta, topic)) %&gt;%
+ggplot(aes(beta, term, fill = factor(topic))) +
+geom_col(show.legend = FALSE) +
+*scale_fill_viridis_d()
+```
+]
+ 
+.panel2-sw6-auto[
+&lt;img src="Slides-Week-12-flat_files/figure-html/sw6_auto_09_output-1.png" width="80%" /&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw6-auto[
+
+```r
+exwdogs_topics %&gt;%
+group_by(topic) %&gt;%
+slice_max(beta, n = 10) %&gt;%
+ungroup() %&gt;%
+arrange(topic, -beta) %&gt;%
+mutate(term = reorder_within(term, beta, topic)) %&gt;%
+ggplot(aes(beta, term, fill = factor(topic))) +
+geom_col(show.legend = FALSE) +
+scale_fill_viridis_d() +
+*facet_wrap(~ topic, scales = "free")
+```
+]
+ 
+.panel2-sw6-auto[
+&lt;img src="Slides-Week-12-flat_files/figure-html/sw6_auto_10_output-1.png" width="80%" /&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw6-auto[
+
+```r
+exwdogs_topics %&gt;%
+group_by(topic) %&gt;%
+slice_max(beta, n = 10) %&gt;%
+ungroup() %&gt;%
+arrange(topic, -beta) %&gt;%
+mutate(term = reorder_within(term, beta, topic)) %&gt;%
+ggplot(aes(beta, term, fill = factor(topic))) +
+geom_col(show.legend = FALSE) +
+scale_fill_viridis_d() +
+facet_wrap(~ topic, scales = "free") +
+*scale_y_reordered()
+```
+]
+ 
+.panel2-sw6-auto[
+&lt;img src="Slides-Week-12-flat_files/figure-html/sw6_auto_11_output-1.png" width="80%" /&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw6-auto[
+
+```r
+exwdogs_topics %&gt;%
+group_by(topic) %&gt;%
+slice_max(beta, n = 10) %&gt;%
+ungroup() %&gt;%
+arrange(topic, -beta) %&gt;%
+mutate(term = reorder_within(term, beta, topic)) %&gt;%
+ggplot(aes(beta, term, fill = factor(topic))) +
+geom_col(show.legend = FALSE) +
+scale_fill_viridis_d() +
+facet_wrap(~ topic, scales = "free") +
+scale_y_reordered() +
+*theme_minimal()
+```
+]
+ 
+.panel2-sw6-auto[
+&lt;img src="Slides-Week-12-flat_files/figure-html/sw6_auto_12_output-1.png" width="80%" /&gt;
+]
+
+&lt;style&gt;
+.panel1-sw6-auto {
+  color: white;
+  width: 53.9%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw6-auto {
+  color: white;
+  width: 44.1%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw6-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+### Assigning a Variable 
+
+Let's save the plot 
+
+
+```r
+exwdogs_top_terms &lt;-
+  exwdogs_topics %&gt;%
+  group_by(topic) %&gt;%
+  slice_max(beta, n = 10) %&gt;% 
+  ungroup() %&gt;%
+  arrange(topic, -beta) %&gt;%
+  mutate(term = reorder_within(term, beta, topic)) %&gt;%
+  ggplot(aes(beta, term, fill = factor(topic))) +
+  geom_col(show.legend = FALSE) +
+  scale_fill_viridis_d() +
+  facet_wrap(~ topic, scales = "free") +
+  scale_y_reordered() +
+  theme_minimal()
+```
+
+---
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;img src="Slides-Week-12-flat_files/figure-html/unnamed-chunk-16-1.png" width="864" style="display: block; margin: auto;" /&gt;
+
+--
+
+.footnote[You can save high (or really any) resolution visuals easily using [`ggsave`](https://sscc.wisc.edu/sscc/pubs/using-r-plots/saving-plots.html)]
+---
+
+### What Just Happened?
+
+--
+
+&gt; LDA is a form of (unsupervised) learning that views documents as bags-of-words (BoW) where order does not matter. Not having to track the placement of every term saves a lot of time and computational energy
+
+--
+
+&gt; LDA works by first making a key assumption: the way a document was generated was by picking a set of topics and then for each topic picking a set of words
+
+---
+
+### Steps to Finding Topics
+
+In a nutshell for each document `\(m\)`
+
+--
+
+1. Assume there are `\(k\)` topics across all of the documents
+
+--
+
+2. Create a distribution `\(\alpha\)` where the `\(k\)` topics are symmetric or asymmetrically spread across each document `\(m\)` by assigning each word a topic
+
+--
+
+3. For each word `\(w\)` in every document `\(m\)`, assume its topic is is associated incorrectly but every other word is assigned the correct topic
+
+--
+
+4. Probabilistically assign word `\(w\)` a topic based on two things:
+    - what topics are in document `\(m\)`
+    
+    - Create a distribution `\(\beta\)` to assess how many times word `\(w\)` has been assigned a particular topic across all of the documents
+    
+--
+
+5. Repeat this process a number of times for each document until saturation
+
+---
+
+## Interpret
+
+--
+
+&gt; Much like you would assess a factor or component, the topics are unlabeled and it is up to you to figure out what they could mean. Not every topic may be directly applicable, but should still be interpreted and reported. Discarding topics means that you are removing potentially relevant information
+
+---
+
+Here is a brief assessment of some possible topics that are represented in the topic model with reference to *dogs*
+
+&lt;center&gt;
+&lt;table class=" lightable-paper" style='font-family: "Arial Narrow", arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;'&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;color: #ffffff !important;vertical-align: middle !important;"&gt; Topic 
+   &lt;/th&gt;
+&lt;th style="text-align:left;color: #ffffff !important;vertical-align: middle !important;"&gt; Label 
+  &lt;/th&gt;
+&lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 20em; color: #ffffff !important;vertical-align: middle !important;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 30em; color: #ffffff !important;vertical-align: middle !important;"&gt; assessing humans' emotional states &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 20em; color: #ffffff !important;vertical-align: middle !important;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 30em; color: #ffffff !important;vertical-align: middle !important;"&gt; adressing the needs of crying people &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 20em; color: #ffffff !important;vertical-align: middle !important;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 30em; color: #ffffff !important;vertical-align: middle !important;"&gt; eye contact between humans and dogs &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 20em; color: #ffffff !important;vertical-align: middle !important;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 30em; color: #ffffff !important;vertical-align: middle !important;"&gt; ability to care for humans &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 20em; color: #ffffff !important;vertical-align: middle !important;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 30em; color: #ffffff !important;vertical-align: middle !important;"&gt; aptitude to sense others emotional states without being physcially present &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 20em; color: #ffffff !important;vertical-align: middle !important;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 30em; color: #ffffff !important;vertical-align: middle !important;"&gt; physically removing emotional artifacts &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 20em; color: #ffffff !important;vertical-align: middle !important;"&gt; 7 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 30em; color: #ffffff !important;vertical-align: middle !important;"&gt; ability to read the world through smell &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 20em; color: #ffffff !important;vertical-align: middle !important;"&gt; 8 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 30em; color: #ffffff !important;vertical-align: middle !important;"&gt; skill in refocusing attention on them &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 20em; color: #ffffff !important;vertical-align: middle !important;"&gt; 9 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 30em; color: #ffffff !important;vertical-align: middle !important;"&gt; need for physical touch &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 20em; color: #ffffff !important;vertical-align: middle !important;"&gt; 10 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 30em; color: #ffffff !important;vertical-align: middle !important;"&gt; focusing attention via the use of staring &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 20em; color: #ffffff !important;vertical-align: middle !important;"&gt; 11 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 30em; color: #ffffff !important;vertical-align: middle !important;"&gt; senses and responses affect on emotional states &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/center&gt;
+
+--
+
+.footnote[Your assessment would likely differ to varying degrees and that is the point - in that qualitative concepts such as triangulation and saturation still play a large and impactful role in the interpretation phase. Note with a much larger text data set, this task could be significantly easier]
+
+---
+
+#  That’s It! 
+
+Any questions?
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;center&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;div class="fade_rule"&gt;&lt;/div&gt;  
+&lt;br&gt;&lt;br&gt;
+&lt;/center&gt;
+
+&lt;center&gt;
+&lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;&lt;img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;This work is licensed under a &lt;br /&gt;&lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License&lt;/a&gt;
+&lt;/center&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"navigation": {
+"scroll": false
+}
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

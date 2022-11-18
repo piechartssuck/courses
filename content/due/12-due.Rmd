@@ -1,0 +1,74 @@
+---
+title: "Analyzing Open Text Part II"
+linktitle: "Week 12: Analyzing Open Text Part II"
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  due:
+    parent: 'To Do List'
+    weight: 12
+type: docs
+weight: 1
+---
+
+`r blogdown::shortcode("aes-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r}
+
+wk_post <- 
+  
+  tibble(
+
+Description = c("Read <i>Smart Literature Review: A Practical Topic Modelling Approach to Exploratory Literature Review</i> in Asmussenm C.B. & Moller, C. (2019)",
+                "Read <i>Lexical Analysis of Textual Data</i> in Paice, C.D. (2009)",
+                "Take a look at a much deeper and engaging walkthrough of topic modeling",
+                "Review how short texts can be used in topic models",
+                "Conduct an exploratory literature/systematic review using topic modeling",
+                "Finish the module <span style='color:#ffc787;font-weight:bold'><i>Communicating with Data in the Tidyverse</i></span>",
+                "Review the slideshow <span style='color:#6ac4cd;font-weight:bold'>Topic Modeling</span> after class",
+                "Begin your sixth deliverable <span style='color:#6acda5;font-weight:bold'>Revise and Resubmit</span> after recieving feedback on the fifth submission"
+                ),
+
+
+Details = c("<a href='/readings/12-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/readings/12-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/readings/12-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/readings/12-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/readings/12-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/modules/12-module/#data-camp'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/tasks/12-task/#inclassnotes'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/deliverables/06-l6/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
+            ),
+
+Icon = c("pdf",
+         "pdf",
+         "webpage",
+         "webpage",
+         "webpage",
+         "dc",
+         "slideshow",
+         "ecampus"),
+
+Site = c("https://doi.org/10.1186/s40537-019-0255-7",
+         "https://doi.org/10.1007/978-0-387-39940-9_941",
+         "https://medium.com/swlh/topic-modeling-in-r-with-tidytext-and-textminer-package-latent-dirichlet-allocation-764f4483be73",
+         "https://rpubs.com/jmhardaw/eci588-final-project",
+         "https://cran.r-project.org/web/packages/LDAShiny/vignettes/A_brief_introduction_to_LDAShiny.html",
+         "https://,www.datacamp.com",
+         "",
+         "https://ecampus.wvu.edu/")
+)
+```
+
+<center>
+`r knitr::spin_child(here::here("content", "post_frame.R"))`
+</center>

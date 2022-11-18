@@ -1,0 +1,125 @@
+---
+title: "Analyzing Open Text Part II"
+linktitle: "Week 12: Analyzing Open Text Part II"
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  readings:
+    parent: Readings
+    weight: 12
+type: docs
+weight: 1
+---
+
+`r blogdown::shortcode("aes-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+### Download Literature
+
+<center>
+```{r echo=FALSE,eval=TRUE,message=FALSE}
+loc <- here::here("static", "readings", "EDP618Week12Readings.zip")
+
+downloadthis::download_file(
+  path = loc,
+  output_name = "Week 9 Readings",
+  button_label = "&nbsp;&nbsp;&nbsp;<span style='color:#ffffff'>Download</span>",
+  button_type = "primary",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+</center>
+
+### Read Some Text
+
+```{r echo=FALSE}
+
+paper <- tibble(
+  
+  title = c(
+    "<i>Smart Literature Review: A Practical Topic Modelling Approach to Exploratory Literature Review</i>",
+    "<i>Topic Modeling in R with tidytext and textmineR Package (Latent Dirichlet Allocation)</i>",
+    "<i>Short Text Topic Modeling: Article Titles & Taglines</i>",
+    "<i>A Brief Introduction to LDAShiny</i>",
+    "<i>Lexical Analysis of Textual Data</i>"
+    ),
+  
+  Source = c(
+    "Asmussenm C.B. & Moller, C. (2019)",
+    "Christian (2020)",
+    "Hardaway (2022)",
+    "Maestre, J.D.L.H., Fernández-Gómez, M.J., & Mendes, S (2020)",
+    "Paice, C.D. (2009)"
+    ),
+  
+  Arrow = c(
+    "internal",
+    "external",
+    "external",
+    "external",
+    "internal"
+    ),
+  
+  Icon = c(
+    "pdf",
+    "webpage",
+    "webpage",
+    "webpage",
+    "pdf"
+    ),
+  
+  Site = c(
+    "https://doi.org/10.1186/s40537-019-0255-7",
+    "https://medium.com/swlh/topic-modeling-in-r-with-tidytext-and-textminer-package-latent-dirichlet-allocation-764f4483be73",
+    "https://rpubs.com/jmhardaw/eci588-final-project",
+    "https://cran.r-project.org/web/packages/LDAShiny/vignettes/A_brief_introduction_to_LDAShiny.html",
+    "https://doi.org/10.1007/978-0-387-39940-9_941"
+    ),
+  
+  .name_repair = "minimal"
+  
+)
+
+```
+
+<center>
+```{r, echo=FALSE}
+paper %>%
+  mutate(Icon = case_when(
+    str_detect(`Icon`, "slack") ~ '<img src="/logos/slack-ico.png" alt="Slack icon" width="25px">',
+    str_detect(`Icon`, "ecampus") ~ '<img src="/logos/wvu-gold-ico.png" alt="Slack icon" width="25px">',
+    str_detect(`Icon`, "library") ~ '<img src="/logos/library-ico.png" alt="Slack icon" width="25px">',
+    str_detect(`Icon`, "webpage") ~ '<img src="/logos/webpage-ico.png" alt="Slack icon" width="25px">',
+    TRUE ~ NA_character_
+    )
+  ) %>%
+  mutate(Arrow = case_when(
+    str_detect(`Arrow`, "external") ~ '<div style="font-size: 0.5rem;"><i class="fa fa-external-link fa-2x" aria-hidden="true" style="color:#559977"></i></div>',
+    TRUE ~ NA_character_
+    )
+  ) %>%
+  mutate(Site = na_if(Site, "")) %>%
+  mutate(Link = case_when(
+    !is.na(Icon) ~ paste0("<a href=",Site," target='_blank'>",Icon,"</a>"),
+    TRUE ~ "Please check this week's download"
+    )
+  ) %>%
+  select(-Icon, -Site, -Arrow) %>% 
+  mutate_all(replace_na,"") %>%
+  kbl(col.names = c("Title", "Citation", "Link"), 
+      "html", 
+      escape = FALSE,
+      align = 'llc') %>%
+  kable_paper(full_width = FALSE) %>%
+  column_spec(1, width = "40em") %>%
+  column_spec(2, width = "20em") %>%
+  column_spec(3, width = "10em") %>% 
+  row_spec(0:nrow(paper), extra_css = 'vertical-align: middle !important;', color = "#f7f7f7", background = "transparent")
+```
+</center>
