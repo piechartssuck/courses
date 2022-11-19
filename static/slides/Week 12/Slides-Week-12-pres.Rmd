@@ -137,6 +137,11 @@ text-align: center;
     margin-left: 40px;
 }
 
+.listtab {
+    display: inline-block;
+    margin-left: 30px;
+}
+
 .obr
 {
     display:block;
@@ -178,10 +183,43 @@ tbody > td > tr:hover {
   height: 92%;
   float: left;
 }
+
 .right-plot {
   width: 38%;
   float: right;
   padding-left: 1%;
+}
+
+.cardquad1 img:hover{
+  position: relative;
+  transform: translate(-50%,50%) scale(2.0);
+  background-color: #212121;
+}
+
+.cardquad2 img:hover{
+  position: relative;
+  transform: translate(50%,50%) scale(2.0);
+  background-color: #212121;
+}
+
+.cardquad3 img:hover{
+  position: relative;
+  transform: translate(50%,-50%) scale(2.0);
+  background-color: #212121;
+}
+
+.cardquad4 img:hover{
+  position: relative;
+  transform: translate(-50%,-50%) scale(2.0);
+  background-color: #212121;
+}
+
+img{
+  -webkit-transition: transform 0.5s ease-in-out;
+  -moz-transition: transform 0.5s ease-in-out;
+  -ms-transition: transform 0.5s ease-in-out;
+  -o-transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 </style>
 
@@ -263,40 +301,48 @@ layout: true
 
 ---
 
-# Getting Prepped
+# Setting Up
+
+--
+
+1. You can retrieve the *exercising with dogs* data set and both installation and walkthrough `r fa("r-project", fill = "steelblue")` *scripts* by clicking on the icon below<br>
+<br>
+<center>
+<a href="https://edp618.asocialdatascientist.com/slides/week%2012/files/topic_modeling_files.zip" target='_blank' download="Topic Modeling Files">
+<img src="img/zip-ico.png" alt="Paper" width='45'></a>
+</center>
+
+--
+
+2. Open up RStudio
+
+--
+
+3. Open up <span style="font-family:'Source Code Pro'; color:#b7b3ef">Week 12 install.R</span>
+
+--
+
+4. Open <span style="font-family:'Source Code Pro'; color:#b7b3ef">Week 12 script.R</span>
+
+--
+
+.footnote[Take a look at the various types of files that can be imported in the tidyverse <a href="files/data-import.pdf" target='_blank' download="Data import with the tidyverse">
+<img src="img/pdf-ico.png" alt="PDF icon" width='45'></a>]
 
 ---
 
-## Opening a Script Setting the Working Directory
-
-1. Open up RStudio
+# Getting Prepped
 
 --
 
-2. Go to `File > New File > R Script`
+Run the following commands which can be found in the file `Week 12 script.R`
 
---
-
-3. Go to `File > Save As` and save the R Script in the same folder as the `csv` file. Name it whatever you want (e.g. **Week 12 R Walkthrough**)
-
---
-
-4. Run `Week 12 install.R`
-
---
-
-5. Run the following command in your RStudio console
+1. Setting the working directory as source
     ```{r echo = TRUE, eval = FALSE}
     setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
     ```
-
----
-
-## Loading Packages
-
---
-
-1. Please load up the following packages by placing these at the top of your script<br>
+    
+2. Loading the needed packages for this walkthrough
     ```{r echo = TRUE, eval = FALSE}
     library(tidyverse)
     library(tidytext)
@@ -310,13 +356,24 @@ layout: true
     ```  
 .footnote[Alternatively if you have the **pacman** package, run `pacman::p_install("tidyverse", "tidytext", "tm", "textclean", "topicmodels", "ldatuning", "stopwords", "textstem", "broom")`]
 
---
+---
 
-2. You may also want to put 
-    ```{r echo = TRUE, eval = FALSE}
-    setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
-    ```
-    below the library list so its there
+<ol start="3">
+<li> Bringing in the PDF data 
+</ol>
+
+```{r}
+   exwdogs <- 
+     pdftools::pdf_text("exercising_with_dogs.pdf")
+```
+
+<ol start="4">
+<li> Retrieving stopwords
+</ol> 
+
+```{r}
+   data("stop_words")
+```
 
 ---
 
@@ -327,87 +384,82 @@ layout: true
 This is the process we'll cover lightly. There is a lot more going on under the hood and you may not be able to recognize all of the terms, but if you can get a basic understanding of the process, the rest can be filled in by conducting a topic model!
 
 <center>
-<img src="img/tmwf.png" alt="Basic Topic Modeling Process" width='450'></a>
+<img src="img/tmwf.png" alt="Basic Topic Modeling Process" width='400'></a>
 </center>
 
 ---
 
 Additionally here are a few things we won't be covering in this session so please read over the areas you lack familiarity with. Given that, it is absolutely fine if you cannot fully understand all of these ideas right now - they will hopefully become apparent as we progress
 
+.center2[
+<div style="text-align: center; color: #212121; border:1px; border-style:solid; border-color:#c7f9f6; background-color: #c7f9f6; border-radius: 15px; padding: 0.65em; width:fit-content;">
+hover over<br>any card<br>to make<br>it bigger
+</div>]
+
 --
 
 .pull-left[
 <center>
+<div class="cardquad2">
 <img src="img/bow.png" alt="Bag of Words Definition" width='350'></a>
 </center>
+</div>
 ]
 
 --
 
 .pull-right[
+<div class="cardquad1">
 <center>
 <img src="img/classification.png" alt="Classification Definition" width='350'></a>
 </center>
+</div>
 ]
 
 --
 
 <br>
 .pull-left[
+<div class="cardquad3">
 <center>
 <img src="img/standardization.png" alt="Standardization Definition" width='350'></a>
 </center>
+</div>
 ]
 
 --
 
 .pull-right[
+<div class="cardquad4">
 <center>
 <img src="img/tokenization.png" alt="Tokenization Definition" width='350'></a>
 </center>
+</div>
 ]
 
+
 ---
 
-## Assessing Data 
+<br>
+<br>
+#<center>Topic Modeling</center>
 
 --
 
-1. You can retrieve both the *exercising with dogs* data set and `r fa("r-project", fill = "steelblue")` *script* by clicking on the icon below<br>
+<br>
+<br>
 <br>
 <center>
-<a href="files/topic_modeling_files.zip" target='_blank' download="Topic Modeling Files">
-<img src="img/zip-ico.png" alt="Paper" width='45'></a>
+<div style="text-align: center; color:#c7f9f6; border:1px; border-style:solid; border-color:#c7f9f6; border-radius: 25px; padding: 0.8em; width:fit-content;">
+A type of probabilistic statistical model for<br><br>
+<div style="display: inline-block; text-align: left;">
+(a) discovering the abstract "topics"<br>
+<span class = "listtab">- or <i>hidden semantic structures</i> -</span><br>
+<span class = "listtab">that occur in a collection of documents</span><br><br>
+(b) dimensionality reduction</span>
+</div>
+</div>
 </center>
-
---
-
-2. Bring in the pdf data using
-    ```{r}
-    exwdogs <- 
-      pdftools::pdf_text("exercising_with_dogs.pdf")
-    ```
-  
---
-  
-3. Load up the stopwords using
-    ```{r}
-    data("stop_words")
-    ```
-
---
-
-.footnote[Take a look at the various types of files that can be imported in the tidyverse <a href="files/data-import.pdf" target='_blank' download="Data import with the tidyverse">
-<img src="img/pdf-ico.png" alt="PDF icon" width='45'></a>]
-
----
-
-# *Topic Modeling*
-
---
-
-.center2[<i>A type of probabilistic statistical model for (a) discovering the abstract "topics" - or hidden semantic structures - that occur in a collection of documents and (b) dimensionality reduction</i>]
-
 
 ---
 
@@ -440,12 +492,6 @@ Additionally here are a few things we won't be covering in this session so pleas
 
 <ol start="2">
 <li> Open up an empty text document and try going through on your own to consider terms that could be collapsed
-</ol>
-
---
-
-<ol start="3">
-<li> Open up <span style="font-family:'Source Code Pro'; color:#b7b3ef">Week 12 script.R</span>
 </ol>
 
 ---

@@ -154,6 +154,11 @@ text-align: center;
     margin-left: 40px;
 }
 
+.listtab {
+    display: inline-block;
+    margin-left: 30px;
+}
+
 .obr
 {
     display:block;
@@ -195,10 +200,43 @@ tbody &gt; td &gt; tr:hover {
   height: 92%;
   float: left;
 }
+
 .right-plot {
   width: 38%;
   float: right;
   padding-left: 1%;
+}
+
+.cardquad1 img:hover{
+  position: relative;
+  transform: translate(-50%,50%) scale(2.0);
+  background-color: #212121;
+}
+
+.cardquad2 img:hover{
+  position: relative;
+  transform: translate(50%,50%) scale(2.0);
+  background-color: #212121;
+}
+
+.cardquad3 img:hover{
+  position: relative;
+  transform: translate(50%,-50%) scale(2.0);
+  background-color: #212121;
+}
+
+.cardquad4 img:hover{
+  position: relative;
+  transform: translate(-50%,-50%) scale(2.0);
+  background-color: #212121;
+}
+
+img{
+  -webkit-transition: transform 0.5s ease-in-out;
+  -moz-transition: transform 0.5s ease-in-out;
+  -ms-transition: transform 0.5s ease-in-out;
+  -o-transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 &lt;/style&gt;
 
@@ -252,41 +290,49 @@ top:1em;right:1em;
 
 
 
-# Getting Prepped
+# Setting Up
+
+--
+
+1. You can retrieve the *exercising with dogs* data set and both installation and walkthrough <svg aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:steelblue;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg> *scripts* by clicking on the icon below&lt;br&gt;
+&lt;br&gt;
+&lt;center&gt;
+&lt;a href="https://edp618.asocialdatascientist.com/slides/week%2012/files/topic_modeling_files.zip" target='_blank' download="Topic Modeling Files"&gt;
+&lt;img src="img/zip-ico.png" alt="Paper" width='45'&gt;&lt;/a&gt;
+&lt;/center&gt;
+
+--
+
+2. Open up RStudio
+
+--
+
+3. Open up &lt;span style="font-family:'Source Code Pro'; color:#b7b3ef"&gt;Week 12 install.R&lt;/span&gt;
+
+--
+
+4. Open &lt;span style="font-family:'Source Code Pro'; color:#b7b3ef"&gt;Week 12 script.R&lt;/span&gt;
+
+--
+
+.footnote[Take a look at the various types of files that can be imported in the tidyverse &lt;a href="files/data-import.pdf" target='_blank' download="Data import with the tidyverse"&gt;
+&lt;img src="img/pdf-ico.png" alt="PDF icon" width='45'&gt;&lt;/a&gt;]
 
 ---
 
-## Opening a Script Setting the Working Directory
-
-1. Open up RStudio
+# Getting Prepped
 
 --
 
-2. Go to `File &gt; New File &gt; R Script`
+Run the following commands which can be found in the file `Week 12 script.R`
 
---
-
-3. Go to `File &gt; Save As` and save the R Script in the same folder as the `csv` file. Name it whatever you want (e.g. **Week 12 R Walkthrough**)
-
---
-
-4. Run `Week 12 install.R`
-
---
-
-5. Run the following command in your RStudio console
+1. Setting the working directory as source
     
     ```r
     setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
     ```
-
----
-
-## Loading Packages
-
---
-
-1. Please load up the following packages by placing these at the top of your script&lt;br&gt;
+    
+2. Loading the needed packages for this walkthrough
     
     ```r
     library(tidyverse)
@@ -301,14 +347,26 @@ top:1em;right:1em;
     ```
 .footnote[Alternatively if you have the **pacman** package, run `pacman::p_install("tidyverse", "tidytext", "tm", "textclean", "topicmodels", "ldatuning", "stopwords", "textstem", "broom")`]
 
---
+---
 
-2. You may also want to put 
-    
-    ```r
-    setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
-    ```
-    below the library list so its there
+&lt;ol start="3"&gt;
+&lt;li&gt; Bringing in the PDF data 
+&lt;/ol&gt;
+
+
+```r
+   exwdogs &lt;- 
+     pdftools::pdf_text("exercising_with_dogs.pdf")
+```
+
+&lt;ol start="4"&gt;
+&lt;li&gt; Retrieving stopwords
+&lt;/ol&gt; 
+
+
+```r
+   data("stop_words")
+```
 
 ---
 
@@ -319,89 +377,82 @@ top:1em;right:1em;
 This is the process we'll cover lightly. There is a lot more going on under the hood and you may not be able to recognize all of the terms, but if you can get a basic understanding of the process, the rest can be filled in by conducting a topic model!
 
 &lt;center&gt;
-&lt;img src="img/tmwf.png" alt="Basic Topic Modeling Process" width='450'&gt;&lt;/a&gt;
+&lt;img src="img/tmwf.png" alt="Basic Topic Modeling Process" width='400'&gt;&lt;/a&gt;
 &lt;/center&gt;
 
 ---
 
 Additionally here are a few things we won't be covering in this session so please read over the areas you lack familiarity with. Given that, it is absolutely fine if you cannot fully understand all of these ideas right now - they will hopefully become apparent as we progress
 
+.center2[
+&lt;div style="text-align: center; color: #212121; border:1px; border-style:solid; border-color:#c7f9f6; background-color: #c7f9f6; border-radius: 15px; padding: 0.65em; width:fit-content;"&gt;
+hover over&lt;br&gt;any card&lt;br&gt;to make&lt;br&gt;it bigger
+&lt;/div&gt;]
+
 --
 
 .pull-left[
 &lt;center&gt;
+&lt;div class="cardquad2"&gt;
 &lt;img src="img/bow.png" alt="Bag of Words Definition" width='350'&gt;&lt;/a&gt;
 &lt;/center&gt;
+&lt;/div&gt;
 ]
 
 --
 
 .pull-right[
+&lt;div class="cardquad1"&gt;
 &lt;center&gt;
 &lt;img src="img/classification.png" alt="Classification Definition" width='350'&gt;&lt;/a&gt;
 &lt;/center&gt;
+&lt;/div&gt;
 ]
 
 --
 
 &lt;br&gt;
 .pull-left[
+&lt;div class="cardquad3"&gt;
 &lt;center&gt;
 &lt;img src="img/standardization.png" alt="Standardization Definition" width='350'&gt;&lt;/a&gt;
 &lt;/center&gt;
+&lt;/div&gt;
 ]
 
 --
 
 .pull-right[
+&lt;div class="cardquad4"&gt;
 &lt;center&gt;
 &lt;img src="img/tokenization.png" alt="Tokenization Definition" width='350'&gt;&lt;/a&gt;
 &lt;/center&gt;
+&lt;/div&gt;
 ]
 
+
 ---
 
-## Assessing Data 
+&lt;br&gt;
+&lt;br&gt;
+#&lt;center&gt;Topic Modeling&lt;/center&gt;
 
 --
 
-1. You can retrieve both the *exercising with dogs* data set and <svg aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:steelblue;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg> *script* by clicking on the icon below&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
 &lt;br&gt;
 &lt;center&gt;
-&lt;a href="files/topic_modeling_files.zip" target='_blank' download="Topic Modeling Files"&gt;
-&lt;img src="img/zip-ico.png" alt="Paper" width='45'&gt;&lt;/a&gt;
+&lt;div style="text-align: center; color:#c7f9f6; border:1px; border-style:solid; border-color:#c7f9f6; border-radius: 25px; padding: 0.8em; width:fit-content;"&gt;
+A type of probabilistic statistical model for&lt;br&gt;&lt;br&gt;
+&lt;div style="display: inline-block; text-align: left;"&gt;
+(a) discovering the abstract "topics"&lt;br&gt;
+&lt;span class = "listtab"&gt;- or &lt;i&gt;hidden semantic structures&lt;/i&gt; -&lt;/span&gt;&lt;br&gt;
+&lt;span class = "listtab"&gt;that occur in a collection of documents&lt;/span&gt;&lt;br&gt;&lt;br&gt;
+(b) dimensionality reduction&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/center&gt;
-
---
-
-2. Bring in the pdf data using
-    
-    ```r
-    exwdogs &lt;- 
-      pdftools::pdf_text("exercising_with_dogs.pdf")
-    ```
-  
---
-  
-3. Load up the stopwords using
-    
-    ```r
-    data("stop_words")
-    ```
-
---
-
-.footnote[Take a look at the various types of files that can be imported in the tidyverse &lt;a href="files/data-import.pdf" target='_blank' download="Data import with the tidyverse"&gt;
-&lt;img src="img/pdf-ico.png" alt="PDF icon" width='45'&gt;&lt;/a&gt;]
-
----
-
-# *Topic Modeling*
-
---
-
-.center2[&lt;i&gt;A type of probabilistic statistical model for (a) discovering the abstract "topics" - or hidden semantic structures - that occur in a collection of documents and (b) dimensionality reduction&lt;/i&gt;]
-
 
 ---
 
@@ -434,12 +485,6 @@ Additionally here are a few things we won't be covering in this session so pleas
 
 &lt;ol start="2"&gt;
 &lt;li&gt; Open up an empty text document and try going through on your own to consider terms that could be collapsed
-&lt;/ol&gt;
-
---
-
-&lt;ol start="3"&gt;
-&lt;li&gt; Open up &lt;span style="font-family:'Source Code Pro'; color:#b7b3ef"&gt;Week 12 script.R&lt;/span&gt;
 &lt;/ol&gt;
 
 ---
@@ -727,18 +772,18 @@ read_lines() %&gt;%  # Parse text into individual lines
 
 ```
 ## # A tibble: 218 × 1
-##    text                                                                                                  
-##    &lt;chr&gt;                                                                                                 
-##  1 "Data Exemplar for use with:"                                                                         
-##  2 ""                                                                                                    
-##  3 "Encounters With Dogs as an Exercise in Analysing"                                                    
-##  4 "Multi-Species Ethnography"                                                                           
-##  5 ""                                                                                                    
-##  6 "Data Collected by: Dr. Samantha Hurn"                                                                
-##  7 ""                                                                                                    
-##  8 "Included are three forms of data from the same setting at various stages of the analysis process. Th…
-##  9 "first are the initial rough fieldnotes taken by Samantha whilst conducting participant observation"  
-## 10 "in the Sri Ranganatha temple, one of three temples at the Skanda Vale ashram in west Wales. The"     
+##    text                                                                         
+##    &lt;chr&gt;                                                                        
+##  1 "Data Exemplar for use with:"                                                
+##  2 ""                                                                           
+##  3 "Encounters With Dogs as an Exercise in Analysing"                           
+##  4 "Multi-Species Ethnography"                                                  
+##  5 ""                                                                           
+##  6 "Data Collected by: Dr. Samantha Hurn"                                       
+##  7 ""                                                                           
+##  8 "Included are three forms of data from the same setting at various stages of…
+##  9 "first are the initial rough fieldnotes taken by Samantha whilst conducting …
+## 10 "in the Sri Ranganatha temple, one of three temples at the Skanda Vale ashra…
 ## # … with 208 more rows
 ```
 ]
@@ -761,18 +806,18 @@ as_tibble_col("text") %&gt;%  # Create a single tidy column
 
 ```
 ## # A tibble: 195 × 1
-##    text                                                                                                 
-##    &lt;chr&gt;                                                                                                
-##  1 Crazy paving day 2. Sri Ranganatha temple. Unbearably hot. Joined by Shakti – thirsty, drank my      
-##  2 cement mixing water, then came over for scratches. Overwhelmed by how much I miss Max. First         
-##  3 time I have touched another dog since his death. Strong mnemonic (smell, touch – do Bernese          
-##  4 Mountain Dogs have double coat too? Felt like it …). She seemed to recognise something was up.       
-##  5 Very much a person like Max. Cried and made her fur damp. She stayed with me ’til I stopped          
-##  6 crying, then went to entrance and lay down. So hot. How does she cope in here? Why does she          
-##  7 come inside? And the incense? Need to look into canine olfaction and hearing … Would dogs find       
-##  8 the pujas stressful (incense and bell ringing – loud and smelly)?! What about animals in temples?    
-##  9 Common in south Asia. I like being in here despite the heat – meditative, calming. Good place for    
-## 10 seva, or is it if I get something in return? Is enjoying the work contrary to selfless service? Swami
+##    text                                                                         
+##    &lt;chr&gt;                                                                        
+##  1 Crazy paving day 2. Sri Ranganatha temple. Unbearably hot. Joined by Shakti …
+##  2 cement mixing water, then came over for scratches. Overwhelmed by how much I…
+##  3 time I have touched another dog since his death. Strong mnemonic (smell, tou…
+##  4 Mountain Dogs have double coat too? Felt like it …). She seemed to recognise…
+##  5 Very much a person like Max. Cried and made her fur damp. She stayed with me…
+##  6 crying, then went to entrance and lay down. So hot. How does she cope in her…
+##  7 come inside? And the incense? Need to look into canine olfaction and hearing…
+##  8 the pujas stressful (incense and bell ringing – loud and smelly)?! What abou…
+##  9 Common in south Asia. I like being in here despite the heat – meditative, ca…
+## 10 seva, or is it if I get something in return? Is enjoying the work contrary t…
 ## # … with 185 more rows
 ```
 ]
@@ -796,18 +841,18 @@ slice(24:n()) %&gt;%  # Remove unnecessary text
 
 ```
 ## # A tibble: 195 × 1
-##    text                                                                                                 
-##    &lt;chr&gt;                                                                                                
-##  1 Crazy paving day 2. Sri Ranganatha temple. Unbearably hot. Joined by Shakti - thirsty, drank my      
-##  2 cement mixing water, then came over for scratches. Overwhelmed by how much I miss Max. First         
-##  3 time I have touched another dog since his death. Strong mnemonic (smell, touch - do Bernese          
-##  4 Mountain Dogs have double coat too? Felt like it ...). She seemed to recognise something was up.     
-##  5 Very much a person like Max. Cried and made her fur damp. She stayed with me 'til I stopped          
-##  6 crying, then went to entrance and lay down. So hot. How does she cope in here? Why does she          
-##  7 come inside? And the incense? Need to look into canine olfaction and hearing ... Would dogs find     
-##  8 the pujas stressful (incense and bell ringing - loud and smelly)?! What about animals in temples?    
-##  9 Common in south Asia. I like being in here despite the heat - meditative, calming. Good place for    
-## 10 seva, or is it if I get something in return? Is enjoying the work contrary to selfless service? Swami
+##    text                                                                         
+##    &lt;chr&gt;                                                                        
+##  1 Crazy paving day 2. Sri Ranganatha temple. Unbearably hot. Joined by Shakti …
+##  2 cement mixing water, then came over for scratches. Overwhelmed by how much I…
+##  3 time I have touched another dog since his death. Strong mnemonic (smell, tou…
+##  4 Mountain Dogs have double coat too? Felt like it ...). She seemed to recogni…
+##  5 Very much a person like Max. Cried and made her fur damp. She stayed with me…
+##  6 crying, then went to entrance and lay down. So hot. How does she cope in her…
+##  7 come inside? And the incense? Need to look into canine olfaction and hearing…
+##  8 the pujas stressful (incense and bell ringing - loud and smelly)?! What abou…
+##  9 Common in south Asia. I like being in here despite the heat - meditative, ca…
+## 10 seva, or is it if I get something in return? Is enjoying the work contrary t…
 ## # … with 185 more rows
 ```
 ]
@@ -832,18 +877,18 @@ mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standar
 
 ```
 ## # A tibble: 195 × 1
-##    text                                                                                                 
-##    &lt;chr&gt;                                                                                                
-##  1 crazy paving day 2. sri ranganatha temple. unbearably hot. joined by shakti - thirsty, drank my      
-##  2 cement mixing water, then came over for scratches. overwhelmed by how much i miss max. first         
-##  3 time i have touched another dog since his death. strong mnemonic (smell, touch - do bernese          
-##  4 mountain dogs have double coat too? felt like it ...). she seemed to recognise something was up.     
-##  5 very much a person like max. cried and made her fur damp. she stayed with me 'til i stopped          
-##  6 crying, then went to entrance and lay down. so hot. how does she cope in here? why does she          
-##  7 come inside? and the incense? need to look into canine olfaction and hearing ... would dogs find     
-##  8 the pujas stressful (incense and bell ringing - loud and smelly)?! what about animals in temples?    
-##  9 common in south asia. i like being in here despite the heat - meditative, calming. good place for    
-## 10 seva, or is it if i get something in return? is enjoying the work contrary to selfless service? swami
+##    text                                                                         
+##    &lt;chr&gt;                                                                        
+##  1 crazy paving day 2. sri ranganatha temple. unbearably hot. joined by shakti …
+##  2 cement mixing water, then came over for scratches. overwhelmed by how much i…
+##  3 time i have touched another dog since his death. strong mnemonic (smell, tou…
+##  4 mountain dogs have double coat too? felt like it ...). she seemed to recogni…
+##  5 very much a person like max. cried and made her fur damp. she stayed with me…
+##  6 crying, then went to entrance and lay down. so hot. how does she cope in her…
+##  7 come inside? and the incense? need to look into canine olfaction and hearing…
+##  8 the pujas stressful (incense and bell ringing - loud and smelly)?! what abou…
+##  9 common in south asia. i like being in here despite the heat - meditative, ca…
+## 10 seva, or is it if i get something in return? is enjoying the work contrary t…
 ## # … with 185 more rows
 ```
 ]
@@ -869,18 +914,18 @@ mutate(text = str_to_lower(text)) %&gt;%  # Convert all words to lower case
 
 ```
 ## # A tibble: 195 × 1
-##    text                                                                                                 
-##    &lt;chr&gt;                                                                                                
-##  1 crazy paving day . sri ranganatha temple. unbearably hot. joined by shakti - thirsty, drank my       
-##  2 cement mixing water, then came over for scratches. overwhelmed by how much i miss max. first         
-##  3 time i have touched another dog since his death. strong mnemonic (smell, touch - do bernese          
-##  4 mountain dogs have double coat too? felt like it ...). she seemed to recognise something was up.     
-##  5 very much a person like max. cried and made her fur damp. she stayed with me 'til i stopped          
-##  6 crying, then went to entrance and lay down. so hot. how does she cope in here? why does she          
-##  7 come inside? and the incense? need to look into canine olfaction and hearing ... would dogs find     
-##  8 the pujas stressful (incense and bell ringing - loud and smelly)?! what about animals in temples?    
-##  9 common in south asia. i like being in here despite the heat - meditative, calming. good place for    
-## 10 seva, or is it if i get something in return? is enjoying the work contrary to selfless service? swami
+##    text                                                                         
+##    &lt;chr&gt;                                                                        
+##  1 crazy paving day . sri ranganatha temple. unbearably hot. joined by shakti -…
+##  2 cement mixing water, then came over for scratches. overwhelmed by how much i…
+##  3 time i have touched another dog since his death. strong mnemonic (smell, tou…
+##  4 mountain dogs have double coat too? felt like it ...). she seemed to recogni…
+##  5 very much a person like max. cried and made her fur damp. she stayed with me…
+##  6 crying, then went to entrance and lay down. so hot. how does she cope in her…
+##  7 come inside? and the incense? need to look into canine olfaction and hearing…
+##  8 the pujas stressful (incense and bell ringing - loud and smelly)?! what abou…
+##  9 common in south asia. i like being in here despite the heat - meditative, ca…
+## 10 seva, or is it if i get something in return? is enjoying the work contrary t…
 ## # … with 185 more rows
 ```
 ]
@@ -907,18 +952,18 @@ mutate(text = str_remove_all(text, "[[:digit:]]")) %&gt;%  # Remove all numbers
 
 ```
 ## # A tibble: 195 × 1
-##    text                                                                                              
-##    &lt;chr&gt;                                                                                             
-##  1 crazy paving day  sri ranganatha temple unbearably hot joined by shakti  thirsty drank my         
-##  2 cement mixing water then came over for scratches overwhelmed by how much i miss max first         
-##  3 time i have touched another dog since his death strong mnemonic smell touch  do bernese           
-##  4 mountain dogs have double coat too felt like it  she seemed to recognise something was up         
-##  5 very much a person like max cried and made her fur damp she stayed with me til i stopped          
-##  6 crying then went to entrance and lay down so hot how does she cope in here why does she           
-##  7 come inside and the incense need to look into canine olfaction and hearing  would dogs find       
-##  8 the pujas stressful incense and bell ringing  loud and smelly what about animals in temples       
-##  9 common in south asia i like being in here despite the heat  meditative calming good place for     
-## 10 seva or is it if i get something in return is enjoying the work contrary to selfless service swami
+##    text                                                                         
+##    &lt;chr&gt;                                                                        
+##  1 crazy paving day  sri ranganatha temple unbearably hot joined by shakti  thi…
+##  2 cement mixing water then came over for scratches overwhelmed by how much i m…
+##  3 time i have touched another dog since his death strong mnemonic smell touch …
+##  4 mountain dogs have double coat too felt like it  she seemed to recognise som…
+##  5 very much a person like max cried and made her fur damp she stayed with me t…
+##  6 crying then went to entrance and lay down so hot how does she cope in here w…
+##  7 come inside and the incense need to look into canine olfaction and hearing  …
+##  8 the pujas stressful incense and bell ringing  loud and smelly what about ani…
+##  9 common in south asia i like being in here despite the heat  meditative calmi…
+## 10 seva or is it if i get something in return is enjoying the work contrary to …
 ## # … with 185 more rows
 ```
 ]
@@ -946,18 +991,18 @@ mutate(text = str_remove_all(text, "[[:punct:]]")) %&gt;%  # Remove all punctuat
 
 ```
 ## # A tibble: 195 × 1
-##    text                                                                                              
-##    &lt;chr&gt;                                                                                             
-##  1 crazy paving day  sri ranganatha temple unbearably hot joined by shakti  thirsty drank my         
-##  2 cement mixing water then came over for scratches overwhelmed by how much i miss max first         
-##  3 time i have touched another dog since his death strong mnemonic smell touch  do bernese           
-##  4 mountain dogs have double coat too felt like it  she seemed to recognise something was up         
-##  5 very much a person like max cried and made her fur damp she stayed with me til i stopped          
-##  6 crying then went to entrance and lay down so hot how does she cope in here why does she           
-##  7 come inside and the incense need to look into canine olfaction and hearing  would dogs find       
-##  8 the pujas stressful incense and bell ringing  loud and smelly what about animals in temples       
-##  9 common in south asia i like being in here despite the heat  meditative calming good place for     
-## 10 seva or is it if i get something in return is enjoying the work contrary to selfless service swami
+##    text                                                                         
+##    &lt;chr&gt;                                                                        
+##  1 crazy paving day  sri ranganatha temple unbearably hot joined by shakti  thi…
+##  2 cement mixing water then came over for scratches overwhelmed by how much i m…
+##  3 time i have touched another dog since his death strong mnemonic smell touch …
+##  4 mountain dogs have double coat too felt like it  she seemed to recognise som…
+##  5 very much a person like max cried and made her fur damp she stayed with me t…
+##  6 crying then went to entrance and lay down so hot how does she cope in here w…
+##  7 come inside and the incense need to look into canine olfaction and hearing  …
+##  8 the pujas stressful incense and bell ringing  loud and smelly what about ani…
+##  9 common in south asia i like being in here despite the heat  meditative calmi…
+## 10 seva or is it if i get something in return is enjoying the work contrary to …
 ## # … with 185 more rows
 ```
 ]
@@ -986,18 +1031,18 @@ mutate(text = str_remove_all(text, "stage")) %&gt;%  # Remove term
 
 ```
 ## # A tibble: 195 × 1
-##    text                                                                                              
-##    &lt;chr&gt;                                                                                             
-##  1 crazy paving day  temple unbearably hot joined by shakti  thirsty drank my                        
-##  2 cement mixing water then came over for scratches overwhelmed by how much i miss max first         
-##  3 time i have touched another dog since his death strong mnemonic smell touch  do bernese           
-##  4 mountain dogs have double coat too felt like it  she seemed to recognise something was up         
-##  5 very much a person like max cried and made her fur damp she stayed with me til i stopped          
-##  6 crying then went to entrance and lay down so hot how does she cope in here why does she           
-##  7 come inside and the incense need to look into canine olfaction and hearing  would dogs find       
-##  8 the pujas stressful incense and bell ringing  loud and smelly what about animals in temples       
-##  9 common in south asia i like being in here despite the heat  meditative calming good place for     
-## 10 seva or is it if i get something in return is enjoying the work contrary to selfless service swami
+##    text                                                                         
+##    &lt;chr&gt;                                                                        
+##  1 crazy paving day  temple unbearably hot joined by shakti  thirsty drank my   
+##  2 cement mixing water then came over for scratches overwhelmed by how much i m…
+##  3 time i have touched another dog since his death strong mnemonic smell touch …
+##  4 mountain dogs have double coat too felt like it  she seemed to recognise som…
+##  5 very much a person like max cried and made her fur damp she stayed with me t…
+##  6 crying then went to entrance and lay down so hot how does she cope in here w…
+##  7 come inside and the incense need to look into canine olfaction and hearing  …
+##  8 the pujas stressful incense and bell ringing  loud and smelly what about ani…
+##  9 common in south asia i like being in here despite the heat  meditative calmi…
+## 10 seva or is it if i get something in return is enjoying the work contrary to …
 ## # … with 185 more rows
 ```
 ]
@@ -1027,18 +1072,18 @@ mutate(text = str_replace_all(text, "sri ranganatha temple", "temple")) %&gt;%  
 
 ```
 ## # A tibble: 195 × 1
-##    text                                                                                              
-##    &lt;chr&gt;                                                                                             
-##  1 crazy paving day  temple unbearably hot joined by dog  thirsty drank my                           
-##  2 cement mixing water then came over for scratches overwhelmed by how much i miss max first         
-##  3 time i have touched another dog since his death strong mnemonic smell touch  do bernese           
-##  4 mountain dogs have double coat too felt like it  she seemed to recognise something was up         
-##  5 very much a person like max cried and made her fur damp she stayed with me til i stopped          
-##  6 crying then went to entrance and lay down so hot how does she cope in here why does she           
-##  7 come inside and the incense need to look into canine olfaction and hearing  would dogs find       
-##  8 the pujas stressful incense and bell ringing  loud and smelly what about animals in temples       
-##  9 common in south asia i like being in here despite the heat  meditative calming good place for     
-## 10 seva or is it if i get something in return is enjoying the work contrary to selfless service swami
+##    text                                                                         
+##    &lt;chr&gt;                                                                        
+##  1 crazy paving day  temple unbearably hot joined by dog  thirsty drank my      
+##  2 cement mixing water then came over for scratches overwhelmed by how much i m…
+##  3 time i have touched another dog since his death strong mnemonic smell touch …
+##  4 mountain dogs have double coat too felt like it  she seemed to recognise som…
+##  5 very much a person like max cried and made her fur damp she stayed with me t…
+##  6 crying then went to entrance and lay down so hot how does she cope in here w…
+##  7 come inside and the incense need to look into canine olfaction and hearing  …
+##  8 the pujas stressful incense and bell ringing  loud and smelly what about ani…
+##  9 common in south asia i like being in here despite the heat  meditative calmi…
+## 10 seva or is it if i get something in return is enjoying the work contrary to …
 ## # … with 185 more rows
 ```
 ]
@@ -1069,18 +1114,18 @@ mutate(text = str_replace_all(text, "shakti", "dog")) %&gt;%  # Replace term
 
 ```
 ## # A tibble: 195 × 1
-##    text                                                                                              
-##    &lt;chr&gt;                                                                                             
-##  1 crazy paving day  temple unbearably hot joined by dog  thirsty drank my                           
-##  2 cement mixing water then came over for scratches overwhelmed by how much i miss max first         
-##  3 time i have touched another dog since his death strong mnemonic smell touch  do bernese           
-##  4 mountain dogs have double coat too felt like it  she seemed to recognise something was up         
-##  5 very much a person like max cried and made her fur damp she stayed with me til i stopped          
-##  6 crying then went to entrance and lay down so hot how does she cope in here why does she           
-##  7 come inside and the incense need to look into canine olfaction and hearing  would dogs find       
-##  8 the pujas stressful incense and bell ringing  loud and smelly what about animals in temples       
-##  9 common in south asia i like being in here despite the heat  meditative calming good place for     
-## 10 seva or is it if i get something in return is enjoying the work contrary to selfless service swami
+##    text                                                                         
+##    &lt;chr&gt;                                                                        
+##  1 crazy paving day  temple unbearably hot joined by dog  thirsty drank my      
+##  2 cement mixing water then came over for scratches overwhelmed by how much i m…
+##  3 time i have touched another dog since his death strong mnemonic smell touch …
+##  4 mountain dogs have double coat too felt like it  she seemed to recognise som…
+##  5 very much a person like max cried and made her fur damp she stayed with me t…
+##  6 crying then went to entrance and lay down so hot how does she cope in here w…
+##  7 come inside and the incense need to look into canine olfaction and hearing  …
+##  8 the pujas stressful incense and bell ringing  loud and smelly what about ani…
+##  9 common in south asia i like being in here despite the heat  meditative calmi…
+## 10 seva or is it if i get something in return is enjoying the work contrary to …
 ## # … with 185 more rows
 ```
 ]
@@ -1112,18 +1157,18 @@ mutate(text = str_replace_all(text, "foxhounds", "dog")) %&gt;%  # Replace term
 
 ```
 ## # A tibble: 195 × 1
-##    text                                                                                            
-##    &lt;chr&gt;                                                                                           
-##  1 crazy paving day  temple unbearably hot joined by dog  thirsty drank my                         
-##  2 cement mixing water then came over for scratches overwhelmed by how much i miss max first       
-##  3 time i have touched another dog since his death strong mnemonic smell touch  do bernese         
-##  4 mountain dogs have double coat too felt like it  she seemed to recognise something was up       
-##  5 very much a person like max cried and made her fur damp she stayed with me til i stopped        
-##  6 crying then went to entrance and lay down so hot how does she cope in here why does she         
-##  7 come inside and the incense need to look into canine olfaction and hearing  would dogs find     
-##  8 the pujas stressful incense and bell ringing  loud and smelly what about animals in temples     
-##  9 common in south asia i like being in here despite the heat  meditative calming good place for   
-## 10 seva or is it if i get something in return is enjoying the work contrary to selfless service dog
+##    text                                                                         
+##    &lt;chr&gt;                                                                        
+##  1 crazy paving day  temple unbearably hot joined by dog  thirsty drank my      
+##  2 cement mixing water then came over for scratches overwhelmed by how much i m…
+##  3 time i have touched another dog since his death strong mnemonic smell touch …
+##  4 mountain dogs have double coat too felt like it  she seemed to recognise som…
+##  5 very much a person like max cried and made her fur damp she stayed with me t…
+##  6 crying then went to entrance and lay down so hot how does she cope in here w…
+##  7 come inside and the incense need to look into canine olfaction and hearing  …
+##  8 the pujas stressful incense and bell ringing  loud and smelly what about ani…
+##  9 common in south asia i like being in here despite the heat  meditative calmi…
+## 10 seva or is it if i get something in return is enjoying the work contrary to …
 ## # … with 185 more rows
 ```
 ]
@@ -1156,18 +1201,18 @@ mutate(text = str_replace_all(text, "swami", "dog")) %&gt;%  # Replace term
 
 ```
 ## # A tibble: 195 × 1
-##    text                                                                                            
-##    &lt;chr&gt;                                                                                           
-##  1 crazy paving day  temple unbearably hot joined by dog  thirsty drank my                         
-##  2 cement mixing water then came over for scratches overwhelmed by how much i miss dog first       
-##  3 time i have touched another dog since his death strong mnemonic smell touch  do bernese         
-##  4 mountain dogs have double coat too felt like it  she seemed to recognise something was up       
-##  5 very much a person like dog cried and made her fur damp she stayed with me til i stopped        
-##  6 crying then went to entrance and lay down so hot how does she cope in here why does she         
-##  7 come inside and the incense need to look into canine olfaction and hearing  would dogs find     
-##  8 the pujas stressful incense and bell ringing  loud and smelly what about animals in temples     
-##  9 common in south asia i like being in here despite the heat  meditative calming good place for   
-## 10 seva or is it if i get something in return is enjoying the work contrary to selfless service dog
+##    text                                                                         
+##    &lt;chr&gt;                                                                        
+##  1 crazy paving day  temple unbearably hot joined by dog  thirsty drank my      
+##  2 cement mixing water then came over for scratches overwhelmed by how much i m…
+##  3 time i have touched another dog since his death strong mnemonic smell touch …
+##  4 mountain dogs have double coat too felt like it  she seemed to recognise som…
+##  5 very much a person like dog cried and made her fur damp she stayed with me t…
+##  6 crying then went to entrance and lay down so hot how does she cope in here w…
+##  7 come inside and the incense need to look into canine olfaction and hearing  …
+##  8 the pujas stressful incense and bell ringing  loud and smelly what about ani…
+##  9 common in south asia i like being in here despite the heat  meditative calmi…
+## 10 seva or is it if i get something in return is enjoying the work contrary to …
 ## # … with 185 more rows
 ```
 ]
@@ -1201,18 +1246,18 @@ mutate(text = str_replace_all(text, "max", "dog")) %&gt;%  # Replace term
 
 ```
 ## # A tibble: 195 × 1
-##    text                                                                                         
-##    &lt;chr&gt;                                                                                        
-##  1 crazy pave day temple unbearably hot join by dog thirsty drink my                            
-##  2 cement mix water then come over for scratch overwhelm by how much i miss dog first           
-##  3 time i have touch another dog since his death strong mnemonic smell touch do bernese         
-##  4 mountain dog have double coat too feel like it she seem to recognise something be up         
-##  5 very much a person like dog cry and make her fur damp she stay with me til i stop            
-##  6 cry then go to entrance and lie down so hot how do she cope in here why do she               
-##  7 come inside and the incense need to look into canine olfaction and hear would dog find       
-##  8 the pujas stressful incense and bell ring loud and smelly what about animal in temple        
-##  9 common in south asia i like be in here despite the heat meditative calm good place for       
-## 10 seva or be it if i get something in return be enjoy the work contrary to selfless service dog
+##    text                                                                         
+##    &lt;chr&gt;                                                                        
+##  1 crazy pave day temple unbearably hot join by dog thirsty drink my            
+##  2 cement mix water then come over for scratch overwhelm by how much i miss dog…
+##  3 time i have touch another dog since his death strong mnemonic smell touch do…
+##  4 mountain dog have double coat too feel like it she seem to recognise somethi…
+##  5 very much a person like dog cry and make her fur damp she stay with me til i…
+##  6 cry then go to entrance and lie down so hot how do she cope in here why do s…
+##  7 come inside and the incense need to look into canine olfaction and hear woul…
+##  8 the pujas stressful incense and bell ring loud and smelly what about animal …
+##  9 common in south asia i like be in here despite the heat meditative calm good…
+## 10 seva or be it if i get something in return be enjoy the work contrary to sel…
 ## # … with 185 more rows
 ```
 ]
@@ -1247,18 +1292,18 @@ mutate(text = lemmatize_strings(text)) %&gt;%  # Lemmatize term
 
 ```
 ## # A tibble: 195 × 1
-##    text                                                                                        
-##    &lt;chr&gt;                                                                                       
-##  1 "crazy pave day temple unbearably hot join by  thirsty drink my"                            
-##  2 "cement mix water then come over for scratch overwhelm by how much i miss  first"           
-##  3 "time i have touch another  since his death strong mnemonic smell touch do bernese"         
-##  4 "mountain  have double coat too feel like it she seem to recognise something be up"         
-##  5 "very much a person like  cry and make her fur damp she stay with me til i stop"            
-##  6 "cry then go to entrance and lie down so hot how do she cope in here why do she"            
-##  7 "come inside and the incense need to look into canine olfaction and hear would  find"       
-##  8 "the pujas stressful incense and bell ring loud and smelly what about animal in temple"     
-##  9 "common in south asia i like be in here despite the heat meditative calm good place for"    
-## 10 "seva or be it if i get something in return be enjoy the work contrary to selfless service "
+##    text                                                                         
+##    &lt;chr&gt;                                                                        
+##  1 "crazy pave day temple unbearably hot join by  thirsty drink my"             
+##  2 "cement mix water then come over for scratch overwhelm by how much i miss  f…
+##  3 "time i have touch another  since his death strong mnemonic smell touch do b…
+##  4 "mountain  have double coat too feel like it she seem to recognise something…
+##  5 "very much a person like  cry and make her fur damp she stay with me til i s…
+##  6 "cry then go to entrance and lie down so hot how do she cope in here why do …
+##  7 "come inside and the incense need to look into canine olfaction and hear wou…
+##  8 "the pujas stressful incense and bell ring loud and smelly what about animal…
+##  9 "common in south asia i like be in here despite the heat meditative calm goo…
+## 10 "seva or be it if i get something in return be enjoy the work contrary to se…
 ## # … with 185 more rows
 ```
 ]
@@ -1294,18 +1339,18 @@ mutate(text = str_remove_all(text, c("dog"))) %&gt;%  # Remove term
 
 ```
 ## # A tibble: 195 × 1
-##    text                                                                                        
-##    &lt;chr&gt;                                                                                       
-##  1 "crazy pave day temple unbearably hot join by  thirsty drink my"                            
-##  2 "cement mix water then come over for scratch overwhelm by how much i miss  first"           
-##  3 "time i have touch another  since his death strong mnemonic smell touch do bernese"         
-##  4 "mountain  have double coat too feel like it she seem to recognise something be up"         
-##  5 "very much a person like  cry and make her fur damp she stay with me til i stop"            
-##  6 "cry then go to entrance and lie down so hot how do she cope in here why do she"            
-##  7 "come inside and the incense need to look into canine olfaction and hear would  find"       
-##  8 "the pujas stressful incense and bell ring loud and smelly what about animal in temple"     
-##  9 "common in south asia i like be in here despite the heat meditative calm good place for"    
-## 10 "seva or be it if i get something in return be enjoy the work contrary to selfless service "
+##    text                                                                         
+##    &lt;chr&gt;                                                                        
+##  1 "crazy pave day temple unbearably hot join by  thirsty drink my"             
+##  2 "cement mix water then come over for scratch overwhelm by how much i miss  f…
+##  3 "time i have touch another  since his death strong mnemonic smell touch do b…
+##  4 "mountain  have double coat too feel like it she seem to recognise something…
+##  5 "very much a person like  cry and make her fur damp she stay with me til i s…
+##  6 "cry then go to entrance and lie down so hot how do she cope in here why do …
+##  7 "come inside and the incense need to look into canine olfaction and hear wou…
+##  8 "the pujas stressful incense and bell ring loud and smelly what about animal…
+##  9 "common in south asia i like be in here despite the heat meditative calm goo…
+## 10 "seva or be it if i get something in return be enjoy the work contrary to se…
 ## # … with 185 more rows
 ```
 ]
@@ -1342,18 +1387,18 @@ mutate(text = str_remove_all(text, c("human"))) %&gt;%  # Remove term
 
 ```
 ## # A tibble: 195 × 1
-##    text                                                                                     
-##    &lt;chr&gt;                                                                                    
-##  1 crazy pave day temple unbearably hot join by thirsty drink my                            
-##  2 cement mix water then come over for scratch overwhelm by how much i miss first           
-##  3 time i have touch another since his death strong mnemonic smell touch do bernese         
-##  4 mountain have double coat too feel like it she seem to recognise something be up         
-##  5 very much a person like cry and make her fur damp she stay with me til i stop            
-##  6 cry then go to entrance and lie down so hot how do she cope in here why do she           
-##  7 come inside and the incense need to look into canine olfaction and hear would find       
-##  8 the pujas stressful incense and bell ring loud and smelly what about animal in temple    
-##  9 common in south asia i like be in here despite the heat meditative calm good place for   
-## 10 seva or be it if i get something in return be enjoy the work contrary to selfless service
+##    text                                                                         
+##    &lt;chr&gt;                                                                        
+##  1 crazy pave day temple unbearably hot join by thirsty drink my                
+##  2 cement mix water then come over for scratch overwhelm by how much i miss fir…
+##  3 time i have touch another since his death strong mnemonic smell touch do ber…
+##  4 mountain have double coat too feel like it she seem to recognise something b…
+##  5 very much a person like cry and make her fur damp she stay with me til i stop
+##  6 cry then go to entrance and lie down so hot how do she cope in here why do s…
+##  7 come inside and the incense need to look into canine olfaction and hear woul…
+##  8 the pujas stressful incense and bell ring loud and smelly what about animal …
+##  9 common in south asia i like be in here despite the heat meditative calm good…
+## 10 seva or be it if i get something in return be enjoy the work contrary to sel…
 ## # … with 185 more rows
 ```
 ]
@@ -1391,18 +1436,18 @@ mutate(text = str_squish(text)) %&gt;%  # Remove whitespace
 
 ```
 ## # A tibble: 195 × 1
-##    text                                                                                     
-##    &lt;chr&gt;                                                                                    
-##  1 crazy pave day temple unbearably hot join by thirsty drink my                            
-##  2 cement mix water then come over for scratch overwhelm by how much i miss first           
-##  3 time i have touch another since his death strong mnemonic smell touch do bernese         
-##  4 mountain have double coat too feel like it she seem to recognise something be up         
-##  5 very much a person like cry and make her fur damp she stay with me til i stop            
-##  6 cry then go to entrance and lie down so hot how do she cope in here why do she           
-##  7 come inside and the incense need to look into canine olfaction and hear would find       
-##  8 the pujas stressful incense and bell ring loud and smelly what about animal in temple    
-##  9 common in south asia i like be in here despite the heat meditative calm good place for   
-## 10 seva or be it if i get something in return be enjoy the work contrary to selfless service
+##    text                                                                         
+##    &lt;chr&gt;                                                                        
+##  1 crazy pave day temple unbearably hot join by thirsty drink my                
+##  2 cement mix water then come over for scratch overwhelm by how much i miss fir…
+##  3 time i have touch another since his death strong mnemonic smell touch do ber…
+##  4 mountain have double coat too feel like it she seem to recognise something b…
+##  5 very much a person like cry and make her fur damp she stay with me til i stop
+##  6 cry then go to entrance and lie down so hot how do she cope in here why do s…
+##  7 come inside and the incense need to look into canine olfaction and hear woul…
+##  8 the pujas stressful incense and bell ring loud and smelly what about animal …
+##  9 common in south asia i like be in here despite the heat meditative calm good…
+## 10 seva or be it if i get something in return be enjoy the work contrary to sel…
 ## # … with 185 more rows
 ```
 ]
@@ -1441,18 +1486,18 @@ mutate(text = na_if(text, "")) %&gt;%  # Replace blanks with NA
 
 ```
 ## # A tibble: 167 × 1
-##    text                                                                                     
-##    &lt;chr&gt;                                                                                    
-##  1 crazy pave day temple unbearably hot join by thirsty drink my                            
-##  2 cement mix water then come over for scratch overwhelm by how much i miss first           
-##  3 time i have touch another since his death strong mnemonic smell touch do bernese         
-##  4 mountain have double coat too feel like it she seem to recognise something be up         
-##  5 very much a person like cry and make her fur damp she stay with me til i stop            
-##  6 cry then go to entrance and lie down so hot how do she cope in here why do she           
-##  7 come inside and the incense need to look into canine olfaction and hear would find       
-##  8 the pujas stressful incense and bell ring loud and smelly what about animal in temple    
-##  9 common in south asia i like be in here despite the heat meditative calm good place for   
-## 10 seva or be it if i get something in return be enjoy the work contrary to selfless service
+##    text                                                                         
+##    &lt;chr&gt;                                                                        
+##  1 crazy pave day temple unbearably hot join by thirsty drink my                
+##  2 cement mix water then come over for scratch overwhelm by how much i miss fir…
+##  3 time i have touch another since his death strong mnemonic smell touch do ber…
+##  4 mountain have double coat too feel like it she seem to recognise something b…
+##  5 very much a person like cry and make her fur damp she stay with me til i stop
+##  6 cry then go to entrance and lie down so hot how do she cope in here why do s…
+##  7 come inside and the incense need to look into canine olfaction and hear woul…
+##  8 the pujas stressful incense and bell ring loud and smelly what about animal …
+##  9 common in south asia i like be in here despite the heat meditative calm good…
+## 10 seva or be it if i get something in return be enjoy the work contrary to sel…
 ## # … with 157 more rows
 ```
 ]
@@ -2354,18 +2399,18 @@ count: false
 
 ```
 ## # A tibble: 167 × 1
-##    text                                                                                     
-##    &lt;chr&gt;                                                                                    
-##  1 crazy pave day temple unbearably hot join by thirsty drink my                            
-##  2 cement mix water then come over for scratch overwhelm by how much i miss first           
-##  3 time i have touch another since his death strong mnemonic smell touch do bernese         
-##  4 mountain have double coat too feel like it she seem to recognise something be up         
-##  5 very much a person like cry and make her fur damp she stay with me til i stop            
-##  6 cry then go to entrance and lie down so hot how do she cope in here why do she           
-##  7 come inside and the incense need to look into canine olfaction and hear would find       
-##  8 the pujas stressful incense and bell ring loud and smelly what about animal in temple    
-##  9 common in south asia i like be in here despite the heat meditative calm good place for   
-## 10 seva or be it if i get something in return be enjoy the work contrary to selfless service
+##    text                                                                         
+##    &lt;chr&gt;                                                                        
+##  1 crazy pave day temple unbearably hot join by thirsty drink my                
+##  2 cement mix water then come over for scratch overwhelm by how much i miss fir…
+##  3 time i have touch another since his death strong mnemonic smell touch do ber…
+##  4 mountain have double coat too feel like it she seem to recognise something b…
+##  5 very much a person like cry and make her fur damp she stay with me til i stop
+##  6 cry then go to entrance and lie down so hot how do she cope in here why do s…
+##  7 come inside and the incense need to look into canine olfaction and hear woul…
+##  8 the pujas stressful incense and bell ring loud and smelly what about animal …
+##  9 common in south asia i like be in here despite the heat meditative calm good…
+## 10 seva or be it if i get something in return be enjoy the work contrary to sel…
 ## # … with 157 more rows
 ```
 ]
@@ -2842,7 +2887,7 @@ So let's start by modeling 11 topics!
 ]
 
 .pull-right[
-&lt;img src="Slides-Week-12-flat_files/figure-html/unnamed-chunk-13-1.png" width="85%" /&gt;
+&lt;img src="Slides-Week-12-flat_files/figure-html/unnamed-chunk-12-1.png" width="85%" /&gt;
 ]
 
 ---
@@ -3364,7 +3409,7 @@ exwdogs_top_terms &lt;-
 
 &lt;br&gt;
 &lt;br&gt;
-&lt;img src="Slides-Week-12-flat_files/figure-html/unnamed-chunk-16-1.png" width="864" style="display: block; margin: auto;" /&gt;
+&lt;img src="Slides-Week-12-flat_files/figure-html/unnamed-chunk-15-1.png" width="864" style="display: block; margin: auto;" /&gt;
 
 --
 
