@@ -1,0 +1,79 @@
+---
+title: "Semantic Structures"
+linktitle: "Week 14: Semantic Structures"
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  due:
+    parent: 'To Do List'
+    weight: 14
+type: docs
+weight: 1
+---
+
+`r blogdown::shortcode("r-walkthrough-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r eval = TRUE, echo = FALSE}
+
+wk_post <- 
+  
+  tibble(
+
+Description = c("Read <i>Smart Literature Review: A Practical Topic Modelling Approach to Exploratory Literature Review</i> in Asmussenm C.B. & Moller, C. (2019)",
+                "Read <i>The Rhetoric of De-policing: Evaluating Open-ended Survey Responses From Police Officers With Machine Learning-based Structural Topic Modeling</i> in Mourtgos, S.M. & Adams, I.T. (2019)",
+                "Read <i>Lexical Analysis of Textual Data</i> in Paice, C.D. (2009)",
+                "Read <i>Structural Topic Models for Open-Ended Survey Responses</i> in Roberts et. al (2014)",
+                "Read <i>Explaining Topic Prevalence in Answers to Open-ended Survey Questions About Climate Change</i> in Tvinnereim, E. & Fløttum, K. (2015)",
+                "Complete the module <span style='color:#ffc787;font-weight:bold'><i>Text Mining with Bag-of-Words in R</i></span>",
+                "Go through the slideshow <span style='color:#6ac4cd;font-weight:bold'>Topic Modeling</span>",
+                "Take a look at some additional <i class='fa-brands fa-r-project'></i> resources that may help with your understanding of topic modeling",
+                "Begin <span style='color:#6acda5;font-weight:bold'>Write an Executive Summary</span> and submit it by the end of next week (15)"
+                ),
+
+
+Details = c("<a href='/readings/14-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/readings/14-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/readings/14-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/readings/14-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/readings/14-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/modules/14-module/#data-camp'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/tasks/14-task/#hidden-data'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/tasks/14-task/#some-additional-resources'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/deliverables/07-l7/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
+            ),
+
+Icon = c("pdf",
+         "pdf",
+         "pdf",
+         "pdf",
+         "pdf",
+         "dc",
+         "slideshow",
+         "list",
+         "ecampus"),
+
+Site = c("https://doi.org/10.1186/s40537-019-0255-7",
+         "https://doi.org/10.1016/j.jcrimjus.2019.101627",
+         "https://doi.org/10.1007/978-1-4899-7993-3_941-2",
+         "https://doi.org/10.7910/DVN/29405",
+         "https://doi.org/10.1038/nclimate2663",
+         "https://www.datacamp.com",
+         "",
+         "",
+         "https://ecampus.wvu.edu"
+         )
+)
+```
+
+<center>
+`r knitr::spin_child(here::here("content", "post_frame.R"))`
+</center>

@@ -54,11 +54,11 @@ knitr::include_url("/slides/Power%20Analysis/power-analysis-pres.html")
 <div class="smallcol">
 ```{r echo = FALSE, fig.align='right'}
 html_link <- function() {
-  paste0("<a href='/slides/Power%20Analysis/power-analysis-pres.html' target='_blank'>", "<img src='/logos/web-ico.png' alt='PCA presentation' width='35'>", "</a>")
+  paste0("<a href='/slides/Power%20Analysis/power-analysis-pres.html' target='_blank'>", "<img src='/logos/web-ico.png' alt='Power Analysis presentation' width='35'>", "</a>")
 }
 
 pdf_link <- function() {
- paste0("<a href='/slides/Power%20Analysis/power-analysis-flat.pdf' target='_blank'>", "<img src='/logos/pdf-ico.png' alt='PCA presentation PDF' width='35'>", "</a>")
+ paste0("<a href='/slides/Power%20Analysis/power-analysis-flat.pdf' target='_blank'>", "<img src='/logos/pdf-ico.png' alt='Power Analysis presentation PDF' width='35'>", "</a>")
 }
 
 tibble(

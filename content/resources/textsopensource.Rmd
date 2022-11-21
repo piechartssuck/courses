@@ -63,6 +63,7 @@ td:hover img {
   right: 35%;
   width: 100%;
   height: auto;
+  overflow: visible;
 }
 
 </style>

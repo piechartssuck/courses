@@ -1,0 +1,3283 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Topic Modeling</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr. Abhik Roy" />
+    <script src="topic-modeling-flat_files/header-attrs-2.18/header-attrs.js"></script>
+    <link href="topic-modeling-flat_files/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
+    <script src="topic-modeling-flat_files/tile-view-0.2.6/tile-view.js"></script>
+    <link href="topic-modeling-flat_files/animate.css-3.7.2/animate.xaringan.css" rel="stylesheet" />
+    <link href="topic-modeling-flat_files/tachyons-4.12.0/tachyons.min.css" rel="stylesheet" />
+    <script src="topic-modeling-flat_files/kePrint-0.0.1/kePrint.js"></script>
+    <link href="topic-modeling-flat_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Topic Modeling
+]
+.subtitle[
+## EDP 618 Week 12
+]
+.author[
+### Dr. Abhik Roy
+]
+
+---
+
+
+&lt;script&gt;
+  function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+  }
+&lt;/script&gt;
+
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/x-mathjax-config"&gt;
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+  MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+    cancel: ["Extension","cancel"],
+    bcancel: ["Extension","cancel"],
+    xcancel: ["Extension","cancel"],
+    cancelto: ["Extension","cancel"]
+  });
+});
+&lt;/script&gt;
+
+&lt;style&gt;
+section {
+    display: flex;
+    display: -webkit-flex;
+}
+
+section {
+    height: 600px;
+    width: 60%;
+    margin: auto;
+    border-radius: 21px;
+    background-color: #212121;
+}
+
+.remark-slide-container {
+background: #212121;
+}
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
+}
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
+}
+
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
+}
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
+}
+
+section p {
+    text-align: center;
+    font-size: 30px;
+    background-color: #212121;
+    border-radius: 21px;
+    font-family: Roboto Condensed;
+    font-style: bold;
+    padding: 12px;
+    color: #bff4ee;
+    margin: auto;
+}
+
+#center {
+text-align: center;
+}
+
+#right {
+  text-align: right;
+} 
+
+.center p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.tab {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.listtab {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.obr
+{
+    display:block;
+    margin-top:-15px;
+}
+
+.container {
+  display: flex;
+}
+
+.container &gt; div {
+  flex: 1; /*grow*/
+  margin-right: 40px;
+}
+
+td, th, tr, table {
+    border: 0 !important;
+    border-spacing:0 !important;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: unset !important;
+    color: unset !important;
+  }
+
+tbody &gt; td &gt; tr:hover {
+      background-color: unset !important;
+      color: unset !important;
+  }
+  
+.remarkwidth code[class="remark-code"] {
+	white-space: pre-wrap;
+	padding-left:a 1.85em;
+	text-indent: -1.85em;
+}
+
+.left-code {
+  color: #777;
+  width: 60%;
+  height: 92%;
+  float: left;
+}
+
+.right-plot {
+  width: 38%;
+  float: right;
+  padding-left: 1%;
+}
+
+.cardquad1 img:hover{
+  position: relative;
+  transform: translate(-50%,50%) scale(2.0);
+  background-color: #212121;
+}
+
+.cardquad2 img:hover{
+  position: relative;
+  transform: translate(50%,50%) scale(2.0);
+  background-color: #212121;
+}
+
+.cardquad3 img:hover{
+  position: relative;
+  transform: translate(50%,-50%) scale(2.0);
+  background-color: #212121;
+}
+
+.cardquad4 img:hover{
+  position: relative;
+  transform: translate(-50%,-50%) scale(2.0);
+  background-color: #212121;
+}
+
+img{
+  -webkit-transition: transform 0.5s ease-in-out;
+  -moz-transition: transform 0.5s ease-in-out;
+  -ms-transition: transform 0.5s ease-in-out;
+  -o-transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+}
+&lt;/style&gt;
+
+&lt;style type="text/css"&gt;
+.highlight-last-item &gt; ul &gt; li,
+.highlight-last-item &gt; ol &gt; li {
+  opacity: 0.5;
+}
+.highlight-last-item &gt; ul &gt; li:last-of-type,
+.highlight-last-item &gt; ol &gt; li:last-of-type {
+  opacity: 1;
+}
+&lt;/style&gt;
+
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 110px;
+height: 128px;
+z-index: 0;
+background-image: url(/Users/skynet/Documents/WVU/Teaching/GitHub.nosync/edp619/static/img/course_hex.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:1em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('a')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = 'https://edp619.asocialdatascientist.com'
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+
+
+
+
+
+# Setting Up
+
+--
+
+1. You can retrieve the *employee sample reviews* survey response data set and both installation and walkthrough <svg aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:steelblue;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg> *scripts* by clicking on the icon below&lt;br&gt;
+&lt;br&gt;
+&lt;center&gt;
+&lt;a href="https://edp619.asocialdatascientist.com/slides/topic%20modeling/files/topic_modeling_files.zip" target='_blank' download="Topic Modeling Files"&gt;
+&lt;img src="img/zip-ico.png" alt="Paper" width='45'&gt;&lt;/a&gt;
+&lt;/center&gt;
+
+--
+
+2. Open up RStudio
+
+--
+
+3. Open up &lt;span style="font-family:'Source Code Pro'; color:#b7b3ef"&gt;Topic Modeling Install.R&lt;/span&gt;
+
+--
+
+4. Open &lt;span style="font-family:'Source Code Pro'; color:#b7b3ef"&gt;Topic Modeling Script.R&lt;/span&gt;
+
+--
+
+.footnote[Take a look at the various types of files that can be imported in the tidyverse &lt;a href="https://edp619.asocialdatascientist.com/slides/topic%20modeling/files/data-import.pdf" target='_blank' download="Data import with the tidyverse"&gt;
+&lt;img src="img/pdf-ico.png" alt="PDF icon" width='45'&gt;&lt;/a&gt;]
+
+---
+
+# Getting Prepped
+
+--
+
+In &lt;span style="font-family:'Source Code Pro'; color:#b7b3ef"&gt;Topic Modeling Script.R&lt;/span&gt;, run the following commands
+
+--
+
+1. Setting the working directory as source
+    
+    ```r
+    setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+    ```
+    
+--
+
+2. Loading the needed packages for this walkthrough
+    
+    ```r
+    library(tidyverse)
+    library(tidytext)
+    library(tm)
+    library(textclean)
+    library(topicmodels)
+    library(ldatuning)
+    library(stopwords)
+    library(textstem)
+    library(broom)
+    ```
+.footnote[Alternatively if you have the **pacman** package, run `pacman::p_install("tidyverse", "tidytext", "tm", "textclean", "topicmodels", "ldatuning", "stopwords", "textstem", "broom")`]
+
+---
+
+&lt;ol start="3"&gt;
+&lt;li&gt; Bringing in the survey data 
+&lt;/ol&gt;
+
+
+
+```r
+   employee_responses &lt;- 
+     read_csv("employee sample reviews.csv")
+```
+
+--
+
+&lt;ol start="4"&gt;
+&lt;li&gt; Bringing in the common names set (as a character string)
+&lt;/ol&gt; 
+
+
+```r
+   common_names &lt;- 
+     read_csv("most common names.csv") %&gt;%
+     simplify_all() %&gt;%
+     .[[1]]
+```
+
+--
+
+&lt;ol start="5"&gt;
+&lt;li&gt; Retrieving stopwords
+&lt;/ol&gt; 
+
+
+```r
+   data("stop_words")
+```
+
+---
+
+## Too Many Files?
+
+--
+
+You may have noticed that the there are a lot of files. Some of them we'll use while the others are included for completeness. Below you will see a description of each
+
+--
+
+.pull-left[
+&lt;p id="center" style="color:#baffc9; border:1px; border-style:solid; border-color:#baffc9; border-radius: 25px; padding: 0.3em; margin-top: -6px"&gt;
+&lt;span style = "font-weight:bold; font-style:italic;"&gt;Data sets we &lt;i&gt;are&lt;/i&gt; using &lt;/span&gt;&lt;br&gt;&lt;br&gt;
+&lt;span style="font-family:'Source Code Pro'; color:#bff4ee"&gt;employee sample reviews.csv&lt;/span&gt; is a 10% random sampling of the original data set that was created to save computing time for the example given in the walkthrough&lt;br&gt;&lt;br&gt;
+&lt;span style="font-family:'Source Code Pro'; color:#bff4ee"&gt;most common names.csv&lt;/span&gt; is a list of approximately 97,000+ common U.S. names derived from both U.S. Census and Social Security Administration data 
+&lt;/p&gt;
+]
+
+--
+
+.pull-right[
+&lt;p id="center" style="color:#baffc9; border:1px; border-style:solid; border-color:#baffc9; border-radius: 25px; padding: 0.3em; margin-top: -6px"&gt;
+&lt;span style = "font-weight:bold; font-style:italic;"&gt;R Scripts we &lt;i&gt;are&lt;/i&gt; using &lt;/span&gt;&lt;br&gt;&lt;br&gt;
+&lt;span style="font-family:'Source Code Pro'; color:#b7b3ef"&gt;Topic Modeling Install.R&lt;/span&gt; is the installation file needed for the walkthrough&lt;br&gt;&lt;br&gt;
+&lt;span style="font-family:'Source Code Pro'; color:#b7b3ef"&gt;Topic Modeling Script.R&lt;/span&gt; is a static copy of the commands used in the walkthrough
+&lt;/p&gt;
+]
+
+--
+
+.pull-left[
+&lt;p id="center" style="color:#ffb3ba; border:1px; border-style:solid; border-color:#ffb3ba; border-radius: 25px; padding: 0.3em; margin-top: -6px"&gt;
+&lt;span style = "font-weight:bold; font-style:italic;"&gt;Data sets we &lt;i&gt;are not&lt;/i&gt; using &lt;/span&gt;&lt;br&gt;&lt;br&gt;
+&lt;span style="font-family:'Source Code Pro'; color:#bff4ee"&gt;employee reviews.csv&lt;/span&gt; is the original data set and may be found on [Kaggle](https://www.kaggle.com/datasets/fiodarryzhykau/employee-review)
+&lt;/p&gt;
+]
+
+--
+
+.pull-right[
+&lt;p id="center" style="color:#ffb3ba; border:1px; border-style:solid; border-color:#ffb3ba; border-radius: 25px; padding: 0.3em; margin-top: -6px"&gt;
+&lt;span style = "font-weight:bold; font-style:italic;"&gt;R scripts we &lt;i&gt;are not&lt;/i&gt; using &lt;/span&gt;&lt;br&gt;&lt;br&gt;
+&lt;span style="font-family:'Source Code Pro'; color:#b7b3ef"&gt;Get Common Names.R&lt;/span&gt; provides a list of &lt;b&gt;dplyr&lt;/b&gt; commands that uses the &lt;b&gt;lexicon&lt;/b&gt;, &lt;b&gt;babynames&lt;/b&gt;, and &lt;b&gt;genderdata&lt;/b&gt; packages to create the most common names data set&lt;br&gt;&lt;br&gt;
+&lt;span style="font-family:'Source Code Pro'; color:#b7b3ef"&gt;Random Sampling Rows.R&lt;/span&gt; provides a list of &lt;b&gt;dplyr&lt;/b&gt; commands used to create the sample data set
+&lt;/p&gt;
+]
+
+---
+
+# Before We Begin
+
+--
+
+This is the process we'll cover lightly. There is a lot more going on under the hood and you may not be able to recognize all of the terms, but if you can get a basic understanding of the process, the rest can be filled in by conducting a topic model!
+
+&lt;center&gt;
+&lt;img src="img/tmwf.png" alt="Basic Topic Modeling Process" width='400'&gt;&lt;/a&gt;
+&lt;/center&gt;
+
+---
+
+If you didn't know, computers can't understand human languages...not directly anyway. Enter this idea below of using a medium to communicate with one (or multiple)
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;center&gt;
+&lt;img src="img/nlp.png" alt="Natural Language Processing definition" width='500'&gt;&lt;/a&gt;
+&lt;/center&gt;
+
+---
+
+Here are a few things we won't be covering in this session so please read over the areas you lack familiarity with. Given that, it is absolutely fine if you cannot fully understand all of these ideas right now - they will hopefully become apparent as we progress
+
+--
+
+.pull-left[
+&lt;center&gt;
+&lt;div class="cardquad2"&gt;
+&lt;img src="img/document.png" alt="Document Definition" width='350'&gt;&lt;/a&gt;
+&lt;/center&gt;
+&lt;/div&gt;
+]
+
+--
+
+.pull-right[
+&lt;div class="cardquad1"&gt;
+&lt;center&gt;
+&lt;img src="img/corpus.png" alt="Corpus Definition" width='350'&gt;&lt;/a&gt;
+&lt;/center&gt;
+&lt;/div&gt;
+]
+
+--
+
+&lt;br&gt;
+.pull-left[
+&lt;div class="cardquad3"&gt;
+&lt;center&gt;
+&lt;img src="img/tf-idf.png" alt="TF-IDF Definition" width='350'&gt;&lt;/a&gt;
+&lt;/center&gt;
+&lt;/div&gt;
+]
+
+--
+
+.pull-right[
+&lt;div class="cardquad4"&gt;
+&lt;center&gt;
+&lt;img src="img/lda.png" alt="LDA Definition" width='350'&gt;&lt;/a&gt;
+&lt;/center&gt;
+&lt;/div&gt;
+]
+
+
+---
+
+Here are some basic terms you should try to keep while going through the walkthrough. Again it is completely fine if you do not understand what these mean in context right now!
+--
+
+.pull-left[
+&lt;center&gt;
+&lt;div class="cardquad2"&gt;
+&lt;img src="img/bow.png" alt="Bag of Words Definition" width='350'&gt;&lt;/a&gt;
+&lt;/center&gt;
+&lt;/div&gt;
+]
+
+--
+
+.pull-right[
+&lt;div class="cardquad1"&gt;
+&lt;center&gt;
+&lt;img src="img/classification.png" alt="Classification Definition" width='350'&gt;&lt;/a&gt;
+&lt;/center&gt;
+&lt;/div&gt;
+]
+
+--
+
+&lt;br&gt;
+.pull-left[
+&lt;div class="cardquad3"&gt;
+&lt;center&gt;
+&lt;img src="img/standardization.png" alt="Standardization Definition" width='350'&gt;&lt;/a&gt;
+&lt;/center&gt;
+&lt;/div&gt;
+]
+
+--
+
+.pull-right[
+&lt;div class="cardquad4"&gt;
+&lt;center&gt;
+&lt;img src="img/tokenization.png" alt="Tokenization Definition" width='350'&gt;&lt;/a&gt;
+&lt;/center&gt;
+&lt;/div&gt;
+]
+
+---
+
+&lt;br&gt;
+&lt;br&gt;
+#&lt;center&gt;Topic Modeling&lt;/center&gt;
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;center&gt;
+&lt;div style="text-align: center; color:#c7f9f6; border:1px; border-style:solid; border-color:#c7f9f6; border-radius: 25px; padding: 0.8em; width:fit-content;"&gt;
+A type of probabilistic statistical model for&lt;br&gt;&lt;br&gt;
+&lt;div style="display: inline-block; text-align: left;"&gt;
+(a) discovering the abstract "topics"&lt;br&gt;
+&lt;span class = "listtab"&gt;- or &lt;i&gt;hidden semantic structures&lt;/i&gt; -&lt;/span&gt;&lt;br&gt;
+&lt;span class = "listtab"&gt;that occur in a collection of documents&lt;/span&gt;&lt;br&gt;&lt;br&gt;
+(b) dimensionality reduction&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/center&gt;
+
+---
+
+### The Most Annoying Thing About Data
+
+--
+
+.center2[&lt;b&gt;The 80/20 Rule&lt;/b&gt;&lt;sup&gt;1&lt;/sup&gt;: &lt;i&gt;Most data scientists spend only 20 percent of their time on actual data analysis and 80 percent of their time finding, cleaning, and reorganizing huge amounts of data&lt;/i&gt;]
+
+.footnote[&lt;sup&gt;1&lt;/sup&gt; Loosely based on an idea called **Pareto's Principle** which states that *roughly 80% of outcomes come from 20% of causes*]
+
+---
+
+.center2[&lt;b&gt;&lt;span style = "font-size:2.75rem"&gt;Step 1: Assessing Data&lt;/span&gt;&lt;/b&gt;]
+
+---
+
+1. Take a look at the data set and think about categorizing terms that may skew how terms are assessed
+
+--
+
+.pull-left[&lt;span class = "tab"&gt;the names of the people are not important so we could replace all of them simply with the word &lt;b&gt;people&lt;/b&gt;&lt;/span&gt;]
+
+--
+
+.pull-right[&lt;span class = "tab"&gt;employees are prevalent in the data so we could remove the word &lt;s&gt;&lt;b&gt;people&lt;/b&gt;&lt;/s&gt; altogether&lt;/span&gt;]
+&lt;br&gt;
+
+--
+
+&lt;ol start="2"&gt;
+&lt;li&gt; Open up an empty text document and try going through on your own to consider terms that could be collapsed
+&lt;/ol&gt;
+
+---
+
+.center2[&lt;b&gt;&lt;span style = "font-size:2.75rem"&gt;Step 2: Preprocessing&lt;/span&gt;&lt;/b&gt;]
+
+---
+
+&lt;span style = "font-size:1.75rem;"&gt;&lt;b&gt;Cleaning&lt;/b&gt; Raw Text&lt;/b&gt;&lt;/span&gt;
+
+---
+
+
+
+count: false
+ 
+
+.panel1-sw1a-auto[
+
+```r
+*employee_responses
+```
+]
+ 
+.panel2-sw1a-auto[
+
+```
+## # A tibble: 88 × 6
+##       id person_name     nine_box_category                                         feedb…¹ adjus…² revie…³
+##    &lt;dbl&gt; &lt;chr&gt;           &lt;chr&gt;                                                     &lt;chr&gt;   &lt;lgl&gt;   &lt;lgl&gt;  
+##  1   612 Yahir Harvey    Category 6: 'High Performer' (High performance, Moderate… "Requi… TRUE    TRUE   
+##  2   552 Briley Mcknight Category 7: 'Potential Gem' (Low performance, High poten… "Basic… FALSE   FALSE  
+##  3 10215 Emerson Rose    Category 2: 'Average performer' (Moderate performance, L… "Emers… FALSE   FALSE  
+##  4   315 Jay Reid        Category 4: 'Inconsistent Player' (Low performance, Mode… "I am … FALSE   FALSE  
+##  5   447 Chelsea Ross    Category 6: 'High Performer' (High performance, Moderate… "Chels… FALSE   FALSE  
+##  6   186 Eloise Foster   Category 3: 'Solid Performer' (High performance, Low pot… "Elois… FALSE   FALSE  
+##  7   238 Eloise Foster   Category 3: 'Solid Performer' (High performance, Low pot… "Elois… FALSE   FALSE  
+##  8   621 Dennis Buchanan Category 8: 'High Potential' (Moderate performance, High… "Denni… FALSE   FALSE  
+##  9 10020 Kieran Clarke   Category 5: 'Core Player' (Moderate performance, Moderat… "Kiera… FALSE   FALSE  
+## 10   560 Logan Ellis     Category 7: 'Potential Gem' (Low performance, High poten… "While… FALSE   FALSE  
+## # … with 78 more rows, and abbreviated variable names ¹​feedback, ²​adjusted, ³​reviewed
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1a-auto[
+
+```r
+employee_responses %&gt;%
+* select(feedback)   # Select the column with open ended responses
+```
+]
+ 
+.panel2-sw1a-auto[
+
+```
+## # A tibble: 88 × 1
+##    feedback                                                                                               
+##    &lt;chr&gt;                                                                                                  
+##  1 "Requires additional scope[e. Willingness to self start. Outperforms task. motivated to exceed."       
+##  2 "Basically Briley Mcknight  have high potential in his work experience. But in recent days he is doing…
+##  3 "Emerson Rose is a fairly average worker.  she puts out satisfactory work and she shows little potenti…
+##  4 "I am writing a review for Mr. Jay Reid. While he is a great person, unfortunately that doesn't show u…
+##  5 "Chelsea Ross performed at a high level this past year.  She is one of the most reliable and solid per…
+##  6 "Eloise Foster is a follower rather than a leader. While she does complete her tasks in a timely manne…
+##  7 "Eloise is a very capable worker and always produces excellent work. She always finishes her work earl…
+##  8 "Dennis is a consistently reliable as an employee.  His work product is always above par and his dedic…
+##  9 "Kieran is a linchpin of the team, and a dependable worker. Can be trusted with tasks of moderate comp…
+## 10 "While I have found some issues with Logan's performance in the past, specifically a lack of attention…
+## # … with 78 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1a-auto[
+
+```r
+employee_responses %&gt;%
+  select(feedback) %&gt;%  # Select the column with open ended responses
+* mutate(feedback = textclean::replace_non_ascii(feedback))   # Convert to a standard format
+```
+]
+ 
+.panel2-sw1a-auto[
+
+```
+## # A tibble: 88 × 1
+##    feedback                                                                                               
+##    &lt;chr&gt;                                                                                                  
+##  1 Requires additional scope[e. Willingness to self start. Outperforms task. motivated to exceed.         
+##  2 Basically Briley Mcknight have high potential in his work experience. But in recent days he is doing l…
+##  3 Emerson Rose is a fairly average worker. she puts out satisfactory work and she shows little potential…
+##  4 I am writing a review for Mr. Jay Reid. While he is a great person, unfortunately that doesn't show up…
+##  5 Chelsea Ross performed at a high level this past year. She is one of the most reliable and solid perfo…
+##  6 Eloise Foster is a follower rather than a leader. While she does complete her tasks in a timely manner…
+##  7 Eloise is a very capable worker and always produces excellent work. She always finishes her work early…
+##  8 Dennis is a consistently reliable as an employee. His work product is always above par and his dedicat…
+##  9 Kieran is a linchpin of the team, and a dependable worker. Can be trusted with tasks of moderate compl…
+## 10 While I have found some issues with Logan's performance in the past, specifically a lack of attention …
+## # … with 78 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1a-auto[
+
+```r
+employee_responses %&gt;%
+  select(feedback) %&gt;%  # Select the column with open ended responses
+  mutate(feedback = textclean::replace_non_ascii(feedback)) %&gt;%  # Convert to a standard format
+* mutate(feedback = str_to_lower(feedback))   # Convert all words to lower case
+```
+]
+ 
+.panel2-sw1a-auto[
+
+```
+## # A tibble: 88 × 1
+##    feedback                                                                                               
+##    &lt;chr&gt;                                                                                                  
+##  1 requires additional scope[e. willingness to self start. outperforms task. motivated to exceed.         
+##  2 basically briley mcknight have high potential in his work experience. but in recent days he is doing l…
+##  3 emerson rose is a fairly average worker. she puts out satisfactory work and she shows little potential…
+##  4 i am writing a review for mr. jay reid. while he is a great person, unfortunately that doesn't show up…
+##  5 chelsea ross performed at a high level this past year. she is one of the most reliable and solid perfo…
+##  6 eloise foster is a follower rather than a leader. while she does complete her tasks in a timely manner…
+##  7 eloise is a very capable worker and always produces excellent work. she always finishes her work early…
+##  8 dennis is a consistently reliable as an employee. his work product is always above par and his dedicat…
+##  9 kieran is a linchpin of the team, and a dependable worker. can be trusted with tasks of moderate compl…
+## 10 while i have found some issues with logan's performance in the past, specifically a lack of attention …
+## # … with 78 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1a-auto[
+
+```r
+employee_responses %&gt;%
+  select(feedback) %&gt;%  # Select the column with open ended responses
+  mutate(feedback = textclean::replace_non_ascii(feedback)) %&gt;%  # Convert to a standard format
+  mutate(feedback = str_to_lower(feedback)) %&gt;%  # Convert all words to lower case
+* mutate(feedback = str_remove_all(feedback, "'s"))   # Remove all cases of `s
+```
+]
+ 
+.panel2-sw1a-auto[
+
+```
+## # A tibble: 88 × 1
+##    feedback                                                                                               
+##    &lt;chr&gt;                                                                                                  
+##  1 requires additional scope[e. willingness to self start. outperforms task. motivated to exceed.         
+##  2 basically briley mcknight have high potential in his work experience. but in recent days he is doing l…
+##  3 emerson rose is a fairly average worker. she puts out satisfactory work and she shows little potential…
+##  4 i am writing a review for mr. jay reid. while he is a great person, unfortunately that doesn't show up…
+##  5 chelsea ross performed at a high level this past year. she is one of the most reliable and solid perfo…
+##  6 eloise foster is a follower rather than a leader. while she does complete her tasks in a timely manner…
+##  7 eloise is a very capable worker and always produces excellent work. she always finishes her work early…
+##  8 dennis is a consistently reliable as an employee. his work product is always above par and his dedicat…
+##  9 kieran is a linchpin of the team, and a dependable worker. can be trusted with tasks of moderate compl…
+## 10 while i have found some issues with logan performance in the past, specifically a lack of attention to…
+## # … with 78 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1a-auto[
+
+```r
+employee_responses %&gt;%
+  select(feedback) %&gt;%  # Select the column with open ended responses
+  mutate(feedback = textclean::replace_non_ascii(feedback)) %&gt;%  # Convert to a standard format
+  mutate(feedback = str_to_lower(feedback)) %&gt;%  # Convert all words to lower case
+  mutate(feedback = str_remove_all(feedback, "'s")) %&gt;%  # Remove all cases of `s
+* mutate(feedback = str_remove_all(feedback, "[[:digit:]]"))   # Remove all numbers
+```
+]
+ 
+.panel2-sw1a-auto[
+
+```
+## # A tibble: 88 × 1
+##    feedback                                                                                               
+##    &lt;chr&gt;                                                                                                  
+##  1 requires additional scope[e. willingness to self start. outperforms task. motivated to exceed.         
+##  2 basically briley mcknight have high potential in his work experience. but in recent days he is doing l…
+##  3 emerson rose is a fairly average worker. she puts out satisfactory work and she shows little potential…
+##  4 i am writing a review for mr. jay reid. while he is a great person, unfortunately that doesn't show up…
+##  5 chelsea ross performed at a high level this past year. she is one of the most reliable and solid perfo…
+##  6 eloise foster is a follower rather than a leader. while she does complete her tasks in a timely manner…
+##  7 eloise is a very capable worker and always produces excellent work. she always finishes her work early…
+##  8 dennis is a consistently reliable as an employee. his work product is always above par and his dedicat…
+##  9 kieran is a linchpin of the team, and a dependable worker. can be trusted with tasks of moderate compl…
+## 10 while i have found some issues with logan performance in the past, specifically a lack of attention to…
+## # … with 78 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1a-auto[
+
+```r
+employee_responses %&gt;%
+  select(feedback) %&gt;%  # Select the column with open ended responses
+  mutate(feedback = textclean::replace_non_ascii(feedback)) %&gt;%  # Convert to a standard format
+  mutate(feedback = str_to_lower(feedback)) %&gt;%  # Convert all words to lower case
+  mutate(feedback = str_remove_all(feedback, "'s")) %&gt;%  # Remove all cases of `s
+  mutate(feedback = str_remove_all(feedback, "[[:digit:]]")) %&gt;%  # Remove all numbers
+* mutate(feedback = str_remove_all(feedback, "[[:punct:]]"))   # Remove all punctuation
+```
+]
+ 
+.panel2-sw1a-auto[
+
+```
+## # A tibble: 88 × 1
+##    feedback                                                                                               
+##    &lt;chr&gt;                                                                                                  
+##  1 requires additional scopee willingness to self start outperforms task motivated to exceed              
+##  2 basically briley mcknight have high potential in his work experience but in recent days he is doing lo…
+##  3 emerson rose is a fairly average worker she puts out satisfactory work and she shows little potential …
+##  4 i am writing a review for mr jay reid while he is a great person unfortunately that doesnt show up in …
+##  5 chelsea ross performed at a high level this past year she is one of the most reliable and solid perfor…
+##  6 eloise foster is a follower rather than a leader while she does complete her tasks in a timely manner …
+##  7 eloise is a very capable worker and always produces excellent work she always finishes her work early …
+##  8 dennis is a consistently reliable as an employee his work product is always above par and his dedicati…
+##  9 kieran is a linchpin of the team and a dependable worker can be trusted with tasks of moderate complex…
+## 10 while i have found some issues with logan performance in the past specifically a lack of attention to …
+## # … with 78 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1a-auto[
+
+```r
+employee_responses %&gt;%
+  select(feedback) %&gt;%  # Select the column with open ended responses
+  mutate(feedback = textclean::replace_non_ascii(feedback)) %&gt;%  # Convert to a standard format
+  mutate(feedback = str_to_lower(feedback)) %&gt;%  # Convert all words to lower case
+  mutate(feedback = str_remove_all(feedback, "'s")) %&gt;%  # Remove all cases of `s
+  mutate(feedback = str_remove_all(feedback, "[[:digit:]]")) %&gt;%  # Remove all numbers
+  mutate(feedback = str_remove_all(feedback, "[[:punct:]]")) %&gt;%  # Remove all punctuation
+# Remove all instances from a separate list
+* mutate(feedback = str_remove_all(feedback, paste0("\\b", common_names, "\\b", collapse = "|")))
+```
+]
+ 
+.panel2-sw1a-auto[
+
+```
+## # A tibble: 88 × 1
+##    feedback                                                                                               
+##    &lt;chr&gt;                                                                                                  
+##  1 "requires additional scopee willingness to self start outperforms task motivated to exceed"            
+##  2 "basically  mcknight have high potential  his work experience but  recent days he is doing  performanc…
+##  3 "  is a fairly average worker  puts out satisfactory work and  shows  potential i would  to  a  bit mo…
+##  4 "i am writing a review for    while he is a  person unfortunately that doesnt show up  his performance…
+##  5 "  performed at a high level this past year  is one of  most reliable and solid performers on  team  h…
+##  6 "  is a follower rather  a leader while  does complete  tasks  a timely manner  does  without being in…
+##  7 " is a very capable worker and always produces excellent work  always finishes  work  and diligently p…
+##  8 " is a consistently reliable as  employee his work product is always above  and his dedication and com…
+##  9 " is a linchpin of  team and a dependable worker   trusted with tasks of moderate complexity and excel…
+## 10 "while i have found some issues with  performance   past specifically a lack of attention to detail i …
+## # … with 78 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1a-auto[
+
+```r
+employee_responses %&gt;%
+  select(feedback) %&gt;%  # Select the column with open ended responses
+  mutate(feedback = textclean::replace_non_ascii(feedback)) %&gt;%  # Convert to a standard format
+  mutate(feedback = str_to_lower(feedback)) %&gt;%  # Convert all words to lower case
+  mutate(feedback = str_remove_all(feedback, "'s")) %&gt;%  # Remove all cases of `s
+  mutate(feedback = str_remove_all(feedback, "[[:digit:]]")) %&gt;%  # Remove all numbers
+  mutate(feedback = str_remove_all(feedback, "[[:punct:]]")) %&gt;%  # Remove all punctuation
+# Remove all instances from a separate list
+  mutate(feedback = str_remove_all(feedback, paste0("\\b", common_names, "\\b", collapse = "|"))) %&gt;%
+# Remove any additional terms manually
+* mutate(feedback = str_remove_all(feedback, "mcknight|cook|cunningham|hahn|vargas"))
+```
+]
+ 
+.panel2-sw1a-auto[
+
+```
+## # A tibble: 88 × 1
+##    feedback                                                                                               
+##    &lt;chr&gt;                                                                                                  
+##  1 "requires additional scopee willingness to self start outperforms task motivated to exceed"            
+##  2 "basically   have high potential  his work experience but  recent days he is doing  performance  his c…
+##  3 "  is a fairly average worker  puts out satisfactory work and  shows  potential i would  to  a  bit mo…
+##  4 "i am writing a review for    while he is a  person unfortunately that doesnt show up  his performance…
+##  5 "  performed at a high level this past year  is one of  most reliable and solid performers on  team  h…
+##  6 "  is a follower rather  a leader while  does complete  tasks  a timely manner  does  without being in…
+##  7 " is a very capable worker and always produces excellent work  always finishes  work  and diligently p…
+##  8 " is a consistently reliable as  employee his work product is always above  and his dedication and com…
+##  9 " is a linchpin of  team and a dependable worker   trusted with tasks of moderate complexity and excel…
+## 10 "while i have found some issues with  performance   past specifically a lack of attention to detail i …
+## # … with 78 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1a-auto[
+
+```r
+employee_responses %&gt;%
+  select(feedback) %&gt;%  # Select the column with open ended responses
+  mutate(feedback = textclean::replace_non_ascii(feedback)) %&gt;%  # Convert to a standard format
+  mutate(feedback = str_to_lower(feedback)) %&gt;%  # Convert all words to lower case
+  mutate(feedback = str_remove_all(feedback, "'s")) %&gt;%  # Remove all cases of `s
+  mutate(feedback = str_remove_all(feedback, "[[:digit:]]")) %&gt;%  # Remove all numbers
+  mutate(feedback = str_remove_all(feedback, "[[:punct:]]")) %&gt;%  # Remove all punctuation
+# Remove all instances from a separate list
+  mutate(feedback = str_remove_all(feedback, paste0("\\b", common_names, "\\b", collapse = "|"))) %&gt;%
+# Remove any additional terms manually
+  mutate(feedback = str_remove_all(feedback, "mcknight|cook|cunningham|hahn|vargas")) %&gt;%
+* mutate(feedback = lemmatize_strings(feedback))   # Lemmatize terms
+```
+]
+ 
+.panel2-sw1a-auto[
+
+```
+## # A tibble: 88 × 1
+##    feedback                                                                                               
+##    &lt;chr&gt;                                                                                                  
+##  1 require additional scopee willingness to self start outperform task motivate to exceed                 
+##  2 basically have high potential his work experience but recent day he be do performance his core i think…
+##  3 be a fairly average worker put out satisfactory work and show potential i would to a bite much from be…
+##  4 i be write a review for while he be a person unfortunately that doesnt show up his performance at work…
+##  5 perform at a high level this past year be one of much reliable and solid performer on team have a firm…
+##  6 be a follower rather a leader while do complete task a timely manner do without be inventive team sett…
+##  7 be a very capable worker and always produce excellent work always finish work and diligently pursue ne…
+##  8 be a consistently reliable as employee his work product be always above and his dedication and commitm…
+##  9 be a linchpin of team and a dependable worker trust with task of moderate complexity and excellent int…
+## 10 while i have find some issue with performance past specifically a lack of attention to detail i find h…
+## # … with 78 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1a-auto[
+
+```r
+employee_responses %&gt;%
+  select(feedback) %&gt;%  # Select the column with open ended responses
+  mutate(feedback = textclean::replace_non_ascii(feedback)) %&gt;%  # Convert to a standard format
+  mutate(feedback = str_to_lower(feedback)) %&gt;%  # Convert all words to lower case
+  mutate(feedback = str_remove_all(feedback, "'s")) %&gt;%  # Remove all cases of `s
+  mutate(feedback = str_remove_all(feedback, "[[:digit:]]")) %&gt;%  # Remove all numbers
+  mutate(feedback = str_remove_all(feedback, "[[:punct:]]")) %&gt;%  # Remove all punctuation
+# Remove all instances from a separate list
+  mutate(feedback = str_remove_all(feedback, paste0("\\b", common_names, "\\b", collapse = "|"))) %&gt;%
+# Remove any additional terms manually
+  mutate(feedback = str_remove_all(feedback, "mcknight|cook|cunningham|hahn|vargas")) %&gt;%
+  mutate(feedback = lemmatize_strings(feedback)) %&gt;%  # Lemmatize terms
+* mutate(feedback = str_squish(feedback))   # Remove whitespace
+```
+]
+ 
+.panel2-sw1a-auto[
+
+```
+## # A tibble: 88 × 1
+##    feedback                                                                                               
+##    &lt;chr&gt;                                                                                                  
+##  1 require additional scopee willingness to self start outperform task motivate to exceed                 
+##  2 basically have high potential his work experience but recent day he be do performance his core i think…
+##  3 be a fairly average worker put out satisfactory work and show potential i would to a bite much from be…
+##  4 i be write a review for while he be a person unfortunately that doesnt show up his performance at work…
+##  5 perform at a high level this past year be one of much reliable and solid performer on team have a firm…
+##  6 be a follower rather a leader while do complete task a timely manner do without be inventive team sett…
+##  7 be a very capable worker and always produce excellent work always finish work and diligently pursue ne…
+##  8 be a consistently reliable as employee his work product be always above and his dedication and commitm…
+##  9 be a linchpin of team and a dependable worker trust with task of moderate complexity and excellent int…
+## 10 while i have find some issue with performance past specifically a lack of attention to detail i find h…
+## # … with 78 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1a-auto[
+
+```r
+employee_responses %&gt;%
+  select(feedback) %&gt;%  # Select the column with open ended responses
+  mutate(feedback = textclean::replace_non_ascii(feedback)) %&gt;%  # Convert to a standard format
+  mutate(feedback = str_to_lower(feedback)) %&gt;%  # Convert all words to lower case
+  mutate(feedback = str_remove_all(feedback, "'s")) %&gt;%  # Remove all cases of `s
+  mutate(feedback = str_remove_all(feedback, "[[:digit:]]")) %&gt;%  # Remove all numbers
+  mutate(feedback = str_remove_all(feedback, "[[:punct:]]")) %&gt;%  # Remove all punctuation
+# Remove all instances from a separate list
+  mutate(feedback = str_remove_all(feedback, paste0("\\b", common_names, "\\b", collapse = "|"))) %&gt;%
+# Remove any additional terms manually
+  mutate(feedback = str_remove_all(feedback, "mcknight|cook|cunningham|hahn|vargas")) %&gt;%
+  mutate(feedback = lemmatize_strings(feedback)) %&gt;%  # Lemmatize terms
+  mutate(feedback = str_squish(feedback)) %&gt;%  # Remove whitespace
+* mutate(feedback = na_if(feedback, ""))   #  Replace blanks with NA
+```
+]
+ 
+.panel2-sw1a-auto[
+
+```
+## # A tibble: 88 × 1
+##    feedback                                                                                               
+##    &lt;chr&gt;                                                                                                  
+##  1 require additional scopee willingness to self start outperform task motivate to exceed                 
+##  2 basically have high potential his work experience but recent day he be do performance his core i think…
+##  3 be a fairly average worker put out satisfactory work and show potential i would to a bite much from be…
+##  4 i be write a review for while he be a person unfortunately that doesnt show up his performance at work…
+##  5 perform at a high level this past year be one of much reliable and solid performer on team have a firm…
+##  6 be a follower rather a leader while do complete task a timely manner do without be inventive team sett…
+##  7 be a very capable worker and always produce excellent work always finish work and diligently pursue ne…
+##  8 be a consistently reliable as employee his work product be always above and his dedication and commitm…
+##  9 be a linchpin of team and a dependable worker trust with task of moderate complexity and excellent int…
+## 10 while i have find some issue with performance past specifically a lack of attention to detail i find h…
+## # … with 78 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1a-auto[
+
+```r
+employee_responses %&gt;%
+  select(feedback) %&gt;%  # Select the column with open ended responses
+  mutate(feedback = textclean::replace_non_ascii(feedback)) %&gt;%  # Convert to a standard format
+  mutate(feedback = str_to_lower(feedback)) %&gt;%  # Convert all words to lower case
+  mutate(feedback = str_remove_all(feedback, "'s")) %&gt;%  # Remove all cases of `s
+  mutate(feedback = str_remove_all(feedback, "[[:digit:]]")) %&gt;%  # Remove all numbers
+  mutate(feedback = str_remove_all(feedback, "[[:punct:]]")) %&gt;%  # Remove all punctuation
+# Remove all instances from a separate list
+  mutate(feedback = str_remove_all(feedback, paste0("\\b", common_names, "\\b", collapse = "|"))) %&gt;%
+# Remove any additional terms manually
+  mutate(feedback = str_remove_all(feedback, "mcknight|cook|cunningham|hahn|vargas")) %&gt;%
+  mutate(feedback = lemmatize_strings(feedback)) %&gt;%  # Lemmatize terms
+  mutate(feedback = str_squish(feedback)) %&gt;%  # Remove whitespace
+  mutate(feedback = na_if(feedback, "")) %&gt;%  #  Replace blanks with NA
+* drop_na()  # Drop all columns with NA
+```
+]
+ 
+.panel2-sw1a-auto[
+
+```
+## # A tibble: 88 × 1
+##    feedback                                                                                               
+##    &lt;chr&gt;                                                                                                  
+##  1 require additional scopee willingness to self start outperform task motivate to exceed                 
+##  2 basically have high potential his work experience but recent day he be do performance his core i think…
+##  3 be a fairly average worker put out satisfactory work and show potential i would to a bite much from be…
+##  4 i be write a review for while he be a person unfortunately that doesnt show up his performance at work…
+##  5 perform at a high level this past year be one of much reliable and solid performer on team have a firm…
+##  6 be a follower rather a leader while do complete task a timely manner do without be inventive team sett…
+##  7 be a very capable worker and always produce excellent work always finish work and diligently pursue ne…
+##  8 be a consistently reliable as employee his work product be always above and his dedication and commitm…
+##  9 be a linchpin of team and a dependable worker trust with task of moderate complexity and excellent int…
+## 10 while i have find some issue with performance past specifically a lack of attention to detail i find h…
+## # … with 78 more rows
+```
+]
+
+&lt;style&gt;
+.panel1-sw1a-auto {
+  color: white;
+  width: 98%;
+  hight: 32%;
+  float: top;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw1a-auto {
+  color: white;
+  width: 0%;
+  hight: 32%;
+  float: top;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw1a-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: top;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+.footnote[
+&lt;div style="text-align: center; color: #212121; border:1px; border-style:solid; border-color:#c7f9f6; background-color: #c7f9f6; border-radius: 15px; padding: 0.65em; width:fit-content;"&gt;
+Please note that &lt;i&gt;removing all instances from a separate list&lt;/i&gt; may take up to a minute to complete
+&lt;/div&gt;
+]
+
+---
+
+### Assigning a Variable 
+
+Let's save the entire cleaning process 
+
+
+```r
+ responses_cleaned &lt;-
+  employee_responses %&gt;%
+  select(feedback) %&gt;%
+  mutate(feedback = textclean::replace_non_ascii(feedback)) %&gt;%
+  mutate(feedback = str_to_lower(feedback)) %&gt;%
+  mutate(feedback = str_remove_all(feedback, "'s")) %&gt;%
+  mutate(feedback = str_remove_all(feedback, "[[:digit:]]")) %&gt;%
+  mutate(feedback = str_remove_all(feedback, "[[:punct:]]")) %&gt;%
+  mutate(feedback = str_remove_all(feedback, paste0("\\b", common_names, "\\b", collapse = "|"))) %&gt;%
+  mutate(feedback = str_remove_all(feedback, "mcknight|cook|cunningham|hahn|vargas")) %&gt;%
+  mutate(feedback = lemmatize_strings(feedback)) %&gt;%
+  mutate(feedback = str_squish(feedback)) %&gt;%
+  mutate(feedback = na_if(feedback, "")) %&gt;%
+  drop_na()
+```
+
+---
+
+### What Just Happened?
+
+--
+
+Let's try doing something similar but with shorter and simpler text taken from the very funny skit [Sharknado Pitch Meeting](https://youtu.be/CYootnc0uew)
+
+
+```r
+example_text &lt;- 
+  c("Excerpt from Sharknado Pitch Meeting. 
+     Creator: Ryan George. 
+    
+     (1) It’s peer reviewed. 
+     (2) Multiple scientists looked over that and approved of it? 
+     (3) No some drunk guy on the pier checked it out. He loved it!
+     (4) That is technically peer reviewed. I think we’re good.
+    
+     --The End--
+    ")
+```
+
+---
+
+1. Take a look at the raw text data
+.remarkwidth[
+
+```r
+example_text
+```
+
+```
+## [1] "Excerpt from Sharknado Pitch Meeting. \n     Creator: Ryan George. \n    \n     (1) It’s peer reviewed. \n     (2) Multiple scientists looked over that and approved of it? \n     (3) No some drunk guy on the pier checked it out. He loved it!\n     (4) That is technically peer reviewed. I think we’re good.\n    \n     --The End--\n    "
+```
+]
+
+--
+
+2. Then we wrangle using a very similar process 
+
+---
+
+
+count: false
+ 
+
+.panel1-sw1b-auto[
+
+```r
+*example_text
+```
+]
+ 
+.panel2-sw1b-auto[
+
+```
+## [1] "Excerpt from Sharknado Pitch Meeting. \n     Creator: Ryan George. \n    \n     (1) It’s peer reviewed. \n     (2) Multiple scientists looked over that and approved of it? \n     (3) No some drunk guy on the pier checked it out. He loved it!\n     (4) That is technically peer reviewed. I think we’re good.\n    \n     --The End--\n    "
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1b-auto[
+
+```r
+example_text %&gt;%
+* read_lines()   # Parse text into individual lines
+```
+]
+ 
+.panel2-sw1b-auto[
+
+```
+##  [1] "Excerpt from Sharknado Pitch Meeting. "                             
+##  [2] "     Creator: Ryan George. "                                        
+##  [3] "    "                                                               
+##  [4] "     (1) It’s peer reviewed. "                                      
+##  [5] "     (2) Multiple scientists looked over that and approved of it? " 
+##  [6] "     (3) No some drunk guy on the pier checked it out. He loved it!"
+##  [7] "     (4) That is technically peer reviewed. I think we’re good."    
+##  [8] "    "                                                               
+##  [9] "     --The End--"                                                   
+## [10] "    "
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1b-auto[
+
+```r
+example_text %&gt;%
+  read_lines() %&gt;%  # Parse text into individual lines
+* as_tibble_col("text")   # Create a single tidy column
+```
+]
+ 
+.panel2-sw1b-auto[
+
+```
+## # A tibble: 10 × 1
+##    text                                                                 
+##    &lt;chr&gt;                                                                
+##  1 "Excerpt from Sharknado Pitch Meeting. "                             
+##  2 "     Creator: Ryan George. "                                        
+##  3 "    "                                                               
+##  4 "     (1) It’s peer reviewed. "                                      
+##  5 "     (2) Multiple scientists looked over that and approved of it? " 
+##  6 "     (3) No some drunk guy on the pier checked it out. He loved it!"
+##  7 "     (4) That is technically peer reviewed. I think we’re good."    
+##  8 "    "                                                               
+##  9 "     --The End--"                                                   
+## 10 "    "
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1b-auto[
+
+```r
+example_text %&gt;%
+  read_lines() %&gt;%  # Parse text into individual lines
+  as_tibble_col("text") %&gt;%  # Create a single tidy column
+* slice(4:n())   # Remove unnecessary text
+```
+]
+ 
+.panel2-sw1b-auto[
+
+```
+## # A tibble: 7 × 1
+##   text                                                                 
+##   &lt;chr&gt;                                                                
+## 1 "     (1) It’s peer reviewed. "                                      
+## 2 "     (2) Multiple scientists looked over that and approved of it? " 
+## 3 "     (3) No some drunk guy on the pier checked it out. He loved it!"
+## 4 "     (4) That is technically peer reviewed. I think we’re good."    
+## 5 "    "                                                               
+## 6 "     --The End--"                                                   
+## 7 "    "
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1b-auto[
+
+```r
+example_text %&gt;%
+  read_lines() %&gt;%  # Parse text into individual lines
+  as_tibble_col("text") %&gt;%  # Create a single tidy column
+  slice(4:n()) %&gt;%  # Remove unnecessary text
+* mutate(text = textclean::replace_non_ascii(text))   # Convert to a standard format
+```
+]
+ 
+.panel2-sw1b-auto[
+
+```
+## # A tibble: 7 × 1
+##   text                                                            
+##   &lt;chr&gt;                                                           
+## 1 "(1) It's peer reviewed."                                       
+## 2 "(2) Multiple scientists looked over that and approved of it?"  
+## 3 "(3) No some drunk guy on the pier checked it out. He loved it!"
+## 4 "(4) That is technically peer reviewed. I think we're good."    
+## 5 ""                                                              
+## 6 "--The End--"                                                   
+## 7 ""
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1b-auto[
+
+```r
+example_text %&gt;%
+  read_lines() %&gt;%  # Parse text into individual lines
+  as_tibble_col("text") %&gt;%  # Create a single tidy column
+  slice(4:n()) %&gt;%  # Remove unnecessary text
+  mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standard format
+* mutate(text = str_to_lower(text))   # Convert all words to lower case
+```
+]
+ 
+.panel2-sw1b-auto[
+
+```
+## # A tibble: 7 × 1
+##   text                                                            
+##   &lt;chr&gt;                                                           
+## 1 "(1) it's peer reviewed."                                       
+## 2 "(2) multiple scientists looked over that and approved of it?"  
+## 3 "(3) no some drunk guy on the pier checked it out. he loved it!"
+## 4 "(4) that is technically peer reviewed. i think we're good."    
+## 5 ""                                                              
+## 6 "--the end--"                                                   
+## 7 ""
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1b-auto[
+
+```r
+example_text %&gt;%
+  read_lines() %&gt;%  # Parse text into individual lines
+  as_tibble_col("text") %&gt;%  # Create a single tidy column
+  slice(4:n()) %&gt;%  # Remove unnecessary text
+  mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standard format
+  mutate(text = str_to_lower(text)) %&gt;%  # Convert all words to lower case
+* mutate(text = str_remove_all(text, "'s"))   # Remove all cases of `s
+```
+]
+ 
+.panel2-sw1b-auto[
+
+```
+## # A tibble: 7 × 1
+##   text                                                            
+##   &lt;chr&gt;                                                           
+## 1 "(1) it peer reviewed."                                         
+## 2 "(2) multiple scientists looked over that and approved of it?"  
+## 3 "(3) no some drunk guy on the pier checked it out. he loved it!"
+## 4 "(4) that is technically peer reviewed. i think we're good."    
+## 5 ""                                                              
+## 6 "--the end--"                                                   
+## 7 ""
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1b-auto[
+
+```r
+example_text %&gt;%
+  read_lines() %&gt;%  # Parse text into individual lines
+  as_tibble_col("text") %&gt;%  # Create a single tidy column
+  slice(4:n()) %&gt;%  # Remove unnecessary text
+  mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standard format
+  mutate(text = str_to_lower(text)) %&gt;%  # Convert all words to lower case
+  mutate(text = str_remove_all(text, "'s")) %&gt;%  # Remove all cases of `s
+* mutate(text = str_remove_all(text, "[[:digit:]]"))   # Remove all numbers
+```
+]
+ 
+.panel2-sw1b-auto[
+
+```
+## # A tibble: 7 × 1
+##   text                                                           
+##   &lt;chr&gt;                                                          
+## 1 "() it peer reviewed."                                         
+## 2 "() multiple scientists looked over that and approved of it?"  
+## 3 "() no some drunk guy on the pier checked it out. he loved it!"
+## 4 "() that is technically peer reviewed. i think we're good."    
+## 5 ""                                                             
+## 6 "--the end--"                                                  
+## 7 ""
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1b-auto[
+
+```r
+example_text %&gt;%
+  read_lines() %&gt;%  # Parse text into individual lines
+  as_tibble_col("text") %&gt;%  # Create a single tidy column
+  slice(4:n()) %&gt;%  # Remove unnecessary text
+  mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standard format
+  mutate(text = str_to_lower(text)) %&gt;%  # Convert all words to lower case
+  mutate(text = str_remove_all(text, "'s")) %&gt;%  # Remove all cases of `s
+  mutate(text = str_remove_all(text, "[[:digit:]]")) %&gt;%  # Remove all numbers
+* mutate(text = str_remove_all(text, "[[:punct:]]"))   # Remove all punctuation
+```
+]
+ 
+.panel2-sw1b-auto[
+
+```
+## # A tibble: 7 × 1
+##   text                                                       
+##   &lt;chr&gt;                                                      
+## 1 " it peer reviewed"                                        
+## 2 " multiple scientists looked over that and approved of it" 
+## 3 " no some drunk guy on the pier checked it out he loved it"
+## 4 " that is technically peer reviewed i think were good"     
+## 5 ""                                                         
+## 6 "the end"                                                  
+## 7 ""
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1b-auto[
+
+```r
+example_text %&gt;%
+  read_lines() %&gt;%  # Parse text into individual lines
+  as_tibble_col("text") %&gt;%  # Create a single tidy column
+  slice(4:n()) %&gt;%  # Remove unnecessary text
+  mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standard format
+  mutate(text = str_to_lower(text)) %&gt;%  # Convert all words to lower case
+  mutate(text = str_remove_all(text, "'s")) %&gt;%  # Remove all cases of `s
+  mutate(text = str_remove_all(text, "[[:digit:]]")) %&gt;%  # Remove all numbers
+  mutate(text = str_remove_all(text, "[[:punct:]]")) %&gt;%  # Remove all punctuation
+* mutate(text = str_remove_all(text, "the end"))   # Remove term
+```
+]
+ 
+.panel2-sw1b-auto[
+
+```
+## # A tibble: 7 × 1
+##   text                                                       
+##   &lt;chr&gt;                                                      
+## 1 " it peer reviewed"                                        
+## 2 " multiple scientists looked over that and approved of it" 
+## 3 " no some drunk guy on the pier checked it out he loved it"
+## 4 " that is technically peer reviewed i think were good"     
+## 5 ""                                                         
+## 6 ""                                                         
+## 7 ""
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1b-auto[
+
+```r
+example_text %&gt;%
+  read_lines() %&gt;%  # Parse text into individual lines
+  as_tibble_col("text") %&gt;%  # Create a single tidy column
+  slice(4:n()) %&gt;%  # Remove unnecessary text
+  mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standard format
+  mutate(text = str_to_lower(text)) %&gt;%  # Convert all words to lower case
+  mutate(text = str_remove_all(text, "'s")) %&gt;%  # Remove all cases of `s
+  mutate(text = str_remove_all(text, "[[:digit:]]")) %&gt;%  # Remove all numbers
+  mutate(text = str_remove_all(text, "[[:punct:]]")) %&gt;%  # Remove all punctuation
+  mutate(text = str_remove_all(text, "the end")) %&gt;%  # Remove term
+* mutate(text = str_replace_all(text, "multiple scientists", "scientists"))   # Replace term
+```
+]
+ 
+.panel2-sw1b-auto[
+
+```
+## # A tibble: 7 × 1
+##   text                                                       
+##   &lt;chr&gt;                                                      
+## 1 " it peer reviewed"                                        
+## 2 " scientists looked over that and approved of it"          
+## 3 " no some drunk guy on the pier checked it out he loved it"
+## 4 " that is technically peer reviewed i think were good"     
+## 5 ""                                                         
+## 6 ""                                                         
+## 7 ""
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1b-auto[
+
+```r
+example_text %&gt;%
+  read_lines() %&gt;%  # Parse text into individual lines
+  as_tibble_col("text") %&gt;%  # Create a single tidy column
+  slice(4:n()) %&gt;%  # Remove unnecessary text
+  mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standard format
+  mutate(text = str_to_lower(text)) %&gt;%  # Convert all words to lower case
+  mutate(text = str_remove_all(text, "'s")) %&gt;%  # Remove all cases of `s
+  mutate(text = str_remove_all(text, "[[:digit:]]")) %&gt;%  # Remove all numbers
+  mutate(text = str_remove_all(text, "[[:punct:]]")) %&gt;%  # Remove all punctuation
+  mutate(text = str_remove_all(text, "the end")) %&gt;%  # Remove term
+  mutate(text = str_replace_all(text, "multiple scientists", "scientists")) %&gt;%  # Replace term
+* mutate(text = str_replace_all(text, "it", "paper"))   # Replace term
+```
+]
+ 
+.panel2-sw1b-auto[
+
+```
+## # A tibble: 7 × 1
+##   text                                                             
+##   &lt;chr&gt;                                                            
+## 1 " paper peer reviewed"                                           
+## 2 " scientists looked over that and approved of paper"             
+## 3 " no some drunk guy on the pier checked paper out he loved paper"
+## 4 " that is technically peer reviewed i think were good"           
+## 5 ""                                                               
+## 6 ""                                                               
+## 7 ""
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1b-auto[
+
+```r
+example_text %&gt;%
+  read_lines() %&gt;%  # Parse text into individual lines
+  as_tibble_col("text") %&gt;%  # Create a single tidy column
+  slice(4:n()) %&gt;%  # Remove unnecessary text
+  mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standard format
+  mutate(text = str_to_lower(text)) %&gt;%  # Convert all words to lower case
+  mutate(text = str_remove_all(text, "'s")) %&gt;%  # Remove all cases of `s
+  mutate(text = str_remove_all(text, "[[:digit:]]")) %&gt;%  # Remove all numbers
+  mutate(text = str_remove_all(text, "[[:punct:]]")) %&gt;%  # Remove all punctuation
+  mutate(text = str_remove_all(text, "the end")) %&gt;%  # Remove term
+  mutate(text = str_replace_all(text, "multiple scientists", "scientists")) %&gt;%  # Replace term
+  mutate(text = str_replace_all(text, "it", "paper")) %&gt;%  # Replace term
+* mutate(text = str_replace_all(text, "that", "paper"))   # Replace term
+```
+]
+ 
+.panel2-sw1b-auto[
+
+```
+## # A tibble: 7 × 1
+##   text                                                             
+##   &lt;chr&gt;                                                            
+## 1 " paper peer reviewed"                                           
+## 2 " scientists looked over paper and approved of paper"            
+## 3 " no some drunk guy on the pier checked paper out he loved paper"
+## 4 " paper is technically peer reviewed i think were good"          
+## 5 ""                                                               
+## 6 ""                                                               
+## 7 ""
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1b-auto[
+
+```r
+example_text %&gt;%
+  read_lines() %&gt;%  # Parse text into individual lines
+  as_tibble_col("text") %&gt;%  # Create a single tidy column
+  slice(4:n()) %&gt;%  # Remove unnecessary text
+  mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standard format
+  mutate(text = str_to_lower(text)) %&gt;%  # Convert all words to lower case
+  mutate(text = str_remove_all(text, "'s")) %&gt;%  # Remove all cases of `s
+  mutate(text = str_remove_all(text, "[[:digit:]]")) %&gt;%  # Remove all numbers
+  mutate(text = str_remove_all(text, "[[:punct:]]")) %&gt;%  # Remove all punctuation
+  mutate(text = str_remove_all(text, "the end")) %&gt;%  # Remove term
+  mutate(text = str_replace_all(text, "multiple scientists", "scientists")) %&gt;%  # Replace term
+  mutate(text = str_replace_all(text, "it", "paper")) %&gt;%  # Replace term
+  mutate(text = str_replace_all(text, "that", "paper")) %&gt;%  # Replace term
+* mutate(text = lemmatize_strings(text))   # Lemmatize term
+```
+]
+ 
+.panel2-sw1b-auto[
+
+```
+## # A tibble: 7 × 1
+##   text                                                         
+##   &lt;chr&gt;                                                        
+## 1 "paper peer review"                                          
+## 2 "scientist look over paper and approve of paper"             
+## 3 "no some drink guy on the pier check paper out he love paper"
+## 4 "paper be technically peer review i think be good"           
+## 5 ""                                                           
+## 6 ""                                                           
+## 7 ""
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1b-auto[
+
+```r
+example_text %&gt;%
+  read_lines() %&gt;%  # Parse text into individual lines
+  as_tibble_col("text") %&gt;%  # Create a single tidy column
+  slice(4:n()) %&gt;%  # Remove unnecessary text
+  mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standard format
+  mutate(text = str_to_lower(text)) %&gt;%  # Convert all words to lower case
+  mutate(text = str_remove_all(text, "'s")) %&gt;%  # Remove all cases of `s
+  mutate(text = str_remove_all(text, "[[:digit:]]")) %&gt;%  # Remove all numbers
+  mutate(text = str_remove_all(text, "[[:punct:]]")) %&gt;%  # Remove all punctuation
+  mutate(text = str_remove_all(text, "the end")) %&gt;%  # Remove term
+  mutate(text = str_replace_all(text, "multiple scientists", "scientists")) %&gt;%  # Replace term
+  mutate(text = str_replace_all(text, "it", "paper")) %&gt;%  # Replace term
+  mutate(text = str_replace_all(text, "that", "paper")) %&gt;%  # Replace term
+  mutate(text = lemmatize_strings(text)) %&gt;%  # Lemmatize term
+* mutate(text = str_remove_all(text, c("paper")))   # Remove term
+```
+]
+ 
+.panel2-sw1b-auto[
+
+```
+## # A tibble: 7 × 1
+##   text                                               
+##   &lt;chr&gt;                                              
+## 1 " peer review"                                     
+## 2 "scientist look over  and approve of "             
+## 3 "no some drink guy on the pier check  out he love "
+## 4 " be technically peer review i think be good"      
+## 5 ""                                                 
+## 6 ""                                                 
+## 7 ""
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1b-auto[
+
+```r
+example_text %&gt;%
+  read_lines() %&gt;%  # Parse text into individual lines
+  as_tibble_col("text") %&gt;%  # Create a single tidy column
+  slice(4:n()) %&gt;%  # Remove unnecessary text
+  mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standard format
+  mutate(text = str_to_lower(text)) %&gt;%  # Convert all words to lower case
+  mutate(text = str_remove_all(text, "'s")) %&gt;%  # Remove all cases of `s
+  mutate(text = str_remove_all(text, "[[:digit:]]")) %&gt;%  # Remove all numbers
+  mutate(text = str_remove_all(text, "[[:punct:]]")) %&gt;%  # Remove all punctuation
+  mutate(text = str_remove_all(text, "the end")) %&gt;%  # Remove term
+  mutate(text = str_replace_all(text, "multiple scientists", "scientists")) %&gt;%  # Replace term
+  mutate(text = str_replace_all(text, "it", "paper")) %&gt;%  # Replace term
+  mutate(text = str_replace_all(text, "that", "paper")) %&gt;%  # Replace term
+  mutate(text = lemmatize_strings(text)) %&gt;%  # Lemmatize term
+  mutate(text = str_remove_all(text, c("paper"))) %&gt;%  # Remove term
+* mutate(text = str_squish(text))   # Remove whitespace
+```
+]
+ 
+.panel2-sw1b-auto[
+
+```
+## # A tibble: 7 × 1
+##   text                                             
+##   &lt;chr&gt;                                            
+## 1 "peer review"                                    
+## 2 "scientist look over and approve of"             
+## 3 "no some drink guy on the pier check out he love"
+## 4 "be technically peer review i think be good"     
+## 5 ""                                               
+## 6 ""                                               
+## 7 ""
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1b-auto[
+
+```r
+example_text %&gt;%
+  read_lines() %&gt;%  # Parse text into individual lines
+  as_tibble_col("text") %&gt;%  # Create a single tidy column
+  slice(4:n()) %&gt;%  # Remove unnecessary text
+  mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standard format
+  mutate(text = str_to_lower(text)) %&gt;%  # Convert all words to lower case
+  mutate(text = str_remove_all(text, "'s")) %&gt;%  # Remove all cases of `s
+  mutate(text = str_remove_all(text, "[[:digit:]]")) %&gt;%  # Remove all numbers
+  mutate(text = str_remove_all(text, "[[:punct:]]")) %&gt;%  # Remove all punctuation
+  mutate(text = str_remove_all(text, "the end")) %&gt;%  # Remove term
+  mutate(text = str_replace_all(text, "multiple scientists", "scientists")) %&gt;%  # Replace term
+  mutate(text = str_replace_all(text, "it", "paper")) %&gt;%  # Replace term
+  mutate(text = str_replace_all(text, "that", "paper")) %&gt;%  # Replace term
+  mutate(text = lemmatize_strings(text)) %&gt;%  # Lemmatize term
+  mutate(text = str_remove_all(text, c("paper"))) %&gt;%  # Remove term
+  mutate(text = str_squish(text)) %&gt;%  # Remove whitespace
+* mutate(text = na_if(text, ""))   # Replace blanks with NA
+```
+]
+ 
+.panel2-sw1b-auto[
+
+```
+## # A tibble: 7 × 1
+##   text                                           
+##   &lt;chr&gt;                                          
+## 1 peer review                                    
+## 2 scientist look over and approve of             
+## 3 no some drink guy on the pier check out he love
+## 4 be technically peer review i think be good     
+## 5 &lt;NA&gt;                                           
+## 6 &lt;NA&gt;                                           
+## 7 &lt;NA&gt;
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw1b-auto[
+
+```r
+example_text %&gt;%
+  read_lines() %&gt;%  # Parse text into individual lines
+  as_tibble_col("text") %&gt;%  # Create a single tidy column
+  slice(4:n()) %&gt;%  # Remove unnecessary text
+  mutate(text = textclean::replace_non_ascii(text)) %&gt;%  # Convert to a standard format
+  mutate(text = str_to_lower(text)) %&gt;%  # Convert all words to lower case
+  mutate(text = str_remove_all(text, "'s")) %&gt;%  # Remove all cases of `s
+  mutate(text = str_remove_all(text, "[[:digit:]]")) %&gt;%  # Remove all numbers
+  mutate(text = str_remove_all(text, "[[:punct:]]")) %&gt;%  # Remove all punctuation
+  mutate(text = str_remove_all(text, "the end")) %&gt;%  # Remove term
+  mutate(text = str_replace_all(text, "multiple scientists", "scientists")) %&gt;%  # Replace term
+  mutate(text = str_replace_all(text, "it", "paper")) %&gt;%  # Replace term
+  mutate(text = str_replace_all(text, "that", "paper")) %&gt;%  # Replace term
+  mutate(text = lemmatize_strings(text)) %&gt;%  # Lemmatize term
+  mutate(text = str_remove_all(text, c("paper"))) %&gt;%  # Remove term
+  mutate(text = str_squish(text)) %&gt;%  # Remove whitespace
+  mutate(text = na_if(text, "")) %&gt;%  # Replace blanks with NA
+* drop_na()  # Drop all columns with NA
+```
+]
+ 
+.panel2-sw1b-auto[
+
+```
+## # A tibble: 4 × 1
+##   text                                           
+##   &lt;chr&gt;                                          
+## 1 peer review                                    
+## 2 scientist look over and approve of             
+## 3 no some drink guy on the pier check out he love
+## 4 be technically peer review i think be good
+```
+]
+
+&lt;style&gt;
+.panel1-sw1b-auto {
+  color: white;
+  width: 98%;
+  hight: 32%;
+  float: top;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw1b-auto {
+  color: white;
+  width: 0%;
+  hight: 32%;
+  float: top;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw1b-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: top;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+---
+
+&lt;span style = "font-size:1.75rem"&gt;&lt;b&gt;Normalization&lt;/b&gt; of Remaining Wording&lt;/span&gt;
+
+--
+
+
+&gt; is used to reduce word randomness which allows some level of standardization to help to reduce the amount of different information that a computer has to process therefore improving efficiency
+
+--
+
+&gt; the overall goal is to reduce inflectional forms and sometimes derivationally related forms of a word to a common base form
+
+--
+
+&gt; two popular normalization techniques are &lt;span style="color:#f5ebd9; font-weight:bold; font-style:italic;"&gt;lemmatization&lt;/span&gt; and &lt;span style="color:#d9e3f5; font-weight:bold; font-style:italic;"&gt;stemming&lt;/span&gt;
+
+---
+
+## &lt;span style="color:#f5ebd9; font-weight:bold; font-style:italic;"&gt;Lemmatization&lt;/span&gt; vs. &lt;span style="color:#d9e3f5; font-weight:bold; font-style:italic;"&gt;Stemming&lt;/span&gt;
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+.pull-left[
+&lt;p id="center" style="color:#f5ebd9; border:1px; border-style:solid; border-color:#f5ebd9; border-radius: 25px; padding: 0.3em; margin-top: -6px"&gt;
+&lt;span style = "font-weight:bold; font-style:italic;"&gt;Lemmatization&lt;/span&gt;&lt;br&gt;&lt;br&gt;
+the process of reducing words to their base word&lt;br&gt;&lt;br&gt;
+(takes more time)
+&lt;/p&gt;
+]
+
+--
+
+.pull-right[
+&lt;p id="center" style="color:#d9e3f5; border:1px; border-style:solid; border-color:#d9e3f5; border-radius: 25px; padding: 0.3em; margin-top: -6px"&gt;
+&lt;span style = "font-weight:bold; font-style:italic;"&gt;Stemming&lt;/span&gt;&lt;br&gt;&lt;br&gt;
+the process of reducing words to their word stem or root form by removing word endings or other affixes&lt;br&gt;&lt;br&gt;
+(takes less time)
+&lt;/p&gt;
+]
+
+--
+
+&lt;br&gt;
+.pull-left[
+&lt;p id="center" style="color:#f5ebd9; border:1px; border-style:solid; border-color:#f5ebd9; border-radius: 25px; padding: 0.3em; margin-top: -6px"&gt;
+&lt;i&gt;Example&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+the term &lt;i&gt;better&lt;/i&gt; has the lemma &lt;i&gt;good&lt;/i&gt;
+&lt;/p&gt;
+]
+
+--
+
+.pull-right[
+&lt;p id="center" style="color:#d9e3f5; border:1px; border-style:solid; border-color:#d9e3f5; border-radius: 25px; padding: 0.3em; margin-top: -6px"&gt;
+&lt;i&gt;Example&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+the term &lt;i&gt;flooding&lt;/i&gt; has the stem &lt;i&gt;flood&lt;/i&gt;
+&lt;/p&gt;
+]
+
+--
+
+.footnote[For a great rundown of this topic, avoid the syntax and read over [Text Normalization for Natural Language Processing (NLP)](https://towardsdatascience.com/text-normalization-for-natural-language-processing-nlp-70a314bfa646)]
+
+---
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;center&gt;
+&lt;img src="img/lemmastem.png" alt="Lemmatization v Stemming Table Example" width='700'&gt;&lt;/a&gt;
+&lt;/center&gt;
+
+---
+
+&lt;span style = "font-size:1.75rem"&gt;&lt;b&gt;Tokenizing&lt;/b&gt; Handled Data&lt;/span&gt;
+
+--
+
+.center2[&lt;i&gt;A process of distinguishing and classifying sections of a string of input characters&lt;/i&gt;]
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+What you should take from this is that &lt;b&gt;unnesting&lt;/b&gt; data successfully is a requirement to be able to **tokenize**. While the next set of commands should look familiar, please consider taking a bit of time to really see what occurs in each step
+
+---
+
+&lt;span style = "font-size:1.75rem"&gt;&lt;b&gt;Filtering stopwords&lt;/b&gt;&lt;/span&gt;
+
+---
+
+
+count: false
+ 
+
+.panel1-sw2-auto[
+
+```r
+*responses_cleaned
+```
+]
+ 
+.panel2-sw2-auto[
+
+```
+## # A tibble: 88 × 1
+##    feedback                                                                                               
+##    &lt;chr&gt;                                                                                                  
+##  1 require additional scopee willingness to self start outperform task motivate to exceed                 
+##  2 basically have high potential his work experience but recent day he be do performance his core i think…
+##  3 be a fairly average worker put out satisfactory work and show potential i would to a bite much from be…
+##  4 i be write a review for while he be a person unfortunately that doesnt show up his performance at work…
+##  5 perform at a high level this past year be one of much reliable and solid performer on team have a firm…
+##  6 be a follower rather a leader while do complete task a timely manner do without be inventive team sett…
+##  7 be a very capable worker and always produce excellent work always finish work and diligently pursue ne…
+##  8 be a consistently reliable as employee his work product be always above and his dedication and commitm…
+##  9 be a linchpin of team and a dependable worker trust with task of moderate complexity and excellent int…
+## 10 while i have find some issue with performance past specifically a lack of attention to detail i find h…
+## # … with 78 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw2-auto[
+
+```r
+responses_cleaned %&gt;%
+* unnest_tokens(word, feedback)
+```
+]
+ 
+.panel2-sw2-auto[
+
+```
+## # A tibble: 4,107 × 1
+##    word       
+##    &lt;chr&gt;      
+##  1 require    
+##  2 additional 
+##  3 scopee     
+##  4 willingness
+##  5 to         
+##  6 self       
+##  7 start      
+##  8 outperform 
+##  9 task       
+## 10 motivate   
+## # … with 4,097 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw2-auto[
+
+```r
+responses_cleaned %&gt;%
+  unnest_tokens(word, feedback) %&gt;%
+* anti_join(stop_words)
+```
+]
+ 
+.panel2-sw2-auto[
+
+```
+## Joining, by = "word"
+```
+
+```
+## # A tibble: 1,401 × 1
+##    word       
+##    &lt;chr&gt;      
+##  1 require    
+##  2 additional 
+##  3 scopee     
+##  4 willingness
+##  5 start      
+##  6 outperform 
+##  7 task       
+##  8 motivate   
+##  9 exceed     
+## 10 basically  
+## # … with 1,391 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw2-auto[
+
+```r
+responses_cleaned %&gt;%
+  unnest_tokens(word, feedback) %&gt;%
+  anti_join(stop_words) %&gt;%
+* count(word, sort = TRUE)
+```
+]
+ 
+.panel2-sw2-auto[
+
+```
+## Joining, by = "word"
+```
+
+```
+## # A tibble: 579 × 2
+##    word            n
+##    &lt;chr&gt;       &lt;int&gt;
+##  1 time           40
+##  2 improve        38
+##  3 team           31
+##  4 performance    27
+##  5 potential      26
+##  6 company        23
+##  7 task           23
+##  8 skill          18
+##  9 worker         17
+## 10 complete       15
+## # … with 569 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw2-auto[
+
+```r
+responses_cleaned %&gt;%
+  unnest_tokens(word, feedback) %&gt;%
+  anti_join(stop_words) %&gt;%
+  count(word, sort = TRUE) %&gt;%
+* add_column(document = 1)
+```
+]
+ 
+.panel2-sw2-auto[
+
+```
+## Joining, by = "word"
+```
+
+```
+## # A tibble: 579 × 3
+##    word            n document
+##    &lt;chr&gt;       &lt;int&gt;    &lt;dbl&gt;
+##  1 time           40        1
+##  2 improve        38        1
+##  3 team           31        1
+##  4 performance    27        1
+##  5 potential      26        1
+##  6 company        23        1
+##  7 task           23        1
+##  8 skill          18        1
+##  9 worker         17        1
+## 10 complete       15        1
+## # … with 569 more rows
+```
+]
+
+&lt;style&gt;
+.panel1-sw2-auto {
+  color: white;
+  width: 49%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw2-auto {
+  color: white;
+  width: 49%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw2-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+### Assign a Variable
+
+Let's save the tokenized data frame
+
+
+```r
+responses_tokens &lt;- 
+  responses_cleaned %&gt;%
+  unnest_tokens(word, feedback) %&gt;%
+  anti_join(stop_words) %&gt;%
+  count(word, sort = TRUE) %&gt;%
+  add_column(document = 1)
+```
+
+```
+## Joining, by = "word"
+```
+
+---
+
+.center2[&lt;b&gt;&lt;span style = "font-size:2.75rem"&gt;Step 3: Statistical Classification and Modeling&lt;/span&gt;&lt;/b&gt;]
+
+---
+
+&lt;span style = "font-size:1.75rem"&gt;Creating a &lt;b&gt;Term Document Matrix&lt;/b&gt;&lt;/span&gt;
+
+---
+
+
+count: false
+ 
+
+.panel1-sw3-auto[
+
+```r
+*responses_tokens
+```
+]
+ 
+.panel2-sw3-auto[
+
+```
+## # A tibble: 579 × 3
+##    word            n document
+##    &lt;chr&gt;       &lt;int&gt;    &lt;dbl&gt;
+##  1 time           40        1
+##  2 improve        38        1
+##  3 team           31        1
+##  4 performance    27        1
+##  5 potential      26        1
+##  6 company        23        1
+##  7 task           23        1
+##  8 skill          18        1
+##  9 worker         17        1
+## 10 complete       15        1
+## # … with 569 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw3-auto[
+
+```r
+ responses_tokens %&gt;%
+* cast_dtm(document, word, n)
+```
+]
+ 
+.panel2-sw3-auto[
+
+```
+## &lt;&lt;DocumentTermMatrix (documents: 1, terms: 579)&gt;&gt;
+## Non-/sparse entries: 579/0
+## Sparsity           : 0%
+## Maximal term length: 16
+## Weighting          : term frequency (tf)
+```
+]
+
+&lt;style&gt;
+.panel1-sw3-auto {
+  color: white;
+  width: 49%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw3-auto {
+  color: white;
+  width: 49%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw3-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+### Assigning a Variable
+
+
+```r
+ responses_dtm &lt;- 
+  responses_tokens %&gt;%
+  cast_dtm(document, word, n)
+```
+
+---
+
+&lt;span style = "font-size:1.75rem"&gt;Calculating &lt;b&gt;Coherence Scores&lt;/b&gt;&lt;/span&gt;
+
+--
+
+.center2[&lt;i&gt;A measure of the degree of semantic similarity between high scoring words in the topic which These measurements help distinguish between topics that are semantically interpretable topics and topics that are artifacts of statistical inference&lt;/i&gt;]
+
+---
+
+
+count: false
+ 
+
+.panel1-sw4-auto[
+
+```r
+*FindTopicsNumber(
+* responses_dtm,
+* topics = seq(from = 2, to = 20, by = 1),
+* metrics = c("Griffiths2004",
+*             "CaoJuan2009",
+*             "Arun2010",
+*             "Deveaud2014"),
+* method = "Gibbs",
+* control = list(seed = 77),
+* mc.cores = 2L,
+* verbose = TRUE
+* )
+```
+]
+ 
+.panel2-sw4-auto[
+
+```
+## fit models... done.
+## calculate metrics:
+##   Griffiths2004... done.
+##   CaoJuan2009... done.
+##   Arun2010... done.
+##   Deveaud2014... done.
+```
+
+```
+##    topics Griffiths2004 CaoJuan2009   Arun2010 Deveaud2014
+## 1      20     -7911.127   0.2062964 1.51890626   0.6168028
+## 2      19     -7904.556   0.1967236 1.37525414   0.6470573
+## 3      18     -7901.925   0.1997969 1.32153681   0.6535171
+## 4      17     -7926.187   0.1930143 1.17535430   0.6768608
+## 5      16     -7896.660   0.1816866 1.01856724   0.7397206
+## 6      15     -7909.777   0.1830048 0.92347327   0.7523600
+## 7      14     -7882.658   0.1677419 0.76471092   0.8092577
+## 8      13     -7879.697   0.1625309 0.59618494   0.8577134
+## 9      12     -7910.403   0.1656523 0.55674661   0.8742824
+## 10     11     -7940.711   0.1386042 0.41817512   0.9698708
+## 11     10     -7957.690   0.1624183 0.43879594   0.9227275
+## 12      9     -7950.341   0.1318182 0.29442123   1.0585181
+## 13      8     -7949.358   0.1298083 0.08828607   1.0980934
+## 14      7     -7964.580   0.1212509 0.12133408   1.1361188
+## 15      6     -8001.784   0.1161049 0.18287414   1.1955308
+## 16      5     -8062.347   0.1152498 0.26711663   1.2464718
+## 17      4     -8167.468   0.1084004 0.38522266   1.3356483
+## 18      3     -8330.388   0.1203959 0.75165432   1.3910375
+## 19      2     -8631.373   0.1558351 1.33879013   1.3753280
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw4-auto[
+
+```r
+FindTopicsNumber(
+  responses_dtm,
+  topics = seq(from = 2, to = 20, by = 1),
+  metrics = c("Griffiths2004",
+              "CaoJuan2009",
+              "Arun2010",
+              "Deveaud2014"),
+  method = "Gibbs",
+  control = list(seed = 77),
+  mc.cores = 2L,
+  verbose = TRUE
+  ) %&gt;%
+* FindTopicsNumber_plot()
+```
+]
+ 
+.panel2-sw4-auto[
+
+```
+## fit models... done.
+## calculate metrics:
+##   Griffiths2004... done.
+##   CaoJuan2009... done.
+##   Arun2010... done.
+##   Deveaud2014... done.
+```
+
+&lt;img src="topic-modeling-flat_files/figure-html/sw4_auto_02_output-1.png" width="80%" /&gt;
+]
+
+&lt;style&gt;
+.panel1-sw4-auto {
+  color: white;
+  width: 44.1%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw4-auto {
+  color: white;
+  width: 53.9%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw4-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+### Assigning a Variable
+
+.left-code[
+
+```r
+ responses_topic_est &lt;-
+  FindTopicsNumber(
+   responses_dtm,
+  topics = seq(from = 2, to = 20, by = 1), # amend these
+  metrics = c("Griffiths2004", 
+              "CaoJuan2009", 
+              "Arun2010", 
+              "Deveaud2014"),
+  method = "Gibbs",
+  control = list(seed = 77),
+  mc.cores = 2L,
+  verbose = TRUE
+  ) %&gt;%
+  FindTopicsNumber_plot()
+```
+]
+
+--
+
+.right-plot[
+&lt;img src="topic-modeling-flat_files/figure-html/topic-est-out-1.png" width="90%" /&gt;
+]
+
+---
+
+
+.pull-left[
+The estimate for a total number of topics can be a lowest single value or range of values. We do this by observing where the metric curves tend to plateau and get as close to each other as possible along the horizontal axis. This is known as a limit&lt;br&gt;&lt;br&gt;
+From the plot, the metric symbolized by &amp;#65291; is diverging away from the rest. While they may head back towards the horizontal axis in the future, the metrics symbolized by &amp;#9723;, &amp;#9675;, and &amp;#9651; look to be the closest between 5 and 6&lt;br&gt;&lt;br&gt;
+We want to use the lowest possible count so let's start by modeling 5 topics!
+]
+
+.pull-right[
+&lt;img src="topic-modeling-flat_files/figure-html/unnamed-chunk-13-1.png" width="85%" /&gt;
+]
+
+---
+
+&lt;span style = "font-size:1.75rem"&gt;Applying a &lt;b&gt;Generative Model&lt;/b&gt;&lt;/span&gt;&lt;/b&gt;
+
+---
+
+
+count: false
+ 
+
+.panel1-sw5-auto[
+
+```r
+*LDA(responses_dtm,
+*   k = 5,  # Number of topics
+*   control = list(seed = 1234))
+```
+]
+ 
+.panel2-sw5-auto[
+
+```
+## A LDA_VEM topic model with 5 topics.
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw5-auto[
+
+```r
+LDA(responses_dtm,
+    k = 5,  # Number of topics
+    control = list(seed = 1234)) %&gt;%
+* tidy(matrix = "beta")
+```
+]
+ 
+.panel2-sw5-auto[
+
+```
+## # A tibble: 2,895 × 3
+##    topic term       beta
+##    &lt;int&gt; &lt;chr&gt;     &lt;dbl&gt;
+##  1     1 time    0.0189 
+##  2     2 time    0.0241 
+##  3     3 time    0.0401 
+##  4     4 time    0.0237 
+##  5     5 time    0.0361 
+##  6     1 improve 0.0292 
+##  7     2 improve 0.00549
+##  8     3 improve 0.0190 
+##  9     4 improve 0.0323 
+## 10     5 improve 0.0495 
+## # … with 2,885 more rows
+```
+]
+
+&lt;style&gt;
+.panel1-sw5-auto {
+  color: white;
+  width: 49%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw5-auto {
+  color: white;
+  width: 49%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw5-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+### Assigning a Variable 
+
+Let's save the topics list
+
+
+```r
+ responses_topics &lt;- 
+  LDA(responses_dtm, 
+      k = 5, # Amend this to test a certain number of topics
+      control = list(seed = 1234)) %&gt;%
+  tidy(matrix = "beta")
+```
+
+---
+
+.center2[&lt;b&gt;&lt;span style = "font-size:2.75rem"&gt;Step 4: Visualization and Interpretation&lt;/span&gt;&lt;/b&gt;]
+
+---
+
+### Plot the Topics
+
+We'll use the top 10 most impactful terms in each area to fill out each potential topic 
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt; 
+
+---
+
+
+count: false
+ 
+
+.panel1-sw6-auto[
+
+```r
+*responses_topics
+```
+]
+ 
+.panel2-sw6-auto[
+
+```
+## # A tibble: 2,895 × 3
+##    topic term       beta
+##    &lt;int&gt; &lt;chr&gt;     &lt;dbl&gt;
+##  1     1 time    0.0189 
+##  2     2 time    0.0241 
+##  3     3 time    0.0401 
+##  4     4 time    0.0237 
+##  5     5 time    0.0361 
+##  6     1 improve 0.0292 
+##  7     2 improve 0.00549
+##  8     3 improve 0.0190 
+##  9     4 improve 0.0323 
+## 10     5 improve 0.0495 
+## # … with 2,885 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw6-auto[
+
+```r
+responses_topics %&gt;%
+*group_by(topic)
+```
+]
+ 
+.panel2-sw6-auto[
+
+```
+## # A tibble: 2,895 × 3
+## # Groups:   topic [5]
+##    topic term       beta
+##    &lt;int&gt; &lt;chr&gt;     &lt;dbl&gt;
+##  1     1 time    0.0189 
+##  2     2 time    0.0241 
+##  3     3 time    0.0401 
+##  4     4 time    0.0237 
+##  5     5 time    0.0361 
+##  6     1 improve 0.0292 
+##  7     2 improve 0.00549
+##  8     3 improve 0.0190 
+##  9     4 improve 0.0323 
+## 10     5 improve 0.0495 
+## # … with 2,885 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw6-auto[
+
+```r
+responses_topics %&gt;%
+group_by(topic) %&gt;%
+*slice_max(beta, n = 10)
+```
+]
+ 
+.panel2-sw6-auto[
+
+```
+## # A tibble: 50 × 3
+## # Groups:   topic [5]
+##    topic term          beta
+##    &lt;int&gt; &lt;chr&gt;        &lt;dbl&gt;
+##  1     1 performance 0.0314
+##  2     1 improve     0.0292
+##  3     1 team        0.0254
+##  4     1 worker      0.0247
+##  5     1 time        0.0189
+##  6     1 potential   0.0187
+##  7     1 skill       0.0152
+##  8     1 company     0.0148
+##  9     1 quality     0.0147
+## 10     1 task        0.0138
+## # … with 40 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw6-auto[
+
+```r
+responses_topics %&gt;%
+group_by(topic) %&gt;%
+slice_max(beta, n = 10) %&gt;%
+*ungroup()
+```
+]
+ 
+.panel2-sw6-auto[
+
+```
+## # A tibble: 50 × 3
+##    topic term          beta
+##    &lt;int&gt; &lt;chr&gt;        &lt;dbl&gt;
+##  1     1 performance 0.0314
+##  2     1 improve     0.0292
+##  3     1 team        0.0254
+##  4     1 worker      0.0247
+##  5     1 time        0.0189
+##  6     1 potential   0.0187
+##  7     1 skill       0.0152
+##  8     1 company     0.0148
+##  9     1 quality     0.0147
+## 10     1 task        0.0138
+## # … with 40 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw6-auto[
+
+```r
+responses_topics %&gt;%
+group_by(topic) %&gt;%
+slice_max(beta, n = 10) %&gt;%
+ungroup() %&gt;%
+*arrange(topic, -beta)
+```
+]
+ 
+.panel2-sw6-auto[
+
+```
+## # A tibble: 50 × 3
+##    topic term          beta
+##    &lt;int&gt; &lt;chr&gt;        &lt;dbl&gt;
+##  1     1 performance 0.0314
+##  2     1 improve     0.0292
+##  3     1 team        0.0254
+##  4     1 worker      0.0247
+##  5     1 time        0.0189
+##  6     1 potential   0.0187
+##  7     1 skill       0.0152
+##  8     1 company     0.0148
+##  9     1 quality     0.0147
+## 10     1 task        0.0138
+## # … with 40 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw6-auto[
+
+```r
+responses_topics %&gt;%
+group_by(topic) %&gt;%
+slice_max(beta, n = 10) %&gt;%
+ungroup() %&gt;%
+arrange(topic, -beta) %&gt;%
+*mutate(term = reorder_within(term, beta, topic))
+```
+]
+ 
+.panel2-sw6-auto[
+
+```
+## # A tibble: 50 × 3
+##    topic term              beta
+##    &lt;int&gt; &lt;fct&gt;            &lt;dbl&gt;
+##  1     1 performance___1 0.0314
+##  2     1 improve___1     0.0292
+##  3     1 team___1        0.0254
+##  4     1 worker___1      0.0247
+##  5     1 time___1        0.0189
+##  6     1 potential___1   0.0187
+##  7     1 skill___1       0.0152
+##  8     1 company___1     0.0148
+##  9     1 quality___1     0.0147
+## 10     1 task___1        0.0138
+## # … with 40 more rows
+```
+]
+
+---
+count: false
+ 
+
+.panel1-sw6-auto[
+
+```r
+responses_topics %&gt;%
+group_by(topic) %&gt;%
+slice_max(beta, n = 10) %&gt;%
+ungroup() %&gt;%
+arrange(topic, -beta) %&gt;%
+mutate(term = reorder_within(term, beta, topic)) %&gt;%
+*ggplot(aes(beta, term, fill = factor(topic)))
+```
+]
+ 
+.panel2-sw6-auto[
+&lt;img src="topic-modeling-flat_files/figure-html/sw6_auto_07_output-1.png" width="80%" /&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw6-auto[
+
+```r
+responses_topics %&gt;%
+group_by(topic) %&gt;%
+slice_max(beta, n = 10) %&gt;%
+ungroup() %&gt;%
+arrange(topic, -beta) %&gt;%
+mutate(term = reorder_within(term, beta, topic)) %&gt;%
+ggplot(aes(beta, term, fill = factor(topic))) +
+*geom_col(show.legend = FALSE)
+```
+]
+ 
+.panel2-sw6-auto[
+&lt;img src="topic-modeling-flat_files/figure-html/sw6_auto_08_output-1.png" width="80%" /&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw6-auto[
+
+```r
+responses_topics %&gt;%
+group_by(topic) %&gt;%
+slice_max(beta, n = 10) %&gt;%
+ungroup() %&gt;%
+arrange(topic, -beta) %&gt;%
+mutate(term = reorder_within(term, beta, topic)) %&gt;%
+ggplot(aes(beta, term, fill = factor(topic))) +
+geom_col(show.legend = FALSE) +
+*scale_fill_viridis_d()
+```
+]
+ 
+.panel2-sw6-auto[
+&lt;img src="topic-modeling-flat_files/figure-html/sw6_auto_09_output-1.png" width="80%" /&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw6-auto[
+
+```r
+responses_topics %&gt;%
+group_by(topic) %&gt;%
+slice_max(beta, n = 10) %&gt;%
+ungroup() %&gt;%
+arrange(topic, -beta) %&gt;%
+mutate(term = reorder_within(term, beta, topic)) %&gt;%
+ggplot(aes(beta, term, fill = factor(topic))) +
+geom_col(show.legend = FALSE) +
+scale_fill_viridis_d() +
+*facet_wrap(~ topic, scales = "free")
+```
+]
+ 
+.panel2-sw6-auto[
+&lt;img src="topic-modeling-flat_files/figure-html/sw6_auto_10_output-1.png" width="80%" /&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw6-auto[
+
+```r
+responses_topics %&gt;%
+group_by(topic) %&gt;%
+slice_max(beta, n = 10) %&gt;%
+ungroup() %&gt;%
+arrange(topic, -beta) %&gt;%
+mutate(term = reorder_within(term, beta, topic)) %&gt;%
+ggplot(aes(beta, term, fill = factor(topic))) +
+geom_col(show.legend = FALSE) +
+scale_fill_viridis_d() +
+facet_wrap(~ topic, scales = "free") +
+*scale_y_reordered()
+```
+]
+ 
+.panel2-sw6-auto[
+&lt;img src="topic-modeling-flat_files/figure-html/sw6_auto_11_output-1.png" width="80%" /&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-sw6-auto[
+
+```r
+responses_topics %&gt;%
+group_by(topic) %&gt;%
+slice_max(beta, n = 10) %&gt;%
+ungroup() %&gt;%
+arrange(topic, -beta) %&gt;%
+mutate(term = reorder_within(term, beta, topic)) %&gt;%
+ggplot(aes(beta, term, fill = factor(topic))) +
+geom_col(show.legend = FALSE) +
+scale_fill_viridis_d() +
+facet_wrap(~ topic, scales = "free") +
+scale_y_reordered() +
+*theme_minimal()
+```
+]
+ 
+.panel2-sw6-auto[
+&lt;img src="topic-modeling-flat_files/figure-html/sw6_auto_12_output-1.png" width="80%" /&gt;
+]
+
+&lt;style&gt;
+.panel1-sw6-auto {
+  color: white;
+  width: 53.9%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-sw6-auto {
+  color: white;
+  width: 44.1%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-sw6-auto {
+  color: white;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+### Assigning a Variable 
+
+Let's save the plot 
+
+
+```r
+ responses_top_terms &lt;-
+  responses_topics %&gt;%
+  group_by(topic) %&gt;%
+  slice_max(beta, n = 10) %&gt;% 
+  ungroup() %&gt;%
+  arrange(topic, -beta) %&gt;%
+  mutate(term = reorder_within(term, beta, topic)) %&gt;%
+  ggplot(aes(beta, term, fill = factor(topic))) +
+  geom_col(show.legend = FALSE) +
+  scale_fill_viridis_d() +
+  facet_wrap(~ topic, scales = "free") +
+  scale_y_reordered() +
+  theme_minimal()
+```
+
+---
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;img src="topic-modeling-flat_files/figure-html/unnamed-chunk-16-1.png" width="864" style="display: block; margin: auto;" /&gt;
+
+--
+
+.footnote[Tip: you can save high (or really any) resolution visuals easily using [`ggsave`](https://sscc.wisc.edu/sscc/pubs/using-r-plots/saving-plots.html)]
+---
+
+### What Just Happened?
+
+--
+
+&gt; LDA is a form of (unsupervised) learning that views documents as bags-of-words (BoW) where order does not matter. Not having to track the placement of every term saves a lot of time and computational energy
+
+--
+
+&gt; LDA works by first making a key assumption: the way a document was generated was by picking a set of topics and then for each topic picking a set of words
+
+---
+
+### Steps to Finding Topics
+
+In a nutshell for each document `\(m\)`
+
+--
+
+1. Assume there are `\(k\)` topics across all of the documents
+
+--
+
+2. Create a distribution `\(\alpha\)` where the `\(k\)` topics are symmetric or asymmetrically spread across each document `\(m\)` by assigning each word a topic
+
+--
+
+3. For each word `\(w\)` in every document `\(m\)`, assume its topic is is associated incorrectly but every other word is assigned the correct topic
+
+--
+
+4. Probabilistically assign word `\(w\)` a topic based on two things:
+    - what topics are in document `\(m\)`
+    
+    - Create a distribution `\(\beta\)` to assess how many times word `\(w\)` has been assigned a particular topic across all of the documents
+    
+--
+
+5. Repeat this process a number of times for each document until saturation
+
+---
+
+## Interpret
+
+--
+
+&gt; Much like you would assess a factor or component, the topics are unlabeled and it is up to you to figure out what they could mean. Not every topic may be directly applicable, but should still be interpreted and reported. Discarding topics means that you are removing potentially relevant information
+
+---
+
+Here is a brief assessment of some possible topics that are represented in the topic model with reference to *employee responses*
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;center&gt;
+&lt;table class=" lightable-paper" style='font-family: "Arial Narrow", arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;'&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;color: #ffffff !important;vertical-align: middle !important;"&gt; Topic 
+   &lt;/th&gt;
+&lt;th style="text-align:left;color: #ffffff !important;vertical-align: middle !important;"&gt; Label 
+  &lt;/th&gt;
+&lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 20em; color: #ffffff !important;vertical-align: middle !important;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 30em; color: #ffffff !important;vertical-align: middle !important;"&gt; production and gains reliance on employee abilities &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 20em; color: #ffffff !important;vertical-align: middle !important;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 30em; color: #ffffff !important;vertical-align: middle !important;"&gt; teams' abilities to tackle client needs affect on-time completion &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 20em; color: #ffffff !important;vertical-align: middle !important;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 30em; color: #ffffff !important;vertical-align: middle !important;"&gt; achievement varies by timeframe and workers' talent &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 20em; color: #ffffff !important;vertical-align: middle !important;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 30em; color: #ffffff !important;vertical-align: middle !important;"&gt; possible growth is helped or hindered by worker characteristics &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 20em; color: #ffffff !important;vertical-align: middle !important;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 30em; color: #ffffff !important;vertical-align: middle !important;"&gt; increases tied to employees' capacity and capabilities &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/center&gt;
+
+--
+
+.footnote[Your assessment would likely differ to varying degrees and that is the point - in that qualitative concepts such as triangulation and saturation still play a large and impactful role in the interpretation phase. Note with a much larger text data set, this task could be significantly easier]
+
+---
+
+#  That’s It! 
+
+Any questions?
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;center&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;div class="fade_rule"&gt;&lt;/div&gt;  
+&lt;br&gt;&lt;br&gt;
+&lt;/center&gt;
+
+&lt;center&gt;
+&lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;&lt;img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;This work is licensed under a &lt;br /&gt;&lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License&lt;/a&gt;
+&lt;/center&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"navigation": {
+"scroll": false
+}
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
