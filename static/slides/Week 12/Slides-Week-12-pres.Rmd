@@ -308,7 +308,7 @@ layout: true
 1. You can retrieve the *exercising with dogs* data set and both installation and walkthrough `r fa("r-project", fill = "steelblue")` *scripts* by clicking on the icon below<br>
 <br>
 <center>
-<a href="https://edp618.asocialdatascientist.com/slides/week%2012/files/topic_modeling_files.zip" target='_blank' download="Topic Modeling Files">
+<a href="files/topic_modeling_files.zip" target='_blank' download="Topic Modeling Files">
 <img src="img/zip-ico.png" alt="Paper" width='45'></a>
 </center>
 
@@ -335,7 +335,7 @@ layout: true
 
 --
 
-Run the following commands which can be found in the file `Week 12 script.R`
+In <span style="font-family:'Source Code Pro'; color:#b7b3ef">Week 12 script.R</span>, run the following commands
 
 1. Setting the working directory as source
     ```{r echo = TRUE, eval = FALSE}
@@ -389,7 +389,69 @@ This is the process we'll cover lightly. There is a lot more going on under the 
 
 ---
 
-Additionally here are a few things we won't be covering in this session so please read over the areas you lack familiarity with. Given that, it is absolutely fine if you cannot fully understand all of these ideas right now - they will hopefully become apparent as we progress
+If you didn't know, computers can't understand human languages...not directly anyway. Enter this idea below of using a medium to communicate with one (or multiple)
+
+<br>
+<br>
+<br>
+<center>
+<img src="img/nlp.png" alt="Natural Language Processing definition" width='500'></a>
+</center>
+
+---
+
+Here are a few things we won't be covering in this session so please read over the areas you lack familiarity with. Given that, it is absolutely fine if you cannot fully understand all of these ideas right now - they will hopefully become apparent as we progress
+
+.center2[
+<div style="text-align: center; color: #212121; border:1px; border-style:solid; border-color:#c7f9f6; background-color: #c7f9f6; border-radius: 15px; padding: 0.65em; width:fit-content;">
+hover over<br>any card<br>to make<br>it bigger
+</div>]
+
+--
+
+.pull-left[
+<center>
+<div class="cardquad2">
+<img src="img/document.png" alt="Document Definition" width='350'></a>
+</center>
+</div>
+]
+
+--
+
+.pull-right[
+<div class="cardquad1">
+<center>
+<img src="img/corpus.png" alt="Corpus Definition" width='350'></a>
+</center>
+</div>
+]
+
+--
+
+<br>
+.pull-left[
+<div class="cardquad3">
+<center>
+<img src="img/tf-idf.png" alt="TF-IDF Definition" width='350'></a>
+</center>
+</div>
+]
+
+--
+
+.pull-right[
+<div class="cardquad4">
+<center>
+<img src="img/lda.png" alt="LDA Definition" width='350'></a>
+</center>
+</div>
+]
+
+
+---
+
+Here are some basic terms you should try to keep while going through the walkthrough. Again it is completely fine if you do not understand what these mean in context right now!
 
 .center2[
 <div style="text-align: center; color: #212121; border:1px; border-style:solid; border-color:#c7f9f6; background-color: #c7f9f6; border-radius: 15px; padding: 0.65em; width:fit-content;">
@@ -436,7 +498,6 @@ hover over<br>any card<br>to make<br>it bigger
 </center>
 </div>
 ]
-
 
 ---
 
