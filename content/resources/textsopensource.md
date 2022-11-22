@@ -34,6 +34,7 @@ table:hover {
 td {
   width: 50px;
   position:relative;
+  overflow: visible;
 }
 
 img {
@@ -46,17 +47,12 @@ img {
 td:hover img {
   -webkit-transform: scale3d(1.2, 1.2, 1);
           transform: scale3d(1.2, 1.2, 1);
-  transform: scale(2.0);
+  transform: scale(3.0);
   transition: all .5s ease-in-out;
-  position: absolute; 
-  display: block; 
-  z-index: 99;
-  top: 35%;
-  bottom: 55%;
-  left: 35%;
-  right: 35%;
+  position: relative; 
   width: 100%;
   height: auto;
+  z-index: 99;
 }
 
 </style>
