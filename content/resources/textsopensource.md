@@ -47,11 +47,12 @@ img {
 td:hover img {
   -webkit-transform: scale3d(1.2, 1.2, 1);
           transform: scale3d(1.2, 1.2, 1);
-  transform: scale(2.0);
+  transform: scale(3.0);
   transition: all .5s ease-in-out;
   position: relative; 
   width: 100%;
   height: auto;
+  z-index: 99;
 }
 
 </style>
