@@ -31,7 +31,7 @@ ul {
 </style>
 
 <br>
-Please follow the directions below as this task requires multiple sections to be considered as a full submission, namely a <span style = "color:#57c4ad; font-weight:bold;">Deliverable</span> and <span style = "color:#eda247; font-weight:bold;">Declaration</span> section. Please note the following
+Please follow the directions below as this task requires multiple sections to be considered as a full submission, namely a <span style = "color:#57c4ad; font-weight:bold;">Deliverable</span> and <span style = "color:#c4576e; font-weight:bold;">Declaration</span> section. Please note the following
 <br>
 <br>
 
@@ -74,7 +74,7 @@ Please follow the directions below as this task requires multiple sections to be
   <br>
   <br>
   
-<span style = "color:#eda247; font-weight:bold;">Declaration</span>
+<span style = "color:#c4576e; font-weight:bold;">Declaration</span>
 A signed copy of the following certification^[required for consideration] (you can download a copy by clicking on the icon below)<br>
   <a target="_blank" href="/forms/edp619declaration.pdf">
   <center>
