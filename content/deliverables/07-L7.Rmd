@@ -31,10 +31,12 @@ ul {
 </style>
 
 <br>
-Please follow the directions below as this task requires multiple sections to be considered as a full submission, namely a <span style = "color:#57c4ad; font-weight:bold;">Deliverable</span> and <span style = "color:#c4576e; font-weight:bold;">Declaration</span> section. Please note the following
+Carefully read through the directions below as this task requires two main sections, namely a <span style = "color:#57c4ad; font-weight:bold;">Deliverable</span> and <span style = "color:#d58999; font-weight:bold;">Declaration</span> section. Please note the following:
 <br>
 <br>
 
+  + Both sections must be submitted on eCampus or your summary will not earn a grade
+  
   + APA 7th Edition formatting is not required, though you are still expected to maintain a professional writing style
   
   + You do not have to wait for feedback on the previous assignment to complete this task, rather concentrate on addressing all of the criteria noted below
@@ -74,8 +76,11 @@ Please follow the directions below as this task requires multiple sections to be
   <br>
   <br>
   
-<span style = "color:#c4576e; font-weight:bold;">Declaration</span>
-A signed copy of the following certification^[required for consideration] (you can download a copy by clicking on the icon below)<br>
+<span style = "color:#d58999; font-weight:bold;">Declaration</span>
+<br>
+<br>
+
+A signed copy of the following certification (you can download a copy by clicking on the icon below)<br>
   <a target="_blank" href="/forms/edp619declaration.pdf">
   <center>
   <img src="/logos/pdf-ico.png" alt="Word icon" width="50">
