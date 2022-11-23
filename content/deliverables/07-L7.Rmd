@@ -52,7 +52,7 @@ Please follow the directions below as this task requires multiple sections to be
     - R (e.g. [Infographics Using R](https://rpubs.com/chidungkt/702513))[^Free]
     - [Tableau](https://www.tableau.com/academic/students)[^Free]
       While not mandated, please try to be creative! To get an *example* of visualization performance measures, please take a look at [General Criteria for Visualizations](/resources/look/) located under Resources <br><br>
-      <b>Length: 1 page</b>
+      <i>Length: 1 page</i>
 
   2. **Executive Summary**
   This is a *polished narrative* addressing the criteria listed below^[Please do not use these as headers] and the most or only section read within a full report. Even though your are reporting the nuts and bolts of your entire study, it should be aesthetically pleasing as well (e.g. Canava)
@@ -65,12 +65,12 @@ Please follow the directions below as this task requires multiple sections to be
   - key results grouped by objectives or themes^[this should highlight the key messages that others should know, but not necessarily every result that is of quantitative or qualitative significance]
   - at minimum three meaningful data visualizations *placed within the narrative* to accompany your findings
   - interpretation of results<br><br>
-    <b>Length: 1 - 3 pages</b>
+    <i>Length: 1 - 3 pages</i>
   <br>
   <br>
   
   3. **Appendix**. A copy of your survey<br><br>
-  <b>Length: 1 - 20 pages</b>
+  <i>Length: 1 - 20 pages</i>
   <br>
   <br>
   
@@ -81,7 +81,7 @@ A signed copy of the following certification^[required for consideration] (you c
   <img src="/logos/pdf-ico.png" alt="Word icon" width="50">
   </center>
   </a>
-  <b>Length: 1 page</b>
+  <i>Length: 1 page</i>
   
   
 [^Free]: Completely free for students
