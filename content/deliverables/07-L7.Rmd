@@ -37,7 +37,7 @@ Please follow the directions below as this task requires multiple sections to be
 
   + APA 7th Edition formatting is not required, though you are still expected to maintain a professional writing style
   
-  + You do not have to wait for feedback on the previous task to complete this one, rather make sure you address all of the criteria noted below
+  + You do not have to wait for feedback on the previous assignment to complete this task, rather concnetrate on making sure that you address all of the criteria noted below
 <br>
 <br>
 
@@ -56,15 +56,15 @@ Please follow the directions below as this task requires multiple sections to be
 
   2. **Executive Summary**
   This is a *polished narrative* addressing the criteria listed below^[Please do not use these as headers] and the most or only section read within a full report. Even though your are reporting the nuts and bolts of your entire study, it should be aesthetically pleasing as well (e.g. Canava)
-    - sampling frame (sample & sample size, population & population size, and setting)
-    - justification for the study
-    - survey items, corresponding measures^[please avoid including a description of the scales used], and constructs (if applicable)
-    - exact timeframe that the survey was administered including a count of days 
-    - response rate
-    - method(s) of analysis
-    - key results grouped by objectives or themes[^this should highlight the key messages that others should know, but not necessarily every result that is of quantitative or qualitative significance]
-    - at minimum three meaningful data visualizations *placed within the narrative* to accompany your findings
-    - interpretation of results<br><br>
+  - sampling frame (sample & sample size, population & population size, and setting)
+  - justification for the study
+  - survey items, corresponding measures^[please avoid including a description of the scales used], and constructs (if applicable)
+  - exact timeframe that the survey was administered including a count of days 
+  - response rate
+  - method of analysis/methods of analyses
+  - key results grouped by objectives or themes^[this should highlight the key messages that others should know, but not necessarily every result that is of quantitative or qualitative significance]
+  - at minimum three meaningful data visualizations *placed within the narrative* to accompany your findings
+  - interpretation of results<br><br>
     <b>Length: 1 - 3 pages</b>
   <br>
   <br>
@@ -73,7 +73,7 @@ Please follow the directions below as this task requires multiple sections to be
   <b>Length: 1 - 20 pages</b>
   
 <span style = "color:#ff92fd; font-weight:bold;">Declaration</span>
-A signed copy of the following certification^[required for consideration](you can download a copy by clicking on the icon below)<br>
+A signed copy of the following certification^[required for consideration] (you can download a copy by clicking on the icon below)<br>
   <a target="_blank" href="/forms/edp619declaration.pdf">
   <center>
   <img src="/logos/pdf-ico.png" alt="Word icon" width="50">
