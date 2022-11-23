@@ -32,6 +32,7 @@ ul {
 
 <br>
 please follow the directions below as this task requires multiple sections to be considered as a full submission, namely a <b>Deliverable</b> and <b>Declaration</b> section. Please note the following
+<br>
 
   + APA 7th Edition formatting is not required, though you are still expected to maintain a professional writing style
   
