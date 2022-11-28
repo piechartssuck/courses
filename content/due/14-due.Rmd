@@ -36,7 +36,7 @@ Description = c("Read <i>Smart Literature Review: A Practical Topic Modelling Ap
                 "Complete the module <span style='color:#ffc787;font-weight:bold'><i>Text Mining with Bag-of-Words in R</i></span>",
                 "Go through the slideshow <span style='color:#6ac4cd;font-weight:bold'>Topic Modeling</span>",
                 "Take a look at some additional <i class='fa-brands fa-r-project'></i> resources that may help with your understanding of topic modeling",
-                "Begin <span style='color:#6acda5;font-weight:bold'>Write an Executive Summary</span> and submit it by the end of next week (15)"
+                "Begin <span style='color:#6acda5;font-weight:bold'>Write an Executive Summary</span> and submit it by the end of Week 15"
                 ),
 
 

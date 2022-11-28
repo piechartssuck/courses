@@ -124,7 +124,7 @@ Take a look at some additional <i class="fa-brands fa-r-project"></i> resources 
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Begin <span style="color:#6acda5;font-weight:bold">Write an Executive Summary</span> and submit it by the end of next week (15)
+Begin <span style="color:#6acda5;font-weight:bold">Write an Executive Summary</span> and submit it by the end of Week 15
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/deliverables/07-l7/"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>

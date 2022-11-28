@@ -8,7 +8,7 @@ output:
 menu:
   trainings:
     parent: Modules
-    weight: 13
+    weight: 14
 type: docs
 weight: 1
 ---
@@ -33,7 +33,7 @@ dc_schedule <-
     . == "unchecked" ~ as.character(fontawesome::fa("circle-xmark", fill = "#d9534f", height = "15px")),
     TRUE ~ as.character(.)
               ))) %>%
-  filter(Week == "13") %>% #CHANGE HERE
+  filter(Week == "14") %>% #CHANGE HERE
   select(-Week) %>%
   mutate(across(everything(), as.character)) %>%
   mutate(across(everything(), str_squish)) %>%

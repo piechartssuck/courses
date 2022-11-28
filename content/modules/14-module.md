@@ -8,7 +8,7 @@ output:
 menu:
   trainings:
     parent: Modules
-    weight: 13
+    weight: 14
 type: docs
 weight: 1
 ---
@@ -50,10 +50,10 @@ Chapters
 <tbody>
 <tr>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/modules/13-module/">Week 13</a>
+<a href="/modules/14-module/">Week 14</a>
 </td>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-11/8/22
+11/15/22
 </td>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:15px;width:15px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#428bca;overflow:visible;position:relative;">
@@ -66,10 +66,10 @@ Chapters
 </svg>
 </td>
 <td style="text-align:left;width: 12em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Text Mining with Bag-of-Words in R
+Sentiment Analysis in R
 </td>
 <td style="text-align:left;width: 12em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Jumping into text mining with bag of words
+Fast & dirty: Polarity scoring
 </td>
 </tr>
 <tr>
@@ -84,7 +84,7 @@ Jumping into text mining with bag of words
 <td style="text-align:left;width: 12em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
 <td style="text-align:left;width: 12em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Word clouds and more interesting visuals
+Sentiment analysis the tidytext way
 </td>
 </tr>
 <tr>
@@ -99,7 +99,7 @@ Word clouds and more interesting visuals
 <td style="text-align:left;width: 12em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
 <td style="text-align:left;width: 12em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Adding to your tm skills
+Visualizing sentiment
 </td>
 </tr>
 <tr>
@@ -114,21 +114,7 @@ Adding to your tm skills
 <td style="text-align:left;width: 12em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
 <td style="text-align:left;width: 12em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Battle of the tech giants for talent
-</td>
-</tr>
-<tr>
-<td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-</td>
-<td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-</td>
-<td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-</td>
-<td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-</td>
-<td style="text-align:left;width: 12em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-</td>
-<td style="text-align:left;width: 12em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+Case study: Airbnb reviews
 </td>
 </tr>
 </tbody>

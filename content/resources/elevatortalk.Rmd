@@ -67,7 +67,6 @@ library(kableExtra)
 
 + An <i>elevator speech</i> is **used after a portion of a or a full study has been completed** to introduce you as a researcher, your study questions, mode/modes of data collection and analysis/analyses, summary of findings, and the significance of your work.
 
-
 Because these deliveries - which we'll call <i>elevator talk(s)</i> for simplicity - are short, they are great ways to introduce and share your research with others at formal networking events, academic conferences, casual conversations, or even during an actual elevator ride if you want to risk it. Ultimately, an elevator talk should provide a <i>hook</i> and make your listener want to know more about your research! 
 
 ## Evaluative Components

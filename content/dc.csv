@@ -66,7 +66,7 @@
 13,,,,,,Adding to your tm skills
 13,,,,,,Battle of the tech giants for talent
 13,,,,,,
-14,<a href='/modules/14-module/'>Week 14</a>,11/15/22,checked,checked,Sentiment Analysis in R,Fast & dirty: Polarity scoring
+14,<a href='/modules/14-module/'>Week 14</a>,11/15/22,checked,unchecked,Sentiment Analysis in R,Fast & dirty: Polarity scoring
 14,,,,,,Sentiment analysis the tidytext way
 14,,,,,,Visualizing sentiment
 14,,,,,,Case study: Airbnb reviews

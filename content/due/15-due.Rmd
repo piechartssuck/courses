@@ -1,0 +1,46 @@
+---
+title: "Reporting"
+linktitle: "Week 15: Reporting"
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  due:
+    parent: 'To Do List'
+    weight: 15
+type: docs
+weight: 1
+---
+
+`r blogdown::shortcode("r-walkthrough-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r eval = TRUE, echo = FALSE}
+
+wk_post <- 
+  
+  tibble(
+
+Description = c("Begin <span style='color:#6acda5;font-weight:bold'>Give an Elevator Speech</span> and submit it by the end of this week"
+                ),
+
+Details = c("<a href='/deliverables/07-l7/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
+            ),
+
+Icon = c("ecampus"),
+
+Site = c("https://ecampus.wvu.edu"
+         )
+)
+```
+
+<center>
+`r knitr::spin_child(here::here("content", "post_frame.R"))`
+</center>
