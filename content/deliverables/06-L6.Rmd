@@ -84,7 +84,7 @@ This task serves as your sixth deliverable and R Survey EDA
       
       * [Qualtrics](https://www.qualtrics.com/support/survey-platform/survey-module/survey-tools/generating-test-responses/){target="_blank"}
       
-      * R (there are many ways to accomplish like [this](https://www.crumplab.com/programmingforpsych/simulating-and-analyzing-data-in-r.html){target="_blank"} or [that](https://github.com/markolalovic/responsesR))[^out]
+      * R (there are many ways to accomplish like [this](https://www.crumplab.com/programmingforpsych/simulating-and-analyzing-data-in-r.html){target="_blank"} or [that](https://github.com/markolalovic/responsesR))^[Please reach out if you would prefer to simulate data in R but are not able to do so]
       
   + do not have more than two columns of quantitative data, then please reach out to me via Slack and I will provide a unique real world survey data set you can use for this task 
 
@@ -112,5 +112,3 @@ This task serves as your sixth deliverable and R Survey EDA
 All incremental deliverables can be found on the main <a href="/tasks/#deliverables">Tasks</a> page
 <p>
 </center>
-   cfs
-[^out]: Please reach out if you would prefer to simulate data in R but are not able to do so.
