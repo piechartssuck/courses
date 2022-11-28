@@ -99,4 +99,4 @@ PDF of the presentation
 
 ## Create a Draft
 
-Please begin work on your second deliverable. More details can be found [here](/deliverables/01-l2/)
+Please begin work on your second deliverable. More details can be found [here](/deliverables/02-l2/)
