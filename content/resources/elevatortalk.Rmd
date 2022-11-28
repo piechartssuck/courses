@@ -1,5 +1,5 @@
 ---
-title: "Creating an Elevator Pitch"
+title: "Creating an Elevator Talk"
 menu:
   resources:
     parent: Guides
@@ -63,9 +63,12 @@ library(kableExtra)
 
 ## Description
 
-An <i>elevator pitch</i> is used to introduce you as a researcher, your study questions, and the significance of the research. Because this delivery is short, it is a great way to introduce and share your research with others at formal networking events, academic conferences, casual conversations, or even during an actual elevator ride if you want to risk it.
++ An <i>elevator pitch</i> is **used prior to a study** to introduce you as a researcher/evaluator, your study questions, and the significance of your work. 
 
-Ultimately, your elevator pitch should provide a <i>hook</i> and make your listener want to know more about your research! 
++ An <i>elevator speech</i> is **used after a portion of a or a full study has been completed** to introduce you as a researcher, your study questions, mode/modes of data collection and analysis/analyses, summary of findings, and the significance of your work.
+
+
+Because these deliveries - which we'll call <i>elevator talk(s)</i> for simplicity - are short, they are great ways to introduce and share your research with others at formal networking events, academic conferences, casual conversations, or even during an actual elevator ride if you want to risk it. Ultimately, an elevator talk should provide a <i>hook</i> and make your listener want to know more about your research! 
 
 ## Evaluative Components
 
@@ -78,45 +81,45 @@ Ultimately, your elevator pitch should provide a <i>hook</i> and make your liste
     + Asking meaningful and thoughtful questions
     + Providing feedback to each participant
 
-### Delivering an Elevator Pitch
+### Delivering an Elevator Talk
 
-<p>It is important to <b><i>focus on your audience </i></b> when delivering an elevator pitch. For instance, if you're pitching a study to a general audience, it's a good idea to define or leave out technical or disciplinary terminology. Similarly, you should also define acronyms and use everyday examples or analogies to help your audience understand key concepts that may be unfamiliar to them.</p>
+<p>It is important to <b><i>focus on your audience </i></b> For instance, if you're pitching or discussing a study to a general audience, it's a good idea to define or leave out technical or disciplinary terminology. Similarly, you should also define acronyms and use everyday examples or analogies to help your audience understand key concepts that may be unfamiliar to them.</p>
 
-<p>Remember that in an elevator pitch it is important to keep it simple and to the point. State your purpose, report what you need to report, and convey the significance of the work.</p>
+<p>If you take anything away from this, it should be that in an elevator talk it is important to keep the discussion simple and to the point. State what the audience needs to know, report what you need to report, and convey the significance of the work.</p>
 
 ### Practice is Key
 
 <p>It's a good idea to write out a draft first and read it out loud a few times to make sure it flows and is of appropriate length. </p>
-<p>Most importantly, <b><i> practice </i></b>delivering your elevator pitch a lot. This will help calm your nerves so you don't freeze up when you're about to share your research with others. To make your elevator pitch not sound robotic, it's a good idea to memorize key points of your research rather than a full script. </p>
+<p>Most importantly, <b><i> practice </i></b>delivering your elevator talk a lot. This will help calm your nerves so you don't freeze up when you're about to share your research with others. To make your elevator pitch not sound robotic, it's a good idea to memorize key points of your research rather than a full script. </p>
 <p>And lastly, be <b><i> enthusiastic. </i></b> Recall what first sparked your interest in your research and be sure to convey that to your audience. </p>
 
-### Difference Between an Elevator Pitch, an Elevator Speech, and an Abstract
-
-<p>Although all three serve to present your research and its significance in a concise manner, elevator pitches, elevator pitches, and abstracts differ in format and purpose. </p>
-
+#### <span style="color:#97ebf4">Difference Between a Elevator Pitch, an Elevator Speech, and an Abstract</span>
+  
+<p>Although all three serve to present your research and its significance in a concise manner, elevator speeches, elevator pitches, and abstracts differ in format and purpose</p>
+  
 ```{r, echo=FALSE}
 tibble(
   criteria <- c("Delivery",
                 "Purpose",
                 "Length"
-                ),
+  ),
   
   les <- c("Orally",
-           "Introduce researchers, intended projects, and their corresponding significance so your audience will want to learn more about it",
-          "1 minute (+/- 10 seconds)"),
+           "Introduce your content area, its significance to the field; report dominant and emergine outcomes from a synthesis so your audience will learn more about the area and its connectivity to a broader picture",
+           "3 minutes"),
   
   tes <- c("Orally",
-           "Introduce a content area, its significance to the field; report dominant and emergine outcomes from the synthesis so your audience will learn more about the area and its connectivity to a broader picture",
-           "2 to 5 minutes"),
-          
-    abs <- c("Written",
-             "Explain a research project and its significance in order to apply for funding (e.g. assistantships, fellowships, scholarships, etc.), present at conferences, publish in journals, or just for kicks",
-             "150 to 300 words"),
+           "Introduce yourself as a researcher, your research project, and its significance so your audience will want to learn more about your research",
+           "1 minute"),
+  
+  abs <- c("Written",
+           "Explain your research project and its significance in order to apply for funding (e.g. assistantships, fellowships, scholarships, etc.), present at conferences, publish in journals, or just for kicks",
+           "150-300 words"),
   
   .name_repair = "minimal"
   
 ) %>%
-  kbl(col.names = c("", "Elevator Pitch", "Elevator Speech", "Abstract"), 
+  kbl(col.names = c("", "Elevator Pitch", "Typical Elevator Speech", "Abstract"), 
       "html", 
       escape = FALSE,
       align = 'llll') %>%
@@ -126,7 +129,7 @@ tibble(
   row_spec(0:3, extra_css = 'vertical-align: middle !important;', color = "#ffffff", background = "transparent")
 ```
 
-<small><i> <b>Note:</b> In the cases where you've already written an abstract for a study, you can use it as a starting basis for your elevator pitch. You can think of your elevator pitch as a more condensed version of your abstract. Remember, the main purpose of the elevator pitch is to engage your listeners so they're interested in learning about the details of your project. </i></small>
+<small><i> <b>Note:</b> In the cases where you've already written an abstract for a study, you can use it as a starting basis. You can think of your elevator talk as a more condensed version of your abstract. Remember, the main purpose is to engage your listeners so they're interested in learning about the details of your project. </i></small>
 
 ## Extra Help?
 

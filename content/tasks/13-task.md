@@ -62,7 +62,7 @@ weight: 1
 <tbody>
 <tr>
 <td style="text-align:center;width: 25em; padding-left: 200px;color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/slides/Power%20Analysis/power-analysis-pres.html" target="_blank"><img src="/logos/web-ico.png" alt="PCA presentation" width="35"></a>
+<a href="/slides/Power%20Analysis/power-analysis-pres.html" target="_blank"><img src="/logos/web-ico.png" alt="Power Analysis presentation" width="35"></a>
 </td>
 </tr>
 <tr>
@@ -76,7 +76,7 @@ Larger version of the presentation
 </tr>
 <tr>
 <td style="text-align:center;width: 25em; padding-left: 200px;color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/slides/Power%20Analysis/power-analysis-flat.pdf" target="_blank"><img src="/logos/pdf-ico.png" alt="PCA presentation PDF" width="35"></a>
+<a href="/slides/Power%20Analysis/power-analysis-flat.pdf" target="_blank"><img src="/logos/pdf-ico.png" alt="Power Analysis presentation PDF" width="35"></a>
 </td>
 </tr>
 <tr>
@@ -101,16 +101,16 @@ PDF of the presentation
 
 Here are some additional resources that may help in deconstructing power
 
--   [`pwr` Vingette](https://cran.r-project.org/web/packages/pwr/vignettes/pwr-vignette.html). A how-to guide covering all of the functionality in the `pwr` package
+- [`pwr` Vingette](https://cran.r-project.org/web/packages/pwr/vignettes/pwr-vignette.html). A how-to guide covering all of the functionality in the `pwr` package
 
--   [Power Analysis in R](https://ladal.edu.au/pwr.html#Basic_Power_Analysis). A highly detailed walkthrough addressing power analysis in R starting at the basics through some advanced techniques
+- [Power Analysis in R](https://ladal.edu.au/pwr.html#Basic_Power_Analysis). A highly detailed walkthrough addressing power analysis in R starting at the basics through some advanced techniques
 
--   [Power, Effect Size, and P-Values](https://bookdown.org/anshul302/HE802-MGHIHP-Spring2020/Samp.html). A detailed introduction to power that is very readable
+- [Power, Effect Size, and P-Values](https://bookdown.org/anshul302/HE802-MGHIHP-Spring2020/Samp.html). A detailed introduction to power that is very readable
 
--   [Power and Sample Size Calculations](https://rtrane.shinyapps.io/power/) A presentation that gives you a chance to learn/review statistical power from the ground up while interactively changing design parameters
+- [Power and Sample Size Calculations](https://rtrane.shinyapps.io/power/) A presentation that gives you a chance to learn/review statistical power from the ground up while interactively changing design parameters
 
--   [Statistical Power Analysis Online](https://webpower.psychstat.org/wiki/). An alternative to the `pwr` package, this tutorial covers the `webpower` package
+- [Statistical Power Analysis Online](https://webpower.psychstat.org/wiki/). An alternative to the `pwr` package, this tutorial covers the `webpower` package
 
--   [Statistical Power and Why It Matters \| A Simple Introduction](https://www.scribbr.com/statistics/statistical-power/). A well written description on Scribbr of power and its related components
+- [Statistical Power and Why It Matters \| A Simple Introduction](https://www.scribbr.com/statistics/statistical-power/). A well written description on Scribbr of power and its related components
 
--   [Statistical Power in a two-sample test](https://andrewlau.shinyapps.io/Power/). Ain interactive demo application that allows you to edit study parameters in order to observe changes in power
+- [Statistical Power in a two-sample test](https://andrewlau.shinyapps.io/Power/). Ain interactive demo application that allows you to edit study parameters in order to observe changes in power
