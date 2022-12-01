@@ -1,6 +1,6 @@
 ---
-title: "Actually Evaluating Interventions"
-linktitle: "Week 6: Actually Evaluating Interventions"
+title: "Nothing to See Here"
+linktitle: "Week 7: Nothing to See Here"
 toc: true
 output:
   rmarkdown::html_document:
@@ -8,7 +8,7 @@ output:
 menu:
   trainings:
     parent: Modules
-    weight: 6
+    weight: 7
 type: docs
 weight: 1
 ---

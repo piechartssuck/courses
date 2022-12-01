@@ -1,6 +1,6 @@
 ---
 title: "Develop a Draft"
-linktitle: "Week 6: Develop a Draft"
+linktitle: "Develop a Draft"
 toc: true
 output:
   rmarkdown::html_document:

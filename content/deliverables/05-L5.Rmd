@@ -1,6 +1,6 @@
 ---
 title: "Refine the Draft"
-linktitle: "Week 9: Refine the Draft"
+linktitle: "Refine the Draft"
 toc: true
 output:
   rmarkdown::html_document:

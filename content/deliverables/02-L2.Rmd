@@ -1,6 +1,6 @@
 ---
 title: "Create an Argument"
-linktitle: "Week 4: Create an Argument"
+linktitle: "Create an Argument"
 toc: true
 output:
   rmarkdown::html_document:
