@@ -22,6 +22,7 @@ source(here::here("content", "com_libs.R"))
 Many class sessions have both interactive **Modules** courtesy of [Data Camp](https://www.datacamp.com/)^[Please note that if you have (1) used Data Camp before and (2) are logged in with the same username, then any module that was successfully completed will not have to be done again.] and **Walkthroughs** created by me that you will need to work through ***after*** doing the readings and reviewing the corresponding content (if applicable). The lessons are a central part of the class and are focused on using the [tidyverse](https://www.tidyverse.org/) family of packages, though the approaches are certainly not the only ways to wrangle, clean, analyze, and visualize data in R. 
 
 ## Advice
+
 Carve out some time everyday to go through these. If you try to complete everything in one sitting, it will probably be overwhelming! However if you have familiarity with some modules, please feel free to work ahead.
 
 ## Grading
@@ -130,7 +131,12 @@ kable(dc_schedule %>%
 ```
 </center>
 
+### R Tasks
+
+In some weeks you will be expected to complete an additional R task which are indicated by a `r fontawesome::fa("square", fill = "steelblue")` in the table above. Collectively these serve as the <b>R Survey EDA</b> noted on the [syllabus](/syllabus/#assignments-and-grades).
+
 ### Working Ahead
+
 By no means do you have to wait for a particular module to be assigned. If you wish to enroll in a training - one that is assigned or otherwise - simply search for the name of that course on the Data Camp site. For those modules assigned for this course, you will receive credit after the due date has passed.
 
 ## Need Help?

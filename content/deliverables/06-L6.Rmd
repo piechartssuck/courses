@@ -30,7 +30,7 @@ ul {
 }
 </style>
 
-This task serves as your sixth deliverable and R Survey EDA
+This task serves as your sixth deliverable
 
 1. Please download one of the following
     <br>
@@ -103,7 +103,7 @@ This task serves as your sixth deliverable and R Survey EDA
 
 5. Open the mostly empty Rmarkdown file `Test for Validity and Reliability.Rmd`, read through the directions, and include your syntax to receive credit. It is suggested that you use the example data set `Test_Survey_Data.csv` with the default test script `Test for Validity and Reliability Testing Script.R` to see how this is done and which values likely need to be tweaked
 
-6. Save the resulting PDF file by adding your first initial and last name to the beginning of the filename. For example, my submission would be `aroy Test for Validity and Reliability.pdf`
+6. Save the resulting PDF file by adding your first initial and last name to the beginning of the filename. For example, my submission would be `aroy Test for Validity and Reliability.pdf`. **Please note that other formats (e.g. `.docx`, `.R`, `.Rmd`) will not be accepted**
 
 7. Submit your PDF output to eCampus in the Submission Portal by the end of Week 13
 

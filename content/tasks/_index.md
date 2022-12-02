@@ -133,7 +133,7 @@ Week 12: Test for Validity and Reliability
 </summary>
 <br>
 <p>
-Use the collected data to conduct an EFA and PCA to assess instrument validity and reliability. Submit a one paragraph descriptive summary of the findings and Rmarkdown PDF output. This serves as the R Survey EDA as well.
+Use the collected data to conduct an EFA and PCA to assess instrument validity and reliability. Submit a one paragraph descriptive summary of the findings and Rmarkdown PDF output.
 </p>
 </details>
 
