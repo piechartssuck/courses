@@ -64,7 +64,6 @@ $(document).ready(function(){
 
 + An <i>elevator speech</i> is **used after a portion of a or a full study has been completed** to introduce you as a researcher, your study questions, mode/modes of data collection and analysis/analyses, summary of findings, and the significance of your work.
 
-
 Because these deliveries - which we'll call <i>elevator talk(s)</i> for simplicity - are short, they are great ways to introduce and share your research with others at formal networking events, academic conferences, casual conversations, or even during an actual elevator ride if you want to risk it. Ultimately, an elevator talk should provide a <i>hook</i> and make your listener want to know more about your research! 
 
 ## Evaluative Components
@@ -118,9 +117,9 @@ Because these deliveries - which we'll call <i>elevator talk(s)</i> for simplici
   </tr>
   <tr>
    <td style="text-align:left;font-weight: bold;color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;"> Length </td>
-   <td style="text-align:left;width: 30em; color: #ffffff !important;vertical-align: middle !important;color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;"> 3 minutes </td>
-   <td style="text-align:left;width: 30em; color: #ffffff !important;vertical-align: middle !important;color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;"> 1 minute </td>
-   <td style="text-align:left;width: 30em; color: #ffffff !important;vertical-align: middle !important;color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;"> 150-300 words </td>
+   <td style="text-align:left;width: 30em; color: #ffffff !important;vertical-align: middle !important;color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;"> 30 seconds - 3 minutes </td>
+   <td style="text-align:left;width: 30em; color: #ffffff !important;vertical-align: middle !important;color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;"> Approximately 1 minute </td>
+   <td style="text-align:left;width: 30em; color: #ffffff !important;vertical-align: middle !important;color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;"> Typically 150-300 words </td>
   </tr>
 </tbody>
 </table>

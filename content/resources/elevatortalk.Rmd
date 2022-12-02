@@ -105,15 +105,15 @@ tibble(
   
   les <- c("Orally",
            "Introduce your content area, its significance to the field; report dominant and emergine outcomes from a synthesis so your audience will learn more about the area and its connectivity to a broader picture",
-           "3 minutes"),
+           "30 seconds - 3 minutes"),
   
   tes <- c("Orally",
            "Introduce yourself as a researcher, your research project, and its significance so your audience will want to learn more about your research",
-           "1 minute"),
+           "Approximately 1 minute"),
   
   abs <- c("Written",
            "Explain your research project and its significance in order to apply for funding (e.g. assistantships, fellowships, scholarships, etc.), present at conferences, publish in journals, or just for kicks",
-           "150-300 words"),
+           "Typically 150-300 words"),
   
   .name_repair = "minimal"
   
