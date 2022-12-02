@@ -133,7 +133,7 @@ kable(dc_schedule %>%
 
 ### R Tasks
 
-In some weeks you will be expected to complete an additional R task which are indicated by a &nbsp;`r fontawesome::fa("circle-check", fill = "#428bca", height = "15px")` in the table above. Collectively these serve as the <b>R Survey EDA</b> noted on the [syllabus](/syllabus/#assignments-and-grades).
+In some weeks you will be expected to complete an additional R task which are indicated by a&nbsp;`r fontawesome::fa("circle-check", fill = "#428bca", height = "15px")` in the table above. Collectively these serve as the <b>R Survey EDA</b> noted on the [syllabus](/syllabus/#assignments-and-grades).
 
 ### Working Ahead
 
