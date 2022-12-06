@@ -66,7 +66,7 @@ Chapters
 </svg>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Introduction to Data Visualization with ggplot2
+<span style="color:#ffc787;font-weight:bold;font-style:italic">Introduction to Data Visualization with ggplot2</span>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 Explore your data
@@ -82,6 +82,7 @@ Explore your data
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<span style="color:#ffc787;font-weight:bold;font-style:italic"></span>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 Tame your data
@@ -97,6 +98,7 @@ Tame your data
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<span style="color:#ffc787;font-weight:bold;font-style:italic"></span>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 Tidy your data
@@ -112,6 +114,7 @@ Tidy your data
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<span style="color:#ffc787;font-weight:bold;font-style:italic"></span>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 Transform your data
@@ -127,6 +130,7 @@ Transform your data
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<span style="color:#ffc787;font-weight:bold;font-style:italic"></span>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>

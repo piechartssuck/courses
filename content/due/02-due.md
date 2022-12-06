@@ -92,7 +92,7 @@ Finish the module <span style="color:#ffc787;font-weight:bold"><i>Introduction t
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Review the slideshow <span style="color:#6ac4cd;font-weight:bold">Mixed Up Models</span> after class
+Review the slideshow <span style="color:#bff4ee;font-weight:bold">Mixed Up Models</span> after class
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/tasks/01-task/#review-this-weeks-slideshow"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
@@ -114,7 +114,7 @@ Submit your first deliverable <span style="color:#6acda5;font-weight:bold">Think
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Begin work on your second deliverable <span style="color:#6acda5;font-weight:bold">Create an Argument</span>
+Begin work on your second deliverable <span style="color:#6acda5;font-weight:bold">Create an Argument</span> after recieving feedback on the prior submission
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/deliverables/02-l2/"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>

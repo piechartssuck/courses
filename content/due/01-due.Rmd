@@ -34,7 +34,7 @@ Description = c("Read <i>Toward a Definition of Mixed Methods Research</i> in  J
                 "Install both <b>R</b> and <b>RStudio</b>",
                 "Start on the module <span style='color:#ffc787;font-weight:bold'><i>Introduction to R</i></span>",
                 "Get logged into the course Slack page and post on <a style='color:#ff8384;'>\\ #wk1-introduce-yourself</a>",
-                "Review the slideshow <span style='color:#6ac4cd;font-weight:bold'>Evaluation? Why is this a thing?</span> after class",
+                "Review the slideshow <span style='color:#bff4ee;font-weight:bold'>Evaluation? Why is this a thing?</span> after class",
                 "Review the course deliverables",
                 "Begin work on your first deliverable <span style='color:#6acda5;font-weight:bold'>Thinking About Studies</span>"
                 ),

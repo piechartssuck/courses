@@ -11,6 +11,8 @@ type: docs
 weight: 2
 ---
 
+`r blogdown::shortcode("aes-header")`
+
 ```{r setup, message=FALSE, warning=FALSE, include=FALSE}
 library(tidyverse)
 library(pander)

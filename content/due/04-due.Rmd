@@ -32,7 +32,7 @@ Description = c("Read <i>Modeling the Use of Mixed Methods–Grounded Theory: De
                 "Read <i>Pushing the Integration Envelope: A Network Analysis of Study Abroad Website Content</i> in Whatley & Stich (2022)",
                 "Read <i>Using Theoretical Models in Mixed Methods Research: An Example from an Explanatory Sequential Mixed Methods Study Exploring Teachers’ Beliefs and Use of Technology</i> in Haynes-Brown (2022)",
                 "Begin the module <span style='color:#ffc787;font-weight:bold'><i>Data Manipulation with dplyr</i></span>",
-                "Review the slideshow <span style='color:#6ac4cd;font-weight:bold'>Single Method Surveys and the Ridiculously High Cost of Mixed Designs</span> after class",
+                "Review the slideshow <span style='color:#bff4ee;font-weight:bold'>Single Method Surveys and the Ridiculously High Cost of Mixed Designs</span> after class",
                 "Create a survey in <b>Qualtrics</b> and present on the corresponding hypothetical mixed study",
                 "Continue work your third deliverable <span style='color:#6acda5;font-weight:bold'>Develop a Draft</span>"
                 ),

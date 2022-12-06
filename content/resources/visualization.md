@@ -11,7 +11,7 @@ type: docs
 weight: 7
 ---
 
-
+{{% aes-header %}}
 
 <style type="text/css">
 .article-container {
@@ -40,7 +40,7 @@ iframe {
 Many people have created many useful tools for selecting the correct chart type for a given dataset or question. Here are arguably some of the best put there:
 
 - [**The Chartmaker Directory**](http://chartmaker.visualisingdata.com/): Examples of how to create 51 different types of visualizations in 31 different software packages, including Excel, Tableau, and R.
-- [**Emery's Essentials**](http://annkemery.com/essentials/): Descriptions and examples of 26 different chart types.
+- [**Emery’s Essentials**](http://annkemery.com/essentials/): Descriptions and examples of 26 different chart types.
 - [**From Data to Viz**](https://www.data-to-viz.com/): A decision tree for dozens of chart types with links to R and Python code.
 - [**The Data Visualisation Catalogue**](http://www.datavizcatalogue.com/): Descriptions, explanations, examples, and tools for creating 60 different types of visualizations.
 - [**The Data Viz Project**](http://datavizproject.com/): Descriptions and examples for 150 different types of visualizations. Also allows you to search by data shape and chart function (comparison, correlation, distribution, geographical, part to whole, trend over time, etc.).
@@ -48,7 +48,7 @@ Many people have created many useful tools for selecting the correct chart type 
 
 ## General Resources
 
-- [**Ann K. Emery's blog**](http://annkemery.com/blog/): Blog and tutorials by [Ann Emery](https://twitter.com/AnnKEmery).
+- [**Ann K. Emery’s blog**](http://annkemery.com/blog/): Blog and tutorials by [Ann Emery](https://twitter.com/AnnKEmery).
 - [**Data Literacy Starter Kit**](https://docs.google.com/document/d/1kKRadOiF0LruItsvGA40fSDZkAQfCqC_Ela0gBdo8A4/edit): Compilation of resources to become data literate by [Laura Calloway](http://lauracalloway.com/).
 - [**The Data Visualization Checklist**](http://annkemery.com/checklist/): A helpful set of criteria for grading the effectiveness of a graphic.
 - [**Evergreen Data**](http://stephanieevergreen.com/): Helpful resources by [Stephanie Evergreen](https://twitter.com/evergreendata).
@@ -59,17 +59,15 @@ Many people have created many useful tools for selecting the correct chart type 
 - [**Visualising Data**](http://www.visualisingdata.com/): Fantastic collection of visualization resources, articles, and tutorials by [Andy Kirk](https://twitter.com/visualisingdata).
 - [**Storytelling with Data**](http://www.storytellingwithdata.com/): Blog and site full of resources by Cole Nussbaumer Knaflic.
 - [**Junk Charts**](http://junkcharts.typepad.com/): Blog by [Kaiser Fung](https://twitter.com/junkcharts).
-- [**WTF Visualizations**](http://viz.wtf/): Visualizations that make you ask "wtf?"
+- [**WTF Visualizations**](http://viz.wtf/): Visualizations that make you ask “wtf?”
 - [**R Psychologist**](https://rpsychologist.com/viz/): A fantastic collection of interactive applications of statistical concepts by [Kristoffer Magnusson](https://twitter.com/krstoffr)
 - [**Seeing Data**](http://seeingdata.org/): A series of research projects about perceptions and visualizations.
-
 
 ## Visualization in Excel
 
 - [**How to Build Data Visualizations in Excel**](http://stephanieevergreen.com/how-to/): Detailed tutorials for creating 14 different visualizations in Excel.
-- [**Ann Emery's tutorials**](http://annkemery.com/category/visualizing-data/tutorials/): Fantastic series of tutorials for creating charts in Excel.
-
+- [**Ann Emery’s tutorials**](http://annkemery.com/category/visualizing-data/tutorials/): Fantastic series of tutorials for creating charts in Excel.
 
 ## Visualization in Tableau
 
-Because it is focused entirely on visualization and a well-supported commercial product, Tableau has a [phenomenal library of tutorials and training videos](https://www.tableau.com/learn/training). There's [a helpful collections of videos here](https://www.quora.com/What-are-some-good-video-tutorials-for-learning-Tableau), as well.
+Because it is focused entirely on visualization and a well-supported commercial product, Tableau has a [phenomenal library of tutorials and training videos](https://www.tableau.com/learn/training). There’s [a helpful collections of videos here](https://www.quora.com/What-are-some-good-video-tutorials-for-learning-Tableau), as well.

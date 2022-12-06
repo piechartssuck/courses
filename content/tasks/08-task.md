@@ -114,8 +114,10 @@ PDF of the presentation
 
 </center>
 
-### Update the Draft
+### Assessment
 
-Please begin and finish work on the fourth deliverable after receiving feedback on the your third submission. More details can be found [here](/deliverables/04-l4/)
+- Submit the <i>fourth deliverable</i> <a href="/deliverables/04-l4/"><span style="color:#6acda5;font-weight:bold">Update the Draft</span></a>
+
+- Begin work on the <i>fifth deliverable</i> <a href="/deliverables/05-l5/"><span style="color:#6acda5;font-weight:bold">Refine the Draft</span></a> after receiving feedback on the prior submission
 
 [^1]: You will have to unzip this file. If you are unfamiliar with this process, please check the [Unzipping files](/resources/unzipping/) section under Resources for assistance

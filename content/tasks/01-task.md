@@ -125,6 +125,10 @@ PDF of the presentation
 
 ### Summary of Mixed Methods
 
-Take a look at a brief rundown of mixed methods research on [Scribbr](https://www.scribbr.com/methodology/mixed-methods-research/).
+Take a look at a brief rundown of mixed methods research on [Scribbr](https://www.scribbr.com/methodology/mixed-methods-research/)
+
+### Assessment
+
+Begin work on the <i>first deliverable</i> <a href="/deliverables/01-l1/"><span style="color:#6acda5;font-weight:bold">Thinking About Studies</span></a>
 
 [^1]: You will have to unzip this file. If you are unfamiliar with this process, please check the [Unzipping files](/resources/unzipping/) section under Resources for assistance

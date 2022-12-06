@@ -113,4 +113,10 @@ tibble(
 
 ### More on Triangulation
 
-Take a look at a brief rundown of the different types of triangulation on [Scribbr](https://www.scribbr.com/methodology/triangulation/).
+Take a look at a brief rundown of the different types of triangulation on [Scribbr](https://www.scribbr.com/methodology/triangulation/)
+
+### Assessment
+
++ Submit the <i>first deliverable</i> <a href="/deliverables/01-l1/"><span style='color:#6acda5;font-weight:bold'>Thinking About Studies</span></a>
+
++ Begin work on the <i>second deliverable</i> <a href="/deliverables/02-l2/"><span style='color:#6acda5;font-weight:bold'>Create an Argument</span></a> after receiving feedback on the prior submission

@@ -66,7 +66,7 @@ Chapters
 </svg>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Introduction to Text Analysis in R
+<span style="color:#ffc787;font-weight:bold;font-style:italic">Introduction to Text Analysis in R</span>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 Wrangling Text
@@ -82,6 +82,7 @@ Wrangling Text
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<span style="color:#ffc787;font-weight:bold;font-style:italic"></span>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 Visualizing Text
@@ -97,6 +98,7 @@ Visualizing Text
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<span style="color:#ffc787;font-weight:bold;font-style:italic"></span>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 Sentiment Analysis
@@ -112,6 +114,7 @@ Sentiment Analysis
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<span style="color:#ffc787;font-weight:bold;font-style:italic"></span>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 Topic Modeling
@@ -127,6 +130,7 @@ Topic Modeling
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<span style="color:#ffc787;font-weight:bold;font-style:italic"></span>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>

@@ -102,7 +102,7 @@ Get logged into the course Slack page and post on <a style="color:#ff8384;"> #w
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Review the slideshow <span style="color:#6ac4cd;font-weight:bold">Evaluation? Why is this a thing?</span> after class
+Review the slideshow <span style="color:#bff4ee;font-weight:bold">Evaluation? Why is this a thing?</span> after class
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/tasks/01-task/#inclassnotes"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>

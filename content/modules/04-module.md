@@ -66,7 +66,7 @@ Chapters
 </svg>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Data Manipulation with dplyr
+<span style="color:#ffc787;font-weight:bold;font-style:italic">Data Manipulation with dplyr</span>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 Transforming Data with dplyr
@@ -82,6 +82,7 @@ Transforming Data with dplyr
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<span style="color:#ffc787;font-weight:bold;font-style:italic"></span>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 Aggregating Data
@@ -97,6 +98,7 @@ Aggregating Data
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<span style="color:#ffc787;font-weight:bold;font-style:italic"></span>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 Selecting and Transforming Data
@@ -112,6 +114,7 @@ Selecting and Transforming Data
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<span style="color:#ffc787;font-weight:bold;font-style:italic"></span>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 Case Study: The babynames Dataset
@@ -127,6 +130,7 @@ Case Study: The babynames Dataset
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<span style="color:#ffc787;font-weight:bold;font-style:italic"></span>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>

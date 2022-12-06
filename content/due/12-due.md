@@ -102,7 +102,7 @@ Finish the module <span style="color:#ffc787;font-weight:bold"><i>Communicating 
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Review the slideshow <span style="color:#6ac4cd;font-weight:bold">Topic Modeling</span> after class
+Review the slideshow <span style="color:#bff4ee;font-weight:bold">Topic Modeling</span> after class
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/tasks/12-task/#inclassnotes"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
@@ -113,7 +113,7 @@ Review the slideshow <span style="color:#6ac4cd;font-weight:bold">Topic Modeling
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Continue work on your sixth deliverable <span style="color:#6acda5;font-weight:bold">Revise and Resubmit</span> after recieving feedback on the fifth submission
+Continue work on your sixth deliverable <span style="color:#6acda5;font-weight:bold">Revise and Resubmit</span>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/deliverables/06-l6/"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>

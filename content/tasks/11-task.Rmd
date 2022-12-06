@@ -92,6 +92,6 @@ tibble(
 </div>
 </center>
 
-### Revise and Resubmit
+### Assessment
 
-Please begin on the final deliverable after receiving feedback on the your fifth submission. More details can be found [here](/deliverables/06-l6/)
+Begin work on the <i>sixth deliverable</i> <a href="/deliverables/06-l6/"><span style='color:#6acda5;font-weight:bold'>Revise and Resubmit</span></a>

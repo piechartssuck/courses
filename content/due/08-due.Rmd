@@ -35,7 +35,7 @@ Description = c("Read <i>A Checklist of Mixed Methods Elements in a Submission f
                 "Begin the module <span style='color:#ffc787;font-weight:bold'><i>Introduction to Text Analysis in R</i></span>",
                 "Begin the associated <i class='fa-brands fa-r-project'></i> task for the module",
                 "Carefully go through chapters 3 and 4 in <i>Text Mining with R: A Tidy Approach</i>",
-                "Review the slideshow <span style='color:#6ac4cd;font-weight:bold'>Sentiment Analysis</span> after class",
+                "Review the slideshow <span style='color:#bff4ee;font-weight:bold'>Sentiment Analysis</span> after class",
                 "Submit your fourth deliverable <span style='color:#6acda5;font-weight:bold'>Update the Draft</span>",
                 "Begin work on your fifth deliverable <span style='color:#6acda5;font-weight:bold'>Refine the Draft</span> after recieving feedback on the prior submission"
                 ),

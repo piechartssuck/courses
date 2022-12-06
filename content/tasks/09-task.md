@@ -25,10 +25,6 @@ max-width:100%;
 }
 </style>
 
-### Downloads
-
-Download a copy of everything you need to follow along with the presentation[^1]
-
 ### In Class Notes
 
 <center>
@@ -107,8 +103,6 @@ PDF of the presentation
 
 </center>
 
-### Update the Draft
+### Assessment
 
-Please begin and finish work on the fifth deliverable after receiving feedback on the your fourth submission. More details can be found [here](/deliverables/05-l5/)
-
-[^1]: You will have to unzip this file. If you are unfamiliar with this process, please check the [Unzipping files](/resources/unzipping/) section under Resources for assistance
+Continue work on the <i>fifth deliverable</i> <a href="/deliverables/05-l5/"><span style="color:#6acda5;font-weight:bold">Refine the Draft</span></a>

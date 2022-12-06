@@ -32,7 +32,7 @@ Description = c("Read <i>Addressing the Challenges Related to Transforming Quali
                 "Read <i>Simultaneous and Sequential Qualitative Mixed Method Designs</i> in Morse, J.M. (2010)",
                 "Finish the module <span style='color:#ffc787;font-weight:bold'><i>Introduction to Text Analysis in R</i></span>",
                 "Finish the associated <i class='fa-brands fa-r-project'></i> task for the module",
-                "Review the slideshow <span style='color:#6ac4cd;font-weight:bold'>A Brief Overview of Qualitative Data Analysis</span> after class",
+                "Review the slideshow <span style='color:#bff4ee;font-weight:bold'>A Brief Overview of Qualitative Data Analysis</span> after class",
                 "Continue work on your fifth deliverable <span style='color:#6acda5;font-weight:bold'>Refine the Draft</span>"
                 ),
 

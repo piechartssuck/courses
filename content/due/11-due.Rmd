@@ -30,7 +30,7 @@ wk_post <-
 
 Description = c("Look at an excellent collection of reviews of commercially available and free/open source qualitative softwares by going to <i>Choosing an appropriate CAQDAS package</i> over at Surrey University",
                  "Finish the module <span style='color:#ffc787;font-weight:bold'><i>Communicating with Data in the Tidyverse</i></span>",
-                "Review the slideshow <span style='color:#6ac4cd;font-weight:bold'>Getting Familiar with Preprocessing</span> after class",
+                "Review the slideshow <span style='color:#bff4ee;font-weight:bold'>Getting Familiar with Preprocessing</span> after class",
                 "Begin work on your sixth deliverable <span style='color:#6acda5;font-weight:bold'>Revise and Resubmit</span> after recieving feedback on the fifth submission"
                 ),
 

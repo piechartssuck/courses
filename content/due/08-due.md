@@ -113,7 +113,7 @@ Carefully go through chapters 3 and 4 in <i>Text Mining with R: A Tidy Approach<
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Review the slideshow <span style="color:#6ac4cd;font-weight:bold">Sentiment Analysis</span> after class
+Review the slideshow <span style="color:#bff4ee;font-weight:bold">Sentiment Analysis</span> after class
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/tasks/08-task/#inclassnotes"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>

@@ -123,8 +123,10 @@ Take a look at a fantastic explanation of the conept of regression to the mean.
 </iframe>
 </p>
 
-### Create an Argument
+### Assessment
 
-Please finish work on your second deliverable. More details can be found [here](/deliverables/02-l2/)
+- Submit the <i>second deliverable</i> <a href="/deliverables/02-l2/"><span style="color:#6acda5;font-weight:bold">Create an Argument</span></a>
+
+- Begin work on the <i>third deliverable</i> <a href="/deliverables/03-l3/"><span style="color:#6acda5;font-weight:bold">Develop a Draft</span></a> after receiving feedback on the prior submission
 
 [^1]: You will have to unzip this file. If you are unfamiliar with this process, please check the [Unzipping files](/resources/unzipping/) section under Resources for assistance

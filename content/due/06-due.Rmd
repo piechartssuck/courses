@@ -33,7 +33,7 @@ Research With Natural Language Processing of Big Text Data</i> in Chang et al. (
                 "Read <i>Comparing Grounded Theory and Topic Modeling: Extreme Divergence or Unlikely Convergence?</i> in Baumer et al. (2017)",
                 "Begin the module <span style='color:#ffc787;font-weight:bold'><i>Unsupervised Learning in R</i></span>",
                 "Carefully go through the first two chapters in <i>Text Mining with R: A Tidy Approach</i>",
-                "Review the slideshow <span style='color:#6ac4cd;font-weight:bold'>The Quasi Experiments</span> after class",
+                "Review the slideshow <span style='color:#bff4ee;font-weight:bold'>The Quasi Experiments</span> after class",
                 "Submit your third deliverable <span style='color:#6acda5;font-weight:bold'>Develop a Draft</span>"
                 ),
 

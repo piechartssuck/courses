@@ -10,6 +10,8 @@ output:
       toc: TRUE
 ---
 
+`r blogdown::shortcode("aes-header")`
+
 ```{r setup, message=FALSE, warning=FALSE, include=FALSE}
 library(tidyverse)
 library(pander)

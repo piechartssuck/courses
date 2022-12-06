@@ -130,8 +130,8 @@ PDF of the presentation
 
 7.  Review all submissions prior to next week’s class and be prepared to critique each
 
-### Develop a Draft
+### Assessment
 
-Please begin and finish work on the third deliverable after recieving feedback on the your second submission. More details can be found [here](/deliverables/03-l3/)
+Continue work on the <i>third deliverable</i> <a href="/deliverables/03-l3/"><span style="color:#6acda5;font-weight:bold">Develop a Draft</span></a>
 
 [^1]: You will have to unzip this file. If you are unfamiliar with this process, please check the [Unzipping files](/resources/unzipping/) section under Resources for assistance

@@ -1,16 +1,12 @@
 ---
 title: "Update the Draft"
 linktitle: "Update the Draft"
-toc: true
-output:
-  rmarkdown::html_document:
-    toc: true
 menu:
   tasks:
     parent: Deliverables
     weight: 4
 type: docs
-weight: 2
+weight: 4
 editor_options: 
   chunk_output_type: console
 ---
@@ -25,8 +21,19 @@ source(here::here("content", "com_libs.R"))
 ul {
     margin-left: 1.5em
 }
-</style>
 
+.dark h1 {
+color:#6acda5
+}
+
+docs-sidebar .docs-toc-item.active a, 
+.docs-sidebar .nav > .active:hover > a, 
+.docs-sidebar .nav > .active > a {
+  font-weight: bold;
+  color: #6acda5;
+  background-color: transparent;
+}
+</style>
 
 Expand on your draft to include a 1500-1750 word narrative
 

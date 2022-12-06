@@ -1,0 +1,25 @@
+---
+title: "Deadline"
+linktitle: "Week 15: Deadline"
+menu:
+  tasks:
+    parent: Tasks
+    weight: 15
+type: docs
+weight: 1
+---
+
+{{% aes-header %}}
+
+<style>
+img {
+max-width:100%;
+}
+</style>
+
+### Assessment
+
+Based on the <i>seventh deliverable</i> <a href="/deliverables/07-l7/"><span style="color:#6acda5;font-weight:bold">Give an Elevator Pitch</span></a>
++ conduct the pitch in class adhering to the timeframe allotted
+
+- submit the infographic and all other relevant materials to both <a href="https://ecampus.wvu.edu" target="_blank"> eCampus</a> and <a href="https://edp618fall2022.slack.com/archives/C04CV0ANEB1" target="_blank" style='color:#ff8384;'> \#elevator-pitch</a> on <b>Slack</b>

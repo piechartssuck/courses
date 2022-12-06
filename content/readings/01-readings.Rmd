@@ -41,10 +41,11 @@ I'm sorry but your browser doesn't support embedded videos. You can however <a h
 
 ### Review the Course Website
 
-Far be it from us to disagree with Snoop, so you should probably go read the [syllabus](/syllabus/) as soon as possible! Additionally look over the other areas on this site: [tasks](/tasks/), [trainings](/trainings/), [to do list](/due/), and [resources](/resources/) pages for this class.
+Far be it from us to disagree with Snoop, so you should probably go read the [syllabus](/syllabus/) as soon as possible! Additionally look over the other areas on this site: [tasks](/tasks/), [trainings](/trainings/), [to do](/due/), and [resources](/resources/) pages for this class.
 
 ### Download Literature
 
+<center>
 ```{r echo=FALSE,eval=TRUE,message=FALSE}
 loc <- here::here("static", "readings", "EDP618Week1Readings.zip")
 
@@ -58,6 +59,7 @@ downloadthis::download_file(
   class = "hvr-sweep-to-left"
   )
 ```
+</center>
 
 ### Read Some Text
 

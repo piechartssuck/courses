@@ -34,7 +34,7 @@ Description = c("Read <i>Smart Literature Review: A Practical Topic Modelling Ap
                 "Review how short texts can be used in topic models",
                 "Conduct an exploratory literature/systematic review using topic modeling",
                 "Finish the module <span style='color:#ffc787;font-weight:bold'><i>Communicating with Data in the Tidyverse</i></span>",
-                "Review the slideshow <span style='color:#6ac4cd;font-weight:bold'>Topic Modeling</span> after class",
+                "Review the slideshow <span style='color:#bff4ee;font-weight:bold'>Topic Modeling</span> after class",
                 "Continue work on your sixth deliverable <span style='color:#6acda5;font-weight:bold'>Revise and Resubmit</span>"
                 ),
 

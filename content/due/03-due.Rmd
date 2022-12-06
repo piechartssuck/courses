@@ -32,7 +32,7 @@ Description = c("Read <i>Mixed Methods and Credibility of Evidence in Evaluation
                 "Read <i>Strategies for Ensuring Trustworthiness in Qualitative Research Projects</i> in Shenton (2004)",
                 "Finish the module <span style='color:#ffc787;font-weight:bold'><i>Intermediate Data Visualization with ggplot2</i></span>",
                 "Complete and submit the associated <i class='fa-brands fa-r-project'></i> task for the module",
-                "Review the slideshow <span style='color:#6ac4cd;font-weight:bold'>Causality and Validity</span> after class",
+                "Review the slideshow <span style='color:#bff4ee;font-weight:bold'>Causality and Validity</span> after class",
                 "Watch <i>Regression to the Mean</i>",
                 "Submit your second deliverable <span style='color:#6acda5;font-weight:bold'>Create an Argument</span>",
                 "Begin work on your third deliverable <span style='color:#6acda5;font-weight:bold'>Develop a Draft</span> after recieving feedback on the prior submission"

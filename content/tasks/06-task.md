@@ -103,6 +103,6 @@ PDF of the presentation
 
 </center>
 
-### Develop a Draft
+### Assessment
 
-Please begin and finish work on the third deliverable after receiving feedback on the your second submission. More details can be found [here](/deliverables/03-l3/)
+Submit the <i>third deliverable</i> <a href="/deliverables/03-l3/"><span style="color:#6acda5;font-weight:bold">Develop a Draft</span></a>

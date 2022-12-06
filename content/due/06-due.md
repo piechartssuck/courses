@@ -81,7 +81,7 @@ Carefully go through the first two chapters in <i>Text Mining with R: A Tidy App
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Review the slideshow <span style="color:#6ac4cd;font-weight:bold">The Quasi Experiments</span> after class
+Review the slideshow <span style="color:#bff4ee;font-weight:bold">The Quasi Experiments</span> after class
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/tasks/06-task/#inclassnotes"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>

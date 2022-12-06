@@ -105,8 +105,8 @@ PDF of the presentation
 
 ### Taguette
 
-Install [Taguette](https://www.taguette.org/install.html) if you have not done so already. Additionally please review the [Getting started with Taguette](https://www.taguette.org/getting-started.html) guide prior to coming to class. We will be using it next week.
+Install [Taguette](https://www.taguette.org/install.html) if you have not done so already and please review the [Getting started with Taguette](https://www.taguette.org/getting-started.html) guide *prior to class time*
 
-### Update the Draft
+### Assessment
 
-Please begin and finish work on the fifth deliverable after receiving feedback on the your fourth submission. More details can be found [here](/deliverables/05-l5/)
+Submit the <i>fifth deliverable</i> <a href="/deliverables/05-l5/"><span style="color:#6acda5;font-weight:bold">Refine the Draft</span></a>
