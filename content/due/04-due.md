@@ -91,7 +91,7 @@ Review the slideshow <span style="color:#6ac4cd;font-weight:bold">Single Method 
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Create a survey in Qualtrics and present on the corresponding hypothetical mixed study
+Create a survey in <b>Qualtrics</b> and present on the corresponding hypothetical mixed study
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/tasks/04-task/#construct-a-survey-for-mixing"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
@@ -102,13 +102,13 @@ Create a survey in Qualtrics and present on the corresponding hypothetical mixed
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Finish up on your third deliverable <span style="color:#6acda5;font-weight:bold">Develop a Draft</span> after recieving feedback on the second submission
+Continue work your third deliverable <span style="color:#6acda5;font-weight:bold">Develop a Draft</span>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/deliverables/03-l3/"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<img src="/logos/wvu-gold-ico.png" alt="WVU icon" width="26">
+<a href="https://ecampus.wvu.edu/" target="_blank"><img src="/logos/wvu-gold-ico.png" alt="WVU icon" width="26"> </a>
 </td>
 </tr>
 <tr>

@@ -35,7 +35,7 @@ Across Methodologies, Methods, and Stakeholder Groups: The Joys, Woes, and Polit
                 "Read <i>Using Crowdsourcing to Code
 Open-Ended Responses: A Mixed Methods Approach</i> in Jacobson, Whyte, & Azzam (2018)",
                 "Finish the module <span style='color:#ffc787;font-weight:bold'><i>Data Manipulation with dplyr</i></span>",
-                "Take a look at the criteria for your third deliverable <span style='color:#6acda5;font-weight:bold'>Develop a Draft</span>"
+                "Continue work your third deliverable <span style='color:#6acda5;font-weight:bold'>Develop a Draft</span>"
                 ),
 
 
@@ -59,7 +59,7 @@ Site = c("/readings/05-readings/#download-literature",
          "https://methods-sagepub-com.wvu.idm.oclc.org/book/mixed-methods-design-in-evaluation/i318.xml",
          "/readings/05-readings/#download-literature",
          "https://www.datacamp.com",
-         "")
+         "https://ecampus.wvu.edu/")
 )
 ```
 

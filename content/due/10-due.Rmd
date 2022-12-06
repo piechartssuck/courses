@@ -33,7 +33,7 @@ Description = c("Review the <i>Comparison Chart</i> for comparing QDA tools at N
                 "Review the slideshow <span style='color:#6ac4cd;font-weight:bold'>A Brief Overview of Qualitative Data Analysis</span> after class",
                 "Download and install <b>Taguette</b> if you have not done so already",
                 "Go through the <i>Getting started with Taguette</i> guide to get yourself a bit familiarized with the platform",
-                "Submit your fifth deliverable <span style='color:#6acda5;font-weight:bold'>Refine the Draft</span> after recieving feedback on the fourth submission"
+                "Submit your fifth deliverable <span style='color:#6acda5;font-weight:bold'>Refine the Draft</span>"
                 ),
 
 

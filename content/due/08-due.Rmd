@@ -36,7 +36,8 @@ Description = c("Read <i>A Checklist of Mixed Methods Elements in a Submission f
                 "Begin the associated <i class='fa-brands fa-r-project'></i> task for the module",
                 "Carefully go through chapters 3 and 4 in <i>Text Mining with R: A Tidy Approach</i>",
                 "Review the slideshow <span style='color:#6ac4cd;font-weight:bold'>Sentiment Analysis</span> after class",
-                "Concentrate and submit up on your fourth deliverable <span style='color:#6acda5;font-weight:bold'>Update the Draft</span> after recieving feedback on the third submission"
+                "Submit your fourth deliverable <span style='color:#6acda5;font-weight:bold'>Update the Draft</span>",
+                "Begin work on your fifth deliverable <span style='color:#6acda5;font-weight:bold'>Refine the Draft</span> after recieving feedback on the prior submission"
                 ),
 
 
@@ -48,7 +49,8 @@ Details = c("<a href='/readings/08-readings/#read-some-text'><span style='font-s
             "<a href='/modules/08-module/#r-task'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/walkthroughs/08-walkthrough/#tidy-text-mining'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/tasks/08-task/#inclassnotes'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
-            "<a href='/deliverables/04-l4/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
+            "<a href='/deliverables/04-l4/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+             "<a href='/deliverables/05-l5/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
             ),
 
 Icon = c("pdf",
@@ -59,6 +61,7 @@ Icon = c("pdf",
          "R",
          "offsite",
          "slideshow",
+         "ecampus",
          "ecampus"),
 
 Site = c("/readings/08-readings/#download-literature",
@@ -69,6 +72,7 @@ Site = c("/readings/08-readings/#download-literature",
          "",
          "https://www.tidytextmining.com",
          "",
+         "https://ecampus.wvu.edu/",
          "https://ecampus.wvu.edu/")
 )
 ```

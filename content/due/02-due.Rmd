@@ -34,7 +34,9 @@ Research: How is it Done?</i> in Bryman (2006)",
                 "Read <i>Crossing Anxious Borders: Teaching Across the Quantitative–Qualitative ‘Divide’</i> in Luttrell (2005)",
                 "Read <i>Paradigms Lost and Pragmatism Regained: Methodological Implications of Combining Qualitative and Quantitative Methods</i> in Morgan (2007)",
                 "Finish the module <span style='color:#ffc787;font-weight:bold'><i>Introduction to Data Visualization with ggplot2</i></span>",
-                "Review the slideshow <span style='color:#6ac4cd;font-weight:bold'>Mixed Up Models</span> after class"
+                "Review the slideshow <span style='color:#6ac4cd;font-weight:bold'>Mixed Up Models</span> after class",
+                "Submit your first deliverable <span style='color:#6acda5;font-weight:bold'>Thinking About Studies</span>",
+                "Begin work on your second deliverable <span style='color:#6acda5;font-weight:bold'>Create an Argument</span> after recieving feedback on the prior submission"
                 ),
 
 
@@ -43,7 +45,9 @@ Details = c("<a href='/readings/02-readings/#read-some-text'><span style='font-s
             "<a href='/readings/02-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/readings/02-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/modules/02-module/#data-camp'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
-            "<a href='/tasks/01-task/#review-this-weeks-slideshow'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
+            "<a href='/tasks/01-task/#review-this-weeks-slideshow'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/deliverables/01-l1/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/deliverables/02-l2/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
             ),
 
 Icon = c("pdf",
@@ -51,14 +55,18 @@ Icon = c("pdf",
          "pdf",
          "pdf",
          "dc",
-         "slideshow"),
+         "slideshow",
+         "ecampus",
+         "ecampus"),
 
 Site = c("/readings/02-readings/#download-literature",
          "/readings/02-readings/#download-literature",
          "/readings/02-readings/#download-literature",
          "/readings/02-readings/#download-literature",
          "https://www.datacamp.com",
-         "")
+         "",
+         "https://ecampus.wvu.edu/",
+         "https://ecampus.wvu.edu/")
 )
 ```
 

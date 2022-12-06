@@ -34,7 +34,8 @@ Description = c("Read <i>Mixed Methods and Credibility of Evidence in Evaluation
                 "Complete and submit the associated <i class='fa-brands fa-r-project'></i> task for the module",
                 "Review the slideshow <span style='color:#6ac4cd;font-weight:bold'>Causality and Validity</span> after class",
                 "Watch <i>Regression to the Mean</i>",
-                 "Finish up on your second deliverable <span style='color:#6acda5;font-weight:bold'>Create an Argument</span>"
+                "Submit your second deliverable <span style='color:#6acda5;font-weight:bold'>Create an Argument</span>",
+                "Begin work on your third deliverable <span style='color:#6acda5;font-weight:bold'>Develop a Draft</span> after recieving feedback on the prior submission"
                 ),
 
 
@@ -44,7 +45,8 @@ Details = c("<a href='/readings/03-readings/#read-some-text'><span style='font-s
             "<a href='/modules/03-module/#r-task'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/tasks/03-task/#inclassnotes'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/tasks/03-task/#watchavideo'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
-            "<a href='/deliverables/02-l2/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
+            "<a href='/deliverables/02-l2/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/deliverables/03-l3/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
             ),
 
 Icon = c("pdf",
@@ -53,6 +55,7 @@ Icon = c("pdf",
          "R",
          "slideshow",
          "youtube",
+         "ecampus",
          "ecampus"),
 
 Site = c("/readings/03-readings/#download-literature",
@@ -60,8 +63,9 @@ Site = c("/readings/03-readings/#download-literature",
          "https://www.datacamp.com",
          "",
          "",
-         "",
-         "")
+         "https://youtu.be/1tSqSMOyNFE",
+         "https://ecampus.wvu.edu/",
+         "https://ecampus.wvu.edu/")
 )
 ```
 

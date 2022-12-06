@@ -39,9 +39,9 @@ Carefully read through the directions below
     + Audience members are expected to ask questions and/or provide constructive criticism during a two to three minute Q&A session
   
 2. Please submit the *Elevator Pitch* to
-    + [#elevator-pitch]("https://edp618fall2022.slack.com/archives/C04CV0ANEB1"){target="_blank"} in a single posting on Slack
+    + <a href="https://edp618fall2022.slack.com/archives/C04CV0ANEB1" target="_blank" style='color:#ff8384;'> #elevator-pitch</a> in a single posting on Slack
   
-    + [eCampus]("https://ecampus.wvu.edu")
+    + <a href="https://ecampus.wvu.edu" target="_blank"> eCampus</a>
   
 <br />
 

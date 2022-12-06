@@ -92,7 +92,7 @@ Review the slideshow <span style="color:#6ac4cd;font-weight:bold">The Quasi Expe
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Finish up on your third deliverable <span style="color:#6acda5;font-weight:bold">Develop a Draft</span> after recieving feedback on the second submission
+Submit your third deliverable <span style="color:#6acda5;font-weight:bold">Develop a Draft</span>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/deliverables/03-l3/"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>

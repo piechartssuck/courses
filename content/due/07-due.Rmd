@@ -1,0 +1,50 @@
+---
+title: "Taking a Minute"
+linktitle: "Week 7: Taking a Minute"
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  due:
+    parent: 'To Do List'
+    weight: 7
+type: docs
+weight: 1
+---
+
+`r blogdown::shortcode("aes-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r eval = TRUE, echo = FALSE}
+
+wk_post <- 
+  
+  tibble(
+
+Description = c("Finish the module <span style='color:#ffc787;font-weight:bold'><i>Unsupervised Learning in R</i></span>",
+                "Begin work on your fourth deliverable <span style='color:#6acda5;font-weight:bold'>Update the Draft</span> after recieving feedback on the third submission"
+                ),
+
+
+Details = c("<a href='/modules/06-module/#data-camp'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/deliverables/04-l4/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
+            ),
+
+Icon = c("dc",
+         "ecampus"),
+
+Site = c("https://www.datacamp.com",
+         "https://ecampus.wvu.edu/")
+)
+```
+
+<center>
+`r knitr::spin_child(here::here("content", "post_frame.R"))`
+</center>

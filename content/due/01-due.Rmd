@@ -35,7 +35,8 @@ Description = c("Read <i>Toward a Definition of Mixed Methods Research</i> in  J
                 "Start on the module <span style='color:#ffc787;font-weight:bold'><i>Introduction to R</i></span>",
                 "Get logged into the course Slack page and post on <a style='color:#ff8384;'>\\ #wk1-introduce-yourself</a>",
                 "Review the slideshow <span style='color:#6ac4cd;font-weight:bold'>Evaluation? Why is this a thing?</span> after class",
-                "Review the course deliverables"
+                "Review the course deliverables",
+                "Begin work on your first deliverable <span style='color:#6acda5;font-weight:bold'>Thinking About Studies</span>"
                 ),
 
 
@@ -46,7 +47,8 @@ Details = c("<a href='/readings/01-readings/#read-some-text'><span style='font-s
             "<a href='/modules/01-module/#data-camp'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/tasks/01-task/#class-slack-account-access'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/tasks/01-task/#inclassnotes'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
-             "<a href='/tasks/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
+             "<a href='/tasks/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/deliverables/01-l1/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
             ),
 
 Icon = c("pdf",
@@ -56,7 +58,8 @@ Icon = c("pdf",
          "dc",
          "slack",
          "slideshow",
-         "webpage"),
+         "webpage",
+         "ecampus"),
 
 Site = c("/readings/01-readings/#download-literature",
          "/readings/01-readings/#download-literature",
@@ -65,7 +68,8 @@ Site = c("/readings/01-readings/#download-literature",
          "https://www.datacamp.com",
          "https://edp618fall2022.slack.com/",
          "",
-         "")
+         "",
+         "https://ecampus.wvu.edu/")
 )
 ```
 
