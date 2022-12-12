@@ -46,6 +46,17 @@ Begin <span style="color:#6acda5;font-weight:bold">Give an Elevator Speech</span
 </td>
 </tr>
 <tr>
+<td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+Take a look at some advanced things you can do with R and Qualtrics
+</td>
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<a href="/deliverables/08-l8/"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
+</td>
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<img src="/logos/walkthrough-ico.png" alt="Walkthrough icon" width="26">
+</td>
+</tr>
+<tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;">
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;">

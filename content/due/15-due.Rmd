@@ -28,15 +28,19 @@ wk_post <-
   
   tibble(
 
-Description = c("Begin <span style='color:#6acda5;font-weight:bold'>Give an Elevator Speech</span> and submit it by the end of this week"
+Description = c("Begin <span style='color:#6acda5;font-weight:bold'>Give an Elevator Speech</span> and submit it by the end of this week",
+                "Take a look at some advanced things you can do with R and Qualtrics"
                 ),
 
-Details = c("<a href='/deliverables/08-l8/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
+Details = c("<a href='/deliverables/08-l8/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/deliverables/08-l8/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
             ),
 
-Icon = c("ecampus"),
+Icon = c("ecampus",
+         "walkthrough"),
 
-Site = c("https://ecampus.wvu.edu"
+Site = c("https://ecampus.wvu.edu",
+         ""
          )
 )
 ```

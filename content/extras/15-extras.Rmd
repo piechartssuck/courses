@@ -1,0 +1,93 @@
+---
+title: "Endgame"
+linktitle: "Week 15: Endgame"
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  tasks:
+    parent: Extras
+    weight: 15
+type: docs
+weight: 1
+---
+
+`r blogdown::shortcode("aes-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+If you have an interest in continuing to use R with Qualtrics, consider taking a look at the following resources
+
+```{r echo=FALSE}
+
+paper <- tibble(
+  
+  title = c(
+    "<i>Importing Surveys Into Qualtrics And Moving Data From Qualtrics To R</i>",
+    "<i>R Coding in Stats iQ</i>"
+    ),
+  
+  Source = c(
+    "PSYC 4780: Advanced Research Methods & Statistics Using R by Dr. David J. Stanley @ the University of Guelph (2022)",
+    "Qualtrics"
+    ),
+  
+  Arrow = c(
+    "external",
+    "external"
+    ),
+  
+  Icon = c(
+    "webpage",
+    "webpage"
+    ),
+  
+  Site = c(
+    "https://dstanley4.github.io/psyc4780bookdown/qualtrics.html#qualtrics-data-to-r",
+    "https://www.qualtrics.com/support/stats-iq/analyses/r-coding-in-stats-iq/"
+    ),
+  
+  .name_repair = "minimal"
+  
+)
+
+```
+
+<center>
+```{r, echo=FALSE}
+paper %>%
+  mutate(Icon = case_when(
+    str_detect(`Icon`, "slack") ~ '<img src="/logos/slack-ico.png" alt="Slack icon" width="25px">',
+    str_detect(`Icon`, "ecampus") ~ '<img src="/logos/wvu-gold-ico.png" alt="Slack icon" width="25px">',
+    str_detect(`Icon`, "library") ~ '<img src="/logos/library-ico.png" alt="Slack icon" width="25px">',
+    str_detect(`Icon`, "webpage") ~ '<img src="/logos/webpage-ico.png" alt="Slack icon" width="25px">',
+    TRUE ~ NA_character_
+    )
+  ) %>%
+  mutate(Arrow = case_when(
+    str_detect(`Arrow`, "external") ~ '<div style="font-size: 0.5rem;"><i class="fa fa-external-link fa-2x" aria-hidden="true" style="color:#559977"></i></div>',
+    TRUE ~ NA_character_
+    )
+  ) %>%
+  mutate(Site = na_if(Site, "")) %>%
+  mutate(Link = case_when(
+    !is.na(Icon) ~ paste0("<a href=",Site," target='_blank'>",Icon,"</a>"),
+    TRUE ~ "Please check this week's download"
+    )
+  ) %>%
+  select(-Icon, -Site, -Arrow) %>% 
+  mutate_all(replace_na,"") %>%
+  kbl(col.names = c("Title", "Citation", "Link"), 
+      "html", 
+      escape = FALSE,
+      align = 'llc') %>%
+  kable_paper(full_width = FALSE) %>%
+  column_spec(1, width = "40em") %>%
+  column_spec(2, width = "20em") %>%
+  column_spec(3, width = "10em") %>% 
+  row_spec(0:nrow(paper), extra_css = 'vertical-align: middle !important;', color = "#f7f7f7", background = "transparent")
+```
+</center>
