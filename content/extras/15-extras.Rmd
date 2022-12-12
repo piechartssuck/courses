@@ -1,6 +1,6 @@
 ---
-title: "Endgame"
-linktitle: "Week 15: Endgame"
+title: "Reporting"
+linktitle: "Week 15: Reporting"
 toc: true
 output:
   rmarkdown::html_document:

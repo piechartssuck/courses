@@ -33,7 +33,7 @@ Description = c("Begin <span style='color:#6acda5;font-weight:bold'>Give an Elev
                 ),
 
 Details = c("<a href='/deliverables/08-l8/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
-            "<a href='/deliverables/08-l8/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
+            "<a href='/extras/15-extras/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
             ),
 
 Icon = c("ecampus",
