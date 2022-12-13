@@ -315,7 +315,13 @@ Please be aware that this idea of addressing missingness in a data set is a mult
 
 ## Assumptions
 
-While there are approaches to imputing discrete data, *we’ll be covering the case for those items that have scales considered to be continuous* (e.g. Likert scale). If you have taken statistics in the past, then you likely know about these things called *assumptions*, or criteria that have to be satisfied before running a statistical test (e.g. *t*-test, ANOVA, etc.). This is also true when dealing with missing data points, in that we have to determine if our data is
+<center>
+<p id="rounded_corners">
+While there are approaches to imputing discrete data, we’ll be covering the case for those items that have scales considered to be continuous (e.g. Likert scale)
+</p>
+</center>
+
+If you have taken statistics in the past, then you likely know about these things called *assumptions*, or criteria that have to be satisfied before running a statistical test (e.g. *t*-test, ANOVA, etc.). This is also true when dealing with missing data points, in that we have to determine if our data is
 
 <center>
 <table class=" lightable-paper table" style="font-size: 13ptpx; font-family: Roboto Condensed; margin-left: auto; margin-right: auto; width: auto !important; margin-left: auto; margin-right: auto;">
@@ -649,6 +655,6 @@ I randomized missing data the original subset which can be seen by opening the `
 
 [^2]: …though recent advances in machine learning have brought us closer in the past three years than we have had in the past 50
 
-[^3]: In all fairness, I am in this group and absolutely biased.
+[^3]: In all fairness, I am in this group and absolutely biased
 
 [^4]: You’re first reaction may be to require respondents to address items -aka a forced response- but that almost always backfires resulting in a higher rate of nonresponses

@@ -247,7 +247,7 @@ Instead, most non R softwares automatically delete incomplete cases...and silent
 
 In practice, this can be the difference between being able to *conclude a treatment likely works* and *reporting maybe something happened but we don't know*. So missing data is a big problem that we still haven't been able to tackle directly yet^[...though recent advances in machine learning have brought us closer in the past three years than we have had in the past 50]. 
 
-To tackle this issue, there are two prevailing philosophical approaches. On one side are those who believe that the data is what it is and you have to deal with what you get. On the other side you have those that believe a machine, whether it be using an algorithm by itself or coupled with artificial intelligence, can predict the likely values that should have been there given certain assumptions are met (which we cover in the next section)^[In all fairness, I am in this group and absolutely biased.]. 
+To tackle this issue, there are two prevailing philosophical approaches. On one side are those who believe that the data is what it is and you have to deal with what you get. On the other side you have those that believe a machine, whether it be using an algorithm by itself or coupled with artificial intelligence, can predict the likely values that should have been there given certain assumptions are met (which we cover in the next section)^[In all fairness, I am in this group and absolutely biased]. 
 
 So for the latter group, there are a number of tactics that can be used to tackle this missingness issue, but the main three are
 
@@ -265,7 +265,13 @@ Please be aware that this idea of addressing missingness in a data set is a mult
 
 ## Assumptions
 
-While there are approaches to imputing discrete data, *we'll be covering the case for those items that have scales considered to be continuous* (e.g. Likert scale). If you have taken statistics in the past, then you likely know about these things called *assumptions*, or criteria that have to be satisfied before running a statistical test (e.g. *t*-test, ANOVA, etc.). This is also true when dealing with missing data points, in that we have to determine if our data is
+<center>
+<p id="rounded_corners">
+While there are approaches to imputing discrete data, we'll be covering the case for those items that have scales considered to be continuous (e.g. Likert scale)
+</p>
+</center>
+
+If you have taken statistics in the past, then you likely know about these things called *assumptions*, or criteria that have to be satisfied before running a statistical test (e.g. *t*-test, ANOVA, etc.). This is also true when dealing with missing data points, in that we have to determine if our data is
 
 ```{r echo=FALSE,purl=FALSE}
 
