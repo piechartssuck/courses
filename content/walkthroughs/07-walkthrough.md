@@ -22,6 +22,7 @@ weight: 2
 <script src="/rmarkdown-libs/react/react-dom.min.js"></script>
 <script src="/rmarkdown-libs/reactwidget/react-tools.js"></script>
 <script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<link href="/rmarkdown-libs/reactable/reactable.css" rel="stylesheet" />
 <script src="/rmarkdown-libs/reactable-binding/reactable.js"></script>
 <script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
 
@@ -98,9 +99,9 @@ Load an external csv file, type in syntax, and consider interpretations
 
 ## Prerequisites
 
--   Please go and take the <a href="https://openpsychometrics.org/tests/NPAS/" target="_blank">Nerdy Personality Attributes Scale</a>.
+- Please go and take the <a href="https://openpsychometrics.org/tests/NPAS/" target="_blank">Nerdy Personality Attributes Scale</a>.
 
--   Read the paper <a href="/readings/07-readings/#download-literature" target="_blank">An exploratory factor analysis of the Nerdy Personality Attributes Scale in a sample of self-identified nerds/geeks (Finister, Pollet, &amp; Neave, 2020)</a> included in this week’s downloads. .
+- Read the paper <a href="/readings/07-readings/#download-literature" target="_blank">An exploratory factor analysis of the Nerdy Personality Attributes Scale in a sample of self-identified nerds/geeks (Finister, Pollet, &amp; Neave, 2020)</a> included in this week’s downloads. .
 
 ## Materials
 
@@ -232,7 +233,7 @@ nerdy_data %>%
 or via the `reactable()` package[^1]
 
 <div id="htmlwidget-1" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-1">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Q1":[3,"NA",5,"NA",4,4,5,"NA","NA",4],"Q2":[5,"NA","NA",5,"NA",4,3,3,5,5],"Q3":[3,4,5,"NA","NA",4,4,4,5,5],"Q4":[3,3,5,5,4,4,3,5,"NA",5],"Q5":[5,5,5,5,"NA",4,"NA",5,2,4],"Q6":[5,"NA","NA","NA",4,4,4,3,3,3],"Q7":[5,5,5,5,"NA",5,4,"NA",0,5],"Q8":["NA",1,5,"NA",4,3,"NA",5,"NA",4],"Q9":["NA",4,5,5,4,"NA",5,3,4,4],"Q10":[5,"NA",5,5,5,"NA","NA",5,4,5],"Q11":[4,1,5,5,4,4,3,4,"NA",1],"Q12":[5,"NA",4,"NA",4,4,3,4,"NA",4],"Q13":[5,4,5,4,"NA",3,4,3,5,4],"Q14":["NA",4,5,4,"NA",5,4,"NA",3,"NA"],"Q15":["NA",1,"NA",4,1,"NA",1,"NA",5,5],"Q16":["NA",3,5,2,1,4,1,5,"NA","NA"],"Q17":[4,3,5,5,5,3,3,4,"NA",5],"Q18":[5,3,4,5,5,4,1,4,5,"NA"],"Q19":[5,1,5,5,3,5,3,"NA",4,2],"Q20":[5,3,5,5,5,"NA",1,3,3,5],"Q21":[5,3,5,4,5,"NA",5,4,5,2],"Q22":["NA",3,5,1,4,"NA","NA","NA",2,3],"Q23":[5,"NA","NA",5,4,5,"NA","NA",5,5],"Q24":["NA",4,5,5,5,"NA",5,5,4,5],"Q25":[5,4,"NA",5,"NA","NA","NA",2,2,2],"Q26":["NA","NA",5,5,0,4,"NA",5,3,"NA"]},"columns":[{"accessor":"Q1","name":"Q1","type":"numeric","align":"center"},{"accessor":"Q2","name":"Q2","type":"numeric","align":"center"},{"accessor":"Q3","name":"Q3","type":"numeric","align":"center"},{"accessor":"Q4","name":"Q4","type":"numeric","align":"center"},{"accessor":"Q5","name":"Q5","type":"numeric","align":"center"},{"accessor":"Q6","name":"Q6","type":"numeric","align":"center"},{"accessor":"Q7","name":"Q7","type":"numeric","align":"center"},{"accessor":"Q8","name":"Q8","type":"numeric","align":"center"},{"accessor":"Q9","name":"Q9","type":"numeric","align":"center"},{"accessor":"Q10","name":"Q10","type":"numeric","align":"center"},{"accessor":"Q11","name":"Q11","type":"numeric","align":"center"},{"accessor":"Q12","name":"Q12","type":"numeric","align":"center"},{"accessor":"Q13","name":"Q13","type":"numeric","align":"center"},{"accessor":"Q14","name":"Q14","type":"numeric","align":"center"},{"accessor":"Q15","name":"Q15","type":"numeric","align":"center"},{"accessor":"Q16","name":"Q16","type":"numeric","align":"center"},{"accessor":"Q17","name":"Q17","type":"numeric","align":"center"},{"accessor":"Q18","name":"Q18","type":"numeric","align":"center"},{"accessor":"Q19","name":"Q19","type":"numeric","align":"center"},{"accessor":"Q20","name":"Q20","type":"numeric","align":"center"},{"accessor":"Q21","name":"Q21","type":"numeric","align":"center"},{"accessor":"Q22","name":"Q22","type":"numeric","align":"center"},{"accessor":"Q23","name":"Q23","type":"numeric","align":"center"},{"accessor":"Q24","name":"Q24","type":"numeric","align":"center"},{"accessor":"Q25","name":"Q25","type":"numeric","align":"center"},{"accessor":"Q26","name":"Q26","type":"numeric","align":"center"}],"defaultPageSize":5,"showPageSizeOptions":true,"pageSizeOptions":[10,25,50,100],"paginationType":"numbers","showPageInfo":true,"minRows":1,"theme":{"backgroundColor":"#212121","borderColor":"#dfe2e5","stripedColor":"#f6f8fa","highlightColor":"#f0f5f9","cellPadding":"8px 12px","style":{"fontFamily":"Roboto Condensed"},"searchInputStyle":{"width":"20%"}},"dataKey":"c236af4ddaa3c97d841bc0a12e79af9e"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Q1":[3,"NA",5,"NA",4,4,5,"NA","NA",4],"Q2":[5,"NA","NA",5,"NA",4,3,3,5,5],"Q3":[3,4,5,"NA","NA",4,4,4,5,5],"Q4":[3,3,5,5,4,4,3,5,"NA",5],"Q5":[5,5,5,5,"NA",4,"NA",5,2,4],"Q6":[5,"NA","NA","NA",4,4,4,3,3,3],"Q7":[5,5,5,5,"NA",5,4,"NA",0,5],"Q8":["NA",1,5,"NA",4,3,"NA",5,"NA",4],"Q9":["NA",4,5,5,4,"NA",5,3,4,4],"Q10":[5,"NA",5,5,5,"NA","NA",5,4,5],"Q11":[4,1,5,5,4,4,3,4,"NA",1],"Q12":[5,"NA",4,"NA",4,4,3,4,"NA",4],"Q13":[5,4,5,4,"NA",3,4,3,5,4],"Q14":["NA",4,5,4,"NA",5,4,"NA",3,"NA"],"Q15":["NA",1,"NA",4,1,"NA",1,"NA",5,5],"Q16":["NA",3,5,2,1,4,1,5,"NA","NA"],"Q17":[4,3,5,5,5,3,3,4,"NA",5],"Q18":[5,3,4,5,5,4,1,4,5,"NA"],"Q19":[5,1,5,5,3,5,3,"NA",4,2],"Q20":[5,3,5,5,5,"NA",1,3,3,5],"Q21":[5,3,5,4,5,"NA",5,4,5,2],"Q22":["NA",3,5,1,4,"NA","NA","NA",2,3],"Q23":[5,"NA","NA",5,4,5,"NA","NA",5,5],"Q24":["NA",4,5,5,5,"NA",5,5,4,5],"Q25":[5,4,"NA",5,"NA","NA","NA",2,2,2],"Q26":["NA","NA",5,5,0,4,"NA",5,3,"NA"]},"columns":[{"id":"Q1","name":"Q1","type":"numeric","align":"center"},{"id":"Q2","name":"Q2","type":"numeric","align":"center"},{"id":"Q3","name":"Q3","type":"numeric","align":"center"},{"id":"Q4","name":"Q4","type":"numeric","align":"center"},{"id":"Q5","name":"Q5","type":"numeric","align":"center"},{"id":"Q6","name":"Q6","type":"numeric","align":"center"},{"id":"Q7","name":"Q7","type":"numeric","align":"center"},{"id":"Q8","name":"Q8","type":"numeric","align":"center"},{"id":"Q9","name":"Q9","type":"numeric","align":"center"},{"id":"Q10","name":"Q10","type":"numeric","align":"center"},{"id":"Q11","name":"Q11","type":"numeric","align":"center"},{"id":"Q12","name":"Q12","type":"numeric","align":"center"},{"id":"Q13","name":"Q13","type":"numeric","align":"center"},{"id":"Q14","name":"Q14","type":"numeric","align":"center"},{"id":"Q15","name":"Q15","type":"numeric","align":"center"},{"id":"Q16","name":"Q16","type":"numeric","align":"center"},{"id":"Q17","name":"Q17","type":"numeric","align":"center"},{"id":"Q18","name":"Q18","type":"numeric","align":"center"},{"id":"Q19","name":"Q19","type":"numeric","align":"center"},{"id":"Q20","name":"Q20","type":"numeric","align":"center"},{"id":"Q21","name":"Q21","type":"numeric","align":"center"},{"id":"Q22","name":"Q22","type":"numeric","align":"center"},{"id":"Q23","name":"Q23","type":"numeric","align":"center"},{"id":"Q24","name":"Q24","type":"numeric","align":"center"},{"id":"Q25","name":"Q25","type":"numeric","align":"center"},{"id":"Q26","name":"Q26","type":"numeric","align":"center"}],"defaultPageSize":5,"showPageSizeOptions":true,"theme":{"backgroundColor":"#212121","borderColor":"#dfe2e5","stripedColor":"#f6f8fa","highlightColor":"#f0f5f9","cellPadding":"8px 12px","style":{"fontFamily":"Roboto Condensed"},"searchInputStyle":{"width":"20%"}},"dataKey":"65981a44a626e18172c6d55b47da4c33"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 
 <div class="rounded">
 
@@ -314,7 +315,7 @@ Please be aware that this idea of addressing missingness in a data set is a mult
 
 ## Assumptions
 
-If you have taken statistics in the past, then you likely know about these things called *assumptions*, or criteria that have to be satisfied before running a statistical test (e.g. *t*-test, ANOVA, etc.). This is also true when dealing with missing data points, in that we have to determine if our data is
+While there are approaches to imputing discrete data, *we’ll be covering the case for those items that have scales considered to be continuous* (e.g. Likert scale). If you have taken statistics in the past, then you likely know about these things called *assumptions*, or criteria that have to be satisfied before running a statistical test (e.g. *t*-test, ANOVA, etc.). This is also true when dealing with missing data points, in that we have to determine if our data is
 
 <center>
 <table class=" lightable-paper table" style="font-size: 13ptpx; font-family: Roboto Condensed; margin-left: auto; margin-right: auto; width: auto !important; margin-left: auto; margin-right: auto;">
@@ -456,9 +457,9 @@ gg_miss_upset(nerdy_data,
 
 where `nsets` are the number of columns which shows us
 
--   all of the variables with missing values
--   all of the common values that are missing
--   each combination of missing values occurs once
+- all of the variables with missing values
+- all of the common values that are missing
+- each combination of missing values occurs once
 
 but that is really difficult to read and we’re just getting a feel for the missingness, so let’s try limiting the number of variables to say the top 5
 
@@ -636,13 +637,13 @@ I randomized missing data the original subset which can be seen by opening the `
 
 1.  The `narian` package has alot of functionality not covered here. Take a look at the following for more help
 
-    -   <a href="https://naniar.njtierney.com/articles/getting-started-w-naniar.html#introduction" target="_blank">Getting Started with naniar</a>
+    - <a href="https://naniar.njtierney.com/articles/getting-started-w-naniar.html#introduction" target="_blank">Getting Started with naniar</a>
 
-    -   <a href="https://naniar.njtierney.com/articles/naniar-visualisation.html" target="_blank">Gallery of Missing Data Visualisations</a>
+    - <a href="https://naniar.njtierney.com/articles/naniar-visualisation.html" target="_blank">Gallery of Missing Data Visualisations</a>
 
 2.  The `mice` package is confusing at times and can hurt your head, but its by far one of the most versatile and powerful packages to impute data. So if you find yourself with missing data, it may be beneficial to dive in headfirst. To get acquainted, a couple vignettes can be found using the link below
 
-    -   <a href="https://www.gerkovink.com/miceVignettes/" target="_blank">miceVignettes</a>
+    - <a href="https://www.gerkovink.com/miceVignettes/" target="_blank">miceVignettes</a>
 
 [^1]: Scroll to the right to see all columns
 

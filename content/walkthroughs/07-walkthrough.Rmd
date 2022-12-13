@@ -265,7 +265,7 @@ Please be aware that this idea of addressing missingness in a data set is a mult
 
 ## Assumptions
 
-If you have taken statistics in the past, then you likely know about these things called *assumptions*, or criteria that have to be satisfied before running a statistical test (e.g. *t*-test, ANOVA, etc.). This is also true when dealing with missing data points, in that we have to determine if our data is
+While there are approaches to imputing discrete data, *we'll be covering the case for those items that have scales considered to be continuous* (e.g. Likert scale). If you have taken statistics in the past, then you likely know about these things called *assumptions*, or criteria that have to be satisfied before running a statistical test (e.g. *t*-test, ANOVA, etc.). This is also true when dealing with missing data points, in that we have to determine if our data is
 
 ```{r echo=FALSE,purl=FALSE}
 
