@@ -110,7 +110,7 @@ instructor:
   github: drabhikroy
   office: "Allen Hall 609C"
   contact_policy: >-
-    Slack is the best way to get in contact with me. Response times are typically much quicker than the standard 24-48 hours given to emails.
+    <span style="font-size:16.0pt">Slack is the best way to get in contact with me. Response times are typically much quicker than the standard 24-48 hours given to emails</span>
   appointment_url: "https://calendly.com/nopiecharts/short15"
   office_hours: "By appointment only"
 
@@ -131,7 +131,7 @@ university:
 sharing_image: "course_hex.png"
 
 # Twitter username (without @). Used when a visitor shares your site on Twitter.
-twitter: "asocialdatasci"
+# twitter: "asocialdatasci"
 
 
 ############################
@@ -214,7 +214,7 @@ search:
   #   0: No search engine
   #   1: Academic (built-in)
   #   2: Algolia (https://www.algolia.com)
-  engine: 0
+  engine: 1
 
   # Configuration of Algolia search engine.
   # Paste the values from your Algolia dashboard.

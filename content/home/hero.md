@@ -5,7 +5,7 @@ headless: true
 active: true
 weight: 10
 
-title: "EDP 618"
+title: <span style="color:#fafafa; border-radius:15px; background-color:rgba(29, 31, 37, 0.4); padding:0.5px; margin-left:-4px; color:#f7f7f7; display:inline-block; margin-left:-4px; font-size:40.0pt; backdrop-filter:blur(0.5px);"><b>EDP 618</b></span>
 
 # Hero image (optional). Enter filename of an image in the `static/img/` folder.
 hero_media: course_hex.png
@@ -22,7 +22,12 @@ design:
     image: stswarm.png
 
 cta_note:
-  label: <span style="color:#fafafa">Fall 2022<br>School of Education<br>West Virginia University</span>
+  label:
+    <br>
+    <br>
+    <br>
+
+    <span style="color:#fafafa; border-radius:15px; background-color:rgba(29, 31, 37, 0.4); padding:0.5px; margin-left:-4px; color:#f7f7f7; display:inline-block; margin-left:-4px; font-size:18.0pt; backdrop-filter:blur(0.5px);"><b>Fall 2022</b></span>
 ---
 
-**A continuing course addressing the mixing of qualitative and quantitative methods**
+<span style="border-radius:15px; background-color:rgba(29, 31, 37, 0.15); padding:0.5px; margin-left:-4px; color:#f7f7f7; display:inline-block; font-size:20.0pt; backdrop-filter:blur(0.5px);"><b>A continuing course addressing the mixing of qualitative and quantitative methods</b></span>

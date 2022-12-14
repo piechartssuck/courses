@@ -1,27 +1,32 @@
 <footer>
-    <hr>
+  <hr>
 
     <div class="row course-info">
+
         <div class="col-md-7">
-            <p>
+            <p style="font-size:12.0pt">
                 <strong>{{ .Site.Params.course.number }}: {{ .Site.Title }} ({{ .Site.Params.course.semester }})</strong><br>
 
-                <a href="{{ .Site.Params.university.url }}" target="_blank" rel="noopener">{{ .Site.Params.university.name }}</a> &emsp;&emsp;
-                <a href="{{ .Site.Params.school.url }}" target="_blank" rel="noopener">{{ .Site.Params.school.name }}</a>
+                <a href="{{ .Site.Params.school.url }}" target="_blank" rel="noopener">{{ .Site.Params.school.name }}</a><br>
+                <a href="{{ .Site.Params.university.url }}" target="_blank" rel="noopener">{{ .Site.Params.university.name }}</a>
+
             </p>
 
-            <p>
+<!--
+            <p style="font-size:12.0pt">
                 <a href="{{ .Site.Params.instructor.url }}" target="_blank" rel="noopener"><i class="fas fa-user fa-fw"></i>
                     {{ .Site.Params.instructor.name }}</a> &emsp;&emsp;
                 <a href="mailto:{{ .Site.Params.instructor.email }}"><i class="fas fa-envelope fa-fw"></i>
                     {{ .Site.Params.instructor.email }}</a>
             </p>
 
-            <p>
+
+            <p style="font-size:12.0pt">
                 <i class="far fa-calendar-alt fa-fw"></i> {{ .Site.Params.course.days }} &emsp;&emsp;
                 <i class="far fa-clock fa-fw"></i> {{ .Site.Params.course.time }}
                 {{ if isset .Site.Params.course "location" }}<br><i class="fas fa-university fa-fw"></i> {{ .Site.Params.course.location }}{{end}}
             </p>
+  -->
         </div>
 
         <div class="col-md-5 credits">
@@ -37,5 +42,6 @@
 
             <p><a href="https://github.com/{{ .Site.Params.course.github }}" target="_blank" rel="noopener"><i class="fab fa-github fa-fw"></i> View the source at GitHub.</a></p>
         </div>
+
     </div>
 </footer>

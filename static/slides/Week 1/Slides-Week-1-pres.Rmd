@@ -132,7 +132,7 @@ text-align: center;
 }
 </style>
 
-```{css echo=FALSE}
+```{css echo=FALSE, cache=TRUE}
 .highlight-last-item > ul > li,
 .highlight-last-item > ol > li {
   opacity: 0.5;
@@ -143,7 +143,7 @@ text-align: center;
 }
 ```
 
-```{r setup, include=FALSE, purl=FALSE}
+```{r setup, include=FALSE, purl=FALSE, cache=TRUE}
 library(tidyverse)
 library(knitr)
 library(kableExtra)
@@ -154,7 +154,7 @@ font_add_google("Roboto Condensed", "roboto")
 showtext_auto()
 ```
 
-```{r echo = FALSE, purl=FALSE}
+```{r echo = FALSE, purl=FALSE, cache=TRUE}
 xaringanthemer::style_duo(
   primary_color = "#212121",
   secondary_color = "#bff4ee",
@@ -177,7 +177,7 @@ xaringanExtra::use_logo(
 
 ```
 
-```{r echo=FALSE}
+```{r echo=FALSE, cache=TRUE}
 image_link <- function(image,url,...){
   htmltools::a(
     href=url,
