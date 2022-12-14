@@ -33,19 +33,19 @@ We live in a data-driven world with surveys providing a sizable chunk of that in
 
 The overall purpose of this course is to empower you to
 
--   <span style="color:#ffffff">administer both flat traditional and modern interactive surveys via the Internet</span>
+- <span style="color:#ffffff">administer both flat traditional and modern interactive surveys via the Internet</span>
 
--   <span style="color:#ffffff">assess missingness and determine next steps</span>
+- <span style="color:#ffffff">assess missingness and determine next steps</span>
 
--   <span style="color:#ffffff">create aesthetically pleasing surveys using color theory and design techniques</span>
+- <span style="color:#ffffff">create aesthetically pleasing surveys using color theory and design techniques</span>
 
--   <span style="color:#ffffff">determine how to assess item reliability and validity</span>
+- <span style="color:#ffffff">determine how to assess item reliability and validity</span>
 
--   <span style="color:#ffffff">enhance the look and feel of surveys using sandboxed syntax</span>
+- <span style="color:#ffffff">enhance the look and feel of surveys using sandboxed syntax</span>
 
--   <span style="color:#ffffff">implement text mining approaches to probabilistically determine respondent sentiments and detect topics</span>
+- <span style="color:#ffffff">implement text mining approaches to probabilistically determine respondent sentiments and detect topics</span>
 
--   <span style="color:#ffffff">utilize frequentist and/or basic Bayesian statistical methods to determine outcomes</span>
+- <span style="color:#ffffff">utilize frequentist and/or basic Bayesian statistical methods to determine outcomes</span>
 
 Additionally, this class will expose you to [<svg aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:steelblue;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>](https://cran.r-project.org/) — one of the most popular and in-demand statistical languages. Armed with the foundational skill set, you’ll know enough to be able to conduct basic and some advanced analyses, create eye-popping data visualizations, and report results.
 
@@ -159,7 +159,7 @@ Readings
 </td>
 <td style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:17px;width:14.88px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#74d86f;overflow:visible;position:relative;">
-<path d="M448 336v-288C448 21.49 426.5 0 400 0H96C42.98 0 0 42.98 0 96v320c0 53.02 42.98 96 96 96h320c17.67 0 32-14.33 32-31.1c0-11.72-6.607-21.52-16-27.1v-81.36C441.8 362.8 448 350.2 448 336zM143.1 128h192C344.8 128 352 135.2 352 144C352 152.8 344.8 160 336 160H143.1C135.2 160 128 152.8 128 144C128 135.2 135.2 128 143.1 128zM143.1 192h192C344.8 192 352 199.2 352 208C352 216.8 344.8 224 336 224H143.1C135.2 224 128 216.8 128 208C128 199.2 135.2 192 143.1 192zM384 448H96c-17.67 0-32-14.33-32-32c0-17.67 14.33-32 32-32h288V448z"></path>
+<path d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"></path>
 </svg>
 </td>
 <td style="text-align:left;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
@@ -175,7 +175,7 @@ Trainings
 </td>
 <td style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <svg aria-hidden="true" role="img" viewbox="0 0 576 512" style="height:17px;width:19.12px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#6fd8d3;overflow:visible;position:relative;">
-<path d="M384 476.1L192 421.2V35.93L384 90.79V476.1zM416 88.37L543.1 37.53C558.9 31.23 576 42.84 576 59.82V394.6C576 404.4 570 413.2 560.9 416.9L416 474.8V88.37zM15.09 95.13L160 37.17V423.6L32.91 474.5C17.15 480.8 0 469.2 0 452.2V117.4C0 107.6 5.975 98.78 15.09 95.13V95.13z"></path>
+<path d="M565.6 36.24C572.1 40.72 576 48.11 576 56V392C576 401.1 569.8 410.9 560.5 414.4L392.5 478.4C387.4 480.4 381.7 480.5 376.4 478.8L192.5 417.5L32.54 478.4C25.17 481.2 16.88 480.2 10.38 475.8C3.882 471.3 0 463.9 0 456V120C0 110 6.15 101.1 15.46 97.57L183.5 33.57C188.6 31.6 194.3 31.48 199.6 33.23L383.5 94.52L543.5 33.57C550.8 30.76 559.1 31.76 565.6 36.24H565.6zM48 421.2L168 375.5V90.83L48 136.5V421.2zM360 137.3L216 89.3V374.7L360 422.7V137.3zM408 421.2L528 375.5V90.83L408 136.5V421.2z"></path>
 </svg>
 </td>
 <td style="text-align:left;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
@@ -191,7 +191,7 @@ Tasks
 </td>
 <td style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:17px;width:17px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#d86f9e;overflow:visible;position:relative;">
-<path d="M464 64C490.5 64 512 85.49 512 112V176C512 202.5 490.5 224 464 224H48C21.49 224 0 202.5 0 176V112C0 85.49 21.49 64 48 64H464zM448 128H320V160H448V128zM464 288C490.5 288 512 309.5 512 336V400C512 426.5 490.5 448 464 448H48C21.49 448 0 426.5 0 400V336C0 309.5 21.49 288 48 288H464zM192 352V384H448V352H192z"></path>
+<path d="M448 160H320V128H448v32zM48 64C21.5 64 0 85.5 0 112v64c0 26.5 21.5 48 48 48H464c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H48zM448 352v32H192V352H448zM48 288c-26.5 0-48 21.5-48 48v64c0 26.5 21.5 48 48 48H464c26.5 0 48-21.5 48-48V336c0-26.5-21.5-48-48-48H48z"></path>
 </svg>
 </td>
 <td style="text-align:left;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
@@ -207,7 +207,7 @@ Due
 </td>
 <td style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <svg aria-hidden="true" role="img" viewbox="0 0 576 512" style="height:17px;width:19.12px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#ffa700;overflow:visible;position:relative;">
-<path d="M147.8 192H480V144C480 117.5 458.5 96 432 96h-160l-64-64h-160C21.49 32 0 53.49 0 80v328.4l90.54-181.1C101.4 205.6 123.4 192 147.8 192zM543.1 224H147.8C135.7 224 124.6 230.8 119.2 241.7L0 480h447.1c12.12 0 23.2-6.852 28.62-17.69l96-192C583.2 249 567.7 224 543.1 224z"></path>
+<path d="M572.6 270.3l-96 192C471.2 473.2 460.1 480 447.1 480H64c-35.35 0-64-28.66-64-64V96c0-35.34 28.65-64 64-64h117.5c16.97 0 33.25 6.742 45.26 18.75L275.9 96H416c35.35 0 64 28.66 64 64v32h-48V160c0-8.824-7.178-16-16-16H256L192.8 84.69C189.8 81.66 185.8 80 181.5 80H64C55.18 80 48 87.18 48 96v288l71.16-142.3C124.6 230.8 135.7 224 147.8 224h396.2C567.7 224 583.2 249 572.6 270.3z"></path>
 </svg>
 </td>
 <td style="text-align:left;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
@@ -223,7 +223,7 @@ Resources
 </td>
 <td style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <svg aria-hidden="true" role="img" viewbox="0 0 640 512" style="height:17px;width:21.25px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#848fd3;overflow:visible;position:relative;">
-<path d="M128 96h384v256h64V80C576 53.63 554.4 32 528 32h-416C85.63 32 64 53.63 64 80V352h64V96zM624 384h-608C7.25 384 0 391.3 0 400V416c0 35.25 28.75 64 64 64h512c35.25 0 64-28.75 64-64v-16C640 391.3 632.8 384 624 384zM365.9 286.2C369.8 290.1 374.9 292 380 292s10.23-1.938 14.14-5.844l48-48c7.812-7.813 7.812-20.5 0-28.31l-48-48c-7.812-7.813-20.47-7.813-28.28 0c-7.812 7.813-7.812 20.5 0 28.31l33.86 33.84l-33.86 33.84C358 265.7 358 278.4 365.9 286.2zM274.1 161.9c-7.812-7.813-20.47-7.813-28.28 0l-48 48c-7.812 7.813-7.812 20.5 0 28.31l48 48C249.8 290.1 254.9 292 260 292s10.23-1.938 14.14-5.844c7.812-7.813 7.812-20.5 0-28.31L240.3 224l33.86-33.84C281.1 182.4 281.1 169.7 274.1 161.9z"></path>
+<path d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"></path>
 </svg>
 </td>
 <td style="text-align:left;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
@@ -617,28 +617,28 @@ Due to the ongoing pandemic, we can only meet via Zoom. This can be scheduled us
 
 Here are the rules, expectations, and policies that I came up with or stole from other professors:
 
--   **Late work**: Barring the in-class only tasks, past due deliverable will only be accepted up to 48 hours after the initial time and due date. For each full day an assignment is late, 10% of the final grade will be deducted. All submissions must be made via [eCampus](https://ecampus.wvu.edu/). There are no exceptions to this policy. Please note that coursework *will not* be accepted by email or any other means.
+- **Late work**: Barring the in-class only tasks, past due deliverable will only be accepted up to 48 hours after the initial time and due date. For each full day an assignment is late, 10% of the final grade will be deducted. All submissions must be made via [eCampus](https://ecampus.wvu.edu/). There are no exceptions to this policy. Please note that coursework *will not* be accepted by email or any other means.
 
--   **Participation**: Please ensure that you are engaged and participate in class. Engagement is mostly defined by you — if that means commenting and answering questions - great; if it means sitting quietly and being focused - also great; but if it means being being disrespectful or flaking off - not so great.
+- **Participation**: Please ensure that you are engaged and participate in class. Engagement is mostly defined by you — if that means commenting and answering questions - great; if it means sitting quietly and being focused - also great; but if it means being being disrespectful or flaking off - not so great.
 
--   **Justifications**: On any submission, you must justify any assertion. I don’t know what you know so its your job to provide all of the necessary evidence to convince me that you do know what you say you know. While you’ve probably heard this multiple times over your life, think of it this way: if someone tells you that *the core of the Earth is made of pixy sticks*, the first question you should be asking is *what’s your evidence?*.
+- **Justifications**: On any submission, you must justify any assertion. I don’t know what you know so its your job to provide all of the necessary evidence to convince me that you do know what you say you know. While you’ve probably heard this multiple times over your life, think of it this way: if someone tells you that *the core of the Earth is made of pixy sticks*, the first question you should be asking is *what’s your evidence?*.
 
--   **Rubrics**: While there are valid reasons for the utilization of a rubric in undergraduate classes, at the graduate level, I do not (often) provide nor use a such an item to guide or evaluate your submission due to four primary concerns:<br>
+- **Rubrics**: While there are valid reasons for the utilization of a rubric in undergraduate classes, at the graduate level, I do not (often) provide nor use a such an item to guide or evaluate your submission due to four primary concerns:<br>
 
-    1.  When writing anything in academia that is pivotal (a thesis, dissertation, journal article, report, etc.), a rubric isn’t often provided.
-    2.  If you write within the limitations as defined in a rubric, then creativity may be stifled (i.e. writing to the rubric rather than constructing a product from the ground up).
-    3.  Feedback can only be given along the criteria listed within a rubric which limits your learning as a student and constrains me as the instructor.
-    4.  Unless you are in a very specific area, the real world does not use rubrics!
-        <br>
-        <br>
+  1.  When writing anything in academia that is pivotal (a thesis, dissertation, journal article, report, etc.), a rubric isn’t often provided.
+  2.  If you write within the limitations as defined in a rubric, then creativity may be stifled (i.e. writing to the rubric rather than constructing a product from the ground up).
+  3.  Feedback can only be given along the criteria listed within a rubric which limits your learning as a student and constrains me as the instructor.
+  4.  Unless you are in a very specific area, the real world does not use rubrics!
+      <br>
+      <br>
 
--   **Technology use**: Use phones, computers, etc. responsibly. We’re all adults[^2].
+- **Technology use**: Use phones, computers, etc. responsibly. We’re all adults[^2].
 
--   **Assumptions**:<br>
+- **Assumptions**:<br>
 
-    1.  Just assume that all submissions are to be written **formally** and should include with the appropriate use of language, grammar, syntax, etc. and follow standard APA 7th edition formatting guidelines where applicable.
-    2.  People who are easily offended by content, believe their work to be flawless, generally unable to handle criticism, or are looking for rainbows and ponies should consider looking at another course. However if you care about data, practice and learning a highly marketable practice, you’ve come to the right place.
-    3.  There is a great deal of content in this course and you will likely struggle with some at times. Given that, there is also something to be said about the satisfaction a person gets when figuring something out, but nowhere is it written that has to be on your own. You may find that a nudge here or there elicits the same feeling so please reach out for help.
+  1.  Just assume that all submissions are to be written **formally** and should include with the appropriate use of language, grammar, syntax, etc. and follow standard APA 7th edition formatting guidelines where applicable.
+  2.  People who are easily offended by content, believe their work to be flawless, generally unable to handle criticism, or are looking for rainbows and ponies should consider looking at another course. However if you care about data, practice and learning a highly marketable practice, you’ve come to the right place.
+  3.  There is a great deal of content in this course and you will likely struggle with some at times. Given that, there is also something to be said about the satisfaction a person gets when figuring something out, but nowhere is it written that has to be on your own. You may find that a nudge here or there elicits the same feeling so please reach out for help.
 
 ### Learning and knowledge during a pandemic
 
@@ -724,18 +724,18 @@ At West Virginia University, class attendance contributes significantly to acade
 
 The basic premise is that the etiquette expected of students in the online environment is the same as that expected in a classroom. Common courtesy is the guiding rule of Internet communications. Be prepared to communicate effectively when taking an online course. Following these simple netiquette rules in your online class or education environment will ensure your success:
 
--   Include a professional salutation. In this case, “Hello Dr. Roy” or “Dear Dr. Roy” is appropriate.
--   Include a proper ending such as “Thank you” or “With regards.” Then type in your full name.
--   Never type in ALL CAPS, because it reads as if you ARE SHOUTING AT PEOPLE.
--   Act as professionally, via your writing, as you would in a face to face classroom.
--   Refrain from inappropriate language and derogatory or personal attacks.
--   Do not dominate any discussion. Give other students the opportunity to join in the discussion.
--   Disagree with ideas but avoid challenges that may be interpreted as a personal attack.
--   Check that you are replying to the specific person you intend, and not to the entire class.
--   Never give your password to another person.
--   Respect the virtual classroom. Never forward in-class communications or posts by others outside of this virtual space.
--   Never spam your classmates.
--   If you quote someone’s previous post, only quote enough to make your point.
+- Include a professional salutation. In this case, “Hello Dr. Roy” or “Dear Dr. Roy” is appropriate.
+- Include a proper ending such as “Thank you” or “With regards.” Then type in your full name.
+- Never type in ALL CAPS, because it reads as if you ARE SHOUTING AT PEOPLE.
+- Act as professionally, via your writing, as you would in a face to face classroom.
+- Refrain from inappropriate language and derogatory or personal attacks.
+- Do not dominate any discussion. Give other students the opportunity to join in the discussion.
+- Disagree with ideas but avoid challenges that may be interpreted as a personal attack.
+- Check that you are replying to the specific person you intend, and not to the entire class.
+- Never give your password to another person.
+- Respect the virtual classroom. Never forward in-class communications or posts by others outside of this virtual space.
+- Never spam your classmates.
+- If you quote someone’s previous post, only quote enough to make your point.
 
 Be aware of the University’s Academic Integrity and Dishonesty Policy <http://catalog.wvu.edu/undergraduate/coursecreditstermsclassification/#academicintegritytext>. You can review the rules, regulations, and procedures concerning student conduct and discipline for the main campus of West Virginia University, at [http://campuslife.wvu.edu/r/download/1802350](http://campuslife.wvu.edu/r/download/180235).
 

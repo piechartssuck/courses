@@ -316,7 +316,7 @@ Please be aware that this idea of addressing missingness in a data set is a mult
 ## Assumptions
 
 <center>
-<p id="rounded_corners">
+<p id="rounded_corners_long">
 While there are approaches to imputing discrete data, we’ll be covering the case for those items that have scales considered to be continuous (e.g. Likert scale)
 </p>
 </center>
