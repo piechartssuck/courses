@@ -37,7 +37,7 @@ The overall purpose of this course is to empower you to
 
 - <span style="color:#ffffff">utilize frequentist and/or basic Bayesian statistical methods to determine outcomes</span>
 
-Additionally, this class will expose you to [`r fa("r-project", fill = "steelblue")`](https://cran.r-project.org/) — one of the most popular and in-demand statistical languages. Armed with the foundational skill set, you'll know enough to be able to conduct basic and some advanced analyses, create eye-popping data visualizations, and report results.
+Additionally, this class will expose you to [`r fa("r-project", fill = "steelblue")`](https://cran.r-project.org/)&nbsp; — one of the most popular and in-demand statistical languages. Armed with the foundational skill set, you'll know enough to be able to conduct basic and some advanced analyses, create eye-popping data visualizations, and report results.
 
 <center>
 <p id="rounded_corners_large">
@@ -123,7 +123,7 @@ Can I first search for help independently and then reach out as needed?
 If the answer is an overall yes, then you have a good shot at succeeding in this class. Make sure to go through the <a href="#rstats"><span style="color:#03dac6"><b>How to Ask for Help with R and RStudio</b></span></a>.
 
 ### *Is R difficult?*
-Learning `r fa("r-project", fill = "steelblue")` can be especially challenging at first—it's akin to learning a new language like Spanish or even mathematics. Even experienced R users get frustrated...and so much so that some of us have swear jars. However as silly as it sounds one of the best feelings is to overcome a logical roadblock so if you find yourself getting irritated, try the following: take a break, go let some frustration out, sleep, discuss with a peer, etc. If you are at your limit, take a few breaths and contact me!
+Learning&nbsp; `r fa("r-project", fill = "steelblue")` can be especially challenging at first—it's akin to learning a new language like Spanish or even mathematics. Even experienced R users get frustrated...and so much so that some of us have swear jars. However as silly as it sounds one of the best feelings is to overcome a logical roadblock so if you find yourself getting irritated, try the following: take a break, go let some frustration out, sleep, discuss with a peer, etc. If you are at your limit, take a few breaths and contact me!
 
 ### *What if I'm a Visual/Aural/Read-write/Kinesthetic learner?*
 You're not one or even any of those. There's not one accepted study that supports one type of learning style over another. In fact, there aren't even any studies that support these four classifications either. You learn the best using multiple approaches which is why there is both a [Readings](/readings/) and [Trainings](/trainings/) section. At one time I denoted multiple papers to support this, but many of the sources I listed were also cited in this fantastic video:
@@ -293,7 +293,7 @@ You will need access to your WVU [Qualtrics](https://wvu.qualtrics.com/) account
 
 #### R and RStudio
 
-You will be briefly introduced to the open source (and free!) statistical programming language [`r fa("r-project", fill = "steelblue")`](https://cran.r-project.org/) later in the term. You will use [RStudio](https://www.rstudio.com/) as the main program to access the language. You can think of R as an engine and RStudio as a car dashboard — R handles all the calculations produces the actual statistics and graphical output, while RStudio provides a nice interface for running R code. Please note that
+You will be briefly introduced to the open source (and free!) statistical programming language [`r fa("r-project", fill = "steelblue")`](https://cran.r-project.org/)&nbsp; later in the term. You will use [RStudio](https://www.rstudio.com/) as the main program to access the language. You can think of R as an engine and RStudio as a car dashboard — R handles all the calculations produces the actual statistics and graphical output, while RStudio provides a nice interface for running R code. Please note that
 
 <div class="text-center">
 **you do not need to have any programming experience to use R**
