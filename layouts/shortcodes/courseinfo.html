@@ -3,11 +3,12 @@
         <h3>Instructor</h3>
 
         <ul class="icon-list">
-            <li><i class="fas fa-user fa-fw"></i> <a href="{{ .Site.Params.instructor.url }}" target="_blank" rel="noopener"> {{ .Site.Params.instructor.name }}</a></li>
-            <li><i class="fas fa-university fa-fw"></i> {{ .Site.Params.instructor.office }}</li>
-            <li><i class="fas fa-envelope fa-fw"></i> <a href="mailto:{{ .Site.Params.instructor.email }}"> {{ .Site.Params.instructor.email }}</a></li>
-            <li><i class="fab fa-twitter fa-fw"></i> <a href="https://twitter.com/{{ .Site.Params.instructor.twitter }}" target="_blank" rel="noopener"> @{{ .Site.Params.instructor.twitter }}</a></li>
-            <li><i class="fas fa-calendar-check fa-fw"></i> <a href="{{ .Site.Params.instructor.appointment_url }}" target="_blank" rel="noopener"> Schedule an appointment</a></li>
+            <li><i class="fas fa-user fa-fw"></i> <a href="{{ .Site.Params.instructor.url }}" target="_blank" rel="noopener" style="text-decoration:none;"> {{ .Site.Params.instructor.name }}</a></li>
+            <li><i class="far fa-building fa-fw"></i> <a href="https://www.google.com/maps/@39.6460842,-79.9666773,2a,90y,240.43h,102.95t/data=!3m6!1e1!3m4!1smjAj3sJtdXaqoiA3LpC33g!2e0!7i13312!8i6656" target="_blank" rel="noopener" style="text-decoration:none;"> {{ .Site.Params.instructor.office }}</a></li>
+            <li><i class="fas fa-envelope fa-fw"></i> <a href="mailto:{{ .Site.Params.instructor.email }}" style="text-decoration:none;"> {{ .Site.Params.instructor.email }}</a></li>
+            <br>
+      <!--  <li><i class="fab fa-twitter fa-fw"></i> <a href="https://twitter.com/{{ .Site.Params.instructor.twitter }}" target="_blank" rel="noopener"> @{{ .Site.Params.instructor.twitter }}</a></li> -->
+            <li><span style="border: 2.5px solid #63d6c5; border-radius:17px; border-style:double; padding: 12.5px; margin-left: -13px;"><i class="fas fa-calendar-check fa-fw"></i> <a href="{{ .Site.Params.instructor.appointment_url }}" target="_blank" rel="noopener" style="text-decoration:none;"> Schedule an appointment</a></span></li>
         </ul>
     </div>
 
@@ -15,17 +16,21 @@
         <h3>Course details</h3>
 
         <ul class="icon-list">
-            <li><i class="far fa-calendar fa-fw"></i> {{ .Site.Params.course.days }}</li>
-            <li><i class="far fa-calendar-alt fa-fw"></i> {{ .Site.Params.course.dates }}</li>
-            <li><i class="far fa-clock fa-fw"></i> {{ .Site.Params.course.time }}</li>
+            <li><i class="far fa-clock fa-fw"></i> {{ .Site.Params.course.days }}</li>
+            <li><i class="fas fa-stream fa-fw"></i> {{ .Site.Params.course.dates }}</li>
             {{ if isset .Site.Params.course "location" }}<li><i class="fas fa-university fa-fw"></i> {{ .Site.Params.course.location }}</li>{{end}}
-            {{ if isset .Site.Params.course "slack" }}<li><i class="fab fa-slack fa-fw"></i> <a href="{{ .Site.Params.course.slack }}" target="_blank" rel="noopener">Slack</a></li>{{ end }}
+            <br>
+      <!--  <li><i class="far fa-clock fa-fw"></i> {{ .Site.Params.course.time }}</li> -->
+            {{ if isset .Site.Params.course "slack" }}<li><span style="border: 2.5px solid #63d6c5; border-radius:17px; border-style:double; padding: 12.5px; margin-left: -13.6px;"><i class="fab fa-slack fa-fw"></i> <a href="{{ .Site.Params.course.slack }}" target="_blank" rel="noopener" style="text-decoration:none;">Course Slack Channel</a></span></li>{{ end }}
         </ul>
     </div>
 
     <div class="col-md-4 contact-policy">
-        <h3>Contacting me</h3>
+        <h3>Response Times</h3>
 
-        <p>{{ .Site.Params.instructor.contact_policy | markdownify}}</p>
+        <ul class="icon-list">
+            <li><span style="font-size:16.0pt"><i class="fas fa-envelope fa-fw"></i> {{ .Site.Params.instructor.emailpolicy}}</span></li>
+            <li><span style="font-size:16.0pt"><i class="fab fa-slack fa-fw"></i> {{ .Site.Params.instructor.slackpolicy}}</span></li>
+        </ul>
     </div>
 </div>

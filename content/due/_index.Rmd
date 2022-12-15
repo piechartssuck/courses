@@ -1,5 +1,5 @@
 ---
-title: "About the To Do List"
+title: "So What's Due?"
 menu:
   due:
     parent: Overview
@@ -8,11 +8,10 @@ type: docs
 weight: 1
 ---
 
-```{r load_packages, message=FALSE, warning=FALSE, echo=FALSE}
-library(tidyverse)
-library(fontawesome)
-library(knitr)
-library(kableExtra)
+`r blogdown::shortcode("r-walkthrough-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
 ```
 
 This section will let you know what must be completed for the purposes of assessment^[What you have to do after a current class ends] or preparation^[What you have to do before the next class begins]. You should still complete everything else because those items are still will still be assessed at some point.
@@ -20,7 +19,13 @@ This section will let you know what must be completed for the purposes of assess
 <center>
 `r fa("clock", fill = "#ff4e50")` &nbsp <i>Posted weekly</i> 
 </center>
+<br>
+<center>
+<p id="rounded_corners">
+All course tasks are typically due by 11:59 PM every Sunday unless otherwise noted
+<p>
+</center>
 
-### Need Help?
+## Need Help?
 
 `r blogdown::shortcode("meetings")`

@@ -1,0 +1,78 @@
+---
+title: R
+menu:
+  resources:
+    parent: References
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+type: docs
+weight: 4
+---
+
+{{% r-walkthrough-header %}}
+
+<style type="text/css">
+.article-container {
+  max-width: 960px;
+}
+
+iframe {
+  width: 1px;
+  min-width: 100%;
+  border:0;
+}
+
+#TableOfContents, .docs-toc-title {
+  border-left: 1px solid $sta-primary;
+}
+</style>
+
+## Learning R
+
+I highly recommend subscribing to the [R Weekly newsletter](https://rweekly.org/). This e-mail is sent every Monday and is full of helpful tutorials about how to do stuff with R.
+
+Searching for help with R on Google can sometimes be tricky because the program name is a single letter. Google is generally smart enough to figure out what you mean when you search for “r scatterplot”, but if it does struggle, try searching for “rstats” instead (e.g. “rstats scatterplot”). Also, since most of your R work in this class will deal with the **tidyverse** family of packages, it’s often easier to just search for that instead of the letter “R” (e.g. “tidy pivoting”).
+
+If you use Twitter, post R-related questions and content with [\#rstats](https://twitter.com/search?q=%23rstats). The community there is exceptionally generous and helpful. Also check out [StackOverflow](https://stackoverflow.com/) (a Q&A site with hundreds of thousands of answers to all sorts of programming questions) and [RStudio Community](https://community.rstudio.com/) (a forum specifically designed for people using RStudio and the tidyverse (i.e. you)).
+
+These resources are also really really helpful:
+
+- [**CSE 631: Principles & Practice of Data Visualization**](http://cslu.ohsu.edu/~bedricks/courses/cs631/): Yet another introductory course for R and `ggplot2` by [Dr. Alison Presmanes Hill](https://twitter.com/apreshill) at RStudio.
+- [**A Complete Guide to `scales`**](https://ggplot2tor.com/scales/): This absolutely gem of a site is partially interactive and dedicated to the `scales` family of functions that are used in `ggplot2` where you can learn what each does, when to use it, and all corresponding options available.  
+- [**LHS 610: Exploratory Data Analysis for Health**](https://kdpsingh.lab.medicine.umich.edu/lhs-610): A comprehensive way to learn R using health based data sets by [Dr. Karandeep Singh](https://twitter.com/kdpsinghlab) out of the University of Michigan.
+- [**R for Data Science**](https://r4ds.had.co.nz/): A free online book for learning the basics of R and the tidyverse.
+- [**R and RStudio cheat sheets**](https://www.rstudio.com/resources/cheatsheets/): A large collection of simple cheat sheets for RStudio, `ggplot2`, and other R-related things.
+- [**RStudio Conference cheat sheets**](/handouts/RStudioConf_2019Cheatsheets.pdf): A comprehensive collection of all recognized RStudio cheat sheets from [rstudio::conf 2019](https://rstudio.com/resources/rstudioconf-2019/). Also check out the [conference workshop materials](https://blog.rstudio.com/2019/02/06/rstudio-conf-2019-workshops/) to see in depth walkthroughs.
+- [**Stat 545**](http://stat545.com/): [Dr. Jenny Bryan](https://twitter.com/JennyBryan) at RStudio has an entire introductory course in R, visualization, and data analysis online.
+- [**STA 112FS: Data Science**](http://www2.stat.duke.edu/courses/Fall17/sta112.01/): [Dr. Mine Çetinkaya-Rundel](https://twitter.com/minebocek) at the University of Edinburgh / Duke University has an entire introductory course in R, visualization, and data science online.
+- [**Stats Illustrations**](https://github.com/allisonhorst/stats-illustrations): [Dr. Allison Horst](https://twitter.com/allison_horst) created and continues to build beautiful illustrations of many R commands you will probably use.
+- [**Teacup Giraffes**](https://tinystats.github.io/teacups-giraffes-and-statistics/): A fantastic and visually stunning way to learn R using animations accessible to children but for adults by [Dr. Desirée De Leon](https://twitter.com/dcossyle) at RStudio.
+- [**The Tidyverse Cookbook**](https://rstudio-education.github.io/tidyverse-cookbook/): A bare bones collection of tidyverse commands that serves as an excellent reference.
+
+## R in the Wild
+
+A popular (and increasingly standard) way for sharing your analyses and visualizations is to post an annotated explanation of your process somewhere online. RStudio allows you to publish knitted HTML files directly to [RPubs](http://rpubs.com/), but you can also post your output to a blog or other type of website.[^1] Reading these kinds of posts is one of the best ways to learn R, since they walk you through each step of the process *and* show the code and output.
+
+## Sample of R Visualizations
+
+- [Bob Ross - Joy of Painting](https://rudeboybert.github.io/fivethirtyeight/articles/bob_ross.html)
+- [Bechdel analysis using the tidyverse](https://rudeboybert.github.io/fivethirtyeight/articles/bechdel.html): There are also a bunch of other examples [using data from FiveThirtyEight](https://rudeboybert.github.io/fivethirtyeight/articles/)
+- [Comparison of Quentin Tarantino Movies by Box Office and the Bechdel Test](http://soc301s2017.netlify.com/group_projects/group5)
+- [A decade(ish) of listening to Sigur Rós](http://blog.karawoo.com/2016/09/22/A-decade-ish-of-listening-to-Sigur-Ros)
+- [Disproving Approval](https://rud.is/b/2017/06/18/r%E2%81%B6-disproving-approval/)
+- [R color Palettes](https://github.com/EmilHvitfeldt/r-color-palettes) by [Emil Hvitfeldt](https://www.hvitfeldt.me/) is a very comprehensive list of pre packaged color palettes you can get. He has even compiled all of them into an R package called [**paletteer**](https://github.com/EmilHvitfeldt/paletteer)
+- [General (Attys) Distributions](https://rud.is/b/2017/07/25/r%E2%81%B6-general-attys-distributions/)
+- [Health care indicators in Utah counties](https://juliasilge.com/blog/health-care-indicators/)
+- [Mapping Fall Foliage](https://rud.is/b/2017/09/18/mapping-fall-foliage-with-sf/)
+- [Personal Blog](https://isabella-b.com/) from [Isabella Benabaye](https://twitter.com/_isabellamb) with some fun and colorful R and Python data visualizations
+- [R Charts](https://www.r-graph-gallery.com/) is a repository of chart based visualizations with corresponding R code
+- [R Graph Gallery](https://www.r-graph-gallery.com/) is a collection of visualizations with corresponding R code
+- [Sexism on the Silver Screen: Exploring film’s gender divide](http://rpubs.com/Jwhitman/Final_Project)
+- [Song lyrics across the United States](https://juliasilge.com/blog/song-lyrics-across/)
+- [Text analysis of Trump’s tweets confirms he writes only the (angrier) Android half](http://varianceexplained.org/r/trump-tweets/) (with a [follow-up](http://varianceexplained.org/r/trump-followup/))
+- [When is Tom peeping these days?](http://rpubs.com/ry_lisa_elana/chicago): There are a also bunch of final projects from other R and data visualization classes [here](http://soc301s2017.netlify.com/group-projects/) and [here](https://rudeboybert.github.io/MATH116/PS/final_project/final_project_outline.html#past_examples).
+- [Who came to vote in Utah’s caucuses?](https://juliasilge.com/blog/who-came-to-vote/)
+
+[^1]: If you want to be really fancy, you can use [blogdown](https://bookdown.org/yihui/blogdown/), which makes a complete website with R Markdown files. That’s actually how this site is built ([see the original source code @ andrewheiss](https://github.com/andrewheiss/datavizm20.classes.andrewheiss.com)). You can build your own site [with this tutorial](https://apreshill.rbind.io/post/up-and-running-with-blogdown/).

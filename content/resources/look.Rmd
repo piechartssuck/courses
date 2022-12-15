@@ -1,0 +1,54 @@
+---
+title: General Criteria for Visualizations
+menu:
+  resources:
+    parent: References
+type: docs
+weight: 3
+output:
+  blogdown::html_page:
+      toc: TRUE
+---
+
+`r blogdown::shortcode("r-walkthrough-header")`
+
+```{r setup, message=FALSE, warning=FALSE, include=FALSE}
+library(tidyverse)
+library(pander)
+library(knitr)
+library(kableExtra)
+library(here)
+library(fontawesome)
+```
+
+```{css,echo=FALSE}
+.article-container {
+  max-width: 960px;
+}
+
+iframe {
+  width: 1px;
+  min-width: 100%;
+  border:0;
+}
+
+#TableOfContents, .docs-toc-title {
+  border-left: 1px solid $sta-primary;
+}
+```
+
+While there is no specific rubric, here is a basic outline of how visualizations are assessed
+
+<center>
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+read_csv("rubricish.csv") %>% 
+      as_tibble() %>%
+      
+  kbl("html", 
+      escape = FALSE,
+      align = 'clllll') %>%
+  column_spec(1, 
+              bold = TRUE)
+```
+</center>
+

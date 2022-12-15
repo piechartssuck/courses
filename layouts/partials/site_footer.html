@@ -1,41 +1,47 @@
 <footer>
-    <hr>
+  <hr>
 
     <div class="row course-info">
+
         <div class="col-md-7">
-            <p>
+            <p style="font-size:12.0pt">
                 <strong>{{ .Site.Params.course.number }}: {{ .Site.Title }} ({{ .Site.Params.course.semester }})</strong><br>
 
-                <a href="{{ .Site.Params.university.url }}" target="_blank" rel="noopener">{{ .Site.Params.university.name }}</a> &emsp;&emsp;
-                <a href="{{ .Site.Params.school.url }}" target="_blank" rel="noopener">{{ .Site.Params.school.name }}</a>
+                <a href="{{ .Site.Params.school.url }}" target="_blank" rel="noopener" style="text-decoration:none;">{{ .Site.Params.school.name }}</a><br>
+                <a href="{{ .Site.Params.university.url }}" target="_blank" rel="noopener" style="text-decoration:none;">{{ .Site.Params.university.name }}</a>
+
             </p>
 
-            <p>
+<!--
+            <p style="font-size:12.0pt">
                 <a href="{{ .Site.Params.instructor.url }}" target="_blank" rel="noopener"><i class="fas fa-user fa-fw"></i>
                     {{ .Site.Params.instructor.name }}</a> &emsp;&emsp;
                 <a href="mailto:{{ .Site.Params.instructor.email }}"><i class="fas fa-envelope fa-fw"></i>
                     {{ .Site.Params.instructor.email }}</a>
             </p>
 
-            <p>
+
+            <p style="font-size:12.0pt">
                 <i class="far fa-calendar-alt fa-fw"></i> {{ .Site.Params.course.days }} &emsp;&emsp;
                 <i class="far fa-clock fa-fw"></i> {{ .Site.Params.course.time }}
                 {{ if isset .Site.Params.course "location" }}<br><i class="fas fa-university fa-fw"></i> {{ .Site.Params.course.location }}{{end}}
             </p>
+  -->
         </div>
 
         <div class="col-md-5 credits">
-            <p>All content licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0" target="_blank" rel="noopener">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+            <p style="font-size:12.0pt">All content licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0" target="_blank" rel="noopener" style="text-decoration:none;">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a></p>
 
-            {{/* <p>Content <i class="fab fa-creative-commons fa-fw"></i> {{ .Site.Params.course.copyrightYear }} <a href="{{ .Site.Params.instructor.url }}" target="_blank" rel="noopener">{{ .Site.Params.author }}</a></p> */}} 
+            {{/* <p style="font-size:12.0pt">Content <i class="fab fa-creative-commons fa-fw"></i> {{ .Site.Params.course.copyrightYear }} <a href="{{ .Site.Params.instructor.url }}" target="_blank" rel="noopener" style="text-decoration:none;">{{ .Site.Params.author }}</a></p> */}}
 
             {{- if .Site.Params.credits }}
-            <p>{{ .Site.Params.credits | markdownify }}</p>
+            <p style="font-size:12.0pt">{{ .Site.Params.credits | markdownify }}</p>
             {{- end }}
 
-            <p>This site was created in <a href="https://www.rstudio.com/" target="_blank" rel="noopener">RStudio</a> using the <a href="https://gohugo.io/" target="_blank" rel="noopener">hugo</a> <a href="https://academic-demo.netlify.app/" target="_blank" rel="noopener">academic theme</a> in <a href="https://github.com/rstudio/blogdown" target="_blank" rel="noopener">blogdown</a>  from an initial framework developed by <a href="https://datavizm20.classes.andrewheiss.com" target="_blank" rel="noopener"> Dr. Andrew Heiss<a/>. </p>
+            <p style="font-size:12.0pt">This site was created with <a href="https://www.r-project.org" target="_blank" rel="noopener"><i class="fab fa-r-project fa-fw" style="color:#5e8cd3"></i></a> in <a href="https://www.rstudio.com/" target="_blank" rel="noopener" style="text-decoration:none;">RStudio</a> using the <a href="https://gohugo.io/" target="_blank" rel="noopener" style="text-decoration:none;">hugo</a> <a href="https://academic-demo.netlify.app/" target="_blank" rel="noopener">academic theme</a> in <a href="https://github.com/rstudio/blogdown" target="_blank" rel="noopener" style="text-decoration:none;">blogdown</a></p>
 
-            <p><a href="https://github.com/{{ .Site.Params.course.github }}" target="_blank" rel="noopener"><i class="fab fa-github fa-fw"></i> View the source at GitHub.</a></p>
+            <p style="font-size:12.0pt"><a href="https://github.com/{{ .Site.Params.course.github }}" target="_blank" rel="noopener" style="text-decoration:none;"><i class="fab fa-github fa-fw"></i> View the source at GitHub</a></p>
         </div>
+
     </div>
 </footer>

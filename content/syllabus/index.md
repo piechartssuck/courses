@@ -16,7 +16,7 @@ editor_options:
 
 <link href="{{< blogdown/postref >}}index_files/lightable/lightable.css" rel="stylesheet" />
 
-{{% aes-header %}}
+{{% r-walkthrough-header %}}
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.min.js" integrity="sha512-dnvR4Aebv5bAtJxDunq3eE8puKAJrY9GBJYl9GC6lTOEC76s1dbDfJFcL9GyzpaDW4vlI/UjR8sKbc1j6Ynx6w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/dimple/2.3.0/dimple.latest.min.js"></script>
@@ -24,8 +24,7 @@ editor_options:
 
 ## Course objectives
 
-Students will be expected to develop the following knowledge, skills,
-and abilities, including but not limited to:
+The overall purpose of this course is to empower you to
 
 1.  Acquiring knowledge of basic models and principles of program
     evaluation
@@ -88,25 +87,25 @@ in the course as well.
 We’ll rely on the text below which is available through the WVU library
 [WVU library](https://library.wvu.edu/):
 
--   Davidson, E. J. (2007). *Evaluation methodology basics: The nuts and
-    bolts of sound evaluation* (1st ed.). SAGE.
-    -   [Digital edition](https://libwvu.on.worldcat.org/oclc/646022580)
-        (free!)
-    -   Hardcover edition (not free) - ISBN: 9780761729307
+- Davidson, E. J. (2007). *Evaluation methodology basics: The nuts and
+  bolts of sound evaluation* (1st ed.). SAGE.
+  - [Digital edition](https://libwvu.on.worldcat.org/oclc/646022580)
+    (free!)
+  - Hardcover edition (not free) - ISBN: 9780761729307
 
 #### Optional
 
--   American Psychological Association. (2020). *Publication manual of
-    the American Psychological Association* (7th ed.).
-    -   Spiral bound edition (not free though the WVU library have
-        copies of the official [paperback
-        variant](https://libwvu.on.worldcat.org/oclc/1111952681)) -
-        ISBN: 978143383217
--   Mertens, D. M. (2018). *Mixed methods design in evaluation*. SAGE.
-    -   [Digital
-        edition](https://methods-sagepub-com.wvu.idm.oclc.org/book/mixed-methods-design-in-evaluation)
-        (free!)
-    -   Hardcover edition (not free) - ISBN: 9781483344379
+- American Psychological Association. (2020). *Publication manual of
+  the American Psychological Association* (7th ed.).
+  - Spiral bound edition (not free though the WVU library have
+    copies of the official [paperback
+    variant](https://libwvu.on.worldcat.org/oclc/1111952681)) -
+    ISBN: 978143383217
+- Mertens, D. M. (2018). *Mixed methods design in evaluation*. SAGE.
+  - [Digital
+    edition](https://methods-sagepub-com.wvu.idm.oclc.org/book/mixed-methods-design-in-evaluation)
+    (free!)
+  - Hardcover edition (not free) - ISBN: 9781483344379
 
 There will occasionally be additional articles and videos to read and
 watch. When this happens, links to these other resources will be
@@ -358,71 +357,71 @@ schedukled using the
 Here are the rules, expectations, and policies that I came up with or
 stole from other professors:
 
--   **Late work**: Barring the in-class tasks (e.g. exams, quizzes,
-    etc.) and the project, past due deliverable will only be accepted up
-    to 48 hours after the initial time and due date. For each full day
-    an assignment is late, 10% of the final grade will be deducted. All
-    submissions must be made via [eCampus](https://ecampus.wvu.edu/).
-    There are no exceptions to this policy. Please note that I will not
-    accept coursework by email or any other means.
+- **Late work**: Barring the in-class tasks (e.g. exams, quizzes,
+  etc.) and the project, past due deliverable will only be accepted up
+  to 48 hours after the initial time and due date. For each full day
+  an assignment is late, 10% of the final grade will be deducted. All
+  submissions must be made via [eCampus](https://ecampus.wvu.edu/).
+  There are no exceptions to this policy. Please note that I will not
+  accept coursework by email or any other means.
 
--   **Participation**: Please ensure that you are engaged and
-    participate in class. Engagement is mostly defined by you — if
-    that means commenting and answering questions - great; if it means
-    sitting quietly and being focused - also great; but if it means
-    being being disrespectful or flaking off - not so great.
+- **Participation**: Please ensure that you are engaged and
+  participate in class. Engagement is mostly defined by you — if
+  that means commenting and answering questions - great; if it means
+  sitting quietly and being focused - also great; but if it means
+  being being disrespectful or flaking off - not so great.
 
--   **Justifications**: On any submission, you must justify any
-    assertion. I don’t know what you know so its your job to provide all
-    of the necessary evidence to convince me that you do know what you
-    say you know. While you’ve probably heard this multiple times over
-    your life, think of it this way: if someone tells you that *not only
-    is the Earth flat, the core is actually made out of tiramisu and
-    moscato*, the first question you should be asking is *what’s your
-    evidence?* possibly followed by *is the core delicious?*.
+- **Justifications**: On any submission, you must justify any
+  assertion. I don’t know what you know so its your job to provide all
+  of the necessary evidence to convince me that you do know what you
+  say you know. While you’ve probably heard this multiple times over
+  your life, think of it this way: if someone tells you that *not only
+  is the Earth flat, the core is actually made out of tiramisu and
+  moscato*, the first question you should be asking is *what’s your
+  evidence?* possibly followed by *is the core delicious?*.
 
--   **Rubrics**: While there are valid reasons for the utilization of a
-    rubric in undergraduate classes, at the graduate level, I do not
-    (often) provide nor use a such an item to guide or evaluate your
-    submission due to four primary concerns:<br>
+- **Rubrics**: While there are valid reasons for the utilization of a
+  rubric in undergraduate classes, at the graduate level, I do not
+  (often) provide nor use a such an item to guide or evaluate your
+  submission due to four primary concerns:<br>
 
-    1.  When writing anything in academia that is pivotal (a thesis,
-        dissertation, journal article, report, etc.), a rubric isn’t
-        often provided.
-    2.  If you write within the limitations as defined in a rubric, then
-        creativity may be stifled (i.e. writing to the rubric rather
-        than constructing a product from the ground up).
-    3.  Feedback can only be given along the criteria listed within a
-        rubric which limits your learning as a student and constrains me
-        as the instructor.
-    4.  Unless you are in a very specific area, the real world does not
-        use rubrics! <br> <br>
+  1.  When writing anything in academia that is pivotal (a thesis,
+      dissertation, journal article, report, etc.), a rubric isn’t
+      often provided.
+  2.  If you write within the limitations as defined in a rubric, then
+      creativity may be stifled (i.e. writing to the rubric rather
+      than constructing a product from the ground up).
+  3.  Feedback can only be given along the criteria listed within a
+      rubric which limits your learning as a student and constrains me
+      as the instructor.
+  4.  Unless you are in a very specific area, the real world does not
+      use rubrics! <br> <br>
 
--   **Technology use**: Use phones, computers, etc. responsibly. We’re
-    all adults[^2].
+- **Technology use**: Use phones, computers, etc. responsibly. We’re
+  all adults[^2].
 
--   **Assumptions**:<br>
+- **Assumptions**:<br>
 
-    1.  Just assume that all submissions are to be written **formally**
-        and should include with the appropriate use of tone, sentence
-        structure, language, grammar, syntax, etc. and follow standard
-        APA 7th edition formatting guidelines where applicable.
-    2.  Given that both proposing and reporting is a facet of this type
-        of work, I will absolutely be assessing your ability to write.
-        This includes using the appropriate tone, sentence structure,
-        language, grammar, syntax, etc.
-    3.  People who are easily offended by content, believe their work to
-        be flawless or are generally unable to handle criticism should
-        consider looking at another course. If you want rainbows and
-        ponies, consider another class. If you care about data,
-        fieldwork and learning a highly marketable practice, you’ve come
-        to the right place.
-    4.  There is a great deal of content in this course and you will
-        likely struggle with some at times. Given that, there is also
-        something to be said about the satisfaction a person gets when
-        figuring something out, but nowhere is it written that has to be
-        on your own. You may find that a nudge here or there elicits the
-        same feeling so please reach out for help.
+  1.  Just assume that all submissions are to be written **formally**
+      and should include with the appropriate use of tone, sentence
+      structure, language, grammar, syntax, etc. and follow standard
+      APA 7th edition formatting guidelines where applicable.
+  2.  Given that both proposing and reporting is a facet of this type
+      of work, I will absolutely be assessing your ability to write.
+      This includes using the appropriate tone, sentence structure,
+      language, grammar, syntax, etc.
+  3.  People who are easily offended by content, believe their work to
+      be flawless or are generally unable to handle criticism should
+      consider looking at another course. If you want rainbows and
+      ponies, consider another class. If you care about data,
+      fieldwork and learning a highly marketable practice, you’ve come
+      to the right place.
+  4.  There is a great deal of content in this course and you will
+      likely struggle with some at times. Given that, there is also
+      something to be said about the satisfaction a person gets when
+      figuring something out, but nowhere is it written that has to be
+      on your own. You may find that a nudge here or there elicits the
+      same feeling so please reach out for help.
 
 ### Learning and knowledge during a pandemic
 
@@ -633,28 +632,28 @@ communicate effectively when taking an online course. Following these
 simple netiquette rules in your online class or education environment
 will ensure your success:
 
--   Include a professional salutation. In this case, “Hello Dr. Roy” or
-    “Dear Dr. Roy” is appropriate.
--   Include a proper ending such as “Thank you” or “With regards.” Then
-    type in your full name.
--   Never type in ALL CAPS, because it reads as if you ARE SHOUTING AT
-    PEOPLE.
--   Act as professionally, via your writing, as you would in a face to
-    face classroom.
--   Refrain from inappropriate language and derogatory or personal
-    attacks.
--   Do not dominate any discussion. Give other students the opportunity
-    to join in the discussion.
--   Disagree with ideas but avoid challenges that may be interpreted as
-    a personal attack.
--   Check that you are replying to the specific person you intend, and
-    not to the entire class.
--   Never give your password to another person.
--   Respect the virtual classroom. Never forward in-class communications
-    or posts by others outside of this virtual space.
--   Never spam your classmates.
--   If you quote someone’s previous post, only quote enough to make your
-    point.
+- Include a professional salutation. In this case, “Hello Dr. Roy” or
+  “Dear Dr. Roy” is appropriate.
+- Include a proper ending such as “Thank you” or “With regards.” Then
+  type in your full name.
+- Never type in ALL CAPS, because it reads as if you ARE SHOUTING AT
+  PEOPLE.
+- Act as professionally, via your writing, as you would in a face to
+  face classroom.
+- Refrain from inappropriate language and derogatory or personal
+  attacks.
+- Do not dominate any discussion. Give other students the opportunity
+  to join in the discussion.
+- Disagree with ideas but avoid challenges that may be interpreted as
+  a personal attack.
+- Check that you are replying to the specific person you intend, and
+  not to the entire class.
+- Never give your password to another person.
+- Respect the virtual classroom. Never forward in-class communications
+  or posts by others outside of this virtual space.
+- Never spam your classmates.
+- If you quote someone’s previous post, only quote enough to make your
+  point.
 
 Be aware of the University’s Academic Integrity and Dishonesty Policy
 <http://catalog.wvu.edu/undergraduate/coursecreditstermsclassification/#academicintegritytext>.

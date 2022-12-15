@@ -5,7 +5,7 @@ headless: true
 active: true
 weight: 10
 
-title: "EDP 617"
+title: <span style="color:#fafafa; border-radius:15px; background-color:rgba(29, 31, 37, 0.15); padding:0.5px; margin-left:-4px; color:#f7f7f7; display:inline-block; margin-left:-4px; font-size:40.0pt;"><b>EDP 617</b></span>
 
 # Hero image (optional). Enter filename of an image in the `static/img/` folder.
 hero_media: course_hex.png
@@ -22,7 +22,12 @@ design:
     image: penguins.png
 
 cta_note:
-  label: Spring 2022<br>Counseling & Learning Sciences<br>West Virginia University
+  label:
+    <br>
+    <br>
+    <br>
+
+    <span style="color:#fafafa; border-radius:15px; background-color:rgba(29, 31, 37, 0.15); padding:0.5px; margin-left:-4px; color:#f7f7f7; display:inline-block; margin-left:-4px; font-size:18.0pt;"><b>Spring 2023</b></span>
 ---
 
-**An introductory course in many things program evaluation**
+<span style="border-radius:15px; background-color:rgba(29, 31, 37, 0.15); padding:0.5px; margin-left:-4px; color:#f7f7f7; display:inline-block; font-size:20.0pt;"><b>An introductory course in many things program evaluation</b></span>

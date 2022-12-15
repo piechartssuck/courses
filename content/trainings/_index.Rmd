@@ -1,0 +1,128 @@
+---
+title: "About the Trainings"
+menu:
+  trainings:
+    parent: Overview
+    weight: 1
+type: docs
+weight: 1
+shiny: true
+---
+
+`r blogdown::shortcode("r-walkthrough-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+Most class sessions have both interactive **Modules** courtesy of [Data Camp](https://www.datacamp.com/)^[Please note that if you have (1) used Data Camp before and (2) are logged in with the same username, then any module that was successfully completed will not have to be done again.] and **Walkthroughs** created by me that you will need to work through ***after*** doing the readings and reviewing the corresponding content (if applicable). The lessons are a central part of the class and are focused on using the [tidyverse](https://www.tidyverse.org/) family of packages, though the approaches are certainly not the only ways to wrangle, clean, analyze, and visualize data in R. 
+
+## Advice
+Carve out some time everyday to go through these. If you try to complete everything in one sitting, it will probably be overwhelming! However if you have familiarity with some modules, please feel free to work ahead.
+
+## Grading
+The ultimate point of Data Camp is to get you familiarized with an environment that you likely have never seen or been exposed to. While you should absolutely go through each module, there is certainly no expectation that you will get everything right. In fact, the points that you incur don't mean anything as far as how you are assessed so please use hints as needed! As with any things data science, you'll learn by doing. If you have a polar personality type as it pertains to work (i.e. primarily a perfectionist or mostly careless), then the modules will likely prove to be a challenge. The chance that you will be able to comprehend everything by going beyond your limit or conversely assuming it will just come to you is low so please work hard but also take breaks, swear^[and curse my name if you have to], look on the Internet, ask peers, or reach out for help. Your score is predicated on putting in a solid effort, rather than getting it perfect because that's not realistic when it comes to data. 
+
+## Data Camp Schedule
+A *tentative* schedule is given below. The **Course** and **Chapter** names represent Data Camp titles^[Subject to change with notice.]:
+
+### Required
+Modules that do
+
+> <span style="color:#ffffff"><i><b>not require</b> a corresponding task</i> will be assessed only on the successful completion of the data camp course</span>
+
+> <span style="color:#ffffff"><i><b>require</b> a task</i> will be assessed on both the successful completion of the data camp course and corresponding assessment to be submitted via eCampus</span>
+
+<br>
+
+```{r eval = TRUE, echo = FALSE, message=FALSE}
+unchecked <- as.character(fontawesome::fa("square", fill = "steelblue"))
+
+checked <- as.character(fontawesome::fa("square-check", fill = "steelblue"))
+
+dc_schedule <- 
+  read_csv(here::here("content", "dc.csv"),
+           show_col_types = FALSE) %>% 
+  as_tibble()  %>%
+  mutate(Required = case_when(
+    Required == "checked" ~ as.character(fontawesome::fa("circle-check", fill = "#428bca", height = "15px")),
+    Required == "unchecked" ~ as.character(fontawesome::fa("circle-xmark", fill = "#d9534f", height = "15px"))
+      )
+    ) %>%
+  mutate(Task = case_when(
+    Task == "checked" ~ as.character(fontawesome::fa("circle-check", fill = "#428bca", height = "15px")),
+    Task == "unchecked" ~ as.character(fontawesome::fa("circle-xmark", fill = "#d9534f", height = "15px"))
+      )
+    ) %>%
+  mutate(
+    across(everything(), ~replace_na(.x, ""))
+    ) %>%
+  mutate(Chapters = str_to_title(Chapters)) %>%
+  mutate(Chapters = str_replace_all(Chapters, "Apply", "apply")) %>%
+  mutate(Chapters = str_replace_all(Chapters, "Stringr", "stringr"))  %>%
+  mutate(Chapters = str_replace_all(Chapters, "Tm", "tm")) %>%
+  mutate(Chapters = str_replace_all(Chapters, "Tidytext", "tidytext")) %>%
+  mutate(Chapters = str_replace_all(Chapters, "\\bWith\\b", "with")) %>%
+  mutate(Chapters = str_replace_all(Chapters, "\\bThe\\b", "the")) %>%
+  mutate(Chapters = str_replace_all(Chapters, "\\bAnd\\b", "and")) %>%
+  mutate(Chapters = str_replace_all(Chapters, "\\bOf\\b", "of")) %>%
+  mutate(Chapters = str_replace_all(Chapters, "\\bTo\\b", "to")) %>%
+  mutate(Chapters = str_replace_all(Chapters, "\\bFor\\b", "for")) %>%
+  mutate(Chapters = str_replace_all(Chapters, "\\bA\\b", "a")) %>%
+  mutate(Chapters = str_replace(Chapters, "the apply", "The apply"))
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(dc_schedule %>%
+        filter(str_detect(Week, "Extra Credit|Recommended", negate = T)) %>%
+        select(-Week), 
+      "html", 
+      escape = FALSE,
+      align = 'ccccll') %>%
+  kable_paper(full_width = TRUE) %>%
+  column_spec(1, width = "5em") %>%
+  column_spec(2, width = "5em") %>%
+  column_spec(3, width = "5em") %>%
+  column_spec(4, width = "5em") %>%
+  column_spec(5, width = "20em") %>%
+  column_spec(6, width = "20em") %>%
+  row_spec(0:nrow(dc_schedule %>%
+                    filter(str_detect(Week, "Extra Credit|Recommended", negate = T))), 
+           extra_css = 'vertical-align: middle !important;', 
+           color = "#f7f7f7", 
+           background = "transparent")
+```
+</center>
+
+### Extra Credit
+The following modules are optional and may count as extra credit contingnet on the successful completion of the data camp course and corresponding assessment to be submitted via eCampus. Please note that each subsequent module is dependent on the previous one.
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(dc_schedule %>%
+        filter(str_detect(Week, "Extra Credit")) %>%
+  select(-Week, -Link), 
+      "html", 
+      escape = FALSE,
+      align = 'cccll') %>%
+  kable_paper(full_width = TRUE) %>%
+  column_spec(1, width = "5em") %>%
+  column_spec(2, width = "5em") %>%
+  column_spec(3, width = "5em") %>%
+    column_spec(4, width = "20em") %>%
+  column_spec(5, width = "20em") %>%
+  row_spec(0:nrow(dc_schedule %>%
+        filter(str_detect(Week, "Extra Credit"))), 
+        extra_css = 'vertical-align: middle !important;', 
+        color = "#f7f7f7", 
+        background = "transparent")
+```
+</center>
+
+## Working Ahead
+By no means do you have to wait for a particular module to be assigned. If you wish to enroll in a training - one that is assigned or otherwise - simply search for the name of that course on the Data Camp site. For those modules assigned for this course, you will receive credit after the due date has passed.
+
+## Need Help?
+
+`r blogdown::shortcode("meetings")`

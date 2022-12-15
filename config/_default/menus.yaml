@@ -2,63 +2,59 @@ main:
   - name: Syllabus
     url: /syllabus/
     weight: 1
-  - name: Schedule
-    url: /schedule/
-    weight: 2
   - name: Readings
     url: /readings/
+    weight: 2
+  - name: Trainings
+    url: /trainings/
     weight: 3
-  - name: Materials
-    url: /materials/
-    weight: 4
-  - name: Extras
-    url: /extras/
-    weight: 5
   - name: Tasks
     url: /tasks/
-    weight: 6
-  - name: To Do List
+    weight: 4
+  - name: Due
     url: /due/
-    weight: 7
+    weight: 5
+  - name: Resources
+    url: /resources/
+    weight: 6
   - name: Professor
     url: /professor/
-    weight: 8
+    weight: 7
   - name: '<i class="fab fa-slack"></i>'
-    url: "https://2022edp617.slack.com"
-    weight: 9
+    url: "https://edp618fall2022.slack.com"
+    weight: 8
   - name: '<i class="fab fa-r-project"></i>'
     url: "https://www.rstudio.com/"
-    weight: 10
+    weight: 9
 
 readings:
   - name: Overview
     weight: 1
   - name: Readings
     weight: 2
-materials:
+trainings:
   - name: Overview
     weight: 1
-  - name: Materials
+  - name: Modules
     weight: 2
-extras:
-  - name: Overview
-    weight: 1
-  - name: Extras
-    weight: 2
+  - name: Walkthroughs
+    weight: 3
 tasks:
   - name: Overview
     weight: 1
   - name: Tasks
     weight: 2
+  - name: Deliverables
+    weight: 3
 due:
   - name: Overview
     weight: 1
   - name: To Do List
     weight: 2
-# resources:
-#   - name: Overview
-#     weight: 1
-#   - name: Guides
-#     weight: 2
-#   - name: References
-#     weight: 3
+resources:
+  - name: Overview
+    weight: 1
+  - name: Guides
+    weight: 2
+  - name: References
+    weight: 3

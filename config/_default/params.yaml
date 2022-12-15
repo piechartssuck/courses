@@ -93,29 +93,31 @@ author: Abhik Roy
 
 course:
   number: "EDP 617"
-  semester: "Spring 2022"
-  days: "Forever aka for the next 16 weeks"
-  time: "You pick!"
-  location: "Online"
-  dates: "January 10 - May 6"
+  semester: "Spring 2023"
+  days: "Neverending"
+#  time: "Soon"
+  location: "Asynchronous"
+  dates: "January 9 - May 5"
   github: drabhikroy/Courses/tree/edp617
-  copyrightYear: "2022"
-  slack: "https://2022edp617.slack.com"
+  copyrightYear: "2023"
+  slack: "https://edp617spring2023.slack.com"
 
 instructor:
   name: Dr. Abhik Roy
   email: Abhik.Roy@mail.wvu.edu
-  url: "https://counselingandlearningsci.wvu.edu/faculty-staff/abhik-roy"
+  url: "https://iam.asocialdatascientist.com/"
   twitter: asocialdatasci
   github: drabhikroy
-  office: "Allen Hall 504O"
+  office: "Allen Hall 609C"
   contact_policy: >-
-    Slack is the best way to get in contact with me. Response times are typically much quicker than the standard 24-48 hours given to emails.
+  emailpolicy: 24 - 48 hours
+  slackpolicy: Typically same day
   appointment_url: "https://calendly.com/nopiecharts/short15"
+  office_hours: "By appointment only"
 
 school:
-  name: Counseling & Learning Sciences
-  url: "https://counselingandlearningsci.wvu.edu/"
+  name: School of Education
+  url: "https://appliedhumansciences.wvu.edu/"
 
 university:
   name: West Virginia University
@@ -130,7 +132,7 @@ university:
 sharing_image: "course_info.png"
 
 # Twitter username (without @). Used when a visitor shares your site on Twitter.
-twitter: "asocialdatasci"
+# witter: "asocialdatasci"
 
 
 ############################

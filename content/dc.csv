@@ -1,0 +1,93 @@
+﻿Week,Link,Due,Required,Task,Module,Chapters
+1,<a href='/modules/01-module/'>Week 1</a>,1/29/2023,checked,unchecked,Introduction to R,Intro to basics
+1,,,,,,Vectors
+1,,,,,,Matrices
+1,,,,,,Factors
+1,,,,,,Data Frames
+1,,,,,,Lists
+1,,,,,,
+2,<a href='/modules/02-module/'>Week 2</a>,1/29/2023,checked,unchecked,Introduction to R,Intro to basics
+2,,,,,,Vectors
+2,,,,,,Matrices
+2,,,,,,Factors
+2,,,,,,Data Frames
+2,,,,,,Lists
+2,,,,,,
+3,<a href='/modules/03-module/'>Week 3</a>,1/29/2023,checked,checked,Introduction to the Tidyverse,Data wrangling
+3,,,,,,Data visualization
+3,,,,,,Grouping and summarizing
+3,,,,,,Types of visualizations
+3,,,,,,
+4,<a href='/modules/04-module/'>Week 4</a>,2/12/2023,checked,checked,Introduction to the Tidyverse,Data wrangling
+4,,,,,,Data visualization
+4,,,,,,Grouping and summarizing
+4,,,,,,Types of visualizations
+4,,,,,,
+5,<a href='/modules/05-module/'>Week 5</a>,2/12/2023,checked,checked,Introduction to the Tidyverse,Data wrangling
+5,,,,,,Data visualization
+5,,,,,,Grouping and summarizing
+5,,,,,,Types of visualizations
+5,,,,,,
+6,<a href='/modules/06-module/'>Week 6</a>,2/26/2023,checked,unchecked,Introduction to Data Visualization with ggplot2,Explore your data
+6,,,,,,Tame your data
+6,,,,,,Tidy your data
+6,,,,,,Transform your data
+6,,,,,,
+7,<a href='/modules/07-module/'>Week 7</a>,2/26/2023,checked,unchecked,Introduction to Data Visualization with ggplot2,Explore your data
+7,,,,,,Tame your data
+7,,,,,,Tidy your data
+7,,,,,,Transform your data
+7,,,,,,
+8,<a href='/modules/08-module/'>Week 8</a>,3/19/2023,checked,checked,Intermediate Data Visualization with ggplot2,Statistics
+8,,,,,,Coordinates
+8,,,,,,Facets
+8,,,,,,Best Practices
+8,,,,,,
+9,<a href='/modules/09-module/'>Week 9</a>,3/19/2023,checked,checked,Intermediate Data Visualization with ggplot2,Statistics
+9,,,,,,Coordinates
+9,,,,,,Facets
+9,,,,,,Best Practices
+9,,,,,,
+10,<a href='/modules/10-module/'>Week 10</a>,4/2/2023,checked,unchecked,Visualization Best Practices in R,Proportions of a whole
+10,,,,,,Point data
+10,,,,,,Single distributions
+10,,,,,,Comparing distributions
+10,,,,,,
+11,<a href='/modules/11-module/'>Week 11</a>,4/2/2023,checked,unchecked,Visualization Best Practices in R,Proportions of a whole
+11,,,,,,Point data
+11,,,,,,Single distributions
+11,,,,,,Comparing distributions
+11,,,,,,
+12,<a href='/modules/12-module/'>Week 12</a>,4/16/2023,checked,checked,Introduction to Text Analysis in R,Wrangling Text
+12,,,,,,Visualizing Text
+12,,,,,,Sentiment Analysis
+12,,,,,,Topic Modeling
+12,,,,,,
+12,<a href='/modules/13-module/'>Week 13</a>,4/16/2023,checked,checked,Introduction to Text Analysis in R,Wrangling Text
+12,,,,,,Visualizing Text
+12,,,,,,Sentiment Analysis
+12,,,,,,Topic Modeling
+12,,,,,,
+,,,,,,
+Extra Credit,<a href='/modules/ec-module/'>Extra Credit</a>,4/23/2023,unchecked,unchecked,Intermediate R,Conditionals and Control Flow 
+Extra Credit,,,,,,Loops
+Extra Credit,,,,,,Functions
+Extra Credit,,,,,,The apply family
+Extra Credit,,,,,,Utilities
+Extra Credit,,,,,,
+Extra Credit,<a href='/modules/rec-module/'>Recommended</a>,4/23/2023,unchecked,unchecked,String Manipulation with stringr in R,String basics
+Extra Credit,,,,,,Introduction to stringr
+Extra Credit,,,,,,Pattern matching with regular expressions
+Extra Credit,,,,,,More advanced matching and manipulation
+Extra Credit,,,,,,Case studies
+Extra Credit,,,,,,
+Extra Credit,<a href='/modules/ec-module/'>Extra Credit</a>,4/23/2023,unchecked,unchecked,Text Mining with Bag-of-Words in R,Jumping into Text Mining with Bag-of-Words
+Extra Credit,,,,,,Word Clouds and More Interesting Visuals
+Extra Credit,,,,,,Adding to Your TM Skills
+Extra Credit,,,,,,Battle of the Tech Giants for Talent
+Extra Credit,,,,,,
+Extra Credit,<a href='/modules/ec-module/'>Extra Credit</a>,4/23/2023,checked,checked,Sentiment Analysis in R,Fast & dirty: Polarity scoring
+Extra Credit,,,,,,Sentiment analysis the tidytext way
+Extra Credit,,,,,,Visualizing sentiment
+Extra Credit,,,,,,Case study: Airbnb reviews
+Extra Credit,,,,,,

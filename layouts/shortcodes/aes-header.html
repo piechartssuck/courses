@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 
 <link href='https://fonts.googleapis.com/css?family=Roboto Condensed' rel='stylesheet'>
 
@@ -45,19 +45,18 @@
   transform: scaleX(1);
 }
 
+
 iframe {
-  border: none;
+  border:0;
 }
 
-td, th, tr, table {
-    border: 0 !important;
-    border-spacing:0 !important;
-  }
-
-tbody > tr:hover > td {
-      background-color: unset !important;
-      color: unset !important;
-  }
+#rounded_corners_small {
+  border-radius: 25px;
+  border: 2px solid #80FFDB;
+  padding: 20px;
+  width: 400px;
+  height: 80px;
+}
 
 #rounded_corners {
   border-radius: 25px;
@@ -66,6 +65,42 @@ tbody > tr:hover > td {
   width: 400px;
   height: 115px;
 }
+
+#rounded_corners_large {
+  border-radius: 25px;
+  border: 2px solid #80FFDB;
+  padding: 20px;
+  width: 400px;
+  height: 150px;
+}
+
+#rounded_corners_long {
+  border-radius: 25px;
+  border: 2px solid #80FFDB;
+  padding: 20px;
+  width: 400px;
+  height: 230px;
+}
+
+td, th, tr, table {
+    border: 0 !important;
+    border-spacing:0 !important;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: unset !important;
+    color: unset !important;
+  }
+
+tbody > td > tr:hover {
+      background-color: unset !important;
+      color: unset !important;
+  }
+
+tfoot {
+    text-align: left;
+    font-size: 80%;
+    font-style: italic;
+  }
 
 .wrapper{
   display:inline-flex;
@@ -83,7 +118,7 @@ tbody > tr:hover > td {
   height: 60px;
   width: 60px;
   display:block;
-  background: #282A35;
+  background: #212121;
   box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.1);
   border-radius:50%;
   text-align:center;
@@ -94,7 +129,7 @@ tbody > tr:hover > td {
 }.wrapper .icon .tooltip{
   position:absolute;
   top:0px;
-  background: #282A35;
+  background: #212121;
   box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.1);
   font-size: 20px;
   font-family: 'Roboto Condensed';
@@ -162,12 +197,78 @@ flex: 0 0 75%;
 flex: 0 0 25%;
 }
 
+.evener {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-basis: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.evener > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.evencol {
+  flex-grow: 1;
+    flex-basis: 0;
+    min-width: 0;
+  }
+
 .clear{
     clear:both;
 }
 
+.stripe {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    box-orient: horizontal;
+    flex-direction: row;
+
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    justify-content: center;
+
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.subsquare {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+
+    padding: 10px;
+    margin: 10px;
+
+    text-align: center;
+}
+
+.tab {
+ margin-left: 2.5em
+}
+
 i.fa.fa-save{
 color:#ffffff;
+}
+
+.course-info {
+  font-size: 12pt;
 }
 </style>
 

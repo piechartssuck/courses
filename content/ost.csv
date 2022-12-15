@@ -1,0 +1,22 @@
+﻿title,authors,year,publisher,edition,link,loc,img,ftype,alt
+Advanced R,"Wickham, H.",2019,CRC Press,2nd,https://adv-r.hadley.nz/,/img/opensource/,advanced-r,png,Advanced R
+Advanced R solutions,"Grosser, M., Bumann, H., & Wickham, H.",2021,CRC Press,1st,https://advanced-r-solutions.rbind.io/,/img/opensource/,advanced-r-solutions,png,Advanced R Solutions
+"Analyzing US Census data: Methods, maps, and models in R","Walker, K.",2023,CRC Press,1st,https://walker-data.com/census-r/index.html,/img/opensource/,analyzing-us-census-data,png,"Analyzing US Census Data: Methods, Maps, and Models in R"
+Behavior analysis with machine learning using R,"Ceja, E.G.",2022,CRC Press,1st,https://enriquegit.github.io/behavior-free/,/img/opensource/,behavior-analysis-with-machine-learning-using-r,png,Behavior Analysis with Machine Learning Using R
+blogdown: Creating websites with R Markdown,"Xie, Y., Thomas, A., & Thomas, A.P.",2018,CRC Press,1st,https://bookdown.org/yihui/blogdown/,/img/opensource/,blogdown-creating-sites-with-r-markdown,png,blogdown: Creating Websites with R Markdown
+Geocomputation with R,"Lovelace, R., Nowosad, J., & Muenchow, J.",2019,CRC Press,1st,https://geocompr.robinlovelace.net/,/img/opensource/,geocomputation-with-r,png,Geocomputation with R
+ggplot2: Elegant graphics for data analysis,"Wickham, H.",2016,Springer,3rd,https://ggplot2-book.org/,/img/opensource/,ggplot2-elegant-graphics-for-data-analysis,png,ggplot2: Elegant Graphics for Data Analysis
+Hands-on machine mearning with R,"Boehmke, B. & Greenwell, B.",2019,CRC Press,1st,https://bradleyboehmke.github.io/HOML/,/img/opensource/,hands-on-machine-learning-with-r,png,Hands-On Machine Learning with R
+"Interactive web-based data visualization with R, Plotly, and Shiny","Sievert, C.",2020,CRC Press,1st,https://plotly-r.com/,/img/opensource/,interactive-web-based-data-visualization-with-r-plotly-and-shiny,png,"Interactive web-based data visualization with R, Plotly, and Shiny"
+Introduction to data science: Data analysis and prediction algorithms with R,"Irizarry, R.A.",2020,CRC Press,1st,https://rafalab.github.io/dsbook/,/img/opensource/,introduction-to-data-science,png,Introduction to Data Science: Data Analysis and Prediction Algorithms with R
+JavaScript for R,"Coene, J.",2022,CRC Press,1st,https://book.javascript-for-r.com/,/img/opensource/,javascript-for-r,png,JavaScript for R
+Mastering Shiny,"Wickham, H.",2021,O'Reilly,1st,https://mastering-shiny.org/,/img/opensource/,mastering-shiny,png,Mastering Shiny
+New statistics for design researchers: A Bayesian workflow in tidy R,"Schmettow, M.",2021,Springer,1st,https://schmettow.github.io/New_Stats/,/img/opensource/,new-statistics-for-design-researchers,png,New Statistics for Design Researchers: a Bayesian Workflow in Tidy R
+Outstanding user interfaces with Shiny,,2022,CRC Press,1st,https://unleash-shiny.rinterface.com/welcome.html,/img/opensource/,outstanding-user-interfaces-with-shiny,png,Outstanding User Interfaces with Shiny
+R for data science,"Wickham, H. & Grolemund, G.",2017,O'Reilly,1st,https://r4ds.had.co.nz/,/img/opensource/,r-for-data-science-text,png,R for Data Science
+R Markdown cookbook,"Xie, Y., Dervieux, C., & Riederer, E.",2021,CRC Press,1st,https://bookdown.org/yihui/rmarkdown-cookbook/,/img/opensource/,r-markdown-cookbook,png,R Markdown Cookbook
+R packages,"Wickham, H. & Bryan, J.",2023,O'Reilly,2nd,https://r-pkgs.org/,/img/opensource/,r-packages,png,R Packages
+Statistical inference via data science: A ModernDive into R and the Tidyverse,"Ismay, C. & Kim, A.Y.",2019,CRC Press,1st,https://moderndive.com/,/img/opensource/,statistical-inference-via-data-science,png,Statistical Inference via Data Science: A ModernDive into R and the Tidyverse
+Supervised machine learning for text analysis in R,"Hvitfeldt, E. & Silge, J.",2022,CRC Press,1st,https://smltar.com/,/img/opensource/,supervised-machine-learning-for-text-analysis in-r,png,Supervised Machine Learning for Text Analysis in R
+Text mining with R,"Silge, J. & Robinson, D.",2017,O'Reilly,1st,https://www.tidytextmining.com/,/img/opensource/,text-mining-with-r,png,Text Mining with R
+Tidy modeling with R,"Kuhn, M. & Silge, J.",2022,O'Reilly,1st,https://www.tmwr.org/,/img/opensource/,tidy-modeling-with-r,png,Tidy Modeling with R

@@ -1,0 +1,133 @@
+---
+title: "Population, Selection, and Coverage"
+linktitle: "Week 3: Population, Selection, and Coverage"
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  trainings:
+    parent: Modules
+    weight: 3
+type: docs
+weight: 1
+---
+
+`r blogdown::shortcode("r-walkthrough-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+## Data Camp
+
+Please go through and complete the following module
+
+```{r eval = TRUE, echo = FALSE, message=FALSE}
+dc_schedule <-  
+  read_csv(here::here("content", "dc.csv"),
+           show_col_types = FALSE) %>%
+  as_tibble() %>%
+  mutate(across(everything(), ~ case_when(
+    . == "checked" ~ as.character(fontawesome::fa("circle-check", fill = "#428bca", height = "15px")),
+    . == "unchecked" ~ as.character(fontawesome::fa("circle-xmark", fill = "#d9534f", height = "15px")),
+    TRUE ~ as.character(.)
+              ))) %>%
+  filter(Week == "3") %>% #CHANGE HERE
+  select(-Week) %>%
+  mutate(across(everything(), as.character)) %>%
+  mutate(across(everything(), str_squish)) %>%
+  rename(`Due by` = Due) %>%
+#  filter_all(any_vars(!is.na(.))) %>% 
+  mutate(
+    across(everything(), ~replace_na(.x, ""))
+    ) %>%
+  select_if(~!all(is.na(.)))
+  
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(dc_schedule, 
+      "html", 
+      escape = FALSE,
+      align = 'ccccll') %>%
+  kable_paper(full_width = TRUE) %>%
+  column_spec(1, width = "5em") %>%
+  column_spec(2, width = "5em") %>%
+  column_spec(3, width = "5em") %>%
+  column_spec(4, width = "5em") %>%
+  column_spec(5, width = "12em") %>%
+  column_spec(6, width = "12em") %>%
+  row_spec(0:nrow(dc_schedule), extra_css = 'vertical-align: middle !important;', color = "#f7f7f7", background = "transparent")
+```
+</center>
+
+## <code><span style='font-size:20px'>esquisse</span></code>
+
+This is optional, but will be helpful for many of you. If you would like to explore `ggplot2` using a more drag and drop approach, try the R package `esquisse`
+
+<center>
+```{r echo=FALSE,eval=TRUE,message=FALSE,purl=FALSE}
+loc <- here::here("static", "rtasks", "Esquisse.zip")
+
+downloadthis::download_file(
+  path = loc,
+  output_name = "Esquisse materials",
+  button_label = "&nbsp;&nbsp;&nbsp;<span style='color:#ffffff'>Download</span>",
+  button_type = "primary",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+</center>
+<br>
+
+After downloading and unzipping the file above, open up RStudio and run
+
+<div class = "rounded">
+```{r eval=FALSE}
+install.packages("esquisse", dependencies = TRUE)
+```
+</div>
+
+You'll also need to install the example data set [palmerpenguins](https://allisonhorst.github.io/palmerpenguins/articles/intro.html){target="_blank"} by running
+
+<div class = "rounded">
+```{r eval=FALSE}
+install.packages("palmerpenguins", dependencies = TRUE)
+```
+</div>
+
+If prompted, you may receive the option to restart RStudio. This is up to you, but unless you're already doing something else in RStudio, it can't hurt. After both install, run the following command
+
+<div class = "rounded">
+```{r eval=FALSE}
+esquisse::esquisser(palmerpenguins::penguins)
+```
+</div>
+
+<center>
+![esquisse with palmerpenguins](/img/gifs/esquisse1.gif){width=85%}
+</center>
+If you want to use your own data set, run the following
+
+<div class = "rounded">
+```{r eval=FALSE}
+esquisse::esquisser()
+```
+</div>
+
+<center>
+![esquisse with palmerpenguins](/img/gifs/esquisse2.gif){width=85%}
+</center>
+
+### Additional resources
+
+> [Creating plots without coding @ RPubs](https://rpubs.com/brunoquevedo/using-esquisse){target="_blank"}
+
+> [Esquisse R Package @ Little Miss Data](https://www.littlemissdata.com/fdf/esquisse){target="_blank"}
+
+> [Tableau-like Drag and Drop GUI Visualization in R @ Towards Data Science](https://towardsdatascience.com/tableau-esque-drag-and-drop-gui-visualization-in-r-901ee9f2fe3f){target="_blank"}
+

@@ -10,7 +10,7 @@ editor_options:
     wrap: 72
 ---
 
-`r blogdown::shortcode("aes-header")`
+`r blogdown::shortcode("r-walkthrough-header")`
 
 ```{r setup, message=FALSE, warning=FALSE, include=FALSE}
 library(tidyverse)
@@ -30,8 +30,7 @@ library(here)
 
 ## Course objectives
 
-Students will be expected to develop the following knowledge, skills,
-and abilities, including but not limited to:
+The overall purpose of this course is to empower you to
 
 1.  Acquiring knowledge of basic models and principles of program
     evaluation

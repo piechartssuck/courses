@@ -1,0 +1,114 @@
+---
+title: "An Introduction to Surveys"
+linktitle: "Week 2: An Introduction to Surveys"
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  trainings:
+    parent: Modules
+    weight: 2
+type: docs
+weight: 1
+---
+
+`r blogdown::shortcode("r-walkthrough-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+## Data Camp
+
+Please go through and complete the following module
+
+```{r eval = TRUE, echo = FALSE, message=FALSE}
+dc_schedule <-  
+  read_csv(here::here("content", "dc.csv"),
+           show_col_types = FALSE) %>%
+  as_tibble() %>%
+  mutate(across(everything(), ~ case_when(
+    . == "checked" ~ as.character(fontawesome::fa("circle-check", fill = "#428bca", height = "15px")),
+    . == "unchecked" ~ as.character(fontawesome::fa("circle-xmark", fill = "#d9534f", height = "15px")),
+    TRUE ~ as.character(.)
+              ))) %>%
+  filter(Week == "2") %>% #CHANGE HERE
+  select(-Week) %>%
+  mutate(across(everything(), as.character)) %>%
+  mutate(across(everything(), str_squish)) %>%
+  rename(`Due by` = Due) %>%
+#  filter_all(any_vars(!is.na(.))) %>% 
+  mutate(
+    across(everything(), ~replace_na(.x, ""))
+    ) %>%
+  select_if(~!all(is.na(.)))
+  
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(dc_schedule, 
+      "html", 
+      escape = FALSE,
+      align = 'ccccll') %>%
+  kable_paper(full_width = TRUE) %>%
+  column_spec(1, width = "5em") %>%
+  column_spec(2, width = "5em") %>%
+  column_spec(3, width = "5em") %>%
+  column_spec(4, width = "5em") %>%
+  column_spec(5, width = "12em") %>%
+  column_spec(6, width = "12em") %>%
+  row_spec(0:nrow(dc_schedule), extra_css = 'vertical-align: middle !important;', color = "#f7f7f7", background = "transparent")
+```
+</center>
+
+## R Task
+
+Please follow the directions listed below
+
+1. Download the task files
+
+<center>
+```{r echo=FALSE,eval=TRUE,message=FALSE}
+loc <- here::here("static", "rtasks", "IntroductionToTheTidyverse.zip")
+
+downloadthis::download_file(
+  path = loc,
+  output_name = "Introduction to the Tidyverse Task",
+  button_label = "&nbsp;&nbsp;&nbsp;<span style='color:#ffffff'>Download</span>",
+  button_type = "primary",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+</center>
+<br>
+
+2. [Unzip](/resources/unzipping) them on your computer
+
+3. Open the file `Introduction to the Tidyverse walkthrough.Rmd` in RStudio.
+
+4. Run `install.packages('learnr')` in the Console and wait until the package installs
+
+5. Click on Run Document, and then go through the walkthrough preferably in a larger window. To see how to do this, open the file `Introduction to the Tidyverse loading.gif` in the web browser of your choice or by another method to view the animated gif
+
+6. After finishing the walkthrough, open the mostly empty script to `Introduction to the Tidyverse script.R` and load up the `tidyverse` library. *Please be aware that it is included for you in this first task but will not be in the future*
+
+7. Keeping the hashtag, erase the words at the top and replace them with your full name
+
+8. Load the `diamonds`^[Comes from the `ggplot2` package which is also in `tidyverse`] data set in the same way as `starwars` was shown in the walkthrough. Then recode the following values in the `cut` column in a new column named `cut_recoded`
+
+    - **Ideal** with **5**
+    - **Premium** with **4**
+    - **Very Good** with **3**
+    - **Good** with **2**
+    - **Fair** with **1**
+    <p style="margin-bottom:0.5cm;"></p>
+    
+    and everything else with **0**. Your output should consist of two columns - the unique original values and their respective recoding.
+
+9. Save the file by adding your first initial and last name to the beginning of the filename. For example, my submission would be `aroy Introduction to the Tidyverse script.R`
+
+10. Submit the script to [eCampus](https://ecampus.wvu.edu) in the Submission Portal
