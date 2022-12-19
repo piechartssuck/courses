@@ -31,21 +31,21 @@ Mixed-Method studies are the natural byproduct of an ongoing war between people 
 
 The overall purpose of this course is to empower you to
 
--   <span style="color:#ffffff">assess various types of triangulation</span>
+- <span style="color:#ffffff">assess various types of triangulation</span>
 
--   <span style="color:#ffffff">create aesthetically pleasing and informative single and mixed method(s) data visualizations</span>
+- <span style="color:#ffffff">create aesthetically pleasing and informative single and mixed method(s) data visualizations</span>
 
--   <span style="color:#ffffff">design a structurally sound mixed methods study</span>
+- <span style="color:#ffffff">design a structurally sound mixed methods study</span>
 
--   <span style="color:#ffffff">determine how to assess item reliability and validity</span>
+- <span style="color:#ffffff">determine how to assess item reliability and validity</span>
 
--   <span style="color:#ffffff">identify pigeonholed designs and steps needed to avoid them</span>
+- <span style="color:#ffffff">identify pigeonholed designs and steps needed to avoid them</span>
 
--   <span style="color:#ffffff">implement both quantitative and qualitative approaches when assessing open bodies of text</span>
+- <span style="color:#ffffff">implement both quantitative and qualitative approaches when assessing open bodies of text</span>
 
--   <span style="color:#ffffff">recognize standard mixed models and to create custom variants</span>
+- <span style="color:#ffffff">recognize standard mixed models and to create custom variants</span>
 
--   <span style="color:#ffffff">utilize frequentist and/or basic Bayesian statistical methods to address effects or impacts</span>
+- <span style="color:#ffffff">utilize frequentist and/or basic Bayesian statistical methods to address effects or impacts</span>
 
 Additionally, this class will expose you to [<svg aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:steelblue;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>](https://cran.r-project.org/) — one of the most popular and in-demand statistical languages. Armed with the foundational skill set, you’ll know enough to be able to conduct basic and some advanced analyses, create eye-popping data visualizations, and report results.
 
@@ -445,7 +445,7 @@ Data Camp
 10
 </td>
 <td style="text-align:left;width: 15em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
-Mixed Methods EDA
+R Data EDA
 </td>
 <td style="text-align:left;width: 9em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
 eCampus
@@ -617,28 +617,28 @@ Due to the ongoing pandemic, we can only meet via Zoom. This can be scheduled us
 
 Here are the rules, expectations, and policies that I came up with or stole from other professors:
 
--   **Late work**: Barring the in-class only tasks, past due deliverable will only be accepted up to 48 hours after the initial time and due date. For each full day an assignment is late, 10% of the final grade will be deducted. All submissions must be made via [eCampus](https://ecampus.wvu.edu/). There are no exceptions to this policy. Please note that coursework *will not* be accepted by email or any other means.
+- **Late work**: Barring the in-class only tasks, past due deliverable will only be accepted up to 48 hours after the initial time and due date. For each full day an assignment is late, 10% of the final grade will be deducted. All submissions must be made via [eCampus](https://ecampus.wvu.edu/). There are no exceptions to this policy. Please note that coursework *will not* be accepted by email or any other means.
 
--   **Participation**: Please ensure that you are engaged and participate in class. Engagement is mostly defined by you — if that means commenting and answering questions - great; if it means sitting quietly and being focused - also great; but if it means being being disrespectful or flaking off - not so great.
+- **Participation**: Please ensure that you are engaged and participate in class. Engagement is mostly defined by you — if that means commenting and answering questions - great; if it means sitting quietly and being focused - also great; but if it means being being disrespectful or flaking off - not so great.
 
--   **Justifications**: On any submission, you must justify any assertion. I don’t know what you know so its your job to provide all of the necessary evidence to convince me that you do know what you say you know. While you’ve probably heard this multiple times over your life, think of it this way: if someone tells you that *the core of the Earth is made of pixy sticks*, the first question you should be asking is *what’s your evidence?*.
+- **Justifications**: On any submission, you must justify any assertion. I don’t know what you know so its your job to provide all of the necessary evidence to convince me that you do know what you say you know. While you’ve probably heard this multiple times over your life, think of it this way: if someone tells you that *the core of the Earth is made of pixy sticks*, the first question you should be asking is *what’s your evidence?*.
 
--   **Rubrics**: While there are valid reasons for the utilization of a rubric in undergraduate classes, at the graduate level, I do not (often) provide nor use a such an item to guide or evaluate your submission due to four primary concerns:<br>
+- **Rubrics**: While there are valid reasons for the utilization of a rubric in undergraduate classes, at the graduate level, I do not (often) provide nor use a such an item to guide or evaluate your submission due to four primary concerns:<br>
 
-    1.  When writing anything in academia that is pivotal (a thesis, dissertation, journal article, report, etc.), a rubric isn’t often provided.
-    2.  If you write within the limitations as defined in a rubric, then creativity may be stifled (i.e. writing to the rubric rather than constructing a product from the ground up).
-    3.  Feedback can only be given along the criteria listed within a rubric which limits your learning as a student and constrains me as the instructor.
-    4.  Unless you are in a very specific area, the real world does not use rubrics!
-        <br>
-        <br>
+  1.  When writing anything in academia that is pivotal (a thesis, dissertation, journal article, report, etc.), a rubric isn’t often provided.
+  2.  If you write within the limitations as defined in a rubric, then creativity may be stifled (i.e. writing to the rubric rather than constructing a product from the ground up).
+  3.  Feedback can only be given along the criteria listed within a rubric which limits your learning as a student and constrains me as the instructor.
+  4.  Unless you are in a very specific area, the real world does not use rubrics!
+      <br>
+      <br>
 
--   **Technology use**: Use phones, computers, etc. responsibly. We’re all adults[^2].
+- **Technology use**: Use phones, computers, etc. responsibly. We’re all adults[^2].
 
--   **Assumptions**:<br>
+- **Assumptions**:<br>
 
-    1.  Just assume that all submissions are to be written **formally** and should include with the appropriate use of language, grammar, syntax, etc. and follow standard APA 7th edition formatting guidelines where applicable.
-    2.  People who are easily offended by content, believe their work to be flawless, generally unable to handle criticism, or are looking for rainbows and ponies should consider looking at another course. However if you care about data, practice and learning a highly marketable practice, you’ve come to the right place.
-    3.  There is a great deal of content in this course and you will likely struggle with some at times. Given that, there is also something to be said about the satisfaction a person gets when figuring something out, but nowhere is it written that has to be on your own. You may find that a nudge here or there elicits the same feeling so please reach out for help.
+  1.  Just assume that all submissions are to be written **formally** and should include with the appropriate use of language, grammar, syntax, etc. and follow standard APA 7th edition formatting guidelines where applicable.
+  2.  People who are easily offended by content, believe their work to be flawless, generally unable to handle criticism, or are looking for rainbows and ponies should consider looking at another course. However if you care about data, practice and learning a highly marketable practice, you’ve come to the right place.
+  3.  There is a great deal of content in this course and you will likely struggle with some at times. Given that, there is also something to be said about the satisfaction a person gets when figuring something out, but nowhere is it written that has to be on your own. You may find that a nudge here or there elicits the same feeling so please reach out for help.
 
 ### Learning and knowledge during a pandemic
 
@@ -724,18 +724,18 @@ At West Virginia University, class attendance contributes significantly to acade
 
 The basic premise is that the etiquette expected of students in the online environment is the same as that expected in a classroom. Common courtesy is the guiding rule of Internet communications. Be prepared to communicate effectively when taking an online course. Following these simple netiquette rules in your online class or education environment will ensure your success:
 
--   Include a professional salutation. In this case, “Hello Dr. Roy” or “Dear Dr. Roy” is appropriate.
--   Include a proper ending such as “Thank you” or “With regards.” Then type in your full name.
--   Never type in ALL CAPS, because it reads as if you ARE SHOUTING AT PEOPLE.
--   Act as professionally, via your writing, as you would in a face to face classroom.
--   Refrain from inappropriate language and derogatory or personal attacks.
--   Do not dominate any discussion. Give other students the opportunity to join in the discussion.
--   Disagree with ideas but avoid challenges that may be interpreted as a personal attack.
--   Check that you are replying to the specific person you intend, and not to the entire class.
--   Never give your password to another person.
--   Respect the virtual classroom. Never forward in-class communications or posts by others outside of this virtual space.
--   Never spam your classmates.
--   If you quote someone’s previous post, only quote enough to make your point.
+- Include a professional salutation. In this case, “Hello Dr. Roy” or “Dear Dr. Roy” is appropriate.
+- Include a proper ending such as “Thank you” or “With regards.” Then type in your full name.
+- Never type in ALL CAPS, because it reads as if you ARE SHOUTING AT PEOPLE.
+- Act as professionally, via your writing, as you would in a face to face classroom.
+- Refrain from inappropriate language and derogatory or personal attacks.
+- Do not dominate any discussion. Give other students the opportunity to join in the discussion.
+- Disagree with ideas but avoid challenges that may be interpreted as a personal attack.
+- Check that you are replying to the specific person you intend, and not to the entire class.
+- Never give your password to another person.
+- Respect the virtual classroom. Never forward in-class communications or posts by others outside of this virtual space.
+- Never spam your classmates.
+- If you quote someone’s previous post, only quote enough to make your point.
 
 Be aware of the University’s Academic Integrity and Dishonesty Policy <http://catalog.wvu.edu/undergraduate/coursecreditstermsclassification/#academicintegritytext>. You can review the rules, regulations, and procedures concerning student conduct and discipline for the main campus of West Virginia University, at [http://campuslife.wvu.edu/r/download/1802350](http://campuslife.wvu.edu/r/download/180235).
 

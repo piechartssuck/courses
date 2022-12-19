@@ -343,7 +343,7 @@ You can find descriptions for all the assignments on the [tasks page](/tasks/).
 assignments <- tribble(
   ~Percent,  ~Task, ~Location,
   10, "R Training & Tasks", "Data Camp",
-  10, "Mixed Methods EDA", "eCampus",
+  10, "R Data EDA", "eCampus",
   5, "Participation", "In class",
   5, "Think about Studies", "eCampus",
   5, "Create an Argument", "eCampus",

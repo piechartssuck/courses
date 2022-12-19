@@ -50,10 +50,10 @@ Chapters
 <tbody>
 <tr>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/modules/04-module/">Set 4</a>
+<a href="/modules/02-module/">Week 2</a>
 </td>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-10/4/22
+9/6/22
 </td>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:15px;width:15px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#428bca;overflow:visible;position:relative;">
@@ -66,10 +66,10 @@ Chapters
 </svg>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<span style="color:#ffc787;font-weight:bold;font-style:italic">Data Manipulation with dplyr</span>
+<span style="color:#ffc787;font-weight:bold;font-style:italic">Introduction to Data Visualization with ggplot2</span>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Transforming Data with dplyr
+Explore your data
 </td>
 </tr>
 <tr>
@@ -85,7 +85,7 @@ Transforming Data with dplyr
 <span style="color:#ffc787;font-weight:bold;font-style:italic"></span>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Aggregating Data
+Tame your data
 </td>
 </tr>
 <tr>
@@ -101,7 +101,7 @@ Aggregating Data
 <span style="color:#ffc787;font-weight:bold;font-style:italic"></span>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Selecting and Transforming Data
+Tidy your data
 </td>
 </tr>
 <tr>
@@ -117,7 +117,7 @@ Selecting and Transforming Data
 <span style="color:#ffc787;font-weight:bold;font-style:italic"></span>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Case Study: The babynames Dataset
+Transform your data
 </td>
 </tr>
 <tr>

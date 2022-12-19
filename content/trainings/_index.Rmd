@@ -60,8 +60,8 @@ dc_schedule <-
 
 ```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
 kable(dc_schedule %>%
-        filter(str_detect(Set, "Extra Credit|Recommended", negate = T)) %>%
-  select(-Set), 
+        filter(str_detect(Week, "Extra Credit|Recommended", negate = T)) %>%
+  select(-Week), 
       "html", 
       escape = FALSE,
       align = 'ccccll') %>%
@@ -73,7 +73,7 @@ kable(dc_schedule %>%
   column_spec(5, width = "20em") %>%
   column_spec(6, width = "20em") %>%
   row_spec(0:nrow(dc_schedule %>%
-        filter(str_detect(Set, "Extra Credit|Recommended", negate = T))), 
+        filter(str_detect(Week, "Extra Credit|Recommended", negate = T))), 
         extra_css = 'vertical-align: middle !important;', 
         color = "#f7f7f7", 
         background = "transparent")
@@ -85,8 +85,8 @@ The following module is optional but highly recommended
 <center>
 ```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
 kable(dc_schedule %>%
-        filter(str_detect(Set, "Recommended")) %>%
-  select(-Set, -Link, -Due), 
+        filter(str_detect(Week, "Recommended")) %>%
+  select(-Week, -Link, -Due), 
       "html", 
       escape = FALSE,
       align = 'ccll') %>%
@@ -96,7 +96,7 @@ kable(dc_schedule %>%
   column_spec(3, width = "7em") %>%
   column_spec(4, width = "20em") %>%
   row_spec(0:nrow(dc_schedule %>%
-        filter(str_detect(Set, "Recommended"))), 
+        filter(str_detect(Week, "Recommended"))), 
         extra_css = 'vertical-align: middle !important;', 
         color = "#f7f7f7", 
         background = "transparent")
@@ -109,8 +109,8 @@ The following modules are optional and may count as extra credit contingnet on t
 <center>
 ```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
 kable(dc_schedule %>%
-        filter(str_detect(Set, "Extra Credit")) %>%
-  select(-Set, -Link), 
+        filter(str_detect(Week, "Extra Credit")) %>%
+  select(-Week, -Link), 
       "html", 
       escape = FALSE,
       align = 'cccll') %>%
@@ -121,12 +121,16 @@ kable(dc_schedule %>%
     column_spec(4, width = "20em") %>%
   column_spec(5, width = "20em") %>%
   row_spec(0:nrow(dc_schedule %>%
-        filter(str_detect(Set, "Extra Credit"))), 
+        filter(str_detect(Week, "Extra Credit"))), 
         extra_css = 'vertical-align: middle !important;', 
         color = "#f7f7f7", 
         background = "transparent")
 ```
 </center>
+
+### R Tasks
+
+In some weeks you will be expected to complete an additional R task which are indicated by a  in the table above. Collectively these serve as the R Data EDA noted on the [syllabus](/syllabus/#assignments-and-grades).
 
 ### Working Ahead
 By no means do you have to wait for a particular module to be assigned. If you wish to enroll in a training - one that is assigned or otherwise - simply search for the name of that course on the Data Camp site. For those modules assigned for this course, you will receive credit after the due date has passed.

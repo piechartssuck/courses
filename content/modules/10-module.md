@@ -50,10 +50,10 @@ Chapters
 <tbody>
 <tr>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/modules/07-module/">Set 7</a>
+<a href="/modules/05-module/">Week 5</a>
 </td>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-11/15/22
+10/18/22
 </td>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:15px;width:15px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#428bca;overflow:visible;position:relative;">
@@ -66,10 +66,10 @@ Chapters
 </svg>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<span style="color:#ffc787;font-weight:bold;font-style:italic">Communicating with Data in the Tidyverse</span>
+<span style="color:#ffc787;font-weight:bold;font-style:italic">Unsupervised Learning in R</span>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Custom ggplot2 themes
+Unsupervised Learning in R
 </td>
 </tr>
 <tr>
@@ -85,7 +85,7 @@ Custom ggplot2 themes
 <span style="color:#ffc787;font-weight:bold;font-style:italic"></span>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Creating a custom and unique visualization
+Hierarchical clustering
 </td>
 </tr>
 <tr>
@@ -101,7 +101,7 @@ Creating a custom and unique visualization
 <span style="color:#ffc787;font-weight:bold;font-style:italic"></span>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Introduction to Rmarkdown
+Dimensionality reduction with PCA
 </td>
 </tr>
 <tr>
@@ -117,7 +117,7 @@ Introduction to Rmarkdown
 <span style="color:#ffc787;font-weight:bold;font-style:italic"></span>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Customizing your RMarkdown report
+Putting it all together with a case study
 </td>
 </tr>
 <tr>

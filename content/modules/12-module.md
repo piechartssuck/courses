@@ -49,10 +49,10 @@ Chapters
 <tbody>
 <tr>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/modules/08-module/">Set 8</a>
+<a href="/modules/07-module/">Week 7</a>
 </td>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-11/29/2022
+11/15/22
 </td>
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:15px;width:15px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#428bca;overflow:visible;position:relative;">
@@ -65,10 +65,10 @@ Chapters
 </svg>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<span style="color:#ffc787;font-weight:bold;font-style:italic">Analyzing Social Media Data in R</span>
+<span style="color:#ffc787;font-weight:bold;font-style:italic">Communicating with Data in the Tidyverse</span>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Understanding Twitter data
+Custom ggplot2 themes
 </td>
 </tr>
 <tr>
@@ -84,7 +84,7 @@ Understanding Twitter data
 <span style="color:#ffc787;font-weight:bold;font-style:italic"></span>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Analyzing Twitter data
+Creating a custom and unique visualization
 </td>
 </tr>
 <tr>
@@ -100,7 +100,7 @@ Analyzing Twitter data
 <span style="color:#ffc787;font-weight:bold;font-style:italic"></span>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Visualize Tweet texts
+Introduction to Rmarkdown
 </td>
 </tr>
 <tr>
@@ -116,7 +116,7 @@ Visualize Tweet texts
 <span style="color:#ffc787;font-weight:bold;font-style:italic"></span>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Network Analysis and putting Twitter data on the map
+Customizing your RMarkdown report
 </td>
 </tr>
 <tr>

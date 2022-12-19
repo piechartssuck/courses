@@ -36,8 +36,8 @@ dc_schedule <-
     Task == "unchecked" ~ as.character(fontawesome::fa("circle-xmark", fill = "#d9534f", height = "15px"))
       )
     ) %>%
-  filter(Set == 7) %>% #CHANGE HERE
-  select(-Set) %>%
+  filter(Week == 11) %>% #CHANGE HERE
+  select(-Week) %>%
   mutate(across(everything(), as.character)) %>%
   mutate(across(everything(), str_squish)) %>%
   rename(`Due by` = Due) %>%
