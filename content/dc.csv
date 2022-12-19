@@ -71,22 +71,22 @@
 14,,,,,,Visualizing sentiment
 14,,,,,,Case study: Airbnb reviews
 ,,,,,,
-Extra Credit 1,<a href='/modules/ec-module/'>Extra Credit</a>,12/9/22,unchecked,checked,Analyzing US Census Data in R,Census data in R with tidycensus
+Extra Credit 1,<a href='/modules/ec-module/'>Extra Credit</a>,12/9/22,unchecked,unchecked,Analyzing US Census Data in R,Census data in R with tidycensus
 Extra Credit 1,,,,,,Wrangling US Census Data
 Extra Credit 1,,,,,,US Census geographic data in R
 Extra Credit 1,,,,,,Mapping US Census Data
 Extra Credit 1,,,,,,
-Extra Credit 2,<a href='/modules/ec-module/'>Extra Credit</a>,12/9/22,unchecked,checked,Intermediate Data Visualization with ggplot2,Statistics
+Extra Credit 2,<a href='/modules/ec-module/'>Extra Credit</a>,12/9/22,unchecked,unchecked,Intermediate Data Visualization with ggplot2,Statistics
 Extra Credit 2,,,,,,Coordinates
 Extra Credit 2,,,,,,Facets
 Extra Credit 2,,,,,,Best Practices 
 Extra Credit 2,,,,,,
-Extra Credit 3,<a href='/modules/ec-module/'>Extra Credit</a>,12/9/22,unchecked,checked,Introduction to Natural Language Processing in R,True Fundamentals 
+Extra Credit 3,<a href='/modules/ec-module/'>Extra Credit</a>,12/9/22,unchecked,unchecked,Introduction to Natural Language Processing in R,True Fundamentals 
 Extra Credit 3,,,,,,Representations of Text
 Extra Credit 3,,,,,,Applications: Classification and Topic Modeling 
 Extra Credit 3,,,,,,Advanced Techniques 
 Extra Credit 3,,,,,,
-Extra Credit 4,<a href='/modules/ec-module/'>Extra Credit</a>,12/9/22,unchecked,checked,Machine Learning in the Tidyverse,"Foundations of ""tidy"" Machine learning "
+Extra Credit 4,<a href='/modules/ec-module/'>Extra Credit</a>,12/9/22,unchecked,unchecked,Machine Learning in the Tidyverse,"Foundations of ""tidy"" Machine learning "
 Extra Credit 4,,,,,,Multiple Models with broom 
 Extra Credit 4,,,,,,"Build, Tune & Evaluate Regression Models "
 Extra Credit 4,,,,,,"Build, Tune & Evaluate Classification Models "

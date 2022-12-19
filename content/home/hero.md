@@ -5,7 +5,7 @@ headless: true
 active: true
 weight: 10
 
-title: "EDP 619"
+title: <span style="color:#fafafa; border-radius:15px; background-color:rgba(29, 31, 37, 0.05); padding:0.5px; margin-left:-4px; color:#f7f7f7; display:inline-block; margin-left:-4px; font-size:40.0pt; backdrop-filter:blur(0.35px);"><b>EDP 619</b></span>
 
 # Hero image (optional). Enter filename of an image in the `static/img/` folder.
 hero_media: course_hex.png
@@ -22,7 +22,12 @@ design:
     image: usmap.png
 
 cta_note:
-  label: <span style="color:#fafafa">Fall 2022<br>School of Education<br>West Virginia University</span>
+  label:
+    <br>
+    <br>
+    <br>
+
+    <span style="color:#fafafa; border-radius:15px; background-color:rgba(29, 31, 37, 0.05); padding-left:5px; margin-left:-4px; color:#f7f7f7; display:inline-block; margin-left:-4px; font-size:18.0pt; backdrop-filter:blur(0.35px);"><b>Fall 2022</b></span>
 ---
 
-**A foundational course covering survey design, development, and analysis with special attention on data visualization**
+<span style="border-radius:15px; background-color:rgba(29, 31, 37, 0.05); padding-left:10px; margin-left:-10px; color:#f7f7f7; display:inline-block; font-size:20.0pt; backdrop-filter:blur(0.35px); "><b>A foundational course covering survey design, development, and analysis with special attention on data visualization</b></span>

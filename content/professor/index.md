@@ -9,6 +9,13 @@ output:
 
 {{% aes-header %}}
 
+<style type="text/css">
+h1, h2 {
+  text-align: center;
+  font-weight: bold;
+}
+</style>
+
 ## My Picture
 
 <div style="text-align: left;">
@@ -19,10 +26,9 @@ output:
 
 ## My Page
 
+<br>
 <center>
-
 <a href="https://iam.asocialdatascientist.com" target="_blank">iam.asocialdatascientist.com</a>
-
 </center>
 
 ## My Research

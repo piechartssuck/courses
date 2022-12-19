@@ -1107,7 +1107,7 @@ When applying a PCA, it locates the...
 .panelset.sideways[
 
 .panel[.panel-name[Look]
-```{r echo=FALSE, out.width="60%", fig.align = 'center'}
+```{r pc1plot, echo=FALSE, out.width="60%", fig.align = 'center'}
 knitr::include_graphics("img/pca1.png")
 ```
 ]
@@ -1133,7 +1133,7 @@ fig
 .panelset.sideways[
 
 .panel[.panel-name[Look]
-```{r echo=FALSE, out.width="60%", fig.align = 'center'}
+```{r pcplot2, echo=FALSE, out.width="60%", fig.align = 'center'}
 knitr::include_graphics("img/pca2.png")
 ```
 ]
@@ -1159,7 +1159,7 @@ comp1
 .panelset.sideways[
 
 .panel[.panel-name[Look]
-```{r echo=FALSE, out.width="60%", fig.align = 'center'}
+```{r pcplot3, echo=FALSE, out.width="60%", fig.align = 'center'}
 knitr::include_graphics("img/pca3.png")
 ```
 ]
@@ -1185,7 +1185,7 @@ comp2
 .panelset.sideways[
 
 .panel[.panel-name[Look]
-```{r echo=FALSE, out.width="60%", fig.align = 'center'}
+```{r pcplot4, echo=FALSE, out.width="60%", fig.align = 'center'}
 knitr::include_graphics("img/pca4.png")
 ```
 ]
@@ -1214,7 +1214,7 @@ comp3
 
 > but there are many other methods of reducing dimensions like
 
-```{r echo=FALSE, warning=FALSE, message=FALSE}
+```{r normaldistplot, echo=FALSE, warning=FALSE, message=FALSE}
 # Normal distribution ----
 set.seed(123456)
 N = 30000
@@ -1385,7 +1385,7 @@ km
 ]
 
 .pull-right[
-```{r echo=FALSE, warning=FALSE, message=FALSE}
+```{r tsneplot, echo=FALSE, warning=FALSE, message=FALSE}
 TSNE
 ```
 ]
@@ -1408,7 +1408,7 @@ TSNE
 
 Below is an animation of the t-SNE process which shows a complex data set, data reduction and then clustering<sup>6</sup>
 
-```{r echo=FALSE, message = FALSE, warning = FALSE, results = FALSE}
+```{r tsneanim, echo=FALSE, message = FALSE, warning = FALSE, results = FALSE}
 ## tSNE dimensions
 tsne_dims <- 
   fread("data/tsne_dims.csv")
@@ -1597,13 +1597,13 @@ And just for fun here are two [pca](https://rpubs.com/marwahsi/tnse) rotations o
 <br>
 
 .pull-left[
-```{r echo=FALSE, warning=FALSE, message=FALSE}
+```{r pc12plot, echo=FALSE, warning=FALSE, message=FALSE}
 PCA12
 ```
 ]
 
 .pull-right[
-```{r echo=FALSE, warning=FALSE, message=FALSE}
+```{r pc34plot, echo=FALSE, warning=FALSE, message=FALSE}
 PCA34
 ```
 ]
