@@ -80,7 +80,7 @@ Chapters
 </svg>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Introduction to R
+<span style="color:#ffc787;font-weight:bold;font-style:italic">Introduction to R</span>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 Intro to basics
@@ -96,6 +96,7 @@ Intro to basics
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<span style="color:#ffc787;font-weight:bold;font-style:italic"></span>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 Vectors
@@ -111,6 +112,7 @@ Vectors
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<span style="color:#ffc787;font-weight:bold;font-style:italic"></span>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 Matrices
@@ -126,6 +128,7 @@ Matrices
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<span style="color:#ffc787;font-weight:bold;font-style:italic"></span>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 Factors
@@ -141,6 +144,7 @@ Factors
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<span style="color:#ffc787;font-weight:bold;font-style:italic"></span>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 Data Frames
@@ -156,6 +160,7 @@ Data Frames
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<span style="color:#ffc787;font-weight:bold;font-style:italic"></span>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 Lists
@@ -171,6 +176,7 @@ Lists
 <td style="text-align:center;width: 5em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<span style="color:#ffc787;font-weight:bold;font-style:italic"></span>
 </td>
 <td style="text-align:left;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
