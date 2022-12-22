@@ -106,7 +106,7 @@ aside{
     margin-top: -15%;
 }
 
-.left, .right{
+.left, .middle, .right{
     width: 30%;
     height:inherit;
     float:left;

@@ -84,6 +84,7 @@ tr,
 <div class="About" id="about">
  &nbsp&nbsp&nbsp<img src='/img/logos/shiny-logo.png' alt='Shiny hex' style="width:75px">&nbsp;&nbsp;
  <img src='/img/logos/rmarkdown.png' alt='Rmarkdown hex' style="width:75px">
+ &nbsp&nbsp<img src='/img/logos/blogdown-logo.png' alt='Blogdown hex' style="width:75px">
 </div>
 
 </div>

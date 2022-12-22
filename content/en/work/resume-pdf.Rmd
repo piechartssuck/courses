@@ -81,6 +81,7 @@ Expertise {#skills}
 
 <div class="right">
 <img src='img/rmarkdown.png' alt='Rmarkdown hex' width='85%'>
+
 </div>
 
 </div>
@@ -169,9 +170,10 @@ University of Kansas
 2016 - 2014
 
 ::: concise
-- Created scripts to pull data from the organization's Oracle database.
+- Created web apps in Shiny and Tableau to pull and visualize data from the organization's Oracle database.
 - Prepared evaluation reports for various stakeholders. 
-- Led and presented findings from small and large scale qualitative, quantitative and mixed-methods studies.
+- Led and presented findings from small and large scale qualitative, quantitative, and mixed-methods studies.
+- Researched and implemented predictive statistical models for student retention and graduation efforts.
 :::
 
 
@@ -270,4 +272,3 @@ Disclaimer {#disclaimer style="width: calc(var(--content-width) - var(--sidebar-
 Made in <i style="color:#3365B3;" class="fab fa-r-project"></i>: [Source code](https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-pdf.Rmd){target='_blank}
 
 Last updated on `r format(Sys.Date(), format="%B %d, %Y")`
-

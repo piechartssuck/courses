@@ -78,6 +78,7 @@ Expertise {#skills}
 
 <div class="right">
 <img src='img/rmarkdown.png' alt='Rmarkdown hex' width='85%'>
+
 </div>
 
 </div>
@@ -150,14 +151,25 @@ University of Kansas
 2016 - 2014
 
 ::: concise
-- Created scripts to pull data from the organization's Oracle database.
+- Created web apps in Shiny and Tableau to pull and visualize data from the organization's Oracle database.
 - Prepared evaluation reports for various stakeholders. 
-- Led and presented findings from small and large scale qualitative, quantitative and mixed-methods studies.
+- Led and presented findings from small and large scale qualitative, quantitative, and mixed-methods studies.
+- Researched and implemented predictive statistical models for student retention and graduation efforts.
 :::
 
 
 Select Publications {data-icon=file-text-o}
 --------------------------------------------------------------------------------
+
+### Thinking Processes in Code.org: A Relational Analysis Approach to Computational Thinking Computer Science Education
+
+*Computer Science Education*
+
+N/A
+
+2022
+
+Kale, U., Yuan, J., & <b>Roy, A.</b> [https://doi.org/10.1080/08993408.2022.2145549](https://doi.org/10.1080/08993408.2022.2145549)
 
 ### There’s So Much to Do and Not Enough Time to Do It! A Case for Sentiment Analysis to Derive Meaning From Open Text Using Student Reflections of Engineering Activities.
 
@@ -263,24 +275,37 @@ N/A
 Active Grants {data-icon=toggle-on}
 --------------------------------------------------------------------------------
 
+### ICU Compute for West Virginia: Empowering Future Teachers to Promote Critical Computational Thinking in Teaching Science
+
+West Virginia University
+
+&nbsp;&nbsp;Morgantown, WV
+
+2022
+
+- Implementing process and impact evaluations of program activities
+- Conducting quantitative text analysis of written and interview data using machine learning
+- Constructing and validating survey instruments used to assess progress and effect
+
+Inactive Grants {data-icon=toggle-off}
+--------------------------------------------------------------------------------
+
 ### WVCTSI: West Virginia Clinical and Translational Science Institute
 
 West Virginia University
 
 &nbsp;&nbsp;Morgantown, WV
 
-2017
+2017 - 2022
 
-- Analyzing large data sets using frequentist and Bayesian methods.
-- Conducting local and multi-site mutli-cluster evaluation studies.
-- Developing/validating items and distributing customized Qualtrics surveys built with CSS and Javascript.
-- Pulling, wrangling, and visualizing secondary data in R.
-- Mentoring future graduate social data scientists.
+- Analyzed large data sets using frequentist and Bayesian methods.
+- Conducted local and multi-site mutli-cluster evaluation studies.
+- Developed/validated items and distributing customized Qualtrics surveys built with CSS and Javascript.
+- Pulled, wrangled, and visualized secondary data in R.
+- Mentored future graduate social data scientists.
 - *$20,000,000*
 - *2017-NIH 2U54GM104942-02*
 
-Inactive Grants {data-icon=toggle-off}
---------------------------------------------------------------------------------
 
 ### Appalachian Gerontology Experiences - Advancing Diversity in Aging Research
 
@@ -290,8 +315,8 @@ West Virginia University
 
 2020
 
-- Developing and distributing customized Qualtrics surveys built with CSS and Javascript.
-- Performing various evaluative studies addressing program efficacy and engagement.
+- Developed and distributed customized Qualtrics surveys built with CSS and Javascript.
+- Performed various evaluative studies addressing program efficacy and engagement.
 - *$678,000*
 - *2020-1R25AG059558-01A1*
 
@@ -303,8 +328,8 @@ West Virginia University
 
 2020
 
-- Advising engineering faculty and graduate students on implementation of study methods.
-- Conducting quantitative and qualitative studies on undergraduate student experiences within grant related programs.
+- Advised engineering faculty and graduate students on implementation of study methods.
+- Conducted quantitative and qualitative studies on undergraduate student experiences within grant related programs.
 - *$200,000*
 - *2019-NSF-EEC 1927232*
 
@@ -344,6 +369,17 @@ Colorado State University
 
 Presentations {data-icon=chalkboard-user}
 --------------------------------------------------------------------------------
+
+### Let’s Get Sentimental: Machine Learning Aided Data Analysis for Large Qualitative Data Sets
+
+*American Evaluation Association Annual Conference*
+
+&nbsp;&nbsp;New Orleans, LA
+
+2022
+
+Seidel, T. , Ferguson, C.F., & <b>Roy, A.R.</b>
+
 
 ### Best of Both Worlds: Affordances of Mixing Machine Learning and Qualitative Content Analysis
 

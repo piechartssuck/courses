@@ -92,7 +92,7 @@ Skilled in text mining, analytics, and content analysis
 <div style="padding-left: 30px;">
 
 ```{=html}
-<a href=/Users/skynet/Documents/WVU/Teaching/GitHub.nosync/iam/content/en/students/cari target='_blank'><i class="fa fa-barcode" role="presentation" aria-label="barcode icon" fill="#3365B3"></i>&nbsp;&nbsp; Click here to see her academic profile</a>
+<a href=/Users/skynet/Documents/WVU/Teaching/GitHub.nosync/iam/content/en/students/cari target='_blank'><i class="fas fa-barcode" role="presentation" aria-label="barcode icon" fill="#3365B3"></i>&nbsp;&nbsp; Click here to see her academic profile</a>
 ```
 </div>
 -->
