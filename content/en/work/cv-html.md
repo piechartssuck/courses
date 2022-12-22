@@ -1,7 +1,7 @@
 ---
 title: "Abhik Ranjan Roy"
 author: Abhik Ranjan Roy
-date: "2022-12-21"
+date: "2022-12-22"
 output:
   pagedown::html_resume:
     self_contained: true
@@ -123,11 +123,12 @@ Current - 2016
 
 <div class="concise">
 
-- Advising masters and doctoral students.
-- Evaluating various projects and grants.
-- Submitting papers for peer review publications.
+- Advising masters and doctoral level students.
+- Authoring and submitting papers to peer reviewed publications.
+- Pulling data from multiple remote sources, constructing static, active, and interactive visualizations for production and/or embedding within reports, and building Shiny apps and APIs within the R/RStudio environment.
+- Developing enhanced and interactive surveys in Qualtrics using HTML, CSS, & Javascipt.
+- Evaluating various programs, projects, and grants.
 - Teaching evaluation and methods based classes with a focus on data science.
-- Writing and enabling data pulls from APIs, creating visualizations, and building Shiny apps all within R.
 
 </div>
 
@@ -141,9 +142,9 @@ University of Kansas
 
 <div class="concise">
 
-- Created web apps in Shiny and Tableau to pull and visualize data from the organization’s Oracle database.
-- Prepared evaluation reports for various stakeholders.
+- Created web apps in Shiny and Tableau to pull, summarize, and visualize data from the organization’s Oracle database.
 - Led and presented findings from small and large scale qualitative, quantitative, and mixed-methods studies.
+- Prepared evaluation reports for various stakeholders.
 - Researched and implemented predictive statistical models for student retention and graduation efforts.
 
 </div>
@@ -799,4 +800,4 @@ N/A
 
 Made in <i style="color:#3365B3;" class="fab fa-r-project"></i>: <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/cv-html.Rmd" target="&#39;_blank">Source code</a>
 
-Last updated on December 21, 2022
+Last updated on December 22, 2022

@@ -33,4 +33,6 @@ pagedown::chrome_print("cv-pdf.Rmd", output = "cv.pdf")
 pagedown::chrome_print("resume-pdf.Rmd", output = "resume.pdf")
 file.remove('cv-pdf.html')
 file.remove('resume-pdf.html')
+file.remove('cv-pdf.pdf')
+file.remove('resume-pdf.pdf')
 ```
