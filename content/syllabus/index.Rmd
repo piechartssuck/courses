@@ -75,7 +75,7 @@ tableofcontents <- tibble(
   
   type <- c("Readings",
             "Materials",
-            "Tasks and Deliverables",
+            "Tasks & Deliverables",
             "Due",
             "Resources"),
   
@@ -215,8 +215,7 @@ do not, submit a <a href='https://wvu.atlassian.net/servicedesk/customer/portals
 
 ## Assignments and Grades
 
-You can find descriptions for all posted assignments on the [tasks
-page](/tasks/)
+You can find descriptions for all posted assignments on the [Tasks & Deliverables](/tasks/) page
 
 ```{r assignments-grades, include=FALSE}
 assignments <- tribble(

@@ -113,7 +113,7 @@ Course materials
 </tr>
 <tr>
 <td style="text-align:left;font-weight: bold;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Tasks and Deliverables
+Tasks & Deliverables
 </td>
 <td style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/tasks/">Go</a>
@@ -253,8 +253,7 @@ do not, submit a <a href='https://wvu.atlassian.net/servicedesk/customer/portals
 
 ## Assignments and Grades
 
-You can find descriptions for all posted assignments on the [tasks
-page](/tasks/)
+You can find descriptions for all posted assignments on the [Tasks & Deliverables](/tasks/) page
 
 <center>
 <table class=" lightable-paper" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;">
