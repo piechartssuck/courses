@@ -4,11 +4,8 @@ menu:
   materials:
     parent: Overview
     weight: 1
-output:
-  rmarkdown::html_document
 type: docs
 weight: 1
-shiny: true
 ---
 
 ```{r load_packages, message=FALSE, warning=FALSE, echo=FALSE}

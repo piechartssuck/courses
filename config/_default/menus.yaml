@@ -5,8 +5,8 @@ main:
   - name: Readings
     url: /readings/
     weight: 2
-  - name: Trainings
-    url: /trainings/
+  - name: Materials
+    url: /materials/
     weight: 3
   - name: Tasks
     url: /tasks/
@@ -32,13 +32,11 @@ readings:
     weight: 1
   - name: Readings
     weight: 2
-trainings:
+Materials:
   - name: Overview
     weight: 1
-  - name: Modules
+  - name: Materials
     weight: 2
-  - name: Walkthroughs
-    weight: 3
 tasks:
   - name: Overview
     weight: 1

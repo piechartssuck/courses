@@ -1,0 +1,65 @@
+---
+title: "Who Are You Really?"
+linktitle: "Week 1: Who Are You Really?"
+output:
+  rmarkdown::html_document
+menu:
+  due:
+    parent: "To Do List"
+    weight: 1
+type: docs
+weight: 2
+editor_options: 
+  chunk_output_type: console
+---
+
+
+`r blogdown::shortcode("aes-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r eval = TRUE, echo = FALSE}
+
+wk_post <- 
+  
+  tibble(
+  
+Description = c("Review the website",
+                "Take a look around at Better Evaluation",
+                "Sign up for the class Slack channel and introduce yourself in <a style='color:#ff8384;'>\\ #wk1-introduce-yourself</a>",
+                "Review the basics of Slack",
+                "Verify your Qualtrics account",
+                "Draw an evaluation and post it to <a style='color:#5eb0e5;'>\\ #wk1-pictures-of-evaluation</a>"),
+
+"Details" = c("<a href='/readings/01-readings/#review'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+              "<a href='/materials/01-materials/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+             "<a href='/tasks/01-tasks/#class-channel'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+             "<a href='/tasks/01-tasks/#fundamentals'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+             "<a href='/tasks/01-tasks/#verify-qualtrics-account-login'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+             "<a href='/tasks/01-tasks/#drawing-evaluations'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"),
+
+Icon = c("webpage",
+         "offsite",
+         "slack", 
+         "offsite",
+         "qualtrics",
+         "slack"),
+
+Site = c("",
+         "https://www.betterevaluation.org",
+         "https://edp617spring2023.slack.com/archives/C04J0EWTK9Q",
+         "",
+         "https://wvu.qualtrics.com",
+         "https://edp617spring2023.slack.com/archives/C04J2V6A30C")
+)
+```
+
+<center>
+`r knitr::spin_child(here::here("content", "post_frame.R"))`
+</center>
