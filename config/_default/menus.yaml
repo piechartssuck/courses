@@ -8,7 +8,7 @@ main:
   - name: Materials
     url: /materials/
     weight: 3
-  - name: Tasks
+  - name: Tasks & Deliverables
     url: /tasks/
     weight: 4
   - name: Due
