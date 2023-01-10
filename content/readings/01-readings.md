@@ -38,8 +38,18 @@ I’m sorry but your browser doesn’t support embedded videos. You can however 
 
 ### Review
 
-Far be it from us to disagree with Snoop, so you should probably go read the [Syllabus](/syllabus/) as soon as possible! Additionally look over the other areas on this site: [Materials](/materials/), [Tasks & Deliverables](/tasks/), [To do List](/due/), and [Resources](/resources/) pages for this class.
+Far be it from us to disagree with Snoop, so you should probably go read the [Syllabus](/syllabus/) as soon as possible! Additionally please look over the other areas on this site:
+
+> [Materials](/materials/)
+
+> [Tasks & Deliverables](/tasks/)
+
+> [To do List](/due/)
+
+> [Resources](/resources/)[^1]
 
 <center>
 <img src='/img/comics/in-the-syllabus.png' alt='Syllabus PhD Comics'>
 </center>
+
+[^1]: If you have questions about any of resources including those that may not apply directly to the course, please feel free to reach out

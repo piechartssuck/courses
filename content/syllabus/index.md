@@ -140,7 +140,7 @@ Due
 </svg>
 </td>
 <td style="text-align:left;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Submission information
+List of things to do
 </td>
 </tr>
 <tr>
@@ -156,7 +156,7 @@ Resources
 </svg>
 </td>
 <td style="text-align:left;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Curated list content related resources
+Curated directory of resources
 </td>
 </tr>
 </tbody>
@@ -174,7 +174,7 @@ To help minimize costs, you are not required to purchase any physical texts. Weâ
 <tbody>
 <tr>
 <td style="text-align:left;width: 20em; font-weight: bold;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Davidson, E. J. (2007).<i>Evaluation methodology basics: The nuts and
+Davidson, E. J. (2007). <i>Evaluation methodology basics: The nuts and
 bolts of sound evaluation</i> (1st ed.). SAGE.
 </td>
 <td style="text-align:center;width: 5em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
@@ -446,7 +446,7 @@ We have a class [Slack](https://edp617spring2023.slack.com) channel where you ca
 
 ### Email
 
-Rather than including a list of things you should do when writing an email, this strip from <a href='https://phdcomics.com/comics/archive_list.php' target='_blank'>PhD Comics</a> will do
+Rather than including a list of things that are appropriate when writing an email, this strip from <a href='https://phdcomics.com/comics/archive_list.php' target='_blank'>PhD Comics</a> will do
 
 <center>
 <img src='/img/comics/email-instructions.png' alt='Email Instructions'>

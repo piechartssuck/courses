@@ -16,7 +16,7 @@ h1, h2 {
 }
 </style>
 
-## My Picture
+## Terrible Picture
 
 <div style="text-align: left;">
 
@@ -24,14 +24,14 @@ h1, h2 {
 
 </div>
 
-## My Page
+## Website Things
 
 <br>
 <center>
 <a href="https://iam.asocialdatascientist.com" target="_blank">iam.asocialdatascientist.com</a>
 </center>
 
-## My Research
+## Academic Stuff
 
 <a href="https://orcid.org/0000-0002-7085-8964" target="_blank">
 <img src="/logos/orcid-logo.png" alt="ORCID logo" style="width:200px;">

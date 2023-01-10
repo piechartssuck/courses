@@ -95,8 +95,8 @@ tableofcontents <- tibble(
   descr <- c("Weekly readings",
              "Course materials",
              "Learning and assessment items",
-             "Submission information",
-             "Curated list content related resources"
+             "List of things to do",
+             "Curated directory of resources"
              ),
   
   .name_repair = "minimal"
@@ -126,7 +126,7 @@ To help minimize costs, you are not required to purchase any physical texts. We'
 
 reqtextstib <- tibble(
   
-  source <- c("Davidson, E. J. (2007).<i>Evaluation methodology basics: The nuts and
+  source <- c("Davidson, E. J. (2007). <i>Evaluation methodology basics: The nuts and
               bolts of sound evaluation</i> (1st ed.). SAGE."),
   
   digital <- c("<a href='https://libwvu.on.worldcat.org/oclc/646022580' target='_blank'>Free</a>"),
@@ -329,7 +329,7 @@ We have a class [Slack](https://edp617spring2023.slack.com) channel where you ca
 
 ### Email
 
-Rather than including a list of things you should do when writing an email, this strip from <a href='https://phdcomics.com/comics/archive_list.php' target='_blank'>PhD Comics</a> will do
+Rather than including a list of things that are appropriate when writing an email, this strip from <a href='https://phdcomics.com/comics/archive_list.php' target='_blank'>PhD Comics</a> will do
 
 <center>
 <img src='/img/comics/email-instructions.png' alt='Email Instructions'>
