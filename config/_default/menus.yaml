@@ -21,11 +21,14 @@ main:
     url: /professor/
     weight: 7
   - name: '<i class="fab fa-slack"></i>'
-    url: "https://edp618fall2022.slack.com"
+    url: "https://edp617spring2023.slack.com"
     weight: 8
-  - name: '<i class="fab fa-r-project"></i>'
-    url: "https://www.rstudio.com/"
+  - name: 'Made with <i class="fab fa-r-project"></i>'
+    url: "https://www.r-project.org"
     weight: 9
+  - name: 'in <b>RStudio</b>'
+    url: "https://posit.co/products/open-source/rstudio/"
+    weight: 10
 
 readings:
   - name: Overview
