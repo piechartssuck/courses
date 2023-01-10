@@ -45,7 +45,7 @@ The overall purpose of this course is to empower you to
 
 ### *Is the course content difficult?*
 
-You’ve probably heard an answer like this before: *…at times some of the material can be dense.* While ambiguous, difficulty is subjective, varies, and will likely depend on your academic and practical history. Instead consider focusing on the following question
+There is really no way to sugar coat it - **the first seven to eight weeks prior to your evaluation are fairly intense** so please plan accordingly. You are essentially asked to both learn about evaluations and then administer one which for all intents and purposes is not easy. Given that, difficulty is subjective, it varies, and often depends on your academic and practical history. Instead consider focusing on the following question
 
 <center>
 <p id="rounded_corners">
