@@ -38,7 +38,7 @@ I’m sorry but your browser doesn’t support embedded videos. You can however 
 
 ### Review
 
-Far be it from us to disagree with Snoop, so you should probably go read the [Syllabus](/syllabus/) as soon as possible! Additionally please look over the other areas on this site:
+Far be it from us to disagree with Snoop so you should probably go read the [Syllabus](/syllabus/) as soon as possible! Additionally please look over the other areas on this site:
 
 > [Materials](/materials/)
 
