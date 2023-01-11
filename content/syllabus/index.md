@@ -454,7 +454,7 @@ Rather than including a list of things that are appropriate when writing an emai
 
 ### Zoom
 
-One-on-one video conferences can be created via the class [calendar](https://calendly.com/nopiecharts/short15) in 15 minute increments. If you require more than 15 minutes, please schedule additional back-to-back sessions.
+One-on-one video conferences can be created via the class <a href='https://calendly.com/nopiecharts/short15' target='_blank'>calendar</a> in 15 minute increments. If you require more than 15 minutes, please schedule additional back-to-back sessions.
 
 ## Course Policies
 
