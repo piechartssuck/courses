@@ -165,7 +165,7 @@ Curated directory of resources
 
 ### Texts
 
-To help minimize costs, you are not required to purchase any physical texts. We’ll rely on the various materials below which, barring the APA 7th edition handbook, are either available through the [WVU library](https://library.wvu.edu/) or in digital format.
+To help minimize costs, you are not required to purchase any physical texts. We’ll rely on the various materials below which, barring the APA 7th edition handbook, are either available through <a href='https://library.wvu.edu/' target='_blank'>WVU Libraries</a> or in digital format.
 
 #### Required
 
@@ -405,7 +405,7 @@ of Academic Integrity](https://academicintegrity.wvu.edu/).
 
 ## Meetings
 
-Unless another mode is determined beforehand, we will conduct meet via Zoom. This can be scheduled using the class [calendar](https://calendly.com/nopiecharts/short15).
+Unless another mode is determined beforehand, we will conduct group meetings via Zoom. This can be scheduled using the class <a href='https://calendly.com/nopiecharts/short15' target='_blank'>calendar</a>.
 
 <center>
 <a href="https://calendly.com/nopiecharts/short15"><img src='/img/reference/calendar-dr-roy.png' alt='Class calendar' width="40%"></a>
@@ -415,7 +415,7 @@ Unless another mode is determined beforehand, we will conduct meet via Zoom. Thi
 
 Here are the rules, expectations, and policies that I came up with or stole from other professors:
 
-- **Late work**: Barring the in-class only tasks (if applicable), past due deliverables will only be accepted up to 48 hours after the initial time and due date. For each full day an assignment is late, 10% of the final calculated grade will be deducted. All submissions must be made via [eCampus](https://ecampus.wvu.edu/) and are not accepted by any other means (e.g. email, paper, singing telegram). <span style="color:#20c499; font-weight: bold">There are no exceptions to this policy</span>.
+- **Late work**: Barring the in-class only tasks (if applicable), past due deliverables will only be accepted up to 48 hours after the initial time and due date. For each full day an assignment is late, 10% of the final calculated grade will be deducted. All submissions must be made via <a href='https://ecampus.wvu.edu/' target='_blank'>eCampus</a> and are not accepted by any other means (e.g. email, paper, singing telegram). <span style="color:#20c499; font-weight: bold">There are no exceptions to this overarching policy</span>.
 
 - **Participation**: Please ensure that you are engaged and participate. Engagement is mostly defined by you — if that means commenting and asking/answering questions - great; but if it means being being disrespectful or flaking off - not so great.
 
@@ -442,7 +442,7 @@ Here are the rules, expectations, and policies that I came up with or stole from
 
 ### Slack
 
-We have a class [Slack](https://edp617spring2023.slack.com) channel where you can poise a question and post as needed. This is the only mode where I have applicable class notifications turned on my devices so please utilize the platform.
+We have a class <a href='https://edp617spring2023.slack.com' target='_blank'>Slack</a> channel where you can poise a question and post as needed. This is the only mode where I have applicable class notifications turned on my devices so please utilize the platform.
 
 ### Email
 
@@ -474,7 +474,7 @@ If a student becomes sick or is required to quarantine during the semester, they
 
 ### Psychological and Psychiatric Services
 
-Life at WVU can be complicated and challenging, especially during a pandemic! You might feel overwhelmed, experience anxiety or depression, or struggle with relationships or family responsibilities. <a href='https://carruth.wvu.edu/home' target='_blank'>Psychological and Psychiatric Services</a> provides free, *confidential* support for students who are struggling with mental health and emotional challenges. The office is staffed by professional counselors and psychiatrists who are attuned to the needs of all types of college and professional students. Please do not hesitate to contact them for assistance—getting help is a smart and courageous thing to do.
+Life at WVU can be complicated and challenging! You might feel overwhelmed, experience anxiety or depression, or struggle with relationships or family responsibilities. <a href='https://carruth.wvu.edu/home' target='_blank'>Psychological and Psychiatric Services</a> provides free, *confidential* support for students who are struggling with mental health and emotional challenges. The office is staffed by professional counselors and psychiatrists who are attuned to the needs of all types of college and professional students. Please do not hesitate to contact them for assistance—getting help is a smart and courageous thing to do.
 
 ### CARE Team
 
@@ -563,7 +563,7 @@ Technical support regarding your use of eCampus is available by contacting [304-
 
 ### Sale of Course Materials
 
-Course materials including but not limited to lectures, class notes, quizzes, exams, handouts, and presentations provided to students for this course are protected under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/). Please review the sharing and editing restrictions prior to distributing or amending any material on this site. As such, the unauthorized purchase or sale of these materials may result in disciplinary sanctions under the Campus Student Code. **Basically you can share what you like under the licence but don’t try to make a buck.**
+Course materials including but not limited to lectures, class notes, quizzes, exams, handouts, and presentations provided to students for this course are protected under a <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/' target='_blank'>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. Please review the sharing and editing restrictions prior to distributing or amending any material on this site. As such, the unauthorized purchase or sale of these materials may result in disciplinary sanctions under the Campus Student Code. **Basically you can share what you like under the licence but don’t try to make a buck.**
 
 ### Lisencing Information
 
