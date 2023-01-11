@@ -30,11 +30,11 @@ There are a lot of moving parts to this class. Students who gain the most out of
 
 ## Complementary Materials
 
-Resources such as presentations, videos, visualizations, walkthroughs, etc. take a lot of time to construct so please take some time to go through them. Do the materials have top notch production value? No because I’m not a famous director from Hollywood will millions of dollars. However they should be good enough…even decent. Given that, I am always open to suggestions so if you have any, send them along!
+Resources such as presentations, videos, visualizations, walkthroughs, etc. take a lot of time to construct so please take some time to go through them. Do the materials have top notch production value? No because I’m not a famous director from Hollywood with millions of dollars. However they should be ok…even good at times! Given that, I am always open to suggestions so if you have any please send them along.
 
 ## Deliverables
 
-Throughout the course, you will have weekly opportunities that are incremental and intended to expand and refine your skill set culminating in set of final products[^1]. You are free to submit as a <span style="color:#12b8ff;font-weight: bold;">.docx</span> or <span style="color:#f47a7b;font-weight: bold;">.pdf</span> format. *Remember that all submissions must be in a standard APA 7th edition formatting barring the need for a running header.*
+Throughout the course, you will have weekly opportunities that are incremental and intended to expand and refine your skill set culminating in set of final products[^1]. Most submissions are required to be submitted as a <span style="color:#12b8ff;font-weight: bold;">.docx</span> while others require a <span style="color:#f47a7b;font-weight: bold;">.pdf</span> format. *Remember that all submissions must be in a standard APA 7th edition formatting barring the need for a running header.*
 
 <div id="anchorwk2">
 

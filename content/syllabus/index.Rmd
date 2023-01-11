@@ -109,7 +109,7 @@ kable(textitems,
 ```
 </center>
 
-# FAQ
+## FAQ
 
 ### *Is the course content difficult?*
 You've probably heard an answer like this before: *...at times some of the material can be dense.* While ambiguous, difficulty is subjective, varies, and will likely depend on your academic and practical history. Instead consider focusing on the following question
@@ -195,7 +195,7 @@ There are two required texts and software packages necessary for this course. Ad
 
 ### Texts
 
-To help minimize costs, you are not required to purchase any physical texts. We'll rely on the various materials below which, barring the APA 7th edition handbook, are either available through the [WVU library](https://library.wvu.edu/) or in digital format.
+To help minimize costs, you are not required to purchase any physical texts. We'll rely on the various materials below which, barring the APA 7th edition handbook, are either available through <a href='https://library.wvu.edu/' target='_blank'>WVU Libraries</a> or in digital format.
 
 #### Required
 
@@ -285,15 +285,17 @@ opttextstib %>%
 
 There will occasionally be additional articles and videos to read and watch. When this happens, links to these other resources will be included on the content page for that session.
 
-### Software
+## Software
 
-#### Quatrics
+### Quatrics
 
-You will need access to your WVU [Qualtrics](https://wvu.qualtrics.com/) account. Please go to the site and check if you can login. If you are enrolled as a WVU student, then you should have access. However if you do not, submit a [ticket to IT](https://wvu.atlassian.net/servicedesk/customer/portals) or give them a ring at [304-293-4444](callto: 304-293-4444).
+You will need access to your WVU <a href='https://wvu.qualtrics.com/' target='_blank'>Qualtrics</a> account. Please go to the site and check if you can login. If you are
+enrolled as a WVU student, then you should have access. However if you
+do not, submit a <a href='https://wvu.atlassian.net/servicedesk/customer/portals' target='_blank'>ticket to IT</a> or give them a ring at [304-293-4444](callto:%20304-293-4444).
 
-#### R and RStudio
+### R and RStudio
 
-You will be briefly introduced to the open source (and free!) statistical programming language [`r fa("r-project", fill = "steelblue")`](https://cran.r-project.org/)&nbsp; later in the term. You will use [RStudio](https://www.rstudio.com/) as the main program to access the language. You can think of R as an engine and RStudio as a car dashboard — R handles all the calculations produces the actual statistics and graphical output, while RStudio provides a nice interface for running R code. Please note that
+You will be introduced to the open source (and free!) statistical programming language [`r fa("r-project", fill = "steelblue")`](https://cran.r-project.org/)&nbsp; later in the term using <a href='https://www.rstudio.com/' target='_blank'>RStudio</a> as the main program to access the language. You can think of R as an engine and RStudio as a car dashboard — R handles all the calculations produces the actual statistics and graphical output, while RStudio provides a nice interface for running R code. Please note that
 
 <div class="text-center">
 **you do not need to have any programming experience to use R**
@@ -301,7 +303,7 @@ You will be briefly introduced to the open source (and free!) statistical progra
 
 You can [find instructions for installing R and RStudio here](/resource/install/).
 
-### Help
+## Help
 
 Data science and statistical programming can be challenging. Computers are stupid and its always the tiny errors in your coding can result in tons of headache. People working in any syntax based software package at any level experience this!
 
@@ -453,25 +455,41 @@ grading %>%
 
 </center>
 
+## Communication
+
+### Slack
+
+We have a class <a href='https://edp619fall2022.slack.com' target='_blank'>Slack</a> channel where you can poise a question and post as needed. This is the only mode where I have applicable class notifications turned on my devices so please utilize the platform.
+
+### Email
+
+Rather than including a list of things that are appropriate when writing an email, this strip from <a href='https://phdcomics.com/comics/archive_list.php' target='_blank'>PhD Comics</a> will do
+
+<center>
+<img src='/img/comics/email-instructions.png' alt='Email Instructions'>
+</center>
+
+### Zoom
+
+One-on-one video conferences can be created via the class <a href='https://calendly.com/nopiecharts/short15' target='_blank'>calendar</a> in 15 minute increments. If you require more than 15 minutes, please schedule additional back-to-back sessions.
+
 ### Office Hours
 
-Please watch this video:
+These are set times dedicated to you the student. If you are unfamiliar with the concept of office hours, please watch the following video
 
 <iframe src="https://player.vimeo.com/video/270014784" width="640" height="360" frameborder="0" allow="fullscreen" allowfullscreen id="officehours" style="display: block; margin: 0 auto 1rem;"></iframe>
 
-Office hours are set times dedicated to you the student!^[There is some misunderstanding about what office hours actually are! [For some reason that is not clear, some graduate students have noted in my course evaluations that they believe these to be the times I *should not* be disturbed and it seems to be somewhat of a trend](https://www.chronicle.com/article/Can-This-Man-Change-How-Elite/245714/) which is the exact opposite of what they are for!]). This means that I will be in my office or at home waiting for you to ~~come by~~ talk to me remotely with whatever questions you have. This is the best and easiest way to find me and the best chance for discussing class material and concerns.
-
-Due to the ongoing pandemic, we can only meet via Zoom. This can be scheduled using the [calendar](https://calendly.com/nopiecharts/short15) app. 
+On that note, I am happy to meet face-to-face or via Zoom.
 
 ## Conduct and Expectations
 
 Here are the rules, expectations, and policies that I came up with or stole from other professors:
 
-- **Late work**: Barring the in-class only tasks, past due deliverable will only be accepted up to 48 hours after the initial time and due date. For each full day an assignment is late, 10% of the final grade will be deducted. All submissions must be made via [eCampus](https://ecampus.wvu.edu/). There are no exceptions to this policy. Please note that coursework *will not* be accepted by email or any other means.
-- **Participation**: Please ensure that you are engaged and participate in class. Engagement is mostly defined by you — if that means commenting and answering questions - great; if it means sitting quietly and being focused - also great; but if it means being being disrespectful or flaking off - not so great.
-- **Justifications**: On any submission, you must justify any assertion. I don't know what you know so its your job to provide all of the necessary evidence to convince me that you do know what you say you know. While you've probably heard this multiple times over your life, think of it this way: if someone tells you that *the core of the Earth is made of pixy sticks*, the first question you should be asking is *what's your evidence?*.
-- **Rubrics**: While there are valid reasons for the utilization of a rubric in undergraduate classes, at the graduate level, I do not (often) provide nor use a such an item to guide or evaluate your submission due to four primary concerns:<br>
-  1. When writing anything in academia that is pivotal (a thesis, dissertation, journal article, report, etc.), a rubric isn't often provided.
+- **Late work**: Barring the in-class only tasks (if applicable), past due deliverables will only be accepted up to 48 hours after the initial time and due date. For each full day an assignment is late, 10% of the final calculated grade will be deducted. All submissions must be made via <a href='https://ecampus.wvu.edu/' target='_blank'>eCampus</a> and are not accepted by any other means (e.g. email, paper, singing telegram). <span style="color:#20c499; font-weight: bold">There are no exceptions to this overarching policy</span>.
+- **Participation**: Please ensure that you are engaged and participate. Engagement is mostly defined by you — if that means commenting and asking/answering questions - great; but if it means being being disrespectful or flaking off - not so great.
+- **Justifications**: On any submission or posting, you must justify any assertion. I don't know what you know so its your job to provide all of the necessary evidence to convince me that you do know what you say you know. While you've probably heard this multiple times over your life, think of it this way: if someone tells you that *the core of the Earth is made of glitter*, the first question you should be asking is *what's your evidence?*.
+- **Rubrics**: While there are valid reasons for the utilization of a rubric in undergraduate classes, at the graduate level I do not (often) provide nor use a such an item to guide or evaluate your submission due to four primary concerns:<br>
+  1. When writing anything in academia that is pivotal (a thesis, dissertation, journal article, report, etc.), a rubric isn't typically provided.
   2. If you write within the limitations as defined in a rubric, then creativity may be stifled (i.e. writing to the rubric rather than constructing a product from the ground up). 
   3. Feedback can only be given along the criteria listed within a rubric which limits your learning as a student and constrains me as the instructor. 
   4. Unless you are in a very specific area, the real world does not use rubrics!
@@ -481,27 +499,16 @@ Here are the rules, expectations, and policies that I came up with or stole from
 
 - **Assumptions**:<br>
   1. Just assume that all submissions are to be written **formally** and should include with the appropriate use of language, grammar, syntax, etc. and follow standard APA 7th edition formatting guidelines where applicable. 
-  2. People who are easily offended by content, believe their work to be flawless, generally unable to handle criticism, or are looking for rainbows and ponies should consider looking at another course. However if you care about data, practice and learning a highly marketable practice, you've come to the right place.
-  3. There is a great deal of content in this course and you will likely struggle with some at times. Given that, there is also something to be said about the satisfaction a person gets when figuring something out, but nowhere is it written that has to be on your own. You may find that a nudge here or there elicits the same feeling so please reach out for help.
-
-### Learning and knowledge during a pandemic
-
-When course objectives are written explicitly and clearly, they provide the information you need to figure out what a student should be able to do by the end of a given term. In fact, professors often test your proficiency in an area through multiple assessments such as exams, papers, presentations, etc where you are essentially asked to show us what you have *learned*. However learning is not the same as knowledge . 
-To save you from a long philosophical narrative on epistemology, in a nutshell we humans aren't that good at evaluating a person's knowledge mainly because its not a well-defined concept. With that said, an indicator of knowledge is in a person's ability to successfully explain a high level concept in such a way that the lay person can understand it. Every so often, consider asking yourself this:
-
-<center>
-<p id="rounded_corners">
-Can I describe <i>whatever</i> using language so that a child could understand it? 
-<p>
-</center>
+  2. People who are easily offended by content, believe their work to be flawless, generally unable to handle criticism, or are looking for rainbows and ponies should consider looking at another course. However if you care about data, real-world practice, and learning a highly marketable skill then you've come to the right place.
+  3. There is a great deal of content in this course and you will likely struggle with some at times. Given that, there is also something to be said about the satisfaction a person gets when figuring something out, but nowhere is it written that has to be on your own. You may find that a nudge here or there elicits the same feeling so please reach out for help. 
 
 ## Course Policies
 
-**In a nutshell** ***keep an open line of communication***, **be** ***honest***, ***nice***, **&** ***respectful*** **to everyone**.
+**In a nutshell** ***keep an open line of communication***, **be** ***honest***, ***nice***, ***respectful*** **to everyone**, **&** *follow the* <a href='https://studentconduct.wvu.edu/campus-student-code' target='_blank'>Code of Conduct</a>.
 
-Additionally please follow [WVU's Code of Conduct](https://studentconduct.wvu.edu/campus-student-code).
+### Modifications
 
-This syllabus reflects a plan for the term but things change and plans change. so deviations may become necessary as we move along during the term. Note that **I reserve the right to alter or amend this syllabus**.
+This syllabus reflects a plan for the term but things change and plans change so deviations may become necessary as we move along during the term. This means that **I reserve the right to alter or amend this syllabus**.
 
 ### Health statement
 
@@ -513,29 +520,31 @@ If a student becomes sick or is required to quarantine during the semester, they
 
 ### Psychological and Psychiatric Services
 
-Life at WVU can be complicated and challenging, especially during a pandemic! You might feel overwhelmed, experience anxiety or depression, or struggle with relationships or family responsibilities. [Psychological and Psychiatric Services](https://carruth.wvu.edu/home) provides free, *confidential* support for students who are struggling with mental health and emotional challenges. The office is staffed by professional counselors and psychiatrists who are attuned to the needs of all types of college and professional students. Please do not hesitate to contact them for assistance—getting help is a smart and courageous thing to do.
+Life at WVU can be complicated and challenging! You might feel overwhelmed, experience anxiety or depression, or struggle with relationships or family responsibilities. <a href='https://carruth.wvu.edu/home' target='_blank'>Psychological and Psychiatric Services</a> provides free, *confidential* support for students who are struggling with mental health and emotional challenges. The office is staffed by professional counselors and psychiatrists who are attuned to the needs of all types of college and professional students. Please do not hesitate to contact them for assistance—getting help is a smart and courageous thing to do.
 
 ### CARE Team
 
-If you or anyone you know may be at-risk such as those listed [here](https://careteam.wvu.edu/referrals), please make a CARE referral. You may do so directly at the main [WVU CARE TEAM](https://careteam.wvu.edu/home) site.
+If you or anyone you know may be at-risk such as those listed <a href='https://careteam.wvu.edu/referrals' target='_blank'>here</a>, please make a CARE referral. You may do so directly at the main <a href='https://careteam.wvu.edu/home' target='_blank'>WVU CARE TEAM</a> site.
 
 ### Lauren's Promise
 
+Foremost 
+
 <div class="text-center">
-**I will listen and believe you if someone is threatening you.**
+**I will listen and believe you if someone is threatening you!**
 </div>
 
-Lauren McCluskey, a 21-year-old honors student athlete, [was murdered on October 22, 2018 by a man she briefly dated on the University of Utah campus](https://www.cnn.com/2018/10/24/us/lauren-mccluskey-university-of-utah-fatal-shooting/index.html). We must all take action to ensure that this never happens again.
+Lauren McCluskey - a 21-year-old honors student athlete - <a href='https://www.cnn.com/2018/10/24/us/lauren-mccluskey-university-of-utah-fatal-shooting/index.html' target='_blank'>was murdered on October 22, 2018 by a man she briefly dated on the University of Utah campus</a>. It is imperative that this never happen again!
 
-If you are in immediate danger, call 911 or the Campus Police at [304-293-3136](callto: 304-293-3136).
+- If you are in immediate danger, please call 911 or the Campus Police at [304-293-3136](callto: 304-293-3136).
 
-If you are experiencing sexual assault, domestic violence, or stalking, please report it to me and I will connect you to resources or call/text a private [Title IX On-Call Line](https://diversity.wvu.edu/equity-assurance/resources-and-reporting-options) [304-906-9930](callto: 304-906-9930).
+- If you are experiencing sexual assault, domestic violence, or stalking, please report it to me and I will connect you to resources or call/text a private <a href='https://diversity.wvu.edu/equity-assurance/resources-and-reporting-options' target='_blank'>Title IX On-Call Line</a> [304-906-9930](callto: 304-906-9930).
 
 Any form of sexual harassment or violence will not be excused or tolerated at West Virginia University. WVU has instituted procedures to respond to violations of these laws and standards, programs aimed at the prevention of such conduct, and intervention on behalf of the victims.
 
 ### Academic Integrity
 
-The integrity of the classes offered by any academic institution solidifies the foundation of its mission and cannot be sacrificed to expediency, ignorance, or blatant fraud. Therefore, I will enforce rigorous standards of academic integrity in all aspects and assignments of this course. For the detailed policy of West Virginia University regarding the definitions of acts considered to fall under academic dishonesty and possible ensuing sanctions, please see the West Virginia University Academic Catalog at [http://catalog.wvu.edu/undergraduate/coursecreditstermsclassification/#academicintegritytext](http://catalog.wvu.edu/undergraduate/coursecreditstermsclassification/#academicintegritytext). Should you have any questions about possibly improper research citations or references, or any other activity that may be interpreted as an attempt at academic dishonesty, please see me before the assignment is due to discuss the matter. 
+The integrity of the classes offered by any academic institution solidifies the foundation of its mission and cannot be sacrificed to expediency, ignorance, or blatant fraud. Therefore, I will enforce rigorous standards of academic integrity in all aspects and assignments of this course. For the detailed policy of West Virginia University regarding the definitions of acts considered to fall under academic dishonesty and possible ensuing sanctions, please see the <a href='http://catalog.wvu.edu/undergraduate/coursecreditstermsclassification/#academicintegritytext' target='_blank'>West Virginia University Academic Catalog</a>. Should you have any questions about possibly improper research citations or references, or any other activity that may be interpreted as an attempt at academic dishonesty, please see me before the assignment is due to discuss the matter. 
 
 ### Inclusivity Statement
 
@@ -543,16 +552,11 @@ The West Virginia University community is committed to creating and fostering a 
 
 If you are a person with a disability and anticipate needing any type of accommodation in order to participate in this class, please advise me and make appropriate arrangements with the Office of Accessibility Services ([304-293-6700](callto: 304-293-3136)).  
 
-For more information on West Virginia University's Diversity, Equity, and Inclusion initiatives, please see [http://diversity.wvu.edu](http://diversity.wvu.edu).
+For more information on West Virginia University's Diversity, Equity, and Inclusion initiatives, please see the <a href='http://diversity.wvu.edu' target='_blank'>Division of Diversity, Equity, and Inclusion</a>.
 
 ### Incomplete Grades
 
-Students who want to be considered for an Incomplete must apply to their instructor prior to the end of the term. If the instructor agrees, the instructor and the student must negotiate the conditions under which the grade of I will be changed to a letter grade and sign a contract.  The date to submit the incomplete work should not be set beyond the last day of class of the following semester. If the student does not complete the terms of contract, then the instructor should submit a grade of F. All incomplete contracts must be filed with the department and Dean’s Office. See the policy at [Students who want to be considered for an Incomplete must apply to their instructor prior to the end of the term. If the instructor agrees, the instructor and the student must negotiate the conditions under which the grade of I will be changed to a letter grade and sign a contract.  The date to submit the incomplete work should not be set beyond the last day of class of the following semester. If the student does not complete the terms of contract, then the instructor should submit a grade of F. All incomplete contracts must be filed with the department and Dean’s Office. See the policy at
-[http://catalog.wvu.edu/undergraduate/enrollmentandregistration/#gradestext](http://catalog.wvu.edu/undergraduate/enrollmentandregistration/#gradestext).
-
-### Sale of Course Materials
-
-All course materials, including lectures, class notes, quizzes, exams, handouts, presentations, and other materials provided to students for this course are protected under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/). Please review the sharing and editing restrictions prior to distributing or amending any material on this site. As such, the unauthorized purchase or sale of these materials may result in disciplinary sanctions under the Campus Student Code. **Basically you can share what you like but don't try to make a buck.**
+Students who want to be considered for an Incomplete must apply to their instructor prior to the end of the term. If the instructor agrees, the instructor and the student must negotiate the conditions under which the grade of I will be changed to a letter grade and sign a contract.  The date to submit the incomplete work should not be set beyond the last day of class of the following semester. If the student does not complete the terms of contract, then the instructor should submit a grade of F. All incomplete contracts must be filed with the department and Dean’s Office. Students who want to be considered for an Incomplete must apply to their instructor prior to the end of the term. If the instructor agrees, the instructor and the student must negotiate the conditions under which the grade of I will be changed to a letter grade and sign a contract. The date to submit the incomplete work should not be set beyond the last day of class of the following semester. If the student does not complete the terms of contract, then the instructor should submit a grade of F. All incomplete contracts must be filed with the department and Dean’s Office. See the policy at <a href='http://catalog.wvu.edu/undergraduate/enrollmentandregistration/#gradestext' target='_blank'>Advising, Enrollment, & Grades</a>.
 
 ### Student Evaluation of Instruction (SEI) 
 
@@ -562,12 +566,10 @@ Effective teaching is a primary mission of West Virginia University. Student eva
 
 At West Virginia University, class attendance contributes significantly to academic success. Students who attend classes regularly tend to earn higher grades and have higher passing rates in courses. Excessive absences may jeopardize students' grades or even their ability to continue in their courses. There is a strong correlation between regular class attendance and academic success. 
 
-### Course Netiquette
+### Postings
 
-The basic premise is that the etiquette expected of students in the online environment is the same as that expected in a classroom. Common courtesy is the guiding rule of Internet communications. Be prepared to communicate effectively when taking an online course. Following these simple netiquette rules in your online class or education environment will ensure your success:
+Following these simple netiquette rules in your online class or education environment will ensure your success:
 
--	Include a professional salutation. In this case, “Hello Dr. Roy” or “Dear Dr. Roy” is appropriate. 
--	Include a proper ending such as “Thank you” or “With regards.” Then type in your full name.
 -	Never type in ALL CAPS, because it reads as if you ARE SHOUTING AT PEOPLE.
 -	Act as professionally, via your writing, as you would in a face to face classroom. 
 -	Refrain from inappropriate language and derogatory or personal attacks. 
@@ -579,10 +581,10 @@ The basic premise is that the etiquette expected of students in the online envir
 -	Never spam your classmates. 
 -	If you quote someone's previous post, only quote enough to make your point. 
 
-Be aware of the University’s Academic Integrity and Dishonesty Policy [http://catalog.wvu.edu/undergraduate/coursecreditstermsclassification/#academicintegritytext](http://catalog.wvu.edu/undergraduate/coursecreditstermsclassification/#academicintegritytext). You can review the rules, regulations, and procedures concerning student conduct and discipline for the main campus of West Virginia University, at [http://campuslife.wvu.edu/r/download/1802350](http://campuslife.wvu.edu/r/download/180235).
+Be aware of the University’s <a href='http://catalog.wvu.edu/undergraduate/coursecreditstermsclassification/#academicintegritytext' target='_blank'>Academic Integrity and Dishonesty Policy</a>. You can review the rules, regulations, and procedures concerning student conduct and discipline for the main campus of West Virginia University, at <a href='https://studentresponsibility.wvu.edu' target='_blank'>Student Conduct</a>.
 
 ### Response Time
-I generally respond to Slack queries in the same day while responses to emails and discussion posts are within 48 hours, except during holidays. Often, I will reply much more quickly but you should not count on a immediate. Please plan accordingly so that you don’t miss deadlines! I generally return assignments within one to two weeks after a final submission date.
+I typically respond to Slack queries on the same day while emails and discussion posts are within 48 hours, except during holidays. Please plan accordingly so that you don’t miss deadlines! I generally return assignments within two weeks after a final submission date.
 
 ### Technical Requirements
 Students need to have access to a computer for word processing, e-mail and access to eCampus. Access to the Internet is necessary for completion of this course. Run the Browser Check. This tool will check that you are using a supported Internet browser and have a valid Java version installed. The required technical skills to participate in this course are:
@@ -595,10 +597,16 @@ Students need to have access to a computer for word processing, e-mail and acces
 6.	Consult software tutorials and other online sources as a method of learning software features
 7.  Use syntax when necessary
 
-Notice that programming is not on here!
-
 ### Technical Support
-Technical support regarding your use of eCampus is available by contacting [304-293-4444](callto: 304-293-4444) (telephone), [1-877-327-9260](callto: 1-877-327-9260) (toll free number), [itshelp@mail.wvu.edu](mailto:itshelp@mail.wvu.edu) (email), and/or [http://it.wvu.edu](http://it.wvu.edu) (website).
+Technical support regarding your use of eCampus is available by contacting [304-293-4444](callto: 304-293-4444) (telephone), [1-877-327-9260](callto: 1-877-327-9260) (toll free number), [itshelp@mail.wvu.edu](mailto:itshelp@mail.wvu.edu) (email), and/or <a href='https://it.wvu.edu' target='_blank'>Information Technology Services</a> (website).
+
+## Ownership
+
+### Sale of Course Materials
+
+Course materials including but not limited to lectures, class notes, quizzes, exams, handouts, and  presentations provided to students for this course are protected under a <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/' target='_blank'>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. Please review the sharing and editing restrictions prior to distributing or amending any material on this site. As such, the unauthorized purchase or sale of these materials may result in disciplinary sanctions under the Campus Student Code. **Basically you can share what you like under the licence but don't try to make a buck.**
+
+### Lisencing Information
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
 
