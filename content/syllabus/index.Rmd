@@ -24,14 +24,78 @@ That question comes up more than you probably think! In practitioner-oriented fi
 
 The overall purpose of this course is to empower you to
 
-- <span style="color:#ffffff">acquiring knowledge of basic models and principles of program evaluation</span>
+- <span style="color:#ffffff">acquire knowledge of basic models and principles of program evaluation</span>
 
 - <span style="color:#ffffff">develop an understanding of program evaluation practice by
 designing and conducting an evaluation of a relevant program relevant</span>
 
+- <span style="color:#ffffff">gain an understanding of ethical, social, political, and cultural issues confronted by program evaluators</span>
+
 - <span style="color:#ffffff">write an evaluation report to meet stakeholder information and decision-making needs</span>
 
-- <span style="color:#ffffff">gain an understanding of ethical, social, political, and cultural issues confronted by program evaluators</span>
+## Quick Start Guide
+
+Please note that the slideshow goes through highlights of the syllabus, but you are still responsible for reading through the entire site including this page.
+
+```{=html}
+<center>
+<div class="wrapper">
+    <div class="icon leftright">
+      <div class="tooltip"><span style=width:200px;>Move back and forth using <kbd>←</kbd> and <kbd>→</kbd></span></div>
+      <span><i class="fas fa-map-signs"></i></span></div>
+    <div class="icon info">
+      <div class="tooltip"><span style=width:200px;>Toggle fullscreen by pressing <kbd>F</kbd></span></div>
+      <span><i class="fas fa-expand-alt"></i></span>
+    </div><div class="icon github">
+      <div class="tooltip"><span style=width:200px;>Press <kbd>O</kbd> for and overview of all slides</span></div>
+      <span><i class="far fa-images"></i></span>
+    </div><div class="icon youtube">
+      <div class="tooltip"><span style=width:200px;>Discover more shortcuts by pressing <kbd>H</kbd></span></div>
+      <span><i class="fas fa-info-circle"></i></span>
+    </div>
+</div>
+</center>
+<br>
+```
+
+<center>
+```{r echo = FALSE}
+knitr::include_url("/slides/Quick%20Start/Slides-Basics-pres.html")
+```
+</center>
+
+```{r echo=FALSE}
+
+html_link <- function() {
+  paste0("<a href='/slides/Quick%20Start/Slides-Basics-pres.html' target='_blank'>", "<img src='/logos/web-ico.png' alt='Slack icon' width='35'>", "</a>")
+}
+
+pdf_link <- function() {
+ paste0("<a href='/slides/Quick%20Start/Slides-Basics-flat.pdf' target='_blank'>", "<img src='/logos/pdf-ico.png' alt='Slack icon' width='35'>", "</a>")
+}
+
+textitems <- tibble(
+  
+  html <- c("Larger version of the Guide",
+               html_link()),
+  
+  pdf <- c("PDF of the Guide", 
+            pdf_link())
+  
+)
+
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(textitems, 
+      col.names = c("", ""),
+      escape = FALSE,
+      align = 'cc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1:2, width = "20em", color = "#ffffff", background = "transparent", extra_css = 'vertical-align: middle !important;') 
+```
+</center>
 
 ## FAQ
 
@@ -165,7 +229,7 @@ reqtextstib %>%
 opttextstib <- tibble(
   
   source <- c("American Psychological Association. (2020). <i>Publication manual of the American Psychological Association</i> (7th ed.).",
-              "Dillman, D.A., Smyth, J.D., &amp; Christian, L.M. (2014). <i>Internet, Phone, Mail, and Mixed-Mode Surveys: The Tailored Design Method</i> (4th ed.). Wiley.",
+              "Dillman, D.A., Smyth, J.D., &amp; Christian, L.M. (2014). <i>Internet, phone, mail, and mixed-mode surveys: The Tailored Design Method</i> (4th ed.). Wiley.",
               "Mertens, D. M. (2018). <i>Mixed methods design in evaluation</i>. SAGE."),
   
   digital <- c("",

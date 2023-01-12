@@ -19,6 +19,8 @@ editor_options:
 <script src="{{< blogdown/postref >}}index_files/kePrint/kePrint.js"></script>
 <link href="{{< blogdown/postref >}}index_files/lightable/lightable.css" rel="stylesheet" />
 <script src="{{< blogdown/postref >}}index_files/kePrint/kePrint.js"></script>
+<link href="{{< blogdown/postref >}}index_files/lightable/lightable.css" rel="stylesheet" />
+<script src="{{< blogdown/postref >}}index_files/kePrint/kePrint.js"></script>
 
 <link href="{{< blogdown/postref >}}index_files/lightable/lightable.css" rel="stylesheet" />
 
@@ -32,14 +34,71 @@ That question comes up more than you probably think! In practitioner-oriented fi
 
 The overall purpose of this course is to empower you to
 
-- <span style="color:#ffffff">acquiring knowledge of basic models and principles of program evaluation</span>
+- <span style="color:#ffffff">acquire knowledge of basic models and principles of program evaluation</span>
 
 - <span style="color:#ffffff">develop an understanding of program evaluation practice by
   designing and conducting an evaluation of a relevant program relevant</span>
 
+- <span style="color:#ffffff">gain an understanding of ethical, social, political, and cultural issues confronted by program evaluators</span>
+
 - <span style="color:#ffffff">write an evaluation report to meet stakeholder information and decision-making needs</span>
 
-- <span style="color:#ffffff">gain an understanding of ethical, social, political, and cultural issues confronted by program evaluators</span>
+## Quick Start Guide
+
+Please note that the slideshow goes through highlights of the syllabus, but you are still responsible for reading through the entire site including this page.
+
+<center>
+<div class="wrapper">
+    <div class="icon leftright">
+      <div class="tooltip"><span style=width:200px;>Move back and forth using <kbd>←</kbd> and <kbd>→</kbd></span></div>
+      <span><i class="fas fa-map-signs"></i></span></div>
+    <div class="icon info">
+      <div class="tooltip"><span style=width:200px;>Toggle fullscreen by pressing <kbd>F</kbd></span></div>
+      <span><i class="fas fa-expand-alt"></i></span>
+    </div><div class="icon github">
+      <div class="tooltip"><span style=width:200px;>Press <kbd>O</kbd> for and overview of all slides</span></div>
+      <span><i class="far fa-images"></i></span>
+    </div><div class="icon youtube">
+      <div class="tooltip"><span style=width:200px;>Discover more shortcuts by pressing <kbd>H</kbd></span></div>
+      <span><i class="fas fa-info-circle"></i></span>
+    </div>
+</div>
+</center>
+<br>
+<center>
+<iframe src="/slides/Quick%20Start/Slides-Basics-pres.html" width="672" height="400px" data-external="1">
+</iframe>
+</center>
+<center>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:center;">
+</th>
+<th style="text-align:center;">
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;width: 20em; color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
+Larger version of the Guide
+</td>
+<td style="text-align:center;width: 20em; color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
+PDF of the Guide
+</td>
+</tr>
+<tr>
+<td style="text-align:center;width: 20em; color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
+<a href="/slides/Quick%20Start/Slides-Basics-pres.html" target="_blank"><img src="/logos/web-ico.png" alt="Slack icon" width="35"></a>
+</td>
+<td style="text-align:center;width: 20em; color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
+<a href="/slides/Quick%20Start/Slides-Basics-flat.pdf" target="_blank"><img src="/logos/pdf-ico.png" alt="Slack icon" width="35"></a>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
 
 ## FAQ
 
@@ -211,7 +270,7 @@ American Psychological Association. (2020). <i>Publication manual of the America
 </tr>
 <tr>
 <td style="text-align:left;width: 20em; font-weight: bold;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Dillman, D.A., Smyth, J.D., & Christian, L.M. (2014). <i>Internet, Phone, Mail, and Mixed-Mode Surveys: The Tailored Design Method</i> (4th ed.). Wiley.
+Dillman, D.A., Smyth, J.D., & Christian, L.M. (2014). <i>Internet, phone, mail, and mixed-mode surveys: The Tailored Design Method</i> (4th ed.). Wiley.
 </td>
 <td style="text-align:center;width: 5em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://ebookcentral.proquest.com/lib/wvu/detail.action?docID=1762797" target="_blank">Free</a>

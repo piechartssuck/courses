@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>EDP 617: Program Evaluation</title>
+    <meta charset="utf-8" />
+    <script src="Slides-Basics-flat_files/header-attrs-2.19/header-attrs.js"></script>
+    <link href="Slides-Basics-flat_files/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
+    <script src="Slides-Basics-flat_files/tile-view-0.2.6/tile-view.js"></script>
+    <link href="Slides-Basics-flat_files/animate.css-3.7.2/animate.xaringan.css" rel="stylesheet" />
+    <link href="Slides-Basics-flat_files/tachyons-4.12.0/tachyons.min.css" rel="stylesheet" />
+    <link href="Slides-Basics-flat_files/panelset-0.2.6/panelset.css" rel="stylesheet" />
+    <script src="Slides-Basics-flat_files/panelset-0.2.6/panelset.js"></script>
+    <script src="Slides-Basics-flat_files/kePrint-0.0.1/kePrint.js"></script>
+    <link href="Slides-Basics-flat_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# EDP 617: Program Evaluation
+]
+.subtitle[
+## Basic Course Items and Foundational Concepts
+]
+
+---
+
+
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/x-mathjax-config"&gt;
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+  MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+    cancel: ["Extension","cancel"],
+    bcancel: ["Extension","cancel"],
+    xcancel: ["Extension","cancel"],
+    cancelto: ["Extension","cancel"]
+  });
+});
+&lt;/script&gt;
+
+
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 110px;
+height: 128px;
+z-index: 0;
+background-image: url(/Users/skynet/Documents/WVU/Teaching/GitHub.nosync/edp617/static/img/course_hex.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:1em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('a')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = 'https://edp617.asocialdatascientist.com'
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+
+
+# Welcome!
+
+&lt;center&gt;
+&lt;img src="img/course_info.png" alt="my caption" style="width: 750px;"/&gt;
+&lt;center&gt;
+
+---
+
+# Your Teacher
+
+
+.pull-left[
+&lt;center&gt;
+&lt;img src="img/me.png" alt="Dr. Abhik Roy" style="width: 350px;"/&gt;
+&lt;/center&gt;
+]
+
+.pull-right[
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;a href='https://iam.asocialdatascientist.com' target='_blank'&gt;Dr. Abhik Roy&lt;/a&gt;&lt;br&gt;
+Assistant Professor of Educational Psychology&lt;br&gt;
+School of Education&lt;br&gt;
+West Virginia University
+]
+
+---
+
+# Overview
+
+***What the &amp;ast;&amp;ast;&amp;ast;&amp;ast; is program evaluation?*** That question comes up more than you probably think! In practitioner-oriented fields like (but certainly not limited to) education and counseling, studies are often directed at developing and understanding the impact various programs have on those who receive services, those who provide services, and/or the larger context within which those programs operate. This mode of uncovering if something works and why it works is a basis for evaluating programs and in turn policy decision-making. Program evaluation has philosophical, theoretical, methodological, and practical peculiarities that make it necessary to devote an entire class to understanding why and how it is done. This course is designed to allow you to acquire an understanding of the choices available for and processes involved in conducting program evaluation by giving you hands-on experience conducting a small-scale evaluation study relevant to your interests.
+
+---
+
+# Course Objectives
+
+--
+
+By working hard and asking for help as needed, by the end of this course you should be able to do the following
+
+--
+
+&gt; acquire knowledge of basic models and principles of program evaluation
+
+--
+
+&gt; develop an understanding of program evaluation practice by designing and conducting an evaluation of a relevant program relevant
+
+--
+
+&gt; gain an understanding of ethical, social, political, and cultural issues confronted by program evaluators
+
+--
+
+&gt; write an evaluation report to meet stakeholder information and decision-making needs
+
+---
+
+# Course Materials
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;center&gt;
+&lt;div class = "rounded"&gt;
+.pull-left[.tabtpl[
+For submissions and grades go to&lt;br&gt;&lt;br&gt;
+[eCampus](https://ecampus.wvu.edu/)
+]]
+&lt;/div&gt;
+&lt;/center&gt;
+
+--
+
+&lt;center&gt;
+&lt;div class = "rounded"&gt;
+.pull-right[
+For everything else and then some go to&lt;br&gt;&lt;br&gt;
+[EDP 617 course site](https://edp617.asocialdatascientist.com)
+]
+&lt;/div&gt;
+&lt;/center&gt;
+
+---
+
+# Texts
+
+.center2[
+To help minimize costs, you do not have to purchase any physical texts. We'll rely on the various upcoming texts and barring the APA 7th edition handbook, they are available through the [WVU library](https://library.wvu.edu/) as digital editions.
+]
+
+---
+
+## Required
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+.pull-left[
+Davidson, E. J. (2007). &lt;i&gt;Evaluation methodology basics: The nuts and bolts of sound evaluation&lt;/i&gt; (1st ed.). SAGE.
+  - Free: [Digital](https://libwvu.on.worldcat.org/oclc/646022580)
+  - Not Free: [Physical](https://us.sagepub.com/en-us/nam/evaluation-methodology-basics/book226129)
+]
+
+.pull-right[
+&lt;center&gt;
+&lt;img src="img/eval-text.png" alt="Counseling Text" style="width: 150px;"/&gt;
+&lt;/center&gt;
+]
+
+---
+
+## Optional
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+.pull-left[
+American Psychological Association. (2020). *Publication manual of the American Psychological Association* (7th ed.).
+  - Free(ish): &lt;a href='https://libguides.wvu.edu/apa' target='_blank'&gt;APA 7th Edition Citation Style Guide&lt;/a&gt;
+  - Not Free: &lt;a href='https://apastyle.apa.org/products/publication-manual-7th-edition' target='_blank'&gt;Physical&lt;/a&gt;
+]
+
+.pull-right[
+&lt;center&gt;
+&lt;img src="img/apa7th-text.png" alt="APA 7th Ed. Text" style="width: 150px;"/&gt;
+&lt;/center&gt;
+]
+
+---
+
+&lt;br&gt;
+.pull-left[
+Dillman, D.A., Smyth, J.D., &amp;amp; Christian, L.M. (2014). &lt;i&gt;Internet, phone, mail, and mixed-mode surveys: The Tailored Design Method&lt;/i&gt; (4th ed.). Wiley.
+  - Free: [Digital](https://ebookcentral.proquest.com/lib/wvu/detail.action?docID=1762797)
+  - Not Free: [Physical](https://www.wiley.com/en-us/Internet%2C+Phone%2C+Mail%2C+and+Mixed+Mode+Surveys%3A+The+Tailored+Design+Method%2C+4th+Edition-p-9781118456149)
+]
+
+.pull-right[
+&lt;center&gt;
+&lt;img src="img/survey-text.png" alt="Internet, Phone, Mail, and Mixed-Mode Surveys" style="width: 150px;"/&gt;
+&lt;/center&gt;
+]
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+.pull-left[
+Mertens, D. M. (2018). &lt;i&gt;Mixed methods design in evaluation&lt;/i&gt;. SAGE.
+  - Free: [Digital](https://methods-sagepub-com.wvu.idm.oclc.org/book/mixed-methods-design-in-evaluation)
+  - Not Free: [Physical](https://us.sagepub.com/en-us/nam/mixed-methods-design-in-evaluation/book249777)
+]
+
+.pull-right[
+&lt;center&gt;
+&lt;img src="img/mixedevals-text.png" alt='Mixed Methods Designs in Evaluation' style="width: 150px;"/&gt;
+&lt;center&gt;
+]
+
+---
+
+.center2[
+*There will also occasionally be additional articles and videos to read and watch. When this happens, links to these other resources will be included on the content page for that session.*
+]
+
+---
+
+# Class Focus on 
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+.pull-left[
+**Content**
+  &gt;- Evaluation Fundamentals
+  &gt;- Methods and Methodology
+  &gt;- Principles and Ethics
+]
+
+--
+
+.pull-right[
+**Practice**
+  &gt;- Evaluative Process
+  &gt;- Design and Analysis
+  &gt;- Reporting and Utility
+]
+
+---
+
+# What I expect
+
+--
+
+- Keeping an open line of communication
+
+--
+
+- A lot of work
+
+--
+
+- Attending scheduled meetings
+
+--
+
+- Putting in your fair share of work in the evaluation
+
+--
+
+- Asking questions and reaching out as needed&lt;sup&gt;1&lt;/sup&gt;
+
+.footnote[&lt;sup&gt;1&lt;/sup&gt; after going over all of the material independently]
+
+---
+
+# Assignments and Distribution
+
+You can find descriptions for all the assignments on the [tasks page](https://edp617.asocialdatascientist.com/tasks/).
+
+&lt;br&gt;
+
+
+&lt;center&gt;
+
+&lt;table class=" lightable-paper table table-hover table-condensed table-responsive" style="font-family: Roboto Condensed; margin-left: auto; margin-right: auto; width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;"&gt; Percent &lt;/th&gt;
+   &lt;th style="text-align:left;color: #f7f7f7 !important;background-color: transparent !important;"&gt; Assignment &lt;/th&gt;
+   &lt;th style="text-align:left;color: #f7f7f7 !important;background-color: transparent !important;"&gt; Submission &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;"&gt; 15 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 15em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;"&gt; Weekly Tasks &lt;/td&gt;
+   &lt;td style="text-align:left;width: 9em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;"&gt; Slack &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;"&gt; 15 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 15em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;"&gt; Synchronous Meetings &lt;/td&gt;
+   &lt;td style="text-align:left;width: 9em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;"&gt; Zoom &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 15em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;"&gt; Evaluation Prospectus &lt;/td&gt;
+   &lt;td style="text-align:left;width: 9em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;"&gt; eCampus &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;"&gt; 20 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 15em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;"&gt; Needs Assessment &lt;/td&gt;
+   &lt;td style="text-align:left;width: 9em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;"&gt; eCampus &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;"&gt; 15 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 15em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;"&gt; Evaluation Proposal &lt;/td&gt;
+   &lt;td style="text-align:left;width: 9em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;"&gt; eCampus &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;"&gt; 25 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 15em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;"&gt; Final Report &lt;/td&gt;
+   &lt;td style="text-align:left;width: 9em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;"&gt; eCampus &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 15em; color: #ffffff !important;vertical-align: middle !important;"&gt; Presentation of Results &lt;/td&gt;
+   &lt;td style="text-align:left;width: 9em; color: #ffffff !important;vertical-align: middle !important;"&gt; eCampus/Slack &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;/center&gt;
+
+---
+
+# Assessment and Grading
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;table class=" lightable-paper table table-hover table-condensed table-responsive" style="font-family: Roboto Condensed; margin-left: auto; margin-right: auto; width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;"&gt; Grade &lt;/th&gt;
+   &lt;th style="text-align:left;color: #f7f7f7 !important;background-color: transparent !important;"&gt; Range &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;"&gt; A &lt;/td&gt;
+   &lt;td style="text-align:left;width: 6.5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;"&gt; 90% – 100% &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;"&gt; B &lt;/td&gt;
+   &lt;td style="text-align:left;width: 6.5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;"&gt; 80% - 89% &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;"&gt; C &lt;/td&gt;
+   &lt;td style="text-align:left;width: 6.5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;"&gt; 70% – 79% &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;"&gt; D &lt;/td&gt;
+   &lt;td style="text-align:left;width: 6.5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;"&gt; 60% – 69% &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;"&gt; F &lt;/td&gt;
+   &lt;td style="text-align:left;width: 6.5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;"&gt; &amp;lt; 60% &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+# Questions
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+.pull-left[
+&lt;center&gt;
+&lt;img src='img/in-the-syllabus.png' alt='Email Instructions' width="500px"&gt;
+&lt;/center&gt;
+]
+
+--
+
+.float-vertical-align[
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+.pull-right[
+...unless its not (nor can you find it on the course website). In those cases try using one of the three primary modes of contact
+
+&lt;center&gt;
+&lt;div class="container"&gt;
+    &lt;figure&gt;
+        &lt;a href="https://edp617spring2023.slack.com" target='_blank'&gt;
+        &lt;img src="img/slack-ico.png" width="55px" /&gt;
+        &lt;figcaption&gt;Slack&lt;/figcaption&gt;
+        &lt;/a&gt;
+    &lt;/figure&gt;
+    &lt;figure&gt;
+        &lt;a href="mailto:abhik.roy@mail.wvu.edu" target='_blank'&gt;
+        &lt;img src="img/email-ico.png" width="55px" /&gt;
+        &lt;figcaption&gt;Email&lt;/figcaption&gt;
+        &lt;/a&gt;
+    &lt;/figure&gt;
+    &lt;figure&gt;
+        &lt;a href="https://calendly.com/nopiecharts/short15" target='_blank'&gt;
+        &lt;img src="img/zoom-ico.png" width="55px" /&gt;
+        &lt;figcaption&gt;Zoom&lt;/figcaption&gt;
+        &lt;/a&gt;
+    &lt;/figure&gt;
+&lt;/div&gt;
+&lt;/center&gt;
+]
+]
+
+---
+
+# That's it!
+
+After reviewing the site if you have questions, please send them along...
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;center&gt;
+&lt;div class="fade_rule"&gt;&lt;/div&gt;  
+&lt;br&gt;
+&lt;br&gt;
+&lt;/center&gt;
+
+&lt;center&gt;
+&lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;&lt;img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;This work is licensed under a &lt;br /&gt;&lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License&lt;/a&gt;
+&lt;/center&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"navigation": {
+"scroll": false
+}
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
