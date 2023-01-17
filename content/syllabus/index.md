@@ -208,7 +208,7 @@ Curated directory of resources
 
 ### Texts
 
-To help minimize costs, you are not required to purchase any physical texts. We’ll rely on the various materials below which, barring the APA 7th edition handbook, are either available through <a href='https://library.wvu.edu/' target='_blank'>WVU Libraries</a> or in digital format.
+To help minimize costs, you are not required to purchase any physical texts. We’ll rely on the various materials below which, barring the APA 7th edition handbook, are available through <a href='https://library.wvu.edu/' target='_blank'>WVU Libraries</a> in a digital format.
 
 #### Required
 
@@ -440,7 +440,7 @@ issue with a team member which has been brought to my attention prior to
 the end of the term. In that case, the student(s) in question will be
 assessed through an investigation and arbitration process conducted by
 me. In cases where the accused are found to be at fault, they will
-receive an independent separate score which nay differ from other
+receive an independent separate score which may differ from other
 teammates. The most common type of incident to fall under this category
 is a lack of effort with the team environment. In cases where university
 statues are broken, the student(s) may also be referred to the [Office
