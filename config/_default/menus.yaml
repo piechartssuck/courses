@@ -5,40 +5,32 @@ main:
   - name: Readings
     url: /readings/
     weight: 2
-  - name: Materials
-    url: /materials/
-    weight: 3
   - name: Tasks & Deliverables
     url: /tasks/
-    weight: 4
+    weight: 3
   - name: Due
     url: /due/
-    weight: 5
+    weight: 4
   - name: Resources
     url: /resources/
-    weight: 6
+    weight: 5
   - name: Professor
     url: /professor/
-    weight: 7
+    weight: 6
   - name: '<i class="fab fa-slack"></i>'
     url: "https://edp617spring2023.slack.com"
-    weight: 8
+    weight: 7
   - name: 'Made with <i class="fab fa-r-project"></i>'
     url: "https://www.r-project.org"
-    weight: 9
+    weight: 8
   - name: 'in <b>RStudio</b>'
     url: "https://posit.co/products/open-source/rstudio/"
-    weight: 10
+    weight: 9
 
 readings:
   - name: Overview
     weight: 1
   - name: Readings
-    weight: 2
-Materials:
-  - name: Overview
-    weight: 1
-  - name: Materials
     weight: 2
 tasks:
   - name: Overview

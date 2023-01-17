@@ -42,3 +42,7 @@ You may end up using a survey in this course so its a good idea to go to the <a 
 ## Drawing Evaluations
 
 Get a blank piece of paper and writing utensil or use a computer program to draw a picture of the first thing that comes to your mind when you hear the word “Evaluation”. Think about what that picture means to you and then write a short narrative describing the picture you drew and explaining why you think that was the picture that first came to your mind in relation to *Evaluation*. Post the digital image, scanned copy, or a picture of your drawing to <a href="https://edp617spring2023.slack.com/archives/C04J2V6A30C" target="_blank" style='color:#ff8384;'>\#wk-1-pictures-of-evaluation</a> on Slack.
+
+## Better Evaluations
+
+Dr. Davidson is the author of the primary textbook in the course. She is an accomplished evaluator who has generally created a large impact within the field and has the website [Better Evaluation](https://www.betterevaluation.org) dedicated to the practice of evaluation and full of very helpful resources. While not mandated, you may want to look around and bookmark the site.

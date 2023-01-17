@@ -1,0 +1,59 @@
+---
+title: "Rethinking the Way You Think"
+linktitle: "Week 2: Rethinking the Way You Think"
+output:
+  rmarkdown::html_document
+menu:
+  due:
+    parent: "To Do List"
+    weight: 1
+type: docs
+weight: 2
+---
+`r blogdown::shortcode("aes-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+```{r eval = TRUE, echo = FALSE}
+
+wk_post <- 
+  
+  tibble(
+
+Description = c("Read <i>What is the difference between evaluation and research - and why do we care?</i>, <i>Unlearning some of our social scientist habits</i> and <i>What Is evaluation?: Perspectives of how evaluation differs (or not) from research</i>",
+                "Respond to a <a style='color:#5eb0e5;'>\\ #wk1-pictures-of-evaluation</a> post",
+                "Create a post at <a style='color:#5eb0e5;'>\\ #wk2-rethinking-the-way-you-think</a> based on the readings",
+                "Begin looking for evaluation team members on <a style='color:#ff8384;'>\\ #wk2-talk-about-logistics</a>",
+                "Take the <i>Considering Program Evaluation</i> survey using the unique link sent to your WVU Mix e-mail account"),
+
+
+Details = c("<a href='/readings/02-readings/#read-some-papers'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/tasks/02-tasks/#responses'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/tasks/02-tasks/#postings'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/tasks/02-tasks/#teams'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/tasks/02-tasks/#survey'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"),
+
+Icon = c("pdf", 
+         "slack",
+         "slack",
+         "slack",
+         "qualtrics"),
+
+Site = c("",
+         "https://edp617spring2023.slack.com/archives/C04J2V6A30C",
+         "https://edp617spring2023.slack.com/archives/C04K8C5BX8C",
+         "https://edp617spring2023.slack.com/archives/C04K5T45YDQ",
+         "")
+)
+```
+
+<center>
+`r knitr::spin_child(here::here("content", "post_frame.R"))`
+</center>

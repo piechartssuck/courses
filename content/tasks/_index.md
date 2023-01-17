@@ -36,15 +36,15 @@ There are a lot of moving parts to this class. Students who gain the most out of
 
 ### Complementary Materials
 
-Resources such as presentations, videos, visualizations, walkthroughs, etc. take a lot of time to construct so please take some time to go through them. Do the materials have top notch production value? No because I’m not a famous director from Hollywood will millions of dollars. However they should be good enough…even decent. Given that, I am always open to suggestions so if you have any, send them along!
+Resources such as presentations, videos, visualizations, walkthroughs, etc. take a lot of time to construct so please take some time to go through them. Do the materials have top notch production value? No because I’m not a famous director from Hollywood will millions of dollars. However they should be good enough…even decent! Given that, I am always open to suggestions so if you have any, please send them along.
 
 ### Evaluation Teams
 
-You will need to form 2 - 4 member support and project teams There will be a discussion board where you can discuss available times in your schedules for group chats and there will be a group signup tool in Slack[^1]. Once you have completed sign up, Slack will automatically privatize your team.
+You will need to form 2 - 4 member support and project teams. There will be a channel in Slack where you can discuss available times in your schedules[^1]. After a team is finalized, you will be provided a private space within Slack to share files and communicate though you are not required to utilize it.
 
 ## Weekly Postings
 
-I will create discussion boards for a variety of purposes including discussing general course questions / logistics, getting to know each other, getting organized into groups, discussing each assignment, etc. You will need to participate actively on each board and your postings should be meaningful and incorporate depth. Responses without any additional information and/or justifications will be considered to be incomplete and will reflect on your final earned point value. For further information, please take a look at the description below.
+Discussion boards will be created for a variety of purposes including discussing general course questions / logistics, getting to know each other, creating teams, discussing tasks and deliverables, etc. You will need to participate actively on each board and your postings should be meaningful and incorporate depth. Responses without any additional information and/or justifications will be considered to be incomplete and will reflect on your final earned point value. For further information, please take a look at the description below.
 
 ### Writing on Slack
 
@@ -160,6 +160,8 @@ Posts are nonexistent or lack merit
 </table>
 </center>
 
+Postings that answered multiple questions can be written as a single coherent narrative that flows well or addressed individually where each item and its corresponding response are clearly defined.
+
 ### Responding on Slack
 
 To keep track of what responses go to which post and to receive credit for your responses, use the option pictured below: ![](/img/lesson/slack_pop_menu.png) For further information, please read over [Reply in thread](https://slack.com/help/articles/115000769927-Use-threads-to-organize-discussions-).
@@ -170,11 +172,11 @@ There are two types of meetings in this class: *ongoing* and *check-in*. Please 
 
 ### Ongoing
 
-You will need to meet weekly in the chat room to discuss your understanding, questions, and challenges with the readings, upcoming assignments, etc. I will provide prompts and scaffolding for your discussions. A one page summary consisting of who attended the meeting, content and general synopsis must submitted to eCampus unless otherwise noted.
+Your team should meet weekly to discuss your understanding, questions, and challenges with the readings, upcoming assignments, etc. Basically all group members should be on the same page during the check-ins (please see below).
 
 ### Check-ins
 
-We will need to meet at least six (6) times over the course of term. the primary purpose of this is not just to get to know you, but also to answer any questions you may have and to get an idea of what areas need to be addressed. My job is to serve as a mentor during your evaluation but that requires you to ask questions and be up to date on the course material. I will be using terminology that has been covered and without a frame of reference, the conversation may be difficult.
+We will need to meet at least six (6) times over the course of term. the primary purpose of this is not just to get to know you, but also to answer any questions you may have and to get an idea of what areas need to be addressed. My job is to serve as a mentor during your evaluation but that requires you to ask questions and be up to date on the course material. We will be using terminology that has been covered and without a frame of reference, the conversation may be difficult.
 
 ## Deliverables
 
@@ -263,10 +265,10 @@ This task will involve your group presenting on your evaluation. This will be yo
 
 ## Academic Calendar and Availibility
 
-You can view the weeks of instruction on the [WVU Office of the Provost site](https://provost.wvu.edu/academic-calendar/weeks-of-instruction)
+You can view the weeks of instruction on the [WVU Office of the Provost site](https://provost.wvu.edu/academic-calendar/weeks-of-instruction). I will also be conducting an evaluation outside of the country for approximately ten days. Exact dates will be provided as soon as possible.
 
 ## Need Help?
 
 {{% meetings %}}
 
-[^1]: Available starting week 2 of the course
+[^1]: beginning week 2

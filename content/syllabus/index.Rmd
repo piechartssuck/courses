@@ -116,7 +116,7 @@ If the answer is an overall yes, then you have a good shot at succeeding in this
 Evaluation is foremost a practice based field so much of what you will come across will align with that notion. Given that, there are times where theory will show up but they will be limited.
 
 ### *What if I'm a Visual/Aural/Read-write/Kinesthetic learner?*
-You're not one or even any of those. There's not one accepted study that supports one type of learning style over another. In fact, there aren't even any studies that support these four classifications either. You learn the best using multiple approaches which is why there is both a [Readings](/readings/) and [Materials](/materials/) section. At one time I denoted multiple papers to support this, but many of the sources I listed were also cited in this fantastic video:
+You're not one or even any of those. There's not one accepted study that supports one type of learning style over another. In fact, there aren't even any studies that support these four classifications either. You learn the best using multiple approaches which is why there are both a [Readings](/readings/) and [Tasks & Deliverables](/tasks/) section. At one time I denoted multiple papers to support this, but many of the sources I listed were also cited in this fantastic video:
 
 <center>
 <iframe src="https://www.youtube.com/embed/rhgwIhB58PA" width="640" height="360" frameborder="0" allow="fullscreen" style="display: block; margin: 0 auto 1rem;"></iframe>
@@ -139,26 +139,22 @@ fatrain <- as.character(fa("map", fill = "#6fd8d3", height = "17px"))
 tableofcontents <- tibble(
   
   type <- c("Readings",
-            "Materials",
             "Tasks & Deliverables",
             "Due",
             "Resources"),
   
   location <- c("<a href='/readings/'>Go</a>",
-                "<a href='/materials/'>Go</a>",
                 "<a href='/tasks/'>Go</a>",
                 "<a href='/due/'>Go</a>",
                 "<a href='/resources/'>Go</a>"),
   
   icon <- c(faread,
-            fatrain,
             fatasks,
             fadue,
             faresources),
   
   descr <- c("Weekly readings",
-             "Course materials",
-             "Learning and assessment items",
+             "Course materials and assessment items",
              "List of things to do",
              "Curated directory of resources"
              ),
@@ -176,7 +172,7 @@ tableofcontents %>%
       escape = FALSE,
       align = 'lccl') %>%
   column_spec(1, bold = TRUE)  %>% 
-  row_spec(1:5, extra_css = 'vertical-align: middle !important;', color = "#f7f7f7", background = "transparent") 
+  row_spec(1:nrow(tableofcontents), extra_css = 'vertical-align: middle !important;', color = "#f7f7f7", background = "transparent") 
 ```
 </center>
 

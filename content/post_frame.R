@@ -41,6 +41,6 @@ wk_post %>%
   column_spec(1, width = "25em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>%
   column_spec(2:3, width = "5em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>%
   row_spec(0:nrow(wk_post), extra_css = 'vertical-align: middle !important;', background = "transparent", color = "#f7f7f7") %>%
-  add_footnote(c("contains active links",
+  add_footnote(c("icons contain active links",
                  "icons may contain active links"),
                notation = "number")

@@ -9,10 +9,7 @@ menu:
     weight: 1
 type: docs
 weight: 2
-editor_options: 
-  chunk_output_type: console
 ---
-
 
 `r blogdown::shortcode("aes-header")`
 

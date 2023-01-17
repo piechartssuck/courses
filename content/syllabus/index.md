@@ -120,7 +120,7 @@ Evaluation is foremost a practice based field so much of what you will come acro
 
 ### *What if I’m a Visual/Aural/Read-write/Kinesthetic learner?*
 
-You’re not one or even any of those. There’s not one accepted study that supports one type of learning style over another. In fact, there aren’t even any studies that support these four classifications either. You learn the best using multiple approaches which is why there is both a [Readings](/readings/) and [Materials](/materials/) section. At one time I denoted multiple papers to support this, but many of the sources I listed were also cited in this fantastic video:
+You’re not one or even any of those. There’s not one accepted study that supports one type of learning style over another. In fact, there aren’t even any studies that support these four classifications either. You learn the best using multiple approaches which is why there are both a [Readings](/readings/) and [Tasks & Deliverables](/tasks/) section. At one time I denoted multiple papers to support this, but many of the sources I listed were also cited in this fantastic video:
 
 <center>
 <iframe src="https://www.youtube.com/embed/rhgwIhB58PA" width="640" height="360" frameborder="0" allow="fullscreen" style="display: block; margin: 0 auto 1rem;">
@@ -156,22 +156,6 @@ Weekly readings
 </tr>
 <tr>
 <td style="text-align:left;font-weight: bold;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Materials
-</td>
-<td style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/materials/">Go</a>
-</td>
-<td style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<svg aria-hidden="true" role="img" viewbox="0 0 576 512" style="height:17px;width:19.12px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#6fd8d3;overflow:visible;position:relative;">
-<path d="M565.6 36.24C572.1 40.72 576 48.11 576 56V392C576 401.1 569.8 410.9 560.5 414.4L392.5 478.4C387.4 480.4 381.7 480.5 376.4 478.8L192.5 417.5L32.54 478.4C25.17 481.2 16.88 480.2 10.38 475.8C3.882 471.3 0 463.9 0 456V120C0 110 6.15 101.1 15.46 97.57L183.5 33.57C188.6 31.6 194.3 31.48 199.6 33.23L383.5 94.52L543.5 33.57C550.8 30.76 559.1 31.76 565.6 36.24H565.6zM48 421.2L168 375.5V90.83L48 136.5V421.2zM360 137.3L216 89.3V374.7L360 422.7V137.3zM408 421.2L528 375.5V90.83L408 136.5V421.2z"></path>
-</svg>
-</td>
-<td style="text-align:left;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Course materials
-</td>
-</tr>
-<tr>
-<td style="text-align:left;font-weight: bold;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 Tasks & Deliverables
 </td>
 <td style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
@@ -183,7 +167,7 @@ Tasks & Deliverables
 </svg>
 </td>
 <td style="text-align:left;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Learning and assessment items
+Course materials and assessment items
 </td>
 </tr>
 <tr>
