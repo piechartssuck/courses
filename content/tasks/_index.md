@@ -180,7 +180,7 @@ We will need to meet at least six (6) times over the course of term. the primary
 
 ## Deliverables
 
-There are five primary deliverables in the course. Included below are basic descriptions of each but a full set of criteria for each task will be posted to the left as we progress through the term. Most submissions are required to be submitted as a <span style="color:#12b8ff;font-weight: bold;">.docx</span> while others should be rendered as a <span style="color:#f47a7b;font-weight: bold;">.pdf</span>. *Remember that all submissions must be in a standard APA 7th edition formatting barring the need for a running header.*
+There are five primary deliverables in the course. Included below are basic descriptions of each but a full set of criteria for each task will be posted to the left as we progress through the term. Most submissions are required to be submitted as a <span style="color:#12b8ff;font-weight: bold;">.docx</span> while others should be rendered as a <span style="color:#f47a7b;font-weight: bold;">.pdf</span> where noted.<br><br>
 
 <div id="anchorwk1">
 
@@ -262,6 +262,12 @@ This task will involve your group presenting on your evaluation. This will be yo
 </details>
 
 </div>
+
+<br>
+<center>
+<p id="rounded_corners_long">
+Please note all deliverables must be written in Microsoft Word (<span style="color:#12b8ff;">.docx</span>), 12-point Times New Roman font, double spaced, and adherence to APA 7th edition guidelines barring a running header
+</center>
 
 ## Academic Calendar and Availibility
 

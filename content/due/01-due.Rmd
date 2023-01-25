@@ -29,7 +29,7 @@ wk_post <-
   
 Description = c("Review the website",
                 "Take a look around at Better Evaluation",
-                "Sign up for the class Slack channel and introduce yourself in <a style='color:#ff8384;'>\\ #wk1-introduce-yourself</a>",
+                "Sign up for the class Slack channel and introduce yourself in <a style='color:#5eb0e5;'>\\ #wk1-introduce-yourself</a>",
                 "Review the basics of Slack",
                 "Verify your Qualtrics account",
                 "Draw an evaluation and post it to <a style='color:#5eb0e5;'>\\ #wk1-pictures-of-evaluation</a>"),

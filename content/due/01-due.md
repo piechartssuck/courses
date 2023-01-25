@@ -57,7 +57,7 @@ Take a look around at Better Evaluation
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Sign up for the class Slack channel and introduce yourself in <a style="color:#ff8384;"> #wk1-introduce-yourself</a>
+Sign up for the class Slack channel and introduce yourself in <a style="color:#5eb0e5;"> #wk1-introduce-yourself</a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/tasks/01-tasks/#class-channel"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
@@ -111,7 +111,7 @@ Draw an evaluation and post it to <a style="color:#5eb0e5;"> #wk1-pictures-of-e
 <tfoot>
 <tr>
 <td style="padding: 0; border:0;" colspan="100%">
-<sup>1</sup> contains active links
+<sup>1</sup> icons contain active links
 </td>
 </tr>
 <tr>

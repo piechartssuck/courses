@@ -11,7 +11,7 @@
  *
  *  Need help? Try:
  *    - vignette(package = "xaringanthemer")
- *    - ?xaringanthemer::style_xaringan
+ *    - ?xaringanthemer::style-xaringan
  *    - xaringan wiki: https://github.com/yihui/xaringan/wiki
  *    - remarkjs wiki: https://github.com/gnab/remark/wiki
  *
@@ -43,22 +43,25 @@
   --header-h3-font-size: 1.75rem;
 
   /* Colors */
-  --text-color: #FDFEFE;
-  --header-color: #8cc39c;
+  --text-color: #FEFEFE;
+  --header-color: #bff4ee;
   --background-color: #212121;
-  --link-color: #9db6e5;
+  --link-color: #b1ead6;
   --text-bold-color: #00b0cc;
   --code-highlight-color: #212121;
+  --code-inline-color: #b2dfdb;
   --inverse-text-color: #212121;
-  --inverse-background-color: #8cc39c;
+  --inverse-background-color: #bff4ee;
   --inverse-header-color: #212121;
-  --inverse-link-color: #9db6e5;
+  --inverse-link-color: #b1ead6;
+  --table-row-border-color: #212121;
+  --table-row-even-background-color: #212121;
   --title-slide-background-color: #212121;
-  --title-slide-text-color: #8cc39c;
-  --header-background-color: #8cc39c;
+  --title-slide-text-color: #bff4ee;
+  --header-background-color: #bff4ee;
   --header-background-text-color: #212121;
   --primary: #212121;
-  --secondary: #8cc39c;
+  --secondary: #bff4ee;
 }
 
 html {
@@ -99,12 +102,12 @@ h1, h2, h3 {
 }
 .remark-inline-code {
   font-size: var(--code-inline-font-size);
-  color: #009688;
+  color: #b2dfdb;
   background-color: transparent;
   padding: 2px;
 }
 .remark-slide-number {
-  color: #FDFEFE;
+  color: #FEFEFE;
   opacity: 1;
   font-size: 0.9rem;
 }
@@ -128,7 +131,7 @@ a, a > code {
 .inverse {
   background-color: var(--inverse-background-color);
   color: var(--inverse-text-color);
-  
+
 }
 .inverse h1, .inverse h2, .inverse h3 {
   color: var(--inverse-header-color);
@@ -152,10 +155,10 @@ a, a > code {
   float: left;
 }
 .left-column h2, .left-column h3 {
-  color: #8cc39c99;
+  color: #bff4ee99;
 }
 .left-column h2:last-of-type, .left-column h3:last-child {
-  color: #8cc39c;
+  color: #bff4ee;
 }
 .right-column {
   width: 75%;
@@ -177,7 +180,7 @@ img, video, iframe {
   max-width: 100%;
 }
 blockquote {
-  border-left: solid 5px #8cc39c80;
+  border-left: solid 5px #bff4ee80;
   padding-left: 1em;
 }
 .remark-slide table {
@@ -209,10 +212,10 @@ table.dataTable.display tbody tr.even {
 table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
   background-color: rgba(255, 255, 255, 0.5);
 }
-.dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {
+.dataTables-wrapper .dataTables-length, .dataTables-wrapper .dataTables-filter, .dataTables-wrapper .dataTables-info, .dataTables-wrapper .dataTables-processing, .dataTables-wrapper .dataTables-paginate {
   color: var(--text-color);
 }
-.dataTables_wrapper .dataTables_paginate .paginate_button {
+.dataTables-wrapper .dataTables-paginate .paginate-button {
   color: var(--text-color) !important;
 }
 
@@ -247,7 +250,7 @@ table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
 }
 
 /* Slide Header Background for h1 elements */
-.remark-slide-content.header_background > h1 {
+.remark-slide-content.header-background > h1 {
   display: block;
   position: absolute;
   top: 0;
@@ -259,7 +262,7 @@ table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
   margin-top: 0;
   box-sizing: border-box;
 }
-.remark-slide-content.header_background {
+.remark-slide-content.header-background {
   padding-top: 7rem;
 }
 
@@ -286,4 +289,3 @@ table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
 .bg-secondary {
   background-color: var(--secondary);
 }
-

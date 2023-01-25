@@ -25,7 +25,7 @@ source(here::here("content", "com_libs.R"))
 
   1. Check your email for an invite to the course <a href="https://edp617spring2023.slack.com" target="_blank">Slack channel</a>. **If you registered for the course after the first day, please send me an email requesting an invitation**.
   2. Register if you do not already have an account. You certainly do not have to use your WVU email, but its not a bad idea just in case any future classes use the platform.
-  3. Head to to the channel <a href="https://edp617spring2023.slack.com/archives/C04J0EWTK9Q" target="_blank" style='color:#ff8384;'>#wk1-introduce-yourself</a> and well introduce yourself by tell everyone about you, what you hope to achieve out of this course, and something about you that really defines who you are. For example, here is something about me:<br><br>
+  3. Head to to the channel <a href="https://edp617spring2023.slack.com/archives/C04J0EWTK9Q" target="_blank" style='color:#5eb0e5;'>#wk1-introduce-yourself</a> and well introduce yourself by tell everyone about you, what you hope to achieve out of this course, and something about you that really defines who you are. For example, here is something about me:<br><br>
 *I teach course on data visualization BUT I am also 40% colorblind and getting worse!* <br><br>
   4. Please provide a picture if you are willing! (optional)
 <br>

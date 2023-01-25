@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>EDP 617: A Short Course on Evaluation Models</title>
+    <meta charset="utf-8" />
+    <script src="A-Short-Course-on-Evaluation-Models-flat_files/header-attrs-2.19/header-attrs.js"></script>
+    <link href="A-Short-Course-on-Evaluation-Models-flat_files/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
+    <script src="A-Short-Course-on-Evaluation-Models-flat_files/tile-view-0.2.6/tile-view.js"></script>
+    <link href="A-Short-Course-on-Evaluation-Models-flat_files/animate.css-3.7.2/animate.xaringan.css" rel="stylesheet" />
+    <link href="A-Short-Course-on-Evaluation-Models-flat_files/tachyons-4.12.0/tachyons.min.css" rel="stylesheet" />
+    <link href="A-Short-Course-on-Evaluation-Models-flat_files/panelset-0.2.6/panelset.css" rel="stylesheet" />
+    <script src="A-Short-Course-on-Evaluation-Models-flat_files/panelset-0.2.6/panelset.js"></script>
+    <script src="A-Short-Course-on-Evaluation-Models-flat_files/kePrint-0.0.1/kePrint.js"></script>
+    <link href="A-Short-Course-on-Evaluation-Models-flat_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# EDP 617: A Short Course on Evaluation Models
+]
+.subtitle[
+## A Tiny Primer
+]
+
+---
+
+
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/x-mathjax-config"&gt;
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+  MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+    cancel: ["Extension","cancel"],
+    bcancel: ["Extension","cancel"],
+    xcancel: ["Extension","cancel"],
+    cancelto: ["Extension","cancel"]
+  });
+});
+&lt;/script&gt;
+
+&lt;style&gt;
+section {
+    display: flex;
+    display: -webkit-flex;
+}
+
+section {
+    height: 600px;
+    width: 60%;
+    margin: auto;
+    border-radius: 21px;
+    background-color: #212121;
+}
+
+.remark-slide-container {
+background: #212121;
+}
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
+}
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
+}
+
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
+}
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
+}
+
+section p {
+    text-align: center;
+    font-size: 30px;
+    background-color: #212121;
+    border-radius: 21px;
+    font-family: Roboto Condensed;
+    font-style: bold;
+    padding: 12px;
+    color: #bff4ee;
+    margin: auto;
+}
+
+#center {
+text-align: center;
+}
+
+#right {
+  text-align: right;
+} 
+
+.center p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.tab {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.tabdbl {
+    display: inline-block;
+    margin-left: 80px;
+}
+
+.tabtpl {
+    display: inline-block;
+    margin-left: 120px;
+}
+
+
+.obr
+{
+    display:block;
+    margin-top:-15px;
+}
+
+.pull-left-left {
+  float: left;
+  width: 27%;
+}
+
+.pull-right-right {
+  float: right;
+  width: 32%;
+}
+
+img.expand:hover {
+  margin: 0 auto;
+  position: relative;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  transform: scale(1.5)             
+  translateX(-35%);
+  z-index: 99;
+  transition:all 0.5s ease-in-out;
+  -webkit-transition:all 0.2s ease-in-out;
+}
+
+.vertline {
+  border-left: 5px solid #212121;
+  height: 100px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+*, *:before, *:after {
+	 box-sizing: border-box;
+	 outline: none;
+}
+
+.hover {
+	 position: relative;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 width: 400px;
+	 height: 65px;
+	 background-color: #e3c0ff;
+	 border-radius: 99px;
+	 box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	 transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+	 overflow: hidden;
+}
+
+ .hover:before, .hover:after {
+	 position: absolute;
+	 top: 0;
+	 display: flex;
+	 align-items: center;
+   justify-content: center;
+	 width: 50%;
+	 height: 100%;
+	 transition: 0.25s linear;
+	 z-index: 1;
+}
+
+ .hover:before {
+	 content: '';
+	 left: 0;
+	 background-color: #ca86ec;
+   color: #212121;
+}
+
+ .hover:after {
+	 content: '';
+	 right: 0;
+	 background-color: #d896ff;
+}
+
+ .hover:hover {
+	 background-color: #cc8bff;
+	 box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+ .hover:hover span {
+	 opacity: 0;
+	 z-index: -3;
+}
+
+ .hover:hover:before {
+	 opacity: 0.5;
+	 transform: translateY(-100%);
+}
+
+ .hover:hover:after {
+	 opacity: 0.5;
+	 transform: translateY(100%);
+}
+
+ .hover span {
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 text-align: center;
+	 width: 100%;
+	 height: 100%;
+	 color: #212121;
+	 font-size: 24px;
+	 font-weight: 700;
+	 opacity: 1;
+	 transition: opacity 0.25s;
+	 z-index: 2;
+   white-space:pre;
+}
+
+ .hover .doc-link {
+	 position: relative;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 text-align: center;
+	 width: 25%;
+	 height: 100%;
+	 color: whitesmoke;
+	 font-size: 24px;
+	 text-decoration: none;
+	 transition: 0.25s;
+}
+ .hover .doc-link i {
+	 text-shadow: 1px 1px rgba(70, 98, 127, 0.7);
+	 transform: scale(1);
+}
+ .hover .doc-link:hover {
+	 background-color: rgba(245, 245, 245, 0.1);
+}
+ .hover .doc-link:hover i {
+	 animation: bounce 0.4s linear;
+}
+ @keyframes bounce {
+	 40% {
+		 transform: scale(1.4);
+	}
+	 60% {
+		 transform: scale(0.8);
+	}
+	 80% {
+		 transform: scale(1.2);
+	}
+	 100% {
+		 transform: scale(1);
+	}
+}
+
+.boxl {
+    width: 50%;
+    margin: 5px;
+    text-align: center;
+}
+
+.boxr {
+    margin: 5px;
+    text-align: center;
+}
+
+.picr {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+&lt;/style&gt;
+
+
+
+&lt;style type="text/css"&gt;
+.highlight-last-item &gt; ul &gt; li,
+.highlight-last-item &gt; ol &gt; li {
+  opacity: 0.5;
+}
+.highlight-last-item &gt; ul &gt; li:last-of-type,
+.highlight-last-item &gt; ol &gt; li:last-of-type {
+  opacity: 1;
+}
+&lt;/style&gt;
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 110px;
+height: 128px;
+z-index: 0;
+background-image: url(/Users/skynet/Documents/WVU/Teaching/GitHub.nosync/edp617/static/img/course_hex.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:1em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('a')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = 'https://edp619.asocialdatascientist.com'
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+#  Welcome
+
+This is a relatively compact and short introduction to evaluation models.
+
+---
+
+# The Basics 
+
+
+
+&lt;center&gt;
+&lt;table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;vertical-align: middle !important;"&gt; Name &lt;/th&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;vertical-align: middle !important;"&gt; Description &lt;/th&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;vertical-align: middle !important;"&gt; Asks &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 10em; background-color: #212121 !important;vertical-align: middle !important;"&gt; Behavioral Objectives Approach &lt;/td&gt;
+   &lt;td style="text-align:left;width: 30em; background-color: #212121 !important;vertical-align: middle !important;"&gt; the degree to which the objectives of a program, product, or process have been achieved. &lt;/td&gt;
+   &lt;td style="text-align:left;width: 15em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;i&gt;is the program, product, or process achieving its objectives?&lt;/i&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 10em; background-color: #212121 !important;vertical-align: middle !important;"&gt; The Four-Level Model &lt;/td&gt;
+   &lt;td style="text-align:left;width: 30em; background-color: #212121 !important;vertical-align: middle !important;"&gt; four levels of training outcomes: reactions, learning, behavior, and results. &lt;/td&gt;
+   &lt;td style="text-align:left;width: 15em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;i&gt;what impact did the training have on participants in terms of their reactions, learning, behavior, and organizational results?&lt;/i&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 10em; background-color: #212121 !important;vertical-align: middle !important;"&gt; Responsive Evaluation &lt;/td&gt;
+   &lt;td style="text-align:left;width: 30em; background-color: #212121 !important;vertical-align: middle !important;"&gt; evaluators need to be responsive to the information needs of various audiences or stakeholders. &lt;/td&gt;
+   &lt;td style="text-align:left;width: 15em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;i&gt;what does the program look like to different people?&lt;/i&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 10em; background-color: #212121 !important;vertical-align: middle !important;"&gt; Goal-Free Evaluation &lt;/td&gt;
+   &lt;td style="text-align:left;width: 30em; background-color: #212121 !important;vertical-align: middle !important;"&gt; the actual outcomes rather than the intended outcomes of a program so the evaluator has minimal contact with the program managers and staff and is unaware of the program’s stated goals and objectives. &lt;/td&gt;
+   &lt;td style="text-align:left;width: 15em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;i&gt;what are all the effects of the program, including any side effects?&lt;/i&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/center&gt;
+
+---
+
+# Middle of the Pack 
+
+
+
+
+&lt;center&gt;
+&lt;table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;vertical-align: middle !important;"&gt; Name &lt;/th&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;vertical-align: middle !important;"&gt; Description &lt;/th&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;vertical-align: middle !important;"&gt; Asks &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 10em; background-color: #212121 !important;vertical-align: middle !important;"&gt; Adversary/Judicial Approaches &lt;/td&gt;
+   &lt;td style="text-align:left;width: 30em; background-color: #212121 !important;vertical-align: middle !important;"&gt; adapt the legal paradigm to program evaluation by first arguing their cases based on the evidence (data) collected followed by a judge or a panel of judges decideing which side has made a better case and makes a ruling. &lt;/td&gt;
+   &lt;td style="text-align:left;width: 15em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;i&gt;what are the arguments for and against the program?&lt;/i&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 10em; background-color: #212121 !important;vertical-align: middle !important;"&gt; Consumer Oriented Approaches &lt;/td&gt;
+   &lt;td style="text-align:left;width: 30em; background-color: #212121 !important;vertical-align: middle !important;"&gt; to help consumers choose among competing programs or products. &lt;/td&gt;
+   &lt;td style="text-align:left;width: 15em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;i&gt;would an educated consumer choose this
+program or product?&lt;/i&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 10em; background-color: #212121 !important;vertical-align: middle !important;"&gt; Expertise/Accreditation Approaches &lt;/td&gt;
+   &lt;td style="text-align:left;width: 30em; background-color: #212121 !important;vertical-align: middle !important;"&gt; relies on expert opinion to determine the quality of programs to assess quality. &lt;/td&gt;
+   &lt;td style="text-align:left;width: 15em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;i&gt;how would professionals rate this program?&lt;/i&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 10em; background-color: #212121 !important;vertical-align: middle !important;"&gt; Organizational Learning &lt;/td&gt;
+   &lt;td style="text-align:left;width: 30em; background-color: #212121 !important;vertical-align: middle !important;"&gt; a social activity in which evaluation issues are constructed by and
+acted on by organization members and is ongoing and integrated into all work practices. &lt;/td&gt;
+   &lt;td style="text-align:left;width: 15em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;i&gt;what are the information and learning needs of individuals, teams, and the organization in general?&lt;/i&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 10em; "&gt; Success Case Method &lt;/td&gt;
+   &lt;td style="text-align:left;width: 30em; "&gt; the practicalities of defining successful outcomes and success cases and uses some of the processes from theory-driven evaluation to determine
+the linkages, which may take the form of a logic model, an impact model, or
+a results map. &lt;/td&gt;
+   &lt;td style="text-align:left;width: 15em; "&gt; &lt;i&gt;what is really happening?&lt;/i&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/center&gt;
+
+---
+
+# The Drivers
+
+
+
+&lt;center&gt;
+&lt;table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;vertical-align: middle !important;"&gt; Name &lt;/th&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;vertical-align: middle !important;"&gt; Description &lt;/th&gt;
+   &lt;th style="text-align:left;background-color: #212121 !important;vertical-align: middle !important;"&gt; Asks &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 10em; background-color: #212121 !important;vertical-align: middle !important;"&gt; Theory Driven Evaluation &lt;/td&gt;
+   &lt;td style="text-align:left;width: 30em; background-color: #212121 !important;vertical-align: middle !important;"&gt; theoretical rather than methodological issues bydeveloping a plausible
+model of how the program is supposed to work. &lt;/td&gt;
+   &lt;td style="text-align:left;width: 15em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;i&gt;how is the program supposed to work? what are the assumptions underlying the program’s development and implementation?&lt;/i&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 10em; background-color: #212121 !important;vertical-align: middle !important;"&gt; Utilization Focused Evaluation &lt;/td&gt;
+   &lt;td style="text-align:left;width: 30em; background-color: #212121 !important;vertical-align: middle !important;"&gt; done for and with specific, intended primary users for specific, intended uses and assumes that stakeholders will have a high degree of involvement in many, if
+not all, phases of the evaluation. &lt;/td&gt;
+   &lt;td style="text-align:left;width: 15em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;i&gt;What are the information needs of stakeholders, and how will they use the findings?&lt;/i&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 10em; background-color: #212121 !important;vertical-align: middle !important;"&gt; Participatory Evaluation &lt;/td&gt;
+   &lt;td style="text-align:left;width: 30em; background-color: #212121 !important;vertical-align: middle !important;"&gt; engaging stakeholders in the evaluation process, so they may better understand evaluation and the program being evaluated and ultimately use the evaluation findings for decision-making purposes. &lt;/td&gt;
+   &lt;td style="text-align:left;width: 15em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;i&gt;what are the information needs of those closest to the program?&lt;/i&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 10em; background-color: #212121 !important;vertical-align: middle !important;"&gt; Empowerment Evaluation &lt;/td&gt;
+   &lt;td style="text-align:left;width: 30em; background-color: #212121 !important;vertical-align: middle !important;"&gt; use of evaluation concepts, techniques, and findings to foster improvement and self-determination. &lt;/td&gt;
+   &lt;td style="text-align:left;width: 15em; background-color: #212121 !important;vertical-align: middle !important;"&gt; &lt;i&gt;what are the information needs to foster improvement and self-determination?&lt;/i&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/center&gt;
+
+---
+
+# Which One to Use?
+
+You don't have to formally declare a model. In fact, unless specific circumstances demand it, its better that you probably don't. Recently there has been a push to get away from a design oriented evaluation approach which is good for many reasons - for one you aren't pigeonholing yourself to a predetermined structure that 
+
+1. may not apply exactly resulting in skewed results, and
+
+2. dilutes or suppresses creativity and thinking. 
+
+This allows you to deal with the program as is rather than viewing it through framework of a model. The bottom line is if we believe that *no two programs are alike, then why should we use a one size fit all approach to study it?*
+
+---
+
+# So should you care? 
+
+Yes because even though a prior framework is likely not the best tool to use, you'll use parts of multiple models here and there. So rather than treating these as musts, think of them as possible approaches that can be combined, expanded, ignored, etc. Like anything else, they can help but most evaluations should never rely on any one of them.
+
+---
+
+# And That's It
+
+Remember that models don't determine the course of an evaluation - you do! Use your best judgment, common sense, content knowledge, expertise, etc - the things that hopefully distinguish you both professionally and academically to administer a study. If you have any questions, please feel free to reach out.
+
+&lt;center&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;div class="fade_rule"&gt;&lt;/div&gt;  
+&lt;br&gt;&lt;br&gt;
+&lt;/center&gt;
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+&lt;center&gt;
+&lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;&lt;img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;This work is licensed under a &lt;br /&gt;&lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License&lt;/a&gt;
+&lt;/center&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"navigation": {
+"scroll": false
+}
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

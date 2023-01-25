@@ -1,0 +1,6 @@
+library(tidyverse)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+library(here)
+library(xaringanthemer)

@@ -1,0 +1,185 @@
+---
+title: "Aims, Scope, and Sequencing"
+linktitle: "Week 3: Aims, Scope, and Sequencing"
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  tasks:
+    parent: Tasks
+    weight: 3
+type: docs
+weight: 1
+---
+
+`r blogdown::shortcode("aes-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+## Writing
+
+### Responses
+
+Please create **one response** for <a href="https://edp617spring2023.slack.com/archives/C04K8C5BX8C" target="_blank" style='color:#ff8384;'>#wk2-rethinking-the-way-you-think</a> on Slack<sup>1</sup>. 
+
+### Postings
+
+After going through this week's [readings](/readings/03-readings), address the following in a single post on the channel <a href="https://edp617spring2023.slack.com/archives/C04LEHZTFFD" target="_blank" style='color:#ff8384;'>#wk3-criteria</a>
+
+  + How do you view the relationship between indicators and criteria?
+  
+  + What general steps would/do you take to assess criteria for an existing program you have been tasked to evaluate?
+
+## Doing
+
+### Create an Evaluation Team
+
+Finalize your evaluation teams consisting of three to four members. Then talk among yourselves to figure out three possible weekly meetings times/days that you can get together to discuss materials about the course and the eventual evaluation. To begin, I will join you on a biweekly basis to discuss items and to answer any questions you may have. If the team appears to be on track as we progress, I will reduce my participation unless needed. Please send me team information by
+
+1. getting the form
+
+<center>
+```{r echo=FALSE,eval=TRUE,message=FALSE}
+loc <- here::here("static", "files", "evalTeams.csv")
+
+downloadthis::download_file(
+  path = loc,
+  output_name = "evalTeams",
+  button_label = "&nbsp;&nbsp;&nbsp;<span style='color:#ffffff'>Download the Form",
+  button_type = "primary",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+</center>
+<br>
+
+2. filling out the table with the following
+
+```{r echo=FALSE}
+
+readings <- tibble(
+  
+  column <- c("First Name", 
+              "Last Name",
+              "Email Address",
+              "Meeting Day/Time 1",
+              "Meeting Day/Time 2",
+              "Meeting Day/Time 3"
+  ),
+  
+  desc <- c(
+    "The first names of each team member on separate lines.",
+    "The last names of each team member on separate lines.",
+    "Corresponding preferential email address on separate lines.",
+    "Your team's first choice for a day/time to meet.",
+    "Your team's second choice for a day/time to meet.",
+    "Your team's last choice for a day/time to meet."
+  ),
+  
+  .name_repair = "minimal"
+  
+)
+
+```
+
+<center>
+```{r, echo=FALSE}
+readings %>%
+  kbl(col.names = c("Column Name", "Description"), 
+      "html", 
+      escape = FALSE,
+      align = 'll') %>%
+  kable_paper(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "30em") %>% 
+  row_spec(0:6, extra_css = 'vertical-align: middle !important;', background = "transparent", color = "#f7f7f7") 
+```
+</center>
+
+3. naming your group (feel free to be serious or have fun with it!)
+
+4. use the name of your group as the filename
+
+5. pick one person to submit the completed <span style='color:#6acda5;'>.csv</span> file to <a href="https://ecampus.wvu.edu" target="_blank">eCampus</a>.
+
+### View Evaluation Approaches
+
+Look through the CDC's <a href="/handouts/Types of Evaluation.pdf" target="_blank">Types of Evaluations</a> document to get yourself familiarized with various approaches to conducting evaluations. It is important to note that *summative evaluations* are not listed.
+
+### Review a Slideshow
+
+We'll be covering three primary concepts in evaluation: *criteria*, *standards* and *indicators* all within the scope of criteria. While all three are extremely important, the trait that can have the greatest impact on the planning of an evaluation is in constructing the proper criteria. With that in mind, please view and listen to  <span style="color:#6ac4cd;font-weight:bold">What the Hell is Program Evaluation?</span> For information on how to traverse the slideshow, hover over the icons below.
+
+```{=html}
+<center>
+<div class="wrapper">
+    <div class="icon leftright">
+      <div class="tooltip"><span style=width:200px;>Move back and forth using <kbd>←</kbd> and <kbd>→</kbd></span></div>
+      <span><i class="fas fa-map-signs"></i></span></div>
+    <div class="icon info">
+      <div class="tooltip"><span style=width:200px;>Toggle fullscreen by pressing <kbd>F</kbd></span></div>
+      <span><i class="fas fa-expand-alt"></i></span>
+    </div><div class="icon github">
+      <div class="tooltip"><span style=width:200px;>Press <kbd>O</kbd> for and overview of all slides</span></div>
+      <span><i class="far fa-images"></i></span>
+    </div><div class="icon youtube">
+      <div class="tooltip"><span style=width:200px;>Discover more shortcuts by pressing <kbd>H</kbd></span></div>
+      <span><i class="fas fa-info-circle"></i></span>
+    </div>
+</div>
+</center>
+<br>
+```
+
+<center>
+<div class="holder">
+
+<div class="bigcol">
+```{r echo = FALSE, out.width="200%", fig.align='left'}
+knitr::include_url("/slides/What is PE/What-is-PE-pres.html")
+```
+</div>
+
+<div class="smallcol">
+```{r echo = FALSE, fig.align='right'}
+
+html_link <- function() {
+  paste0("<a href='/slides/What is PE/What-is-PE-pres.html' target='_blank'>", "<img src='/logos/web-ico.png' alt='Web icon' width='35'>", "</a>")
+}
+
+pdf_link <- function() {
+  paste0("<a href='/slides/What is PE/What-is-PE-flat.pdf' target='_blank'>", "<img src='/logos/pdf-ico.png' alt='PDF icon' width='35'>", "</a>")
+}
+
+tibble(
+  
+  html <- c(html_link(),
+            "Larger version of the presentation",
+            "",
+            pdf_link(),
+            "PDF of the presentation")
+) %>%
+  kbl(col.names = c(""),
+      "html",
+      escape = FALSE,
+      align = 'c') %>%
+  kable_paper(full_width = FALSE) %>%
+  column_spec(1, width = "25em", extra_css = "padding-left: 300px;") %>%
+  row_spec(1:5, extra_css = 'vertical-align: middle !important;', color = "#ffffff", background = "transparent") 
+```
+</div>
+
+</div>
+
+<div class="clear">
+</div>
+</center>
+
+### Deliverable
+
+Take a look at a preview for your first deliverable, namely an [Evaluation Prospectus](/deliverables/01-evaluation-prospectus/) due by the end of Week 4.

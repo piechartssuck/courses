@@ -13,6 +13,298 @@ output:
          scroll: false
 ---
 
+<style>
+section {
+    display: flex;
+    display: -webkit-flex;
+}
+
+section {
+    height: 600px;
+    width: 60%;
+    margin: auto;
+    border-radius: 21px;
+    background-color: #212121;
+}
+
+.remark-slide-container {
+background: #212121;
+}
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
+}
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
+}
+
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
+}
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
+}
+
+section p {
+    text-align: center;
+    font-size: 30px;
+    background-color: #212121;
+    border-radius: 21px;
+    font-family: Roboto Condensed;
+    font-style: bold;
+    padding: 12px;
+    color: #bff4ee;
+    margin: auto;
+}
+
+#center {
+text-align: center;
+}
+
+#right {
+  text-align: right;
+} 
+
+.center p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.tab {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.tabdbl {
+    display: inline-block;
+    margin-left: 80px;
+}
+
+.tabtpl {
+    display: inline-block;
+    margin-left: 120px;
+}
+
+
+.obr
+{
+    display:block;
+    margin-top:-15px;
+}
+
+.pull-left-left {
+  float: left;
+  width: 27%;
+}
+
+.pull-right-right {
+  float: right;
+  width: 32%;
+}
+
+img.expand:hover {
+  margin: 0 auto;
+  position: relative;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  transform: scale(1.5)             
+  translateX(-35%);
+  z-index: 99;
+  transition:all 0.5s ease-in-out;
+  -webkit-transition:all 0.2s ease-in-out;
+}
+
+.vertline {
+  border-left: 5px solid #212121;
+  height: 100px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+*, *:before, *:after {
+	 box-sizing: border-box;
+	 outline: none;
+}
+
+.hover {
+	 position: relative;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 width: 400px;
+	 height: 65px;
+	 background-color: #e3c0ff;
+	 border-radius: 99px;
+	 box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	 transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+	 overflow: hidden;
+}
+
+ .hover:before, .hover:after {
+	 position: absolute;
+	 top: 0;
+	 display: flex;
+	 align-items: center;
+   justify-content: center;
+	 width: 50%;
+	 height: 100%;
+	 transition: 0.25s linear;
+	 z-index: 1;
+}
+
+ .hover:before {
+	 content: '';
+	 left: 0;
+	 background-color: #ca86ec;
+   color: #212121;
+}
+
+ .hover:after {
+	 content: '';
+	 right: 0;
+	 background-color: #d896ff;
+}
+
+ .hover:hover {
+	 background-color: #cc8bff;
+	 box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+ .hover:hover span {
+	 opacity: 0;
+	 z-index: -3;
+}
+
+ .hover:hover:before {
+	 opacity: 0.5;
+	 transform: translateY(-100%);
+}
+
+ .hover:hover:after {
+	 opacity: 0.5;
+	 transform: translateY(100%);
+}
+
+ .hover span {
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 text-align: center;
+	 width: 100%;
+	 height: 100%;
+	 color: #212121;
+	 font-size: 24px;
+	 font-weight: 700;
+	 opacity: 1;
+	 transition: opacity 0.25s;
+	 z-index: 2;
+   white-space:pre;
+}
+
+ .hover .doc-link {
+	 position: relative;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 text-align: center;
+	 width: 25%;
+	 height: 100%;
+	 color: whitesmoke;
+	 font-size: 24px;
+	 text-decoration: none;
+	 transition: 0.25s;
+}
+ .hover .doc-link i {
+	 text-shadow: 1px 1px rgba(70, 98, 127, 0.7);
+	 transform: scale(1);
+}
+ .hover .doc-link:hover {
+	 background-color: rgba(245, 245, 245, 0.1);
+}
+ .hover .doc-link:hover i {
+	 animation: bounce 0.4s linear;
+}
+ @keyframes bounce {
+	 40% {
+		 transform: scale(1.4);
+	}
+	 60% {
+		 transform: scale(0.8);
+	}
+	 80% {
+		 transform: scale(1.2);
+	}
+	 100% {
+		 transform: scale(1);
+	}
+}
+
+.boxl {
+    width: 50%;
+    margin: 5px;
+    text-align: center;
+}
+
+.boxr {
+    margin: 5px;
+    text-align: center;
+}
+
+.picr {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+</style>
+
 ```{r load_packages, echo = FALSE, message=FALSE, warning=FALSE}
 library(tidyverse)
 library(fontawesome)
@@ -22,13 +314,24 @@ library(here)
 library(xaringanthemer)
 ```
 
-```{r echo = FALSE}
+```{css echo=FALSE}
+.highlight-last-item > ul > li,
+.highlight-last-item > ol > li {
+  opacity: 0.5;
+}
+.highlight-last-item > ul > li:last-of-type,
+.highlight-last-item > ol > li:last-of-type {
+  opacity: 1;
+}
+```
+
+```{r echo = FALSE, purl=FALSE}
 xaringanthemer::style_duo(
   primary_color = "#212121",
-  secondary_color = "#8cc39c",
-  link_color = "#9db6e5",
+  secondary_color = "#bff4ee",
+  link_color = "#b1ead6",
   code_inline_background_color = "transparent",
-  code_inline_color = "#009688",
+  code_inline_color = "#b2dfdb",
   code_highlight_color = "#212121",
   text_bold_color = "#00b0cc",
   table_row_border_color = "#212121",
@@ -46,7 +349,7 @@ xaringanExtra::use_panelset()
 
 xaringanExtra::use_logo(
   image_url = here::here("static", "img", "course_hex.png"),
-  link_url = "https://edp617.asocialdatascientist.com",
+  link_url = "https://edp619.asocialdatascientist.com",
   position = xaringanExtra::css_position(top = "1em", right = "1em")
 )
 
@@ -301,15 +604,29 @@ gsub("<thead>.*</thead>", "", middle_table)
 
 # Which One to Use?
 
+--
+
 You don't have to formally declare a model. In fact, unless specific circumstances demand it, its better that you probably don't. Recently there has been a push to get away from a design oriented evaluation approach which is good for many reasons - for one you aren't pigeonholing yourself to a predetermined structure that 
 
-1. may not apply exactly resulting in skewed results, and
+--
 
-2. dilutes or suppresses creativity and thinking. 
+1. may not apply exactly resulting in skewed results
+
+--
+
+2. dilutes or suppresses creativity and thinking
+
+--
 
 This allows you to deal with the program as is rather than viewing it through framework of a model. The bottom line is if we believe that *no two programs are alike, then why should we use a one size fit all approach to study it?*
 
-So should you care? Yes because even though a prior framework is likely not the best tool to use, you'll use parts of multiple models here and there. So rather than treating these as musts, think of them as possible approaches that can be combined, expanded, ignored, etc. Like anything else, they can help but most evaluations should never rely on any one of them.
+---
+
+# So should you care? 
+
+--
+
+Yes because even though a prior framework is likely not the best tool to use, you'll use parts of multiple models here and there. So rather than treating these as musts, think of them as possible approaches that can be combined, expanded, ignored, etc. Like anything else, they can help but most evaluations should never rely on any one of them.
 <br>
 <center>
 <audio controls preload="auto">

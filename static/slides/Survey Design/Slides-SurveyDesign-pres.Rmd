@@ -1,0 +1,1348 @@
+---
+title: 'Survey Design'
+subtitle: 'A Short But Not So Short Overview of
+Crafting Good Questions'
+author: 'Dr. Abhik Roy'
+output: 
+ xaringan::moon_reader:
+   css: ['../xaringan-themer.css', '../custom.css']
+   math_method: 
+      engine: mathjax
+      url: https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml-full.js
+   nature:
+     ratio: 16:9
+     highlightStyle: github
+     highlightLines: true
+     countIncrementalSlides: false
+     navigation:
+         scroll: false
+     beforeInit: ["../custom.js"]
+---
+
+```{r setup, echo=FALSE, warning=FALSE, message=FALSE, include=FALSE}
+source(here::here("static", "slides", "all.R"))
+```
+
+```{css echo=FALSE}
+.highlight-last-item > ul > li,
+.highlight-last-item > ol > li {
+  opacity: 0.5;
+}
+.highlight-last-item > ul > li:last-of-type,
+.highlight-last-item > ol > li:last-of-type {
+  opacity: 1;
+}
+```
+
+---
+
+class: highlight-last-item
+layout: true
+
+---
+
+#  Dislaimer
+
+My voice does not sound like Morgan Freeman at all, but most pages will have some audio that will hopefully be clear enough to help you to understand a bit more about the content.
+
+.center2[
+<audio controls preload="auto">
+  <source src="audio/survey/S0_Introduction.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+]
+
+---
+
+#  The Tailored Design Method (TDM) 
+
+<div style="margin-left: 395px; margin-top: 300px; position:absolute;">
+<center>
+<audio controls preload="auto">
+  <source src="audio/survey/S1_TDM_A.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+<br>
+<center>
+<audio controls preload="auto">
+  <source src="audio/survey/S1_TDM_B.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+</div>
+
+--
+
+- Premised on social exchange perspective on human behavior - *You do something for me, and I do something for you*
+
+--
+
+- Assumes that the likelihood of responding is greater when the expected rewards outweigh the anticipated costs - *Increased benefits with decreased costs*
+
+
+
+---
+
+# Approaches to Increasing Benefits 
+
+<div style="margin-left: 700px; margin-top: 150px; position:absolute;">
+<center>
+<audio controls preload="auto">
+  <source src="audio/survey/S2_IncreasingBenefits.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+</div>
+
+--
+
+- Provide information about the survey
+
+--
+
+- Ask for help or advice
+
+--
+
+- Show positive regard
+
+--
+
+- Say thank you!
+
+--
+
+- Support group values
+
+--
+
+- Give tangible rewards 
+
+--
+
+- Make the questionnaire interesting
+
+--
+
+- Provide social validation
+
+--
+
+- Inform people that opportunities to respond are limited
+
+---
+
+# Approaches to Decreasing Costs 
+
+<div style="margin-left: 700px; margin-top: 250px; position:absolute;">
+<center>
+<audio controls preload="auto">
+  <source src="audio/survey/S3_Decreasing Costs.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+</div>
+
+--
+
+- Avoid subordinating language
+
+--
+
+- Emphasize similarity to other requests or tasks to which a person has already responded
+
+--
+
+- Make it convenient to respond
+
+--
+
+- Make the questionnaire short and easy to complete
+
+--
+
+- Minimize requests for personal or sensitive information
+
+---
+
+#  Establishing Trust
+
+<div style="margin-left: 700px; margin-top: 175px; position:absolute;">
+<center>
+<audio controls preload="auto">
+  <source src="audio/survey/S4_EstiablishingTrust.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+</div>
+
+--
+
+- Provide information about the survey
+
+--
+
+- Ask for help or advise
+
+--
+
+- Show positive regard
+
+--
+
+- Say thank you!
+
+---
+
+#  Choosing Words and Forming Question
+
+--
+
++ Ask one question at a time
+
+--
+
++ Be sure the question specifies the response task
+
+--
+
++ Make sure the question applies to the respondent
+
+--
+
++ Make sure the question is technically accurate
+
+--
+
++ Make sure *yes* means **yes** and *no* means **no**
+
+--
+
++ Use complete sentences with simple sentence structures
+
+--
+
++ Use as few words as possible to pose the question
+
+--
+
++ Use specific and concrete words to specify the concepts clearly
+
+--
+
++ Use simple and familiar words
+
+---
+
+# Visual Presentation of Survey Questions (1/2)
+
+--
+
++ Choose line spacing, font, and text size to ensure the legibility of the text
+
+--
+
++ Integrate special instructions into the question where they will be used rather than including them as freestanding entities
+
+--
+
++ Make sure words and visual elements that make up the question send consistent messages
+
+--
+
++ Organize each question in a way that minimizes the need to reread portions in order to comprehend the response task
+
+--
+
++ Separate optional or occasionally needed instructions from the question stem by font or symbol variation
+
+
+---
+
+# Visual Presentation of Survey Questions (2/2)
+
+--
+
++ Use darker and/or larger print for the question and lighter and/or smaller print for answer choices and answer spaces
+
+--
+
++ Use spacing to create subgrouping within a question
+
+--
+
++ Use visual design properties to emphasize elements that are important to the respondent and to de-emphasize those that are not
+
+--
+
++ Visually standardize all answer spaces or response options
+
+---
+
+#  First Things First: Avoid Double-Barreled Questions!
+
+--
+
+<br>
+<br>
+.pull-left[
+<img src="img/image2a.png" width="75%" height="75%"/>
+]
+
+--
+
+.pull-left[
+<img src="img/image2b.png" width="75%" height="75%"/>
+]
+
+---
+
+#  Double-Barreled Questions – What’s the problem? 
+
+<div style="margin-left: 395px; margin-top: 350px; position:absolute;">
+<center>
+<audio controls preload="auto">
+  <source src="audio/survey/S6_DoubleBarrel.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+</div>
+
+--
+
+<center>
+<img src="img/image3.png" width="35%" height="35%"/>
+</center>
+<br>
+
+--
+
+<hr style="width:100px; margin: auto;" />
+<br>
+<br>
+<center>
+Respondents don’t know what you are asking for
+</center>
+
+--
+
+<br>
+<center>
+If the answer is <b>Yes</b>, then are the respondents saying it for the burger, fries, or both?
+</center>
+
+--
+
+<br>
+<center>
+This can lead to massive bias, unreliable or unusable results
+</center>
+
+---
+
+# Structures
+
+**The following slides consist of examples of common structures of survey items.**
+ 
+***This is by no means comprehensive!***
+
+---
+
+##  Nominal Type Questions 
+
+.center2[
+<img src="img/image4.png" width="100%" style="background-color:#212121;"/>
+]
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<center>
+<audio controls preload="auto">
+  <source src="audio/survey/S7_Nominal.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+<br>
+<br>
+.footnote[
+*More about [nominal variables](https://statsandr.com/blog/variable-types-and-examples/#nominal)*
+]
+
+---
+
+##  Dichotomous Nominal Type Questions
+
+--
+
+.center2[
+&emsp; &emsp; &emsp; &ensp; &ensp; <img src="img/image5.png" width="65%" />
+]
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<center>
+<audio controls preload="auto">
+  <source src="audio/survey/S8_NominalDich.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+
+---
+
+##  Ordinal Type Questions
+
+--
+
+.center2[
+<img src="img/image6.png" width="95%"/>
+]
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<center>
+<audio controls preload="auto">
+  <source src="audio/survey/S9_Ordinal.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+
+.footnote[
+*More about [ordinal variables](https://statsandr.com/blog/variable-types-and-examples/#ordinal)*
+]
+
+---
+
+## More About Ordinal Type Questions
+
+--
+
+<br>
+<br>
+.center2[
+<img src="img/image7.png" width="95%" height="95%"/>
+]
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+---
+
+### Ordinal or Nominal?
+
+--
+
+<br>
+<center>
+<audio controls preload="auto">
+  <source src="audio/survey/S10_OrdinalorNominal_1.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+<br>
+<br>
+<br>
+
+.pull-left[
+<img src="img/image8a.png" width="95%" height="95%"/>
+]
+
+.pull-right[
+<img src="img/image8b.png" width="95%" height="95%"/>
+]
+
+<br>
+<br>
+.pull-left[
+<center>
+<audio controls preload="auto">
+  <source src="audio/survey/S10_OrdinalorNominal_2.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+]
+.pull-right[
+<center>
+<audio controls preload="auto">
+  <source src="audio/survey/S10_OrdinalorNominal_3.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+]
+
+.footnote[Order of audio files: top > left > right]
+
+---
+
+## Semantic Differentials
+
+<div style="margin-left: 575px; margin-top: 370px; position:absolute;">
+<audio controls preload="auto">
+  <source src="audio/survey/S11_SemanticDiff.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</div>
+
+--
+
+<br>
+.pull-left[
+<img src="img/image9a.png" width="65%" height="65%"/>
+]
+
+--
+
+.pull-right[
+<img src="img/image9b.png" width="55%" height="55%"/>
+]
+
+--
+
+.pull-left[
+<img src="img/image9c.png" width="65%" height="30%"/>
+]
+
+
+.pull-right[
+]
+
+---
+
+## Visual Analogs
+
+<div style="margin-left: 380px; margin-top: 380px; position:absolute;">
+<center>
+<audio controls preload="auto">
+  <source src="audio/survey/S12_VisualAnalogs.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+</div>
+
+--
+
+<center>
+<img src="img/image10a.png" width="45%" height="45%"/>
+</center>
+
+--
+
+<br>
+<br>
+<center>
+<img src="img/image10b.png" width="65%" height="65%"/>
+</center>
+
+---
+
+## Guttman Scaling
+
+--
+
+.center2[
+<img src="img/image11.png" width="100%" height="100%"/>
+]
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<center>
+<audio controls preload="auto">
+  <source src="audio/survey/S13_GuttmanScaling.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+
+---
+
+## Filters/Skip Patterns
+
+<div style="margin-left: 700px; margin-top: 175px; position:absolute;">
+<center>
+<audio controls preload="auto">
+  <source src="audio/survey/S15_SkipLogic.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+</div>
+
+--
+
+Comes in many names:
+
+--
+
+> Skip logic
+
+--
+
+> Conditional Branching
+
+--
+
+> Conditional Logic
+
+--
+
+<br>
+.pull-left[
+<img src="img/image13.png" width="80%" height="80%" />
+]
+
+.pull-right[
+]
+
+
+---
+
+# Closed Ended
+
+.center2[
+<audio controls preload="auto">
+  <source src="audio/survey/S16_ClosedEnded.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+]
+
+---
+
+# General Structural Guidelines
+
+--
+
+- State both positive and negative sides in the question stem when asking either/or types of questions
+
+--
+
+- Develop lists of answer categories that include all reasonable possible answers
+
+--
+
+- Develop lists of answer categories that are mutually exclusive
+
+--
+
+- Maintain spacing between answer categories that is consistent with measurement intent
+
+---
+
+## Positive and Negative Sides in Question Stem
+
+<div style="margin-top: 380px; margin-left: 20px; position:absolute;">
+<audio controls preload="auto">
+  <source src="audio/survey/S17_PosNegStem.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</div>
+
+--
+
+.pull-left[
+<img src="img/image14a.png" width="57%" height="57%" />
+]
+
+--
+
+.pull-right[
+<img src="img/image14c.png" width="80%" height="80%" />
+]
+
+--
+
+.pull-left[
+<img src="img/image14b.png" width="70%" height="70%" />
+]
+
+--
+
+.pull-right[
+<img src="img/image14d.png" width="80%" height="80%" />
+]
+
+---
+
+## Exhaustive and Mutually Exclusive Questions
+
+<div style="margin-left: 380px; margin-top: 380px; position:absolute;">
+<center>
+<audio controls preload="auto">
+  <source src="audio/survey/S18_ExhaustiveAndME.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+</div>
+
+--
+
+.pull-left[
+<center>
+<img src="img/image15.png" width="97%" height="97%" />
+</center>
+]
+
+--
+
+.pull-right[
+<center>
+<img src="img/image16.png" width="97%" height="97%" />
+</center>
+]
+
+---
+
+## Spacing Response Options Evenly
+
+---
+
+<div style="margin-left: 380px; margin-top: 540px; position:absolute;">
+<center>
+<audio controls preload="auto">
+  <source src="audio/survey/S19_Spacing.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+</div>
+
+<br>
+<br>
+<center>
+&emsp; &emsp; &emsp; &nbsp; <img src="img/image17a.png" width="68%" height="68%" />
+</center>
+
+--
+
+<br>
+<br>
+<center>
+<img src="img/image17b.png" width="60%" height="60%" />
+</center>
+
+---
+
+# Closed-Ended Questions: Nominal Scales
+
+--
+
+- Ask respondents to rank only a few items at once rather than a long list
+
+--
+
+- Avoid bias from unequal comparisons
+
+--
+
+- Randomize response options if there is concern about order effects
+
+--
+
+- Use forced-choice questions rather than check-all-that-apply questions
+
+--
+
+- Consider using differently shaped answer spaces (circles and squares if possible) to help respondents distinguish between single- and multiple-answer questions
+
+---
+
+## Unordered
+
+<div style="margin-left: 700px; margin-top: 150px; position:absolute;">
+<center>
+<audio controls preload="auto">
+  <source src="audio/survey/S20_Unordered.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+</div>
+
+--
+
+<img src="img/image18a.png" width="50%" height="50%" />
+
+--
+
+<br>
+.pull-left[
+<img src="img/image18b.png" width="100%" height="100%" />
+]
+
+
+.pull-right[
+
+]
+
+---
+
+## Unordered
+
+.center2[
+<img src="img/image18c.png" width="90%" height="90%" />
+]
+
+---
+
+## Comparisons (1/2)
+
+--
+
+<br>
+<center>
+<img src="img/image19a.png" width="50%" height="50%" />
+</center>
+<br>
+
+--
+
+<hr style="width:100px; margin: auto;" />
+<br>
+<center>
+<img src="img/image19b.png" width="50%" height="50%" />
+</center>
+<br>
+
+---
+
+## Comparisons (2/2)
+
+<div style="margin-left: 380px; margin-top: 440px; position:absolute;">
+<center>
+<audio controls preload="auto">
+  <source src="audio/survey/S21_Comparisons.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+</div>
+
+--
+
+<br>
+<center>
+<img src="img/image19c.png" width="50%" height="50%" />
+</center>
+<br>
+
+--
+
+<hr style="width:100px; margin: auto;" />
+<br>
+<center>
+&emsp; &nbsp; <img src="img/image19d.png" width="53%" height="53%" />
+</center>
+
+---
+
+## Check-all-that-Apply versus Forced-Choice
+
+<div style="margin-left: 380px; margin-top: 380px; position:absolute;">
+<center>
+<audio controls preload="auto">
+  <source src="audio/survey/S22_ForcedChoice.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+</div>
+
+--
+
+<br>
+<br>
+<br>
+<br>
+.pull-left[
+<center>
+<img src="img/image20a.png" width="95%" height="95%" />
+</center>
+]
+
+--
+
+.pull-right[
+<center>
+<img src="img/image20b.png" width="95%" height="95%" />
+</center>
+]
+
+---
+
+## Distinguishing Between Single-and Multiple-Answer Questions
+
+<div style="margin-left: 380px; margin-top: 340px; position:absolute;">
+<center>
+<audio controls preload="auto">
+  <source src="audio/survey/S23_SingleMultipleChoice.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+</div>
+
+--
+
+<br>
+<br>
+.pull-left[
+<center>
+<img src="img/image21a.png" width="100%" height="100%" />
+</center>
+]
+
+--
+
+.pull-right[
+<center>
+<img src="img/image21b.png" width="100%" height="100%" />
+</center>
+]
+
+---
+
+# Closed-Ended Questions: Ordinal Scales
+
+--
+
+- Align response options vertically in one column or horizontally in one row and strive for equal distance between categories
+
+--
+
+- Carefully evaluate the use of numeric labels and their impact on measurement
+
+--
+
+- Choose an appropriate scale length—in general, limit scales to four or five categories
+
+--
+
+- Choose direct or construct-specific labels to improve cognition
+
+--
+
+- Consider how verbally labeling and visually displaying all response categories may influence answers
+
+--
+
+- Place non-substantive options at the end of the scale and separate them from substantive options
+
+--
+
+- Provide scales that approximate the actual distribution of the characteristic in the population
+
+--
+
+- Provide balances scales where categories are relatively equal distances apart conceptually
+
+---
+
+## Scalar Questions (1/2)
+
+<div style="margin-left: 700px; margin-top: 170px; position:absolute;">
+<center>
+<audio controls preload="auto">
+  <source src="audio/survey/S24_Scalar.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+</div>
+
+--
+
+.pull-left[
+<center>
+<img src="img/image22a.png" width="95%" />
+</center>
+<br>
+<center>
+<img src="img/image22b.png" width="95%" />
+</center>
+]
+
+.pull-right[
+]
+
+--
+
+<br>
+.pull-left[
+<center>
+<img src="img/image22c.png" width="100%" />
+</center>
+]
+
+.pull-right[
+]
+
+---
+
+## Scalar Questions (2/2)
+
+--
+
+<br>
+<br>
+.pull-left[
+<center>
+<img src="img/image23a.png" width="65%" />
+</center>
+]
+
+.pull-right[
+<center>
+<img src="img/image23b.png" width="65%" />
+</center>
+]
+
+.footnote[
+*Note: Here we're referring to balanced scales as having choices that are equidistant from each other*]
+
+---
+
+## Aligning the Conceptual and Visual Midpoints
+
+--
+
+**This is by far one of the most important criteria to check off when considering survey aesthetics!**
+
+---
+
+<br>
+.pull-left[
+<center>
+<img src="img/image24.png" width="85%" />
+</center>
+]
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+.pull-right[
+<center>
+<audio controls preload="auto">
+  <source src="audio/survey/S25_Align.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+]
+
+---
+
+# Open Ended
+
+.center2[
+<audio controls preload="auto">
+  <source src="audio/survey/S26_OpenEnded.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+]
+
+---
+
+## Open-Ended Numerical
+
+--
+
+- Ask for the specific unit desired in the question stem
+
+--
+
+- Provide answer spaces that are sized appropriately for the response task
+
+--
+
+- Provide units labels with the answer spaces
+
+---
+
+## Numeric
+
+<div style="margin-top: 200px; margin-left: 700px; position:absolute;">
+<audio controls preload="auto">
+  <source src="audio/survey/S27_Numerical.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</div>
+
+--
+
+.pull-left[
+<img src="img/image25a.png" width="70%" height="30%" />
+]
+<br>
+
+.pull-right[
+
+]
+
+--
+
+.pull-left[
+<img src="img/image25b.png" width="75%" height="33%" />
+]
+
+.pull-right[
+]
+
+--
+
+.pull-left[
+<img src="img/image25c.png" width="75%" height="30%" />
+]
+
+.pull-right[
+]
+
+--
+
+
+.pull-left[
+<img src="img/image25d.png" width="75%" height="33%" />
+]
+
+.pull-right[
+]
+
+
+---
+
+## Open-Ended Lists
+
+--
+
+- Design the answer spaces to support the number and type of responses desired
+
+--
+
+- Provide labels with answer spaces to reinforce the type of response requested
+
+--
+
+- Specify the number and type of responses desired in the question 
+
+---
+
+## Lists
+
+<div style="margin-top: 200px; margin-left: 700px; position:absolute;">
+<audio controls preload="auto">
+  <source src="audio/survey/S28_Lists.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</div>
+
+--
+
+.pull-left[
+&nbsp; &nbsp; &emsp; &emsp; &nbsp;<img src="img/image26a.png" width="40%"/>
+]
+
+.pull-right[
+]
+
+--
+
+.pull-left[
+&emsp; &emsp; &nbsp; &nbsp; &nbsp;<img src="img/image26b.png" width="42%"/>
+]
+
+.pull-right[
+]
+
+--
+
+.pull-left[
+<img src="img/image26c.png" width="64%" />
+]
+
+.pull-right[
+]
+
+
+---
+
+# Open-Ended Explanatory 
+
+--
+
+- Consider programming probes to open-ended responses in internet surveys
+
+--
+
+- Provide adequate space for respondents to completely answer the question
+
+--
+
+- Provide extra motivation to respond
+
+--
+
+- Use scrollable boxes on internet surveys
+
+---
+
+## Explanatory
+
+<div style="margin-left: 100px; margin-top: 390px; position:absolute;">
+<center>
+<audio controls preload="auto">
+  <source src="audio/survey/S29_Explanatory.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+</div>
+
+--
+
+<br>
+.pull-left[
+<center>
+<img src="img/image27a.png" width="59%" height="59%" />
+</center>
+]
+
+.pull-right[
+]
+
+--
+
+.pull-left[
+]
+
+<br>
+<br>
+<br>
+<br>
+.pull-right[
+<center>
+<img src="img/image27b.png" width="92%" height="92%" />
+</center>
+]
+
+
+---
+
+# Partially Closed
+
+---
+
+## Partially Closed Nominal
+
+--
+
+.center2[
+<img src="img/image28.png" width="75%" height="75%" />
+]
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<center>
+<audio controls preload="auto">
+  <source src="audio/survey/S30_PartiallyClosed.mp3" type="audio/mpeg">
+  Your browser does not support embedded audio.
+<audio>
+</center>
+
+---
+
+## Thats it!
+
+If you have any questions, please reach out
+
+--
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<center>
+<br><br>
+<div class="fade_rule"></div>  
+<br><br>
+</center>
+
+<center>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><br />This work is licensed under a <br /><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>
+</center>

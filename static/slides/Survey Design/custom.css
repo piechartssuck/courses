@@ -11,10 +11,3 @@
         background-image: -ms-linear-gradient(left , white 2%, #E6E6E6 50%, white 98%);
         background-image: -webkit-gradient( linear, left bottom, right bottom, color-stop(0.02, white), color-stop(0.5, gray), color-stop(0.98, white) );
 }
-
-.remark-slide-scaler {
-  box-shadow: none; /* remove slide frame */
-}
-.remark-slide-container {
-  background: #282A35; /* match slide container color with slides */
-}

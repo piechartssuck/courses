@@ -1,0 +1,77 @@
+---
+title: "Aims, Scope, and Sequencing"
+linktitle: "Week 3: Aims, Scope, and Sequencing"
+output:
+  rmarkdown::html_document
+menu:
+  due:
+    parent: "To Do List"
+    weight: 3
+type: docs
+weight: 2
+---
+
+`r blogdown::shortcode("aes-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r eval = TRUE, echo = FALSE}
+wk_post <- 
+  
+  tibble(
+
+Description = c("Read <i>What is Evaluation?</i> in Davidson (2007)",
+                "Read <i>Defining the Purpose of Evaluation</i> in Davidson (2007)",
+                "Read <i>Identifying Evaluative Criteria</i> in Davidson (2007)",
+                "Respond to one post on <a style='color:#5eb0e5;'>\\ #wk2-rethinking-the-way-you-think</a>",
+                "Create a post at <a style='color:#5eb0e5;'>\\ #wk3-criteria</a> based on the readings",
+                "Finalize your teams over on <a style='color:#5eb0e5;'>\\ #wk2-talk-about-logistics</a> and submit a completed file to eCampus",
+                "Take a look at some popular evaluation approaches courtesy of the CDC",
+                "Go through the slideshow <span style='color:#6ac4cd;font-weight:bold'>What the Hell is Program Evaluation?</span>",
+                "Take a look at the criteria needed for an <span style='color:#52bf90; font-weight:bold;'>Evaluation Prospectus</span> due at the <i><b>end of next week!</b></i>"
+                ),
+
+
+Details = c("<a href='/readings/03-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/readings/03-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/readings/03-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/tasks/03-tasks/#responses'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/tasks/03-tasks/#postings'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+             "<a href='/tasks/03-tasks/#create-an-evaluation-team'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/tasks/03-tasks/#view-evaluation-approaches'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/tasks/03-tasks/#review-a-slideshow'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/tasks/03-tasks/#deliverable'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
+            ),
+
+Icon = c("library",
+         "library",
+         "library",
+         "slack",
+         "slack",
+         "ecampus",
+         "pdf",
+         "slideshow",
+         "ecampus"),
+
+Site = c( "https://methods-sagepub-com.wvu.idm.oclc.org/book/evaluation-methodology-basics/n1.xml",
+         "https://methods-sagepub-com.wvu.idm.oclc.org/book/evaluation-methodology-basics/n2.xml",
+         "https://methods-sagepub-com.wvu.idm.oclc.org/book/evaluation-methodology-basics/n3.xml",
+         "https://edp617spring2023.slack.com/archives/C04K8C5BX8C",
+         "https://edp617spring2023.slack.com/archives/C04LEHZTFFD",
+         "https://ecampus.wvu.edu",
+         "",
+         "",
+         "https://ecampus.wvu.edu")
+)
+```
+
+<center>
+`r knitr::spin_child(here::here("content", "post_frame.R"))`
+</center>
+

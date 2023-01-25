@@ -14,6 +14,7 @@ weight: 2
 <script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
 
 <link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
+
 {{% aes-header %}}
 
 <center>
@@ -67,7 +68,7 @@ Create a post at <a style="color:#5eb0e5;"> #wk2-rethinking-the-way-you-think</
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Begin looking for evaluation team members on <a style="color:#ff8384;"> #wk2-talk-about-logistics</a>
+Begin looking for evaluation team members on <a style="color:#5eb0e5;"> #wk2-talk-about-logistics</a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/tasks/02-tasks/#teams"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>

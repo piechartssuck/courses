@@ -1,5 +1,10 @@
+library(renderthis)
+
 # Set the working directory as source ----
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 
-pagedown::chrome_print("Data Collection.Rmd")
+remotes::install_github("rstudio/chromote")
 
+renderthis::to_pdf("Data-Collection-flat.html",
+                   complex_slides = TRUE, 
+                   partial_slides = FALSE)

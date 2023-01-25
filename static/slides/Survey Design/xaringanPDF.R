@@ -1,5 +1,11 @@
+library(renderthis)
+
 # Set the working directory as source ----
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 
-pagedown::chrome_print("Survey_Design.Rmd")
+remotes::install_github("rstudio/chromote")
+
+renderthis::to_pdf(from = "Slides-SurveyDesign-flat.Rmd", 
+                   complex_slides = TRUE, 
+                   partial_slides = FALSE)
 

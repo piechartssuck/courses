@@ -1,0 +1,555 @@
+---
+title: 'EDP 617: A Short Course on Evaluation Models'
+subtitle: 'A Tiny Primer'
+output: 
+ xaringan::moon_reader:
+   css: ['xaringan-themer.css', 'custom.css']
+   nature:
+     ratio: 16:9
+     highlightStyle: github
+     highlightLines: true
+     countIncrementalSlides: false
+     navigation:
+         scroll: false
+---
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+  MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+    cancel: ["Extension","cancel"],
+    bcancel: ["Extension","cancel"],
+    xcancel: ["Extension","cancel"],
+    cancelto: ["Extension","cancel"]
+  });
+});
+</script>
+
+<style>
+section {
+    display: flex;
+    display: -webkit-flex;
+}
+
+section {
+    height: 600px;
+    width: 60%;
+    margin: auto;
+    border-radius: 21px;
+    background-color: #212121;
+}
+
+.remark-slide-container {
+background: #212121;
+}
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
+}
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
+}
+
+
+.hljs-github .hljs {
+    background: transparent;
+    color: #b2dfdb;
+}
+
+.hljs-github .hljs-keyword {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-literal {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-number {
+    color: #64b5f6;
+}
+
+.hljs-github .hljs-string {
+    color: #b7b3ef;
+}
+
+section p {
+    text-align: center;
+    font-size: 30px;
+    background-color: #212121;
+    border-radius: 21px;
+    font-family: Roboto Condensed;
+    font-style: bold;
+    padding: 12px;
+    color: #bff4ee;
+    margin: auto;
+}
+
+#center {
+text-align: center;
+}
+
+#right {
+  text-align: right;
+} 
+
+.center p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.tab {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.tabdbl {
+    display: inline-block;
+    margin-left: 80px;
+}
+
+.tabtpl {
+    display: inline-block;
+    margin-left: 120px;
+}
+
+
+.obr
+{
+    display:block;
+    margin-top:-15px;
+}
+
+.pull-left-left {
+  float: left;
+  width: 27%;
+}
+
+.pull-right-right {
+  float: right;
+  width: 32%;
+}
+
+img.expand:hover {
+  margin: 0 auto;
+  position: relative;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  transform: scale(1.5)             
+  translateX(-35%);
+  z-index: 99;
+  transition:all 0.5s ease-in-out;
+  -webkit-transition:all 0.2s ease-in-out;
+}
+
+.vertline {
+  border-left: 5px solid #212121;
+  height: 100px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+*, *:before, *:after {
+	 box-sizing: border-box;
+	 outline: none;
+}
+
+.hover {
+	 position: relative;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 width: 400px;
+	 height: 65px;
+	 background-color: #e3c0ff;
+	 border-radius: 99px;
+	 box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	 transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+	 overflow: hidden;
+}
+
+ .hover:before, .hover:after {
+	 position: absolute;
+	 top: 0;
+	 display: flex;
+	 align-items: center;
+   justify-content: center;
+	 width: 50%;
+	 height: 100%;
+	 transition: 0.25s linear;
+	 z-index: 1;
+}
+
+ .hover:before {
+	 content: '';
+	 left: 0;
+	 background-color: #ca86ec;
+   color: #212121;
+}
+
+ .hover:after {
+	 content: '';
+	 right: 0;
+	 background-color: #d896ff;
+}
+
+ .hover:hover {
+	 background-color: #cc8bff;
+	 box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+ .hover:hover span {
+	 opacity: 0;
+	 z-index: -3;
+}
+
+ .hover:hover:before {
+	 opacity: 0.5;
+	 transform: translateY(-100%);
+}
+
+ .hover:hover:after {
+	 opacity: 0.5;
+	 transform: translateY(100%);
+}
+
+ .hover span {
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 text-align: center;
+	 width: 100%;
+	 height: 100%;
+	 color: #212121;
+	 font-size: 24px;
+	 font-weight: 700;
+	 opacity: 1;
+	 transition: opacity 0.25s;
+	 z-index: 2;
+   white-space:pre;
+}
+
+ .hover .doc-link {
+	 position: relative;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 text-align: center;
+	 width: 25%;
+	 height: 100%;
+	 color: whitesmoke;
+	 font-size: 24px;
+	 text-decoration: none;
+	 transition: 0.25s;
+}
+ .hover .doc-link i {
+	 text-shadow: 1px 1px rgba(70, 98, 127, 0.7);
+	 transform: scale(1);
+}
+ .hover .doc-link:hover {
+	 background-color: rgba(245, 245, 245, 0.1);
+}
+ .hover .doc-link:hover i {
+	 animation: bounce 0.4s linear;
+}
+ @keyframes bounce {
+	 40% {
+		 transform: scale(1.4);
+	}
+	 60% {
+		 transform: scale(0.8);
+	}
+	 80% {
+		 transform: scale(1.2);
+	}
+	 100% {
+		 transform: scale(1);
+	}
+}
+
+.boxl {
+    width: 50%;
+    margin: 5px;
+    text-align: center;
+}
+
+.boxr {
+    margin: 5px;
+    text-align: center;
+}
+
+.picr {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+</style>
+
+```{r load_packages, echo = FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+library(here)
+library(xaringanthemer)
+```
+
+```{css echo=FALSE}
+.highlight-last-item > ul > li,
+.highlight-last-item > ol > li {
+  opacity: 0.5;
+}
+.highlight-last-item > ul > li:last-of-type,
+.highlight-last-item > ol > li:last-of-type {
+  opacity: 1;
+}
+```
+
+```{r echo = FALSE, purl=FALSE}
+xaringanthemer::style_duo(
+  primary_color = "#212121",
+  secondary_color = "#bff4ee",
+  link_color = "#b1ead6",
+  code_inline_background_color = "transparent",
+  code_inline_color = "#b2dfdb",
+  code_highlight_color = "#212121",
+  text_bold_color = "#00b0cc",
+  table_row_border_color = "#212121",
+  table_row_even_background_color = "#212121",
+  footnote_font_size = "0.6em",
+  header_font_google = xaringanthemer::google_font("Roboto Condensed", "700"),
+  text_font_google   = xaringanthemer::google_font("Roboto Condensed", "400")
+)
+
+xaringanExtra::use_xaringan_extra(c("tile_view", 
+                                    "animate_css", 
+                                    "tachyons"))
+
+xaringanExtra::use_panelset()
+
+xaringanExtra::use_logo(
+  image_url = here::here("static", "img", "course_hex.png"),
+  link_url = "https://edp619.asocialdatascientist.com",
+  position = xaringanExtra::css_position(top = "1em", right = "1em")
+)
+
+opts_chunk$set(dev.args=list(bg="transparent"))
+```
+
+#  Welcome
+
+This is a relatively compact and short introduction to evaluation models.
+
+---
+
+# The Basics 
+
+```{r echo=FALSE}
+basics <- tibble(
+  
+  name = c(
+    "Behavioral Objectives Approach",
+    "The Four-Level Model",
+    "Responsive Evaluation",
+    "Goal-Free Evaluation"
+  ),
+  
+  desc = c("the degree to which the objectives of a program, product, or process have been achieved.",
+           "four levels of training outcomes: reactions, learning, behavior, and results.",
+           "evaluators need to be responsive to the information needs of various audiences or stakeholders.",
+           "the actual outcomes rather than the intended outcomes of a program so the evaluator has minimal contact with the program managers and staff and is unaware of the program’s stated goals and objectives."
+  ),
+
+asks = c("<i>is the program, product, or process achieving its objectives?</i>",
+         "<i>what impact did the training have on participants in terms of their reactions, learning, behavior, and organizational results?</i>",
+         "<i>what does the program look like to different people?</i>",
+         "<i>what are all the effects of the program, including any side effects?</i>"
+         )
+
+)
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(basics,
+      format= "html",
+      escape = FALSE,
+      align = 'lll',
+      col.names = c("Name","Description","Asks")) %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "30em") %>%
+  column_spec(3, width = "15em") %>%
+  row_spec(0:nrow(basics), background = "#212121", extra_css = 'vertical-align: middle !important;')
+
+
+# gsub("<thead>.*</thead>", "", basics_table)
+```
+</center>
+
+---
+
+# Middle of the Pack 
+
+
+```{r echo=FALSE}
+middle <- tibble(
+  
+  name = c(
+    "Adversary/Judicial Approaches",
+    "Consumer Oriented Approaches",
+    "Expertise/Accreditation Approaches",
+    "Organizational Learning",
+    "Success Case Method"
+    ),
+  
+  desc = c("adapt the legal paradigm to program evaluation by first arguing their cases based on the evidence (data) collected followed by a judge or a panel of judges decideing which side has made a better case and makes a ruling.",
+           "to help consumers choose among competing programs or products.",
+           "relies on expert opinion to determine the quality of programs to assess quality.",
+           "a social activity in which evaluation issues are constructed by and
+acted on by organization members and is ongoing and integrated into all work practices.",
+           "the practicalities of defining successful outcomes and success cases and uses some of the processes from theory-driven evaluation to determine
+the linkages, which may take the form of a logic model, an impact model, or
+a results map."
+           ),
+  
+  asks = c("<i>what are the arguments for and against the program?</i>",
+           "<i>would an educated consumer choose this
+program or product?</i>",
+           "<i>how would professionals rate this program?</i>",
+           "<i>what are the information and learning needs of individuals, teams, and the organization in general?</i>",
+           "<i>what is really happening?</i>"
+         )
+)
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(middle, 
+      format= "html",
+      escape = FALSE,
+      align = 'lll',
+      col.names = c("Name","Description","Asks")) %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "30em") %>%
+  column_spec(3, width = "15em") %>%
+  row_spec(0:nrow(basics), background = "#212121", extra_css = 'vertical-align: middle !important;')
+
+# gsub("<thead>.*</thead>", "", middle_table)
+```
+</center>
+
+---
+
+# The Drivers
+
+```{r echo=FALSE}
+driver <- tibble(
+  
+  name = c(
+    "Theory Driven Evaluation",
+    "Utilization Focused Evaluation",
+    "Participatory Evaluation",
+    "Empowerment Evaluation"
+  ),
+  
+  desc = c("theoretical rather than methodological issues bydeveloping a plausible
+model of how the program is supposed to work.",
+           "done for and with specific, intended primary users for specific, intended uses and assumes that stakeholders will have a high degree of involvement in many, if
+not all, phases of the evaluation.",
+           "engaging stakeholders in the evaluation process, so they may better understand evaluation and the program being evaluated and ultimately use the evaluation findings for decision-making purposes.",
+           "use of evaluation concepts, techniques, and findings to foster improvement and self-determination."
+           ),
+  
+  asks = c("<i>how is the program supposed to work? what are the assumptions underlying the program’s development and implementation?</i>",
+           "<i>What are the information needs of stakeholders, and how will they use the findings?</i>",
+           "<i>what are the information needs of those closest to the program?</i>",
+           "<i>what are the information needs to foster improvement and self-determination?</i>"
+         )
+)
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(driver, 
+      format= "html",
+      escape = FALSE,
+      align = 'lll',
+      col.names = c("Name","Description","Asks")) %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "10em") %>%
+  column_spec(2, width = "30em") %>%
+  column_spec(3, width = "15em") %>%
+  row_spec(0:nrow(basics), background = "#212121", extra_css = 'vertical-align: middle !important;')
+
+# gsub("<thead>.*</thead>", "", driver_table)
+```
+</center>
+
+---
+
+# Which One to Use?
+
+You don't have to formally declare a model. In fact, unless specific circumstances demand it, its better that you probably don't. Recently there has been a push to get away from a design oriented evaluation approach which is good for many reasons - for one you aren't pigeonholing yourself to a predetermined structure that 
+
+1. may not apply exactly resulting in skewed results, and
+
+2. dilutes or suppresses creativity and thinking. 
+
+This allows you to deal with the program as is rather than viewing it through framework of a model. The bottom line is if we believe that *no two programs are alike, then why should we use a one size fit all approach to study it?*
+
+---
+
+# So should you care? 
+
+Yes because even though a prior framework is likely not the best tool to use, you'll use parts of multiple models here and there. So rather than treating these as musts, think of them as possible approaches that can be combined, expanded, ignored, etc. Like anything else, they can help but most evaluations should never rely on any one of them.
+
+---
+
+# And That's It
+
+Remember that models don't determine the course of an evaluation - you do! Use your best judgment, common sense, content knowledge, expertise, etc - the things that hopefully distinguish you both professionally and academically to administer a study. If you have any questions, please feel free to reach out.
+
+<center>
+<br><br>
+<div class="fade_rule"></div>  
+<br><br>
+</center>
+<br><br><br><br><br><br><br><br>
+<center>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><br />This work is licensed under a <br /><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>
+</center>
