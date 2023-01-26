@@ -793,6 +793,13 @@ Long
 </center>
 ]
 
+<center>
+<br>
+<br>
+<i>Download a 
+<a href="https://edp617.asocialdatascientist.com/slides/what%20is%20pe/docs/Blank%20Logic%20Model.pdf" target="_blank">high quality PDF</a></i>
+</center>
+
 .footnote[<i>Other 
 <a href="https://fyi.extension.wisc.edu/programdevelopment/logic-models/" target="_blank">types of logic models</a></i>]
 
@@ -803,6 +810,13 @@ Long
 <br>
 <center>
 <img src="img/REDACTED Logic Model.png" width="50%" style="background-color:#212121;"/>
+</center>
+
+<center>
+<br>
+<br>
+<i>Download a 
+<a href="https://edp617.asocialdatascientist.com/slides/what%20is%20pe/docs/REDACTED%20Logic%20Model.pdf" target="_blank">high quality PDF</a></i>
 </center>
 
 .footnote[<i>More 
