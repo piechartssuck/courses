@@ -87,26 +87,23 @@ of something or the product of that process
 --
 
 <br>
-<br>
-<br>
-<br>
-.center2[
 .pull-left[
+<br>
+<br>
+<br>
+<br>
+<br>
+<i>Think about this:</i>
+<br>
+<br>
 What do <span style="color:#f19bcf; font-style: italic;">merit</span>, <span style="color:#f19bcf; font-style: italic;">worth</span>, and <span style="color:#f19bcf; font-style: italic;">significance</span> mean to you both separately and in combination?
-]]
+]
 
---
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 .pull-right[
-Now listen to these
+<center>
+<i>Then listen to these:</i>
+</center>
 <br>
-
 <center>
 <audio controls preload="auto">
   <source src="audio/criteria/S3a_Merit_Worth_Significance.mp3" type="audio/mpeg">
@@ -191,14 +188,14 @@ to people with grounded knowledge in a particular area
 <br>
 <br>
 .pull-left[
-<p id="center" style="color:#00b0cc; border:1px; border-style:solid; border-color:##00b0cc; border-radius: 25px; padding: 0.3em;">
+<p id="center" style="color:#00b0cc; border:1px; border-style:solid; border-color:##00b0cc; border-radius: 25px; padding: 0.8em;">
 <b><i>Evaluator</i></b><br><br>
 <span style="color:#ffffff;">The person(s) evaluating something</span>
 </p>
 ]
 
 .pull-right[
-<p id="center" style="color:#00b0cc; border:1px; border-style:solid; border-color:##00b0cc; border-radius: 25px; padding: 0.3em;">
+<p id="center" style="color:#00b0cc; border:1px; border-style:solid; border-color:##00b0cc; border-radius: 25px; padding: 0.8em;">
 <b><i>Evaluand</i></b><br><br>
 <span style="color:#ffffff;">The thing(s) being evaluated</span>
 </p>
@@ -278,7 +275,7 @@ Can you think of real world examples of each?
 <br>
 <br>
 .pull-left[
-<p id="center" style="color:#ffb3ba; font-weight: bold; border:1px; border-style:solid; border-color:#ffb3ba; border-radius: 25px; padding: 0.3em;">
+<p id="center" style="color:#ffb3ba; font-weight: bold; border:1px; border-style:solid; border-color:#ffb3ba; border-radius: 25px; padding: 0.8em;">
 <i>Formative</i><br><br>
 Conducted with the intent to improve
 <br><br>
@@ -286,7 +283,7 @@ Conducted with the intent to improve
 ]
 
 .pull-right[
-<p id="center" style="color:#bae1ff; font-weight: bold; border:1px; border-style:solid; border-color:#bae1ff; border-radius: 25px; padding: 0.3em;">
+<p id="center" style="color:#bae1ff; font-weight: bold; border:1px; border-style:solid; border-color:#bae1ff; border-radius: 25px; padding: 0.8em;">
 <i>Summative</i><br><br>
 Conducted with the intent to inform decision making and/or determine judgment
 </p>
@@ -310,30 +307,33 @@ Conducted with the intent to inform decision making and/or determine judgment
 --
 
 .pull-left[
-<p id="center" style="color:#f4dbb5; font-weight: bold; border:1px; border-style:solid; border-color:#f4dbb5; border-radius: 25px; padding: 0.3em;">
+<center>
+<p id="center" style="color:#f4dbb5; font-weight: bold; border:1px; border-style:solid; border-color:#f4dbb5; border-radius: 25px; padding: 0.8em; margin-top: 10px;">
 <i>Developmental</i>
 <br><br>
 To help develop an intervention or program
 <br><br>
 </p>
+</center>
 ]
 
 --
 
 .pull-right[
-<p id="center" style="color:#95f4f1; font-weight: bold; border:1px; border-style:solid; border-color:#95f4f1; border-radius: 25px; padding: 0.3em;">
+<center>
+<p id="center" style="color:#95f4f1; font-weight: bold; border:1px; border-style:solid; border-color:#95f4f1; border-radius: 25px; padding: 0.8em; margin-top: 10px;">
 <i>Accountability</i>
 <br><br>
 To hold accountable
 <br><br>
 </p>
+</center>
 ]
 
 --
 
 <center>
-<br>
-<p id="center" style="color:#ccfaca; font-weight: bold; border:1px; border-style:solid; border-color:#ccfaca; border-radius: 25px; padding: 0.3em; width: 525px;">
+<p id="center" style="color:#ccfaca; font-weight: bold; border:1px; border-style:solid; border-color:#ccfaca; border-radius: 25px; padding: 0.8em; width: 525px; margin-top: 10px;">
 <i>Monitoring</i><br><br>
 To assess implementation and gauge progress toward a desired end
 </p>
@@ -342,22 +342,26 @@ To assess implementation and gauge progress toward a desired end
 
 --
 
+<center style="margin-top: -43px;">
 .pull-left[
-<p id="center" style="color:#f7d5b5; font-weight: bold; border:1px; border-style:solid; border-color:#f7d5b5; border-radius: 25px; padding: 0.3em;">
+<p id="center" style="color:#f7d5b5; font-weight: bold; border:1px; border-style:solid; border-color:#f7d5b5; border-radius: 25px; padding: 0.8em;">
 <i>Knowledge Generation</i><br><br>
 To generate knowledge about general patterns of effectiveness
 </p>
+</center>
 ]
 
 --
 
 .pull-right[
-<p id="center" style="color:#b1d5f7; font-weight: bold; border:1px; border-style:solid; border-color:#b1d5f7; border-radius: 25px; padding: 0.3em;">
+<center>
+<p id="center" style="color:#b1d5f7; font-weight: bold; border:1px; border-style:solid; border-color:#b1d5f7; border-radius: 25px; padding: 0.8em;">
 <i>Ascriptive</i>
 <br><br>
 Merely for the sake of knowing
 <br><br>
 </p>
+</center>
 ]
 
 ---
@@ -368,7 +372,8 @@ Merely for the sake of knowing
 Please take a look at the video from an evaluator named Michael Quinn Patton describing the differences
 </center>
 
-<div class="centerpiece">
+<div class="centerpiece" style="margin-top:60px;">
+
 <iframe width="670.2" height="330.6" src="https://www.youtube.com/embed/Wg3IL-XjmuM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
 </div>
@@ -404,8 +409,12 @@ tibble::tribble(
   "<span style='color:#bae1ff; font-weight: bold;'><i>Summative</i></span> <b>Evaluation</b>"," "," ",
   "The program has been delivered to all principals in the county. What kind of evaluative feedback should the ASDC seek?"," "," "
 ) %>%
- knitr::kable(escape = FALSE)%>%
-  row_spec(0:4, color = "white", background = "#212121")
+ knitr::kable(
+   escape = FALSE,
+   align = 'lcc') %>%
+  kable_styling(full_width = FALSE,
+                bootstrap_options = c('condensed')) %>%
+  row_spec(0:2, background = "#212121", extra_css = 'vertical-align: middle !important;')
 ```
 
 ---
@@ -652,28 +661,31 @@ A &nbsp;<span style="color:#00b0cc; font-weight: bold; font-style: italic;">meta
 
 <br>
 .pull-left[
-<p id="center" style="color:#CA94FF; border:1px; border-style:solid; border-color:#CA94FF; border-radius: 25px; padding: 0.3em;">
+<p id="center" style="color:#CA94FF; border:1px; border-style:solid; border-color:#CA94FF; border-radius: 25px; padding: 0.8em;">
 <i><b>According to the role
 the evaluation plays</b></i><br><br>
 <span style="color:#ffb3ba;">Formative</span> or <span style="color:#bae1ff;">Summative</span>
+<br>
+<br>
 </p>
 ]
 
 --
 
 .pull-right[
-<p id="center" style="color:#CA94FF;border:1px; border-style:solid; border-color:#CA94FF; border-radius: 25px; padding: 0.3em;">
+<p id="center" style="color:#CA94FF;border:1px; border-style:solid; border-color:#CA94FF; border-radius: 25px; padding: 0.8em;">
 <i><b>According to the content or the program phase evaluated</b></i><br><br>
 <span style="color:#e9ebff;">Design</span>, <span style="color:#e9ebff;">Process</span>, or <span style="color:#e9ebff;">Results</span>
+<br>
+<br>
 </p>
 ]
 
 --
 
 <br>
-<br>
 .pull-left[
-<p id="center" style="color:#CA94FF; border:1px; border-style:solid; border-color:#CA94FF; border-radius: 25px; padding: 0.3em;">
+<p id="center" style="color:#CA94FF; border:1px; border-style:solid; border-color:#CA94FF; border-radius: 25px; padding: 0.8em;">
 <i><b>According to the moment of the evaluation</b></i><br><br>
 After the fact - aka <span style="color:#e9ebff;">ex-ante</span> or before the event -aka <span style="color:#e9ebff;">ex-postfacto</span>
 </p>
@@ -682,7 +694,7 @@ After the fact - aka <span style="color:#e9ebff;">ex-ante</span> or before the e
 --
 
 .pull-right[
-<p id="center" style="color:#CA94FF;border:1px; border-style:solid; border-color:#CA94FF; border-radius: 25px; padding: 0.3em;">
+<p id="center" style="color:#CA94FF;border:1px; border-style:solid; border-color:#CA94FF; border-radius: 25px; padding: 0.8em;">
 <i><b>According to the evaluator's role</b></i><br><br>
 <span style="color:#e9ebff;">Internal</span> or <span style="color:#e9ebff;">External</span>
 <br><br>
@@ -774,7 +786,7 @@ After the fact - aka <span style="color:#e9ebff;">ex-ante</span> or before the e
 
 ## Include
 
-<div style="margin-left: 380px; margin-top: 430px; position:absolute;">
+<div style="margin-left: 240px; margin-top: 220px; position:absolute;">
 <center>
 <audio controls preload="auto">
   <source src="audio/standards/S3 Goals.mp3" type="audio/mpeg">
@@ -1183,11 +1195,12 @@ What matters enough to measure given what you know about all the other factors?
 
 <br>
 <br>
+<br>
+<br>
 .pull-left[
 <br>
 <br>
-<br>
-Often very hard to do and do well
+.tabdbl[Often very hard to do and do well]
 ]
 
 --
@@ -1202,6 +1215,7 @@ Almost always addressed in a relative way
 
 <br>
 <center>
+<div style="margin-left: 65px; margin-top: -140px; position:absolute;">
 <audio controls preload="auto">
   <source src="audio/standards/S10 Cost Analysis.mp3" type="audio/mpeg">
   Your browser does not support embedded audio.
@@ -1223,8 +1237,6 @@ Almost always addressed in a relative way
 
 > Stakeholder performance / perception
 ]
-
---
 
 .pull-right[
 In a nutshell

@@ -182,8 +182,8 @@ blockquote {
 }
 .remark-slide table {
   margin: auto;
-  border-top: 1px solid #666;
-  border-bottom: 1px solid #666;
+  border-top: FALSE;
+  border-bottom: FALSE;
 }
 .remark-slide table thead th {
   border-bottom: 1px solid #212121;
