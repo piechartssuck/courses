@@ -30,7 +30,7 @@ Please create **one response** for <a href="https://edp617spring2023.slack.com/a
 
 ### Postings
 
-After going through this week’s [readings](/readings/03-readings), address the following in a single post on the channel <a href="https://edp617spring2023.slack.com/archives/C04LEHZTFFD" target="_blank" style='color:#ff8384;'>\#wk3-criteria</a>
+After going through this week’s [readings](/readings/03-readings), address the following in a single post on the channel <a href="https://edp617spring2023.slack.com/archives/C04LEHZTFFD" target="_blank" style='color:#5eb0e5;'>\#wk3-criteria</a>
 
 - How do you view the relationship between indicators and criteria?
 
