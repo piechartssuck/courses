@@ -29,7 +29,7 @@ wk_post <-
   tibble(
 
 Description = c("Read <i>What is the difference between evaluation and research - and why do we care?</i>, <i>Unlearning some of our social scientist habits</i> and <i>What Is evaluation?: Perspectives of how evaluation differs (or not) from research</i>",
-                "Respond to a <a style='color:#5eb0e5;'>\\ #wk1-pictures-of-evaluation</a> post",
+                "Respond to a <a style='color:#ff8384;'>\\ #wk1-pictures-of-evaluation</a> post",
                 "Create a post at <a style='color:#5eb0e5;'>\\ #wk2-rethinking-the-way-you-think</a> based on the readings",
                 "Begin looking for evaluation team members on <a style='color:#5eb0e5;'>\\ #wk2-talk-about-logistics</a>",
                 "Take the <i>Considering Program Evaluation</i> survey using the unique link sent to your WVU Mix e-mail account"),

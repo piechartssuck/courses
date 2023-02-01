@@ -1,0 +1,64 @@
+---
+title: "Causation and Criteria"
+linktitle: "Week 4: Causation and Criteria"
+output:
+  rmarkdown::html_document
+menu:
+  due:
+    parent: "To Do List"
+    weight: 3
+type: docs
+weight: 2
+---
+
+`r blogdown::shortcode("aes-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r eval = TRUE, echo = FALSE}
+wk_post <- 
+  
+  tibble(
+
+Description = c("Read <i>Organizing the Criteria and Identifying Potential Sources of Evidence</i> in Davidson (2007)",
+                "Read <i>Dealing With the Causation Issue</i> in Davidson (2007)",
+                "Respond to one post on <a style='color:#ff8384;'>\\ #wk3-criteria</a>",
+                "Create a post at <a style='color:#5eb0e5;'>\\ #wk4-hypotheticals</a> based on the readings",
+                "Take a look at some resources on causality and evaluations",
+                "Take a look at the criteria needed for an <span style='color:#52bf90; font-weight:bold;'>Evaluation Prospectus</span> due at the <i><b>end of this week!</b></i>"
+                ),
+
+
+Details = c("<a href='/readings/04-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/readings/04-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/tasks/04-tasks/#responses'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/tasks/04-tasks/#posting'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/tasks/04-tasks/#the-possible-problems-with-causality-and-program-evaluation'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/deliverables/01-evaluation-prospectus/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
+            ),
+
+Icon = c("library",
+         "library",
+         "slack",
+         "slack",
+         "youtube",
+         "ecampus"),
+
+Site = c( "https://methods-sagepub-com.wvu.idm.oclc.org/book/evaluation-methodology-basics/n4.xml",
+         "https://methods-sagepub-com.wvu.idm.oclc.org/book/evaluation-methodology-basics/n5.xml",
+         "https://edp617spring2023.slack.com/archives/C04LEHZTFFD",
+         "https://edp617spring2023.slack.com/archives/C04MUEDMDSM",
+         "",
+         "https://ecampus.wvu.edu")
+)
+```
+
+<center>
+`r knitr::spin_child(here::here("content", "post_frame.R"))`
+</center>

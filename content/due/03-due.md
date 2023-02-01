@@ -68,7 +68,7 @@ Read <i>Identifying Evaluative Criteria</i> in Davidson (2007)
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Respond to one post on <a style="color:#5eb0e5;"> #wk2-rethinking-the-way-you-think</a>
+Respond to two posts on <a style="color:#ff8384;"> #wk2-rethinking-the-way-you-think</a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/tasks/03-tasks/#responses"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
@@ -126,7 +126,7 @@ Go through the slideshow <span style="color:#6ac4cd;font-weight:bold">What the H
 Take a look at the criteria needed for an <span style="color:#52bf90; font-weight:bold;">Evaluation Prospectus</span> due at the <i><b>end of next week!</b></i>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/tasks/03-tasks/#deliverable"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
+<a href="/deliverables/01-evaluation-prospectus/"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://ecampus.wvu.edu" target="_blank"><img src="/logos/wvu-gold-ico.png" alt="WVU icon" width="26"> </a>

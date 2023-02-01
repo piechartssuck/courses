@@ -1,12 +1,12 @@
 ---
-title: "Rethinking the Way You Think"
-linktitle: "Week 2: Rethinking the Way You Think"
+title: "Causation and Criteria"
+linktitle: "Week 4: Causation and Criteria"
 output:
   rmarkdown::html_document
 menu:
   due:
     parent: "To Do List"
-    weight: 1
+    weight: 3
 type: docs
 weight: 2
 ---
@@ -35,57 +35,68 @@ Type<sup>2</sup>
 <tbody>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Read <i>What is the difference between evaluation and research - and why do we care?</i>, <i>Unlearning some of our social scientist habits</i> and <i>What Is evaluation?: Perspectives of how evaluation differs (or not) from research</i>
+Read <i>Organizing the Criteria and Identifying Potential Sources of Evidence</i> in Davidson (2007)
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/readings/02-readings/#read-some-papers"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
+<a href="/readings/04-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<img src="/logos/pdf-ico.png" alt="PDF icon" width="32">
+<a href="https://methods-sagepub-com.wvu.idm.oclc.org/book/evaluation-methodology-basics/n4.xml" target="_blank"><img src="/logos/library-ico.png" alt="Library icon" width="25"> </a>
 </td>
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Respond to a <a style="color:#ff8384;"> #wk1-pictures-of-evaluation</a> post
+Read <i>Dealing With the Causation Issue</i> in Davidson (2007)
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/tasks/02-tasks/#responses"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
+<a href="/readings/04-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://edp617spring2023.slack.com/archives/C04J2V6A30C" target="_blank"><img src="/logos/slack-ico.png" alt="Slack icon" width="25"> </a>
+<a href="https://methods-sagepub-com.wvu.idm.oclc.org/book/evaluation-methodology-basics/n5.xml" target="_blank"><img src="/logos/library-ico.png" alt="Library icon" width="25"> </a>
 </td>
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Create a post at <a style="color:#5eb0e5;"> #wk2-rethinking-the-way-you-think</a> based on the readings
+Respond to one post on <a style="color:#ff8384;"> #wk3-criteria</a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/tasks/02-tasks/#postings"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
+<a href="/tasks/04-tasks/#responses"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://edp617spring2023.slack.com/archives/C04K8C5BX8C" target="_blank"><img src="/logos/slack-ico.png" alt="Slack icon" width="25"> </a>
+<a href="https://edp617spring2023.slack.com/archives/C04LEHZTFFD" target="_blank"><img src="/logos/slack-ico.png" alt="Slack icon" width="25"> </a>
 </td>
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Begin looking for evaluation team members on <a style="color:#5eb0e5;"> #wk2-talk-about-logistics</a>
+Create a post at <a style="color:#5eb0e5;"> #wk4-hypotheticals</a> based on the readings
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/tasks/02-tasks/#teams"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
+<a href="/tasks/04-tasks/#posting"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://edp617spring2023.slack.com/archives/C04K5T45YDQ" target="_blank"><img src="/logos/slack-ico.png" alt="Slack icon" width="25"> </a>
+<a href="https://edp617spring2023.slack.com/archives/C04MUEDMDSM" target="_blank"><img src="/logos/slack-ico.png" alt="Slack icon" width="25"> </a>
 </td>
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Take the <i>Considering Program Evaluation</i> survey using the unique link sent to your WVU Mix e-mail account
+Take a look at some resources on causality and evaluations
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/tasks/02-tasks/#survey"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
+<a href="/tasks/04-tasks/#the-possible-problems-with-causality-and-program-evaluation"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<img src="/logos/qualtrics-ico.png" alt="Qualtrics icon" width="29">
+<img src="/logos/youtube-ico.png" alt="YouTube icon" width="28">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+Take a look at the criteria needed for an <span style="color:#52bf90; font-weight:bold;">Evaluation Prospectus</span> due at the <i><b>end of this week!</b></i>
+</td>
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<a href="/deliverables/01-evaluation-prospectus/"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
+</td>
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<a href="https://ecampus.wvu.edu" target="_blank"><img src="/logos/wvu-gold-ico.png" alt="WVU icon" width="26"> </a>
 </td>
 </tr>
 <tr>
