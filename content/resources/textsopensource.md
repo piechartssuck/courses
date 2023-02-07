@@ -88,22 +88,16 @@ td:hover img {
 <a href="https://enriquegit.github.io/behavior-free/" target="_blank"> <img src="/img/opensource/behavior-analysis-with-machine-learning-using-r.png" alt="Behavior Analysis with Machine Learning Using R"></a>
 </td>
 <td style="text-align:center;width: 10em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://bookdown.org/yihui/blogdown/" target="_blank"> <img src="/img/opensource/blogdown-creating-sites-with-r-markdown.png" alt="blogdown: Creating Websites with R Markdown"></a>
-</td>
-<td style="text-align:center;width: 10em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://geocompr.robinlovelace.net/" target="_blank"> <img src="/img/opensource/geocomputation-with-r.png" alt="Geocomputation with R"></a>
 </td>
-<td style="text-align:center;width: 10em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://ggplot2-book.org/" target="_blank"> <img src="/img/opensource/ggplot2-elegant-graphics-for-data-analysis.png" alt="ggplot2: Elegant Graphics for Data Analysis"></a>
-</td>
-</tr>
-<tr>
 <td style="text-align:center;width: 10em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://bradleyboehmke.github.io/HOML/" target="_blank"> <img src="/img/opensource/hands-on-machine-learning-with-r.png" alt="Hands-On Machine Learning with R"></a>
 </td>
 <td style="text-align:center;width: 10em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://plotly-r.com/" target="_blank"> <img src="/img/opensource/interactive-web-based-data-visualization-with-r-plotly-and-shiny.png" alt="Interactive web-based data visualization with R, Plotly, and Shiny"></a>
 </td>
+</tr>
+<tr>
 <td style="text-align:center;width: 10em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://rafalab.github.io/dsbook/" target="_blank"> <img src="/img/opensource/introduction-to-data-science.png" alt="Introduction to Data Science: Data Analysis and Prediction Algorithms with R"></a>
 </td>
@@ -119,14 +113,14 @@ td:hover img {
 <td style="text-align:center;width: 10em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://unleash-shiny.rinterface.com/welcome.html" target="_blank"> <img src="/img/opensource/outstanding-user-interfaces-with-shiny.png" alt="Outstanding User Interfaces with Shiny"></a>
 </td>
-</tr>
-<tr>
-<td style="text-align:center;width: 10em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://r4ds.had.co.nz/" target="_blank"> <img src="/img/opensource/r-for-data-science-text.png" alt="R for Data Science"></a>
-</td>
 <td style="text-align:center;width: 10em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://bookdown.org/yihui/rmarkdown-cookbook/" target="_blank"> <img src="/img/opensource/r-markdown-cookbook.png" alt="R Markdown Cookbook"></a>
 </td>
+<td style="text-align:center;width: 10em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<a href="https://r4ds.had.co.nz/" target="_blank"> <img src="/img/opensource/r-for-data-science-text.png" alt="R for Data Science"></a>
+</td>
+</tr>
+<tr>
 <td style="text-align:center;width: 10em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://r-pkgs.org/" target="_blank"> <img src="/img/opensource/r-packages.png" alt="R Packages"></a>
 </td>
@@ -141,6 +135,12 @@ td:hover img {
 </td>
 <td style="text-align:center;width: 10em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://www.tmwr.org/" target="_blank"> <img src="/img/opensource/tidy-modeling-with-r.png" alt="Tidy Modeling with R"></a>
+</td>
+<td style="text-align:center;width: 10em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<a href="https://bookdown.org/yihui/blogdown/" target="_blank"> <img src="/img/opensource/blogdown-creating-sites-with-r-markdown.png" alt="blogdown: Creating Websites with R Markdown"></a>
+</td>
+<td style="text-align:center;width: 10em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<a href="https://ggplot2-book.org/" target="_blank"> <img src="/img/opensource/ggplot2-elegant-graphics-for-data-analysis.png" alt="ggplot2: Elegant Graphics for Data Analysis"></a>
 </td>
 </tr>
 </tbody>

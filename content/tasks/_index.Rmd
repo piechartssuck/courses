@@ -46,7 +46,8 @@ You will need to form 2 - 4 member support and project teams. There will be a ch
 Discussion boards will be created for a variety of purposes including discussing general course questions / logistics, getting to know each other, creating teams, discussing tasks and deliverables, etc. You will need to participate actively on each board and your postings should be meaningful and incorporate depth. Responses without any additional information and/or justifications will be considered to be incomplete and will reflect on your final earned point value. For further information, please take a look at the description below.
 
 ### Writing on Slack
-**Remember this is a graduate level class and your writing should reflect that**. Moreover, these postings should be in APA 7th Edition formatting unless otherwise noted. The following general idea will be used when assessing your *initial posts*, but this is not a rubric. 
+
+**Remember this is a graduate level class and your writing should reflect that**. Moreover, these postings should be in APA 7th Edition formatting unless otherwise noted. The following general idea will be used when assessing your *postings* and *responses* (where applicable), but please note that this is not a rubric. 
 
 ```{r echo=FALSE}
 
@@ -138,6 +139,9 @@ Postings that answered multiple questions can be written as a single coherent na
 
 ### Responding on Slack
 To keep track of what responses go to which post and to receive credit for your responses, use the option pictured below: ![](/img/lesson/slack_pop_menu.png) For further information, please read over [Reply in thread](https://slack.com/help/articles/115000769927-Use-threads-to-organize-discussions-).
+
+### Assessing Posts
+Online postings are evaluated quarterly (approximately every three to four weeks). However if you would prefer your postings using a shorter time frame, please send me a direct message on Slack.
 
 ## Synchronous Meetings
 There are two types of meetings in this class: *ongoing* and *check-in*. Please see the details below for an explanation of each.

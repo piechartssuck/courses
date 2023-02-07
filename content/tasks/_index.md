@@ -48,7 +48,7 @@ Discussion boards will be created for a variety of purposes including discussing
 
 ### Writing on Slack
 
-**Remember this is a graduate level class and your writing should reflect that**. Moreover, these postings should be in APA 7th Edition formatting unless otherwise noted. The following general idea will be used when assessing your *initial posts*, but this is not a rubric.
+**Remember this is a graduate level class and your writing should reflect that**. Moreover, these postings should be in APA 7th Edition formatting unless otherwise noted. The following general idea will be used when assessing your *postings* and *responses* (where applicable), but please note that this is not a rubric.
 
 <center>
 <table class=" lightable-paper" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;">
@@ -165,6 +165,10 @@ Postings that answered multiple questions can be written as a single coherent na
 ### Responding on Slack
 
 To keep track of what responses go to which post and to receive credit for your responses, use the option pictured below: ![](/img/lesson/slack_pop_menu.png) For further information, please read over [Reply in thread](https://slack.com/help/articles/115000769927-Use-threads-to-organize-discussions-).
+
+### Assessing Posts
+
+Online postings are evaluated quarterly (approximately every three to four weeks). However if you would prefer your postings using a shorter time frame, please send me a direct message on Slack.
 
 ## Synchronous Meetings
 
