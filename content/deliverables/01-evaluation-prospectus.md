@@ -42,6 +42,8 @@ Please include the following
 1.  Your name in the top left hand corner
 2.  Filename using the following format <kbd>yourlastname_prospectus.docx</kbd>
 
+<i>It is highly unlikely that a score will be changed unless there is an egregious error on my end so please check your entire document over prior to submission.</i>
+
 <br>
 <center>
 <p id="rounded_corners">

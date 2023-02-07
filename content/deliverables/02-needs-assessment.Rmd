@@ -17,12 +17,17 @@ editor_options:
 
 `r blogdown::shortcode("aes-deliverables")`
 
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+
 ### <span style="color:#35d6ed">Submission</span>
 <i>[eCampus](https://ecampus.wvu.edu)</i>
 
 ### <span style="color:#65ddef">Type</span>
 
-<i>Team Submission</i>. Students in the course must participate in the writing process in a group oriented setting.
+<i>Team Submission</i>. All members must contribute equally to the group's deliverable.
 
 ### <span style="color:#7ae5f5">Begin Work</span>
 
@@ -34,45 +39,39 @@ Based on that program and the context within which it operates, answer the quest
 
 The intent of the meeting is be to help you answer the questions and better meet stakeholder information and decision-making needs. Therefore, you should be interviewing a key stakeholder or (focus) group of stakeholders. You have options in how to conduct this
 
-- If done face-to-face or telephone, you should tape (audio or video) your interview / focus group and transcribe the recording. 
-- If done electronically utilizing synchronous (e.g., chat room) technology, then often the transcription is done for you. For example, Zoom has this ability via their [Cloud Service](https://support.zoom.us/hc/en-us/articles/115004794983-Using-audio-transcription-for-cloud-recordings-).
+- If done face-to-face or telephone, you should tape the interview, focus group, etc. and transcribe the recording manually or via a service or software. Those with Macs may wish to check out the newly released (and open source) [MacWhisper](https://goodsnooze.gumroad.com/l/macwhisper) based on the [OpenAI](https://openai.com) [Whisper](https://openai.com/blog/whisper/) automatic speech recognition system
+- If conducted via videoconferencing, then the transcription may be done for you. For example, Zoom has this ability via their [Cloud Service](https://support.zoom.us/hc/en-us/articles/115004794983-Using-audio-transcription-for-cloud-recordings-).
+
+<i>If you choose to use automation, always remember to review the transcription for accuracy.</i>
 
 ### <span style="color:#c9f6ff">Structure</span>
 
 This submission is due in **two weeks** following the [Evaluation Prospectus](/deliverables/01-evaluation-prospectus/) submission date. For an exact timeframe, please check [eCampus](https://ecampus.wvu.edu/). 
 
-The following components are required for your submission in the order listed below and must be uploaded as a single cohesive document. Barring items 1 and 2, all other criteria must be in standard APA 7th edition formatting.
+The following components are required for your submission in the order listed below and must be uploaded as a single cohesive document. Disregarding the need for a running head and listing of team members, all other criteria must be in standard APA 7th edition formatting.
 
-1. A cover page with your name
++ A <span style="color:#e3faff; font-weight:bold;">Table of Contents</span>
 
-  - Every group member's name in the upper left-hand corner in alphabetical order in accordance to their last name. For those teams that have assigned internal roles, please include those titles in parentheses. 
-  - The title of this task – **Needs Assessment** – in the middle of the page.
++ The <a href="#span-stylecolore3faffbodyspan" style="color:#e3faff;font-weight:bold;text-decoration:underline;">Body</a> fulfilling the requirements described below
+
++ A <span style="color:#e3faff; font-weight:bold;">References</span> section *if needed*
+
++ An <span style="color:#e3faff; font-weight:bold;">Appendix</span> describing the <a href="#span-stylecolorfcffffanalysis-techniquespan" style="color:#fcffff;font-weight:bold;text-decoration:underline;">Analysis Technique</a> fulfilling the requirements described below
+
++ Any additional materials you believe will help in the determination of my evaluation of your submission. Classify these by type and separate them into differing Appendices (there is no limit). This is an *optional* component
+
++ Please include the following
+  1. Your names in the top left hand corner
+  2. Filename using the following format 
+  <br>
+  <br>
+  <kbd>teamname_needsassessent.docx</kbd>
   
-2. No running head
-
-3. A Table of Contents 
-
-4. The Body fulfilling the requirements described below
-
-5. A references section *if needed*
-
-6. Appendix describing Analysis Technique as described below.
-
-7. Any additional materials you believe will help in the determination of my evaluation of your submission. Classify these by type and separate them into differing Appendices. There is no limit to the number of Appendices. This is an *optional* component
-
-8. Filename in *either* of the following formats
-
-<div style="padding-left: 60px;">
-
-   > `teamname_needsassessent.docx`
-   
-   > `teamname_needsassessent.pdf`
-   
-</div>
+<i>It is highly unlikely that a score will be changed unless there is an egregious error on my end so please check your entire document over prior to submission.</i>
 
 #### <span style="color:#e3faff">Body</span>
 
-As you construct this, you must use the questions as your subheadings and answers must be up formally. Your answers should be brief and to the point. This assignment usually fills five (5) to 10 pages double spaced not including the appendix. That section includes a brief description of your analysis technique (please see below).
+As you construct this, you must use the questions as your subheadings and answers must be up formally. Your answers should be brief and to the point. This assignment usually fills five (5) to 10 pages double spaced not including the <span style="color:#e3faff; font-weight:bold;">Appendix</span> That section includes a brief description of your analysis technique (please see below).
 
 + Who did you interview? 
 + What is their role in the program? 
@@ -89,7 +88,7 @@ As you construct this, you must use the questions as your subheadings and answer
 
 #### <span style="color:#fcffff">Analysis Technique</span>
 
-In past renditions of this course, students were required to transcribe the entire interview. While that is still recommended , it is not required. Should you choose to do so, there are many free ways to go about this. Some students have paid a service to do it for them – which is fine as it is common practice in evaluation – while most have used free online and offline services. If a transcription is an avenue you wish to pursue and do not wish to spend any money, services such as [Google Cloud](https://cloud.google.com/speech-to-text) and [SpeechText.AI](https://speechtext.ai/) use grounded artificial intelligence approaches to transcribe audio. Regardless of your decision regarding the above, please follow the steps below to analyze your recording:
+Please follow the steps below to analyze your recording:
 
 1. Each member should independently listen to the recording in its entirety while jotting down notes regrading particular items of interest and themes that may occur. Should you have the benefit of having a video recording, consider adding notes about non-verbal cues and points of inflection. Make sure to note the timestamp or the next step will be extremely difficult!
 
@@ -101,7 +100,7 @@ In past renditions of this course, students were required to transcribe the enti
     </summary>
     <br>
     <p>
-    Consider using an agreement scaling like a <a href="/handouts/Kappa Statistic.pdf" target="blank">Kappa Statistic</a> as your justification. Then provide a clear and concise narrative on your process, your agreement threshold and what criteria were used (i.e. please just don’t simply say we agreed on theme X because we felt like it, rather provide actual criteria for agreement). Please submit the final agreement measures delineated by theme in addition to the aggregated agreement score and description. To clarify, you will be required to submit the following in the appendix:
+    Consider using an agreement scaling like a <a href="/handouts/Kappa Statistic.pdf" target="blank">Kappa Statistic</a> as your justification. Then provide a clear and concise narrative on your process, your agreement threshold and what criteria were used (i.e. please just don’t simply say we agreed on theme X because we felt like it, rather provide actual criteria for agreement). Please submit the final agreement measures delineated by theme in addition to the aggregated agreement score and description. To clarify, you will be required to submit the following in the <span style="color:#e3faff; font-weight:bold;">Appendix</span>:
     
     - A table of all themes and corresponding agreement rating by theme. Please rearrange the themes by agreement rating going from greatest to least.
     
@@ -119,7 +118,7 @@ In past renditions of this course, students were required to transcribe the enti
     </summary>
     <br>
     <p> 
-    Should you choose not to use an agreement scaling, describe the process in a clear manner and in great detail within your appendix. Read over <a href="/handouts/Shenton%20(2004).pdf" target="blank">Shenton (2004)</a> and ensure that you address all four of Guba’s constructs provided on p. 64. Most importantly, provide a narrative on how triangulation and saturation were fully addressed. To clarify, you will be required to submit the following in the appendix:
+    Should you choose not to use an agreement scaling, describe the process in a clear manner and in great detail within your <span style="color:#e3faff; font-weight:bold;">Appendix</span>. Read over <a href="/handouts/Shenton%20(2004).pdf" target="blank">Shenton (2004)</a> and ensure that you address all four of Guba’s constructs provided on p. 64. Most importantly, provide a narrative on how triangulation and saturation were fully addressed. To clarify, you will be required to submit the following in the appendix:
       
     - A table of all themes regardless of agreement. 
     
@@ -132,3 +131,9 @@ In past renditions of this course, students were required to transcribe the enti
     </details>
     </div>
     <br>
+
+<center>
+<p id="rounded_corners">
+All incremental deliverables can be found on the main <a href="/tasks/#deliverables">Tasks</a> page
+<p>
+</center>

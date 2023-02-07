@@ -17,6 +17,10 @@ editor_options:
 
 `r blogdown::shortcode("aes-deliverables")`
 
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
 ### <span style="color:#35d6ed">Submission</span>
 <i>[eCampus](https://ecampus.wvu.edu)</i>
 
@@ -58,40 +62,30 @@ Much of the information from the previous task will help provide a context for t
 
 ### <span style="color:#c9f6ff">Structure</span>
 
-This submission is due in <b>one week</b> following the [Needs Assessment](/deliverables/02-needs-assessment/) submission date. For an exact timeframe, please check [eCampus](https://ecampus.wvu.edu/). 
+This submission is due in **two weeks** following the [Evaluation Prospectus](/deliverables/01-evaluation-prospectus/) submission date. For an exact timeframe, please check [eCampus](https://ecampus.wvu.edu/). 
 
-Barring items 1 and 2, all other criteria must be in standard APA 7th edition formatting. The following components are required for your submission in order and must be attached as a single document. 
+The following components are required for your submission in the order listed below and must be uploaded as a single cohesive document. Disregarding the need for a running head and listing of team members, all other criteria must be in standard APA 7th edition formatting.
 
-1. A cover page with your name
++ A <span style="color:#e3faff; font-weight:bold;">Table of Contents</span>
 
-  - Every group member's name in the upper left-hand corner in alphabetical order in accordance to their last name. For those teams that have assigned internal roles, please include those titles in parentheses. 
-  - The title of this task – <b>Evaluation Proposal</b> – in the middle of the page.
-  
-2. No running head
++ The <a href="#span-stylecolore3faffbodyspan" style="color:#e3faff;font-weight:bold;text-decoration:underline;">Body</a> fulfilling the requirements described below
 
-3. A Table of Contents 
++ A <span style="color:#e3faff; font-weight:bold;">References</span> section *if needed*
 
-4. The Body fulfilling all requirements listed on this page
++ Any additional materials you believe will help in the determination of my evaluation of your submission. Classify these by type and separate them into differing Appendices (there is no limit). This is an *optional* component
 
-5. A references section *if needed*
-
-6. Any additional  materials you believe will help in ensuring that your proposal is complete and valid. Classify these by type and separate them into differing Appendices. There is no limit to the number of Appendices.
-
-7. Filename in *either* of the following formats
-
-<div style="padding-left: 60px;">
-
-  > `teamname_evaluationproposal.docx`
-  
-  > `teamname_evaluationproposal.pdf`
-  
-</div>
++ Please include the following
+  1. Your names in the top left hand corner
+  2. Filename using the following format 
+  <br>
+  <br>
+  <kbd>teamname_evaluationproposal.docx</kbd>
 
 <i>It is highly unlikely that a score will be changed unless there is an egregious error on my end so please check your entire document over prior to submission.</i>
 
 #### <span style="color:#e3faff">Body</span>
 
-In your writing make sure to use a professional tone and to ensure it reads with one voice. This assignment usually fills seven (7) to 12 double spaced pages. 
+In your writing make sure to use a professional tone and to ensure it reads with one voice. This assignment usually fills 7 - 12 double spaced pages. 
 
 As you construct this, please use the items in <b>bold</b> as headings and subheadings. These topics are what you should cover, at minimum, in your proposal. Your answers should be brief, to the point, and must address the given topic area explicitly.
 
@@ -188,3 +182,9 @@ Your team submission should include the following components separated into thre
 
 </details>
 
+<br>
+<center>
+<p id="rounded_corners">
+All incremental deliverables can be found on the main <a href="/tasks/#deliverables">Tasks</a> page
+<p>
+</center>

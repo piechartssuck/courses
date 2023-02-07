@@ -15,6 +15,10 @@ weight: 2
 
 `r blogdown::shortcode("aes-deliverables")`
 
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
 ### <span style="color:#35d6ed">Submission</span>
 <i>[eCampus](https://ecampus.wvu.edu)</i>
 
@@ -39,6 +43,8 @@ Please include the following
 
 1. Your name in the top left hand corner
 2. Filename using the following format <kbd>yourlastname_prospectus.docx</kbd>
+
+<i>It is highly unlikely that a score will be changed unless there is an egregious error on my end so please check your entire document over prior to submission.</i>
 
 <br>
 <center>

@@ -17,11 +17,8 @@ editor_options:
 
 `r blogdown::shortcode("aes-deliverables")`
 
-```{r load_packages, message=FALSE, warning=FALSE, echo=FALSE}
-library(tidyverse)
-library(fontawesome)
-library(knitr)
-library(kableExtra)
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
 ```
 
 ### <span style="color:#35d6ed">Submission</span>

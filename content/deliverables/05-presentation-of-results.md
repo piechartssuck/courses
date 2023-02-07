@@ -1,0 +1,93 @@
+---
+title: "Presentation of Results"
+linktitle: "Presentation of Results"
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  tasks:
+    parent: Deliverables
+    weight: 5
+type: docs
+weight: 2
+editor_options: 
+  chunk_output_type: console
+---
+
+{{% aes-deliverables %}}
+
+### <span style="color:#35d6ed">Submission</span>
+
+<i>[eCampus](https://ecampus.wvu.edu)</i>
+
+### <span style="color:#65ddef">Type</span>
+
+<i>Team Submission</i>. Students in the course must participate in the recording process in a group oriented setting.
+
+### <span style="color:#7ae5f5">Begin Work</span>
+
+<div style="padding-left: 60px;">
+
+> <span style="color:#eaeaea">to fill in some parts as early as possible</span>
+
+> <span style="color:#eaeaea">at the latest after the conclusion of the evaluation</span>
+
+</div>
+
+### <span style="color:#97ebf4">Criteria</span>
+
+Create and disseminate an evaluation presentation[^1] using the criteria outlined below. This submission is due in <b>one week</b> prior to the final week of the term. For an exact date, please check [eCampus](https://ecampus.wvu.edu/).
+
+<details>
+<summary>
+<span style="color:#c9f6ff">Structure</span>
+</summary>
+
+1.  construct a single presentation that uses a one voice
+
+2.  use language appropriate for the class audience and using proper grammar, spelling, and consistency[^2] in tone
+
+3.  make the product aesthetically pleasing
+
+4.  remain consistent in how elements of the evaluation are presented and discussed
+
+5.  Use a format of your choice
+
+6.  name your file `teamname_presentation.typeoffile`
+
+</details>
+<br>
+<details>
+<summary>
+<span style="color:#c9f6ff"><a name="body">Body</a></span>
+</summary>
+
+The presentation[^3] must be delivered using an audio/video medium constructed by a software of your choice with equal contributions from each member and is publicly accessible
+
+1.  descriptions of the program
+
+2.  a narrative on the entire evaluative process
+
+3.  data visualizations
+
+4.  instructional materials
+
+5.  specific prompts for the rest of the class to consider.
+
+</details>
+
+<br>
+<i>It is highly unlikely that a score will be changed unless there is an egregious error on my end so please check your entire presentation prior to submission.</i>
+
+[^1]: Please note that APA 7th edition formatting is not required.
+
+[^2]: For example, all tables should follow the same structure and aesthetic, color palettes should remain the same for the same variable throughout, etc.
+
+[^3]: Suggestions:
+    <br><br>
+    <i>Free for students proprietary<i> - <a href="https://www.beautiful.ai/education">beautiful.ai</a>, <a href="https://www.canva.com/education/students/">Canva</a>, PowerPoint, YouTube, etc.
+    <br><br>
+    <i>Open source (coding skills nice to have)<i> - <a href="https://deckdeckgo.com/en/pricing">DeckDeckGo</a>
+    <br><br>
+    <i>Open source (coding skills needed)<i> - HTML/CSS/JS, <a href="https://github.com/impress/impress.js">impress.js</a>, <a href="https://revealjs.com/">reveal.js</a>, <a href="https://github.com/yihui/xaringan">xaringan</a>

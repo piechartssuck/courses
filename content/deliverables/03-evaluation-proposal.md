@@ -1,0 +1,187 @@
+---
+title: "Evaluation Proposal"
+linktitle: "Evaluation Proposal"
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  tasks:
+    parent: Deliverables
+    weight: 3
+type: docs
+weight: 2
+editor_options: 
+  chunk_output_type: console
+---
+
+{{% aes-deliverables %}}
+
+### <span style="color:#35d6ed">Submission</span>
+
+<i>[eCampus](https://ecampus.wvu.edu)</i>
+
+### <span style="color:#65ddef">Type</span>
+
+<i>Team Submission</i>. Students in the course must participate in the writing process in a group oriented setting.
+
+### <span style="color:#7ae5f5">Begin Work</span>
+
+<div style="padding-left: 60px;">
+
+> <span style="color:#eaeaea">at the earliest right after the stakeholder interview, focus group, etc.</span>
+
+> <span style="color:#eaeaea">at the latest as soon as your team has submitted the [Needs Assessment](/deliverables/02-needs-assessment/)</span>
+
+</div>
+
+### <span style="color:#97ebf4">Criteria</span>
+
+Much of the information from the previous task will help provide a context for the proposal, but the narrative should be written to address both (1) the need for your evaluation and (2) details on how the team intends to administer the evaluation itself. To accomplish this, keep in mind the following must be addressed in your writing
+
+<div style="padding-left: 60px;">
+
+> <span style="color:#eaeaea">a concise description of the program</span>
+
+> <span style="color:#eaeaea">a description of stakeholder needs</span>
+
+> <span style="color:#eaeaea">at least one evaluation question that is clearly defined</span>
+
+> <span style="color:#eaeaea">a completed logic model</span>
+
+> <span style="color:#eaeaea">what needs to be accomplished</span>
+
+> <span style="color:#eaeaea">an anticipated timeline of evaluation activities</span>
+
+> <span style="color:#eaeaea">how the results will be delivered</span>
+
+</div>
+
+### <span style="color:#c9f6ff">Structure</span>
+
+This submission is due in **two weeks** following the [Evaluation Prospectus](/deliverables/01-evaluation-prospectus/) submission date. For an exact timeframe, please check [eCampus](https://ecampus.wvu.edu/).
+
+The following components are required for your submission in the order listed below and must be uploaded as a single cohesive document. Disregarding the need for a running head and listing of team members, all other criteria must be in standard APA 7th edition formatting.
+
+- A <span style="color:#e3faff; font-weight:bold;">Table of Contents</span>
+
+- The <a href="#span-stylecolore3faffbodyspan" style="color:#e3faff;font-weight:bold;text-decoration:underline;">Body</a> fulfilling the requirements described below
+
+- A <span style="color:#e3faff; font-weight:bold;">References</span> section *if needed*
+
+- Any additional materials you believe will help in the determination of my evaluation of your submission. Classify these by type and separate them into differing Appendices (there is no limit). This is an *optional* component
+
+- Please include the following
+
+  1.  Your names in the top left hand corner
+  2.  Filename using the following format
+      <br>
+      <br>
+      <kbd>teamname_evaluationproposal.docx</kbd>
+
+<i>It is highly unlikely that a score will be changed unless there is an egregious error on my end so please check your entire document over prior to submission.</i>
+
+#### <span style="color:#e3faff">Body</span>
+
+In your writing make sure to use a professional tone and to ensure it reads with one voice. This assignment usually fills 7 - 12 double spaced pages.
+
+As you construct this, please use the items in <b>bold</b> as headings and subheadings. These topics are what you should cover, at minimum, in your proposal. Your answers should be brief, to the point, and must address the given topic area explicitly.
+
+- <b>Introduction</b>. A brief description of the program concentrating on what areas of importance you discovered in the Needs Assessment. This should be brief and is typically no more than one (1) page maximum.
+
+- <b>Justification</b>. You must include evidence from, at minimum, the items we have covered in the course so far as a defense for your approach. In this case, you are providing an evidence-based argument for the way you want to conduct the study. At minimum, the topics covered here should address an intended evaluative framework/orientation/model/approach that will guide your program evaluation and answer how this construct will be well-suited to evaluate the program.
+
+- <b>Methodology</b>. This section will be the largest and most detailed component. This is will be your chance to detail the intended evaluative process and to justify your methodological approach. At minimum, please cover the following where applicable
+
+  - <b>Sampling frame</b>. A description of the overall targeted population and sample that you have drawn or will draw. This includes a description of the primary stakeholders, or those you are studying, and secondary stakeholders, or those who are not directly affected by the program.
+
+  - <b>Assessment of Values</b>. Address what set of values you will be using in your evaluation. This should be very explicit, and you must explain where these came from?
+
+  - <b>Existing Data</b>. If applicable, provide a description of what existing data will you be using within your evaluation, how you plan on accessing that data and what form the raw data will be in.
+
+  - <b>Data Collection</b>. Discuss what data you will utilize within your evaluation, how you will collect that data, what instruments and/or materials you will be using or plan to use, and how you will gain permission from those who are participating.
+
+  - <b>Analysis</b>. Provide a narrative on the type of raw data you will have or intend to collect. Address how you intend to analyze the quantitative, qualitative, and or mixed data you will have.
+
+  - <b>Reporting Cycle</b>. Briefly discuss how the results will be reported to the sponsor, when you intend to do so, and if you are intending to provide an interim report.
+
+  - <b>Statement of Intent</b>. On a separate page, please provide a one paragraph statement of intent on whether you plan to use any of your work beyond the framework of this course and your corresponding reasoning.
+
+<details>
+<summary>
+<span style="color:#e3e8ec">Why bother with the hassle of getting permission to use the evaluation?</span>
+</summary>
+<p>
+
+Before answering this, both
+
+<div style="padding-left: 60px;">
+
+> <span style="color:#eaeaea">a written approval from your stakeholder or an authorized individual</span>
+
+> <span style="color:#eaeaea">IRB approval requested through the [WVU+kc system](https://oric.research.wvu.edu/wvu-kc)</span>
+
+</div>
+
+are required to use any part of the evaluation beyond the original intent. Neither are difficult and I am happy to help you if needed.
+
+Now if you intend to do any of the following
+
+- publish to a journal - <i>draft manuscripts are worth up to an extra 3% added to your final grade. Requires an authorship agreement</i>
+
+- copy content within the report
+
+- refer to the report in any way including its existence
+
+- use the report in a portfolio - <i> this counts as you having conducted a real-world evaluation </i>
+
+then getting an authorization may be in your best interest.
+
+<i>This is by no means an exhaustive list.</i>
+</p>
+</details>
+
+### <span style="color:#4adede">Looking Ahead</span>
+
+For the <b>Evaluation Report</b>, note that you will have to include one the following in the course submission variant depending on your intent:
+
+<details>
+<summary>
+If you <b><i>do not</i></b> intend to use the report beyond the course, then please look at this
+</summary>
+<p>
+
+Your team submission should include the following components separated into three parts
+
+1.  <b>external deliverable</b>. Your final report submitted to the sponsor that is written to be easily accessible and consumable
+
+2.  <b>evaluation assessment</b>, Form a <i>coherent</i> and <i>detailed</i> narrative addressing what you would do differently given the chance to perform your evaluation over again. This includes a significant amount of detail regarding activities, criteria satisfied, areas of missingness, timeline, and other possible legal concerns should an audit occurs. You can think of this as a reflection of the entire evaluative process. Specificity, clarity and distinct connections to the course content will be key here.
+
+3.  <b>client authorization</b> (optional). If anybody on your team intends to use this report outside of this course in any capacity (e.g. as an example of work), you must submit a signed release from the sponsor. This serves as a binding document.  
+
+</p>
+</details>
+<br>
+<details>
+<summary>
+If you <b><i>do</i></b> intend to use the report beyond the evaluation itself, then please look at this
+</summary>
+<p>
+
+Your team submission should include the following components separated into three parts
+
+1.  <b>external deliverable</b>. Your final report submitted to the sponsor that is written to be easily accessible and consumable
+
+2.  <b>original manuscript</b> A solid and coherent draft of a publicaxtion based off of your evaluation.
+
+3.  <b>client authorization</b> (required). You must submit a signed release from the sponsor permitting the use of the evaluation for the purposes of an academic publication. This serves as a binding document.
+
+    </p>
+
+</details>
+<br>
+<center>
+<p id="rounded_corners">
+All incremental deliverables can be found on the main <a href="/tasks/#deliverables">Tasks</a> page
+<p>
+</center>
