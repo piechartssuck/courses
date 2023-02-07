@@ -6,7 +6,7 @@ output:
 menu:
   due:
     parent: "To Do List"
-    weight: 3
+    weight: 4
 type: docs
 weight: 2
 ---

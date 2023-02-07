@@ -1,0 +1,37 @@
+---
+title: "Whose Values Are Valuable?"
+linktitle: "Week 5: Whose Values Are Valuable?"
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  tasks:
+    parent: Tasks
+    weight: 5
+type: docs
+weight: 1
+---
+
+## Writing
+
+### Responses
+
+Please create **two separate responses** for <a href="https://edp617spring2023.slack.com/archives/C04MUEDMDSM" target="_blank" style='color:#ff8384;'>#wk4-hypotheticals</a> on Slack<sup>1</sup>. 
+
+### Posting
+After going through this week's [readings](/readings/05-readings), address the following in a single post on the channel <a href="https://edp617spring2023.slack.com/archives/C04NFJML0TX" target="_blank" style='color:#5eb0e5;'>#wk5-whose-values</a>
+
+<i>Say you are an evaluator in a scenario where there are multiple sponsors all of equal importance. Each of these individuals wants you to evaluate something specific, but all of the evaluands are mutually exclusive and independent. With a limited timeframe, you cannot possibly study everything all of the stakeholders want. How do you prioritize what gets done while still being able to develop a case that your evaluation was valuable?</i>
+
+## Doing
+
+### Evaluating Community Programs and Initiatives
+
+The [Center for Community Health and Development](https://ctb.ku.edu/en/evaluating-community-programs-and-initiatives) at the University of Kansas has a very comprehensive guide on developing an evaluation plan, identifying stakeholders interests, and conducting a participatory evaluation.
+
+The link above is part of a much larger and highly detailed look at a type of evaluation framework known as [community engagement evaluation](https://ctb.ku.edu/en/table-of-contents) which is difficult, if not impossible to address fully in a semester.
+
+### Deliverable
+
+Take a look at a preview for your second deliverable, namely an [Needs Assessment](/deliverables/02-needs-assessment/) due by the end of Week 6.

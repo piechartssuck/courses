@@ -26,6 +26,8 @@ After going through this week's [readings](/readings/04-readings), address the f
   
   + Can we determine causality in every circumstance?
   
+## Doing
+  
 ### (The Possible Problems with) Causality and Program Evaluation
 
 If you need a refresher on correlations and causation, take a few minutes to watch the fantastic breakdown below

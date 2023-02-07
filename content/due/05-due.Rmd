@@ -1,0 +1,60 @@
+---
+title: "Whose Values Are Valuable?"
+linktitle: "Week 5: Whose Values Are Valuable?"
+output:
+  rmarkdown::html_document
+menu:
+  due:
+    parent: "To Do List"
+    weight: 5
+type: docs
+weight: 2
+---
+
+`r blogdown::shortcode("aes-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r eval = TRUE, echo = FALSE}
+wk_post <- 
+  
+  tibble(
+
+Description = c('Read <i>"Values" in Evaluation</i> in Davidson (2007)',
+                "Respond to two posts on <a style='color:#ff8384;'>\\ #wk4-hypotheticals</a>",
+                "Create a post at <a style='color:#5eb0e5;'>\\ #wk5-whose-values</a> based on the readings",
+                "Look over <b>Evaluating Community Programs and Initiatives</b> for extra help on any evaluation",
+                "Take a look at the criteria needed for an <span style='color:#52bf90; font-weight:bold;'>Needs Assessment</span> due in <i><b>two weeks</b></i>"
+                ),
+
+
+Details = c("<a href='/readings/05-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/tasks/05-tasks/#responses'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/tasks/05-tasks/#posting'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/tasks/05-tasks/#evaluating-community-programs-and-initiatives'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+            "<a href='/deliverables/02-needs-assessment/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
+            ),
+
+Icon = c("library",
+         "slack",
+         "slack",
+         "offsite",
+         "ecampus"),
+
+Site = c("https://methods-sagepub-com.wvu.idm.oclc.org/book/evaluation-methodology-basics/n6.xml",
+         "https://edp617spring2023.slack.com/archives/C04MUEDMDSM",
+         "https://edp617spring2023.slack.com/archives/C04NFJML0TX",
+         "https://ctb.ku.edu/en/evaluating-community-programs-and-initiatives",
+         "https://ecampus.wvu.edu")
+)
+```
+
+<center>
+`r knitr::spin_child(here::here("content", "post_frame.R"))`
+</center>
