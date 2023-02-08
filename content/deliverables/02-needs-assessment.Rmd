@@ -35,11 +35,11 @@ As soon as you and your group have identified a program to evaluate.
 
 ### <span style="color:#97ebf4">Criteria</span>
 
-Based on that program and the context within which it operates, answer the questions listed below. To do this, you will need to conduct at least one *interview* and/or *focus group* (face-to-face, telephone, or synchronous chat). 
+Based on that program and the context within which it operates, answer the questions listed below. To do this, you will need to conduct at least one *interview* and/or *focus group* (face-to-face, phone, or videoconferencing). 
 
 The intent of the meeting is be to help you answer the questions and better meet stakeholder information and decision-making needs. Therefore, you should be interviewing a key stakeholder or (focus) group of stakeholders. You have options in how to conduct this
 
-- If done face-to-face or telephone, you should tape the interview, focus group, etc. and transcribe the recording manually or via a service or software. Those with Macs may wish to check out the newly released (and open source) [MacWhisper](https://goodsnooze.gumroad.com/l/macwhisper) based on the [OpenAI](https://openai.com) [Whisper](https://openai.com/blog/whisper/) automatic speech recognition system
+- If done face-to-face or phone, you should tape the interview, focus group, etc. and transcribe the recording manually or via a service or software. Those with Macs may wish to check out the newly released (and open source) [MacWhisper](https://goodsnooze.gumroad.com/l/macwhisper) based on the [OpenAI](https://openai.com) - the same people who brought you [ChatGPT](https://openai.com/blog/chatgpt/) -  [Whisper](https://openai.com/blog/whisper/) automatic speech recognition system
 - If conducted via videoconferencing, then the transcription may be done for you. For example, Zoom has this ability via their [Cloud Service](https://support.zoom.us/hc/en-us/articles/115004794983-Using-audio-transcription-for-cloud-recordings-).
 
 <i>If you choose to use automation, always remember to review the transcription for accuracy.</i>
