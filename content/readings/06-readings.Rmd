@@ -1,0 +1,88 @@
+---
+title: "The Importance of Knowing What's Important"
+linktitle: "Week 6: The Importance of Knowing What's Important"
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  readings:
+    parent: Readings
+    weight: 6
+type: docs
+weight: 1
+---
+
+`r blogdown::shortcode("aes-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+### Read Some Text
+
+```{r echo=FALSE}
+
+reading <- 
+  
+  tibble(
+  
+  Title = c("<i>Determining Importance</i>", 
+            "<i>The Merit Determination Step</i>"
+            ),
+  
+  Source = c("Davidson, E. J. (2007)",
+             "Davidson, E. J. (2007)"),
+  
+  Arrow = c("external",
+            "external"),
+  
+  Icon = c("library", 
+           "library"),
+  
+  Site = c(
+    "https://methods-sagepub-com.wvu.idm.oclc.org/book/evaluation-methodology-basics/7.xml",
+    "https://methods-sagepub-com.wvu.idm.oclc.org/book/evaluation-methodology-basics/n8.xml"
+    ),
+  
+  .name_repair = "minimal"
+)
+
+```
+
+<center>
+```{r, echo=FALSE}
+reading %>%
+  mutate(Icon = case_when(
+    str_detect(`Icon`, "slack") ~ '<img src="/logos/slack-ico.png" alt="Slack icon" width="25px">',
+    str_detect(`Icon`, "ecampus") ~ '<img src="/logos/wvu-gold-ico.png" alt="WVU icon" width="25px">',
+    str_detect(`Icon`, "library") ~ '<img src="/logos/library-ico.png" alt="Library icon" width="25px">',
+    str_detect(`Icon`, "journal") ~ '<img src="/logos/journal-ico.png" alt="Journal icon" width="25px">',
+    str_detect(`Icon`, "visualization") ~ '<img src="/logos/dataviz-ico.png" alt="Data Visualization icon" width="26px">',
+    TRUE ~ NA_character_
+    )
+  ) %>%
+  mutate(Arrow = case_when(
+    str_detect(`Arrow`, "external") ~ '<div style="font-size: 0.5rem;"><i class="fa fa-external-link fa-2x" aria-hidden="true" style="color:#559977"></i></div>',
+    TRUE ~ NA_character_
+    )
+  ) %>%
+  mutate(Site = na_if(Site, "")) %>%
+  mutate(Link = case_when(
+    !is.na(Icon) ~ paste0("<a href=",Site," target='_blank'>",Icon,"</a>"),
+    TRUE ~ "Please check this week's download"
+    )
+  ) %>%
+  select(-Icon, -Site, -Arrow) %>% 
+  mutate_all(replace_na,"") %>%
+  kbl(col.names = c("Title", "Citation", "Link"), 
+      "html", 
+      escape = FALSE,
+      align = 'llc') %>%
+  kable_paper(full_width = FALSE) %>%
+  column_spec(1, width = "22em") %>%
+  column_spec(2, width = "12em") %>%
+  column_spec(3, width = "8em") %>% 
+  row_spec(0:nrow(reading), extra_css = 'vertical-align: middle !important;', color = "#f7f7f7", background = "transparent")
+```
+</center>

@@ -17,6 +17,7 @@ wk_post %>%
     str_detect(`Icon`, "visualization") ~ '<img src="/logos/dataviz-ico.png" alt="Data visualization icon" width="28">',
     str_detect(`Icon`, "walkthrough") ~ '<img src="/logos/walkthrough-ico.png" alt="Walkthrough icon" width="26">',
     str_detect(`Icon`, "webpage") ~ '<img src="/logos/webpage-ico.png" alt="Webpage icon" width="27">',
+    str_detect(`Icon`, "zip") ~ '<img src="/logos/zip-ico.png" alt="Zip file icon" width="27">',
     TRUE ~ NA_character_
     )
   ) %>%

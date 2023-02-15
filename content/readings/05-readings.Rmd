@@ -23,7 +23,7 @@ source(here::here("content", "com_libs.R"))
 
 ```{r echo=FALSE}
 
-paper <- 
+reading <- 
   
   tibble(
   
@@ -47,7 +47,7 @@ paper <-
 
 <center>
 ```{r, echo=FALSE}
-paper %>%
+reading %>%
   mutate(Icon = case_when(
     str_detect(`Icon`, "slack") ~ '<img src="/logos/slack-ico.png" alt="Slack icon" width="25px">',
     str_detect(`Icon`, "ecampus") ~ '<img src="/logos/wvu-gold-ico.png" alt="WVU icon" width="25px">',
@@ -78,7 +78,7 @@ paper %>%
   column_spec(1, width = "22em") %>%
   column_spec(2, width = "12em") %>%
   column_spec(3, width = "8em") %>% 
-  row_spec(0:nrow(paper), extra_css = 'vertical-align: middle !important;', color = "#f7f7f7", background = "transparent")
+  row_spec(0:nrow(reading), extra_css = 'vertical-align: middle !important;', color = "#f7f7f7", background = "transparent")
 ```
 </center>
   

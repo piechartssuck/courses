@@ -40,11 +40,11 @@ Resources such as presentations, videos, visualizations, walkthroughs, etc. take
 
 ### Evaluation Teams
 
-You will need to form 2 - 4 member support and project teams. There will be a channel in Slack where you can discuss available times in your schedules[^1]. After a team is finalized, you will be provided a private space within Slack to share files and communicate though you are not required to utilize it.
+You will need to form 2 - 4 member support and project teams. There will be a channel in Slack where you can discuss available times in your schedules[^1].
 
 ## Weekly Postings
 
-Discussion boards will be created for a variety of purposes including discussing general course questions / logistics, getting to know each other, creating teams, discussing tasks and deliverables, etc. You will need to participate actively on each board and your postings should be meaningful and incorporate depth. Responses without any additional information and/or justifications will be considered to be incomplete and will reflect on your final earned point value. For further information, please take a look at the description below.
+Channels on Slack will be created for a variety of purposes including discussing general course questions / logistics, getting to know each other, creating teams, discussing tasks and deliverables, etc. You will need to participate actively on each board and your postings should be meaningful and incorporate depth. Responses without any additional information and/or justifications will be considered to be incomplete and will reflect on your final earned point value. For further information, please take a look at the description below.
 
 ### Writing on Slack
 
