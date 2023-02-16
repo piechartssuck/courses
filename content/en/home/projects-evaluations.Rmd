@@ -1,6 +1,6 @@
 ---
 title: "Projects & Evaluations"
-weight: 6
+weight: 7
 output:
   html_document:
     css: "style.css"

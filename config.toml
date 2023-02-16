@@ -33,7 +33,7 @@ ignoreFiles = [ "\\.Rmd$", "\\.Rmarkdown$", "_cache$" ]
 
     # Share buttons on blog post pages
     [params.share]
-        twitter                  = true
+        twitter                  = false
         facebook                 = false
         pinterest                = false
 
@@ -55,10 +55,10 @@ ignoreFiles = [ "\\.Rmd$", "\\.Rmarkdown$", "_cache$" ]
     # Social icons appear in introduction and contact section. Add as many more as you like.
     # Icon pack "fab" includes social network icons, see: https://fontawesome.com/icons?d=gallery&s=brands&m=free
     # Icon pack "fas" includes solid style icons, see: https://fontawesome.com/icons?d=gallery&s=solid&m=free
-    [[params.social]]
-        url   = "https://twitter.com/asocialdatasci"
-        icon  = "twitter" # icon name without the 'fa-'
-        icon_pack = "fab"
+    # [[params.social]]
+    #    url   = "https://twitter.com/asocialdatasci"
+    #    icon  = "twitter" # icon name without the 'fa-'
+    #    icon_pack = "fab"
     # [[params.social]]
     #     url   = "https://facebook.com/"
     #     icon  = "facebook-f" # icon name without the 'fa-'
@@ -92,8 +92,8 @@ ignoreFiles = [ "\\.Rmd$", "\\.Rmarkdown$", "_cache$" ]
     url     = "#advisees"
     weight  = 3
 [[menu.main]]
-    name    = "Current Courses"
-    url     = "#current-courses"
+    name    = "Courses"
+    url     = "#courses"
     weight  = 4
 [[menu.main]]
     name    = "Recent Talks"
