@@ -17,11 +17,11 @@ tibble(
          "Why?"),
   
   description = 
-    c("<a href='https://counselingandlearningsci.wvu.edu/faculty-staff/reagan-curtis'>Dr. Reagan Curtis</a>, Cari, and I",
-      "<a href='https://www.aera.net/Events-Meetings/Annual-Meeting'>2022 AERA Annual Meeting</a>",
-     "San Diego, CA",
-     "Fri, April 22, 11:30am to 1:00pm PDT @ Manchester Grand Hyatt",
-     "To present our paper <a href='https://tinyurl.com/yye55wrz'>Best of Both Worlds: Affordances of Mixing Machine Learning and Qualitative Content Analysis</a>")
+    c("Seidel, T. , Ferguson, C.F., & Roy, A.R.",
+      "<a href='https://www.evaluationconference.org'>Evaluation 2022</a>",
+     "New Orleans, LA",
+     "Wed, November 9, 6:30pm to 8:30pm EST @ Hyatt Regency",
+     "To present our paper <i>Let’s Get Sentimental: Machine Learning Aided Data Analysis for Large Qualitative Data Sets</i>")
   
 ) %>% 
   kable(col.names = c("", ""),

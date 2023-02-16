@@ -17,23 +17,23 @@ weight: 6
 <tbody>
   <tr>
    <td style="text-align:left;width: 5em; color: #ffffff !important;border-left:2px #1e1e1e;vertical-align: middle !important;background-color: #1e1e1e !important;"> Who? </td>
-   <td style="text-align:left;width: 20em; color: #ffffff !important;vertical-align: middle !important;background-color: #1e1e1e !important;"> <a href="https://counselingandlearningsci.wvu.edu/faculty-staff/reagan-curtis">Dr. Reagan Curtis</a>, Cari, and I </td>
+   <td style="text-align:left;width: 20em; color: #ffffff !important;vertical-align: middle !important;background-color: #1e1e1e !important;"> Seidel, T. , Ferguson, C.F., &amp; Roy, A.R. </td>
   </tr>
   <tr>
    <td style="text-align:left;width: 5em; color: #ffffff !important;border-left:2px #1e1e1e;vertical-align: middle !important;background-color: #1e1e1e !important;"> What? </td>
-   <td style="text-align:left;width: 20em; color: #ffffff !important;vertical-align: middle !important;background-color: #1e1e1e !important;"> <a href="https://www.aera.net/Events-Meetings/Annual-Meeting">2022 AERA Annual Meeting</a> </td>
+   <td style="text-align:left;width: 20em; color: #ffffff !important;vertical-align: middle !important;background-color: #1e1e1e !important;"> <a href="https://www.evaluationconference.org">Evaluation 2022</a> </td>
   </tr>
   <tr>
    <td style="text-align:left;width: 5em; color: #ffffff !important;border-left:2px #1e1e1e;vertical-align: middle !important;background-color: #1e1e1e !important;"> Where? </td>
-   <td style="text-align:left;width: 20em; color: #ffffff !important;vertical-align: middle !important;background-color: #1e1e1e !important;"> San Diego, CA </td>
+   <td style="text-align:left;width: 20em; color: #ffffff !important;vertical-align: middle !important;background-color: #1e1e1e !important;"> New Orleans, LA </td>
   </tr>
   <tr>
    <td style="text-align:left;width: 5em; color: #ffffff !important;border-left:2px #1e1e1e;vertical-align: middle !important;background-color: #1e1e1e !important;"> When? </td>
-   <td style="text-align:left;width: 20em; color: #ffffff !important;vertical-align: middle !important;background-color: #1e1e1e !important;"> Fri, April 22, 11:30am to 1:00pm PDT @ Manchester Grand Hyatt </td>
+   <td style="text-align:left;width: 20em; color: #ffffff !important;vertical-align: middle !important;background-color: #1e1e1e !important;"> Wed, November 9, 6:30pm to 8:30pm EST @ Hyatt Regency </td>
   </tr>
   <tr>
    <td style="text-align:left;width: 5em; color: #ffffff !important;border-left:2px #1e1e1e;vertical-align: middle !important;background-color: #1e1e1e !important;"> Why? </td>
-   <td style="text-align:left;width: 20em; color: #ffffff !important;vertical-align: middle !important;background-color: #1e1e1e !important;"> To present our paper <a href="https://tinyurl.com/yye55wrz">Best of Both Worlds: Affordances of Mixing Machine Learning and Qualitative Content Analysis</a> </td>
+   <td style="text-align:left;width: 20em; color: #ffffff !important;vertical-align: middle !important;background-color: #1e1e1e !important;"> To present our paper <i>Let’s Get Sentimental: Machine Learning Aided Data Analysis for Large Qualitative Data Sets</i> </td>
   </tr>
 </tbody>
 </table>
