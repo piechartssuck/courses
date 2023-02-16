@@ -12,7 +12,7 @@
 
 [context.split1.environment]
   HUGO_VERSION = "0.101.0"
-  HUGO_ENV = "production"å
+  HUGO_ENV = "production"
   # npm audit fix
 
 [context.deploy-preview]
