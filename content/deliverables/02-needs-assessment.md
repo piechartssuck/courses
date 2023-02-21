@@ -92,15 +92,12 @@ Please follow the steps below to analyze your recording:
 2.  After everyone has accomplished the task above, meet as a group and discuss your findings. Come to an agreement as to what may be potential themes and avenues to consider for an evaluation. From this, you have two choices for justification:
 
     <div id="anchorwk1">
+
     <details>
     <summary>
-
     <b>Quantitative approach</b>
-
     </summary>
-
     <br>
-
     <p>
 
     Consider using an agreement scaling like a <a href="/handouts/Kappa Statistic.pdf" target="blank">Kappa Statistic</a> as your justification. Then provide a clear and concise narrative on your process, your agreement threshold and what criteria were used (i.e. please just don’t simply say we agreed on theme X because we felt like it, rather provide actual criteria for agreement). Please submit the final agreement measures delineated by theme in addition to the aggregated agreement score and description. To clarify, you will be required to submit the following in the <span style="color:#e3faff; font-weight:bold;">Appendix</span>:
@@ -111,26 +108,22 @@ Please follow the steps below to analyze your recording:
 
     - A short and concise narrative explain the process, criteria, and benchmarks for agreement. Include the final agreement score and what scaling you used.
 
-      </p>
-      </details>
-      </div>
+    </p>
+    </details>
 
-      <br>
+    </div>
 
-      <div id="anchorwk2">
-      <details>
-      <summary>
+    <br>
 
-      <b>Qualitative approach</b>
+    <div id="anchorwk2">
 
-      </summary>
-
-      <br>
-
-      <p>
-
-      Should you choose not to use an agreement scaling, describe the process in a clear manner and in great detail within your <span style="color:#e3faff; font-weight:bold;">Appendix</span>. Read over <a href="/handouts/Shenton%20(2004).pdf" target="blank">Shenton (2004)</a> and ensure that you address all four of Guba’s constructs provided on p. 64. Most importantly, provide a narrative on how triangulation and saturation were fully addressed. To clarify, you will be required to submit the following in the appendix:
-
+    <details>
+    <summary>
+    <b>Qualitative approach</b>
+    </summary>
+    <br>
+    <p>
+    Should you choose not to use an agreement scaling, describe the process in a clear manner and in great detail within your <span style="color:#e3faff; font-weight:bold;">Appendix</span>. Read over <a href="/handouts/Shenton%20(2004).pdf" target="blank">Shenton (2004)</a> and ensure that you address all four of Guba’s constructs provided on p. 64. Most importantly, provide a narrative on how triangulation and saturation were fully addressed. To clarify, you will be required to submit the following in the appendix:
     - A table of all themes regardless of agreement.
 
     - A detailed and explicit narrative regarding how *credibility*, *transferability*, *dependability*, and *confirmability* were satisfied or an argument as to why it could not.
@@ -139,11 +132,12 @@ Please follow the steps below to analyze your recording:
 
     - A short and concise narrative on how triangulation and saturation were fully addressed. Make sure to be very specific in addressing what criteria were used and how each was satisfied.
 
-      </p>
-      </details>
-      </div>
+    </p>
+    </details>
 
-      <br>
+    </div>
+
+    <br>
 
 <center>
 <p id="rounded_corners">
