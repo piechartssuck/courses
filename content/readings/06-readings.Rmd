@@ -41,7 +41,7 @@ reading <-
            "library"),
   
   Site = c(
-    "https://methods-sagepub-com.wvu.idm.oclc.org/book/evaluation-methodology-basics/7.xml",
+    "https://methods-sagepub-com.wvu.idm.oclc.org/book/evaluation-methodology-basics/n7.xml",
     "https://methods-sagepub-com.wvu.idm.oclc.org/book/evaluation-methodology-basics/n8.xml"
     ),
   

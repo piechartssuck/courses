@@ -1,0 +1,92 @@
+---
+title: "Making Sense and Interpreting Nonsense"
+linktitle: "Week 7: Making Sense and Interpreting Nonsense"
+output:
+  rmarkdown::html_document
+menu:
+  due:
+    parent: "To Do List"
+    weight: 7
+type: docs
+weight: 2
+---
+
+`r blogdown::shortcode("aes-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r eval = TRUE, echo = FALSE}
+
+wk_post <- 
+  
+  tibble(
+    
+    Description = c("Read <i>Synthesis Methodology</i> in Davidson (2007)",
+                    "Read <i>Putting it All Together</i> in Davidson (2007)",
+                    "Read <i>Theory Driven Evaluations</i> by Chen (2012)",
+                    "Respond to one post on <a style='color:#ff8384;'>\\ #wk6-disagreement</a>",
+                    "Create a post at <a style='color:#5eb0e5;'>\\ #wk7-kec-and-tde</a> based on the readings",
+                    "Take a look at a simplistic breakdown of multiple evaluation approaches in <b>Collaborative, Participatory, & Empowerment Evaluation</b>",
+                "Review evaluations that are stakeholder independent or dependent in <b>Goal-Free Evaluation and Goal-Based Evaluation</b>",
+                "Skim through a list of standard evaluation models",
+              "Go through the <b>Checklist of Key Considerations for Development of Program Logic Models</b> to review criteria needed for logic models",
+                "Go through the slideshow <span style='color:#6ac4cd;font-weight:bold'>A Short Course on Evaluation Models</span>",
+                "Go through the slideshow <span style='color:#6ac4cd;font-weight:bold'>Data Collection</span>",
+              "Take a look at the criteria needed for an <span style='color:#52bf90; font-weight:bold;'>Needs Assessment</span> due at the <i><b>end of week 7</b></i>",
+                "Preview the criteria needed for an <span style='color:#52bf90; font-weight:bold;'>Evaluation Proposal</span> due at the <i><b>end of week 8</b></i>"
+    ),
+    
+    
+    Details = c("<a href='/readings/07-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+                "<a href='/readings/07-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+                "<a href='/readings/07-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+                "<a href='/tasks/07-tasks/#responses'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+                "<a href='/tasks/07-tasks/#posting'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+                "<a href='/tasks/07-tasks/#collaborative-participatory--empowerment-evaluation'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+                "<a href='/tasks/07-tasks/#goal-free-versus-goal-based'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+                "<a href='/tasks/07-tasks/#a-not-at-all-comprehensive-list-of-models'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+                "<a href='/tasks/07-tasks/#logic-model-checklist'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+                "<a href='/tasks/07-tasks/#review-slideshows'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+                "<a href='/tasks/07-tasks/#review-slideshows'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+               "<a href='/deliverables/02-needs-assessment/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+                "<a href='/deliverables/03-evaluation-proposal/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
+                ),
+    
+    Icon = c("library", 
+             "library",
+             "pdf", 
+             "slack",
+             "slack",
+             "pdf",
+             "pdf",
+             "pdf",
+             "pdf",
+             "slideshow",
+             "slideshow",
+             "ecampus",
+             "ecampus"),
+    
+    Site = c("https://methods-sagepub-com.wvu.idm.oclc.org/book/evaluation-methodology-basics/n9.xml",
+             "https://methods-sagepub-com.wvu.idm.oclc.org/book/evaluation-methodology-basics/n10.xml",               "https://link.springer.com/chapter/10.1007/978-3-531-19009-9_2",
+             "https://edp617spring2023.slack.com/archives/C04PPBD5YFM",
+             "https://edp617spring2023.slack.com/archives/C04Q9H31BMM",
+             "",
+             "",
+             "",
+             "",
+             "",
+             "",
+             "https://ecampus.wvu.edu",
+             "https://ecampus.wvu.edu")
+  )
+```
+
+<center>
+`r knitr::spin_child(here::here("content", "post_frame.R"))`
+</center>

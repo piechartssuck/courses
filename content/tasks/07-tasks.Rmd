@@ -1,0 +1,270 @@
+---
+title: "Making Sense and Interpreting Nonsense"
+linktitle: "Week 7: Making Sense and Interpreting Nonsense"
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  tasks:
+    parent: Tasks
+    weight: 7
+type: docs
+weight: 1
+---
+
+`r blogdown::shortcode("aes-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+## Writing
+
+### Responses
+
+Please create **one response** for <a href="https://edp617spring2023.slack.com/archives/C04PPBD5YFM" target="_blank" style='color:#ff8384;'>#wk6-disagreement</a> on Slack<sup>1</sup>. 
+
+### Posting
+
+After going through this week's [readings](/readings/07-readings), address the following items in a single post on the channel <a href="https://edp617spring2023.slack.com/archives/C04Q9H31BMM" target="_blank" style='color:#5eb0e5;'>#wk7-kec-and-tde</a>
+
+ + <i>What parts of the KEC are needed in your evaluation and why?</i>
+  
+  + <i>What particular steps will be needed to ensure that a theory-driven evaluation is implemented correctly in your study?</i>
+
+## Doing
+
+### Collaborative, Participatory, & Empowerment Evaluation
+
+Take a look at a one-pager explaining the difference between collaborative, participatory and empowerment evaluation.
+
+```{r echo=FALSE}
+pdf_link <- function() {
+ paste0("<a href='/handouts/Collaborative,%20Participatory,%20Empowerment%20Evaluation%201-Pager.pdf' target='blank'>", "<img src='/logos/pdf-ico.png'  alt='Lipsey (2000)' width='35'>", "</a>")
+}
+
+textitems <- tibble(
+  
+  pdf <- c(pdf_link(),
+           "Lipsey (2000)"
+            )
+  )
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(textitems, 
+      col.names = c(""),
+      escape = FALSE,
+      align = 'cc') %>%
+  kable_paper(full_width = FALSE) %>%
+  column_spec(1, width = "20em", color = "#ffffff", extra_css = 'vertical-align: middle !important;', background = "transparent")
+```
+</center>
+
+### Goal Free versus Goal Based
+
+Go through this excellent [slideshow](/handouts/GFEvsGFB.pdf) assessing the differences between a goal-based evaluation (GBE) versus a goal-free evaluation (GFE) even if some of the slides use Comic Sans^[*Hint: Whether you love it, hate it, or don't have an opinion, just don't use Comic Sans. It is generally* [*less believable*](https://opinionator.blogs.nytimes.com/2012/08/08/hear-all-ye-people-hearken-o-earth/) *than other standard fonts*.]
+
+
+```{r echo=FALSE}
+pdf_link <- function() {
+ paste0("<a href='/handouts/GFEvsGFB.pdf' target='blank'>", "<img src='/logos/pdf-ico.png'  alt='Youker (2005)' width='35'>", "</a>")
+}
+
+textitems <- tibble(
+  
+  pdf <- c(pdf_link(),
+           "Youker (2005)"
+            )
+  )
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(textitems, 
+      col.names = c(""),
+      escape = FALSE,
+      align = 'cc') %>%
+  kable_paper(full_width = FALSE) %>%
+  column_spec(1, width = "20em", color = "#ffffff", extra_css = 'vertical-align: middle !important;', background = "transparent")
+```
+</center>
+
+
+### A Not at All Comprehensive List of Models
+
+Skim through some evaluation models. You are better off treating this document like a handbook of things you may need or come across but it is worth a look
+
+```{r echo=FALSE}
+pdf_link <- function() {
+ paste0("<a href='/handouts/Some Evaluation Models.pdf' target='blank'>", "<img src='/logos/pdf-ico.png'  alt='Some Evaluation Models' width='35'>", "</a>")
+}
+
+textitems <- tibble(
+  
+  pdf <- c(pdf_link(),
+           "Some Evaluation Models"
+            )
+  )
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(textitems, 
+      col.names = c(""),
+      escape = FALSE,
+      align = 'cc') %>%
+  kable_paper(full_width = FALSE) %>%
+  column_spec(1, width = "20em", color = "#f7f7f7", extra_css = 'vertical-align: middle !important;', background = "transparent")
+```
+</center>
+
+### Logic Model Checklist
+
+If you like checklists or simply wish to review what could and should be included in a logic model, take a look at the <span style="color:#6ac4cd;font-weight:italic">Checklist of Key Considerations for Development of Program Logic Models</span>
+
+```{r echo=FALSE}
+pdf_link <- function() {
+ paste0("<a href='/handouts/MacDonald%20(2018).pdf' target='blank'>", "<img src='/logos/pdf-ico.png'  alt='MacDonald (2018)' width='35'>", "</a>")
+}
+
+textitems <- tibble(
+  
+  pdf <- c(pdf_link(),
+           "MacDonald (2018)"
+            )
+  )
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(textitems, 
+      col.names = c(""),
+      escape = FALSE,
+      align = 'cc') %>%
+  kable_paper(full_width = FALSE) %>%
+  column_spec(1, width = "20em", color = "#ffffff", extra_css = 'vertical-align: middle !important;', background = "transparent")
+```
+</center>
+
+### Review Slideshows
+
+This week we have two slideshows addressing models and data, respectively. Generally, models are being used sparingly nowadays but some popular ones you may still encounter are provided. On the other hand data collection methods are a neverending topic, some of which are briefly touched on in the second slideshow.
+
+```{=html}
+<center>
+<div class="wrapper">
+    <div class="icon leftright">
+      <div class="tooltip"><span style=width:200px;>Move back and forth using <kbd>←</kbd> and <kbd>→</kbd></span></div>
+      <span><i class="fas fa-map-signs"></i></span></div>
+    <div class="icon info">
+      <div class="tooltip"><span style=width:200px;>Toggle fullscreen by pressing <kbd>F</kbd></span></div>
+      <span><i class="fas fa-expand-alt"></i></span>
+    </div><div class="icon github">
+      <div class="tooltip"><span style=width:200px;>Press <kbd>O</kbd> for and overview of all slides</span></div>
+      <span><i class="far fa-images"></i></span>
+    </div><div class="icon youtube">
+      <div class="tooltip"><span style=width:200px;>Discover more shortcuts by pressing <kbd>H</kbd></span></div>
+      <span><i class="fas fa-info-circle"></i></span>
+    </div>
+</div>
+</center>
+<br>
+```
+
+<center>
+<div class="holder">
+
+<div class="bigcol">
+```{r echo = FALSE, out.width="200%", fig.align='left'}
+knitr::include_url("/slides/A Short Course on Evaluation Models/A-Short-Course-on-Evaluation-Models-pres.html")
+```
+</div>
+
+<div class="smallcol">
+```{r echo = FALSE, fig.align='right'}
+
+html_link <- function() {
+  paste0("<a href='/slides/A Short Course on Evaluation Models/A-Short-Course-on-Evaluation-Models-pres.html' target='_blank'>", "<img src='/logos/web-ico.png' alt='Web icon' width='35'>", "</a>")
+}
+
+pdf_link <- function() {
+  paste0("<a href='/slides/A Short Course on Evaluation Models/A-Short-Course-on-Evaluation-Models-flat.pdf' target='_blank'>", "<img src='/logos/pdf-ico.png' alt='PDF icon' width='35'>", "</a>")
+}
+
+tibble(
+  
+  html <- c(html_link(),
+            "Larger version of the presentation",
+            "",
+            pdf_link(),
+            "PDF of the presentation")
+) %>%
+  kbl(col.names = c(""),
+      "html",
+      escape = FALSE,
+      align = 'c') %>%
+  kable_paper(full_width = FALSE) %>%
+  column_spec(1, width = "25em", extra_css = "padding-left: 300px;") %>%
+  row_spec(1:5, extra_css = 'vertical-align: middle !important;', color = "#ffffff", background = "transparent") 
+```
+</div>
+
+</div>
+
+<div class="clear">
+</div>
+</center>
+
+
+<center>
+<div class="holder">
+
+<div class="bigcol">
+```{r echo = FALSE, out.width="200%", fig.align='left'}
+knitr::include_url("/slides/Data Collection/Data-Collection-pres.html")
+```
+</div>
+
+<div class="smallcol">
+```{r echo = FALSE, fig.align='right'}
+
+html_link <- function() {
+  paste0("<a href='/slides/Data Collection/Data-Collection-pres.html' target='_blank'>", "<img src='/logos/web-ico.png' alt='Web icon' width='35'>", "</a>")
+}
+
+pdf_link <- function() {
+  paste0("<a href='/slides/Data Collection/Data-Collection-flat.pdf' target='_blank'>", "<img src='/logos/pdf-ico.png' alt='PDF icon' width='35'>", "</a>")
+}
+
+tibble(
+  
+  html <- c(html_link(),
+            "Larger version of the presentation",
+            "",
+            pdf_link(),
+            "PDF of the presentation")
+) %>%
+  kbl(col.names = c(""),
+      "html",
+      escape = FALSE,
+      align = 'c') %>%
+  kable_paper(full_width = FALSE) %>%
+  column_spec(1, width = "25em", extra_css = "padding-left: 300px;") %>%
+  row_spec(1:5, extra_css = 'vertical-align: middle !important;', color = "#ffffff", background = "transparent") 
+```
+</div>
+
+</div>
+
+<div class="clear">
+</div>
+</center>
+
+### Deliverables
+
+- Review the requirements for your second deliverable - the [Needs Assessment](/deliverables/02-needs-assessment/) - due by the end of this week!
+
+- Preview your third deliverable - an [Evaluation Proposal](/deliverables/03-evaluation-proposal/) - due by the end of Week 8.

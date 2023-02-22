@@ -1,6 +1,7 @@
 ---
 title: 'EDP 617: A Short Course on Evaluation Models'
 subtitle: 'A Tiny Primer'
+author: "Dr. Abhik Roy"
 output: 
  xaringan::moon_reader:
    css: ['xaringan-themer.css', 'custom.css']

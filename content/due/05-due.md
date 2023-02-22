@@ -79,7 +79,7 @@ Look over <b>Evaluating Community Programs and Initiatives</b> for extra help on
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Take a look at the criteria needed for an <span style="color:#52bf90; font-weight:bold;">Needs Assessment</span> due in <i><b>two weeks</b></i>
+Take a look at the criteria needed for a <span style="color:#52bf90; font-weight:bold;">Needs Assessment</span> due at the <i><b>end of week 7</b></i>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/deliverables/02-needs-assessment/"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>

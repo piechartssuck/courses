@@ -1,6 +1,6 @@
 ---
-title: "Rethinking the Way You Think"
-linktitle: "Week 2: Rethinking the Way You Think"
+title: "Making Sense and Interpreting Nonsense"
+linktitle: "Week 7: Making Sense and Interpreting Nonsense"
 toc: true
 output:
   rmarkdown::html_document:
@@ -8,7 +8,7 @@ output:
 menu:
   readings:
     parent: Readings
-    weight: 2
+    weight: 7
 type: docs
 weight: 1
 ---
@@ -23,11 +23,11 @@ source(here::here("content", "com_libs.R"))
 
 <center>
 ```{r echo=FALSE,eval=TRUE,message=FALSE}
-loc <- here::here("static", "readings", "EDP617Week2Readings.zip")
+loc <- here::here("static", "readings", "EDP617Week7Reading.zip")
 
 downloadthis::download_file(
   path = loc,
-  output_name = "Week 2 Readings",
+  output_name = "Week 7 Reading",
   button_label = "&nbsp;&nbsp;&nbsp;<span style='color:#ffffff'>Download</span>",
   button_type = "primary",
   has_icon = TRUE,
@@ -41,33 +41,35 @@ downloadthis::download_file(
 
 ```{r echo=FALSE}
 
-reading <- tibble(
+reading <- 
   
-  title = c("<i>Editorial: Unlearning some of our social scientist habits</i>",
-            "<i>What is the difference between evaluation and research - and why do we care?</i>",
-            "<i>What is evaluation?: Perspectives of how evaluation differs (or not) from research</i>"
+  tibble(
+  
+  Title = c("<i>Theory-driven Evaluation: Conceptual Framework,
+Application and Advancement</i>",
+            "<i>Synthesis Methodology</i>", 
+            "<i>Putting it All Together</i>"
             ),
   
-  Source = c("Davidson, J. (2007)",
-             "Mathison, S. (2006)",
-             "Wanzer, D.L. (2021)"),
+  Source = c("Chen (2012)",
+             "Davidson, E. J. (2007)",
+             "Davidson, E. J. (2007)"),
   
   Arrow = c("internal",
-            "internal",
-            "internal"),
+            "external",
+            "external"),
   
-  Icon = c("pdf", 
-           "pdf",
-           "pdf"),
+  Icon = c("pdf",
+           "library", 
+           "library"),
   
   Site = c(
-    "https://journals.sfu.ca/jmde/index.php/jmde_1/article/view/68",
-    "",
-    "https://doi.org/10.1177/1098214020920710"
-  ),
+    "https://link.springer.com/chapter/10.1007/978-3-531-19009-9_2",
+    "https://methods-sagepub-com.wvu.idm.oclc.org/book/evaluation-methodology-basics/n9.xml",
+    "https://methods-sagepub-com.wvu.idm.oclc.org/book/evaluation-methodology-basics/n10.xml"
+    ),
   
   .name_repair = "minimal"
-  
 )
 
 ```

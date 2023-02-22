@@ -32,9 +32,9 @@ Please create **one response** for <a href="https://edp617spring2023.slack.com/a
 
 After going through this week’s [readings](/readings/03-readings), address the following in a single post on the channel <a href="https://edp617spring2023.slack.com/archives/C04LEHZTFFD" target="_blank" style='color:#5eb0e5;'>\#wk3-criteria</a>
 
-- How do you view the relationship between indicators and criteria?
+- <i>How do you view the relationship between indicators and criteria?</i>
 
-- What general steps would/do you take to assess criteria for an existing program you have been tasked to evaluate?
+- <i>What general steps would/do you take to assess criteria for an existing program you have been tasked to evaluate?</i>
 
 ## Doing
 
@@ -211,4 +211,4 @@ PDF of the presentation
 
 ### Deliverable
 
-Take a look at a preview for your first deliverable, namely an [Evaluation Prospectus](/deliverables/01-evaluation-prospectus/) due by the end of Week 4.
+Preview your first deliverable - an [Evaluation Prospectus](/deliverables/01-evaluation-prospectus/) - due by the end of Week 4.

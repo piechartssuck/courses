@@ -45,7 +45,7 @@ Link
 Davidson, E. J. (2007)
 </td>
 <td style="text-align:center;width: 8em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://methods-sagepub-com.wvu.idm.oclc.org/book/evaluation-methodology-basics/7.xml" target="_blank"><img src="/logos/library-ico.png" alt="Library icon" width="25px"></a>
+<a href="https://methods-sagepub-com.wvu.idm.oclc.org/book/evaluation-methodology-basics/n7.xml" target="_blank"><img src="/logos/library-ico.png" alt="Library icon" width="25px"></a>
 </td>
 </tr>
 <tr>

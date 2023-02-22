@@ -1,5 +1,5 @@
 ---
-title: 'Data Collection'
+title: 'EDP 617: Data Collection'
 subtitle: 'A Crash Course for Evaluators'
 author: "Dr. Abhik Roy"
 output: 

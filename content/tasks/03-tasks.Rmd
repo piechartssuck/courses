@@ -113,7 +113,7 @@ Look through the CDC's <a href="/handouts/Types of Evaluation.pdf" target="_blan
 
 ### Review a Slideshow
 
-We'll be covering three primary concepts in evaluation: *criteria*, *standards* and *indicators* all within the scope of criteria. While all three are extremely important, the trait that can have the greatest impact on the planning of an evaluation is in constructing the proper criteria. With that in mind, please view and listen to  <span style="color:#6ac4cd;font-weight:bold">What the Hell is Program Evaluation?</span> For information on how to traverse the slideshow, hover over the icons below.
+We'll be covering three primary concepts in evaluation: *criteria*, *standards* and *indicators* all within the scope of criteria. While all three are extremely important, the trait that can have the greatest impact on the planning of an evaluation is in constructing the proper criteria. With that in mind, please view and listen to <span style="color:#6ac4cd;font-weight:bold">What the Hell is Program Evaluation?</span> For information on how to traverse the slideshow, hover over the icons below.
 
 ```{=html}
 <center>
@@ -182,4 +182,4 @@ tibble(
 
 ### Deliverable
 
-Take a look at a preview for your first deliverable, namely an [Evaluation Prospectus](/deliverables/01-evaluation-prospectus/) due by the end of Week 4.
+Preview your first deliverable - an [Evaluation Prospectus](/deliverables/01-evaluation-prospectus/) - due by the end of Week 4.

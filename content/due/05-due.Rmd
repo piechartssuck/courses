@@ -30,7 +30,7 @@ Description = c('Read <i>"Values" in Evaluation</i> in Davidson (2007)',
                 "Respond to two posts on <a style='color:#ff8384;'>\\ #wk4-hypotheticals</a>",
                 "Create a post at <a style='color:#5eb0e5;'>\\ #wk5-whose-values</a> based on the readings",
                 "Look over <b>Evaluating Community Programs and Initiatives</b> for extra help on any evaluation",
-                "Take a look at the criteria needed for an <span style='color:#52bf90; font-weight:bold;'>Needs Assessment</span> due in <i><b>two weeks</b></i>"
+                "Take a look at the criteria needed for a <span style='color:#52bf90; font-weight:bold;'>Needs Assessment</span> due at the <i><b>end of week 7</b></i>"
                 ),
 
 

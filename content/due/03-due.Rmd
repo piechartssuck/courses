@@ -34,7 +34,8 @@ Description = c("Read <i>What is Evaluation?</i> in Davidson (2007)",
                 "Finalize your teams over on <a style='color:#5eb0e5;'>\\ #wk2-talk-about-logistics</a> and submit a completed file to eCampus",
                 "Take a look at some popular evaluation approaches courtesy of the CDC",
                 "Go through the slideshow <span style='color:#6ac4cd;font-weight:bold'>What the Hell is Program Evaluation?</span>",
-                "Take a look at the criteria needed for an <span style='color:#52bf90; font-weight:bold;'>Evaluation Prospectus</span> due at the <i><b>end of next week!</b></i>"
+                "Take a look at the criteria needed for an <span style='color:#52bf90; font-weight:bold;'>Evaluation Prospectus</span> due at the <i><b>end of next week!</b></i>",
+                "Preview the criteria needed for a <span style='color:#52bf90; font-weight:bold;'>Needs Assessment</span> due at the <i><b>end of week 7</b></i>"
                 ),
 
 
@@ -46,7 +47,8 @@ Details = c("<a href='/readings/03-readings/#read-some-text'><span style='font-s
              "<a href='/tasks/03-tasks/#create-an-evaluation-team'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/tasks/03-tasks/#view-evaluation-approaches'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/tasks/03-tasks/#review-a-slideshow'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
-            "<a href='/deliverables/01-evaluation-prospectus/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
+            "<a href='/deliverables/01-evaluation-prospectus/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+             "<a href='/deliverables/deliverables/02-needs-assessment/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
             ),
 
 Icon = c("library",
@@ -57,6 +59,7 @@ Icon = c("library",
          "ecampus",
          "pdf",
          "slideshow",
+         "ecampus",
          "ecampus"),
 
 Site = c( "https://methods-sagepub-com.wvu.idm.oclc.org/book/evaluation-methodology-basics/n1.xml",
@@ -67,6 +70,7 @@ Site = c( "https://methods-sagepub-com.wvu.idm.oclc.org/book/evaluation-methodol
          "https://ecampus.wvu.edu",
          "",
          "",
+         "https://ecampus.wvu.edu",
          "https://ecampus.wvu.edu")
 )
 ```

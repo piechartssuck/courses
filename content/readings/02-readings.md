@@ -70,7 +70,7 @@ Please check this week’s download
 </tr>
 <tr>
 <td style="text-align:left;width: 22em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<i>What Is evaluation?: Perspectives of how evaluation differs (or not) from research</i>
+<i>What is evaluation?: Perspectives of how evaluation differs (or not) from research</i>
 </td>
 <td style="text-align:left;width: 12em; color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 Wanzer, D.L. (2021)

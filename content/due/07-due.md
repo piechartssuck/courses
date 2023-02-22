@@ -1,12 +1,12 @@
 ---
-title: "Aims, Scope, and Sequencing"
-linktitle: "Week 3: Aims, Scope, and Sequencing"
+title: "Making Sense and Interpreting Nonsense"
+linktitle: "Week 7: Making Sense and Interpreting Nonsense"
 output:
   rmarkdown::html_document
 menu:
   due:
     parent: "To Do List"
-    weight: 3
+    weight: 7
 type: docs
 weight: 2
 ---
@@ -35,76 +35,65 @@ Type<sup>2</sup>
 <tbody>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Read <i>What is Evaluation?</i> in Davidson (2007)
+Read <i>Synthesis Methodology</i> in Davidson (2007)
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/readings/03-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
+<a href="/readings/07-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://methods-sagepub-com.wvu.idm.oclc.org/book/evaluation-methodology-basics/n1.xml" target="_blank"><img src="/logos/library-ico.png" alt="Library icon" width="25"> </a>
+<a href="https://methods-sagepub-com.wvu.idm.oclc.org/book/evaluation-methodology-basics/n9.xml" target="_blank"><img src="/logos/library-ico.png" alt="Library icon" width="25"> </a>
 </td>
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Read <i>Defining the Purpose of Evaluation</i> in Davidson (2007)
+Read <i>Putting it All Together</i> in Davidson (2007)
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/readings/03-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
+<a href="/readings/07-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://methods-sagepub-com.wvu.idm.oclc.org/book/evaluation-methodology-basics/n2.xml" target="_blank"><img src="/logos/library-ico.png" alt="Library icon" width="25"> </a>
+<a href="https://methods-sagepub-com.wvu.idm.oclc.org/book/evaluation-methodology-basics/n10.xml" target="_blank"><img src="/logos/library-ico.png" alt="Library icon" width="25"> </a>
 </td>
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Read <i>Identifying Evaluative Criteria</i> in Davidson (2007)
+Read <i>Theory Driven Evaluations</i> by Chen (2012)
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/readings/03-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
+<a href="/readings/07-readings/#read-some-text"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://methods-sagepub-com.wvu.idm.oclc.org/book/evaluation-methodology-basics/n3.xml" target="_blank"><img src="/logos/library-ico.png" alt="Library icon" width="25"> </a>
+<a href="https://link.springer.com/chapter/10.1007/978-3-531-19009-9_2" target="_blank"><img src="/logos/pdf-ico.png" alt="PDF icon" width="32"> </a>
 </td>
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Respond to two posts on <a style="color:#ff8384;"> #wk2-rethinking-the-way-you-think</a>
+Respond to one post on <a style="color:#ff8384;"> #wk6-disagreement</a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/tasks/03-tasks/#responses"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
+<a href="/tasks/07-tasks/#responses"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://edp617spring2023.slack.com/archives/C04K8C5BX8C" target="_blank"><img src="/logos/slack-ico.png" alt="Slack icon" width="25"> </a>
+<a href="https://edp617spring2023.slack.com/archives/C04PPBD5YFM" target="_blank"><img src="/logos/slack-ico.png" alt="Slack icon" width="25"> </a>
 </td>
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Create a post at <a style="color:#5eb0e5;"> #wk3-criteria</a> based on the readings
+Create a post at <a style="color:#5eb0e5;"> #wk7-kec-and-tde</a> based on the readings
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/tasks/03-tasks/#postings"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
+<a href="/tasks/07-tasks/#posting"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://edp617spring2023.slack.com/archives/C04LEHZTFFD" target="_blank"><img src="/logos/slack-ico.png" alt="Slack icon" width="25"> </a>
+<a href="https://edp617spring2023.slack.com/archives/C04Q9H31BMM" target="_blank"><img src="/logos/slack-ico.png" alt="Slack icon" width="25"> </a>
 </td>
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Finalize your teams over on <a style="color:#5eb0e5;"> #wk2-talk-about-logistics</a> and submit a completed file to eCampus
+Take a look at a simplistic breakdown of multiple evaluation approaches in <b>Collaborative, Participatory, & Empowerment Evaluation</b>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/tasks/03-tasks/#create-an-evaluation-team"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
-</td>
-<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="https://ecampus.wvu.edu" target="_blank"><img src="/logos/wvu-gold-ico.png" alt="WVU icon" width="26"> </a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Take a look at some popular evaluation approaches courtesy of the CDC
-</td>
-<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/tasks/03-tasks/#view-evaluation-approaches"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
+<a href="/tasks/07-tasks/#collaborative-participatory--empowerment-evaluation"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <img src="/logos/pdf-ico.png" alt="PDF icon" width="32">
@@ -112,10 +101,43 @@ Take a look at some popular evaluation approaches courtesy of the CDC
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Go through the slideshow <span style="color:#6ac4cd;font-weight:bold">What the Hell is Program Evaluation?</span>
+Review evaluations that are stakeholder independent or dependent in <b>Goal-Free Evaluation and Goal-Based Evaluation</b>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/tasks/03-tasks/#review-a-slideshow"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
+<a href="/tasks/07-tasks/#goal-free-versus-goal-based"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
+</td>
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<img src="/logos/pdf-ico.png" alt="PDF icon" width="32">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+Skim through a list of standard evaluation models
+</td>
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<a href="/tasks/07-tasks/#a-not-at-all-comprehensive-list-of-models"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
+</td>
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<img src="/logos/pdf-ico.png" alt="PDF icon" width="32">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+Go through the <b>Checklist of Key Considerations for Development of Program Logic Models</b> to review criteria needed for logic models
+</td>
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<a href="/tasks/07-tasks/#logic-model-checklist"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
+</td>
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<img src="/logos/pdf-ico.png" alt="PDF icon" width="32">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+Go through the slideshow <span style="color:#6ac4cd;font-weight:bold">A Short Course on Evaluation Models</span>
+</td>
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<a href="/tasks/07-tasks/#review-slideshows"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <img src="/logos/slideshow-ico.png" alt="Slideshow icon" width="26">
@@ -123,10 +145,21 @@ Go through the slideshow <span style="color:#6ac4cd;font-weight:bold">What the H
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Take a look at the criteria needed for an <span style="color:#52bf90; font-weight:bold;">Evaluation Prospectus</span> due at the <i><b>end of next week!</b></i>
+Go through the slideshow <span style="color:#6ac4cd;font-weight:bold">Data Collection</span>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/deliverables/01-evaluation-prospectus/"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
+<a href="/tasks/07-tasks/#review-slideshows"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
+</td>
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<img src="/logos/slideshow-ico.png" alt="Slideshow icon" width="26">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+Take a look at the criteria needed for an <span style="color:#52bf90; font-weight:bold;">Needs Assessment</span> due at the <i><b>end of week 7</b></i>
+</td>
+<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<a href="/deliverables/02-needs-assessment/"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://ecampus.wvu.edu" target="_blank"><img src="/logos/wvu-gold-ico.png" alt="WVU icon" width="26"> </a>
@@ -134,10 +167,10 @@ Take a look at the criteria needed for an <span style="color:#52bf90; font-weigh
 </tr>
 <tr>
 <td style="text-align:left;width: 25em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-Preview the criteria needed for a <span style="color:#52bf90; font-weight:bold;">Needs Assessment</span> due at the <i><b>end of week 7</b></i>
+Preview the criteria needed for an <span style="color:#52bf90; font-weight:bold;">Evaluation Proposal</span> due at the <i><b>end of week 8</b></i>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/deliverables/deliverables/02-needs-assessment/"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
+<a href="/deliverables/03-evaluation-proposal/"><span style="font-size: 25px; color: #89cff0;"><i class="fas fa-info-circle"></i></span></a>
 </td>
 <td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://ecampus.wvu.edu" target="_blank"><img src="/logos/wvu-gold-ico.png" alt="WVU icon" width="26"> </a>

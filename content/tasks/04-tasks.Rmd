@@ -42,6 +42,8 @@ Now take a look at a brief from UNICEF addressing causal attributions on (impact
 <iframe src="https://www.youtube.com/embed/4lv3DJFBLqI" width="640" height="360" frameborder="0" allow="fullscreen" style="display: block; margin: 0 auto 1rem;"></iframe>
 </center>
 
-### Deliverable
+### Deliverables
 
-Your first deliverable - [Evaluation Prospectus](/deliverables/01-evaluation-prospectus/) - is due at the end of this week.
+- Review the requirements for your second deliverable - an [Evaluation Prospectus](/deliverables/01-evaluation-prospectus/) - due by the end of this week.
+
+- Preview your second deliverable - a [Needs Assessment](/deliverables/02-needs-assessment/) - due by the end of Week 7.

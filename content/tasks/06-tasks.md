@@ -8,7 +8,7 @@ output:
 menu:
   tasks:
     parent: Tasks
-    weight: 5
+    weight: 6
 type: docs
 weight: 1
 ---
@@ -73,3 +73,9 @@ CDC Guide for Creating a Report
 </tbody>
 </table>
 </center>
+
+### Deliverables
+
+- Review the requirements for your second deliverable - a [Needs Assessment](/deliverables/02-needs-assessment/) - due by the end of Week 7.
+
+- Preview your third deliverable - an [Evaluation Proposal](/deliverables/03-evaluation-proposal/) - due by the end of Week 8.

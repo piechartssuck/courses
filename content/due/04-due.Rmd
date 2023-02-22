@@ -31,7 +31,8 @@ Description = c("Read <i>Organizing the Criteria and Identifying Potential Sourc
                 "Respond to one post on <a style='color:#ff8384;'>\\ #wk3-criteria</a>",
                 "Create a post at <a style='color:#5eb0e5;'>\\ #wk4-hypotheticals</a> based on the readings",
                 "Take a look at some resources on causality and evaluations",
-                "Take a look at the criteria needed for an <span style='color:#52bf90; font-weight:bold;'>Evaluation Prospectus</span> due at the <i><b>end of this week!</b></i>"
+                "Take a look at the criteria needed for an <span style='color:#52bf90; font-weight:bold;'>Evaluation Prospectus</span> due at the <i><b>end of this week!</b></i>",
+                "Preview the criteria needed for a <span style='color:#52bf90; font-weight:bold;'>Needs Assessment</span> due at the <i><b>end of week 7</b></i>"
                 ),
 
 
@@ -40,7 +41,8 @@ Details = c("<a href='/readings/04-readings/#read-some-text'><span style='font-s
             "<a href='/tasks/04-tasks/#responses'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/tasks/04-tasks/#posting'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/tasks/04-tasks/#the-possible-problems-with-causality-and-program-evaluation'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
-            "<a href='/deliverables/01-evaluation-prospectus/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
+            "<a href='/deliverables/01-evaluation-prospectus/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+             "<a href='/deliverables/deliverables/02-needs-assessment/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"
             ),
 
 Icon = c("library",
@@ -48,6 +50,7 @@ Icon = c("library",
          "slack",
          "slack",
          "youtube",
+         "ecampus",
          "ecampus"),
 
 Site = c( "https://methods-sagepub-com.wvu.idm.oclc.org/book/evaluation-methodology-basics/n4.xml",
@@ -55,6 +58,7 @@ Site = c( "https://methods-sagepub-com.wvu.idm.oclc.org/book/evaluation-methodol
          "https://edp617spring2023.slack.com/archives/C04LEHZTFFD",
          "https://edp617spring2023.slack.com/archives/C04MUEDMDSM",
          "",
+         "https://ecampus.wvu.edu",
          "https://ecampus.wvu.edu")
 )
 ```
