@@ -1,0 +1,71 @@
+---
+title: "Experiential Learning"
+linktitle: "Week 13: Experiential Learning"
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  tasks:
+    parent: Tasks
+    weight: 13
+type: docs
+weight: 1
+---
+
+`r blogdown::shortcode("aes-header")`
+
+```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("content", "com_libs.R"))
+```
+
+## Writing
+
+### Responses
+
+Using the experience within the scope of your evaluation, please create **one response** for <a href="https://edp617spring2023.slack.com/archives/C04Q9H31BMM" target="_blank" style='color:#ff8384;'>#wk9-participatory-evaluations</a> on Slack<sup>1</sup> using the following criteria
+
+1. Decide if you label has changed
+2. Choose a posting where the label posted by a peer differs from your current choice
+3. Compare and contrast their label with yours
+
+*Note that it is absolutely fine to both praise and critique points as long as yours are justified with evidence-based resources.*
+
+## Doing 
+
+### Evaluation Budgets and Contracts
+
+If you are interested in possibly conducting evaluations for additional income, please take a look at the link below
+
+```{r echo=FALSE}
+zip_link <- function() {
+ paste0("<a href='/handouts/eval_budgets_contracts.zip' target='_blank'>", "<img src='/logos/zip-ico.png' alt='Example Reports' width='35'>", "</a>")
+}
+
+textitems <- tibble(
+  
+   zip <- c(zip_link(),
+            "Example Budget and Contract"
+            )
+   )
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(textitems, 
+      col.names = c(""),
+      escape = FALSE,
+      align = 'c') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "100em") %>%
+  row_spec(1:2, extra_css = 'vertical-align: middle !important;', color = "#ffffff", background = "transparent") 
+```
+</center>
+
+### Deliverables
+
+For a preview of the remaining deliverables, please head over one of the pages listed below
+
+1. [Final Report](/deliverables/04-final-report/)
+
+2. [Presentation of Results](/deliverables/05-presentation-of-results/)
