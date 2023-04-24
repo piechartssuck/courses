@@ -1,0 +1,22 @@
+---
+title: "Deadline"
+linktitle: "Week 15: Deadline"
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  tasks:
+    parent: Tasks
+    weight: 15
+type: docs
+weight: 1
+---
+
+{{% aes-header %}}
+
+## Doing
+
+### Deliverable
+
+Submit your [Final Report](/deliverables/04-final-report/) to both <a href='https://ecampus.wvu.edu' target='_blank'>eCampus</a> and <a href='https://edp617spring2023.slack.com/archives/C054JGGQ2HY' target='_blank'>Slack</a>

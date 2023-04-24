@@ -41,4 +41,4 @@ For a look at what to consider when choosing teammates, take a look at [a] [Mana
 
 ### Survey
 
-Please take and complete the survey ***Considering Program Evaluation*** that has been sent to your e-mail. *Please fill it out truthfully as there is no right or wrong answer!* This is just an initial assessment of what you may or may not know or be aware of within the field of evaluation and provides me with an initial benchmark for the class. If you did not receive an invite, please let me know as soon as possible!
+Please take and complete the survey ***Considering Program Evaluation*** that has been sent to your e-mail. *Please fill it out truthfully as there is no right or wrong answer!*. This is just an initial assessment of what you may or may not know or be aware of within the field of evaluation and provides me with an initial benchmark for the class. If you did not receive an invite, please let me know as soon as possible!
