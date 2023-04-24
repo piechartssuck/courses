@@ -59,7 +59,7 @@ Create and disseminate an evaluation report[^APA] using the criteria outlined be
 
 4. remain consistent in how elements of the <span style='color:#c9f6ff'><a href='#body'>Body</a></span> are portrayed[^consistency]
 
-5. create two or three variants following the table below
+5. create two to three variants following the table below
 
     ```{r, echo=FALSE}
 
@@ -70,36 +70,37 @@ pdf_logo <- function() {
 word_logo <- function() {
   "<img src='/logos/doc-ico.png'  alt='Word' width='35'>"
 }
+
+final_report <- 
+  tibble(
+    variant = 
+      c("Client", 
+        "Public", 
+        "Course"),
+
+    submission = 
+      c("Sponsor",
+        "<a href='https://edp617spring2023.slack.com/archives/C054JGGQ2HY' target='_blank'>Slack</a>",
+        "<a href='https://ecampus.wvu.edu' target='_blank'>eCampus</a>"),
   
-tibble(
-  
-  variant = 
-    c("Client", 
-      "Public", 
-      "Course"),
-  
-  submission = 
-    c("Sponsor",
-      "Slack",
-      "eCampus"),
-  
-  description = 
-    c("This is a full evaluation report without any course related documentation",
-      "Remove any identifiable information and follow the guidelines of your IRB approval <i>if applicable</i>.",
-      "This is a full evaluation report with additional course related documentation"),
-  
-  items = 
-    c("1-11",
-      "1-12",
-      "1-13"),
-  
-  format =
-    c(pdf_logo(),
-      pdf_logo(),
-      word_logo())
-  
-) %>%
-  kbl(col.names = c("Variant", "Submission to", "Description", "Must satisfy <span style='color:#c9f6ff'><a href='#body'>Body</a></span> criteria", "Required format"), 
+    description = 
+      c("This is a full evaluation report without any course related documentation",
+        "Remove any identifiable information and follow the guidelines of your IRB approval <i>if applicable</i>.",
+        "This is a full evaluation report with additional course related documentation"),
+
+    items = 
+      c("1-11",
+        "1-12",
+        "1-13"),
+    
+    format =
+      c(pdf_logo(),
+        pdf_logo(),
+        word_logo())
+    ) 
+
+final_report %>%
+  kbl(col.names = c("Variant", "Submission to", "Description", "Must satisfy <span style='color:#c9f6ff'><a href='#body'>Body</a></span> criteria", "Required format"),
       "html", 
       escape = FALSE,
       align = 'lllcc') %>%
@@ -108,16 +109,16 @@ tibble(
   column_spec(2, width = "8em", color = "#ffffff") %>%
   column_spec(3, width = "30em", color = "#ffffff") %>%
   column_spec(4:5, width = "10em", color = "#ffffff") %>%
-  row_spec(0:3, extra_css = 'vertical-align: middle !important;', color = "#ffffff", background = "transparent") 
+  row_spec(0:nrow(final_report), extra_css = 'vertical-align: middle !important;', color = "#ffffff", background = "transparent") 
     ```
 <br>
 6. name your files using both of the following formats
 
 <div style="padding-left: 60px;">
 
-  > `teamname_finalreport.docx`
+  > <span style="color:#ffffff">teamname_finalreport.docx</span>
   
-  > `teamname_finalreport.pdf`
+  > <span style="color:#ffffff">teamname_finalreport.pdf</span>
   
 </div>
 

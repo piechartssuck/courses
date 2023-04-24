@@ -59,7 +59,7 @@ Create and disseminate an evaluation report[^1] using the criteria outlined belo
 
 4.  remain consistent in how elements of the <span style="color:#c9f6ff"><a href='#body'>Body</a></span> are portrayed[^3]
 
-5.  create two or three variants following the table below
+5.  create two to three variants following the table below
 
     <table class=" lightable-paper" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;">
     <thead>
@@ -127,7 +127,7 @@ Create and disseminate an evaluation report[^1] using the criteria outlined belo
     </td>
     <td style="text-align:left;width: 8em; color: #ffffff !important;color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
 
-    Slack
+    <a href="https://edp617spring2023.slack.com/archives/C054JGGQ2HY" target="_blank">Slack</a>
 
     </td>
     <td style="text-align:left;width: 30em; color: #ffffff !important;color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
@@ -154,7 +154,7 @@ Create and disseminate an evaluation report[^1] using the criteria outlined belo
     </td>
     <td style="text-align:left;width: 8em; color: #ffffff !important;color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
 
-    eCampus
+    <a href="https://ecampus.wvu.edu" target="_blank">eCampus</a>
 
     </td>
     <td style="text-align:left;width: 30em; color: #ffffff !important;color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
@@ -182,9 +182,9 @@ Create and disseminate an evaluation report[^1] using the criteria outlined belo
 
 <div style="padding-left: 60px;">
 
-> `teamname_finalreport.docx`
+> <span style="color:#ffffff">teamname_finalreport.docx</span>
 
-> `teamname_finalreport.pdf`
+> <span style="color:#ffffff">teamname_finalreport.pdf</span>
 
 </div>
 
