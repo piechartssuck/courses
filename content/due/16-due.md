@@ -1,5 +1,5 @@
 ---
-title: "Deadline"
+title: "Loose Ends"
 linktitle: "Week 16: Loose Ends"
 output:
   rmarkdown::html_document
