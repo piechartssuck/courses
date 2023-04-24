@@ -182,9 +182,9 @@ Create and disseminate an evaluation report[^1] using the criteria outlined belo
 
 <div style="padding-left: 60px;">
 
-> <span style="color:#ffffff">teamname_finalreport.docx</span>
+> <span style="color:#ffffff"><b>teamname_finalreport.docx</b></span>
 
-> <span style="color:#ffffff">teamname_finalreport.pdf</span>
+> <span style="color:#ffffff"><b>teamname_finalreport.pdf</b></span>
 
 </div>
 

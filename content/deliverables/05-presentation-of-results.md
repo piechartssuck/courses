@@ -54,7 +54,17 @@ Create and disseminate an evaluation presentation[^1] using the criteria outline
 
 5.  Use a format of your choice
 
-6.  name your file `teamname_presentation.typeoffile`
+6.  name your file <b>teamname_presentation.typeoffile</b>
+
+7.  Submit the file to both
+
+<div style="padding-left: 60px;">
+
+> <a href='https://ecampus.wvu.edu' target='_blank'>eCampus</a>
+
+> <a href='https://edp617spring2023.slack.com/archives/C051UJG0AP5' target='_blank'>Slack</a>
+
+</div>
 
 </details>
 <br>
