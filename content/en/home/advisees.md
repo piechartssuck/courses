@@ -50,12 +50,12 @@ Advisee since 2019
 </tr>
 <tr>
 <th>
-Earned a <b><a href="http://catalog.wvu.edu/graduate/collegeofappliedhumansciences/schoolofeducation/edp/">Master of Arts in Educational Psychology</a></b>
+Earned a <b><a href="https://graduateadmissions.wvu.edu/academics/graduate-programs/learning-sciences-human-development-phd">Ph.D. in Learning Sciences and Human Development</a></b>
 </th>
 </tr>
 <tr>
 <th>
-Ph.D. <b><a href="https://graduateadmissions.wvu.edu/academics/graduate-programs/learning-sciences-human-development-phd">in Learning Sciences and Human Development</a></b>
+Earned a <b><a href="http://catalog.wvu.edu/graduate/collegeofappliedhumansciences/schoolofeducation/edp/">Master of Arts in Educational Psychology</a></b>
 </th>
 </tr>
 </table>
