@@ -126,7 +126,7 @@ paste0("<a href=", loc, " target='_blank'>", icon,"&nbsp;&nbsp; Click here to se
 
 <div class="left">
 
-<a href="#megan"><img src='/img/photos/maria-name.png' alt='Maria Boki' width='355' align="left"></a>
+<a href="#maria"><img src='/img/photos/maria-name.png' alt='Maria Boki' width='355' align="left"></a>
 
 </div>
 

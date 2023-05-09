@@ -155,7 +155,7 @@ Skilled in participatory evaluation, research methodology, and survey design
 
 <div class="left">
 
-<a href="#megan"><img src='/img/photos/maria-name.png' alt='Maria Boki' width='355' align="left"></a>
+<a href="#maria"><img src='/img/photos/maria-name.png' alt='Maria Boki' width='355' align="left"></a>
 
 </div>
 
