@@ -176,6 +176,19 @@ University of Kansas
 Select Projects {data-icon=toggle-on}
 --------------------------------------------------------------------------------
 
+### <i>Program Evaluator</i><br>Teaching Science with Computational Thinking: Preparing Preservice Elementary Educators of the Future STEM Workforce
+
+West Virginia University
+
+&nbsp;&nbsp;Morgantown, WV
+
+2022
+
+- Implementing process and impact evaluations of program activities
+- Conducting quantitative text analysis of written and interview data using machine learning
+- Constructing and validating survey instruments used to assess progress and effect
+- Total Amount: *$294,958.00*
+
 ### <i>Data Scientist & Program Evaluator</i><br>WVCTSI: West Virginia Clinical and Translational Science Institute
 
 West Virginia University
@@ -217,20 +230,6 @@ Colorado State University
 - Pulling, wrangling, and visualizing secondary data in R.
 - Writing annual program and National Science Foundation reports.
 - Total Amount: *$3,013,779*
-
-### <i>Program Evaluator</i><br>Cultivating Inclusive Identities of Engineers and Computer Scientists: Expanding Efforts to Infuse Inclusive Excellence in Undergraduate Curricula
-
-West Virginia University
-
-&nbsp;&nbsp;Morgantown, WV
-
-2018 - 2017
-
-- Conducting formative evaluations of multiple grant related programs.
-- Developing and distributing customized Qualtrics surveys built with CSS and Javascript.
-- Pulling, wrangling, and visualizing secondary data in R.
-- Writing annual program and National Science Foundation reports.
-- Total Amount: *$2,000,000*
 
 
 Select Talks {data-icon=chalkboard-user}

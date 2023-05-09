@@ -162,6 +162,17 @@ University of Kansas
 Select Publications {data-icon=file-text-o}
 --------------------------------------------------------------------------------
 
+### Program Evaluation Standards for Utility Facilitate Stakeholder Internalization of Evaluative Thinking in the West Virginia Clinical Translational Science Institute
+
+*Journal of Multidisciplinary Evaluation*
+
+N/A
+
+2023
+
+Curtis, R., <b>Roy, A.</b>, Lewis, N., Dooty, E. N., & Mikalik, T.
+[https://journals.sfu.ca/jmde/index.php/jmde_1/article/view/831](https://journals.sfu.ca/jmde/index.php/jmde_1/article/view/831)
+
 ### Thinking Processes in Code.org: A Relational Analysis Approach to Computational Thinking Computer Science Education
 
 *Computer Science Education*
@@ -276,7 +287,7 @@ N/A
 Active Grants {data-icon=toggle-on}
 --------------------------------------------------------------------------------
 
-### ICU Compute for West Virginia: Empowering Future Teachers to Promote Critical Computational Thinking in Teaching Science
+### Teaching Science with Computational Thinking: Preparing Preservice Elementary Educators of the Future STEM Workforce
 
 West Virginia University
 
@@ -287,6 +298,7 @@ West Virginia University
 - Implementing process and impact evaluations of program activities
 - Conducting quantitative text analysis of written and interview data using machine learning
 - Constructing and validating survey instruments used to assess progress and effect
+- Total Amount: *$294,958.00*
 
 Inactive Grants {data-icon=toggle-off}
 --------------------------------------------------------------------------------
