@@ -180,7 +180,7 @@ University of Kansas
 Select Projects {data-icon=toggle-on}
 --------------------------------------------------------------------------------
 
-### <i>Program Evaluator</i><br>Teaching Science with Computational Thinking: Preparing Preservice Elementary Educators of the Future STEM Workforce
+### <i>Mixed Methods Ananlyst & Program Evaluator</i><br>Teaching Science with Computational Thinking: Preparing Preservice Elementary Educators of the Future STEM Workforce
 
 West Virginia University
 
@@ -199,7 +199,7 @@ West Virginia University
 
 &nbsp;&nbsp;Morgantown, WV
 
-2017 - 2022
+2022 - 2017
 
 - Analyzing large data sets using frequentist and Bayesian methods.
 - Conducting local and multi-site mutli-cluster evaluation studies.

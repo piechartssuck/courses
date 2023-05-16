@@ -1,7 +1,7 @@
 ---
 title: "Abhik Ranjan Roy"
 author: Abhik Ranjan Roy
-date: "2023-05-08"
+date: "2023-05-12"
 output:
   pagedown::html_resume:
     self_contained: true
@@ -251,4 +251,4 @@ Colorado State University
 
 Made in <i style="color:#3365B3;" class="fab fa-r-project"></i>: <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-html.Rmd" target="&#39;_blank">Source code</a>
 
-Last updated on May 08, 2023
+Last updated on May 12, 2023

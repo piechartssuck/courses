@@ -1,7 +1,7 @@
 ---
 title: "Abhik Ranjan Roy"
 author: "Abhik Ranjan Roy"
-date: "2023-05-08"
+date: "2023-05-16"
 ---
 
 
@@ -52,7 +52,7 @@ date: "2023-05-08"
 ```
 
 ```
-## /Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools/pandoc +RTS -K512m -RTS cv-html.knit.md~ --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash-implicit_figures --output cv.html --lua-filter /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/bookdown/rmarkdown/lua/custom-environment.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/rmarkdown/rmarkdown/lua/latex-div.lua --embed-resources --standalone --wrap preserve '--mathjax=https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --metadata newpage_html_class="page-break-after" --section-divs --template /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/pagedown/resources/html/resume.html --highlight-style pygments --css updatedaes.css --include-in-header /var/folders/_6/pylhf38x3c728ks3ngjbxsbw0000gn/T//Rtmp2MSBpX/rmarkdown-str27265fa311c0.html
+## /Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools/pandoc +RTS -K512m -RTS cv-html.knit.md~ --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash-implicit_figures --output cv.html --lua-filter /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/bookdown/rmarkdown/lua/custom-environment.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/rmarkdown/rmarkdown/lua/latex-div.lua --embed-resources --standalone --wrap preserve '--mathjax=https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --metadata newpage_html_class="page-break-after" --section-divs --template /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/pagedown/resources/html/resume.html --highlight-style pygments --css updatedaes.css --include-in-header /var/folders/_6/pylhf38x3c728ks3ngjbxsbw0000gn/T//RtmpImZIAP/rmarkdown-str704845dc266f.html
 ```
 
 ```
@@ -87,7 +87,7 @@ date: "2023-05-08"
 ```
 
 ```
-## /Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools/pandoc +RTS -K512m -RTS resume-html.knit.md~ --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash-implicit_figures --output resume.html --lua-filter /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/bookdown/rmarkdown/lua/custom-environment.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/rmarkdown/rmarkdown/lua/latex-div.lua --embed-resources --standalone --wrap preserve '--mathjax=https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --metadata newpage_html_class="page-break-after" --section-divs --template /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/pagedown/resources/html/resume.html --highlight-style pygments --css updatedaes.css --include-in-header /var/folders/_6/pylhf38x3c728ks3ngjbxsbw0000gn/T//Rtmp2MSBpX/rmarkdown-str27265d9da8a3.html
+## /Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools/pandoc +RTS -K512m -RTS resume-html.knit.md~ --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash-implicit_figures --output resume.html --lua-filter /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/bookdown/rmarkdown/lua/custom-environment.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/rmarkdown/rmarkdown/lua/latex-div.lua --embed-resources --standalone --wrap preserve '--mathjax=https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --metadata newpage_html_class="page-break-after" --section-divs --template /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/pagedown/resources/html/resume.html --highlight-style pygments --css updatedaes.css --include-in-header /var/folders/_6/pylhf38x3c728ks3ngjbxsbw0000gn/T//RtmpImZIAP/rmarkdown-str70483eefc588.html
 ```
 
 ```
@@ -122,7 +122,7 @@ date: "2023-05-08"
 ```
 
 ```
-## /Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools/pandoc +RTS -K512m -RTS cv-pdf.knit.md~ --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash-implicit_figures --output cv-pdf.html --lua-filter /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/bookdown/rmarkdown/lua/custom-environment.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/rmarkdown/rmarkdown/lua/latex-div.lua --embed-resources --standalone --wrap preserve '--mathjax=https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --metadata newpage_html_class="page-break-after" --section-divs --template /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/pagedown/resources/html/resume.html --highlight-style pygments --css updatedaes.css --include-in-header /var/folders/_6/pylhf38x3c728ks3ngjbxsbw0000gn/T//Rtmp2MSBpX/rmarkdown-str27263b330a77.html
+## /Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools/pandoc +RTS -K512m -RTS cv-pdf.knit.md~ --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash-implicit_figures --output cv-pdf.html --lua-filter /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/bookdown/rmarkdown/lua/custom-environment.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/rmarkdown/rmarkdown/lua/latex-div.lua --embed-resources --standalone --wrap preserve '--mathjax=https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --metadata newpage_html_class="page-break-after" --section-divs --template /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/pagedown/resources/html/resume.html --highlight-style pygments --css updatedaes.css --include-in-header /var/folders/_6/pylhf38x3c728ks3ngjbxsbw0000gn/T//RtmpImZIAP/rmarkdown-str704855bbf437.html
 ```
 
 ```
@@ -157,7 +157,7 @@ date: "2023-05-08"
 ```
 
 ```
-## /Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools/pandoc +RTS -K512m -RTS resume-pdf.knit.md~ --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash-implicit_figures --output resume-pdf.html --lua-filter /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/bookdown/rmarkdown/lua/custom-environment.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/rmarkdown/rmarkdown/lua/latex-div.lua --embed-resources --standalone --wrap preserve '--mathjax=https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --metadata newpage_html_class="page-break-after" --section-divs --template /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/pagedown/resources/html/resume.html --highlight-style pygments --css updatedaes.css --include-in-header /var/folders/_6/pylhf38x3c728ks3ngjbxsbw0000gn/T//Rtmp2MSBpX/rmarkdown-str272641180da2.html
+## /Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools/pandoc +RTS -K512m -RTS resume-pdf.knit.md~ --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash-implicit_figures --output resume-pdf.html --lua-filter /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/bookdown/rmarkdown/lua/custom-environment.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/rmarkdown/rmarkdown/lua/latex-div.lua --embed-resources --standalone --wrap preserve '--mathjax=https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --metadata newpage_html_class="page-break-after" --section-divs --template /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library/pagedown/resources/html/resume.html --highlight-style pygments --css updatedaes.css --include-in-header /var/folders/_6/pylhf38x3c728ks3ngjbxsbw0000gn/T//RtmpImZIAP/rmarkdown-str7048687ff445.html
 ```
 
 ```

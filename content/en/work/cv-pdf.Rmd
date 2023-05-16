@@ -312,7 +312,7 @@ West Virginia University
 
 &nbsp;&nbsp;Morgantown, WV
 
-2017 - 2022
+2022 - 2017 
 
 - Analyzing large data sets using frequentist and Bayesian methods.
 - Conducting local and multi-site mutli-cluster evaluation studies.
