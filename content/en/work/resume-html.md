@@ -1,7 +1,7 @@
 ---
 title: "Abhik Ranjan Roy"
 author: Abhik Ranjan Roy
-date: "2023-05-12"
+date: "2023-05-16"
 output:
   pagedown::html_resume:
     self_contained: true
@@ -166,7 +166,7 @@ University of Kansas
 
 ## Select Projects
 
-### <i>Program Evaluator</i><br>Teaching Science with Computational Thinking: Preparing Preservice Elementary Educators of the Future STEM Workforce
+### <i>Mixed Methods Ananlyst & Program Evaluator</i><br>Teaching Science with Computational Thinking: Preparing Preservice Elementary Educators of the Future STEM Workforce
 
 West Virginia University
 
@@ -185,13 +185,13 @@ West Virginia University
 
   Morgantown, WV
 
-2017
+2022 - 2017
 
-- Analyzing large data sets using frequentist and Bayesian methods.
-- Conducting local and multi-site mutli-cluster evaluation studies.
-- Developing/validating items and distributing customized Qualtrics surveys built with CSS and Javascript.
-- Pulling, wrangling, and visualizing secondary data in R.
-- Mentoring future graduate social data scientists.
+- Analyzed large data sets using frequentist and Bayesian methods.
+- Conducted local and multi-site mutli-cluster evaluation studies.
+- Developed/validated items and distributed customized Qualtrics surveys built with CSS and Javascript.
+- Pulled, wrangled, and visualized secondary data in R.
+- Mentored future graduate social data scientists.
 - Total Amount: *\$20,000,000*
 - Website: [PERC](https://percwv.com/)
 
@@ -203,8 +203,8 @@ West Virginia University
 
 2020
 
-- Advising engineering faculty and graduate students on implementation of study methods.
-- Conducting quantitative and qualitative studies on undergraduate student experiences within grant related programs.
+- Advised engineering faculty and graduate students on implementation of study methods.
+- Conducted quantitative and qualitative studies on undergraduate student experiences within grant related programs.
 - Total Amount: *\$200,000*
 
 ### <i>Program Evaluator</i><br>GAUSSI: Generating, Analyzing, and Understanding Sensory and Sequencing Information: A Trans-Disciplinary Graduate Training Program in Biosensing and Computational Biology
@@ -215,10 +215,10 @@ Colorado State University
 
 2020 - 2017
 
-- Conducting biannual evaluations of multiple grant related programs.
-- Developing and distributing customized Qualtrics surveys built with CSS and Javascript.
-- Pulling, wrangling, and visualizing secondary data in R.
-- Writing annual program and National Science Foundation reports.
+- Conducted biannual evaluations of multiple grant related programs.
+- Developed and distributed customized Qualtrics surveys built with CSS and Javascript.
+- Pulled, wrangled, and visualized secondary data in R.
+- Wrote annual program and National Science Foundation reports.
 - Total Amount: *\$3,013,779*
 
 ## Select Talks
@@ -251,4 +251,4 @@ Colorado State University
 
 Made in <i style="color:#3365B3;" class="fab fa-r-project"></i>: <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-html.Rmd" target="&#39;_blank">Source code</a>
 
-Last updated on May 12, 2023
+Last updated on May 16, 2023
