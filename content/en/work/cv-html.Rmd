@@ -295,6 +295,7 @@ West Virginia University
 
 2022
 
+- National Science Foundation Grant
 - Implementing process and impact evaluations of program activities
 - Conducting quantitative text analysis of written and interview data using machine learning
 - Constructing and validating survey instruments used to assess progress and effect
@@ -311,6 +312,7 @@ West Virginia University
 
 2017 - 2022
 
+- National Institue of Health Grant
 - Analyzed large data sets using frequentist and Bayesian methods.
 - Conducted local and multi-site mutli-cluster evaluation studies.
 - Developed/validated items and distributing customized Qualtrics surveys built with CSS and Javascript.
@@ -328,6 +330,7 @@ West Virginia University
 
 2020
 
+- National Institue of Health Grant
 - Developed and distributed customized Qualtrics surveys built with CSS and Javascript.
 - Performed various evaluative studies addressing program efficacy and engagement.
 - *$678,000*
@@ -341,6 +344,7 @@ West Virginia University
 
 2020
 
+- National Science Foundation Grant
 - Advised engineering faculty and graduate students on implementation of study methods.
 - Conducted quantitative and qualitative studies on undergraduate student experiences within grant related programs.
 - *$200,000*

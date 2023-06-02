@@ -1,7 +1,7 @@
 ---
 title: "Abhik Ranjan Roy"
 author: Abhik Ranjan Roy
-date: "2023-05-16"
+date: "2023-06-02"
 output:
   pagedown::html_resume:
     self_contained: true
@@ -174,6 +174,7 @@ West Virginia University
 
 2022
 
+- National Science Foundation Grant
 - Implementing process and impact evaluations of program activities
 - Conducting quantitative text analysis of written and interview data using machine learning
 - Constructing and validating survey instruments used to assess progress and effect
@@ -187,13 +188,13 @@ West Virginia University
 
 2022 - 2017
 
+- National Institute of Health Grant
 - Analyzed large data sets using frequentist and Bayesian methods.
 - Conducted local and multi-site mutli-cluster evaluation studies.
 - Developed/validated items and distributed customized Qualtrics surveys built with CSS and Javascript.
 - Pulled, wrangled, and visualized secondary data in R.
 - Mentored future graduate social data scientists.
 - Total Amount: *\$20,000,000*
-- Website: [PERC](https://percwv.com/)
 
 ### <i>Program Evaluator</i><br>Research Initiative: A Holistic Cross-Disciplinary Project Experience as a Platform to Advance the Professional Formation of Engineers
 
@@ -203,6 +204,7 @@ West Virginia University
 
 2020
 
+- National Science Foundation Grant
 - Advised engineering faculty and graduate students on implementation of study methods.
 - Conducted quantitative and qualitative studies on undergraduate student experiences within grant related programs.
 - Total Amount: *\$200,000*
@@ -215,6 +217,7 @@ Colorado State University
 
 2020 - 2017
 
+- National Science Foundation Grant
 - Conducted biannual evaluations of multiple grant related programs.
 - Developed and distributed customized Qualtrics surveys built with CSS and Javascript.
 - Pulled, wrangled, and visualized secondary data in R.
@@ -251,4 +254,4 @@ Colorado State University
 
 Made in <i style="color:#3365B3;" class="fab fa-r-project"></i>: <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-html.Rmd" target="&#39;_blank">Source code</a>
 
-Last updated on May 16, 2023
+Last updated on June 02, 2023

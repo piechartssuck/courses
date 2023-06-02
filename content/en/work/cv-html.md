@@ -1,7 +1,7 @@
 ---
 title: "Abhik Ranjan Roy"
 author: Abhik Ranjan Roy
-date: "2023-05-16"
+date: "2023-06-02"
 output:
   pagedown::html_resume:
     self_contained: true
@@ -276,6 +276,7 @@ West Virginia University
 
 2022
 
+- National Science Foundation Grant
 - Implementing process and impact evaluations of program activities
 - Conducting quantitative text analysis of written and interview data using machine learning
 - Constructing and validating survey instruments used to assess progress and effect
@@ -291,6 +292,7 @@ West Virginia University
 
 2017 - 2022
 
+- National Institue of Health Grant
 - Analyzed large data sets using frequentist and Bayesian methods.
 - Conducted local and multi-site mutli-cluster evaluation studies.
 - Developed/validated items and distributing customized Qualtrics surveys built with CSS and Javascript.
@@ -307,6 +309,7 @@ West Virginia University
 
 2020
 
+- National Institue of Health Grant
 - Developed and distributed customized Qualtrics surveys built with CSS and Javascript.
 - Performed various evaluative studies addressing program efficacy and engagement.
 - *\$678,000*
@@ -320,6 +323,7 @@ West Virginia University
 
 2020
 
+- National Science Foundation Grant
 - Advised engineering faculty and graduate students on implementation of study methods.
 - Conducted quantitative and qualitative studies on undergraduate student experiences within grant related programs.
 - *\$200,000*
@@ -353,7 +357,7 @@ Colorado State University
 
   Fort Collins, CO
 
-2020 - 2017
+2017 - 2020
 
 - *\$3,013,779*
 - *2017-NSF: NRT-DESE*
@@ -812,4 +816,4 @@ N/A
 
 Made in <i style="color:#3365B3;" class="fab fa-r-project"></i>: <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/cv-html.Rmd" target="&#39;_blank">Source code</a>
 
-Last updated on May 16, 2023
+Last updated on June 02, 2023
