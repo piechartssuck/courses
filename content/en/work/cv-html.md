@@ -1,7 +1,7 @@
 ---
 title: "Abhik Ranjan Roy"
 author: Abhik Ranjan Roy
-date: "2023-06-12"
+date: "2023-06-13"
 output:
   pagedown::html_resume:
     self_contained: true
@@ -156,6 +156,16 @@ University of Kansas
 </div>
 
 ## Select Publications
+
+### Is it accessible? Preservice teachers’ access to computational thinking.
+
+*Contemporary Issues in Technology and Teacher Education*
+
+N/A
+
+2023
+
+Kale U., Kooken, A., Yuan, J., & <b>Roy, A.</b> (accepted)
 
 ### Program Evaluation Standards for Utility Facilitate Stakeholder Internalization of Evaluative Thinking in the West Virginia Clinical Translational Science Institute
 
@@ -846,4 +856,4 @@ N/A
 
 Made in <i style="color:#3365B3;" class="fab fa-r-project"></i>: <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/cv-html.Rmd" target="&#39;_blank">Source code</a>
 
-Last updated on June 12, 2023
+Last updated on June 13, 2023

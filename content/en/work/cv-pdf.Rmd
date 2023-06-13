@@ -168,6 +168,16 @@ University of Kansas
 Select Publications {data-icon=file-text-o}
 --------------------------------------------------------------------------------
 
+### Is it accessible? Preservice teachers’ access to computational thinking.
+
+*Contemporary Issues in Technology and Teacher Education*
+
+N/A
+
+2023
+
+Kale U., Kooken, A., Yuan, J., & <b>Roy, A.</b> (accepted)
+
 ### Program Evaluation Standards for Utility Facilitate Stakeholder Internalization of Evaluative Thinking in the West Virginia Clinical Translational Science Institute
 
 *Journal of Multidisciplinary Evaluation*
