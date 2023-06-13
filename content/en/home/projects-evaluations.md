@@ -17,10 +17,14 @@ tr,
 .markdown tbody tr:nth-child(2n) td, 
 .markdown tbody tr:nth-child(2n) th{
   border: none;
-  text-align: left;
   background-color: #1e1e1e;
   color: #ffffff;
   vertical-align: center;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .holder {
@@ -37,17 +41,35 @@ tr,
 <div class="holder">
 
 <div class="left">
-Lead data scientist & program evaluator at <br><br><a href='https://percwv.com' target='_blank'><img src='/img/logos/perc-ico.png' alt='RM hex' width='250'></a>
+<br><br><a href='https://medicine.hsc.wvu.edu/obgyn/west-virginia-healthy-starthapi-project/' target='_blank'><img src='/img/logos/wvhealthystart.png' alt='WVHS logo' width='220'></a>
+<br>
+<br>
+Evaluation Team
+<br>
+<table class="center">
+    <tr>
+      <td><b>Abhik Roy, Ph.D.</b></td>
+      <td><i>Lead Program Evaluator</i></td>
+    </tr>
+    <tr>
+    <td><b>Carinna Ferguson, Ph.D.</b></td>
+      <td><i>Senior Program Evaluator</i></td>
+    </tr>
+    <tr>
+      <td><b>Hélène Nguemgaing, Ph.D. Candidate</b></td>
+      <td><i>Associate Program Evaluator</i></td>
+    </tr>
+</table>
 </div>
 
 <div class="right">
 <table>
     <tr><th>App development (R/Shiny)</th></tr>
-    <tr><th>Bayesian statistics and modeling</th></tr>
     <tr><th>Data wrangling, reporting, & visualizations (R/Rmarkdown)</th></tr>
     <tr><th>Item development and validation</th></tr>
-    <tr><th>Local and multi-site mutli-cluster evaluation studies</th></tr>
-    <tr><th>Survey construction (Qualtrics - HTML/CSS/Javascipt)</th></tr>
+    <tr><th>Regional and multi-site mutli-cluster evaluation studies</th></tr>
+    <tr><th>Predictive modeling</th></tr>
+    <tr><th>Survey design and analysis (Qualtrics/Survey Monkey - HTML/CSS/Javascipt)</th></tr>
 </table>
 </div>
 

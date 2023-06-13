@@ -1,7 +1,7 @@
 ---
 title: "Abhik Ranjan Roy"
 author: Abhik Ranjan Roy
-date: "2023-05-16"
+date: "2023-06-12"
 output:
   pagedown::html_resume:
     self_contained: true
@@ -43,33 +43,41 @@ weight: NULL
 
 ## Expertise
 
-- <b>Data visualization</b>
-
 - <b>Content, cluster, and social network analysis</b>
 
-- <b>Modeling using statistics and machine learning</b>
-
-- <b>Text mining</b>
-
-- <b>Planning and conducting program evaluations</b>
+- <b>Data visualization</b>
 
 - <b>Designing and administering small- and large-scale surveys</b>
 
+- <b>Modeling and analysis using statistics and machine learning</b>
+
+- <b>Planning and conducting program evaluations</b>
+
 - <b>Programming and analysis in</b><i style="color:#3365B3;" class="fab fa-r-project fa-lg"></i> <b>with markup using</b> `\(\LaTeX\)`
 
-- <b>App development and dynamic reporting using</b>
+- <b>Quantitative, qualitative, and mixed method designs and analyses</b>
+
+- <b>Web app development and static/dynamic reporting using</b>
 
   <div class="holder">
 
 <div class="left">
 
-<img src='img/shiny-logo.png' alt='Shiny hex' width='85%'>
+<img src='img/shiny-logo.png' alt='Shiny hex' width='70%'>
+
+</div>
+
+<div class="middle">
+
+<img src='img/rmarkdown.png' alt='Rmarkdown hex' width='70%'>
 
 </div>
 
 <div class="right">
 
-<img src='img/rmarkdown.png' alt='Rmarkdown hex' width='85%'>
+<img src='img/blogdown-logo.png' alt='Blogdown hex' width='70%'>
+
+</div>
 
 </div>
 
@@ -117,7 +125,7 @@ West Virginia University
 
   Morgantown, WV
 
-Current - 2016
+2023 - 2016
 
 <div class="concise">
 
@@ -266,18 +274,35 @@ N/A
 
 ## Active Grants
 
+### Healthy Start Initiative: Eliminating Disparities in Perinatal Health
+
+West Virginia University Research Corporation
+
+  Morgantown, WV
+
+Current - 2023
+
+- <i>Lead Program Evaluator & Methodologist</i><br>
+- Building valid and reliable survey instruments to assess participant experiences.
+- Implementing process, monitoring, and impact evaluations of programmatic activities.
+- Utilizing mixed methods designs to study participant data.
+- Total Award: *\$4,870,000*
+- [*HRSA-19-049*](https://grants.hrsa.gov/2010/Web2External/Interface/Common/EHBDisplayAttachment.aspx?dm_rtc=16&dm_attid=d3c378a4-b07d-48e5-ab36-38f05a7eeb48)
+
 ### Teaching Science with Computational Thinking: Preparing Preservice Elementary Educators of the Future STEM Workforce
 
 West Virginia University
 
   Morgantown, WV
 
-2022
+Current - 2022
 
-- Implementing process and impact evaluations of program activities
-- Conducting quantitative text analysis of written and interview data using machine learning
-- Constructing and validating survey instruments used to assess progress and effect
-- Total Amount: *\$294,958.00*
+- <i>Lead Program Evaluator & Mixed Methods Analyst</i><br>
+- Applying mixed methods text analysis of written and interview data using thematic analysis and various machine learning methods.
+- Constructing and validating survey instruments used to assess progress and programmatic impact.
+- Implementing process and impact evaluations of program activities.
+- Total Award: *\$294,958.00*
+- [*2019-NSF 2142274*](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2142274&HistoricalAwards=false)
 
 ## Inactive Grants
 
@@ -287,15 +312,16 @@ West Virginia University
 
   Morgantown, WV
 
-2017 - 2022
+2022 - 2017
 
-- Analyzing large data sets using frequentist and Bayesian methods.
-- Conducting local and multi-site mutli-cluster evaluation studies.
-- Developing/validating items and distributing customized Qualtrics surveys built with CSS and Javascript.
-- Pulling, wrangling, and visualizing secondary data in R.
-- Mentoring future graduate social data scientists.
-- *\$20,000,000*
-- *2017-NIH 2U54GM104942-02*
+- <i>Program Evaluator & Data Scientist</i><br>
+- Analyzed large data sets using frequentist and Bayesian methods.
+- Conducted local and multi-site mutli-cluster evaluation studies.
+- Developed/validated items and distributing customized Qualtrics surveys built with CSS and Javascript.
+- Mentored future graduate social data scientists.
+- Pulled, wrangled, and visualized secondary data
+- Total Award: *\$20,000,000*
+- [*2017-NIH 2U54GM104942-02*](https://reporter.nih.gov/project-details/9362155)
 
 ### Appalachian Gerontology Experiences - Advancing Diversity in Aging Research
 
@@ -305,10 +331,11 @@ West Virginia University
 
 2020 - 2021
 
-- Developing and distributing customized Qualtrics surveys built with CSS and Javascript.
-- Performing various evaluative studies addressing program efficacy and engagement.
-- *\$678,000*
-- *2020-1R25AG059558-01A1*
+- <i>Lead Program Evaluator</i><br>
+- Developed and distributing customized Qualtrics surveys built with CSS and Javascript.
+- Performed various evaluative studies addressing program efficacy and engagement.
+- Total Award: *\$678,000*
+  -[*2020-NIH 1R25AG059558-01A1*](https://reporter.nih.gov/search/gvYOStaGnUiejizdD2R25w/project-details/9793672)
 
 ### Research Initiative: A Holistic Cross-Disciplinary Project Experience as a Platform to Advance the Professional Formation of Engineers
 
@@ -318,10 +345,11 @@ West Virginia University
 
 2020 - 2022
 
-- Advising engineering faculty and graduate students on implementation of study methods.
-- Conducting quantitative and qualitative studies on undergraduate student experiences within grant related programs.
-- *\$200,000*
-- *2019-NSF-EEC 1927232*
+- <i>Methodological Advisor & Research Specialist</i><br>
+- Mentored engineering faculty and graduate students on the implementation of research methods.
+- Conducted quantitative and qualitative studies on undergraduate student experiences within grant related programs.
+- Total Award: *\$200,000*
+- [*2019-NSF 1927232*](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1927232&HistoricalAwards=false)
 
 ### Stepping UP with Avenue: Progress Monitoring: A Software Suite Helping Teachers Improve Literacy Progress For Deaf/Hard Of Hearing Students
 
@@ -331,7 +359,9 @@ Pennsylvania State University
 
 2018 - 2017
 
-- *\$2,470,440*
+- <i>Lead Program Evaluator</i><br>
+- Administered product and program evaluations of existing tools and activities.
+- Total Award: *\$2,470,440*
 - *2017-ED H327S170012*
 
 ### Cultivating Inclusive Identities of Engineers and Computer Scientists: Expanding Efforts to Infuse Inclusive Excellence in Undergraduate Curricula
@@ -342,8 +372,11 @@ West Virginia University
 
 2018 - 2017
 
-- *\$2,000,000*
-- *2017-NSF 1725880*
+- <i>Lead Program Evaluator</i><br>
+- Conducted personnel and program evaluations of existing members and interventions.
+- Created and implemented various text analysis methods.
+- Total Award: *\$2,000,000*
+- [*2017-NSF 1725880*](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1725880)
 
 ### GAUSSI: Generating, Analyzing, and Understanding Sensory and Sequencing Information: A Trans-Disciplinary Graduate Training Program in Biosensing and Computational Biology
 
@@ -353,8 +386,11 @@ Colorado State University
 
 2020 - 2017
 
-- *\$3,013,779*
-- *2017-NSF: NRT-DESE*
+- <i>Lead Program Evaluator</i><br>
+- Conducted unstructured and semi-structured interviews and focus groups assessing participant experiences.
+- Implemented mixed methods evaluations to study program impacts on students and faculty.
+- Total Award: *\$3,013,779*
+- [*2017-NSF 1450032*](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1450032&HistoricalAwards=false)
 
 ## Presentations
 
@@ -810,4 +846,4 @@ N/A
 
 Made in <i style="color:#3365B3;" class="fab fa-r-project"></i>: <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/cv-pdf.Rmd" target="&#39;_blank">Source code</a>
 
-Last updated on May 16, 2023
+Last updated on June 12, 2023

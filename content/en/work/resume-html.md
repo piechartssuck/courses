@@ -1,7 +1,7 @@
 ---
 title: "Abhik Ranjan Roy"
 author: Abhik Ranjan Roy
-date: "2023-06-02"
+date: "2023-06-12"
 output:
   pagedown::html_resume:
     self_contained: true
@@ -42,33 +42,39 @@ weight: NULL
 
 ## Expertise
 
-- <b>Data visualization</b>
-
 - <b>Content, cluster, and social network analysis</b>
 
-- <b>Modeling using statistics and machine learning</b>
-
-- <b>Text mining</b>
-
-- <b>Planning and conducting program evaluations</b>
+- <b>Data visualization</b>
 
 - <b>Designing and administering small- and large-scale surveys</b>
 
+- <b>Modeling and analysis using statistics and machine learning</b>
+
+- <b>Planning and conducting program evaluations</b>
+
 - <b>Programming and analysis in</b><i style="color:#3365B3;" class="fab fa-r-project fa-lg"></i> <b>with markup using</b> `\(\LaTeX\)`
 
-- <b>App development and dynamic reporting using</b>
+- <b>Quantitative, qualitative, and mixed method designs and analyses</b>
+
+- <b>Web app development and static/dynamic reporting using</b>
 
   <div class="holder">
 
 <div class="left">
 
-<img src='img/shiny-logo.png' alt='Shiny hex' width='85%'>
+<img src='img/shiny-logo.png' alt='Shiny hex' width='70%'>
+
+</div>
+
+<div class="middle">
+
+<img src='img/rmarkdown.png' alt='Rmarkdown hex' width='70%'>
 
 </div>
 
 <div class="right">
 
-<img src='img/rmarkdown.png' alt='Rmarkdown hex' width='85%'>
+<img src='img/blogdown-logo.png' alt='Blogdown hex' width='70%'>
 
 </div>
 
@@ -134,7 +140,7 @@ West Virginia University
 
   Morgantown, WV
 
-Current - 2016
+2023 - 2016
 
 <div class="concise">
 
@@ -166,21 +172,35 @@ University of Kansas
 
 ## Select Projects
 
-### <i>Mixed Methods Ananlyst & Program Evaluator</i><br>Teaching Science with Computational Thinking: Preparing Preservice Elementary Educators of the Future STEM Workforce
+### <i>Lead Program Evaluator & Methodologist</i><br> Healthy Start Initiative: Eliminating Disparities in Perinatal Health
+
+West Virginia University Research Corporation
+
+  Morgantown, WV
+
+Current - 2023
+
+- Building valid and reliable survey instruments to assess participant experiences.
+- Implementing process, monitoring, and impact evaluations of programmatic activities.
+- Utilizing mixed methods designs to study participant data.
+- Total Award: *\$4,870,000*
+- [*HRSA-19-049*](https://grants.hrsa.gov/2010/Web2External/Interface/Common/EHBDisplayAttachment.aspx?dm_rtc=16&dm_attid=d3c378a4-b07d-48e5-ab36-38f05a7eeb48)
+
+### <i>Lead Program Evaluator & Mixed Methods Analyst</i><br>Teaching Science with Computational Thinking: Preparing Preservice Elementary Educators of the Future STEM Workforce
 
 West Virginia University
 
   Morgantown, WV
 
-2022
+Current - 2022
 
-- National Science Foundation Grant
-- Implementing process and impact evaluations of program activities
-- Conducting quantitative text analysis of written and interview data using machine learning
-- Constructing and validating survey instruments used to assess progress and effect
-- Total Amount: *\$294,958.00*
+- Applying mixed methods text analysis of written and interview data using thematic analysis and various machine learning methods.
+- Constructing and validating survey instruments used to assess progress and programmatic impact.
+- Implementing process and impact evaluations of program activities.
+- Total Award: *\$294,958.00*
+- [*2019-NSF 2142274*](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2142274&HistoricalAwards=false)
 
-### <i>Data Scientist & Program Evaluator</i><br>WVCTSI: West Virginia Clinical and Translational Science Institute
+### <i>Program Evaluator & Data Scientist</i><br>WVCTSI: West Virginia Clinical and Translational Science Institute
 
 West Virginia University
 
@@ -188,28 +208,15 @@ West Virginia University
 
 2022 - 2017
 
-- National Institute of Health Grant
 - Analyzed large data sets using frequentist and Bayesian methods.
 - Conducted local and multi-site mutli-cluster evaluation studies.
-- Developed/validated items and distributed customized Qualtrics surveys built with CSS and Javascript.
-- Pulled, wrangled, and visualized secondary data in R.
+- Developed/validated items and distributing customized Qualtrics surveys built with CSS and Javascript.
 - Mentored future graduate social data scientists.
-- Total Amount: *\$20,000,000*
+- Pulled, wrangled, and visualized secondary data in R.
+- Total Award: *\$20,000,000*
+- [*2017-NIH 2U54GM104942-02*](https://reporter.nih.gov/project-details/9362155)
 
-### <i>Program Evaluator</i><br>Research Initiative: A Holistic Cross-Disciplinary Project Experience as a Platform to Advance the Professional Formation of Engineers
-
-West Virginia University
-
-  Morgantown, WV
-
-2020
-
-- National Science Foundation Grant
-- Advised engineering faculty and graduate students on implementation of study methods.
-- Conducted quantitative and qualitative studies on undergraduate student experiences within grant related programs.
-- Total Amount: *\$200,000*
-
-### <i>Program Evaluator</i><br>GAUSSI: Generating, Analyzing, and Understanding Sensory and Sequencing Information: A Trans-Disciplinary Graduate Training Program in Biosensing and Computational Biology
+### <i>Lead Program Evaluator</i><br>GAUSSI: Generating, Analyzing, and Understanding Sensory and Sequencing Information: A Trans-Disciplinary Graduate Training Program in Biosensing and Computational Biology
 
 Colorado State University
 
@@ -217,12 +224,13 @@ Colorado State University
 
 2020 - 2017
 
-- National Science Foundation Grant
-- Conducted biannual evaluations of multiple grant related programs.
+- Conducted process evaluations of multiple grant related programs.
 - Developed and distributed customized Qualtrics surveys built with CSS and Javascript.
-- Pulled, wrangled, and visualized secondary data in R.
-- Wrote annual program and National Science Foundation reports.
-- Total Amount: *\$3,013,779*
+- Directed unstructured and semi-structured interviews and focus groups assessing participant experiences.
+- Implemented mixed methods evaluations to study program impacts on students and faculty.
+- Pulled, wrangled, and visualized secondary data.
+- Total Award: *\$3,013,779*
+- [*2017-NSF 1450032*](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1450032&HistoricalAwards=false)
 
 ## Select Talks
 
@@ -254,4 +262,4 @@ Colorado State University
 
 Made in <i style="color:#3365B3;" class="fab fa-r-project"></i>: <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-html.Rmd" target="&#39;_blank">Source code</a>
 
-Last updated on June 02, 2023
+Last updated on June 12, 2023

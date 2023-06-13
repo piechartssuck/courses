@@ -70,14 +70,14 @@ tr,
 
 
 <table>
-    <tr><th>Data visualization</b></th></tr> 
-    <tr><th>Content, cluster, and social network analysis</th></tr> 
-    <tr><th>Modeling using statistics and machine learning</th></tr> 
-    <tr><th>Text mining</th></tr> 
-    <tr><th>Planning and conducting program evaluations</th></tr>  
-    <tr><th>Designing and administering small- and large-scale surveys</th></tr>
+    <tr><th>Content, cluster, and social network analysis</b></th></tr> 
+    <tr><th>Data visualization</th></tr> 
+    <tr><th>Modeling and analysis using statistics and machine learning</th></tr> 
+    <tr><th>Planning and conducting program evaluations</th></tr>
     <tr><th>Programming and analysis in </b><i style="color:#3365B3;" class="fab fa-r-project fa-lg"></i> <b>with markup using</b> <code>$\LaTeX$</code> </th></tr> 
-    <tr><th>App development and dynamic reporting using</b></th></tr> 
+    <tr><th>Quantitative, qualitative, and mixed method designs and analyses</th></tr>  
+    <tr><th>Small- and large-scale survey design, implementation, and analyses</th></tr>
+    <tr><th>Web app development and static/dynamic reporting using</b></th></tr> 
 </table>
 <div class="holder" style="margin-top: -25px">
 
