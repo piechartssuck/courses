@@ -3,4 +3,4 @@ title: "Hi, I'm Abhik"
 headless: true
 ---
 
-a former assistant professor of educational psychology, a practicing program evaluator and methodologist, a researcher of mixed methods text mining approaches, and a social data scientist
+an accomplished professional with a multifaceted background that includes a former assistant professorship in Educational Psychology, extensive experience as a program evaluator specializing in survey aesthetics, design, and analysis, proficiency in research methodologies, expertise in mixed methods text mining approaches, and skill set as a social data scientist
