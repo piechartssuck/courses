@@ -1,7 +1,7 @@
 ---
 title: "Abhik Ranjan Roy"
 author: Abhik Ranjan Roy
-date: "2023-06-14"
+date: "2023-07-02"
 output:
   pagedown::html_resume:
     self_contained: true
@@ -180,13 +180,17 @@ West Virginia University Research Corporation
 
 Current - 2023
 
+<div class="concise">
+
 - Building valid and reliable survey instruments to assess participant experiences.
 - Implementing process, monitoring, and impact evaluations of programmatic activities.
 - Utilizing mixed methods designs to study participant data.
 - Total Award: *\$4,870,000*
 - [*HRSA-19-049*](https://grants.hrsa.gov/2010/Web2External/Interface/Common/EHBDisplayAttachment.aspx?dm_rtc=16&dm_attid=d3c378a4-b07d-48e5-ab36-38f05a7eeb48)
 
-### <i>Lead Program Evaluator & Mixed Methods Analyst</i><br>Teaching Science with Computational Thinking: Preparing Preservice Elementary Educators of the Future STEM Workforce
+</div>
+
+### <i>Lead Program Evaluator & Mixed Methods Ananlyst</i><br>Teaching Science with Computational Thinking: Preparing Preservice Elementary Educators of the Future STEM Workforce
 
 West Virginia University
 
@@ -194,11 +198,15 @@ West Virginia University
 
 Current - 2022
 
+<div class="concise">
+
 - Applying mixed methods text analysis of written and interview data using thematic analysis and various machine learning methods.
 - Constructing and validating survey instruments used to assess progress and programmatic impact.
 - Implementing process and impact evaluations of program activities.
 - Total Award: *\$294,958.00*
 - [*2019-NSF 2142274*](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2142274&HistoricalAwards=false)
+
+</div>
 
 ### <i>Program Evaluator & Data Scientist</i><br>WVCTSI: West Virginia Clinical and Translational Science Institute
 
@@ -208,6 +216,8 @@ West Virginia University
 
 2022 - 2017
 
+<div class="concise">
+
 - Analyzed large data sets using frequentist and Bayesian methods.
 - Conducted local and multi-site mutli-cluster evaluation studies.
 - Developed/validated items and distributing customized Qualtrics surveys built with CSS and Javascript.
@@ -215,6 +225,8 @@ West Virginia University
 - Pulled, wrangled, and visualized secondary data in R.
 - Total Award: *\$20,000,000*
 - [*2017-NIH 2U54GM104942-02*](https://reporter.nih.gov/project-details/9362155)
+
+</div>
 
 ### <i>Lead Program Evaluator</i><br>GAUSSI: Generating, Analyzing, and Understanding Sensory and Sequencing Information: A Trans-Disciplinary Graduate Training Program in Biosensing and Computational Biology
 
@@ -224,6 +236,8 @@ Colorado State University
 
 2020 - 2017
 
+<div class="concise">
+
 - Conducted process evaluations of multiple grant related programs.
 - Developed and distributed customized Qualtrics surveys built with CSS and Javascript.
 - Directed unstructured and semi-structured interviews and focus groups assessing participant experiences.
@@ -231,6 +245,8 @@ Colorado State University
 - Pulled, wrangled, and visualized secondary data.
 - Total Award: *\$3,013,779*
 - [*2017-NSF 1450032*](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1450032&HistoricalAwards=false)
+
+</div>
 
 ## Select Talks
 
@@ -262,4 +278,4 @@ Colorado State University
 
 Made in <i style="color:#3365B3;" class="fab fa-r-project"></i>: <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-html.Rmd" target="&#39;_blank">Source code</a>
 
-Last updated on June 14, 2023
+Last updated on July 02, 2023
