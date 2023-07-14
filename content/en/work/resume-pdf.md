@@ -1,7 +1,7 @@
 ---
 title: "Abhik Ranjan Roy"
 author: Abhik Ranjan Roy
-date: "2023-07-02"
+date: "2023-07-13"
 output:
   pagedown::html_resume:
     self_contained: true
@@ -173,7 +173,7 @@ University of Kansas
 
 ## Select Projects
 
-### <i>Lead Program Evaluator & Methodologist</i><br> Healthy Start Initiative: Eliminating Disparities in Perinatal Health
+### <i>Lead Program Evaluator & Methodologist</i><br> Healthy Start Initiative
 
 West Virginia University Research Corporation
 
@@ -186,7 +186,7 @@ Current - 2023
 - Building valid and reliable survey instruments to assess participant experiences.
 - Implementing process, monitoring, and impact evaluations of programmatic activities.
 - Utilizing mixed methods designs to study participant data.
-- Total Award: *\$4,870,000*
+- Total Award: *\$5,470,000*
 - [*HRSA-19-049*](https://grants.hrsa.gov/2010/Web2External/Interface/Common/EHBDisplayAttachment.aspx?dm_rtc=16&dm_attid=d3c378a4-b07d-48e5-ab36-38f05a7eeb48)
 
 </div>
@@ -279,4 +279,4 @@ Colorado State University
 
 Made in <i style="color:#3365B3;" class="fab fa-r-project"></i>: <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-pdf.Rmd" target="&#39;_blank">Source code</a>
 
-Last updated on July 02, 2023
+Last updated on July 13, 2023
