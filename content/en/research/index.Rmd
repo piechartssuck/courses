@@ -1,9 +1,0 @@
----
-title: "Research"
-weight: 5
----
-
-My current interests include
-- Representation learning on Social Networks
-- Developing clustering algorithms for topic modeling
-- Soft clustering in hierarchical dense data sets
