@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
-.flexcards {
+body {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -10,13 +10,13 @@
   font-family: "Roboto Condensed", sans-serif;
   transition: 0.25s;
 }
-.flexcards .credit {
+body .credit {
   position: absolute;
   bottom: 20px;
   left: 20px;
   color: inherit;
 }
-.flexcards .options {
+body .options {
   display: flex;
   flex-direction: row;
   align-items: stretch;
@@ -27,38 +27,38 @@
   height: 400px;
 }
 @media screen and (max-width: 718px) {
-  .flexcards .options {
+  body .options {
     min-width: 520px;
   }
-  .flexcards .options .option:nth-child(5) {
+  body .options .option:nth-child(5) {
     display: none;
   }
 }
 @media screen and (max-width: 638px) {
-  .flexcards .options {
+  body .options {
     min-width: 440px;
   }
-  .flexcards .options .option:nth-child(4) {
+  body .options .option:nth-child(4) {
     display: none;
   }
 }
 @media screen and (max-width: 558px) {
-  .flexcards .options {
+  body .options {
     min-width: 360px;
   }
-  .flexcards .options .option:nth-child(3) {
+  body .options .option:nth-child(3) {
     display: none;
   }
 }
 @media screen and (max-width: 478px) {
-  .flexcards .options {
+  body .options {
     min-width: 280px;
   }
-  .flexcards .options .option:nth-child(2) {
+  body .options .option:nth-child(2) {
     display: none;
   }
 }
-.flexcards .options .option {
+body .options .option {
   position: relative;
   overflow: hidden;
   min-width: 60px;
@@ -69,25 +69,25 @@
   cursor: pointer;
   transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
 }
-.flexcards .options .option:nth-child(1) {
+body .options .option:nth-child(1) {
   --defaultBackground:#ff5349;
 }
-.flexcards .options .option:nth-child(2) {
+body .options .option:nth-child(2) {
   --defaultBackground:#80A9D7;
 }
-.flexcards .options .option:nth-child(3) {
+body .options .option:nth-child(3) {
   --defaultBackground:#659f74;
 }
-.flexcards .options .option:nth-child(4) {
+body .options .option:nth-child(4) {
   --defaultBackground:#5f8aee;
 }
-.flexcards .options .option:nth-child(5) {
+body .options .option:nth-child(5) {
   --defaultBackground:#CCCCFF;
 }
-.flexcards .options .option:nth-child(6) {
+body .options .option:nth-child(6) {
   --defaultBackground:#97D3CC;
 }
-.flexcards .options .option.active {
+body .options .option.active {
   flex-grow: 10000;
   transform: scale(1);
   max-width: 600px;
@@ -98,35 +98,35 @@
      transform:scale(0.9);
   }*/
 }
-.flexcards .options .option.active .shadow {
+body .options .option.active .shadow {
   box-shadow: inset 0 -120px 120px -120px black, inset 0 -120px 120px -100px #1e1e1e;
   opacity: 0.5;
 }
-.flexcards .options .option.active .label {
+body .options .option.active .label {
   bottom: 20px;
   left: 20px;
 }
-.flexcards .options .option.active .label .info > div {
+body .options .option.active .label .info > div {
   left: 0px;
   opacity: 1;
 }
-.flexcards .options .option:not(.active) {
+body .options .option:not(.active) {
   flex-grow: 1;
   border-radius: 30px;
 }
-.flexcards .options .option:not(.active) .shadow {
+body .options .option:not(.active) .shadow {
   bottom: -40px;
   box-shadow: inset 0 -120px 0px -120px black, inset 0 -120px 0px -100px #1e1e1e;
 }
-.flexcards .options .option:not(.active) .label {
+body .options .option:not(.active) .label {
   bottom: 10px;
   left: 10px;
 }
-.flexcards .options .option:not(.active) .label .info > div {
+body .options .option:not(.active) .label .info > div {
   left: 20px;
   opacity: 0;
 }
-.flexcards .options .option .shadow {
+body .options .option .shadow {
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -134,7 +134,7 @@
   height: 120px;
   transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
 }
-.flexcards .options .option .label {
+body .options .option .label {
   display: flex;
   position: absolute;
   right: 0px;
@@ -142,23 +142,23 @@
   transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
   gap: 20px;
 }
-.flexcards .options .option .label .icon {
+body .options .option .label .icon {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   min-width: 40px;
   max-width: 40px;
-  height: 80px;
+  height: 40px;
   border-radius: 100%;
   background-color: #1e1e1e;
   color: var(--defaultBackground);
 }
-.flexcards .options .option .label .icon > div {
+body .options .option .label .icon > div {
   position: relative;
   transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95), opacity 0.1s ease-out;
 }
-.flexcards .options .option .label .info {
+body .options .option .label .info {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -166,18 +166,14 @@
   color: white;
   white-space: pre;
 }
-.flexcards .options .option .label .info > div {
+body .options .option .label .info > div {
   position: relative;
   transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95), opacity 0.5s ease-out;
 }
-.flexcards .options .option .label .info .main {
+body .options .option .label .info .main {
   font-weight: bold;
   font-size: 0.9rem;
 }
-.flexcards .options .option .label .info .sub {
+body .options .option .label .info .sub {
   transition-delay: 0.1s;
-}
-.centerflex {
- display: flex;
-  justify-content: center;
 }

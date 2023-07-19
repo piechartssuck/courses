@@ -1,11 +1,3 @@
----
-title: "Courses"
-weight: 5
-output:
-  html_document
----
-
-<style>
 .slider{width: 100%}
 .slider input{display: none;}
 .testimonials{
@@ -23,7 +15,7 @@ output:
 	border-radius: 5px;
 	background-color: #212121;
 	position: absolute;
-	border: 3px solid #333333;
+	border: 2px solid #413B52;
 	top: 0;
 	box-sizing: border-box;
 	text-align: center;
@@ -133,52 +125,3 @@ output:
 
 	z-index: 4;
 }
-</style>
-
-<div class="slider">
-	<input type="radio" name="testimonial" id="t-1">
-	<input type="radio" name="testimonial" id="t-2">
-	<input type="radio" name="testimonial" id="t-3">
-	<input type="radio" name="testimonial" id="t-4" checked >
-	<input type="radio" name="testimonial" id="t-5">
-	<input type="radio" name="testimonial" id="t-6">
-	<input type="radio" name="testimonial" id="t-7">
-	<input type="radio" name="testimonial" id="t-8">
-	<div class="testimonials">
-		<label class="item" for="t-1">
-			<a href='https://edp611.asocialdatascientist.com' target='_blank'><img src='/img/hex/edp611.png' alt='RM hex' width='250'></a>
-		</label>
-		<label class="item" for="t-2">
-			<a href='https://edp612.asocialdatascientist.com' target='_blank'><img src='/img/hex/edp612.png' alt='PE hex' width='250'></a>
-		</label>
-		<label class="item" for="t-3">
-			<a href='https://edp613.asocialdatascientist.com' target='_blank'><img src='/img/hex/edp613.png' alt='RM hex' width='250'></a>
-		</label>
-		<label class="item" for="t-4">
-			<a href='https://edp617.asocialdatascientist.com' target='_blank'><img src='/img/hex/edp617.png' alt='PE hex' width='250'></a>
-		</label>
-		<label class="item" for="t-5">
-<a href='https://edp618.asocialdatascientist.com' target='_blank'><img src='/img/hex/edp618.png' alt='RM hex' width='250'></a>
-		</label>
-		<label class="item" for="t-6">
-<a href='https://edp619.asocialdatascientist.com' target='_blank'><img src='/img/hex/edp619.png' alt='PE hex' width='250'></a>
-		</label>
-		<label class="item" for="t-7">
-<a href='https://edp693e.asocialdatascientist.com' target='_blank'><img src='/img/hex/edp693e.png' alt='RM hex' width='250'></a>
-		</label>
-		<label class="item" for="t-8">
-<a href='https://edp693g.asocialdatascientist.com' target='_blank'><img src='/img/hex/edp693g.png' alt='PE hex' width='250'></a>
-		</label>
-	</div>
-	<br/>
-	<div class="dots">
-		<label for="t-1"></label>
-		<label for="t-2"></label>
-		<label for="t-3"></label>
-		<label for="t-4"></label>
-		<label for="t-5"></label>
-		<label for="t-6"></label>
-		<label for="t-7"></label>
-		<label for="t-8"></label>
-	</div>
-</div>

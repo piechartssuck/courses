@@ -2,11 +2,10 @@
 title: "Courses"
 weight: 5
 output:
-  html_document:
-    css: "style.css"
+  html_document
 ---
 
-<style type="text/css">
+<style>
 .slider{width: 100%}
 .slider input{display: none;}
 .testimonials{
@@ -24,7 +23,7 @@ output:
 	border-radius: 5px;
 	background-color: #212121;
 	position: absolute;
-	border: 2px solid #413B52;
+	border: 3px solid #333333;
 	top: 0;
 	box-sizing: border-box;
 	text-align: center;
