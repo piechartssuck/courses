@@ -206,7 +206,7 @@ N/A
 
 2020
 
-Kale, U., <b>Roy, A.</b> & Yuan, J. [https://doi.org/10.1007/s11423–020–09771–8](https://doi.org/10.1007/s11423-020-09771-8)
+Kale, U., <b>Roy, A.</b> & Yuan, J. <https://doi.org/10.1007/s11423-020-09771-8>
 
 ### Using Interactive Theater to Promote Inclusive Behaviors in Teams for First-year Engineering Students: A Sustainable Approach.
 
@@ -256,7 +256,7 @@ N/A
 
 2012
 
-<b>Roy, A.R.</b>, Hobson, K.A., & Coryn, C.L.S. https://journals.sfu.ca/jmde/index.php/jmde_1/article/view/372/358
+<b>Roy, A.R.</b>, Hobson, K.A., & Coryn, C.L.S. https://doi.org/10.56645/jmde.v8i19.372
 
 ## Book Chapters
 

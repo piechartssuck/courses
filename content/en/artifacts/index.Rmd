@@ -1,0 +1,108 @@
+---
+title: "Artifacts"
+---
+
+<link rel="stylesheet" href="/css/flexcards.css">
+
+```{css, echo=FALSE}
+.center {
+ display: flex;
+  justify-content: center;
+}
+```
+
+```{js, echo=FALSE}
+(function() {
+document.addEventListener("DOMContentLoaded", function() {
+  var options = document.querySelectorAll(".option");
+  
+  options.forEach(function(option) {
+    option.addEventListener("click", function() {
+      options.forEach(function(opt) {
+        opt.classList.remove("active");
+      });
+      this.classList.add("active");
+    });
+  });
+});
+})();
+```
+
+<div class="center">
+<div class="options">
+   <div class="option active" style="--optionBackground:url(/img/logos/wvhealthystart-dark.png);">
+      <div class="shadow"></div>
+      <div class="label">
+         <div class="icon">
+            <i class="fas fa-briefcase-medical"></i>
+         </div>
+         <div class="info">
+            <div class="main">WV Healthy Start</div>
+            <div class="sub">2023 - Current</div>
+         </div>
+      </div>
+   </div>
+   <div class="option" style="--optionBackground:url(/img/logos/ctebc-dark.png);">
+      <div class="shadow"></div>
+      <div class="label">
+         <div class="icon">
+            <i class="fas fa-laptop-code"></i>
+         </div>
+         <div class="info">
+            <div class="main">Computational<br>Thinking</div>
+            <div class="sub">2022 - Current</div>
+         </div>
+      </div>
+   </div>
+   <div class="option" style="--optionBackground:url(/img/logos/wvctsi-logo-dark.png);">
+      <div class="shadow"></div>
+      <div class="label">
+         <div class="icon">
+            <i class="fas fa-user-md"></i>
+         </div>
+         <div class="info">
+            <div class="main">WVCTSI</div>
+            <div class="sub">2017 - 2022</div>
+         </div>
+      </div>
+   </div>
+   <div class="option" style="--optionBackground:url(/img/logos/P4E-dark.png);">
+      <div class="shadow"></div>
+      <div class="label">
+         <div class="icon">
+            <i class="fas fa-university"></i>
+         </div>
+         <div class="info">
+            <div class="main">Inclusive Identities</div>
+            <div class="sub">2017 - 2018</div>
+         </div>
+      </div>
+   </div>
+   <div class="option" style="--optionBackground:url(/img/logos/circos-dark.png);">
+      <div class="shadow"></div>
+      <div class="label">
+         <div class="icon">
+            <i class="fas fa-people-arrows"></i>
+         </div>
+         <div class="info">
+            <div class="main">Cross-Disciplinary<br>Engineers</div>
+            <div class="sub">2020 - 2022</div>
+         </div>
+      </div>
+   </div>
+    <div class="option" style="--optionBackground:url(/img/logos/GAUSSI-dark.png);">
+      <div class="shadow"></div>
+      <div class="label">
+         <div class="icon">
+            <i class="fas fa-dna"></i>
+         </div>
+         <div class="info">
+            <div class="main">GAUSSI</div>
+            <div class="sub">2017 - 2020</div>
+         </div>
+      </div>
+   </div>
+</div>
+</div>
+
+<!-- adapted from https://codepen.io/z-/pen/OBPJKK -->
