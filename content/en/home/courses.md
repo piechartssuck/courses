@@ -21,7 +21,7 @@ output:
 	width: 350px;
 	padding: 30px;
 	border-radius: 5px;
-	background-color: #212121;
+	background-color: #1e1e1e;
 	position: absolute;
 	border: 3px solid #333333;
 	top: 0;
