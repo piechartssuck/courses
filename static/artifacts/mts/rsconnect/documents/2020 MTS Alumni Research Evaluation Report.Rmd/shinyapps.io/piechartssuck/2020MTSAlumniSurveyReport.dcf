@@ -1,0 +1,12 @@
+name: 2020MTSAlumniSurveyReport
+title: 2020MTSAlumniSurveyReport
+username:
+account: piechartssuck
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2113249
+bundleId: 3010410
+url: https://piechartssuck.shinyapps.io/2020MTSAlumniSurveyReport/
+when: 1586848931.5904
+asMultiple: FALSE
+asStatic: FALSE
