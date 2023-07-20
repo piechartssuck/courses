@@ -1,0 +1,128 @@
+---
+title: "West Virginia Clinical and Translational Science Institute (WVCTSI) Tracking and Evaluation Quarterly Report"
+subtitle: "1st Quarter of Fiscal Year 2021-2022 (Y10)"
+linktitle: "Year 10 Quarter 1 Report"
+date: 'Reporting Period: July 1, 2021 – September 30, 2021'
+author: "Abhik Roy"
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  reports:
+    parent: Digital Reports
+    weight: 5
+type: docs
+weight: 1
+---
+
+
+
+<style type="text/css">
+.article-container {
+  max-width: 960px;
+}
+
+h5 {
+  font-style: italic;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+iframe {
+  width: 1px;
+  min-width: 100%;
+  border:0;
+}
+
+.btn {
+  background-color: #4682b4;
+  border: none;
+  color: #FFFFFF;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#TableOfContents, .docs-toc-title {
+  border-left: 1px solid $sta-primary;
+}
+
+button.btn.collapsed:before
+{
+    content:'+' ;
+    display:block;
+    width:15px;
+}
+
+button.btn:before
+{
+    content:'-' ;
+    display:block;
+    width:15px;
+  }
+}
+</style>
+ 
+
+
+
+```{=html}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.min.js" integrity="sha512-dnvR4Aebv5bAtJxDunq3eE8puKAJrY9GBJYl9GC6lTOEC76s1dbDfJFcL9GyzpaDW4vlI/UjR8sKbc1j6Ynx6w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dimple/2.3.0/dimple.latest.min.js"></script>
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

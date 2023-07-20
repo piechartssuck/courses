@@ -1,0 +1,2046 @@
+---
+title: "West Virginia Clinical and Translational Science Institute (WVCTSI) Tracking and Evaluation Quarterly Report"
+subtitle: "3rd Quarter of Fiscal Year 2020-2021 (Y9)"
+linktitle: "Year 9 Quarter 3 Report"
+date: 'Reporting Period: January 1, 2021 – March 31, 2021'
+author: "Abhik Roy"
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  reports:
+    parent: Digital Reports
+    weight: 3
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  fig.path = "Pictures"
+)
+```
+
+<style>
+ body .main-container {
+    width: 99.5%;
+    max-width: unset;
+}
+    
+h5 {
+    font-style: italic;
+      font-weight: 600;
+            margin-top: 10px;
+}
+
+iframe {
+  width: 1px;
+  min-width: 100%;
+  border:0;
+}
+
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.min.js" integrity="sha512-ngVIPTfUxNHrVs52hA0CaOVwC3/do2W4jUEJIufgZQicmY27iAJAind8BPtK2LoyIGiAFcOkjO18r5dTUNLFAw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+```{css,echo=FALSE}
+btn {
+   border-radius: 4px;
+   background: linear-gradient(to right, #67b26b, #4ca2cb) !important;
+   border: none;
+   color: #FFFFFF;
+   text-align: center;
+   text-transform: uppercase;
+   font-size: 22px;
+   padding: 20px;
+   width: 200px;
+   transition: all 0.4s;
+   cursor: pointer;
+   margin: 5px;
+ }
+
+ .btn span {
+   cursor: pointer;
+   display: inline-block;
+   position: relative;
+   transition: 0.4s;
+ }
+ 
+ .btn span:after {
+   content: '\00bb';
+   position: absolute;
+   opacity: 0;
+   top: 0;
+   right: -20px;
+   transition: 0.5s;
+ }
+ 
+ .btn:hover span {
+   padding-right: 20px;
+ }
+ 
+ .btn:hover span:after {
+   opacity: 1;
+   right: 0;
+ }
+
+.collapsed:before
+{
+    content:'+' ;
+    display:block;
+    width:10px;
+}
+
+.collapsed:after
+{
+    content:'' ;
+    display:block;
+    width:10px;
+}
+```
+
+```{js echo = FALSE}
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+```
+
+```{js echo = FALSE}
+$(function() {
+        $.ajax({
+            type : "HEAD",
+            async : true,
+            url : "www.example.com/iframe"
+        })
+        .success(function() {
+            $("#iframe").attr("src", "www.example.com/iframe");
+        })
+        .error(function(){
+           // Handle error perhaps a failover url
+        })
+    });
+```
+
+```{r echo = FALSE}
+df_to_js <- function(x, var_name = "data", ...){
+  
+  json_data <- jsonlite::toJSON(x, ...)
+  
+  htmltools::tags$script(paste0("var ",var_name," = ", json_data, ";"))
+}
+```
+
+```{r echo = FALSE}
+htmltools::tagList(
+  htmltools::tags$script(src = "https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.min.js", integrity="sha512-dnvR4Aebv5bAtJxDunq3eE8puKAJrY9GBJYl9GC6lTOEC76s1dbDfJFcL9GyzpaDW4vlI/UjR8sKbc1j6Ynx6w==", crossorigin="anonymous", referrerpolicy="no-referrer"),
+  htmltools::tags$script(src = "https://cdnjs.cloudflare.com/ajax/libs/dimple/2.3.0/dimple.latest.min.js")
+)
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(widgetframe_self_contained = TRUE) 
+knitr::opts_knit$set(root.dir = getwd())
+knitr::opts_chunk$set(warning = FALSE, message = FALSE, echo=FALSE)
+
+# Load libraries ---
+library(tidyverse)
+library(tidytext)
+library(textclean)
+library(magrittr)
+library(stm)
+library(knitr)
+library(kableExtra)
+library(R.utils)
+library(d3r)
+library(plotly)
+library(ggiraph)
+library(ggiraphExtra)
+library(ggthemes)
+library(graphlayouts)
+library(ggforce)
+library(grid)
+library(ggplotify)
+library(wesanderson)
+library(sunburstR)
+library(htmltools)
+library(htmlwidgets)
+library(widgetframe)
+library(manipulateWidget)
+library(DT)
+library(RColorBrewer)
+library(viridis)
+library(rmarkdown)
+library(collapsibleTree)
+library(chorddiag)
+library(sf)
+library(geocompkg)
+library(rworldmap)
+library(lwgeom)
+library(sankeyD3)
+library(parcoords)
+library(shiny)
+library(here)
+library(png)
+library(cowplot)
+library(readxl)
+library(tidyr)
+library(RISmed)
+library(rentrez)
+library(rcrossref)
+library(scales)
+library(visNetwork)
+library(igraph)
+library(XML)
+library(xml2)
+library(tidygraph)
+library(maps)
+library(patchwork)
+library(lubridate)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+library(showtext)
+font_add(family = "Roboto Condensed", 
+         regular = "RobotoCondensed-Regular.ttf",
+         bold = "RobotoCondensed-Bold.ttf",
+         italic = "RobotoCondensed-Italic.ttf")
+showtext_auto()
+```
+
+```{r quarter_year_information, echo = FALSE}
+YQ1Q2 = 2020
+YQ3Q4 = 2021
+QR = "Q3" 
+```
+
+```{r core_order, echo = FALSE}
+core_order = c("ADMIN", "CAMC", "CEO", "CRDEB", "CRRF", "MU", "PD", "PILOT", "PPC", "TECH", "T&E")
+```
+
+```{r palettes, echo = FALSE}
+core_colors = c(ADMIN = "#d2b22b", CAMC = "#007BC1", CEO = "#3457a7", CRDEB = "#c13c3a", CRRF = "#663996", MU = "#01E5A7", PD= "#72ae43", PILOT = "#b46728", PPC = "#cf6828", `T&E` = "#ffb6c1", TECH = "#037872",Unknown = "#99aab5")
+
+# Define colors -----
+crdeb_colors = c("#A15651", "#DA2027", "#881829", "#422420", "#DEA795", "#D693A3")
+
+crrf_colors <- c("#624FA1", "#a1624f", "#4fa162", "#4f8ea1", "#4f65a1", "#a18b4f", "#A54974", "#4e8584", "#00AFBB", "#E7B800", "#0052bb")
+
+ids_colors = c("#476d4f", "#c0d095", "#007777", "#83adb5", "#454545", "#788130", "#c7b85f", "#196874")
+
+ceo_service_colors <- c('#247079', '#2A363B', '#019875','#bf2929','#FECEA8','#C658B4','#3d98d3','#E84A5F','#99B898','#FF847C', '#0c485e')
+
+ceo_product_colors <- c('#966FD6','#03C5CC', '#0370AC', '#03CC8E', '#af4f70')
+```
+
+```{r months, echo = FALSE}
+ordered_months <- c("January","February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
+```
+
+```{r ordered_months, echo = FALSE}
+# Get months ----
+if (QR == "Q1") QUARTER = c("Jul", "Aug", "Sep") else 
+  if (QR == "Q2") QUARTER = c("Oct", "Nov", "Dec") else 
+    if (QR == "Q3") QUARTER = c("Jan", "Feb", "Mar") else 
+      QUARTER = c("Apr", "May", "Jun")
+```
+
+```{r tooltip_aesthetics, echo = FALSE}
+# Define common tooltip aesthetics ----
+tooltip_css <- "background-color: #f7f7f7;
+                color: #181818;
+                padding:10px;
+                font-family: Roboto, sans-serif;
+                font-weight: 500;
+                border-radius:5px;"
+```
+
+<hr />
+
+## About {.tabset .tabset-fade .tabset-pills}
+
+### Authors
+
+Original paper report prepared by [Reagan Curtis](https://counselingandlearningsci.wvu.edu/faculty-staff/reagan-curtis){target="blank"}, [Nikki Lewis](https://directory.hsc.wvu.edu/Individual/Index/59099){target="blank"}, Taylor Mikalik, David Loomis, <a target="_blank" href="https://iam.asocialdatascientist.com/">Abhik Roy</a>, and [Malayna Bernstein](https://counselingandlearningsci.wvu.edu/faculty-staff/malayna-bernstein){target="blank"}. A copy may be downloaded by clicking on the icon below.
+
+<center>
+[![](/pictures/PDF_icon.png){width=50px}](/paper_reports/Year 9 Quarter 3 Report.pdf){target="blank"}
+</center>
+
+## Program Overview {.tabset .tabset-fade .tabset-pills}
+
+### Program Information
+
+The West Virginia Clinical and Translational Science Institute contracts the WVU Program Evaluation and Research Center to staff the WVCTSI Tracking and Evaluation Core and provide external formative and summative evaluation services pursuant to National Institutes of Health Award No. [U54GM104942](https://projectreporter.nih.gov/Reporter_Viewsh.cfm?sl=14E8C8094684C3D57598B8961CAA4A01A2FFCEB861BF){target="blank"}.
+
+Statewide Distribution of WVCTSI Partner Organizations and Practice-Based Research Network Sites
+
+<center>
+![](/reports/01-report_files/allSites.png){width=75%}
+</center>
+
+<br>
+
+### Dashboard
+
+```{r echo = FALSE, message = FALSE}
+read_csv(here::here("static", "data", "Y9Q3", "dashboardY9Q3.csv"), 
+         show_col_types = FALSE) %>%
+  mutate_all(as.character) %>%
+  replace(is.na(.), "")   %>%
+  kable(align = "llcccccc",
+        full_width = FALSE) %>%
+  row_spec(1:4,
+           color = "#4682b4",
+           bold = TRUE) %>%
+  row_spec(6:12,
+           color = "#ff6347",
+           bold = TRUE) %>%
+  row_spec(14:18,
+           color = "#4682b4",
+           bold = TRUE) %>%
+  row_spec(20:22,
+           color = "#ff6347",
+           bold = TRUE) %>%
+  row_spec(24:26,
+           color = "#4682b4",
+           bold = TRUE) %>%
+  row_spec(28:29,
+           color = "#ff6347",
+           bold = TRUE) %>%
+  column_spec(8, 
+              width = "5em", 
+              bold = TRUE, 
+              color = "#4f5b66", 
+              background = "#9adaf6")
+
+```
+
+*Note that total for membership metrics is the most recent quarter value rather than summed across quarters. Download a copy of the [dashboard](/data/Y9Q3/dashboardY9Q3.csv){target="blank"}.*
+
+### Executive Summary and Key Recommendations
+
+This is the quarterly tracking and evaluation report of the WV Clinical and Translational Science Institute (WVCTSI) for the 3rd quarter (Q3) of fiscal year 2020/2021 (Y9), which covers a reporting period from January 1st, 2021 through March 31st, 2021. The WVCTSI received Y9 renewal notice of award dated July 9, 2020 with an annual award of 4,000,000 USD for the budget period from July 1, 2020 through June 30, 2021 and a total project period from August 15, 2012 through June 30, 2022. 
+
+This report prepared by WVCTSI Tracking and Evaluation Core personnel is organized by specific aim within each key component area/core plus information from partner institutions as available. This report does not describe every tracking and evaluation metric in each core, rather key elements and recommendations are summarized and readers are referred to the Quarterly Data Sheet (Excel) distributed with this report for information on all metrics as reported by all cores and partners. 
+
+At the close of the reporting period, there were 18 peer-reviewed publications officially linked  to WVCTSI funding, 5 presentations (with an additional 7 presentations being accepted), 67 external funding proposals totaling over 123 million USD, and 50 funded awards (8.2 million USD) for quarter 3 of year 9.
+
+#### Overall recommendations from Tracking and Evaluation Core
+
+- Prepare for conclusion of this 5-year funding period including analysis of all specific aims to ensure appropriate activities are completed and prepare a competitive application for renewal.
+- While good progress has been made, continue efforts to ensure all WVCTSI members who generate scholarly publications have an [ORCID ID](https://orcid.org/){target="blank"} as part of their WVCTSI membership profile and that those ORCID ID’s are utilized for efficient identification and linking of all WVCTSI related publications and funding awards.
+- Ensure transparent and consistent utilization of iLab across cores and partners including core and partner assessment of alignment with action items agreed upon at May 29, 2019 WVCTSI Steering Committee meeting.
+- Review and consider implications of WVCTSI Awareness Survey Report including focus on increasing core service utilization and statewide partner engagement.
+- Develop evidence of alignment between resource/effort allocations and priority health areas.
+
+#### Key Recommendations to Administrative Core
+
+- Shift focus toward closing out this 5-year funding period, such as supporting efficient wrapping up of pilot award funding opportunities and piloting/evaluating recent new endeavors in support of a competitive renewal application.
+- Continue to facilitate core and partner discussions and collaborative efforts to innovatively facilitate additional publications supported by and linked to WVCTSI NIH funding award, including continued effort to get all WVCTSI members who generate scholarly publications to have an [ORCID ID](https://orcid.org/){target="blank"} as part of their WVCTSI membership profile.
+- Identify barriers to partner participation and engagement; work to increase membership and service utilization across partner sites.
+
+#### Key Recommendations to Clinical Research Design, Epidemiology & Biostatistics Core
+
+- Deliver professional development events this quarter in order to meet annual target (3).
+- Identify barriers and work to increase service utilization across partner sites.
+- Implement and report activity related to the Appalachian Research Consortium (ARC). Consider how to position such activity in a competitive renewal application.
+
+#### Key Recommendations to Clinical Research Resources & Facilities Core
+
+- Support researchers activating sufficient number of TriNetX studies to meet annual target (10).
+- Identify appropriate metrics for Specific Aim 2 and report data on those metrics in upcoming quarterly report cycles. Consider how to position activity related to this aim in a competitive renewal application.
+
+#### Key Recommendations to Community Engagement & Outreach Core
+
+- Consider capacity and opportunities to mentor additional investigators.
+- Continue and expand efforts to disseminate research results through publication in high-quality journals and other outlets.
+
+#### Key Recommendations to Pilot Projects Core
+
+- Specific Aim 1 includes mentored support to bring projects to completion. Consider how this mentored support and project completion should be distinguished from that done in the Professional Development core, as well as how it should be tracked and evaluated.
+- Prepare appropriate schedule of pilot award opportunities tapering down in preparation for end of budget period June 30, 2022, as well as how best to support funded pilots completing their scope of work by that date.
+
+#### Key Recommendations to Professional Development Core
+
+- Increase engagement with partner institutions outside of WVU Morgantown.
+- Continue working to roll out and evaluate new editorial services supportive of publication and grant proposal preparation. Consider how to position such activity in competitive renewal application.
+
+#### Key Recommendations to Technology and Resources for Core Laboratories Core
+
+- Continue to consider opportunities to facilitate additional patentable projects.
+- Continue to facilitate excellent collaborative relationships between CAMC, Marshall, and WVU.
+
+#### Key Recommendations to Tracking and Evaluation Core
+
+- Support continued refinement of the publication reporting process, including identification of publications that should be linked to the grant and supporting roll-out of [ORCID ID](https://orcid.org/){target="blank"} utilization.
+- Continue to refine the progress report and related data portal for use by PD, Pilot, and Admin cores to collect quarterly report information from individuals receiving WVCTSI services, protected time, or other support.
+- Implement next steps for WVPBRN and ECHO evaluations. Consider how to position that activity in a competitive renewal application.
+
+#### Key Recommendations to Marshall University, National Institute for Occupational Safety and Health, Veterans Affairs Medical Centers, and West Virginia School of Osteopathic Medicine
+
+- Work to implement and/or increase utilization of iLab. 
+- Continue efforts to increase WVCTSI membership, and increase awareness and utilization of WVCTSI core services at each partner institution.
+
+### Quarterly Reporting Annual Timeline Targets
+
+#### 1st quarter Reporting Period (July 1 -- Sept 30)
+
+```{r, echo=FALSE, , message = FALSE}
+read_csv(here::here("static", "data", "Y9Q3", "reporting1.csv"), 
+         show_col_types = FALSE) %>%
+  kable() 
+```
+
+#### 2nd quarter Reporting Period (Oct 1 -- Dec 31)
+
+```{r, echo = FALSE, message = FALSE}
+read_csv(here::here("static", "data", "Y9Q3", "reporting2.csv"), 
+         col_names = TRUE,
+         show_col_types = FALSE) %>%
+  kable() 
+```
+
+#### 3rd quarter Reporting Period (Jan 1 - Mar 31)
+
+```{r, echo = FALSE, message = FALSE}
+read_csv(here::here("static", "data", "Y9Q3", "reporting3.csv"), 
+         col_names = TRUE,
+         show_col_types = FALSE) %>%
+  kable() 
+```
+
+#### 4th quarter Reporting Period (Apr 1 -- June 30)
+
+```{r, echo = FALSE, message = FALSE}
+read_csv(here::here("static", "data", "Y9Q3", "reporting4.csv"), 
+         col_names = TRUE,
+         show_col_types = FALSE) %>%
+  kable()
+```
+
+## Cores
+
+### Administrative Core {.tabset .tabset-fade .tabset-pills}
+
+![](/reports/01-report_files/Administrative.png){width=30%}
+#### Specific Aim 1
+
+*Implement an effective operational structure that facilitates attainment of all proposed WVCTSI Specific Aims and projects.*
+
+WVCTSI had 67 external funding proposals (125 million USD) and 50 funded awards (8.2 million USD) during Y9 Q3. Of these Admin was directly linked to 29 external funding proposals (104.5 million USD) and 15 external awards (2.7 million USD) this quarter. Figures 1 and 2 show types of external funding proposed and awarded per cores contributing. WVCTSI Staff numbers in Q3 are 68 (14 of which were specifically hired for the RADx grant), and included 10 new WVCTSI staff members. 
+
+Tracking and Evaluation Core pulled linked publications from NCBI utilizing all appropriate grant numbers to accurately identify which publications should be considered linked to the grant in this and all previous quarters (see Table 1). Table 1 displays officially linked publications associated with each quarterly reporting period. Numbers in parentheses are additional publications with a current status of “ahead of print” that are expected to be linked to the grant at some point.  
+
+```{r drop1, echo=FALSE, results='hide'}
+knitr::knit_hooks$set(drop1=function(before, options, envir) {
+    if (before) {
+        paste(
+            '<p>',
+'<button class="btn btn-primary collapsed" data-toggle="collapse" data-target="#ce1">',
+'</button>',
+'</p>',
+'<div class="collapse" id="ce1">',
+'<div class="card card-body">',  sep = "\n")
+    } else {
+        paste("</div>", "</div>", sep = "\n")
+    }
+})
+```
+
+##### *Table 1. CTR-linked Publications by Year and Quarter per Official NCBI Data. Numbers of linked publications do not include those that were embargoed at the time these data were pulled. Publications are categorized as “published” and “in-press”.*
+
+Note: Clicking on the three lines will open or close the menu. With the menu open, clicking on **Total Publication Count by Quarter and Year** will initiate a new data pull for current counts. This process may take up to a minute to complete. To view the entire table, please select the three lines to expand the viewing area. Publication counts may be downloaded in various formats as by clicking the `CSV`, `Excel`, or `PDF` buttons.
+
+<br>
+
+<iframe width="100%" height="500" id="tabIframe" src="https://piechartssuck.shinyapps.io/pubTable/" scrolling="no"></iframe>
+
+<br>
+
+```{js echo=FALSE}
+iFrameResize({log:true, enablePublicMethods:true, heightCalculationMethod:'lowestElement'}, '#tabIframe')
+```
+
+*Note: Numbers of linked publications do not include those that were embargoed at the time these data were pulled. Publications are categorized as "published" and "in-press".*
+
+*It should be noted that linking publications requires substantial effort and lags real time. While the total number of linked publications is not 75% of annual target at this time, it is on-track based on trends observed in past years where the number of publications continues to rise after a reporting period has ended. Accordingly, the number of linked publications at the time the reporting period closed and for which core contributions are reported here will be fewer than those reported in the table above because additional publications continue to be linked daily.*
+
+```{r drop2, echo=FALSE, results='hide'}
+knitr::knit_hooks$set(drop2=function(before, options, envir) {
+    if (before) {
+        paste(
+            '<p>',
+'<button class="btn btn-primary collapsed" data-toggle="collapse" data-target="#ce2">',
+'</button>',
+'</p>',
+'<div class="collapse" id="ce2">',
+'<div class="card card-body">',  sep = "\n")
+    } else {
+        paste("</div>", "</div>", sep = "\n")
+    }
+})
+```
+
+```{r prop_award, echo = FALSE, warning=FALSE, message=FALSE, error=FALSE, results='hide'}
+# Define factor orders ----
+core_order = c("ADMIN", "CAMC", "CEO", "CRDEB", "CRRF", "MU", "PD", "PILOT", "PPC", "TECH")
+
+type_order <- c("Federal", "State", "Industry", "Other")
+
+facet_order <- c("Proposal", "Award")
+
+prop <- 
+  read_csv(here::here("static", "data", "Y9Q3", "prop.csv"), 
+         show_col_types = FALSE) %>%
+  mutate(Direct = as.numeric(as.character(Direct)),
+         Indirect = as.numeric(as.character(Indirect)),
+         Funding = as.numeric(as.character(Funding))) %>%
+  separate(Cores, 
+           into = dput(c(sprintf("Core%d",seq(1:max(str_count(.$Cores, ", ") + 1)), type="cmd"))), 
+           sep =",") %>%
+  pivot_longer(cols = c(starts_with("Core"), -Funding), values_to = "Core") %>%
+  select(-name) %>%
+  mutate(Core = str_squish(Core)) %>%
+  mutate(Funding = na_if(Funding, 0)) %>%
+  drop_na(Core) %>%
+  mutate(Type = str_to_title(Type))  %>%
+  group_by(Core, Type) %>% 
+  summarise(Funding = sum(Funding)) %>%
+  mutate(Type = factor(Type, levels = type_order)) %>%
+  mutate(Core = factor(Core, levels = core_order)) %>%
+  mutate(Amounts = scales::dollar_format()(Funding)) %>%
+  mutate(quarter = QR) %>%
+  mutate(Type = factor(Type, levels = type_order)) %>%
+  mutate(Stage = "Proposal") %>%
+  drop_na(Funding)
+
+award <- 
+  read_csv(here::here("static", "data", "Y9Q3", "award.csv"), 
+         show_col_types = FALSE) %>%
+  mutate(Direct = as.numeric(as.character(Direct)),
+          Indirect = as.numeric(as.character(Indirect)),
+          Funding = as.numeric(as.character(Funding))) %>%
+          separate(Cores, 
+                   into = dput(c(sprintf("Core%d",seq(1:max(str_count(.$Cores, ", ") + 1)), type="cmd"))), 
+                   sep =",") %>%
+          pivot_longer(cols = c(starts_with("Core"), -Funding), values_to = "Core") %>%
+            select(-name) %>%
+            mutate(Core = str_squish(Core)) %>%
+            mutate(Funding = na_if(Funding, 0)) %>%
+            drop_na(Core) %>%
+            mutate(Type = str_to_title(Type))  %>%
+            group_by(Core, Type) %>% 
+            summarise(Funding = sum(Funding)) %>%
+            mutate(Type = factor(Type, levels = type_order)) %>%
+            mutate(Core = factor(Core, levels = core_order)) %>%
+            mutate(Amounts = scales::dollar_format()(Funding)) %>%
+            mutate(quarter = QR) %>%
+            mutate(Type = factor(Type, levels = type_order)) %>%
+            mutate(Stage = "Award") %>%
+            drop_na(Funding) 
+
+prop_award <- 
+  rbind(prop, award) %>%
+  mutate(Core = factor(Core, 
+                       levels = core_order)) %>%
+  mutate(Stage = factor(Stage, 
+                        levels = facet_order)) %>%
+  group_by(Core, Type, Stage) %>% 
+  summarise(Funding = sum(Funding), 
+            .groups = 'drop') %>%
+  mutate(quarter = "Q4") %>%
+  mutate(Type = factor(Type, 
+                       levels = type_order)) %>%
+  arrange(Core, Stage) %>%
+  mutate(tip = case_when(
+    str_detect(Stage, "Proposal") ~ paste0(Core," applied for ", dollar(Funding)," in ", Type, " funding"),
+    TRUE  ~ paste0(Core," was awarded ", dollar(Funding)," in ", Type, " funding")
+    )
+  ) %>%
+  mutate(tip = str_wrap(tip, 20))
+
+
+prop_award_plot <- ggplot(data = prop_award, 
+                          aes(x = quarter, 
+                              Funding, 
+                              position = Core)) + 
+  geom_bar_interactive(aes(fill = Core,
+                           tooltip = tip, 
+                           data_id = Core), 
+                       stat="identity", 
+                       width = 0.2, 
+                       color = "#FFFFFF") +
+  scale_fill_manual(values = core_colors) +
+  theme_bw(base_family = "Roboto Condensed") +
+  theme(plot.title = ggtext::element_textbox_simple(size = 26,
+                                                    face = "bold", 
+                                                    halign = 0.31,  
+                                                    valign = 0.5,
+                                                    margin = margin(15, 0, 35, 0)),
+        legend.position ="bottom",
+        legend.direction = 'horizontal',
+        legend.key=element_blank(),
+        legend.key.size = unit(1.5, 'lines'),
+        legend.text = element_text(size=15, 
+                                   color = "#212121"),
+        legend.spacing.x = unit(0.5, "cm"), 
+        legend.spacing.y = unit(0.5, "cm"),
+        legend.background = element_blank(),
+        legend.title = element_blank(),
+        panel.background = element_blank(),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text.y = element_blank(),
+        axis.text.x = element_blank(),
+        panel.border = element_blank(),
+        panel.grid.major.x = element_blank(), 
+        panel.grid.minor = element_blank()) +
+  coord_flip() + 
+  facet_grid(Stage~Type, 
+             scales = "free", 
+             labeller = labeller(Type = label_wrap_gen(10))) +
+  theme(strip.text.x = element_text(size = 18, 
+                                    angle = 0, 
+                                    color = "#484849")) +
+  theme(strip.text.y = element_text(size = 18, 
+                                    angle = -90, 
+                                    face = "bold",
+                                    color = "#909092")) +
+  theme(strip.background = element_rect(fill="#FFFFFF")) +
+  ggtitle(
+    paste0(
+      "<span style = 'color:#2c2f33'>**External Funding**</span> ",
+      "<span style='color:#b85cb8'>**Proposal**</span> " ,
+      "<span style = 'color:#2c2f33'>**and**</span> ",
+      "<span style='color:#5cb85c'>**Award**</span> ",
+      "<span style = 'color:#2c2f33'>**Amounts by Core**</span>"
+    )
+  )
+
+g <- ggplot_gtable(ggplot_build(prop_award_plot))
+strip_both <- which(grepl('strip-', g$layout$name))
+colors = c("#909092","#909092", "#909092", "#909092", "#b85cb8", "#5cb85c", "#449d44")
+
+k <- 1
+for (i in strip_both) {
+  j <- which(grepl("text", g$grobs[[i]]$grobs[[1]]$childrenOrder))
+  g$grobs[[i]]$grobs[[1]]$children[[j]]$children[[1]]$gp$col <- colors[k]
+  k <- k+1
+}
+
+colored_prop_award_plot <- as.ggplot(g)
+```
+
+```{r prop_award_plot, drop2=TRUE, echo=FALSE}
+girafe(ggobj = colored_prop_award_plot,
+       fonts = list(sans = "Roboto Condensed"),
+       width = 7, 
+       options = list(
+                   opts_toolbar(position = "bottomleft"),
+                   opts_sizing(rescale = TRUE, 
+                               width = 1)
+               )
+        ) %>%
+girafe_options(ggiraph::opts_tooltip(css = tooltip_css, 
+                                           opacity = 0.95, 
+                                           offx = 20, 
+                                           offy = 20, 
+                                           use_stroke = TRUE, 
+                                           delay_mouseout = 100), 
+                        opts_hover(css = "fill:#0b4069;
+                                          stroke:#dfe3ee;
+                                          stroke-width:0px;"),
+                        opts_zoom(max = 10)
+               )
+```
+
+##### *Figures 1 and 2. External funding proposal (top) and award (bottom) dollar amount requested and category per core. Download a copy of both the [proposals](/graphics/Y9Q3/prop.pdf){target="blank"} and [awards](/graphics/Y9Q3/award.pdf){target="blank"} visualizations as high quality PDFs.*
+
+There were 18 publications linked to the grant in Quarter 3. Cores and partners contributed to the following number of linked publications each: 6 ADMIN, 7 CRDEB, 4 PD, 3 TECH, 3 CRRF, and 3 Pilot. These numbers do not sum to 18 because 5 publications included multiple contributing cores/partners. There were 5 presentations given: 2 PD, 1 TECH, 2 Pilot, and 1 CRDEB, these numbers do no total 5 because 1 presentation included 2 contributing cores. An additional 7 presentations were accepted (1 ADMIN, 3 Pilots, and 3 CRDEB; See Figure 2).
+
+```{r drop3, echo=FALSE, results='hide'}
+knitr::knit_hooks$set(drop3=function(before, options, envir) {
+    if (before) {
+        paste(
+            '<p>',
+'<button class="btn btn-primary collapsed" data-toggle="collapse" data-target="#ce3">',
+'</button>',
+'</p>',
+'<div class="collapse" id="ce3">',
+'<div class="card card-body">',  sep = "\n")
+    } else {
+        paste("</div>", "</div>", sep = "\n")
+    }
+})
+```
+
+```{r pubspres_counts_core, echo = FALSE, warning=FALSE, message=FALSE, error=FALSE, results='hide'}
+# Begin pub
+pubs <- read_csv(here::here("static", "data", "Y9Q3", "pubs.csv"),
+                 show_col_types = FALSE) %>% 
+        mutate(PC = str_to_upper(PC)) %>%
+        mutate(SCs = str_to_upper(SCs)) %>%
+        mutate(PC = replace_na(PC, "unknown")) %>%
+        separate("SCs", c("SC1", "SC2")) %>%
+        gather(key = Type, value = Core, -Citation) %>%
+        select(-Type) %>%
+        na.omit() %>%
+        group_by(Core) %>%
+        summarise(count = n()) %>%
+        complete(Core, fill = list( count = 0)) %>%
+        rename(Frequency = count) %>%
+        mutate(fraction = Frequency/sum(Frequency)) %>%
+        mutate(ymax = cumsum(fraction)) %>%
+        mutate(ymin = c(0, head(ymax, n=-1))) %>%
+        mutate(tip = case_when(
+          Frequency == 1 ~ paste0(Core," contributed ", Frequency, " publication"),
+          TRUE ~ paste0(Core," contributed ", Frequency, " publications")
+          ) 
+        ) %>%
+        mutate(tip = str_wrap(tip, 20))
+
+pubs_plot <- 
+  ggplot(pubs, aes(ymax=ymax, ymin=ymin, xmax=4, xmin=3, label = Core))+
+  geom_rect_interactive(aes(fill = Core,
+                            tooltip = tip,
+                            data_id = Core), 
+                        color = "#FFFFFF", 
+                        size = 0.6) +
+  geom_label(direction = "x", 
+             segment.size  = 0.2,
+             segment.color = "grey50",
+             aes(label=Frequency,
+                       x=3.5,
+                       y=(ymin+ymax)/2),
+             inherit.aes = TRUE, 
+             show.legend = FALSE, 
+             size = 8, 
+             color = "#59595B") +
+  scale_fill_manual(values = core_colors) +
+  coord_polar(theta = "y",start=-pi/2) + 
+  xlim(c(0,4)) + 
+  ylim(c(0,2)) +
+  theme_bw(base_family = "Roboto Condensed") +
+  theme(plot.title = ggtext::element_textbox_simple(size = 26,
+                                                    face = "bold", 
+                                                    halign = 0.5,  
+                                                    valign = 0.5,
+                                                    margin = margin(15, 0, 35, 0)),
+        legend.position ="bottom",
+        legend.direction = 'horizontal',
+        legend.key = element_rect(size = 5, color = NA),
+        legend.key.size = unit(1.5, 'lines'),
+        legend.text = element_text(size=15, 
+                                   color = "#212121",
+                                   margin = margin(r = 2, 
+                                                   unit = 'cm')),
+        legend.title = element_blank(),
+        legend.title.align = 0.5,
+        legend.spacing.x = unit(0.5, "cm"), 
+        legend.spacing.y = unit(0.5, "cm"),
+        legend.box.margin = unit(c(-7.5,0.1,0,0),"cm"),
+        legend.background = element_blank(),
+        panel.background = element_blank(),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank(),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank()) +
+  guides(fill=guide_legend(nrow=2)) +
+  ggtitle(
+    paste0(
+      "<span style='color:#0392cf'>**Publication**</span> ",
+      "<span style = 'color:#2c2f33'>**Counts by Core or Institution**</span>"
+    )
+  )
+
+pubs_plot_nl <- pubs_plot
+
+pubs_plot_nl$layers[[2]] <- NULL
+
+# Begin pres
+pres <- read_csv(here::here("static", "data", "Y9Q3", "pres.csv"), 
+         show_col_types = FALSE) %>%
+        separate(Cores, 
+                 into = dput(c(sprintf("Core%d",seq(1:max(str_count(.$Cores, ", ") + 1)), type="cmd"))), 
+                        sep =",") %>%
+        pivot_longer(cols = c(starts_with("Core")), values_to = "Core") %>%
+      # gather(key, value = Cores) %>%
+        drop_na(Core) %>%
+        select(-name) %>%
+        mutate(Core = str_squish(Core)) %>%
+        group_by(Core, Type) %>%
+        summarise(Frequency = n()) %>%
+     #   complete(Core, fill = list(count = 0)) %>%
+        ungroup() %>%
+        mutate(Core = fct_reorder(Core, desc(Frequency))) %>%
+        mutate(Type = fct_rev(Type)) %>% 
+  mutate(tip = case_when(
+          Frequency == 1 & Type == "Proposal" ~ paste0(Core," submitted ", Frequency, " proposal"),
+          Frequency > 1 & Type == "Proposal" ~ paste0(Core," submitted ", Frequency, " proposals"),
+          Frequency == 1 & Type == "Acceptance" ~ paste0(Frequency, " ", Core," proposal was accepted"),
+          Frequency > 1 & Type == "Acceptance" ~ paste0(Frequency, " ", Core," proposals were accepted")
+          ) 
+        ) %>%
+  mutate(tip = str_wrap(tip, 20)) 
+
+
+pres_plot <- ggplot(pres, aes(x = Core,
+                              y = Frequency)) +
+              geom_bar_interactive(aes(fill = Core,
+                                       tooltip = tip,
+                                       data_id = Core), 
+                                   color = "#FFFFFF", 
+                                   size = 0.6,
+                                 #  width = 0.8, 
+                                   stat="identity") +
+              geom_label(aes(label = Frequency), 
+                         show.legend = FALSE, 
+                         size=8, 
+                         color = "#59595B",
+                         position = position_stack(vjust = 0.5)) +
+              scale_fill_manual(values = core_colors) +
+              theme_bw(base_family = "Roboto Condensed") +
+              theme(plot.title = ggtext::element_textbox_simple(size = 26,
+                                                    face = "bold", 
+                                                    halign = 0.5,  
+                                                    valign = 0.5,
+                                                    margin = margin(15, 0, 35, 0)),
+                                      legend.position ="bottom",
+                    legend.direction = 'horizontal',
+                    legend.key=element_blank(),
+                    legend.key.size = unit(1.5, 'lines'),
+                    legend.text = element_text(size=15, 
+                                               color = "#212121"),
+                    legend.title = element_blank(),
+                    legend.title.align = 0.5,
+                    legend.spacing.x = unit(0.5, "cm"), 
+                    legend.spacing.y = unit(0.5, "cm"),
+                    legend.background = element_blank(),
+                    panel.background = element_blank(),
+                    axis.title.x = element_blank(),
+                    axis.title.y = element_blank(),
+                    axis.ticks = element_blank(),
+                    axis.text.y = element_blank(),
+                    axis.text.x = element_blank(),
+                    panel.border = element_blank(),
+                    panel.grid.major.y = element_line(color = "#cccccc"), 
+                    panel.grid.major.x = element_blank(), 
+                    panel.grid.minor = element_blank(),
+                    panel.spacing = unit(2, "lines"),
+                    aspect.ratio = 2.5/3.0,
+                    strip.text.x = element_text(size = 20, 
+                                                angle = 0, 
+                                                face = "bold", 
+                                                color ="#484849"),
+                    strip.background = element_rect(fill="#FFFFFF")) +
+  coord_flip() + 
+  facet_wrap(Type ~ .) +
+  ggtitle(
+    paste0(
+      "<span style='color:#7bc043'>**Presentation**</span> ",
+      "<span style = 'color:#2c2f33'>**Counts by Core or Institution**</span> "
+    )
+  )
+
+pres_plot_nl <- pres_plot
+
+pres_plot_nl$layers[[2]] <- NULL
+
+```
+
+```{r pubspres_plot, drop3=TRUE,echo=FALSE}
+girafe(ggobj = pubs_plot_nl,
+       fonts = list(sans = "Roboto Condensed"),
+       width = 7, 
+       options = list(
+         opts_toolbar(position = "bottomleft", 
+                      saveaspng = FALSE),
+         opts_sizing(rescale = TRUE, 
+                     width = 0.8)
+       )
+) %>%
+  girafe_options(ggiraph::opts_tooltip(css = tooltip_css, 
+                                       opacity = 0.95, 
+                                       offx = 20, 
+                                       offy = -10, 
+                                       use_stroke = TRUE, 
+                                       delay_mouseout = 1000), 
+                 opts_hover(css = "fill:#0b4069;
+                                   stroke:#dfe3ee;
+                                   stroke-width:0px;"),
+                 opts_zoom(max = 10))
+
+
+girafe(code = print(pres_plot_nl + guides(fill=FALSE)),
+       width = 7, 
+       options = list(
+         opts_toolbar(position = "bottomleft", 
+                      saveaspng = FALSE),
+         opts_sizing(rescale = TRUE, 
+                     width = 0.8)
+       )
+) %>%
+  girafe_options(ggiraph::opts_tooltip(css = tooltip_css, 
+                                       opacity = 0.95, 
+                                       offx = 20, 
+                                       offy = -10, 
+                                       use_stroke = TRUE, 
+                                       delay_mouseout = 1000), 
+                 opts_hover(css = "fill:#0b4069;
+                                   stroke:#dfe3ee;
+                                   stroke-width:0px;"),
+                 opts_zoom(max = 10))
+```
+
+##### *Figure 3. Contributions per core to Y9Q3 WVCTSI linked publications and presentations. Download a copy of the [publication](/graphics/Y9Q3/pubs.pdf){target="blank"} and [presentation](/graphics/Y9Q3/pres.pdf){target="blank"} visualizations as  high quality PDFs.*
+
+In order to address the concern that WVCTSI may be supporting publications that are not being appropriately identified and linked to the grant, TEC pulls publications from appropriate library databases (e.g., PubMed) utilizing ORCID iDs when available and full names on the WVCTSI member list when ORCID iDs are not available and limiting the search to publications during the Y9 Q2 funding period. The list from the name-based search is reduced by including only those publications with author institutional affiliations in West Virginia. Core leadership review the list and contact all first authors regarding whether their publication should be linked to the grant. TEC also developed and implemented a new version of a quarterly progress report through which publications information is requested from all individuals who receive WVCTSI services or support.
+
+#### Specific Aim 2
+
+*Create policies and procedures to drive performance, transparency, constructive communication and collaboration among multiple, diverse stakeholders (i.e., investigators, rural providers, community members).*
+
+Q3 reported having 102,548 website visitor hits (down from 122k last quarter), with an average of 340 website visitors per day. WVCTSI’s social media engagement has seen increases from Q2 to Q3 in all areas: 
+[Facebook](https://www.facebook.com/WVCTSI/){target="blank"} (from +14 Likes and +14 follows in Q2 to +37 Likes and +115 Followers in Q3), and 
+[Listserv](https://www.wvctsi.org/membership/){target="blank"} subscribes increased from 176 in Q2 to 200 in Q3, new [Twitter](https://twitter.com/WVCTSI){target="blank"} followers increased from 39 to 56 in Q3 (bringing total to 680 followers), [Instagram](https://www.instagram.com/wvctsi/){target="blank"} from 30 to 39 followers (bringing the total to 107), and [YouTube](https://www.youtube.com/WVCTSI){target="blank"} Subscribers have from 806 (Y9Q2) to 953 (Y9Q3) followers with a total of +118k views.
+
+#### Specific Aim 3
+
+*Provide sound fiscal and resource management, ensuring appropriate resourcing of cores, flexibility to meet changing needs and environments, and sustainability of services.*
+
+As noted above, WVCTSI supported 67 external funding proposals and 50 external awards this quarter. Percentage of NIH award expended ranged from 25-42%, with Admin (33%) and CEO (34%) spending the least, with PD (62%), CRDEB (63%), and TEC (65%) spending the most. There were 19 cost transfers/corrections reported this quarter.
+
+#### Specific Aim 4
+
+*Recruit talented, committed investigators addressing research questions relevant to the WVCTSI priority health areas.*
+
+No Clinical Translational investigators were reported as hired this quarter.
+
+#### Key Recommendations to Administrative Core
+
+- Shift focus toward closing out this 5-year funding period, such as supporting efficient wrapping up of pilot award funding opportunities and piloting/evaluating recent new endeavors in support of a competitive renewal application.
+ Continue to facilitate core and partner discussions and collaborative efforts to innovatively facilitate additional publications supported by and linked to [WVCTSI NIH funding award](https://projectreporter.nih.gov/Reporter_Viewsh.cfm?sl=14E8CB094A85C0D17598B8961CAA4A01A2FFCEB861BF){target="blank"}, including continued effort to get all WVCTSI members who generate scholarly publications to have an [ORCID ID](https://orcid.org/){target="blank"} as part of their WVCTSI membership profile.
+- Identify barriers to partner participation and engagement; work to increase membership and service utilization across partner sites.
+
+<br>
+<hr>
+<br>
+
+### Clinical Research Design, Epidemiology & Biostatistics Core {.tabset .tabset-fade .tabset-pills}
+
+![](/reports/01-report_files/CRDEB.png){width=30%}
+
+#### Specific Aim 1
+
+*Effectively engage investigators throughout WV by providing traditional services in biostatistics and epidemiology.*
+
+Investigators engage through the CRDEB core utilizing available resources including the Integrated Data Repository (IDR), REDCap, and TriNetX. There were 147 new REDCap users in Q3 with a total of 2,375 REDCap users to date (730 of which are active users). Of the 2,375 REDCap users, 1,804 were from WVU (580 active), 18 from CAMC (5 active), 15 from WVSOM (6 active), and 538 not affiliated with the above entities (139 active). 
+
+There were 0 hours reported in the category of updating existing REDCap projects and providing project follow-up meetings in Q3. 5 REDCap projects were made for WVCTSI- funded investigators and 9 REDCap projects were made for non-WVCTSI investigators. There was a total of 2,896 REDCap projects/data instruments, 163 new REDCap service inquiries, and 30.25 hours of REDCap consultations were reported in Q3. The total number of current TriNetX users was 431 in Q3 and there were 3,000 new TriNetX inquiries, with 22 new TriNetX logins but there were 6 data set requests. CRDEB reported no practice/policy changes in Q3, nor were there any professional development events reported for Q3.
+
+```{r reporting_quarters, echo = FALSE}
+if (QR == "Q1") QUARTER = c("Jul", "Aug", "Sep") else 
+  if (QR == "Q2") QUARTER = c("Oct", "Nov", "Dec") else 
+    if (QR == "Q3") QUARTER = c("Jan", "Feb", "Mar") else 
+      QUARTER = c("Apr", "May", "Jun")
+```
+
+```{r drop6, echo=FALSE, results='hide'}
+knitr::knit_hooks$set(drop6=function(before, options, envir) {
+    if (before) {
+        paste(
+            '<p>',
+'<button class="btn btn-primary collapsed" data-toggle="collapse" data-target="#ce6">',
+'</button>',
+'</p>',
+'<div class="collapse" id="ce6">',
+'<div class="card card-body">',  sep = "\n")
+    } else {
+        paste("</div>", "</div>", sep = "\n")
+    }
+})
+```
+
+```{r crdeb, echo=FALSE, warning=FALSE, message=FALSE, error=FALSE, results='hide'}
+# Get CRDEB data
+crdeb <- read_csv(here::here("static", "data", "Y9Q3", "core_data.csv"), 
+         show_col_types = FALSE) %>% 
+  filter(`Core Name` == "WVCTSI Clinical Research Design, Epidemiology and Biostatistics Core") %>%
+  mutate(purchase = mdy_hm(`Purchase Date`)) %>%
+  mutate(Month = month(purchase, label = TRUE)) %>%
+  select(Month, `Core Name`, Category) %>%
+  filter(Month %in% QUARTER) %>%
+  mutate(`Core Name` = str_replace(`Core Name`, "WVCTSI ", "")) %>% 
+  replace(.=="Services", "Other Services")  %>%
+  count(Month, Category) %>%
+  mutate(nn = sum(n)) %>%
+  mutate(prop = (n / nn)*100) %>%
+  mutate_if(is.numeric, round, 0) %>% 
+  rename(frequency = n) %>%
+  rename(agg = nn) %>%
+  mutate(Total = paste0(Category," (",prop,"%)")) %>%
+  droplevels() %>%
+  mutate(Month = case_when(
+    Month == "Jan" ~ "January",
+    Month == "Feb" ~ "February",
+    Month == "Mar" ~ "March",
+    Month == "Apr" ~ "April",
+    Month == "May" ~ "May",
+    Month == "Jun" ~ "June",
+    Month == "Jul" ~ "July",
+    Month == "Aug" ~ "August",
+    Month == "Sep" ~ "September",
+    Month == "Oct" ~ "October",
+    Month == "Nov" ~ "November",
+    Month == "Dec" ~ "December"
+  ) 
+  ) %>%
+  mutate(Month = factor(Month, levels = ordered_months)) %>%
+  mutate(tip = case_when(
+    str_detect(Category, "Services") ~ paste0(Category," were provided ", prop,"% of the time in ", Month),
+    TRUE ~ paste0(Category," was provided ", prop,"% of the time in ", Month)
+    )
+  ) %>%
+  arrange(Month) %>%
+  filter(!frequency == 0) %>%
+  filter(!str_detect(Category, "Total")) %>%
+  mutate(tip = str_wrap(tip, 20))
+
+# Plot! ----
+crdeb_plot <- ggplot(crdeb, aes(x = Month, y = frequency)) +
+  geom_bar_interactive(aes(fill = Category,
+               tooltip = tip,
+               data_id = Category), 
+           stat="identity", 
+           size = 0.8, 
+           width = 0.6, 
+           color = "#FFFFFF",
+           position=position_dodge2(width = 0.6,
+                                    preserve = "single")) +
+  geom_label(
+    aes(x = Month, 
+        y = frequency, 
+        label = frequency, 
+        group = Category),
+    position = position_dodge2(width = 0.6, 
+                               preserve = "single"),
+    vjust = 0.5, 
+    size = 5.5,
+    color ="#011f4b"
+  ) +
+  scale_fill_manual(values = crdeb_colors) +
+  theme_bw(base_family = "Roboto Condensed") +
+  theme(plot.title = ggtext::element_textbox_simple(size = 26,
+                                                    face = "bold", 
+                                                    halign = 1,  
+                                                    valign = 0.5, 
+                                                    width = 0.7),
+        legend.key.size = unit(1.5, 'lines'),
+        legend.text = element_text(size=15, 
+                                   color = "#212121"),
+        legend.title = element_blank(),
+        legend.title.align = 0.5,
+        legend.spacing.x = unit(0.5, "cm"), 
+        legend.spacing.y = unit(0.5, "cm"),
+        legend.background = element_blank(),
+        legend.box.margin = unit(c(0,0,0,0),"cm"),
+        legend.position = "bottom",
+        legend.direction = "horizontal",
+        panel.background = element_blank(),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text.y = element_blank(),
+        axis.text.x = element_text(size=15, 
+                                   face = "bold",
+                                   color = "#2e3033"),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank()) + 
+  ggtitle(
+    paste0(
+      "<span style='color:#2c2f33'>**By the Numbers:**</span> ",
+      "<span style='color:#a32022'>**Clinical Research Design, Epidemiology\n& Biostatistics Core Services**</span>"
+    )
+  ) +
+  guides(fill=guide_legend(nrow=1))
+```
+
+```{r crdeb_plot, drop6=TRUE, echo=FALSE}
+girafe(code = print(crdeb_plot + guides(fill=FALSE)),
+       width = 7, 
+       options = list(
+         opts_toolbar(position = "bottomleft"),
+         opts_sizing(rescale = TRUE, 
+                     width = 0.8)
+       )
+) %>%
+  girafe_options(ggiraph::opts_tooltip(css = tooltip_css, 
+                                       opacity = 0.95, 
+                                       offx = 20, 
+                                       offy = -10, 
+                                       use_stroke = TRUE, 
+                                       delay_mouseout = 1000), 
+                 opts_hover(css = "fill:#0b4069;
+                                   stroke:#dfe3ee;
+                                   stroke-width:0px;"),
+                 opts_zoom(max = 10))
+
+```
+
+##### *Figure 4. CRDEB iLab Core Management System services logged by month and service type. Download a copy of the [CRDEB visualization](/graphics/Y9Q3/crdeb.pdf){target="blank"} as a high quality PDF.*
+
+#### Specific Aim 2
+
+CRDEB reported 51 BMIR-related inquiries, 31 new CRDEB consultations, 8 sample size/power consultations, 19 new statistical analysis consultations, and 16 new clinical study design consultations in Q3. Additionally, 423 hours were dedicated to biostatistics consultations. 2 GIS analysis consultations were reported for Q3.
+
+#### Specific Aim 3
+
+*Disseminate current and classical information in biostatistics and epidemiology*
+
+CRDEB contributed to 6 external funding proposals (totaling over 83.5 million USD) in Q3. Of these external funding proposals, 1 was stand-alone proposals (2.2 million USD), 5 were in collaboration with other cores (totaling over 81.3 million USD); which include Admin, CEO, PD, Pilots, and CRRF. 
+
+CRDEB had 6 external funding awards supported (totaling over 175,000 USD) in Q3. Of these 6 external funding awards, 1 was in collaboration with CEO. There was 1 presentation in collaboration with Pilot core (with an additional 3 presentations accepted) and 7 linked publications supported by CRDEB, where 2 of those publications were supported in collaboration with other cores.
+
+#### Specific Aim 4
+
+*Leverage the newly enhanced Integrated Data Repository (IDR2) and partnership through the Appalachian Research Consortium (ARC) to facilitate outcomes research, predictive modeling, and geospatial analysis.*
+
+There were 18 new custom IDR dataset requests, 4 requests for updates to previous IDR datasets, and 26 IDR projects reported as completed in Q3. There were 297.5 hours spent on new data requests, 8 hours on updates to previous data sets, and 29 hours of numerical response was given for the hours on data request consultation. CRDEB did not report any activity related to the Appalachian Research Consortium (ARC).
+
+#### Key Recommendations to Administrative Core
+
+- Deliver professional development events this quarter in order to meet annual target (3).
+- Identify barriers and work to increase service utilization across partner sites.
+- Implement and report activity related to the Appalachian Research Consortium (ARC). Consider how to position such activity in a competitive renewal application.
+
+<br>
+<hr>
+<br>
+
+### Clinical Research Resources & Facilities Core {.tabset .tabset-fade .tabset-pills}
+
+![](/reports/01-report_files/Clinical_Resources.png){width=30%}
+CRRF contributed to 34 external funding proposals (totaling over 90 million USD) in Y9Q3, of which 21 were standalone proposals, and 13 collaborations with other cores. CRRF received 27 external funding awards (over 2.1 million USD), 17 standalone and 10 collaborations. CRRF contributed to 3 linked publication, all of which were collaborations with other cores (Admin & TECH (1), TECH (1), & PD, CRDEB, & Admin (1)). Figure 5 shows the number of CRRF services monthly across the current reporting period by category and Figure 6 indicates the number of studies by month.
+
+```{r drop7, echo=FALSE, results='hide'}
+knitr::knit_hooks$set(drop7=function(before, options, envir) {
+    if (before) {
+        paste(
+            '<p>',
+'<button class="btn btn-primary collapsed" data-toggle="collapse" data-target="#ce7">',
+'</button>',
+'</p>',
+'<div class="collapse" id="ce7">',
+'<div class="card card-body">',  sep = "\n")
+    } else {
+        paste("</div>", "</div>", sep = "\n")
+    }
+})
+```
+
+```{r crrf, echo=FALSE, warning=FALSE, message=FALSE, error=FALSE, results='hide'}
+# Get crrf data
+crrf <- read_csv(here::here("static", "data", "Y9Q3", "crrf.csv"), 
+         show_col_types = FALSE) %>%
+  rename(Category = Metrics) %>%
+  pivot_longer(cols = c("Jan", "Feb", "Mar", -Category), 
+               names_to = "Month", 
+               values_to = "freq") %>%
+  mutate(Month = case_when(
+    Month == "Jan" ~ "January",
+    Month == "Feb" ~ "February",
+    Month == "Mar" ~ "March",
+    Month == "Apr" ~ "April",
+    Month == "May" ~ "May",
+    Month == "Jun" ~ "June",
+    Month == "Jul" ~ "July",
+    Month == "Aug" ~ "August",
+    Month == "Sep" ~ "September",
+    Month == "Oct" ~ "October",
+    Month == "Nov" ~ "November",
+    Month == "Dec" ~ "December"
+    ) 
+  ) %>%
+  mutate(freq = na_if(freq, 0)) %>%
+  drop_na() %>%
+  mutate(Category = str_replace_all(Category, "Registration", "Registrations")) %>%
+  mutate(Category = str_replace_all(Category, "Compliant", "Compliant trials ")) %>%
+  mutate(Category = str_replace_all(Category, "\\bof Studies\\b", "Studies ")) %>%
+  mutate(Month = factor(Month, levels = ordered_months)) %>%
+  mutate(tip = case_when(
+    str_detect(Category, "Studies") ~ paste0("As of ", Month, " there were ", freq, " ", Category),
+    TRUE ~ paste0("There were ", freq," ", Category," in ", Month),
+    )
+  ) %>%
+  mutate(tip = case_when(
+    str_detect(tip, "1") ~ paste0("There were ", freq, " ", lapply(Category, function(x) gsub("(.*)s$", '\\1', x)), " in ", Month),
+    TRUE ~ as.character(tip)
+    )
+  ) %>%
+  mutate(tip = str_replace_all(tip, "Registrations", "registrations"),
+         tip = str_replace_all(tip, "Registered", "registered"),
+         tip = str_replace_all(tip, "Received", "received"),
+         tip = str_replace_all(tip, "Approved", "approved"),
+         tip = str_replace_all(tip, "Compliant", "compliant"),
+         tip = str_replace_all(tip, "Audit", "audit"),
+         tip = str_replace_all(tip, "\\bNew Trial\\b", "new trial"),
+         tip = str_replace_all(tip, "\\bClinicaltrials.gov\\b", "Clinicaltrials.gov trial "),
+          ) %>%
+  mutate(Category = str_remove_all(Category, c("Total|Number|COE|Registrations"))) %>%
+  mutate(tip = str_remove_all(tip, c("\\bTotal Number of\\b"))) %>%
+  mutate(tip = str_remove_all(tip, c("\\bNumber of\\b"))) %>%
+  mutate(Category = str_squish(Category)) %>% 
+  arrange(Month) %>%
+ # filter(!frequency == 0) %>%
+  mutate(tip = str_wrap(tip, 20))
+
+## No studies ----
+crrf_nostudies <- crrf %>% 
+          filter(!str_detect(Category, "Studies in OnCore")) %>%
+          uncount(freq) %>%
+          group_by(Month, Category) %>%
+          mutate(count = 1:n()) %>%
+          mutate(freq = max(count))
+
+crrf_studies <- crrf %>% 
+          filter(str_detect(Category, "Studies in OnCore")) %>%
+          uncount(freq) %>%
+          group_by(Month, Category) %>%
+          mutate(count = 1:n()) %>%
+          mutate(freq = max(count))
+
+
+crrf_nostudies_plot <- ggplot(crrf_nostudies, 
+       aes(x = Category, y = count, fill = Category)) +
+  geom_tile_interactive(aes(fill = Category,
+                            tooltip = tip,
+                            data_id = Category),
+                            color = "#FFFFFF",
+                            show.legend = TRUE) +
+  coord_equal() +
+  facet_wrap(.~Month, 
+             shrink = TRUE)  +
+  scale_fill_manual(values = crrf_colors) +
+  theme_bw(base_family = "Roboto Condensed")  +
+  theme(plot.title = ggtext::element_textbox_simple(size = 26,
+                                                    face = "bold", 
+                                                    halign = 0,  
+                                                    valign = 0.5,
+                                                    margin = margin(15, 0, 35, 0)),
+        legend.text = element_text(size=15, 
+                                   color = "#212121"),
+        legend.title = element_blank(),
+        legend.title.align = 0.5,
+        legend.spacing = unit(0.5, "cm"), 
+        legend.background = element_blank(),
+        panel.background = element_blank(),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text.y = element_blank(),
+        axis.text.x = element_blank(),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.spacing = unit(2, "lines"),
+        strip.background = element_blank(),
+        strip.text.x = element_text(size=15, 
+                                   face = "bold",
+                                   color = "#2e3033")) + 
+  ggtitle(
+    paste0(
+      "<span style='color:#3f8663'>**Registration**</span> ",
+      "<span style='color:#2c2f33'>**Counts for**</span> ",
+      "<span style='color:#863f86'>**Clinical Research Resource Facilities**</span>"
+    )  
+  ) 
+
+crrf_studies_plot <- ggplot(crrf_studies, 
+                              aes(x = Category, y = count, fill = Category)) +
+  geom_tile_interactive(aes(fill = Category,
+                            tooltip = tip,
+                            data_id = Category),
+                        color = "#FFFFFF",
+                        show.legend = TRUE) +
+  coord_equal() +
+  coord_flip() +
+  facet_wrap(.~Month, 
+             shrink = TRUE)  +
+  scale_fill_manual(values = crrf_colors) +
+  theme_bw(base_family = "Roboto Condensed")  +
+  theme(plot.title = ggtext::element_textbox_simple(size = 26,
+                                                    face = "bold", 
+                                                    halign = 0,  
+                                                    valign = 0.5,
+                                                    margin = margin(15, 0, 35, 0)),
+        legend.text = element_text(size=15, 
+                                   color = "#212121"),
+        legend.title = element_blank(),
+        legend.title.align = 0.5,
+        legend.spacing = unit(0.5, "cm"), 
+        legend.background = element_blank(),
+        panel.background = element_blank(),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text.y = element_blank(),
+        axis.text.x = element_blank(),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.spacing = unit(2, "lines"),
+        strip.background = element_blank(),
+        strip.text.x = element_text(size=15, 
+                                    face = "bold",
+                                    color = "#2e3033")) + 
+  ggtitle(
+    paste0(
+      "<span style='color:#86863f'>**Study**</span> ",
+      "<span style='color:#2c2f33'>**Counts for**</span> ",
+      "<span style='color:#863f86'>**Clinical Research Resource Facilities**</span>"
+    )  
+  ) 
+
+crrf_nostudies_plot_labelled <- crrf_nostudies_plot +
+  geom_label(
+    data = . %>% group_by(Month, Category) %>% filter(count == max(count)),
+    aes(label = count,
+        group = Category),
+    nudge_y = 0.3,
+    fill = "#FFFFFF",
+    show.legend = FALSE,
+    size = 5.5,
+    color ="#011f4b"
+  )
+
+crrf_studies_plot_labelled <- crrf_studies_plot +
+  geom_label(
+    data = . %>% group_by(Month, Category) %>% filter(count == max(count)),
+    aes(label = count,
+        group = Category),
+    nudge_y = -145,
+    fill = "#FFFFFF",
+    show.legend = FALSE,
+    size = 5.5,
+    color ="#011f4b"
+  )
+```
+
+```{r crrf_plot, drop7=TRUE, echo=FALSE}
+# Print ----
+girafe(code = print(crrf_nostudies_plot + guides(fill=FALSE)),
+       width = 7, 
+       options = list(
+         opts_toolbar(position = "bottomleft"),
+         opts_sizing(rescale = TRUE, 
+                     width = 0.8)
+       )
+) %>%
+  girafe_options(ggiraph::opts_tooltip(css = tooltip_css, 
+                                       opacity = 0.95, 
+                                       offx = 20, 
+                                       offy = -10, 
+                                       use_stroke = TRUE, 
+                                       delay_mouseout = 1000), 
+                 opts_hover(css = "fill:#0b4069;
+                                   stroke:#dfe3ee;
+                                   stroke-width:0px;"),
+                 opts_zoom(max = 10))
+
+
+girafe(code = print(crrf_studies_plot + guides(fill=FALSE)),
+       width = 7, 
+       options = list(
+         opts_toolbar(position = "bottomleft"),
+         opts_sizing(rescale = TRUE, 
+                     width = 0.8)
+       )
+) %>%
+  girafe_options(ggiraph::opts_tooltip(css = tooltip_css, 
+                                       opacity = 0.95, 
+                                       offx = 20, 
+                                       offy = -10, 
+                                       use_stroke = TRUE, 
+                                       delay_mouseout = 1000), 
+                 opts_hover(css = "fill:#0b4069;
+                                   stroke:#dfe3ee;
+                                   stroke-width:0px;"),
+                 opts_zoom(max = 10))
+
+```
+
+##### *Figures 5 and 6. CRRF services by month and service type (top) and study counts by month (bottom). Download the CRRF [Registration](/graphics/Y9Q3/crrf_nostudies_plot_labelled.pdf){target="blank"} and [Study](/graphics/Y9Q3/crrf_studies_plot_labelled.pdf){target="blank"} visualizations as high quality PDFs.*
+
+#### Specific Aim 1
+
+*Create a Clinical Trials Center of Excellence (CTCOE) with connection to rural communities and practitioners, thereby providing access to cutting-edge trials addressing health disparities affecting West Virginians.*
+
+CTCOE provided 122 unique instances of support to non-WVCTSI studies in the form of regulatory assistance (39), study coordination (30), accounting (52), or quality assurance audits (1) in Q3. Within the expanded activities by CTCOE (established Q2Y8) which included Registration, a Risk Assessment Committee, and an Appeals Committee; there were 25 trials registered, 15 trials reviewed, and 18 approved by the risk assessment committee. Additionally, CRRF supported 7 new Early Stage PI’s with industry or WVCTSI-initiated funding, and 4 trials in a new research area. A total of 47 participants were recruited, with 19 more completing a study. CRRF had 27 TriNetX study offers and 12 accepted offers to WVU, and 0 studies were activated this quarter. CRRF reported 2 PI Academy events and 5 new PI Academy members.
+
+#### Specific Aim 2
+
+*Establish the Environmental Exposures Unit to stimulate environmental health research in collaboration with the National Institute for Occupational Safety and Health (NIOSH).*
+
+While there has been some activity with NIOSH personnel, there have been no data reported on the Environmental Exposures Unit since the beginning of this funding cycle (2016).
+
+#### Key Recommendations to Clinical Research Resources & Facilities Core
+
+- Support researchers activating sufficient number of TriNetX studies to meet annual target (10).
+- Identify appropriate metrics for Specific Aim 2 and report data on those metrics in upcoming quarterly report cycles. Consider how to position activity related to this aim in a competitive renewal application.
+
+<br>
+<hr>
+<br>
+
+### Community Engagement & Outreach Core {.tabset .tabset-fade .tabset-pills}
+
+![](/reports/01-report_files/Community_Engagement.png){width=30%}
+
+#### Specific Aim 1
+
+*Actively engage patients and other community stakeholders as research partners.*
+
+There were 108 WVPBRN and 117 ECHO sites reported in Q3. This included 7 reported new ECHO sites: (1) Northwest Hospital (MD), (2) Marion County Schools (WV), (3) WVU Medicine Children's Hospital (WV), (4) Mon Health Medical Center (WV), (5) Yonkers Community Health Center (NY), (6) Grace Anne Dorney Pulmonary Rehabilitation Center (WV), and (7) West Virginia Health Network (WV). There were 18 new partner organizations reported in Q3: (1) Alana Hudson, Hepatitis Epidemiology Program Manager, WV DHHR Division of Infectious Disease Epidemiology, (2) Military Authority (National Guard), (3) Partnership of African American Churches (PAAC), (4) WV Emergency Management Committee, (5) 12 Health Departments as part of RADx-UP (Jefferson, Morgan, Tyler/Wetzel, Mason, Logan, Nicholas, Webster, Pocahontas, Pendleton, Hardy, Hampshire, Doddridge), (6) Mosaic Group, and (7) UPMC (WVPBRN provided LOS and assisted with data collection process for grant submitted by UPMC team in March).
+
+During Q3, there was 1 new CEO (non-ECHO) project: FORE Grant: Enhancing and Expanding MAT in Southern Appalachian Communities. Additionally, CEO reported 1 networking opportunity: Presentation: WV Emergency Management Committee for RADx and WVPBRN on March 16. There was 1 Community Advisory Board meeting, the Quarterly CAB Meeting (virtual) on February 12th, and 1 mentored investigator reported in Q3.
+
+#### Specific Aim 2
+
+*Transform community-identified research questions into externally-funded projects that improve health outcomes in WVCTSI health priority areas.*
+
+There were 12 new, 39 ongoing, and 4 completed WVPBRN projects. Both of the 2 perspective new projects reviewed in Q3 were accepted. There were 157 Project Development and Success services, 404 Project Implementation services, 7 Community Engagement and Training services, 1 new Ideas on Deck service, 128 hours of ECHO services, 11 Consultation services, 15 WVPBRN Activities, 1 funding opportunity identified, 1 ongoing CEO project, 0 new ECHO Projects, and 2 services for products reported during Q3. CEO had 9 supported external funding proposals (totaling over 11.4 million USD) in Q3. Of these, 2 were stand-alone proposals (totaling 3.4 million USD) and 7 were in collaboration; Admin (4), PD and Pilot (1), CRRF and Admin (1), and Admin, CRDEB, and CRRF (1). CEO had 8 external funding awards supported (totaling 2.59 million USD) in Q3. Of these, 3 were stand-alone proposals (totaling over 2.08 million USD) and 5 were collaborations: Admin (2), CRRF (2), and CRDEB (1). CEO did not report contributing to any linked publications.
+
+#### Specific Aim 3
+
+*Translate and disseminate research results to inform West Virginia health policy and practice.*
+
+In Q3, there were 54 Research Translation and Dissemination services and 10 practice changes reported, (9 external, 1 internal), and no policy changes or policy project briefs reported.
+
+```{r drop8, echo=FALSE, results='hide'}
+knitr::knit_hooks$set(drop8=function(before, options, envir) {
+    if (before) {
+        paste(
+            '<p>',
+'<button class="btn btn-primary collapsed" data-toggle="collapse" data-target="#ce8">',
+'</button>',
+'</p>',
+'<div class="collapse" id="ce8">',
+'<div class="card card-body">',  sep = "\n")
+    } else {
+        paste("</div>", "</div>", sep = "\n")
+    }
+})
+```
+
+```{r base_ceo, echo=FALSE, warning=FALSE, message=FALSE, error=FALSE, results='hide'}
+ceo <- read_csv(here::here("static", "data", "Y9Q3", "ceo.csv"), 
+         show_col_types = FALSE) %>%
+        na.omit() %>%
+        mutate(Category = str_squish(Category)) %>%
+        mutate(Category = case_when(
+        str_detect(Category, "Abstract Accepted") ~ "Accepted Abstracts",
+        str_detect(Category, "Abstract Submitted") ~ "Submitted Abstracts",
+        str_detect(Category, "Community Advisory Board Meeting") ~ "Community Advisory Board Meetings",
+        str_detect(Category, "Grant Submission") ~ "Grant Submissions",
+        TRUE ~ as.character(Category)
+          )
+        ) %>%
+        mutate(Category = str_wrap(Category, 20)) %>%
+        gather(key = Month, value = Work, -Category, -Type) %>%
+        group_by(Month,Type) %>%
+        mutate(nn = sum(Work)) %>%
+        mutate(prop = (Work / nn)*100) %>%
+        mutate_if(is.numeric, round, 0) %>% 
+        rename(frequency = Work) %>%
+        rename(agg = nn) %>%
+        mutate(Total = paste0(Category," (",prop,"%)")) %>%
+        droplevels() %>%
+        ungroup() %>% 
+        mutate(Month = case_when(
+                Month == "Jan" ~ "January",
+                Month == "Feb" ~ "February",
+                Month == "Mar" ~ "March",
+                Month == "Apr" ~ "April",
+                Month == "May" ~ "May",
+                Month == "Jun" ~ "June",
+                Month == "Jul" ~ "July",
+                Month == "Aug" ~ "August",
+                Month == "Sep" ~ "September",
+                Month == "Oct" ~ "October",
+                Month == "Nov" ~ "November",
+                Month == "Dec" ~ "December"
+                ) 
+              ) %>%
+        mutate(Month = factor(Month, levels = ordered_months)) %>%
+        na.omit() %>%
+        mutate(tip = case_when(
+          str_detect(Type, "Services") ~ paste0(Category," services were provided ", prop,"% of the time in ", Month),
+          str_detect(Type, "Products") ~ paste0(prop, "% of products in ", Month," were ", Category),
+          )
+        ) %>%
+        filter(!frequency == 0) %>%
+        filter(!str_detect(Category, "Total")) %>%
+        mutate(Type = fct_rev(Type)) %>%
+        mutate(tip = str_wrap(tip, 20)) 
+
+ceo_factors <- ceo %>%
+                arrange(Type, Category) %>%
+                select(Category) %>%
+                distinct() %>%
+                pull()
+  
+
+ceo_reordered <- ceo %>%
+                  mutate(Category = factor(Category, levels = ceo_factors))
+```
+
+```{r ceo_service, echo=FALSE, warning=FALSE, message=FALSE, error=FALSE, results='hide'}
+ceo_plot_service <- 
+  ggplot(ceo_reordered %>% filter(Type == "Services"), aes(x = Month, 
+                         y = frequency)) +
+  geom_bar_interactive(aes(fill = Category,
+                           tooltip = tip,
+                           data_id = Category), 
+                       stat="identity", 
+                       size = 0.5, 
+                       width = 0.95, 
+                       color = "#FFFFFF",
+                       position=position_dodge2(width = 0.95,
+                                                preserve = "single")) +
+  geom_label(
+    aes(x = Month, 
+        y = frequency, 
+        label = frequency, 
+        group = Category),
+    position = position_dodge2(width = 0.95, 
+                               preserve = "single"),
+    vjust = 0.5, 
+    size = 5.5,
+    color ="#011f4b"
+  )  + 
+#  facet_grid(rows = vars(Type), scales = "free") +
+  theme_bw(base_family = "Roboto Condensed") +
+  theme(plot.title = ggtext::element_textbox_simple(size = 26,
+                                                    face = "bold", 
+                                                    halign = 0.55,  
+                                                    valign = 0.5),
+         legend.text = element_text(size=15, 
+                                   color = "#212121"),
+        legend.title = element_blank(),
+        legend.title.align = 0.5,
+        legend.spacing.x = unit(0.5, "cm"), 
+        legend.spacing.y = unit(0.5, "cm"),
+        legend.background = element_blank(),
+        legend.position = "right",
+        legend.box.margin = unit(c(0,-0.2,0.3,0),"cm"),
+        legend.key.height = unit(1.2, "cm"),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text.y = element_blank(),
+        axis.text.x = element_text(size=15, 
+                                   face = "bold",
+                                   color = "#2e3033"),
+        strip.text.y = element_text(size = 15,
+                                    angle = 270, 
+                                    face = "bold",
+                                    color = "#484849"),
+        strip.background.y = element_rect(fill = "transparent",
+                                         color = NA),
+        strip.placement = "outside",
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.background = element_rect(fill = "transparent",
+                                        color = NA),
+        plot.background = element_rect(fill = "transparent",
+                                       color = NA),
+        panel.border = element_blank(),
+        legend.key = element_blank()) +
+  ggtitle(
+    paste(
+      "<span style = 'color:#2c2f33'>**By the Numbers:**</span>",
+      "<span style='color:#03396c'>**Community Engagement & Outreach**</span>",
+      "<span style='color:#7a49a5'>**Services**</span>"
+    )
+  ) +
+  scale_fill_manual(values = ceo_service_colors) 
+```
+
+```{r ceo_catch, plot, drop8=TRUE, echo=FALSE}
+girafe(code = print(ceo_plot_service + 
+                      guides(fill=FALSE)),
+       width = 7, 
+       options = list(
+         opts_toolbar(position = "bottomleft"),
+         opts_sizing(rescale = TRUE, 
+                     width = 0.8)
+       )
+) %>%
+  girafe_options(ggiraph::opts_tooltip(css = tooltip_css, 
+                                       opacity = 0.95, 
+                                       offx = 20, 
+                                       offy = -10, 
+                                       use_stroke = TRUE, 
+                                       delay_mouseout = 1000), 
+                 opts_hover(css = "fill:#0b4069;
+                                   stroke:#dfe3ee;
+                                   stroke-width:0px;"),
+                 opts_zoom(max = 10))
+```
+
+```{r drop9, echo=FALSE, results='hide', out.width = "120%"}
+knitr::knit_hooks$set(drop9=function(before, options, envir) {
+    if (before) {
+        paste(
+            '<p>',
+'<button class="btn btn-primary collapsed" data-toggle="collapse" data-target="#ce9">',
+'</button>',
+'</p>',
+'<div class="collapse" id="ce9">',
+'<div class="card card-body">',  sep = "\n")
+    } else {
+        paste("</div>", "</div>", sep = "\n")
+    }
+})
+```
+
+```{r ceo_product, echo=FALSE, warning=FALSE, message=FALSE, error=FALSE, results='hide'}
+ceo_plot_product <- 
+  ggplot(ceo_reordered %>% filter(Type == "Products"), aes(x = Month, 
+                                                           y = frequency)) +
+  geom_bar_interactive(aes(fill = Category,
+                           tooltip = tip,
+                           data_id = Category), 
+                       stat="identity", 
+                       size = 0.5, 
+                       width = 0.30, 
+                       color = "#FFFFFF",
+                       position=position_dodge2(width = 0.30,
+                                                preserve = "single")) +
+  geom_label(
+    aes(x = Month, 
+        y = frequency, 
+        label = frequency, 
+        group = Category),
+    position = position_dodge2(width = 0.30, 
+                               preserve = "single"),
+    vjust = 0.5, 
+    size = 5.5,
+    color ="#011f4b"
+  )  + 
+  #  facet_grid(rows = vars(Type), scales = "free") +
+  theme_bw(base_family = "Roboto Condensed") +
+  theme(plot.title = ggtext::element_textbox_simple(size = 26,
+                                                    face = "bold", 
+                                                    halign = 0.55,  
+                                                    valign = 0.5, 
+                                                    margin = margin(15, 0, 35, 0)),
+        legend.text = element_text(size = 12, 
+                                   color = "#2c2f33"),
+        legend.title = element_blank(),
+        legend.title.align = 0.5,
+        legend.spacing.x = unit(0.5, "cm"), 
+        legend.spacing.y = unit(0.5, "cm"),
+        legend.background = element_blank(),
+        legend.position = "right",
+        legend.box.margin = unit(c(0,-0.2,0.3,0),"cm"),
+        legend.key.height = unit(1.2, "cm"),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text.y = element_blank(),
+        axis.text.x = element_text(size=15, 
+                                   face = "bold",
+                                   color = "#2e3033"),
+        strip.text.y = element_text(size = 15,
+                                    angle = 270, 
+                                    face = "bold",
+                                    color = "#484849"),
+        strip.background.y = element_rect(fill = "transparent",
+                                          color = NA),
+        strip.placement = "outside",
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.background = element_rect(fill = "transparent",
+                                        color = NA),
+        plot.background = element_rect(fill = "transparent",
+                                       color = NA),
+        panel.border = element_blank(),
+        legend.key = element_blank()) +
+  ggtitle(
+    paste(
+      "<span style = 'color:#2c2f33'>**By the Numbers:**</span>",
+      "<span style='color:#03396c'>**Community Engagement & Outreach**</span>",
+      "<span style='color:#62a4ff'>**Products**</span>"
+    )
+  ) +
+  scale_fill_manual(values = ceo_product_colors) 
+```
+
+```{r ceo_content, plot, drop9=TRUE, echo=FALSE}
+# CEO Product interactive ----
+girafe(code = print(ceo_plot_product + guides(fill=FALSE)),
+       width = 7, 
+       options = list(
+         opts_toolbar(position = "bottomleft"),
+         opts_sizing(rescale = TRUE, 
+                     width = 0.8)
+       )
+) %>%
+  girafe_options(ggiraph::opts_tooltip(css = tooltip_css, 
+                                       opacity = 0.95, 
+                                       offx = 20, 
+                                       offy = -10, 
+                                       use_stroke = TRUE, 
+                                       delay_mouseout = 1000), 
+                 opts_hover(css = "fill:#0b4069;
+                                   stroke:#dfe3ee;
+                                   stroke-width:0px;"),
+                 opts_zoom(max = 10))
+```
+
+##### *Figures 7 and 8. CEO core services logged by service type (top) and for products (bottom). Download a copy of [CEO Services](/graphics/Y9Q3/ceo_plot_service.pdf){target="blank"} and [CEO Products](/graphics/Y9Q3/ceo_plot_product.pdf){target="blank"} visualizations as high quality PDFs.*
+
+#### Key Recommendations to Community Engagement & Outreach Core
+
+- Consider capacity and opportunities to mentor additional investigators.
+- Continue and expand efforts to disseminate research results through publication in high-quality journals and other outlets.
+
+<br>
+<hr>
+<br>
+
+### Pilot Projects Core {.tabset .tabset-fade .tabset-pills}
+
+![](/reports/01-report_files/Pilot.png){width=30%}
+
+#### Specific Aim 1
+
+*Provide infrastructure supporting competitive pilot funding opportunities for early stage (ESI) and new investigators (NI) with subsequent mentored progression to project completion, publication, and external funding application.*
+
+Pilot core received 2 applications for open grants from WVU ESIs and awarded 2 pilot projects. Pilot core provided 1 workshop with 15 participants [from WVU (9), SOM (2), Marshall (4)], and 28 requested services. Pilot core contributed to 3 publications (1 of which was in collaboration with PD) and 2 presentations (1 in collaboration with CRDEB core) in Q3, with an additional 3 presentations accepted.
+
+#### Specific Aim 2
+
+There were 48 active Pilot projects addressing critical health issues in Y9Q3. Additionally, the Pilot Core contributed to 6 external grant proposals (totaling over 5.9 million USD), which consisted of 3 stand-alone proposals and 3 collaborations: CRDEB (1), CRRF (1), PD & CEO (1). Additionally, Pilot Core contributed to 2 external grants awarded (totaling over 1 million USD), which consisted of 1 collaboration with PD and 1 stand-alone project.
+
+#### Specific Aim 3.
+
+*Implement the Launch Pad Pilot Program to maximize opportunities for commercialization of novel science.*
+
+There was 1 Launch Pad Pilot project with a start date reported during Q3.
+
+#### Key Recommendations to Pilot Projects Core
+
+- Specific Aim 1 includes mentored support to bring projects to completion. Consider how this mentored support and project completion should be distinguished from that done in the Professional Development core, as well as how it should be tracked and evaluated.
+- Implement appropriate schedule of pilot award opportunities tapering down in preparation for end of budget period June 30, 2022, as well as how best to support funded pilots completing their scope of work by that date.
+
+<br>
+<hr>
+<br>
+
+### Professional Development Core {.tabset .tabset-fade .tabset-pills}
+
+![](/reports/01-report_files/Professional_Development.png){width=30%}
+
+#### Specific Aim 1
+
+*Create the Scientific and Career Success (SACS) program to provide access to formal mentoring for C/T researchers of all career stages.*
+
+There were 273 individuals who requested 625 services in Q3. There were 31 new investigator development service requests logged through iLab. There were 2 reported orientations or consultations provided to investigators new to WVCTSI. Additionally, there were 16 trained mentors in the SACS program in Q3, as well as 2 female clinician scientists being mentored. There were 11 special events/programs for women in science in Q3: (1) Work-Life Integration, (2) Building Networks in an Online Remote World, (3) Building Networks in an Online Remote World Follow Up Discussion, (4) Organizing and Planning Your Work for Academic Success, (5) Organizing and Planning Your Work for Academic Success Follow Up Discussion, (6) Finding Your Center in a Time of Disruption, (7) Finding Your Center in a Time of Disruption Follow Up Discussion, (8) Strategies for Becoming a More Productive Academic Writer, (9) Women at Work Podcast Listening Event - January 19, (10) Women at Work Podcast Listening Event - February 16, and (11) Women at Work Podcast Listening Event - March 23.
+
+#### Specific Aim 2
+
+*Develop formal programs that serve as "on-ramps" to introduce C/T research to early or new investigators and trainees at different career stages.*
+
+The PD core reported 7 scholars with combined total of 10 full team meetings, as well as 14 professional development activities: (1) Work-Life Integration, (2) Building Networks in an Online Remote World, (3) Organizing and Planning Your Work for Academic Success, (4) Finding Your Center in a Time of Disruption, (5) Strategies for Becoming a More Productive Academic Writer, (6-8) Individual Coaching Sessions, (9-11) WIPS (in January , February, & March), and (12-14) Networking Lunches with Research Scholars (in January , February, & March).
+
+There were 2 CTS Certificate students enrolled, 0 new students, and 1 application received. WVU MS in CTS had a total enrollment of 27, with 3 applications received (2 accepted/offer extended) and had 0 students completed the program in Q3. MU MS in CTS did not report data this quarter. CTS PhD program had 9 current enrollments, 7 applications received of which 0 were reviewed or accepted, and 0 degrees conferred during Q3.  Education programming reported no new academic courses, 6 research workshops/short courses, 9 C/T research seminars, 337 unique participants in educational programming from WVU (295), MU (23), CAMC (6), and SOM (13).
+
+#### Specific Aim 3
+
+*Develop educational opportunities to support and retain externally funded C/T researchers statewide.*
+
+The Professional Development core contributed to 12 external funding proposals (over 8.9 million USD): 3 of which were stand-alone proposals (totaling over 2.05 million USD) and 5 of which were collaborative with cores (totaling over 6.85 million USD): ADMIN (5), CRDEB (1), CRRF (1), CRRF and CRDEB (1), PILOT and CEO (1).
+
+The Professional Development core had 5 external funding awards supported (totaling over 1.4 million USD) in Q3. Of these, 3 were stand-alone funded awards (almost 683,000 USD) and 2 were in collaboration with other cores (totaling over 751,000 USD): CRRF (1), PILOT (1). The Professional Development core reported 0 presentations supported and 1 linked publication in collaboration with CRDEB.
+
+```{r drop10, echo=FALSE, results='hide'}
+knitr::knit_hooks$set(drop10=function(before, options, envir) {
+    if (before) {
+        paste(
+            '<p>',
+'<button class="btn btn-primary collapsed" data-toggle="collapse" data-target="#ce10">',
+'</button>',
+'</p>',
+'<div class="collapse" id="ce10">',
+'<div class="card card-body">',  sep = "\n")
+    } else {
+        paste("</div>", "</div>", sep = "\n")
+    }
+})
+```
+
+```{r ids, echo=FALSE}
+# Load the file -----
+ids <- read_csv(here::here("static", "data", "Y9Q3", "core_data.csv"), 
+         show_col_types = FALSE) %>%
+  filter(`Core Name` == "WVCTSI Investigator Development Services") %>%
+  mutate(purchase = mdy_hm(`Purchase Date`)) %>%
+  mutate(Month = month(purchase, label = TRUE)) %>%
+  select(Month, `Core Name`, Category) %>%
+  filter(Month %in% QUARTER) %>%
+  mutate(`Core Name` = str_replace(`Core Name`, "WVCTSI ", "")) %>% 
+  replace(.=="Services", "Other Services")  %>%
+  count(Month, Category) %>%
+  mutate(nn = sum(n)) %>%
+  mutate(prop = (n / nn)*100) %>%
+  mutate_if(is.numeric, round, 0) %>% 
+  rename(frequency = n) %>%
+  rename(agg = nn) %>%
+  mutate(Total = paste0(Category," (",prop,"%)")) %>%
+  droplevels() %>%
+  mutate(Month = case_when(
+    Month == "Jan" ~ "January",
+    Month == "Feb" ~ "February",
+    Month == "Mar" ~ "March",
+    Month == "Apr" ~ "April",
+    Month == "May" ~ "May",
+    Month == "Jun" ~ "June",
+    Month == "Jul" ~ "July",
+    Month == "Aug" ~ "August",
+    Month == "Sep" ~ "September",
+    Month == "Oct" ~ "October",
+    Month == "Nov" ~ "November",
+    Month == "Dec" ~ "December"
+    ) 
+  ) %>%
+  mutate(Month = factor(Month, levels = ordered_months)) %>%
+  mutate(tip = paste0(prop,"% of all services in ", Month, " were ", Category)) %>%
+  arrange(Month) %>%
+  filter(!frequency == 0) %>%
+  filter(!str_detect(Category, "Total")) %>%
+  mutate(tip = str_wrap(tip, 20))
+
+idsp <- ids %>%
+  ggplot(aes(x = Month, y = frequency)) +
+  geom_bar_interactive(aes(fill = Category,
+                           tooltip = tip,
+                           data_id = Category), 
+                       stat="identity", 
+                       size = 0.8, 
+                       width = 0.25, 
+                       color = "#FFFFFF",
+                       position=position_dodge2(width = 0.25,
+                                                preserve = "single")) +
+  geom_label(
+    aes(x = Month, 
+        y = frequency, 
+        label = frequency, group = Category),
+    position = position_dodge2(width = 0.25, 
+                               preserve = "single"),
+    vjust = 0.5, 
+    size = 5.5,
+    color ="#011f4b"
+  ) +
+  theme_bw(base_family = "Roboto Condensed") +
+  theme(plot.title = ggtext::element_textbox_simple(size = 26,
+                                                    face = "bold", 
+                                                    halign = 0.5,  
+                                                    valign = 0.5),
+        legend.position ="bottom",
+        legend.direction = 'horizontal',
+        legend.text = element_text(size=15, 
+                                   color = "#212121"),
+        legend.title = element_blank(),
+        legend.title.align = 0.5,
+        legend.spacing.x = unit(0.5, "cm"), 
+        legend.spacing.y = unit(0.5, "cm"),
+        legend.background = element_blank(),
+        panel.background = element_blank(),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text.y = element_blank(),
+        axis.text.x = element_text(size=15, 
+                                   face = "bold",
+                                   color = "#2e3033"),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank()) + 
+  ggtitle(
+    paste0(
+      "<span style='color:#2c2f33'>**By the Numbers:**</span> ",
+      "<span style='color:#0c5a4e'>**Investigator Development Services**</span>"
+    )  
+  )  +
+  scale_fill_manual(values = ids_colors)
+```
+
+```{r ids_plot, drop10=TRUE, echo=FALSE}
+# IDS Charge int ----
+girafe(code = print(idsp + guides(fill=FALSE)),
+       width = 7, 
+       options = list(
+         opts_toolbar(position = "bottomleft",
+                      saveaspng = FALSE),
+         opts_sizing(rescale = TRUE, 
+                     width = 0.8)
+       )
+) %>%
+  girafe_options(ggiraph::opts_tooltip(css = tooltip_css, 
+                                       opacity = 0.95, 
+                                       offx = 20, 
+                                       offy = -10, 
+                                       use_stroke = TRUE, 
+                                       delay_mouseout = 1000), 
+                 opts_hover(css = "fill:#0b4069;
+                                   stroke:#dfe3ee;
+                                   stroke-width:0px;"),
+                 opts_zoom(max = 10))
+```
+
+##### *Figure 9. Investigator development services per service category as logged in iLab. Download a copy of the [IDS visualization](/graphics/Y9Q3/ids.pdf){target="blank"} as a high quality PDF.*
+
+#### Key Recommendations to Professional Development Core
+
+- Increase engagement with partner institutions outside of WVU Morgantown.
+- Continue working to roll out and evaluate new editorial services supportive of publication and grant proposal preparation. Consider how to position such activity in competitive renewal application.
+
+<br>
+<hr>
+<br>
+
+### Technology and Resources for Core Laboratories Core {.tabset .tabset-fade .tabset-pills}
+
+![](/reports/01-report_files/Technology.png){width=30%}
+The Technology and Resources for Core Laboratories (TRCL) core contributed to 3 external funding proposals (totaling over 4.2 million USD): 1 of which was stand alone, and 2 in collaboration with other cores [Admin (1), CRRF (1)]; as well as 1 external award (standalone, 590,000 USD). TRCL contributed to 3 publications and 1 presentation during Y9Q3. Of the 3 publications, 1 was stand alone and 2 were collaborations: CRRF (1), CRRF and Admin (1).
+
+#### Specific Aim 1
+
+*To establish a statewide biospecimen repository that collects patient and study participant samples in WVCTSI priority health areas (addiction and resultant emerging epidemics, cancer, cardiovascular disease, and chronic lung disease).*
+
+TRCL reported 0 WVCTSI-supported projects, and 94 open projects this quarter with 4 new projects. Biospecimen data shows WVU collecting and utilizing 43 samples, MU collecting 335 samples and utilizing 54 samples, and CAMC collecting and utilizing 216 samples.
+
+#### Specific Aim 2
+
+*To establish a statewide West Virginia University (WVU) - Marshall University (MU) genomics shared research facility for the efficient generation of genomic and related data for C/T studies that address WVCTSI priority health areas.*
+
+There were 2 genomics studies (1 WVU, 1 MU), 27 Illumina projects (13 WVU, 14 MU), and 27 Illumina runs (18 WVU, 9 MU) reported in Q3. There were 15 total attendees for educational sessions including Bioinformatics at WVU and MU. 
+
+#### Specific Aim 3
+
+*To establish a statewide WVU-MU shared Bioinformatics and Data Management (BDM) Facility for C/T studies that address WVCTSI priority health areas.*
+
+TRCL provided 20 training sessions to 13 unique individuals.
+
+#### Specific Aim 4
+
+*To establish state-of-the-art imaging in support of biologically relevant modeling of disease.*
+
+15 investigators were served by WVCTSI, with 82 hours for MicroCT across 3 projects, and 96 hours of MRI across 3 projects. No disclosures or patents were reported.
+
+#### Key Recommendations to Technology and Resources for Core Laboratories Core
+
+- Continue to consider opportunities to facilitate additional patentable projects.
+- Continue to facilitate excellent collaborative relationships between CAMC, Marshall, and WVU.
+
+<br>
+<hr>
+<br>
+
+### Tracking and Evaluation Core {.tabset .tabset-fade .tabset-pills}
+
+![](/reports/01-report_files/Tracking_and_Evaluation.png){width=30%}
+
+#### Specific Aim 1
+
+*Develop Investigator Tracking and Support System (ITSS) utilizing quantitative and qualitative approaches to identify factors contributing to success or providing barriers to productivity.*
+
+TEC identified all publications linked to WVCTSI grant numbers directly from NCBI and created a [web-based table](https://percwv.com/datatables/pubs/){target="blank"} displaying this information that can be accessed by stakeholders. TEC continues to refine Social Network Analysis visualizations to show collaboration among authors on linked publications as well as geographic location. TEC continues to analyze Awareness Survey data with a full report of findings to be disseminated in Y9Q4. TEC continues to refine the quarterly progress report through which all individuals who receive support or services from WVCTSI report relevant information on activity and products generated. TEC is developing a user-friendly data portal through which stakeholders can utilize progress report data, which will be rolled out in beta version during Y9Q4. TEC continues to utilize the [ORCID ID](https://orcid.org/){target="blank"} survey to gather WVCTSI member ORCID iD’s to be added to membership list. This allows more accurate searches for publications by members that should be linked to the grant. Working with the Professional Development core, TEC is developing an evaluation plan for the Research Scholar Academy pilot project.
+
+#### Specific Aim 2
+
+*Create and implement systematic set of tools and measurements to drive continuous quality improvement and demonstrate impact of community stakeholder participation and engagement.*
+
+TEC continued to work with CEO, WVPBRN, and ECHO on the ECHO “SuperHub” and WVPBRN evaluation plans.  Potential publications for the ECHO project are currently being conceptualized. In collecting information through the quarterly progress report mentioned above, we were able to identify additional publications that should be linked to the WVCTSI grant numbers. TEC will continue to work with the PD and Admin Cores to make improvements and increase efficiency in analyzing the data.  TEC completed a password protected website which now houses all WVCTSI TEC reports over time.  This website will also offer automatically updated publication information and the progress report data portal.
+
+#### Specific Aim 3
+
+*Build focused research and evaluation demonstrating WVCTSI impacts on health outcomes in West Virginia.*
+
+The Tracking and Evaluation Report for the 2nd Quarter of Y9 was disseminated in Q3 of Y9. The ECHO and WVPBRN research evaluation plans when completed will demonstrate impact on health outcomes. Additionally, TEC core member [Malayna Bernstein](https://lshd.wvu.edu/faculty-staff/bernstein){target="blank"} serves as qualitative methodology consultant designing qualitative instrumentation and mentoring research associates conducting interviews and data analysis for the recently awarded supplement: “Developing Novel Strategies to Increase COVID-19 Testing among Underserved and Vulnerable Populations in West Virginia through Community and State Partnerships.” NIH Award No. 3U54GM104942-05S3 (Total Awarded: 4,999,989 USD).
+
+#### Key Recommendations to Tracking and Evaluation Core
+
+- Support continued refinement of the publication reporting process, including identification of publications that should be linked to the grant and supporting roll-out of [ORCID ID](https://orcid.org/){target="blank"} utilization.
+- Continue to refine the progress report and related data portal for use by PD, Pilot, and Admin cores to collect quarterly report information from individuals receiving WVCTSI services, protected time, or other support.
+- Implement next steps for WVPBRN and ECHO evaluations. Consider how to position that activity in a competitive renewal application.
+
+### Marshall University (MU) {.tabset .tabset-fade .tabset-pills}
+
+MU, located in Huntington, WV in Cabell County, partners with the WVCTSI and is engaged in activities primarily related to research and investigator development. The Joan C. Edwards School of Medicine at MU is a community-based, Veterans Affairs-affiliated medical school dedicated to providing high quality medical education and postgraduate training programs to foster a skilled physician workforce to meet the unique healthcare needs of West Virginia and Central Appalachia. The Joan C. Edwards School of Medicine focuses on developing centers of excellence in clinical care, including primary care in rural underserved areas, focused and responsive programs of biomedical science graduate study, biomedical and clinical science research, academic scholarship, and public service outreach. MU houses WVCTSI Associate Director, Dr. Gary Rankin. 
+
+For Q3, MU reported 3 linked publications, 26 external funding proposals submitted (18 federal, 8 state; 7 by ESIs), and 6 externally funded awards (2 ESIs, 2 clinicians). MU had 3 ESIs accessing WVCTSI services or resources in Q3 and had 60 WVCTSI members. 
+
+### National Institute for Occupational Safety and Health (NIOSH) {.tabset .tabset-fade .tabset-pills}
+
+NIOSH had 14 WVCTSI members in Q3. A collaborative face cover source control studies/workgroup was formed between NIOSH-Health Effects Laboratory Division (HELD)-based investigators and the WVU Center for Inhalation Toxicology (iTOX), using infrastructure developed through WVCTSI funding. This study, motivated by the COVID-19 pandemic, evaluated the efficacy of cloth face coverings as source control devices. Material filtration efficiencies were measured using a respiratory aerosol simulator (HELD), with measurements performed on manikin head forms. In addition, filtration efficiencies of materials used to make masks were measured (NIOSH-National Personal Protective Technologies Laboratoy [NPPTL]). At WVU/iTOX, fit factors were measured on human subjects. The results of these studies have provided a basis for developing practical test methods and standardized performance metrics to be used to evaluate the efficacy of face coverings as source control devices to help reduce the spread of COVID-19 and other respiratory infections. A manuscript from the collaboration is available as a [preprint](https://pubmed.ncbi.nlm.nih.gov/33619500/){target="blank"}. The work has also been disseminated through [public outreach](https://wvutoday.wvu.edu/stories/2021/03/04/doubling-up-on-masks-doubles-down-on-protection-wvu-experiment-confirms){target="blank"}.
+
+WVCTSI and NIOSH investigators have worked to design and obtain funding to perform a randomized controlled trial of antifibrotic therapy for progressive fibrotic coal workers' pneumoconiosis.  The project was developed in collaboration with investigators at Boehringer Ingelheim (BI) and has been approved for funding by BI. Implementation has been slowed by the COVID-19 pandemic, but the study is expected to commence in late summer or early fall 2021.
+
+### Charleston Area Medical Center (CAMC) {.tabset .tabset-fade .tabset-pills}
+
+CAMC is a nonprofit 908-bed regional referral and academic medical center of four hospitals and home to one of the largest cardiac programs in the US, the only kidney transplant center in WV, and a level I trauma center. CAMC Health Education and Research Institute (CHERI) provides continuing medical education and research support to physicians and allied medical professionals. CHERI operates a nurse anesthesia school with MU and 13 graduate medical education residency/fellowship programs. CAMC sponsors pharmacy residency programs and psychology internships.
+
+CAMC did not report any quarterly evaluation data this cycle. CAMC had 18 REDCap users (5 active users) and 53 WVCTSI members in Q3.
+
+### Veteran Affairs Medical Centers (VAMC) {.tabset .tabset-fade .tabset-pills}
+
+Veteran Affairs Medical Center (VAMC) did not report any quarterly evaluation data this cycle. VAMC had 6 WVCTSI members in Q3.
+
+### West Virginia School of Osteopathic Medicine (WVSOM) {.tabset .tabset-fade .tabset-pills}
+
+WVSOM, located in Lewisburg, WV in Greenbrier County, partners with the WVCTSI in activities related to research and community engagement. WVSOM focuses on educating students as lifelong learners in osteopathic medicine and complementary health related programs, supporting graduate medical education training, advancing scientific knowledge through academic, clinical, and basic science research, and promoting patient-centered, evidence-based medicine. 
+
+In Q3, WVSOM reported 2 external funding proposals submitted (1 federal, 1 state), 2 Biostatistics consultations with CRDEB, 5 student opportunities for C/T Research, 1 workshop/course/seminar retreat, and 2 poster/exhibits/promotional events. WVSOM had 2 community participatory research projects, 5 open collaborative CTS projects outside the WVPBRN, and 1 current alliance CTS collaboration. WVSOM housed 15 REDCap users (6 active) and had 96 WVCTSI members.
+
+#### Key Recommendations to Marshall University, National Institute for Occupational Safety and Health, Veterans Affairs Medical Centers, and West Virginia School of Osteopathic Medicine
+
+- Work to implement and/or increase utilization of iLab. 
+- Continue efforts to increase WVCTSI membership, and increase awareness and utilization of WVCTSI core services at each partner institution.
+
+<br> 
+<hr> 
+<br>
+
+*Download a copy of all the aggregated data submissions from cores and partners by clicking on the button below.*
+
+<center>
+```{r echo=FALSE,eval=TRUE,message=FALSE,purl=FALSE}
+loc <- here::here("static", "data", "Y9Q3", "AllCoresMetricsY9Q3.xlsx")
+
+downloadthis::download_file(
+    path = loc,
+    output_name = "All Cores Metrics for Y9Q3.xlsx",
+    button_label = "Download the Metrics",
+    button_type = "primary",
+    has_icon = TRUE,
+    icon = "fa fa-save",
+    class = "btn"
+  )
+```
+</center>

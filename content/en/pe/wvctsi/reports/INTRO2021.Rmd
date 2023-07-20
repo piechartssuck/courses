@@ -1,0 +1,1017 @@
+---
+title: "2021 INTRO Survey Report"
+linktitle: "2021 INTRO Survey Report"
+date: 'Released Febuary 1, 2022'
+author: "Abhik Roy"
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  reports:
+    parent: Digital Reports
+    weight: 99
+type: docs
+weight: 1
+---
+
+```{r, echo=FALSE}
+htmltools::img(src = knitr::image_uri(here::here(file.path("static","logos","firefox-ico.png"))), 
+               alt = 'Firefox logo', 
+               style = 'position:absolute; top:0; right:0; padding:10px; width: 130px;')
+```
+
+```{r echo=FALSE}
+knitr::opts_chunk$set(warning = FALSE)
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(message = FALSE)
+```
+
+```{css}
+.article-container {
+  max-width: 935px;
+}
+
+h5 {
+  font-style: italic;
+  font-weight: 350;
+  margin-top: 10px;
+}
+
+iframe {
+  width: 1px;
+  min-width: 100%;
+  border:0;
+}
+
+.btn {
+  background-color: #4682b4;
+  border: none;
+  color: #FFFFFF;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#TableOfContents, .docs-toc-title {
+  border-left: 1px solid $sta-primary;
+}
+
+button.btn.collapsed:before
+{
+    content:'+' ;
+    display:block;
+    width:15px;
+}
+
+button.btn:before
+{
+    content:'-' ;
+    display:block;
+    width:15px;
+  }
+}
+
+.dataTables_wrapper 
+.dt-buttons {
+  float:none;  
+  text-align:center;
+}
+
+```
+
+```{r}
+df_to_js <- function(x, var_name = "data", ...){
+  
+  json_data <- jsonlite::toJSON(x, ...)
+  
+  htmltools::tags$script(paste0("var ",var_name," = ", json_data, ";"))
+}
+```
+
+```{r}
+htmltools::tagList(
+  htmltools::tags$script(src = "https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.min.js", integrity="sha512-dnvR4Aebv5bAtJxDunq3eE8puKAJrY9GBJYl9GC6lTOEC76s1dbDfJFcL9GyzpaDW4vlI/UjR8sKbc1j6Ynx6w==", crossorigin="anonymous", referrerpolicy="no-referrer"),
+  htmltools::tags$script(src = "https://cdnjs.cloudflare.com/ajax/libs/dimple/2.3.0/dimple.latest.min.js")
+)
+```
+
+```{r echo=FALSE}
+image_link <- function(image,url,...){
+  htmltools::a(
+    href=url,
+    htmltools::img(src=image,...)
+    )
+}
+```
+
+```{r setup, include=FALSE}
+# Load libraries ---
+library(tidyverse)
+library(tidytable)
+library(tidytext)
+library(tidygraph)
+library(textclean)
+library(knitr)
+library(kableExtra)
+library(igraph)
+library(ggraph)
+library(ggpubr)
+library(patchwork)
+library(hrbrthemes)
+library(RColorBrewer)
+library(showtext)
+font_add(
+  family = "Roboto Condensed",
+  regular = "RobotoCondensed-Regular.ttf",
+  bold = "RobotoCondensed-Bold.ttf",
+  italic = "RobotoCondensed-Italic.ttf"
+)
+showtext_auto()
+```
+
+```{r quarter_year_information}
+YQ1Q2 = 2021
+YQ3Q4 = 2022
+QR = "Q2" 
+```
+
+```{r factor_orders}
+core_order = c("ADMIN", "CAMC", "CEO", "CRDEB", "CRRF", "MU", "PD", "PILOT", "PPC", "TECH", "T&E")
+
+ordered_months <- c("January","February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
+
+type_order <- c("Federal", "State", "Industry", "Other")
+
+facet_order <- c("Proposal", "Award")
+```
+
+```{r palettes}
+core_colors = c(ADMIN = "#d2b22b", CAMC = "#007BC1", CEO = "#3457a7", CRDEB = "#c13c3a", CRRF = "#663996", MU = "#01E5A7", PD= "#72ae43", PILOT = "#b46728", PPC = "#d46970", `T&E` = "#ffb6c1", TECH = "#037872", Unknown = "#99aab5")
+
+# Define colors -----
+ceo_service_colors <- c('#247079', '#2A363B', '#019875','#bf2929','#FECEA8','#C658B4','#3d98d3','#E84A5F','#99B898','#FF847C', '#0c485e')
+ceo_product_colors <- c('#966FD6','#03C5CC', '#0370AC', '#03CC8E', '#af4f70', '#af5e4f', '#af4fa0', '#a0af4f', '#af8e4f')
+crdeb_colors <- c("#A15651", "#DA2027", "#881829", "#422420", "#DEA795", "#D693A3")
+crrf_colors <- c("#624FA1", "#a1624f", "#4fa162", "#4f8ea1", "#4f65a1", "#a18b4f", "#A54974", "#4e8584", "#00AFBB", "#E7B800", "#0052bb")
+ids_colors <- c("#476d4f", "#c0d095", "#007777", "#83adb5", "#454545", "#788130", "#c7b85f", "#196874")
+```
+
+```{r ordered_months}
+# Get months ----
+if (QR == "Q1") QUARTER = c("Jul", "Aug", "Sep") else 
+  if (QR == "Q2") QUARTER = c("Oct", "Nov", "Dec") else 
+    if (QR == "Q3") QUARTER = c("Jan", "Feb", "Mar") else 
+      QUARTER = c("Apr", "May", "Jun")
+```
+
+```{r tooltip_aesthetics}
+# Define common tooltip aesthetics ----
+tooltip_css <- "background-color: #f7f7f7;
+                color: #181818;
+                padding:10px;
+                font-family: Roboto Condensed, sans-serif;
+                font-weight: 500;
+                border-radius:5px;"
+```
+
+```{r}
+ggblank <- 
+  ggplot() + 
+  theme_void()
+```
+
+```{r}
+# Load data sets ----
+intro_items <-
+  read_csv(here::here("static", "data", "INTRO", "2021", "2021 intro skeleton.csv"),
+         show_col_types = FALSE) %>%
+  select(Item) %>%
+  pull()
+
+intro_data <-
+   read_csv(here::here("static", "data", "INTRO", "2021", "2021 intro data anonymized.csv"),
+         show_col_types = FALSE) %>%
+  slice(3:n()) %>%
+  select(ID, one_of(intro_items)) %>%
+  rename_with(~ str_remove(., "\\_1"), Q1_1:Q9_1) %>%
+  filter(if_any(everything(), ~ !is.na(.))) %>%
+  mutate_if(is.character,
+            str_replace_all,
+            pattern = "Other",
+            replacement = NA_character_
+  ) %>%
+  mutate(
+    Q19 = coalesce(!!!select(., contains("Q19"))),
+    Q24 = coalesce(!!!select(., contains("Q24")))
+  ) %>%
+  select(-contains("TEXT"), -ID) %>%
+  select(where(~ !all(is.na(.x)))) %>%
+  pivot_longer(everything(),
+               names_to = "item",
+               values_to = "values",
+               values_drop_na = TRUE
+  ) %>%
+  arrange(item) %>%
+  group_split(item, .keep = FALSE, .named = TRUE) %>%
+  list2env(.GlobalEnv)
+```
+
+<hr />
+
+## About
+
+### Author
+
+This report was prepared by [Dr. Abhik Roy](https://counselingandlearningsci.wvu.edu/faculty-staff/abhik-roy){target="blank"}.
+
+### Materials
+
+The following materials are available. 
+```{r echo=FALSE}
+
+xls_link1 <- function() {
+  paste0("<a href='/data/INTRO/2021/2021%20intro%20data%20anonymized.csv' target='blank'>", "<img src='/logos/xls-ico.png' alt='Anonymized Data Set' width='55'>", "</a>")
+}
+
+xls_link2<- function() {
+ paste0("<a href='/data/INTRO/2021/2021%20intro%20skeleton.csv' target='blank'>", "<img src='/logos/xls-ico.png'  alt='Survey Skeleton' width='55'>", "</a>")
+}
+
+xls_link2<- function() {
+ paste0("<a href='/data/INTRO/2021/2021%20intro%20skeleton.csv' target='blank'>", "<img src='/logos/xls-ico.png'  alt='Survey Skeleton' width='55'>", "</a>")
+}
+
+pdf_link <- function() {
+ paste0("<a href='/graphics/INTRO/2021/2021INTROvisuals.zip'>", "<img src='/logos/pdf-ico.png' alt='Slack icon' width='55'>", "</a>")
+}
+
+textitems <- tibble(
+  
+  xls1 <- c("Anonymized Data Set",
+               xls_link1()),
+  
+  xls2 <- c("Survey Skeleton",
+            xls_link2()),
+  
+  pdf <- c("All Visualizations",
+            pdf_link())
+  
+)
+```
+
+<center>
+
+```{r message=FALSE, warning=FALSE, eval = TRUE}
+kable(textitems, 
+      col.names = c("", "", ""),
+      escape = FALSE,
+      format = "html",
+      align = 'ccc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "20em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>%
+  column_spec(2, width = "20em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>%
+  column_spec(3, width = "20em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(1:2, background = "#282A35")
+```
+
+</center>
+
+## Study Overview
+
+### Summary Participant Information
+
+The INTRO Fall 2021 survey was administered between October 5, 2021 to October 26, 2021 and provided prior participants of the INTRO program an opportunity to provide feedback on the program and including advice on means for improvement and recruitment. Of the original 25 individuals invited to participate, 15 (35%) former participants completed the survey. While outcomes indicate that the program has improved significantly since findings from the 2020 assessment were reported, respondents provided a modicum of additional suggestions for future implementations of the program. To raise the likelihood of responses, participants were not required to provide responses to some items.
+
+### Session Quality
+
+Participant views on the degree of excellence of each session is given below.
+
+```{r echo=FALSE, warning=FALSE}
+# Fairness scale ----
+## Aesthetics ----
+fairness.order <- c("Very Poor", "Poor", "Fair", "Good", "Very Good")
+fairness.colors <- scales::seq_gradient_pal("#d7b8fd", "#bb86fc", "#9f54fb")(seq(0,1,length.out=length(fairness.order)))
+
+## Pipe and plot ----
+fairness_countsplot <- 
+  function(df) {
+  df %>%
+      rename(Response = values) %>%
+      na.omit() %>%
+      filter(!Response == "I did not attend this session") %>%
+      mutate_all(list(~ factor(.,
+                               levels = fairness.order,
+                               ordered = TRUE
+      ))) %>%
+      group_by(Response) %>%
+      count(Response) %>%
+      rename(`Count` = n) %>%
+      ungroup() %>%
+      mutate(TotalCount = sum(Count)) %>%
+      mutate(TotalPercent = Count / TotalCount * 100) %>%
+      mutate_at(vars(TotalPercent), list(~ round(., 0))) %>%
+      ggplot(aes(Response,
+                 y = Count,
+                 fill = Response
+      )) +
+      geom_bar(stat = "identity", 
+               color = NA,
+               position = position_dodge2(0.9, preserve = "single")) +
+      geom_text(aes(label = paste0(TotalPercent, "%", " (",Count,")")),
+                position = position_dodge2(0.95, preserve = "single"),
+                vjust = 1.5,
+                size = 3,
+                label.size = 0.25,
+                color = "#282a35",
+                label.padding = unit(0.5, "lines"),
+                family = "Roboto Condensed",
+                fontface = "bold"
+      ) +
+      theme_bw(base_family = "Roboto Condensed") +
+      scale_x_discrete(drop = FALSE) +
+      scale_fill_manual(values = fairness.colors) +
+      theme_ft_rc(
+        base_family = "Roboto Condensed",
+        plot_title_face = "bold",
+        subtitle_face = "plain",
+        subtitle_family = "Roboto Condensed",
+        caption_family = "Roboto Condensed",
+        plot_title_size = 10,
+        axis_title_size = 0,
+        axis_title_face = "bold",
+        axis_title_just = "c",
+        axis_text_size = 8.5,
+        caption_face = "italic",
+        strip_text_size = 13,
+        grid = "Y"
+      ) +
+      theme(
+        plot.title = element_text(
+          color = "#d2dddd",
+          size = 14,
+          hjust = 1
+        ),
+        plot.caption = element_text(face = "italic"),
+        axis.title = element_blank(),
+        axis.text.x = element_text(color = "#ccd9d9",
+                                   face = "bold"),
+        axis.text.y = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_rect(fill = NA, 
+                                        color = "#282a35"),
+        panel.background = element_rect(fill = NA, 
+                                        color = NA),
+        plot.background = element_rect(fill = "#282a35"),
+        plot.margin = margin(0, 0, 0, 0, "cm")
+      ) +
+      guides(fill = "none") +
+      ylab("Counts")
+  }
+
+```
+
+```{r}
+### Item 2 ----
+q2p <- 
+  Q2 %>%
+  fairness_countsplot() +
+  ggtitle(str_wrap("Biohazard Safety Training", 35))
+
+### Item 3 ----
+q3p <- 
+  Q3 %>%
+  fairness_countsplot() +
+  ggtitle(str_wrap("Human Subjects Research & Ethical Conduct in Research", 35))
+
+### Item 4 ----
+q4p <- 
+  Q4 %>%
+  fairness_countsplot() +
+  ggtitle(str_wrap("Bench to Bedside: Conducting Translational Research", 35))
+
+### Item 5 ----
+q5p <- 
+  Q5 %>%
+  fairness_countsplot() +
+  ggtitle(str_wrap("Developing and Refining an Elevator Pitch", 35))
+
+### Item 6 ----
+q6p <- 
+Q6 %>%
+  fairness_countsplot() +
+  ggtitle(str_wrap("An Introduction to NIH Grants: Steps to a Competitive Application", 35))
+
+### Item 7 ----
+q7p <- 
+  Q7 %>%
+  fairness_countsplot() +
+  ggtitle(str_wrap("Presenting Your Research Poster", 35))
+
+
+### Item 8 ----
+q8p <- 
+  Q8 %>%
+  fairness_countsplot() +
+  ggtitle(str_wrap("WVCTSI Research Scholar Panel Discussion", 35))
+
+
+### Item 9 ----
+q9p <- 
+  Q9 %>%
+  fairness_countsplot() +
+  ggtitle(str_wrap("Capstone: Journey as a Physician Scientist", 35))
+
+
+### Item 12 ----
+q12p <- 
+  Q12 %>%
+  fairness_countsplot() +
+  ggtitle(str_wrap("Overall Experience Working on Summer Research Assignment(s)", 35))
+```
+
+```{r, out.width="90%", fig.height=3}
+q2p + ggblank + q3p +
+  plot_layout(widths = c(4, 1, 4)) +
+  plot_annotation(
+    theme = theme(plot.background = element_rect(fill = "#282a35",
+                                                 color = "#282a35"))
+  )
+```
+
+```{r, out.width="90%", fig.height=3}
+q4p + ggblank + q5p +
+  plot_layout(widths = c(4, 1, 4)) +
+  plot_annotation(
+    theme = theme(plot.background = element_rect(fill = "#282a35",
+                                                 color = "#282a35"))
+  )
+```
+
+```{r, out.width="90%", fig.height=3}
+q6p + ggblank + q7p +
+  plot_layout(widths = c(4, 1, 4)) +
+  plot_annotation(
+    theme = theme(plot.background = element_rect(fill = "#282a35",
+                                                 color = "#282a35"))
+  )
+```
+
+```{r, out.width="90%", fig.height=3}
+q8p + ggblank + q9p +
+  plot_layout(widths = c(4, 1, 4)) +
+  plot_annotation(
+    theme = theme(plot.background = element_rect(fill = "#282a35",
+                                                 color = "#282a35"))
+  )
+```
+
+```{r, out.width="90%", fig.height=3}
+ggblank + q12p + ggblank +
+  plot_layout(widths = c(2.5, 4, 2.5)) +
+  plot_annotation(
+    theme = theme(plot.background = element_rect(fill = "#282a35",
+                                                 color = "#282a35"))
+  )
+```
+
+```{r}
+## Clean text ----
+clean_text <- 
+  function(df) {
+    df %>%
+    select(text) %>%
+    mutate(text = replace_html(text)) %>%
+    mutate(text = replace_white(text)) %>% 
+    mutate(text = str_replace_all(text, "\n" , "")) %>% 
+    mutate(text = str_replace_all(text, "&amp;" , "&")) %>% 
+    mutate(text = str_replace_all(text, "&rsquo;s" , "'s")) %>% 
+    mutate(text = str_replace_all(text, "&#39;s" , "'s")) %>% 
+    mutate(text = str_replace_all(text, "‚Äì" , "-")) %>% 
+    mutate(text = str_replace_all(text, " - e" , ")")) %>% 
+    mutate(text = str_replace_all(text, ",Äú" , "&quot;")) %>%
+    mutate(text = str_trim(text)) %>%
+    mutate(text = str_replace_all(text, ".Skin .SS .horizontalbar .handle, .Skin .SS .verticalbar .SSTrack .handle, .Skin .horizontalbar .BarContainer:hover .bar, .Skin .horizontalbar .Slider .handle, .Skin .horizontalbar .activated .bar", "")) %>%
+    mutate(text = qdap::bracketX(text, "curly")) %>% 
+    mutate(text = str_replace_all(text, ".Skin .SS .horizontalbar .handle:hover, .Skin .horizontalbar .Slider .handle:hover", "")) %>%
+    mutate(text = str_replace_all(text, ".hoverTable .hoverTable td .hoverTable tr .hoverTable tr:hover .hoverTable tr#tr01:hover .hoverTable td#td01:hover table#t01", "")) %>%
+    mutate(text = noquote(text)) %>%
+    mutate(text = str_remove_all(text, "[[:punct:]]"))
+  }
+```
+
+```{r}
+# Open ended ----
+## Aesthetics ----
+network.colors <- scales::seq_gradient_pal("#ccd9d9", "#afc3c3", "#91adad")(seq(0,1,length.out=5))
+
+## Pipe and plot ----
+oe_network <- 
+  function(df) {
+  df %>%
+      select(text = values) %>%
+      clean_text() %>%
+      mutate(text = str_replace_all(text, "lecturesstructure", "lectures structure")) %>%
+      rowid_to_column("line") %>%
+      unnest_tokens(bigram, text, token = "ngrams", n = 2)  %>%
+      separate(bigram, c("word1", "word2"), sep = " ") %>%
+      filter(!word1 %in% stop_words$word) %>%
+      filter(!word2 %in% stop_words$word) %>% 
+      filter(!word1 == "intro") %>%
+      filter(!word2 == "intro") %>%
+      filter(!word2 == "youre") %>%
+   #  rowwise() %>% 
+   #  mutate(word1 = SemNetCleaner::singularize(word1)) %>%
+   #  mutate(word2 = SemNetCleaner::singularize(word2)) %>%
+      mutate(word1 = textstem::lemmatize_words(word1)) %>% 
+      mutate(word2 = textstem::lemmatize_words(word2)) %>%
+      mutate(word2 = str_replace_all(word2, "pus", "PIs")) %>%
+      mutate_if(str_detect(., 'mentor|form|approp'), 
+                ~str_replace_all(., c("mentor.*" = "mentor", 
+                                      "form.*" = "form",
+                                      "approp.*" = "appropriate"))) %>%
+      count(word1, word2, sort = TRUE) %>%
+      as_tbl_graph() %>%
+      mutate(degc = centrality_degree()) %>%
+      ggraph(layout = "nicely") +
+      geom_edge_link(aes(edge_color = n), 
+                     show.legend = FALSE,
+                     arrow = grid::arrow(type = "closed", 
+                                         length = unit(.15, "inches")), 
+                     end_cap = circle(0.2, 'in'),
+                     check_overlap = TRUE) +
+      geom_node_point(aes(size = degc + 1),
+                      color = "#bb86fc",
+                      stroke = 1,
+                      #   size =  5.2,
+                      alpha = 0.8,
+                      show.legend = FALSE) +
+      geom_node_point(aes(size = degc),
+                      color = "#ccd9d9",
+                      stroke = 2,
+                      show.legend = FALSE) +
+      geom_node_point(aes(size = degc  - 1),
+                      color = "#bb86fc",
+                      stroke = 3,
+                      show.legend = FALSE) +
+      geom_label(aes(x = x, 
+                     y = y, 
+                     label = name),
+                 family = "Roboto Condensed",
+                 fontface = "bold",
+                 fill = "#282A35",
+                 color = "#eff5ff",
+                 size = 5, 
+                 hjust = 0,
+                 vjust = 0.5,
+                 nudge_y = 0.34, 
+                 label.size = NA) + 
+      theme_bw(base_family = "Roboto Condensed") +
+      scale_x_discrete(drop = FALSE) +
+      scale_edge_color_gradientn(colors = network.colors) +
+      theme_ft_rc(
+        base_family = "Roboto Condensed",
+        plot_title_face = "bold",
+        plot_title_size = 20,
+        subtitle_face = "plain",
+        subtitle_family = "Roboto Condensed",
+        caption_face = "italic",
+        caption_family = "Roboto Condensed",
+        caption_size = 14,
+        axis_title_size = 0,
+        axis_title_face = "bold",
+        axis_title_just = "c",
+        axis_text_size = 15,
+        strip_text_size = 13,
+        grid = "Y"
+      ) +
+      theme(
+        plot.title = element_text(
+          color = "#d2dddd",
+          size = 26,
+          hjust = 0.5
+        ),
+        plot.caption = element_text(color = "#d2dddd"),
+        axis.title = element_blank(),
+        axis.text.x = element_text(color = "#ccd9d9",
+                                   face = "bold"),
+        axis.text.y = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_rect(fill = "#282a35", 
+                                        color = "#282a35"),
+        plot.background = element_rect(fill = "#282a35")
+      ) +
+      guides(fill = "none") +
+      ylab("Counts")
+  }
+```
+
+
+```{r}
+# Polar scale ----
+## Aesthetics ----
+polar.order <- c("No", "Unsure", "Yes")
+polar.colors <- c("#FC86BB", "#BB86FC", "#86BBFC")
+
+## Pipe and plot ----
+polar_countsplot <- 
+  function(df) {
+    df %>%
+      rename(Response = values) %>%
+      na.omit() %>%
+      mutate_all(list(~ factor(.,
+                               levels = polar.order,
+                               ordered = TRUE
+      ))) %>%
+      group_by(Response) %>%
+      # summarise(Count = n()) %>%
+      count(Response) %>%
+      complete(Response, fill = list(count = 0)) %>%
+      rename(`Count` = n) %>%
+      ungroup() %>%
+      mutate(fraction = Count/sum(Count)) %>%
+      mutate(percent = fraction * 100) %>%
+      mutate(ymax = cumsum(fraction)) %>%
+      mutate(ymin = c(0, head(ymax, n = -1))) %>%
+      mutate(labelPosition = (ymax+ymin)/2) %>%
+      mutate(label = paste0(Response, ":\n", round(percent),"%"," (",Count,")")) %>%
+      ggplot(aes(ymax = ymax, ymin = ymin, xmax = 4, xmin = 3, fill = Response)) +
+      geom_rect(show.legend = FALSE,
+                color = "transparent") +
+      geom_text(aes(x = 1.0, 
+                    y = labelPosition, 
+                    label = label, 
+                    color = Response), 
+                size = 6,
+                family = "Roboto Condensed",
+                fontface = "bold",
+                show.legend = FALSE) +
+      coord_polar(theta = "y") +
+      xlim(c(-4, 4)) +
+      theme_bw(base_family = "Roboto Condensed") +
+      scale_fill_manual(values = polar.colors) +
+      scale_color_manual(values = polar.colors) +
+      theme_ft_rc(
+        base_family = "Roboto Condensed",
+        plot_title_face = "bold",
+        subtitle_face = "plain",
+        subtitle_family = "Roboto Condensed",
+        caption_family = "Roboto Condensed",
+        plot_title_size = 20,
+        axis_title_size = 0,
+        axis_title_face = "bold",
+        axis_title_just = "cc",
+        axis_text_size = 0,
+        caption_face = "italic",
+        strip_text_size = 13
+      ) +
+      theme(
+    plot.title = element_text(
+      color = "#d2dddd",
+      size = 26,
+      hjust = 0
+    ),
+    plot.caption = element_text(face = "italic"),
+    axis.title.x = element_blank(),
+    axis.title.y = element_blank(),
+    strip.text = element_text(color = "#ffffff"),
+    axis.text = element_blank(),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.grid = element_blank(),
+    panel.border = element_blank(), 
+    panel.spacing = unit(0, "cm"),
+    panel.background = element_rect(fill = "#282a35", 
+                                    color = "#282a35"),
+    plot.background = element_rect(fill = "#282a35",
+                                   color = "#282a35")
+  ) +
+  guides(fill = "none")
+  }
+```
+
+```{r}
+set.seed(123)
+q10p <-
+  Q10 %>%
+  polar_countsplot() +
+  ggtitle(str_wrap("Have Suggestions on How Students Can Stay Engaged in Research", 40))
+
+q14p <- 
+  Q14 %>%
+  polar_countsplot() +
+  ggtitle(str_wrap("Engage in Networking Opportunities to Interact with Summer Research Fellows", 40))
+
+q17p <-
+  Q17 %>%
+  polar_countsplot() +
+  ggtitle(str_wrap("Plan a Career as a Clinical Scientist", 40))
+```
+
+
+## Student Engagement
+
+### Former Participants
+
+A majority of participants indicated a desire to start or continue engagement with upcoming Summer Research Fellows
+
+```{r, out.width="55%", fig.height=8, fig.width=8, fig.align='center'}
+grid::grid.newpage()
+grid::grid.draw(grid::rectGrob(gp = grid::gpar(fill = "#282a35", col = "#282a35")))
+print(q14p, newpage = FALSE)
+```
+
+### Suggestions to Improve
+
+Though a minority of former participants provided feedback describing actions that may be taken to keep an interest in research
+
+```{r, out.width="55%", fig.height=8, fig.width=8, fig.align='center'}
+grid::grid.newpage()
+grid::grid.draw(grid::rectGrob(gp = grid::gpar(fill = "#282a35", col = "#282a35")))
+print(q10p, newpage = FALSE)
+```
+
+those who did respond noted the following advice should be forwarded to future Fellows
+
+> <span style="color:#9cbfca;">*I think it's important to keep consistent contact with your PI, and make a to-do list to make sure you accomplish at least something each day.*</span>
+
+> <span style="color:#9cbfca;">*Be involved with research that you care about. If you are looking for answers to questions that mean something to you, it is a lot easier to be excited about your work.*</span>
+
+> <span style="color:#9cbfca;">*Being proactive and engaged in the research topics being studied is important, and making sure to read up on any papers suggested by the lab.*</span>
+
+> <span style="color:#9cbfca;">*Keep in contact with INTRO program's PI throughout the year or just work on little project with them. Stay present through emails with them.*</span>
+
+> <span style="color:#9cbfca;">*After forming relationships with the researchers involved with the INTRO program, I think it is best for the student to take initiative to continue reaching out and staying in communication with them. The INTRO program allows for those relationships to be initially formed.*</span>
+
+> <span style="color:#9cbfca;">*I think the biggest thing is to continue to stretch your comfort zone and engage the research faculty at WVU. You're now a graduate student and these individuals are too busy to target students for research opportunities. However, they are extremely friendly and can always use help on projects, so continue to reach out to PIs with who you are, why you think you could help in their projects, and asking them to be involved in their research.*</span>
+
+The following provides a broad overview of important pairs of terms that can be used to quickly understand the entire response set.
+
+```{r out.width="90%", fig.height=12, fig.width=12, fig.align='center'}
+set.seed(123)
+## Item 11 ----
+Q11 %>%
+  oe_network() +
+  labs(title = str_wrap("Suggestions for Student Engagement", 60),
+       caption = "Bigram network resulting from topic modelling")
+``` 
+
+### Possible Career Goals
+
+Without a prior assessment, it is unclear if the program had an impact on participant job aspirations. Regardless, a majority of respondents noted that they were unsure if a career in the clinical sciences would be appropriate choice.
+
+```{r, out.width="55%", fig.height=8, fig.width=8, fig.align='center'}
+grid::grid.newpage()
+grid::grid.draw(grid::rectGrob(gp = grid::gpar(fill = "#282a35", col = "#282a35")))
+print(q17p, newpage = FALSE)
+```
+
+This uncertainty in future roles is likely supported by a low response rate (2) on those items assessing the impact of programmatic activities on a student's career choices. Given that, both participants indicated they wished to pursue a career as a clinician scientist with both describing they were moderately to strongly influenced by
+
+- Their research project
+
+- Time in the laboratory
+
+- The weekly seminars
+
+## Favored Program Elements
+Respondents conveyed a variety of aspects that were considered to be the best. 
+
+(1)	accommodation of dietary needs 
+(2) connecting with mentors
+(3)	creating relationships
+(4)	enrichment sessions
+(5)	networking
+(6)	research opportunities
+(7)	working in a team environment
+
+The following provides a broad overview of important pairs of terms that can be used to quickly understand the entire response set.
+
+```{r, out.width="90%", fig.height=12, fig.width=12, fig.align='center'}
+## Item 16 ----
+Q16 %>%
+  oe_network() +
+  labs(title = str_wrap("Best Aspects of Program", 60),
+       caption = str_wrap("Bigram network resulting from topic modelling", 60))
+```
+
+## Participant Satisfaction
+
+Generally participants were mostly satisfied with the program. This is supported by the [Net Promoter Score](https://www.netpromoter.com/know/)® (NPS) profile derived from the overall response set. The NPS measures participant experience and predicts possible growth. 
+
+Respondents are grouped into the following classifications:
+ 
+-	<span style="color:#fa889e;">*Promoters*</span> (score 9-10) are loyal enthusiasts who are more likely to refer others to a program based on their experience.
+-	<span style="color:#a097a7;">*Passives*</span> (score 7-8) are satisfied but unenthusiastic former participants who are not certain about an experience.
+-	<span style="color:#fa88d7;">*Detractors*</span> (score 0-6) are unhappy respondents who can damage a brand and impede growth through negative word-of-mouth.
+
+```{r}
+# Scale ----
+## Aesthetics ----
+scale.order <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+scale.colors_red <- scales::seq_gradient_pal("#fa889e", "#fcb9c6")(seq(0,1,length.out=6))
+scale.colors_grey <- scales::seq_gradient_pal("#a097a7", "#847096")(seq(0,1,length.out=2))
+scale.colors_purple <- scales::seq_gradient_pal("#ddc2fd", "#bb86fc")(seq(0,1,length.out=2))
+scale.colors <- c(scale.colors_red, scale.colors_grey, scale.colors_purple)
+
+## Pipe and plot ----
+Q20combined <-
+  cbind(Q20, Q20_NPS_GROUP) %>%
+  rename(
+    Score = c(1),
+    description = c(2)
+  ) %>%
+  na.omit() %>%
+  mutate(Score = factor(Score, levels = scale.order)) %>%
+  dplyr::count(Score, .drop = FALSE) %>%
+  group_by(Score) %>% 
+  rename(`Count`= n) %>%
+  ungroup() %>%
+  mutate(TotalCount = sum(Count)) %>% 
+  mutate(TotalPercent = Count/TotalCount*100) %>% 
+  mutate_at(vars(TotalPercent), list(~ round(., 0))) 
+```
+
+```{r, out.width="90%", fig.height=8, fig.align='center'}
+Q20combined %>%
+  mutate(across(everything(), ~ na_if(.x, 0))) %>%
+  ggplot(aes(Score, y = Count, fill = Score)) +
+  geom_bar(stat = 'identity', color = NA) +
+  geom_text(aes(label = paste0(TotalPercent, "%", " (",Count,")"),
+                color = ifelse(Score == c(7,8),
+                               "#282A35", "#282A35")),
+            position = position_dodge2(0.95, preserve = "single"),
+            vjust = 2,
+            size = 3.5,
+            label.size = 0.25,
+            label.padding = unit(0.5, "lines"),
+            family = "Roboto Condensed",
+            fontface = "bold") +
+  scale_color_identity() +
+  scale_x_discrete(drop = FALSE) +
+  scale_y_continuous(limits = c(-4, 20), expand = c(0.01, 0.01)) +
+  scale_fill_manual(values = scale.colors, drop = FALSE) +
+  theme_bw(base_family = "Roboto Condensed") +
+  theme_ft_rc(
+    base_family = "Roboto Condensed",
+    plot_title_face = "bold",
+    subtitle_face = "plain",
+    subtitle_family = "Roboto Condensed",
+    caption_family = "Roboto Condensed",
+    plot_title_size = 15,
+    axis_title_size = 15,
+    axis_title_face = "bold",
+    axis_title_just = "c",
+    axis_text_size = 12,
+    caption_face = "italic",
+    strip_text_size = 13,
+    grid = "Y"
+  ) +
+  theme(
+    plot.title = element_text(margin = margin(b = -15, unit = "cm"),
+                              color = "#d2dddd",
+                              hjust = 1),
+    plot.caption = element_text(face = "italic"),
+    axis.title.x = element_text(margin = margin(t = 1, unit = "cm"),
+                                color = "#d2dddd",
+                                face = "bold"),
+    axis.title.y = element_blank(),
+    axis.text.x = element_text(margin = margin(t = -1, unit = "cm"),
+                               color = "#ccd9d9",
+                               face = "bold"),
+    axis.text.y = element_blank(),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.background = element_rect(fill = "#282A35", 
+                                    color = "#282A35"),
+    plot.background = element_rect(fill = "#282A35",
+                                   color = "#282A35")
+  ) +
+  annotation_custom(text_grob("Unlikely", 
+                              size = 11, 
+                              family = "Roboto Condensed", 
+                              face = "italic", 
+                              color = "#fa889e"), 
+                    xmin = 3.5,
+                    xmax = 3.5,
+                    ymin = -2.5,
+                    ymax = -2.5) + 
+  annotation_custom(text_grob("Possibly", 
+                              size = 11, 
+                              family = "Roboto Condensed", 
+                              face = "italic", 
+                              color = "#a097a7"),
+                    xmin = 7.55,
+                    xmax = 7.55,
+                    ymin = -2.5,
+                    ymax = -2.5) + 
+  annotation_custom(text_grob("Likely", 
+                              size = 11, 
+                              family = "Roboto Condensed", 
+                              face = "italic", 
+                              color = "#fa88d7"),
+                    xmin = 9.3,
+                    xmax = 9.3,
+                    ymin = -2.5,
+                    ymax = -2.5) + 
+  annotate("segment", 
+           x = 6.4, 
+           xend = 1, 
+           y = -1.3, 
+           yend = -1.3, 
+           color = "#fa889e", 
+           size = 1.2, 
+           alpha = 0.4, 
+           arrow = arrow(angle = 20)) +
+  annotate("segment", 
+           x = 6.6, 
+           xend = 8.4, 
+           y = -1.3, 
+           yend = -1.3, 
+           color = "#a097a7", 
+           size = 1.2, 
+           alpha = 0.4, 
+           arrow = arrow(ends = "both", angle = 20)) +
+  annotate("segment", 
+           x = 8.6, 
+           xend = 10, 
+           y = -1.3, 
+           yend = -1.3, 
+           color = "#fa88d7", 
+           size = 1.2, 
+           alpha = 0.9,
+           arrow = arrow(angle = 20)) +
+  guides(fill = "none") +
+  xlab("Net Promoter Score® (NPS)") +
+  ggtitle(str_wrap("Likelihood of Recommending INTRO to Peers", 60))
+```
+<br>
+and notable responses such as
+
+> <span style="color:#9cbfca;">*Thanks to Sarah and Jodie for organizing INTRO this past summer, I know it was difficult with COVID, but you did your best, and I think mostly everyone had a positive experience.*</span>
+
+> <span style="color:#9cbfca;">*This was a lovely and important experience for me. I do not think that very much needs to change about it.*</span>
+
+> <span style="color:#9cbfca;">*Thank you so much for allowing me to participate in the INTRO program this year. I really enjoyed my time and hope to continue to see it grow in the future.*</span>
+
+> <span style="color:#9cbfca;">*Thank you all for the opportunity to help me build my research skills and experiences. It was a very influential summer and I appreciate all the time you guys put into the summer to make our experiences enriching.*</span>
+
+> <span style="color:#9cbfca;">*This program was excellently run!  It provided a much-needed introduction to research for me. Thanks for all you did to keep as much of it in-person as possible-- this played a big part in my decision.*</span>
+
+Furthermore students generally maintained a positive view of their summer experience. The following provides a broad overview of important pairs of terms that can be used to quickly understand the entire response set.
+
+```{r, out.width="90%", fig.height=12, fig.width=12, fig.align='center'}
+set.seed(123)
+Q13 %>%
+  oe_network() +
+  labs(title = str_wrap("Work on Summer Research Assignment", 60),
+          caption = str_wrap("Bigram network resulting from topic modelling", 60))
+```
+
+## Recommendations
+
+### Given by Participants 
+
+The recommendations outlined by former students are provided as two sections - the first outlining aspects that would make the *program attractive to their peers* and second addressing *programmatic improvements*. 
+
+#### Attractiveness to Peers
+
+- Availability of additional projects
+- Increased attention given to advertising the program (e.g. showcasing INTRO students in email newsletters and social media)
+- Greater clarity given in ways to interact with PIs
+- Informational sessions provided earlier and with greater frequency
+- Presentation administered at the end of the summer in lieu of spring
+- Reaching out to more physicians and researchers to provide a wider variety of options as mentors
+- Research fair where PIs would be able to present and discuss their research to students
+
+#### Programmatic Improvements
+
+- Additional opportunities for hands on experiences
+- Clarity of expectations by a given mentor including a structured work timeline with realistic goals and checkpoints 
+- Continue providing parallel sessions on Zoom
+- Further opportunities for hands on experiences
+- Greater diversity in lunch options
+- Increased availability of extracurricular opportunities
+- More interactions with the WVU students
+- Regular checkups for mentor-mentee pairs to assess progress
+- Standardized interviews with PIs to ensure fit
+
+### Suggested by the Evaluator
+
+The following are overall program level recommendations derived from direct quotes and additional analyses conduced through the current evaluation.
+
+- Apply additional resources to stress the benefits and possibilities of a career in the clinical sciences
+- Consider administering a pre survey to assess if the program is impacting students in accordance to the program goals
+- Continue to expand the footprint of the program by investing in advertising to a boarder audience or to the current population using a multimodal approach
+- Identify additional ways that PIs can both communicate and expand on their research to current and future Fellows
+<center>
+<br>
+<hr align="center" width="50%">
+<a class="norm" rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>All analyses, visuals and markdown files were originally created by <a class="norm" target="_blank" href="https://iam.asocialdatascientist.com/">Dr. Abhik Roy</a> using <a class="norm" target="_blank" href="https://www.r-project.org/">R</a> and <a class="norm" target="_blank" href="https://www.rstudio.com/">R Studio</a> and are available upon request. Data sets are under the ownership of the WVCTSI. This work is the result of a joint partnership between the INTRO program and PERC and licensed under a <a class="norm" rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+</center>
+<br>
+<center>
+![](/logos/PERC-ico.png){width="30%"}
+</center>
