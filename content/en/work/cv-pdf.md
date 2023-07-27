@@ -1,7 +1,7 @@
 ---
 title: "Abhik Ranjan Roy"
 author: Abhik Ranjan Roy
-date: "2023-07-13"
+date: "2023-07-26"
 output:
   pagedown::html_resume:
     self_contained: true
@@ -93,7 +93,7 @@ Ph.D. in Program Evaluation
 
   Kalamazoo, MI
 
-2016
+N/A
 
 *Dissertation*. Building an Evaluation Model of Academic Advising’s Impact on Progression, Persistence, and Retention Within University Settings
 
@@ -103,7 +103,7 @@ M.S. in Mathematics
 
   Houghton, MI
 
-2007
+N/A
 
 *Thesis*. Quotient Rings of the Eisenstein Integers
 
@@ -113,7 +113,7 @@ B.S. in Mathematics
 
   Buckhannon, WV
 
-2001
+N/A
 
 *Terminal Study*. 4-Cell Embedding on a `\(n\)`-genus Torus
 
@@ -624,7 +624,7 @@ Curtis, R., & <b>Roy, A.R.</b>, Mikalik, T.L.
 
 <b>Roy, A.R.</b> & Hobson, K.A.
 
-## Teaching Experience in Evaluation and Methodology (2016 - )
+## Teaching Experience in Evaluation and Methodology (2016 - 2023)
 
 ### Data Visualization
 
@@ -651,6 +651,8 @@ West Virginia University
 West Virginia University
 
   Morgantown, WV
+
+2016
 
 2016
 
@@ -690,9 +692,9 @@ West Virginia University
 
   Morgantown, WV
 
-2022 - 2017
+2023 - 2017
 
-2022, 2021, 2020, 2019, 2018, 2017
+2023, 2022, 2021, 2020, 2019, 2018, 2017
 
 ### Social Network Analysis
 
@@ -856,4 +858,4 @@ N/A
 
 Made in <i style="color:#3365B3;" class="fab fa-r-project"></i>: <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/cv-pdf.Rmd" target="&#39;_blank">Source code</a>
 
-Last updated on July 13, 2023
+Last updated on July 26, 2023

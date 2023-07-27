@@ -19,20 +19,17 @@ weight: 2
 
 ```
 
-Please choose from one of the options below to see how my qualifications can help you in academia or industry
 <br>
 <br>
 
 <div class="holder">
-
 <div class="left">
-<a href='/work/cv.html' target='_blank'><img src='/img/logos/cv.png' alt='CV' width='250'></a>
+<a href='/work/resume.html' target='_blank'><img src='/img/logos/resume-lettering.png' alt='Resume' width='250'></a>
 </div>
 
 <div class="right">
-<a href='/work/resume.html' target='_blank'><img src='/img/logos/resume.png' alt='Resume' width='250'></a>
+<a href='/work/cv.html' target='_blank'><img src='/img/logos/cv-lettering.png' alt='CV' width='250'></a>
 </div>
-
 </div>
 <br>
 <br>

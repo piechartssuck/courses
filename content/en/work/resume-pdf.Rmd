@@ -126,7 +126,7 @@ Ph.D. in Program Evaluation
 
 &nbsp;&nbsp;Kalamazoo, MI
 
-2016
+N/A
 
 ### Michigan Technological University
 
@@ -134,7 +134,7 @@ M.S. in Mathematics
 
 &nbsp;&nbsp;Houghton, MI
 
-2007
+N/A
 
 ### West Virginia Wesleyan College
 
@@ -142,7 +142,7 @@ B.S. in Mathematics
 
 &nbsp;&nbsp;Buckhannon, WV
 
-2001
+N/A
 
 Professional Experience {data-icon=suitcase}
 --------------------------------------------------------------------------------

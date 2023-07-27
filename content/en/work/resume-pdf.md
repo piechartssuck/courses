@@ -1,7 +1,7 @@
 ---
 title: "Abhik Ranjan Roy"
 author: Abhik Ranjan Roy
-date: "2023-07-13"
+date: "2023-07-26"
 output:
   pagedown::html_resume:
     self_contained: true
@@ -115,7 +115,7 @@ Ph.D. in Program Evaluation
 
   Kalamazoo, MI
 
-2016
+N/A
 
 ### Michigan Technological University
 
@@ -123,7 +123,7 @@ M.S. in Mathematics
 
   Houghton, MI
 
-2007
+N/A
 
 ### West Virginia Wesleyan College
 
@@ -131,7 +131,7 @@ B.S. in Mathematics
 
   Buckhannon, WV
 
-2001
+N/A
 
 ## Professional Experience
 
@@ -279,4 +279,4 @@ Colorado State University
 
 Made in <i style="color:#3365B3;" class="fab fa-r-project"></i>: <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-pdf.Rmd" target="&#39;_blank">Source code</a>
 
-Last updated on July 13, 2023
+Last updated on July 26, 2023

@@ -80,8 +80,8 @@ ignoreFiles = [ "\\.Rmd$", "\\.Rmarkdown$", "_cache$" ]
 
 # If you don't want to use the default menu, you can define one by yourself
 [[menu.main]]
-    name    = "Expertise"
-    url     = "#expertise"
+    name    = "Abilities"
+    url     = "#abilities"
     weight  = 1
 [[menu.main]]
     name    = "Experience"
@@ -100,8 +100,8 @@ ignoreFiles = [ "\\.Rmd$", "\\.Rmarkdown$", "_cache$" ]
     url     = "#recent-talks"
     weight  = 5
 [[menu.main]]
-    name    = "Projects & Evaluations"
-    url     = "#projects-evaluations"
+    name    = "Evaluations"
+    url     = "#evaluations"
     weight  = 6
 # [[menu.main]]
 #     name    = "Contact"

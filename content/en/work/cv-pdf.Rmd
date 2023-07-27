@@ -105,7 +105,7 @@ Ph.D. in Program Evaluation
 
 &nbsp;&nbsp;Kalamazoo, MI
 
-2016
+N/A
 
 *Dissertation*. Building an Evaluation Model of Academic Advising’s Impact on Progression, Persistence, and Retention Within University Settings
 
@@ -115,7 +115,7 @@ M.S. in Mathematics
 
 &nbsp;&nbsp;Houghton, MI
 
-2007
+N/A
 
 *Thesis*. Quotient Rings of the Eisenstein Integers
 
@@ -125,7 +125,7 @@ B.S. in Mathematics
 
 &nbsp;&nbsp;Buckhannon, WV
 
-2001
+N/A
 
 *Terminal Study*. 4-Cell Embedding on a $n$-genus Torus
 
@@ -669,7 +669,7 @@ Curtis, R., & <b>Roy, A.R.</b>, Mikalik, T.L.
 <b>Roy, A.R.</b> & Hobson, K.A.
 
 
-Teaching Experience in Evaluation and Methodology (2016 - ) {data-icon=chalkboard-teacher}
+Teaching Experience in Evaluation and Methodology (2016 - 2023) {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
 
 ### Data Visualization
@@ -699,6 +699,8 @@ West Virginia University
 West Virginia University
 
 &nbsp;&nbsp;Morgantown, WV
+
+2016
 
 2016
 
@@ -742,9 +744,9 @@ West Virginia University
 
 &nbsp;&nbsp;Morgantown, WV
 
-2022 - 2017
+2023 - 2017
 
-2022, 2021, 2020, 2019, 2018, 2017
+2023, 2022, 2021, 2020, 2019, 2018, 2017
 
 
 ### Social Network Analysis
