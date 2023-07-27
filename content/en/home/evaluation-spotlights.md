@@ -1,5 +1,5 @@
 ---
-title: "Evaluations"
+title: "Evaluation Spotlights"
 weight: 7
 output:
   html_document
