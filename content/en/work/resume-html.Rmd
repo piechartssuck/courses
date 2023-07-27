@@ -176,7 +176,7 @@ University of Kansas
 :::
 
 
-Select Projects {data-icon=toggle-on}
+Select Evaluations {data-icon=toggle-on}
 --------------------------------------------------------------------------------
 
 ### <i>Lead Program Evaluator & Methodologist</i><br> Healthy Start Initiative

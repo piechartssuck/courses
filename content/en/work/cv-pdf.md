@@ -1,7 +1,7 @@
 ---
 title: "Abhik Ranjan Roy"
 author: Abhik Ranjan Roy
-date: "2023-07-26"
+date: "2023-07-27"
 output:
   pagedown::html_resume:
     self_contained: true
@@ -282,7 +282,7 @@ N/A
 
 <b>Roy, A.R.</b>, Hobson, K.A., & Coryn, C.L.S.
 
-## Active Grants
+## Active Evaluations
 
 ### Healthy Start Initiative
 
@@ -314,7 +314,7 @@ Current - 2022
 - Total Award: *\$294,958.00*
 - [*2019-NSF 2142274*](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2142274&HistoricalAwards=false)
 
-## Inactive Grants
+## Completed Evaluations
 
 ### WVCTSI: West Virginia Clinical and Translational Science Institute
 
@@ -858,4 +858,4 @@ N/A
 
 Made in <i style="color:#3365B3;" class="fab fa-r-project"></i>: <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/cv-pdf.Rmd" target="&#39;_blank">Source code</a>
 
-Last updated on July 26, 2023
+Last updated on July 27, 2023

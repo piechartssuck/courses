@@ -300,7 +300,7 @@ N/A
 <b>Roy, A.R.</b>, Hobson, K.A., & Coryn, C.L.S.
 
 
-Active Grants {data-icon=toggle-on}
+Active Evaluations {data-icon=toggle-on}
 --------------------------------------------------------------------------------
 
 ### Healthy Start Initiative
@@ -334,7 +334,7 @@ Current - 2022
 - [*2019-NSF 2142274*](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2142274&HistoricalAwards=false)
 
 
-Inactive Grants {data-icon=toggle-off}
+Completed Evaluations {data-icon=toggle-off}
 --------------------------------------------------------------------------------
 
 ### WVCTSI: West Virginia Clinical and Translational Science Institute

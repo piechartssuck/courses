@@ -1,7 +1,7 @@
 ---
 title: "Abhik Ranjan Roy"
 author: Abhik Ranjan Roy
-date: "2023-07-26"
+date: "2023-07-27"
 output:
   pagedown::html_resume:
     self_contained: true
@@ -170,7 +170,7 @@ University of Kansas
 
 </div>
 
-## Select Projects
+## Select Evaluations
 
 ### <i>Lead Program Evaluator & Methodologist</i><br> Healthy Start Initiative
 
@@ -278,4 +278,4 @@ Colorado State University
 
 Made in <i style="color:#3365B3;" class="fab fa-r-project"></i>: <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-html.Rmd" target="&#39;_blank">Source code</a>
 
-Last updated on July 26, 2023
+Last updated on July 27, 2023
