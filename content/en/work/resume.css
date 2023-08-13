@@ -104,6 +104,10 @@ img{
   right: 0;
 }
 
+.sidebar {
+    margin-top: -1in;
+}
+
 /* main */
 
 /** big title **/

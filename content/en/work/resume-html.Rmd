@@ -37,7 +37,6 @@ Aside
 ================================================================================
 
 <div class="parent">
-<img class="imbehind" src='img/me_rb.png' alt='Me' width='65%' class='center'>
 <a href='resume.pdf' target='_blank'><img class="imontop" src='img/resume-dl-icon.png' alt='Resume' width='20%' class='center'></a>
 </div>
 
@@ -58,31 +57,32 @@ Expertise {#skills}
 
 - <b>Data visualization</b> 
 
-- <b>Designing and administering small- and large-scale surveys</b>
+- <b>Markup using</b> $\LaTeX$
 
-- <b>Modeling and analysis using statistics and machine learning</b>
+- <b>Program evaluations from planning to reporting</b>
 
-- <b>Planning and conducting program evaluations</b>
+- <b>Quantitative, qualitative, and mixed method studies</b>
 
-- <b>Programming and analysis in</b><i style="color:#3365B3;" class="fab fa-r-project fa-lg"></i> <b>with markup using</b> $\LaTeX$
+- <i style="color:#3365B3; margin-left: -7px; margin-right: -5px;" class="fab fa-r-project fa-lg"></i> <b>programming</b>
 
-- <b>Quantitative, qualitative, and mixed method designs and analyses</b>
+- <b>Small- and large-scale survey design, administration, and research</b>
 
-- <b>Web app development and static/dynamic reporting using</b>
+- <b>Statistical modeling and analysis</b>
+
+- <b>Web application development and static/dynamic reporting using</b>
 <div class="holder">
 
 <div class="left">
-<img src='img/shiny-logo.png' alt='Shiny hex' width='70%'> 
+<img src='img/blogdown-logo.png' alt='Blogdown hex' width='70%'> 
 </div>
 
 <div class="middle">
-<img src='img/rmarkdown.png' alt='Rmarkdown hex' width='70%'> 
+<img src='img/rmarkdown.png' alt='Rmarkdown hex' width='70%'>
 </div>
 
 <div class="right">
-<img src='img/blogdown-logo.png' alt='Blogdown hex' width='70%'>
+<img src='img/shiny-logo.png' alt='Shiny hex' width='70%'>
 </div>
-
 </div>
 
 Main
@@ -172,14 +172,14 @@ University of Kansas
 - Authored detailed evaluation reports, catering to the requirements of diverse stakeholders.
 - Conducted research and deployed predictive statistical models aimed at enhancing student retention and graduation efforts.
 - Developed web applications using Shiny and Tableau, facilitating extraction, summarization, and visualization of data from the organization’s Oracle database.
-- Spearheaded and delivered presentations on findings from comprehensive qualitative, quantitative, and mixed-methods studies, both large and small.
+- Spearheaded comprehensive qualitative, quantitative, and mixed-methods studies and delivered presentations on findings.
 :::
 
 
 Select Evaluation Work {data-icon=chart-simple}
 --------------------------------------------------------------------------------
 
-### <i>Lead Program Evaluator & Methodologist</i><br> Healthy Start Initiative
+### <i>Lead Program Evaluator & Methodologist</i><br>Healthy Start Initiative ([*HRSA-19-049*](https://grants.hrsa.gov/2010/Web2External/Interface/Common/EHBDisplayAttachment.aspx?dm_rtc=16&dm_attid=d3c378a4-b07d-48e5-ab36-38f05a7eeb48) Total Award: *$5,470,000*)
 
 West Virginia University Research Corporation
 
@@ -191,11 +191,9 @@ Current - 2023
 - Building valid and reliable survey instruments to assess participant experiences.
 - Implementing process, monitoring, and impact evaluations of programmatic activities.
 - Utilizing mixed methods designs to study participant data.
-- Total Award: *$5,470,000*
-- [*HRSA-19-049*](https://grants.hrsa.gov/2010/Web2External/Interface/Common/EHBDisplayAttachment.aspx?dm_rtc=16&dm_attid=d3c378a4-b07d-48e5-ab36-38f05a7eeb48)
 :::
 
-### <i>Lead Program Evaluator & Mixed Methods Ananlyst</i><br>Teaching Science with Computational Thinking: Preparing Preservice Elementary Educators of the Future STEM Workforce
+### <i>Lead Program Evaluator & Mixed Methods Ananlyst</i><br>Teaching Science with Computational Thinking: Preparing Preservice Elementary Educators of the Future STEM Workforce ([*2019-NSF 2142274*](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2142274&HistoricalAwards=false) Total Award: *$294,958.00*)
 
 West Virginia University
 
@@ -207,11 +205,9 @@ Current - 2022
 - Applying mixed methods text analysis of written and interview data using thematic analysis and various machine learning methods.
 - Constructing and validating survey instruments used to assess progress and programmatic impact.
 - Implementing process and impact evaluations of program activities.
-- Total Award: *$294,958.00*
-- [*2019-NSF 2142274*](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2142274&HistoricalAwards=false)
 :::
 
-### <i>Program Evaluator & Data Scientist</i><br>WVCTSI: West Virginia Clinical and Translational Science Institute
+### <i>Program Evaluator & Data Scientist</i><br>WVCTSI: West Virginia Clinical and Translational Science Institute ([*2017-NIH 2U54GM104942-02*](https://reporter.nih.gov/project-details/9362155) Total Award: *$20,000,000*)
 
 West Virginia University
 
@@ -225,11 +221,9 @@ West Virginia University
 - Developed/validated items and distributing customized Qualtrics surveys built with CSS and Javascript.
 - Mentored future graduate social data scientists.
 - Pulled, wrangled, and visualized secondary data in R.
-- Total Award: *$20,000,000*
-- [*2017-NIH 2U54GM104942-02*](https://reporter.nih.gov/project-details/9362155)
 :::
 
-### <i>Lead Program Evaluator</i><br>GAUSSI: Generating, Analyzing, and Understanding Sensory and Sequencing Information: A Trans-Disciplinary Graduate Training Program in Biosensing and Computational Biology
+### <i>Lead Program Evaluator</i><br>GAUSSI: Generating, Analyzing, and Understanding Sensory and Sequencing Information: A Trans-Disciplinary Graduate Training Program in Biosensing and Computational Biology ([*2017-NSF 1450032*](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1450032&HistoricalAwards=false) Total Award: *$3,013,779*)
 
 Colorado State University
 
@@ -243,8 +237,6 @@ Colorado State University
 - Directed unstructured and semi-structured interviews and focus groups assessing participant experiences.
 - Implemented mixed methods evaluations to study program impacts on students and faculty.
 - Pulled, wrangled, and visualized secondary data.
-- Total Award: *$3,013,779*
-- [*2017-NSF 1450032*](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1450032&HistoricalAwards=false)
 :::
 
 Select Presentations and Talks {data-icon=chalkboard-user}
@@ -262,7 +254,7 @@ Select Presentations and Talks {data-icon=chalkboard-user}
 
 *American Evaluation Association Annual Conference*
 
-*virtual*
+&nbsp;&nbsp;*virtual*
 
 2020
 
@@ -279,7 +271,7 @@ Select Presentations and Talks {data-icon=chalkboard-user}
 Disclaimer {#disclaimer style="width: calc(var(--content-width) - var(--sidebar-width)); padding-left: var(--sidebar-horizontal-padding);"}
 --------------------------------------------------------------------------------
 
-Made in <i style="color:#3365B3;" class="fab fa-r-project"></i>: [Source code](https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-html.Rmd){target='_blank}
+Made with &nbsp;&nbsp;&nbsp;<i style="color:#3365B3; margin-left: -7px; margin-right: -5px;" class="fab fa-r-project"></i>&nbsp;&nbsp;: [Source code](https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-html.Rmd){target='_blank}
 
 
 Last updated on `r format(Sys.Date(), format="%B %d, %Y")`

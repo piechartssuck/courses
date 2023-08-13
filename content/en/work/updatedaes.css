@@ -13,7 +13,7 @@ color: #36454f;
 }
 
 :root {
-  /*  --sidebar-background-color: #eaf9f5; /* Make sidebar blue */
+  --sidebar-background-color: #faf8f6; /* Make sidebar color */
    /*--decorator-border: 2px solid #a2e2e2; change color and thickness of timeline */
 }
 
@@ -58,17 +58,17 @@ b::title{
 	font-weight: 700;
 }
 
-
 p::title {
 	text-align: justify;
 }
 
 aside{
   padding: 0in;
+  margin-top: -1in;
 }
 
 .aside i::before {
-    padding: 0.5em;
+  padding: 0.5em;
 }
 
 .center {
@@ -95,13 +95,14 @@ aside{
 
 .imontop {
   position: absolute;
-  top: 100px;
-  right: 46px;
+  top: -50px;
+  right: 50px;
 }
 
 .holder {
     width: 100%;
     display: flex;
+    justify-content: center;
     overflow:hidden;
     margin-top: -15%;
 }
@@ -110,4 +111,16 @@ aside{
     width: 30%;
     height:inherit;
     float:left;
+}
+
+.left{
+    margin-left: 2%;
+}
+
+.middle, .right{
+    margin-left: -15%;
+}
+
+.aside .level2{
+  margin-top: 0.3in;
 }

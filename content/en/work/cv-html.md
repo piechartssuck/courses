@@ -28,8 +28,7 @@ weight: NULL
 
 <div class="parent">
 
-<img class="imbehind" src='img/me_rb.png' alt='Me' width='65%' class='center'>
-<a href='cv.pdf' target='_blank'><img class="imontop" src='img/vita-dl-icon.png' alt='CV' width='20%' class='center'></a>
+<a href='cv.pdf' target='_blank'><img class="imontop" src='img/vita-dl-icon.png' alt='Resume' width='20%' class='center'></a>
 
 </div>
 
@@ -47,23 +46,25 @@ weight: NULL
 
 - <b>Data visualization</b>
 
-- <b>Designing and administering small- and large-scale surveys</b>
+- <b>Markup using</b> `\(\LaTeX\)`
 
-- <b>Modeling and analysis using statistics and machine learning</b>
+- <b>Program evaluations from planning to reporting</b>
 
-- <b>Planning and conducting program evaluations</b>
+- <b>Quantitative, qualitative, and mixed method studies</b>
 
-- <b>Programming and analysis in</b><i style="color:#3365B3;" class="fab fa-r-project fa-lg"></i> <b>with markup using</b> `\(\LaTeX\)`
+- <i style="color:#3365B3; margin-left: -7px; margin-right: -5px;" class="fab fa-r-project fa-lg"></i> <b>programming</b>
 
-- <b>Quantitative, qualitative, and mixed method designs and analyses</b>
+- <b>Small- and large-scale survey design, administration, and research</b>
 
-- <b>Web app development and static/dynamic reporting using</b>
+- <b>Statistical modeling and analysis</b>
+
+- <b>Web application development and static/dynamic reporting using</b>
 
   <div class="holder">
 
 <div class="left">
 
-<img src='img/shiny-logo.png' alt='Shiny hex' width='70%'>
+<img src='img/blogdown-logo.png' alt='Blogdown hex' width='70%'>
 
 </div>
 
@@ -75,7 +76,7 @@ weight: NULL
 
 <div class="right">
 
-<img src='img/blogdown-logo.png' alt='Blogdown hex' width='70%'>
+<img src='img/shiny-logo.png' alt='Shiny hex' width='70%'>
 
 </div>
 
@@ -151,7 +152,7 @@ University of Kansas
 - Authored detailed evaluation reports, catering to the requirements of diverse stakeholders.
 - Conducted research and deployed predictive statistical models aimed at enhancing student retention and graduation efforts.
 - Developed web applications using Shiny and Tableau, facilitating extraction, summarization, and visualization of data from the organization’s Oracle database.
-- Spearheaded and delivered presentations on findings from comprehensive qualitative, quantitative, and mixed-methods studies, both large and small.
+- Spearheaded comprehensive qualitative, quantitative, and mixed-methods studies and delivered presentations on findings.
 
 </div>
 
@@ -284,7 +285,7 @@ N/A
 
 ## Active Evaluations
 
-### Healthy Start Initiative
+### Healthy Start Initiative ([*HRSA-19-049*](https://grants.hrsa.gov/2010/Web2External/Interface/Common/EHBDisplayAttachment.aspx?dm_rtc=16&dm_attid=d3c378a4-b07d-48e5-ab36-38f05a7eeb48) Total Award: *\$5,470,000*)
 
 West Virginia University Research Corporation
 
@@ -296,10 +297,8 @@ Current - 2023
 - Building valid and reliable survey instruments to assess participant experiences.
 - Implementing process, monitoring, and impact evaluations of programmatic activities.
 - Utilizing mixed methods designs to study participant data.
-- Total Award: *\$5,470,000*
-- [*HRSA-19-049*](https://grants.hrsa.gov/2010/Web2External/Interface/Common/EHBDisplayAttachment.aspx?dm_rtc=16&dm_attid=d3c378a4-b07d-48e5-ab36-38f05a7eeb48)
 
-### Teaching Science with Computational Thinking: Preparing Preservice Elementary Educators of the Future STEM Workforce
+### Teaching Science with Computational Thinking: Preparing Preservice Elementary Educators of the Future STEM Workforce ([*2019-NSF 2142274*](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2142274&HistoricalAwards=false) Total Award: *\$294,958.00*)
 
 West Virginia University
 
@@ -311,12 +310,10 @@ Current - 2022
 - Applying mixed methods text analysis of written and interview data using thematic analysis and various machine learning methods.
 - Constructing and validating survey instruments used to assess progress and programmatic impact.
 - Implementing process and impact evaluations of program activities.
-- Total Award: *\$294,958.00*
-- [*2019-NSF 2142274*](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2142274&HistoricalAwards=false)
 
 ## Completed Evaluations
 
-### WVCTSI: West Virginia Clinical and Translational Science Institute
+### WVCTSI: West Virginia Clinical and Translational Science Institute ([*2017-NIH 2U54GM104942-02*](https://reporter.nih.gov/project-details/9362155) Total Award: *\$20,000,000*)
 
 West Virginia University
 
@@ -330,10 +327,8 @@ West Virginia University
 - Developed/validated items and distributing customized Qualtrics surveys built with CSS and Javascript.
 - Mentored future graduate social data scientists.
 - Pulled, wrangled, and visualized secondary data
-- Total Award: *\$20,000,000*
-- [*2017-NIH 2U54GM104942-02*](https://reporter.nih.gov/project-details/9362155)
 
-### Appalachian Gerontology Experiences - Advancing Diversity in Aging Research
+### Appalachian Gerontology Experiences - Advancing Diversity in Aging Research ([*2020-NIH 1R25AG059558-01A1*](https://reporter.nih.gov/search/gvYOStaGnUiejizdD2R25w/project-details/9793672) Total Award: *\$678,000*)
 
 West Virginia University
 
@@ -344,10 +339,8 @@ West Virginia University
 - <i>Lead Program Evaluator</i><br>
 - Developed and distributing customized Qualtrics surveys built with CSS and Javascript.
 - Performed various evaluative studies addressing program efficacy and engagement.
-- Total Award: *\$678,000*
-  -[*2020-NIH 1R25AG059558-01A1*](https://reporter.nih.gov/search/gvYOStaGnUiejizdD2R25w/project-details/9793672)
 
-### Research Initiative: A Holistic Cross-Disciplinary Project Experience as a Platform to Advance the Professional Formation of Engineers
+### Research Initiative: A Holistic Cross-Disciplinary Project Experience as a Platform to Advance the Professional Formation of Engineers ([*2019-NSF 1927232*](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1927232&HistoricalAwards=false) Total Award: *\$200,000*)
 
 West Virginia University
 
@@ -358,10 +351,8 @@ West Virginia University
 - <i>Methodological Advisor & Research Specialist</i><br>
 - Mentored engineering faculty and graduate students on the implementation of research methods.
 - Conducted quantitative and qualitative studies on undergraduate student experiences within grant related programs.
-- Total Award: *\$200,000*
-- [*2019-NSF 1927232*](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1927232&HistoricalAwards=false)
 
-### Stepping UP with Avenue: Progress Monitoring: A Software Suite Helping Teachers Improve Literacy Progress For Deaf/Hard Of Hearing Students
+### Stepping UP with Avenue: Progress Monitoring: A Software Suite Helping Teachers Improve Literacy Progress For Deaf/Hard Of Hearing Students (*2017-ED H327S170012* Total Award: *\$2,470,440*)
 
 Pennsylvania State University
 
@@ -371,10 +362,8 @@ Pennsylvania State University
 
 - <i>Lead Program Evaluator</i><br>
 - Administered product and program evaluations of existing tools and activities.
-- Total Award: *\$2,470,440*
-- *2017-ED H327S170012*
 
-### Cultivating Inclusive Identities of Engineers and Computer Scientists: Expanding Efforts to Infuse Inclusive Excellence in Undergraduate Curricula
+### Cultivating Inclusive Identities of Engineers and Computer Scientists: Expanding Efforts to Infuse Inclusive Excellence in Undergraduate Curricula ([*2017-NSF 1725880*](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1725880) Total Award: *\$2,000,000*)
 
 West Virginia University
 
@@ -385,10 +374,8 @@ West Virginia University
 - <i>Lead Program Evaluator</i><br>
 - Conducted personnel and program evaluations of existing members and interventions.
 - Created and implemented various text analysis methods.
-- Total Award: *\$2,000,000*
-- [*2017-NSF 1725880*](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1725880)
 
-### GAUSSI: Generating, Analyzing, and Understanding Sensory and Sequencing Information: A Trans-Disciplinary Graduate Training Program in Biosensing and Computational Biology
+### GAUSSI: Generating, Analyzing, and Understanding Sensory and Sequencing Information: A Trans-Disciplinary Graduate Training Program in Biosensing and Computational Biology ([*2017-NSF 1450032*](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1450032&HistoricalAwards=false) Total Award: *\$3,013,779*)
 
 Colorado State University
 
@@ -399,8 +386,6 @@ Colorado State University
 - <i>Lead Program Evaluator</i><br>
 - Conducted unstructured and semi-structured interviews and focus groups assessing participant experiences.
 - Implemented mixed methods evaluations to study program impacts on students and faculty.
-- Total Award: *\$3,013,779*
-- [*2017-NSF 1450032*](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1450032&HistoricalAwards=false)
 
 ## Presentations
 
@@ -422,13 +407,13 @@ Seidel, T. , Ferguson, C.F., & <b>Roy, A.R.</b>
 
 2022
 
-Roy, A.R., Ferguson, C.F., Curtis, R., & Babb-Richards, M.
+<b>Roy, A.R.</b>, Ferguson, C.F., Curtis, R., & Babb-Richards, M.
 
 ### These Aren’t Random Words Just Strung Together?: Using Machine Learning and Pretty Visualizations to Discover Topics in Articles.
 
 *American Evaluation Association Annual Conference*
 
-*virtual*
+  *virtual*
 
 2020
 
@@ -856,6 +841,6 @@ N/A
 
 ## Disclaimer
 
-Made in <i style="color:#3365B3;" class="fab fa-r-project"></i>: <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/cv-html.Rmd" target="&#39;_blank">Source code</a>
+Made with    <i style="color:#3365B3; margin-left: -7px; margin-right: -5px;" class="fab fa-r-project"></i>  : <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-html.Rmd" target="&#39;_blank">Source code</a>
 
 Last updated on August 13, 2023
