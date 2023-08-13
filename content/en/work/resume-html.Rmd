@@ -140,7 +140,7 @@ B.S. in Mathematics
 
 N/A
 
-Professional Experience {data-icon=suitcase}
+Professional Experience {data-icon=pen-to-square}
 --------------------------------------------------------------------------------
 
 ### <i>Assistant Professor</i>
@@ -154,9 +154,9 @@ West Virginia University
 ::: concise
 - Contributed to peer-reviewed publications by authoring and submitting scholarly papers.
 - Conducted rigorous evaluations of a variety of programs, projects, and grants, contributing to their optimization and effectiveness.
-- Designed and implemented dynamic and interactive surveys using HTML, CSS, and JavaScript in the Qualtrics platform.
-- Extracted, wrangled, and cleaned data from various remote sources; developed a range of visualizations from static to interactive for report embedding or dissemination, and built web apps in Shiny all within R/RStudio.
-- Instructed classes in evaluation, measurement, and research methods, emphasizing the application of data science techniques.
+- Designed and implemented dynamic and interactive surveys using HTML,CSS, and JavaScript in the Qualtrics platform.
+- Extracted, wrangled, and cleaned data from various remote sources; developed a range of static, active, and interactive visualizations for public reporting and/or dissemination to clients, and built web apps in Shiny.
+- Instructed classes in evaluation, measurement, research methods, and survey design with an emphasis on the application of data science techniques.
 - Mentored Masters and Doctoral students, guiding their academic pursuits and research activities.
 :::
 
@@ -176,7 +176,7 @@ University of Kansas
 :::
 
 
-Select Evaluations {data-icon=toggle-on}
+Select Evaluation Work {data-icon=chart-simple}
 --------------------------------------------------------------------------------
 
 ### <i>Lead Program Evaluator & Methodologist</i><br> Healthy Start Initiative
@@ -247,7 +247,7 @@ Colorado State University
 - [*2017-NSF 1450032*](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1450032&HistoricalAwards=false)
 :::
 
-Select Talks {data-icon=chalkboard-user}
+Select Presentations and Talks {data-icon=chalkboard-user}
 --------------------------------------------------------------------------------
 
 ### Best of Both Worlds: Affordances of Mixing Machine Learning and Qualitative Content Analysis

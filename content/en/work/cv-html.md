@@ -1,7 +1,7 @@
 ---
 title: "Abhik Ranjan Roy"
 author: Abhik Ranjan Roy
-date: "2023-07-27"
+date: "2023-08-13"
 output:
   pagedown::html_resume:
     self_contained: true
@@ -131,9 +131,9 @@ West Virginia University
 
 - Contributed to peer-reviewed publications by authoring and submitting scholarly papers.
 - Conducted rigorous evaluations of a variety of programs, projects, and grants, contributing to their optimization and effectiveness.
-- Designed and implemented dynamic and interactive surveys using HTML, CSS, and JavaScript in the Qualtrics platform.
-- Extracted, wrangled, and cleaned data from various remote sources; developed a range of visualizations from static to interactive for report embedding or dissemination, and built web apps in Shiny all within R/RStudio.
-- Instructed classes in evaluation, measurement, and research methods, emphasizing the application of data science techniques.
+- Designed and implemented dynamic and interactive surveys using HTML,CSS, and JavaScript in the Qualtrics platform.
+- Extracted, wrangled, and cleaned data from various remote sources; developed a range of static, active, and interactive visualizations for public reporting and/or dissemination to clients, and built web apps in Shiny.
+- Instructed classes in evaluation, measurement, research methods, and survey design with an emphasis on the application of data science techniques.
 - Mentored Masters and Doctoral students, guiding their academic pursuits and research activities.
 
 </div>
@@ -858,4 +858,4 @@ N/A
 
 Made in <i style="color:#3365B3;" class="fab fa-r-project"></i>: <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/cv-html.Rmd" target="&#39;_blank">Source code</a>
 
-Last updated on July 27, 2023
+Last updated on August 13, 2023
