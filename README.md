@@ -1,4 +1,4 @@
-A full list of univeristy level courses I taught as an Assistant Professor mostly written in R
+A full list of university level courses I taught as an Assistant Professor mostly written in R
 
 - EDP 611: Measurement/Evaluation in Educational Psychology
     - [Course site](https://edp611.asocialdatascientist.com)
