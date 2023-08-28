@@ -1,12 +1,15 @@
 A full list of university level courses I taught as an Assistant Professor mostly written in blogdown
 
-<p align="center">
   <img alt="EDP 611: Measurement/Evaluation in Educational Psychology" src="https://github.com/drabhikroy/Courses/assets/9486864/ba9baaa7-dc3b-476b-8f88-b4bd60fe6986" width="150">
+  
 &nbsp; &nbsp; &nbsp; &nbsp;
-   <a href="https://edp611.asocialdatascientist.com"><img alt="EDP 611: Measurement/Evaluation in Educational Psychology course site" src="https://github.com/drabhikroy/Courses/assets/9486864/ef6b1b84-9f9a-435e-90e4-6f17cc1402c3" width="75"></a>
+
+[<img alt="alt_text" width="100px" src="https://github.com/drabhikroy/Courses/assets/9486864/f779f18b-2ddd-44ab-aa1c-ac4f2aa1365d" />](https://www.google.com/) [<img alt="alt_text" width="100px" src="https://github.com/drabhikroy/Courses/assets/9486864/f779f18b-2ddd-44ab-aa1c-ac4f2aa1365d" />](https://www.google.com/) [<img alt="alt_text" width="100px" src="https://github.com/drabhikroy/Courses/assets/9486864/f779f18b-2ddd-44ab-aa1c-ac4f2aa1365d" />](https://www.google.com/) 
+
   &nbsp; &nbsp; &nbsp; &nbsp;
+  
   <a href="https://github.com/drabhikroy/Courses/tree/edp611"><img alt="EDP 611: Measurement/Evaluation in Educational Psychology Github site" src="https://github.com/drabhikroy/Courses/assets/9486864/f779f18b-2ddd-44ab-aa1c-ac4f2aa1365d" width="55"></a>
-</p>
+
 
 
 
