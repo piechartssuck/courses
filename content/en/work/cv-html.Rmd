@@ -53,8 +53,6 @@ Contact Information {#contact}
 Expertise {#skills}
 --------------------------------------------------------------------------------
 
-- <b>Content, cluster, and social network analysis</b>
-
 - <b>Data visualization</b> 
 
 - <b>Markup using</b> $\LaTeX$
@@ -65,9 +63,13 @@ Expertise {#skills}
 
 - <i style="color:#3365B3; margin-left: -7px; margin-right: -5px;" class="fab fa-r-project fa-lg"></i> <b>programming</b>
 
-- <b>Small- and large-scale survey design, administration, and research</b>
+- <b>Social network analysis</b>
+
+- <b>Survey design, administration, and research</b>
 
 - <b>Statistical modeling and analysis</b>
+
+- <b>Text analytics</b>
 
 - <b>Web application development and static/dynamic reporting using</b>
 <div class="holder">
@@ -137,12 +139,12 @@ West Virginia University
 2023 - 2016
 
 ::: concise
-- Contributed to peer-reviewed publications by authoring and submitting scholarly papers.
-- Conducted rigorous evaluations of a variety of programs, projects, and grants, contributing to their optimization and effectiveness.
-- Designed and implemented dynamic and interactive surveys using HTML,CSS, and JavaScript in the Qualtrics platform.
-- Extracted, wrangled, and cleaned data from various remote sources; developed a range of static, active, and interactive visualizations for public reporting and/or dissemination to clients, and built web apps in Shiny.
-- Instructed classes in evaluation, measurement, research methods, and survey design with an emphasis on the application of data science techniques.
-- Mentored Masters and Doctoral students, guiding their academic pursuits and research activities.
+- Authored and submitted 15 peer-reviewed publications, contributing to various fields including program evaluation.
+- Conducted over 20 rigorous evaluations leading to increases in program effectiveness.
+- Designed and deployed interactive surveys using HTML, CSS, and JavaScript on the Qualtrics platform, reaching up to 4,000 respondents.
+- Extracted and cleaned data from multiple remote sources; developed and published 20+ interactive visualizations for public reporting and client dissemination using Rmarkdown and Shiny.
+- Mentored 4 Masters and Doctoral students, guiding them to successful completion of their academic research projects.
+- Taught courses in evaluation, measurement, research methods, and survey design, with a focus on data science techniques, to over 500 students.
 :::
 
 ### Data Analyst
@@ -154,12 +156,11 @@ University of Kansas
 2016 - 2014
 
 ::: concise
-- Authored detailed evaluation reports, catering to the requirements of diverse stakeholders.
-- Conducted research and deployed predictive statistical models aimed at enhancing student retention and graduation efforts.
-- Developed web applications using Shiny and Tableau, facilitating extraction, summarization, and visualization of data from the organization’s Oracle database.
-- Spearheaded comprehensive qualitative, quantitative, and mixed-methods studies and delivered presentations on findings.
-:::
-
+- Conducted comprehensive studies using qualitative, quantitative, and mixed-methods approaches, and presented findings to senior management, influencing policy changes.
+- Crafted tailored evaluations that met the needs of diverse stakeholders, resulting in actionable insights for multiple non-academic departments.
+- Designed and administered surveys to over 300 university students and staff, achieving response rates ranging from 47% - 91%.
+- Engineered web applications using R and Tableau, streamlining data extraction and visualization processes.
+- Spearheaded research initiatives that increased student retention rates by 3% - 5% through predictive statistical modeling.
 
 Select Publications {data-icon=file-text-o}
 --------------------------------------------------------------------------------
