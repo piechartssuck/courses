@@ -193,7 +193,7 @@ Current - 2023
 ::: concise
 - Developed and validated survey instruments, assessing experiences of over 50 participants.
 - Conducted process, monitoring, and impact evaluations.
-- Employed mixed methods designs to analyze longitudinal and cross-sectional data on motherhood smoking cessation and fatherhood experiences, respectively.
+- Employed mixed methods designs to independently study longitudinal and cross-sectional data on the smoking cessation efforts of mothers and experiences of new and/or distant fathers.
 :::
 
 ### <i>Lead Program Evaluator & Mixed Methods Ananlyst</i><br>Teaching Science with Computational Thinking: Preparing Preservice Elementary Educators of the Future STEM Workforce ([*2019-NSF 2142274*](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2142274&HistoricalAwards=false) Total Award: *$294,958.00*)
@@ -223,7 +223,7 @@ West Virginia University
 - Authored quarterly and internal/external annual evaluation reports for dissemination via hard copy and interactive R.
 - Conducted local and multi-site multi-cluster evaluation studies, impacting 5 different core units.
 - Created numerous data visualizations and 4+ Shiny applications for public and internal outcome data exploration.
-- Developed and distributed customized Qualtrics surveys built with CSS and Javascript, reaching 5,000+ individuals.
+- Developed and distributed customized Qualtrics surveys built with CSS and JavaScript, reaching 5,000+ individuals.
 - Mentored 6 future graduate social data scientists, guiding them through successful research projects.
 :::
 
@@ -238,7 +238,7 @@ Colorado State University
 ::: concise
 - Conducted process evaluations for 4 grant-related programs, leading to gains in member tracking, program efficiency, and participant satisfaction.
 - Constructed assessment and longitudinal data visualizations, supporting inferential statistical analyses to study trends and assist in recruitment and retention efforts.
-- Developed and distributed customized Qualtrics surveys built with CSS and Javascript, achieving a 95% response rate.
+- Developed and distributed customized Qualtrics surveys built with CSS and JavaScript, achieving a 95% response rate.
 - Directed unstructured and semi-structured interviews and focus groups, gathering qualitative data from 100+ participants.
 - Extracted, cleaned, and visualized secondary data for various research objectives.
 - Implemented mixed methods evaluations, resulting in 9 published reports that influenced program policies and were used for reporting to the funding agency.

@@ -341,7 +341,7 @@ West Virginia University
 - <i>Program Evaluator & Data Scientist</i><br>
 - Analyzed large data sets using frequentist and Bayesian methods.
 - Conducted local and multi-site mutli-cluster evaluation studies.
-- Developed/validated items and distributing customized Qualtrics surveys built with CSS and Javascript.
+- Developed/validated items and distributing customized Qualtrics surveys built with CSS and JavaScript.
 - Mentored future graduate social data scientists.
 - Pulled, wrangled, and visualized secondary data
 
@@ -354,7 +354,7 @@ West Virginia University
 2020 - 2021
 
 - <i>Lead Program Evaluator</i><br>
-- Developed and distributing customized Qualtrics surveys built with CSS and Javascript.
+- Developed and distributing customized Qualtrics surveys built with CSS and JavaScript.
 - Performed various evaluative studies addressing program efficacy and engagement.
 
 ### Research Initiative: A Holistic Cross-Disciplinary Project Experience as a Platform to Advance the Professional Formation of Engineers ([*2019-NSF 1927232*](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1927232&HistoricalAwards=false) Total Award: *$200,000*)
