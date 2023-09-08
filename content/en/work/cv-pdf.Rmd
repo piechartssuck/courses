@@ -979,6 +979,6 @@ N/A
 Disclaimer {#disclaimer style="width: calc(var(--content-width) - var(--sidebar-width)); padding-left: var(--sidebar-horizontal-padding);"}
 --------------------------------------------------------------------------------
 
-Made with &nbsp;&nbsp;&nbsp;<i style="color:#3365B3; margin-left: -7px; margin-right: -5px;" class="fab fa-r-project"></i>&nbsp;&nbsp;: [Source code](https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-html.Rmd){target='_blank}
+<sup><a href="#custom-footnote"><a></sup>
 
-Last updated on `r format(Sys.Date(), format="%B %d, %Y")`
+<div id="custom-footnote">Made with &nbsp;&nbsp;&nbsp;<i style="color:#3365B3; margin-top: 3px; margin-left: -7px; margin-right: -5px;" class="fab fa-r-project"></i>&nbsp;&nbsp;: [Source code](https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-html.Rmd){target='_blank}. Last updated on `r format(Sys.Date(), format="%B %d, %Y")`</div> 

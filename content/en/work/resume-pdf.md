@@ -263,4 +263,10 @@ Colorado State University
 
 ## Disclaimer
 
+<sup><a href="#custom-footnote"><a></sup>
+
+<div id="custom-footnote">
+
 Made with    <i style="color:#3365B3; margin-top: 3px; margin-left: -7px; margin-right: -5px;" class="fab fa-r-project"></i>  : <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-html.Rmd" target="&#39;_blank">Source code</a>. Last updated on September 07, 2023
+
+</div>
