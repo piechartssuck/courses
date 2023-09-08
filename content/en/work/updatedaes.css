@@ -25,14 +25,22 @@ h2{
 	text-transform: uppercase;
 }
 
-
 h3{
     font-family: 'Roboto Condensed', sans-serif;
   	font-weight: 300;
   	color: #36454f;
-
 }
 
+.indented-header {
+    margin-left: 20px;
+    font-style: italic;
+    display: block;
+}
+
+.indented-title {
+    margin-left: 10px;
+    display: block;
+}
 
 a {
 	color: #095a95;
@@ -50,6 +58,7 @@ a:hover {
 
 .decorator::after {
 	background-color: #536878;
+  left: calc(var(--decorator-outer-offset-left) + var(--decorator-border-width) + 0.1px);
 }
 
 
@@ -71,6 +80,10 @@ aside{
   padding: 0.5em;
 }
 
+.aside .level2{
+  margin-top: 0.3in;
+}
+
 .center {
   display: block;
   margin-left: auto;
@@ -79,6 +92,19 @@ aside{
 
 .details, .date {
   break-inside: avoid-column;
+}
+
+.details .location{
+  float: right;
+  display: block;
+}
+
+.details .indented-section{
+    padding-left: 10px;
+}
+
+.fa-comment {
+    color: #ffffff; /* Change this to the color you want for the comment icon */
 }
 
 .parent {
@@ -121,6 +147,13 @@ aside{
     margin-left: -15%;
 }
 
-.aside .level2{
-  margin-top: 0.3in;
+p + ul {
+    margin-top: -10px;
+}
+
+.main-block:not(.concise) .details div {
+  margin-top: 0.25in;
+  margin-right: 0px;
+  margin-bottom: 0.1in;
+  margin-left: 0px;
 }

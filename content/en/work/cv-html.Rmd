@@ -11,7 +11,7 @@ weight: NULL
 ---
 
 <script src="//yihui.org/js/math-code.js" defer></script>
-<!-- Just one possible MathJax CDN below. You may use others. -->
+
 <script defer
   src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
@@ -53,7 +53,7 @@ Contact Information {#contact}
 Expertise {#skills}
 --------------------------------------------------------------------------------
 
-- <b>Data visualization</b> 
+- <b>Data visualization</b>
 
 - <b>Markup using</b> $\LaTeX$
 
@@ -75,7 +75,7 @@ Expertise {#skills}
 <div class="holder">
 
 <div class="left">
-<img src='img/blogdown-logo.png' alt='Blogdown hex' width='70%'> 
+<img src='img/blogdown-logo.png' alt='Blogdown hex' width='70%'>
 </div>
 
 <div class="middle">
@@ -93,8 +93,7 @@ Main
 Dr. Abhik Roy {#title}
 --------------------------------------------------------------------------------
 
-
-Education {data-icon=graduation-cap data-concise=true}
+<i class="fa-solid fa-graduation-cap" data-fa-mask="fa-solid fa-comment" style="background:white"></i> Education {data-icon=NULL}
 --------------------------------------------------------------------------------
 
 ### Western Michigan University
@@ -127,7 +126,7 @@ N/A
 
 *Terminal Study*. 4-Cell Embedding on a $n$-genus Torus
 
-Professional Experience {data-icon=pen-to-square}
+<i class="fa-solid fa-pen-to-square" data-fa-mask="fa-solid fa-comment" style="background:white"></i>  Professional Experience {data-icon=NULL}
 --------------------------------------------------------------------------------
 
 ### Assistant Professor
@@ -139,7 +138,7 @@ West Virginia University
 2023 - 2016
 
 ::: concise
-- Authored and submitted 15 peer-reviewed publications, contributing to various fields including program evaluation.
+- Authored and co-authored 15 peer-reviewed publications, contributing to various fields including program evaluation.
 - Conducted over 20 rigorous evaluations leading to increases in program effectiveness.
 - Designed and deployed interactive surveys using HTML, CSS, and JavaScript on the Qualtrics platform, reaching up to 4,000 respondents.
 - Extracted and cleaned data from multiple remote sources; developed and published 20+ interactive visualizations for public reporting and client dissemination using Rmarkdown and Shiny.
@@ -161,11 +160,12 @@ University of Kansas
 - Designed and administered surveys to over 300 university students and staff, achieving response rates ranging from 47% - 91%.
 - Engineered web applications using R and Tableau, streamlining data extraction and visualization processes.
 - Spearheaded research initiatives that increased student retention rates by 3% - 5% through predictive statistical modeling.
+:::
 
-Select Publications {data-icon=file-text-o}
+<i class="fa-solid fa-file-text-o" data-fa-mask="fa-solid fa-comment" style="background:white"></i>  Select Publications {data-icon=NULL}
 --------------------------------------------------------------------------------
 
-### Is it accessible? Preservice teachers’ access to computational thinking.
+### Teaching science via computational thinking? Enabling future science teachers’ access to computational thinking.
 
 *Contemporary Issues in Technology and Teacher Education*
 
@@ -173,9 +173,9 @@ N/A
 
 2023
 
-Kale U., Kooken, A., Yuan, J., & <b>Roy, A.</b> (accepted)
+Kale U., Kooken, A., Yuan, J., & <b>Roy, A.</b> ([<i>doi pending</i>](https://citejournal.org/volume-23/issue-3-23/science/teaching-science-via-computational-thinking-enabling-future-science-teachers-access-to-computational-thinking/))
 
-### Program Evaluation Standards for Utility Facilitate Stakeholder Internalization of Evaluative Thinking in the West Virginia Clinical Translational Science Institute
+### Program evaluation standards for utility facilitate stakeholder internalization of evaluative thinking in the West Virginia Clinical Translational Science Institute.
 
 *Journal of Multidisciplinary Evaluation*
 
@@ -186,7 +186,7 @@ N/A
 Curtis, R., <b>Roy, A.</b>, Lewis, N., Dooty, E. N., & Mikalik, T.
 [https://journals.sfu.ca/jmde/index.php/jmde_1/article/view/831](https://journals.sfu.ca/jmde/index.php/jmde_1/article/view/831)
 
-### Thinking Processes in Code.org: A Relational Analysis Approach to Computational Thinking Computer Science Education
+### Thinking processes in code.org: A relational analysis approach to computational thinking computer science education.
 
 *Computer Science Education*
 
@@ -196,15 +196,15 @@ N/A
 
 Kale, U., Yuan, J., & <b>Roy, A.</b> [https://doi.org/10.1080/08993408.2022.2145549](https://doi.org/10.1080/08993408.2022.2145549)
 
-### There’s So Much to Do and Not Enough Time to Do It! A Case for Sentiment Analysis to Derive Meaning From Open Text Using Student Reflections of Engineering Activities.
+### There’s so much to do and not enough time to do it! A case for sentiment analysis to derive meaning from open text using student reflections of engineering activities.
 
 *American Journal of Evaluation, 42* (4), 559–576.
 
 N/A
 
-2021 
+2021
 
-<b>Roy, A.</b>, & Rambo-Hernandez, K.E. https://doi.org/10.1177/1098214020962576
+<b>Roy, A.</b>, & Rambo-Hernandez, K.E. [https://doi.org/10.1177/1098214020962576](https://doi.org/10.1177/1098214020962576)
 
 ### To design or to integrate? Instructional design versus technology integration in developing learning interventions.
 
@@ -216,7 +216,7 @@ N/A
 
 Kale, U., <b>Roy, A.</b> & Yuan, J. [https://doi.org/10.1007/s11423-020-09771-8](https://doi.org/10.1007/s11423-020-09771-8)
 
-### Using Interactive Theater to Promote Inclusive Behaviors in Teams for First-year Engineering Students: A Sustainable Approach.
+### Using interactive theater to promote inclusive behaviors in teams for first-year engineering students: A sustainable approach.
 
 *Development of A Holistic Cross-Disciplinary Project Course Experience as a Research Platform for the Professional Formation of Engineers.*
 
@@ -234,7 +234,7 @@ N/A
 
 2018
 
-Richard-Babb, M., Curtis, R., Ratcliff, B., <b>Roy, A.R.</b>, & Mikalik, T. https://doi.org/10.1021/acs.jchemed.7b00829 
+Richard-Babb, M., Curtis, R., Ratcliff, B., <b>Roy, A.R.</b>, & Mikalik, T. [https://doi.org/10.1021/acs.jchemed.7b00829](https://doi.org/10.1021/acs.jchemed.7b00829)
 
 ### To go virtual or not to go virtual, that is the question: A comparative study of face-to-face versus virtual laboratories in a physical science course.
 
@@ -244,7 +244,7 @@ N/A
 
 2018
 
-Miller, T.A., Carver, J.S., & <b>Roy, A.R.</b> https://www.jstor.org/stable/26616271
+Miller, T.A., Carver, J.S., & <b>Roy, A.R.</b> [https://www.jstor.org/stable/26616271](https://doi.org/10.1021/acs.jchemed.7b00829)
 
 
 ### Reasoning-and-proving in algebra: The case of two reform-oriented U.S. textbooks.
@@ -255,7 +255,7 @@ N/A
 
 2014
 
-Davis, J.D., Smith, D.O., <b>Roy, A.R.</b>, & Bilgic, Y. K. https://doi.org/10.1016/j.ijer.2013.06.012
+Davis, J.D., Smith, D.O., <b>Roy, A.R.</b>, & Bilgic, Y. K. [https://doi.org/10.1016/j.ijer.2013.06.012](https://doi.org/10.1021/acs.jchemed.7b00829)
 
 
 ### What’s in a Scriven number?
@@ -266,10 +266,9 @@ N/A
 
 2012
 
-<b>Roy, A.R.</b>, Hobson, K.A., & Coryn, C.L.S. https://doi.org/10.56645/jmde.v8i19.372
+<b>Roy, A.R.</b>, Hobson, K.A., & Coryn, C.L.S. [https://doi.org/10.56645/jmde.v8i19.372](https://doi.org/10.1021/acs.jchemed.7b00829)
 
-
-Book Chapters {data-icon=book}
+<i class="fa-solid fa-book" data-fa-mask="fa-solid fa-comment" style="background:white"></i> Book Chapters {data-icon=NULL}
 --------------------------------------------------------------------------------
 
 ### Social network analysis: Finding meaning in connections.
@@ -283,7 +282,7 @@ N/A
 <b>Roy, A.R.</b> 978-1-53612-734-8
 
 
-Invited Contributions {data-icon=file-text-o}
+<i class="fa-solid fa-pencil-alt" data-fa-mask="fa-solid fa-comment" style="background:white"></i>  Invited Contributions {data-icon=NULL}
 --------------------------------------------------------------------------------
 
 ### What is a Scriven number?
@@ -296,119 +295,175 @@ N/A
 
 <b>Roy, A.R.</b>, Hobson, K.A., & Coryn, C.L.S.
 
-
-Active Evaluations {data-icon=toggle-on}
+<i class="fa-solid fa-shapes" data-fa-mask="fa-solid fa-comment" style="background:white"></i>  Evaluations {data-icon=NULL}
 --------------------------------------------------------------------------------
 
-### Healthy Start Initiative ([*HRSA-19-049*](https://grants.hrsa.gov/2010/Web2External/Interface/Common/EHBDisplayAttachment.aspx?dm_rtc=16&dm_attid=d3c378a4-b07d-48e5-ab36-38f05a7eeb48) Total Award: *$5,470,000*)
+<i class="fa-solid fa-toggle-on" data-fa-mask="fa-solid fa-comment" style="background:white"></i> <span class="indented-title" style="font-size: 0.90rem;">Active</span> {data-icon=NULL}
+--------------------------------------------------------------------------------
 
-West Virginia University Research Corporation
+### <span class="indented-title"><i>Lead Program Evaluator & Methodologist</i> - Healthy Start Initiative ([*HRSA-19-049*](https://grants.hrsa.gov/2010/Web2External/Interface/Common/EHBDisplayAttachment.aspx?dm_rtc=16&dm_attid=d3c378a4-b07d-48e5-ab36-38f05a7eeb48) Total Award: *$5,470,000*)</span>
+
+<span class="indented-title">West Virginia University Research Corporation</span>
 
 &nbsp;&nbsp;Morgantown, WV
 
 Current - 2023
 
-- <i>Lead Program Evaluator & Methodologist</i><br> 
-- Building valid and reliable survey instruments to assess participant experiences.
-- Implementing process, monitoring, and impact evaluations of programmatic activities.
-- Utilizing mixed methods designs to study participant data.
+<div class="indented-section">
 
-### Teaching Science with Computational Thinking: Preparing Preservice Elementary Educators of the Future STEM Workforce ([*2019-NSF 2142274*](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2142274&HistoricalAwards=false) Total Award: *$294,958.00*)
+::: concise
+- Conducted process, monitoring, and impact evaluations at the program level.
+- Designed and validated survey tools, evaluating the experiences of more than 50 participants.
+- Generated two comprehensive internal evaluation documents and prepared an evaluation proposal aimed at federal funding renewal.
+- Utilized a mixed-methods design to independently analyze both longitudinal and cross-sectional data, focusing on the smoking cessation efforts of mothers and the experiences of new or distant caretakers/fathers.
+:::
 
-West Virginia University
+</div>
+
+### <span class="indented-title"><i>Program Evaluator & Mixed Methods Analyst</i> - Teaching Science with Computational Thinking: Preparing Preservice Elementary Educators of the Future STEM Workforce ([*2019-NSF 2142274*](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2142274&HistoricalAwards=false) Total Award: *$294,958.00*)</span>
+
+<span class="indented-title">West Virginia University</span>
 
 &nbsp;&nbsp;Morgantown, WV
 
 Current - 2022
 
-- <i>Lead Program Evaluator & Mixed Methods Analyst</i><br>
-- Applying mixed methods text analysis of written and interview data using thematic analysis and various machine learning methods.
-- Constructing and validating survey instruments used to assess progress and programmatic impact.
-- Implementing process and impact evaluations of program activities.
+<div class="indented-section">
 
+::: concise
+- Administered process evaluations for all program activities.
+- Created and employed a longitudinal mixed-method study to reduce and analyze more than 50 open-ended survey responses and six interview session transcripts, leveraging thematic/content analyses and techniques including HDBSCAN/t-SNE, k-Means, and PCA.
+- Designed and validated two survey tools for assessing progress and evaluating programmatic impact.
+- Produced one in-depth internal evaluation document and crafted evaluation summaries for federal reporting purposes.
+:::
 
-Completed Evaluations {data-icon=toggle-off}
+</div>
+
+<i class="fa-solid fa-toggle-off" data-fa-mask="fa-solid fa-comment" style="background:white"></i> <span class="indented-title" style="font-size: 0.90rem;">Completed</span> {data-icon=NULL}
 --------------------------------------------------------------------------------
 
-### WVCTSI: West Virginia Clinical and Translational Science Institute ([*2017-NIH 2U54GM104942-02*](https://reporter.nih.gov/project-details/9362155) Total Award: *$20,000,000*)
+### <span class="indented-title"><i>Community Program Evaluator & Data Scientist</i> - WVCTSI: West Virginia Clinical and Translational Science Institute ([*2017-NIH 2U54GM104942-02*](https://reporter.nih.gov/project-details/9362155) Total Award: *$20,000,000*)</span>
 
-West Virginia University
+<span class="indented-title">West Virginia University</span>
 
 &nbsp;&nbsp;Morgantown, WV
 
-2022 - 2017 
+2022 - 2017
 
-- <i>Program Evaluator & Data Scientist</i><br>
-- Analyzed large data sets using frequentist and Bayesian methods.
-- Conducted local and multi-site mutli-cluster evaluation studies.
-- Developed/validated items and distributing customized Qualtrics surveys built with CSS and JavaScript.
-- Mentored future graduate social data scientists.
-- Pulled, wrangled, and visualized secondary data
+<div class="indented-section">
 
-### Appalachian Gerontology Experiences - Advancing Diversity in Aging Research ([*2020-NIH 1R25AG059558-01A1*](https://reporter.nih.gov/search/gvYOStaGnUiejizdD2R25w/project-details/9793672) Total Award: *$678,000*)
+::: concise
+- Analyzed large datasets using frequentist and Bayesian methods, influencing the direction and activities of 8 programs.
+- Authored quarterly and internal/external annual evaluation reports for dissemination via hard copy and interactive R.
+- Conducted local and multi-site multi-cluster evaluation studies, impacting 5 different core units.
+- Created numerous data visualizations and 4+ Shiny applications for public and internal outcome data exploration.
+- Developed and distributed customized Qualtrics surveys built with CSS and JavaScript, reaching 5,000+ individuals.
+- Generated or contributed to nine comprehensive internal evaluation documents in both print and interactive digital formats, and prepared summaries for external stakeholders and federal reporting.
+- Mentored 6 future graduate social data scientists, guiding them through successful research projects.
+:::
 
-West Virginia University
+</div>
+
+### <span class="indented-title"><i>Program Evaluator</i> - Appalachian Gerontology Experiences - Advancing Diversity in Aging Research ([*2020-NIH 1R25AG059558-01A1*](https://reporter.nih.gov/search/gvYOStaGnUiejizdD2R25w/project-details/9793672) Total Award: *$678,000*)</span>
+
+<span class="indented-title">West Virginia University</span>
 
 &nbsp;&nbsp;Morgantown, WV
 
 2020 - 2021
 
-- <i>Lead Program Evaluator</i><br>
-- Developed and distributing customized Qualtrics surveys built with CSS and JavaScript.
-- Performed various evaluative studies addressing program efficacy and engagement.
+<div class="indented-section">
 
-### Research Initiative: A Holistic Cross-Disciplinary Project Experience as a Platform to Advance the Professional Formation of Engineers ([*2019-NSF 1927232*](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1927232&HistoricalAwards=false) Total Award: *$200,000*)
+::: concise
+- Developed and distributed two customized interactive surveys using Qualtrics, enhanced with CSS and JavaScript, to gather feedback on programmatic activities from a specific group of 24 students.
+- Spearheaded three distinct evaluative studies focusing on student efficacy, engagement, and motivation.
+- Produced an external evaluation summary for federal reporting.
+:::
 
-West Virginia University
+</div>
+
+### <span class="indented-title"><i>Research Methods Advisor & Specialist</i> - Research Initiative: A Holistic Cross-Disciplinary Project Experience as a Platform to Advance the Professional Formation of Engineers ([*2019-NSF 1927232*](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1927232&HistoricalAwards=false) Total Award: *$200,000*)</span>
+
+<span class="indented-title">West Virginia University</span>
 
 &nbsp;&nbsp;Morgantown, WV
 
-2020 - 2022
+<span class="indented-title">2020 - 2022</span>
 
-- <i>Methodological Advisor & Research Specialist</i><br>
-- Mentored engineering faculty and graduate students on the implementation of research methods.
-- Conducted quantitative and qualitative studies on undergraduate student experiences within grant related programs.
+<div class="indented-section">
 
-### Stepping UP with Avenue: Progress Monitoring: A Software Suite Helping Teachers Improve Literacy Progress For Deaf/Hard Of Hearing Students (*2017-ED H327S170012* Total Award: *$2,470,440*)
+::: concise
+- Conducted longitudinal studies on the experiences of 30 undergraduate students in specialized interdisciplinary courses that integrated social science and engineering, using both surveys and focus group discussions.
+- Mentored 10 engineering faculty members and graduate students in the implementation of research methodologies.
+:::
 
-Pennsylvania State University
+</div>
+
+### <span class="indented-title"><i>Program Evaluator</i> - Stepping UP with Avenue: Progress Monitoring: A Software Suite Helping Teachers Improve Literacy Progress For Deaf/Hard Of Hearing Students (*2017-ED H327S170012* Total Award: *$2,470,440*)</span>
+
+<span class="indented-title">Pennsylvania State University</span>
 
 &nbsp;&nbsp;State College, PA
 
 2018 - 2017
 
-- <i>Lead Program Evaluator</i><br>
-- Administered product and program evaluations of existing tools and activities.
+<div class="indented-section">
 
-### Cultivating Inclusive Identities of Engineers and Computer Scientists: Expanding Efforts to Infuse Inclusive Excellence in Undergraduate Curricula ([*2017-NSF 1725880*](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1725880) Total Award: *$2,000,000*)
+::: concise
+- Administered in-depth evaluations of five tools designed for assessment and engagement of the deaf and hard of hearing.
+- Conducted a multi-site, multi-cluster evaluation on a large scale for all programmatic activities.
+- Produced a detailed external evaluation brief for federal reporting.
+:::
 
-West Virginia University
+</div>
+
+### <span class="indented-title"><i>Lead Program Evaluator</i> - Cultivating Inclusive Identities of Engineers and Computer Scientists: Expanding Efforts to Infuse Inclusive Excellence in Undergraduate Curricula ([*2017-NSF 1725880*](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1725880) Total Award: *$2,000,000*)</span>
+
+<span class="indented-title">West Virginia University</span>
 
 &nbsp;&nbsp;Morgantown, WV
 
 2018 - 2017
 
-- <i>Lead Program Evaluator</i><br>
-- Conducted personnel and program evaluations of existing members and interventions.
-- Created and implemented various text analysis methods.
+<div class="indented-section">
 
-### GAUSSI: Generating, Analyzing, and Understanding Sensory and Sequencing Information: A Trans-Disciplinary Graduate Training Program in Biosensing and Computational Biology ([*2017-NSF 1450032*](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1450032&HistoricalAwards=false) Total Award: *$3,013,779*)
+::: concise
+- Administered longitudinal surveys to over 50 participating faculty members to gauge expectations, gather feedback for improvement, and monitor shifts in DEI attitudes and perceptions.
+- Applied longitudinal NLP text mining techniques such as concordance, LDA topic modeling, and sentiment analysis to analyze and summarize feedback from over 3,000 first-year engineering students concerning grant-related class activities.
+- Contributed to the creation of more than 10 journal publications and academic conference presentation materials.
+- Developed more than 150 static and interactive data visualizations for stakeholder exploration, both internal and external reporting, as well as for presentations and publications.
+- Evaluated all four principal investigators through personnel assessments.
+- Produced two in-depth internal evaluation documents and crafted summaries for external stakeholders and federal reporting purposes.
+:::
 
-Colorado State University
+</div>
+
+### <span class="indented-title"><i>Program Evaluator</i> - GAUSSI: Generating, Analyzing, and Understanding Sensory and Sequencing Information: A Trans-Disciplinary Graduate Training Program in Biosensing and Computational Biology ([*2017-NSF 1450032*](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1450032&HistoricalAwards=false) Total Award: *$3,013,779*)</span>
+
+<span class="indented-title">Colorado State University</span>
 
 &nbsp;&nbsp;Fort Collins, CO
 
 2020 - 2017
 
-- <i>Lead Program Evaluator</i><br>
-- Conducted unstructured and semi-structured interviews and focus groups assessing participant experiences.
-- Implemented mixed methods evaluations to study program impacts on students and faculty.
+<div class="indented-section">
 
+::: concise
+- Administered 32 interviews and focus groups, both cross-sectional and longitudinal, using unstructured and semi-structured formats to gauge the experiences of students and faculty.
+- Carried out process evaluations for four grant-associated programs, leading to enhanced member tracking, increased program efficiency, and heightened participant satisfaction.
+- Constructed and validated tools to measure students' ability to convey research findings to a lay audience.
+- Designed semi-annual adaptive and interactive Qualtrics surveys enhanced with HTML/CSS/JavaScript, securing feedback from over 100 students and faculty with a 95% response rate.
+- Developed predictive models targeting the improvement of student engagement, experience, and retention.
+- Generated data visualizations for assessment and longitudinal studies, bolstering inferential statistical analyses to identify trends and support programmatic enhancements, retention strategies, and satisfaction initiatives.
+- Produced nine in-depth internal evaluation documents and crafted summaries for external stakeholders and federal reporting purposes.
+:::
 
-Presentations {data-icon=chalkboard-user}
+</div>
+  
+<i class="fa-solid fa-chalkboard-user" data-fa-mask="fa-solid fa-comment" style="background:white"></i> Presentations {data-icon=NULL}
 --------------------------------------------------------------------------------
 
-### Let’s Get Sentimental: Machine Learning Aided Data Analysis for Large Qualitative Data Sets
+### Let’s get sentimental: Machine learning aided data analysis for large qualitative data sets
 
 *American Evaluation Association Annual Conference*
 
@@ -416,10 +471,10 @@ Presentations {data-icon=chalkboard-user}
 
 2022
 
-Seidel, T. , Ferguson, C.F., & <b>Roy, A.R.</b>
+Seidel, T., Ferguson, C.F., & <b>Roy, A.R.</b>
 
 
-### Best of Both Worlds: Affordances of Mixing Machine Learning and Qualitative Content Analysis
+### Best of both worlds: Affordances of mixing machine learning and qualitative content analysis
 
 *American Educational Research Association Annual Meeting*
 
@@ -429,18 +484,18 @@ Seidel, T. , Ferguson, C.F., & <b>Roy, A.R.</b>
 
 <b>Roy, A.R.</b>, Ferguson, C.F., Curtis, R., & Babb-Richards, M.
 
-### These Aren’t Random Words Just Strung Together?: Using Machine Learning and Pretty Visualizations to Discover Topics in Articles.
+### These aren’t random words just strung together?: Using machine learning and pretty visualizations to discover topics in articles.
 
 *American Evaluation Association Annual Conference*
 
 &nbsp;&nbsp;*virtual*
 
-2020 
+2020
 
 <b>Roy, A.R.</b>
 
 
-### Little Fish in a Big Pond, Only Fish in a Little Pond: How Roles Shape our Identities as Evaluators.
+### Little fish in a big pond, only fish in a little pond: How roles shape our identities as evaluators.
 
 *American Evaluation Association Annual Conference*
 
@@ -448,21 +503,10 @@ Seidel, T. , Ferguson, C.F., & <b>Roy, A.R.</b>
 
 2019
 
-M, Loomis, D.L., Mikalik, T.L., Curtis, R., <b>Roy, A.R.</b>, & Bernstein, M.
+Loomis, D.L., Mikalik, T.L., Curtis, R., <b>Roy, A.R.</b>, & Bernstein, M.
 
 
-### Evolving Program Logic Models to Meet Shifting Program Needs: The Case of WV Clinical Translational Science Institute.
-
-*American Evaluation Association Annual Conference*
-
-&nbsp;&nbsp;Minneapolis, MN
-
-2019
-
-Curtis, R., <b>Roy, A.R.</b>, Bernstein, M, Loomis, D.L., & Mikalik, T.L.
-
-
-### The Value of External Evaluators When Building Clinical Translational Research Infrastructure.
+### Evolving program logic models to meet shifting program needs: The case of WV Clinical Translational Science Institute.
 
 *American Evaluation Association Annual Conference*
 
@@ -473,7 +517,18 @@ Curtis, R., <b>Roy, A.R.</b>, Bernstein, M, Loomis, D.L., & Mikalik, T.L.
 Curtis, R., <b>Roy, A.R.</b>, Bernstein, M, Loomis, D.L., & Mikalik, T.L.
 
 
-### Using Associated Networks to Evaluate Content within Courses.
+### The value of external evaluators when building clinical translational research infrastructure.
+
+*American Evaluation Association Annual Conference*
+
+&nbsp;&nbsp;Minneapolis, MN
+
+2019
+
+Curtis, R., <b>Roy, A.R.</b>, Bernstein, M, Loomis, D.L., & Mikalik, T.L.
+
+
+### Using associated networks to evaluate content within courses.
 
 *American Evaluation Association Annual Conference*
 
@@ -484,7 +539,7 @@ Curtis, R., <b>Roy, A.R.</b>, Bernstein, M, Loomis, D.L., & Mikalik, T.L.
 <b>Roy, A.R.</b>, Kale, U, & Yuan, J.
 
 
-### Why Is It That Writers Write but Fingers Don’t Fing? Using Machine Learning and Lexemes to Make Sense of Nonsense.
+### Why is it that writers write but fingers don’t fing? Using machine learning and lexemes to make sense of nonsense.
 
 *American Evaluation Association Annual Conference*
 
@@ -495,7 +550,7 @@ Curtis, R., <b>Roy, A.R.</b>, Bernstein, M, Loomis, D.L., & Mikalik, T.L.
 <b>Roy, A.R.</b>, Curtis, R., Mikalik, T.L., Loomis, D.L., & Bernstein, M.
 
 
-### Discovering the Underlying Meaning Behind Get Me Off Your F***ing Mailing List? and Most Other Narratives.
+### Iscovering the underlying meaning behind <i>get me off your f***ing mailing list?</i> and most other narratives.
 
 *American Evaluation Association Annual Conference*
 
@@ -506,7 +561,7 @@ Curtis, R., <b>Roy, A.R.</b>, Bernstein, M, Loomis, D.L., & Mikalik, T.L.
 <b>Roy, A.R.</b>, Curtis, R., Mikalik, T.L., Loomis, D.L., & Bernstein, M.
 
 
-### Assessing for Improvement: The Use of Artificial Intelligence to Uncover Potential Differential Impact of Assignments.
+### Assessing for improvement: The use of artificial intelligence to uncover potential differential impact of assignments.
 
 *American Evaluation Association Annual Conference*
 
@@ -517,7 +572,7 @@ Curtis, R., <b>Roy, A.R.</b>, Bernstein, M, Loomis, D.L., & Mikalik, T.L.
 <b>Roy, A.R.</b> & Rambo-Hernandez, K.
 
 
-### That's a Pretty Picture of Dots and Lines but What Does it Mean?: A Q&A Session with the Social Network Analysis TIG Leaders.
+### That's a pretty picture of dots and lines but what does it mean?: A Q&A session with the Social Network Analysis TIG leaders.
 
 *American Evaluation Association Annual Conference*
 
@@ -528,7 +583,7 @@ Curtis, R., <b>Roy, A.R.</b>, Bernstein, M, Loomis, D.L., & Mikalik, T.L.
 <b>Roy, A.R.</b>, Durland, M.M., Woodland, R., & Phillips, G.
 
 
-### Navigating Buy-in and Shifting Evaluation Needs Over Time in NIH Clinical Translational Research Award.
+### Navigating buy-in and shifting evaluation needs over time in NIG Clinical Translational Research Award.
 
 *American Evaluation Association Annual Conference*
 
@@ -536,11 +591,11 @@ Curtis, R., <b>Roy, A.R.</b>, Bernstein, M, Loomis, D.L., & Mikalik, T.L.
 
 2018
 
-Curtis, R., & <b>Roy, A.R.</b>, Mikalik, T.L.
+Curtis, R., <b>Roy, A.R.</b>, & Mikalik, T.L.
 
 
 
-### Using a Mixed Methods Evaluation to Discover How an Interactive Theater Based Model Stimulates Inclusive Behaviors in Engineering.
+### Using a mixed methods evaluation to discover how an interactive theater based model stimulates inclusive behaviors in engineering.
 
 *American Evaluation Association Annual Conference*
 
@@ -551,7 +606,7 @@ Curtis, R., & <b>Roy, A.R.</b>, Mikalik, T.L.
 <b>Roy, A.R.</b>, Rambo-Hernandez, K., Hensel, R.A., & Morris, M.L.
 
 
-### Collaboration Evaluation: Using Social Network Analysis to Reveal an Active Undiscovered Network.
+### Collaboration evaluation: Using social network analysis to reveal an active undiscovered network.
 
 *American Evaluation Association Annual Conference*
 
@@ -562,7 +617,7 @@ Curtis, R., & <b>Roy, A.R.</b>, Mikalik, T.L.
 <b>Roy, A.R.</b>, Curtis, R., & Mikalik, T.L.
 
 
-### Examining the Past and Looking Forward: The Future of Evaluation Theory and Use.
+### Examining the past and looking forward: The future of evaluation theory and use.
 
 *American Evaluation Association Annual Conference*
 
@@ -573,7 +628,7 @@ Curtis, R., & <b>Roy, A.R.</b>, Mikalik, T.L.
 <b>Roy, A.R.</b> & Hobson, K.A.
 
 
-### Transforming Graduate STEM Education: A Theory-Driven Evaluation of the GAUSSI National Science Foundation Research Training (NRT) Program.
+### Transforming graduate STEM Education: A theory-driven evaluation of the GAUSSI National Science Foundation Research Training (NRT) Program.
 
 *American Evaluation Association Annual Conference*
 
@@ -584,7 +639,7 @@ Curtis, R., & <b>Roy, A.R.</b>, Mikalik, T.L.
 <b>Roy, A.R.</b>, Hernandez, P.A., Chen, T., & Paguyo, C.
 
 
-### Program Evaluation for Everyone! - Constructing an Online Foundational Course for Capacity Building using Theorists as a Focus.
+### Program evaluation for everyone! - Constructing an online foundational course for capacity building using theorists as a focus.
 
 *American Evaluation Association Annual Conference*
 
@@ -595,7 +650,7 @@ Curtis, R., & <b>Roy, A.R.</b>, Mikalik, T.L.
 <b>Roy, A.R.</b> & Curtis, R.P.
 
 
-### Three Stages Down! Exploring the Criteria for the Next Generation of Evaluation Theorists through Social Network Analysis.
+### Three stages down! Exploring the criteria for the next generation of evaluation theorists through social network analysis.
 
 *Hawaii-Pacific Evaluation Association Annual Conference*
 
@@ -606,7 +661,7 @@ Curtis, R., & <b>Roy, A.R.</b>, Mikalik, T.L.
 <b>Roy, A.R.</b> & Hobson, K.A.
 
 
-### Content in the Background: Using Evaluation Theorists as the Principal Motivator for Foundational Evaluation Courses.
+### Content in the background: Using evaluation theorists as the principal motivator for foundational evaluation courses.
 
 *Hawaii-Pacific Evaluation Association Annual Conference*
 
@@ -617,7 +672,7 @@ Curtis, R., & <b>Roy, A.R.</b>, Mikalik, T.L.
 <b>Roy, A.R.</b> & Curtis, R.P.
 
 
-### Survey Says! Students Getting Tired of Surveys.
+### Survey says! Students getting tired of surveys.
 
 *National Academic Advising Association Annual Conference*
 
@@ -628,7 +683,7 @@ Curtis, R., & <b>Roy, A.R.</b>, Mikalik, T.L.
 <b>Roy, A.R.</b> & Goetz, H.L.
 
 
-### Influences of Hierarchical Linear Modeling in Evaluation.
+### Influences of Hierarchical Linear Modeling in evaluation.
 
 *Aotearoa New Zealand Evaluation Association Annual Conference*
 
@@ -636,7 +691,7 @@ Curtis, R., & <b>Roy, A.R.</b>, Mikalik, T.L.
 
 2013
 
-<b>Roy, A.R.</b> & Goetz, H.L.
+Hobson, K.A., <b>Roy, A.R.</b> & Coryn, C.L.S.
 
 
 ### Survey sample methods: Evaluators’ toolbox refreshment.
@@ -647,246 +702,241 @@ Curtis, R., & <b>Roy, A.R.</b>, Mikalik, T.L.
 
 2012
 
-<b>Roy, A.R.</b> & Hobson, K.A.
+Hobson, K.A., <b>Roy, A.R.</b> & Coryn, C.L.S.
 
-
-Teaching Experience in Evaluation and Methodology (2016 - 2023) {data-icon=chalkboard-teacher}
+<i class="fa-solid fa-university" data-fa-mask="fa-solid fa-comment" style="background:white"></i> Teaching Experience {data-icon=NULL}
 --------------------------------------------------------------------------------
 
-### Data Visualization
+<i class="fa-solid fa-clipboard-check" data-fa-mask="fa-solid fa-comment" style="background:white"></i> <span class="indented-title" style="font-size: 0.90rem;">Evaluation, Measurement, and Research Methods (2016 - 2023)</span> {data-icon=NULL}
+--------------------------------------------------------------------------------
 
-West Virginia University
+### <span class="indented-title"><i>[Data Visualization](https://edp693e.asocialdatascientist.com/)</i></span>
+
+<span class="indented-title">West Virginia University</span>
 
 &nbsp;&nbsp;Morgantown, WV
 
 2020 - 2018
 
-2020, 2018
+<span class="indented-title">2020, 2018</span>
 
 
-### Educational Psychology
+### <span class="indented-title"><i>Educational Psychology</i></span>
 
-West Virginia University
+<span class="indented-title">West Virginia University</span>
 
 &nbsp;&nbsp;Morgantown, WV
 
 2017
 
-2017
 
+### <span class="indented-title"><i>Educational Research</i></span>
 
-### Educational Research
-
-West Virginia University
+<span class="indented-title">West Virginia University</span>
 
 &nbsp;&nbsp;Morgantown, WV
 
 2016
 
-2016
 
+### <span class="indented-title"><i>[Introduction to Research](https://edp612.asocialdatascientist.com/)</i></span>
 
-### Introduction to Research
-
-West Virginia University
+<span class="indented-title">West Virginia University</span>
 
 &nbsp;&nbsp;Morgantown, WV
 
 2022 - 2016
 
-2022, 2018, 2017, 2016
+<span class="indented-title">2022, 2018, 2017, 2016</span>
 
 
-### Measurement/Evaluation in Educational Psychology
+### <span class="indented-title"><i>[Measurement/Evaluation in Educational Psychology](https://edp611.asocialdatascientist.com/)</i></span>
 
-West Virginia University
+<span class="indented-title">West Virginia University</span>
 
 &nbsp;&nbsp;Morgantown, WV
 
 2020 - 2018
 
-2022, 2020, 2018
+<span class="indented-title">2022, 2020, 2018</span>
 
 
-### Mixing Research Methodologies
+### <span class="indented-title"><i>[Mixing Research Methodologies](https://edp618.asocialdatascientist.com/)</i></span>
 
-West Virginia University
+<span class="indented-title">West Virginia University</span>
 
 &nbsp;&nbsp;Morgantown, WV
 
 2019 - 2017
 
-2022, 2019, 2018, 2017
+<span class="indented-title">2022, 2019, 2018, 2017</span>
 
 
-### Program Evaluation
+### <span class="indented-title"><i>[Program Evaluation](https://edp617.asocialdatascientist.com/)</i></span>
 
-West Virginia University
+<span class="indented-title">West Virginia University</span>
 
 &nbsp;&nbsp;Morgantown, WV
 
 2023 - 2017
 
-2023, 2022, 2021, 2020, 2019, 2018, 2017
+<span class="indented-title">2023, 2022, 2021, 2020, 2019, 2018, 2017</span>
 
 
-### Social Network Analysis
+### <span class="indented-title"><i>[Social Network Analysis](https://edp693g.asocialdatascientist.com/)</i></span>
 
-West Virginia University
-
-&nbsp;&nbsp;Morgantown, WV
-
-2021 - 2017
-
-2021, 2017 
-
-
-### Statistical Methods 1
-
-West Virginia University
+<span class="indented-title">West Virginia University</span>
 
 &nbsp;&nbsp;Morgantown, WV
 
 2021 - 2017
 
-2021, 2020, 2019, 2018, 2017
+<span class="indented-title">2021, 2017</span>
 
 
-### Survey Design
+### <span class="indented-title"><i>[Statistical Methods 1](https://edp613.asocialdatascientist.com/)</i></span>
 
-West Virginia University
+<span class="indented-title">West Virginia University</span>
 
 &nbsp;&nbsp;Morgantown, WV
 
-2020 - 2022
+2021 - 2017
 
-2022, 2020
+<span class="indented-title">2021, 2020, 2019, 2018, 2017</span>
 
 
+### <span class="indented-title"><i>[Survey Research](https://edp619.asocialdatascientist.com/)</i></span>
 
-Teaching Experience in Mathematics (2005 - 2015) {data-icon=chalkboard-teacher}
+<span class="indented-title">West Virginia University</span>
+
+&nbsp;&nbsp;Morgantown, WV
+
+2022 - 2020
+
+<span class="indented-title">2022, 2020</span>
+
+<i class="fa-solid fa-infinity fa-fw" data-fa-mask="fa-solid fa-comment" style="background:white"></i> <span class="indented-title" style="font-size: 0.90rem;">Mathematics (2005 - 2015)</span> {data-icon=NULL}
 --------------------------------------------------------------------------------
 
-### Business Calculus
+### <span class="indented-title"><i>Business Calculus</i></span>
 
-Central Michigan University
+<span class="indented-title">Central Michigan University</span>
 
 &nbsp;&nbsp;Mount Pleasant, MI
 
 2008
 
 
-### College Algebra
+### <span class="indented-title"><i>College Algebra</i></span>
 
-Central Michigan University
+<span class="indented-title">Central Michigan University</span>
 
 &nbsp;&nbsp;Mount Pleasant, MI
 
 2009
 
 
-### Discrete Mathematics
+### <span class="indented-title"><i>Discrete Mathematics</i></span>
 
-Pittsburgh State University
+<span class="indented-title">Central Michigan University</span>
 
 &nbsp;&nbsp;Pittsburgh, KS
 
 2012
 
 
-### Elementary Statistics
+### <span class="indented-title"><i>Elementary Statistics</i></span>
 
-Pittsburgh State University
+<span class="indented-title">Central Michigan University</span>
 
 &nbsp;&nbsp;Pittsburgh, KS
 
 2014
 
 
-### Foundations of Statistics
+### <span class="indented-title"><i>Foundations of Statistics</i></span>
 
-Pittsburgh State University
+<span class="indented-title">Central Michigan University</span>
 
 &nbsp;&nbsp;Pittsburgh, KS
 
 2010 - 2009
 
-2009, 2010
+<span class="indented-title">2009, 2010</span>
 
 
-### Intermediate Algebra
+### <span class="indented-title"><i>Intermediate Algebra</i></span>
 
-Central Michigan University
+<span class="indented-title">Central Michigan University</span>
 
 &nbsp;&nbsp;Mount Pleasant, MI
 
 2008 - 2007
 
-2007, 2008
+<span class="indented-title">2007, 2008</span>
 
 
-### Integral Calculus
+### <span class="indented-title"><i>Integral Calculus</i></span>
 
-Michigan Technological University
+<span class="indented-title">Michigan Technological University</span>
 
 &nbsp;&nbsp;Houghton, MI
 
 2007
 
 
-### Linear Algebra
+### <span class="indented-title"><i>Linear Algebra</i></span>
 
-University of Kansas
+<span class="indented-title">University of Kansas</span>
 
 &nbsp;&nbsp;Lawrence, KS
 
 2015 - 2014
 
-2014, 2015
+<span class="indented-title">2014, 2015</span>
 
 
-### Mathematical Thinking Grades 6-12
+### <span class="indented-title"><i>Mathematical Thinking Grades 6-12</i></span>
 
-Western Michigan University
+<span class="indented-title">Western Michigan University</span>
 
 &nbsp;&nbsp;Kalamazoo, MI
 
 2013
 
 
-### Mathematics Curriculum Grades 6-12
+### <span class="indented-title"><i>Mathematics Curriculum Grades 6-12</i></span>
 
-Western Michigan University
+<span class="indented-title">Western Michigan University</span>
 
 &nbsp;&nbsp;Kalamazoo, MI
 
 2014 - 2013
 
-2013, 2014
+<span class="indented-title">2013, 2014</span>
 
 
-### Multivariable Calculus
+### <span class="indented-title"><i>Multivariable Calculus</i></span>
 
-Michigan Technological University
+<span class="indented-title">Michigan Technological University</span>
 
 &nbsp;&nbsp;Houghton, MI
 
 2005
 
 
-### Single Variable Calculus
+### <span class="indented-title"><i>Single Variable Calculus</i></span>
 
-Michigan Technological University
+<span class="indented-title">Michigan Technological University</span>
 
 &nbsp;&nbsp;Houghton, MI
 
 2007 - 2006
 
-2006, 2007
+<span class="indented-title">2006, 2007</span>
 
 
-
-Service {data-icon=paragraph}
+<i class="fa-solid fa-paragraph" data-fa-mask="fa-solid fa-comment" style="background:white"></i> Service {data-icon=NULL}
 --------------------------------------------------------------------------------
 
 ### Associate Editor
@@ -897,8 +947,7 @@ N/A
 
 2022 - 2013
 
-
-Memberships {data-icon=users}
+<i class="fa-solid fa-users" data-fa-mask="fa-solid fa-comment" style="background:white"></i> Memberships {data-icon=NULL}
 --------------------------------------------------------------------------------
 
 ### American Evaluation Association

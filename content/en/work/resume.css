@@ -308,6 +308,7 @@ h1, h2{
 
 .details .location{
   float: right;
+  display: block;
 }
 
 .details div{

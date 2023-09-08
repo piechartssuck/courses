@@ -1,7 +1,7 @@
 ---
 title: "Abhik Ranjan Roy"
 author: Abhik Ranjan Roy
-date: "2023-08-28"
+date: "2023-09-07"
 output:
   pagedown::html_resume:
     self_contained: true
@@ -135,7 +135,7 @@ B.S. in Mathematics
 
 N/A
 
-## Professional Experience
+## <i class="fa-solid fa-pen-to-square" data-fa-mask="fa-solid fa-comment" style="background:white"></i> Professional Experience
 
 ### <i>Assistant Professor</i>
 
@@ -145,16 +145,12 @@ West Virginia University
 
 2023 - 2016
 
-<div class="concise">
-
-- Authored and submitted 15 peer-reviewed publications, contributing to various fields including program evaluation.
+- Authored and co-authored 15 peer-reviewed publications, contributing to various fields including program evaluation.
 - Conducted over 20 rigorous evaluations leading to increases in program effectiveness.
 - Designed and deployed interactive surveys using HTML, CSS, and JavaScript on the Qualtrics platform, reaching up to 4,000 respondents.
 - Extracted and cleaned data from multiple remote sources; developed and published 20+ interactive visualizations for public reporting and client dissemination using Rmarkdown and Shiny.
 - Mentored 4 Masters and Doctoral students, guiding them to successful completion of their academic research projects.
 - Taught courses in evaluation, measurement, research methods, and survey design, with a focus on data science techniques, to over 500 students.
-
-</div>
 
 ### <i>Data Analyst</i>
 
@@ -164,51 +160,57 @@ University of Kansas
 
 2016 - 2014
 
-<div class="concise">
-
 - Conducted comprehensive studies using qualitative, quantitative, and mixed-methods approaches, and presented findings to senior management, influencing policy changes.
 - Crafted tailored evaluations that met the needs of diverse stakeholders, resulting in actionable insights for multiple non-academic departments.
 - Designed and administered surveys to over 300 university students and staff, achieving response rates ranging from 47% - 91%.
 - Engineered web applications using R and Tableau, streamlining data extraction and visualization processes.
 - Spearheaded research initiatives that increased student retention rates by 3% - 5% through predictive statistical modeling.
 
-</div>
+## <i class="fa-solid fa-shapes" data-fa-mask="fa-solid fa-comment" style="background:white"></i> Select Evaluation Work
 
-## Select Evaluation Work
+### <span class="indented-title"><i>Lead Program Evaluator & Methodologist</i> - Healthy Start Initiative ([*HRSA-19-049*](https://grants.hrsa.gov/2010/Web2External/Interface/Common/EHBDisplayAttachment.aspx?dm_rtc=16&dm_attid=d3c378a4-b07d-48e5-ab36-38f05a7eeb48) Total Award: *\$5,470,000*)</span>
 
-### <i>Lead Program Evaluator & Methodologist</i><br>Healthy Start Initiative ([*HRSA-19-049*](https://grants.hrsa.gov/2010/Web2External/Interface/Common/EHBDisplayAttachment.aspx?dm_rtc=16&dm_attid=d3c378a4-b07d-48e5-ab36-38f05a7eeb48) Total Award: *\$5,470,000*)
-
-West Virginia University Research Corporation
+<span class="indented-title">West Virginia University Research Corporation</span>
 
   Morgantown, WV
 
 Current - 2023
 
+<div class="indented-section">
+
 <div class="concise">
 
-- Developed and validated survey instruments, assessing experiences of over 50 participants.
-- Conducted process, monitoring, and impact evaluations.
-- Employed mixed methods designs to independently study longitudinal and cross-sectional data on the smoking cessation efforts of mothers and experiences of new and/or distant fathers.
+- Conducted process, monitoring, and impact evaluations at the program level.
+- Designed and validated survey tools, evaluating the experiences of more than 50 participants.
+- Generated two comprehensive internal evaluation documents and prepared an evaluation proposal aimed at federal funding renewal.
+- Utilized a mixed-methods design to independently analyze both longitudinal and cross-sectional data, focusing on the smoking cessation efforts of mothers and the experiences of new or distant caretakers/fathers.
 
 </div>
 
-### <i>Lead Program Evaluator & Mixed Methods Ananlyst</i><br>Teaching Science with Computational Thinking: Preparing Preservice Elementary Educators of the Future STEM Workforce ([*2019-NSF 2142274*](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2142274&HistoricalAwards=false) Total Award: *\$294,958.00*)
+</div>
 
-West Virginia University
+### <span class="indented-title"><i>Program Evaluator & Mixed Methods Analyst</i> - Teaching Science with Computational Thinking: Preparing Preservice Elementary Educators of the Future STEM Workforce ([*2019-NSF 2142274*](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2142274&HistoricalAwards=false) Total Award: *\$294,958.00*)</span>
+
+<span class="indented-title">West Virginia University</span>
 
   Morgantown, WV
 
 Current - 2022
 
+<div class="indented-section">
+
 <div class="concise">
 
-- Applied mixed methods text analysis to evaluate written and interview data from 50+ participants.
-- Constructed and validated survey instruments, achieving an 80%+ response rate.
-- Implemented process and impact evaluations of multiple program activities.
+- Administered process evaluations for all program activities.
+- Created and employed a longitudinal mixed-method study to reduce and analyze more than 50 open-ended survey responses and six interview session transcripts, leveraging thematic/content analyses and techniques including HDBSCAN/t-SNE, k-Means, and PCA.
+- Designed and validated two survey tools for assessing progress and evaluating programmatic impact.
+- Produced one in-depth internal evaluation document and crafted evaluation summaries for federal reporting purposes.
 
 </div>
 
-### <i>Program Evaluator & Data Scientist</i><br>WVCTSI: West Virginia Clinical and Translational Science Institute ([*2017-NIH 2U54GM104942-02*](https://reporter.nih.gov/project-details/9362155) Total Award: *\$20,000,000*)
+</div>
+
+### <i>Community Program Evaluator & Data Scientist</i><br>WVCTSI: West Virginia Clinical and Translational Science Institute ([*2017-NIH 2U54GM104942-02*](https://reporter.nih.gov/project-details/9362155) Total Award: *\$20,000,000*)
 
 West Virginia University
 
@@ -246,7 +248,7 @@ Colorado State University
 
 </div>
 
-## Select Presentations and Talks
+## <i class="fa-solid fa-chalkboard-user" data-fa-mask="fa-solid fa-comment" style="background:white"></i> Select Presentations and Talks
 
 ### Best of Both Worlds: Affordances of Mixing Machine Learning and Qualitative Content Analysis.
 
@@ -255,14 +257,6 @@ Colorado State University
   San Diego, CA
 
 2022
-
-### These Aren’t Random Words Just Strung Together?: Using Machine Learning and Pretty Visualizations to Discover Topics in Articles.
-
-*American Evaluation Association Annual Conference*
-
-  *virtual*
-
-2020
 
 ### Why Is It That Writers Write but Fingers Don’t Fing? Using Machine Learning and Lexemes to Make Sense of Nonsense.
 
@@ -274,6 +268,4 @@ Colorado State University
 
 ## Disclaimer
 
-Made with    <i style="color:#3365B3; margin-left: -7px; margin-right: -5px;" class="fab fa-r-project"></i>  : <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-html.Rmd" target="&#39;_blank">Source code</a>
-
-Last updated on August 28, 2023
+Made with    <i style="color:#3365B3; margin-top: 3px; margin-left: -7px; margin-right: -5px;" class="fab fa-r-project"></i>  : <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-html.Rmd" target="&#39;_blank">Source code</a>. Last updated on September 07, 2023
