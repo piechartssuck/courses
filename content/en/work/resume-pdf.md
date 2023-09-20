@@ -1,7 +1,7 @@
 ---
 title: "Abhik Ranjan Roy"
 author: Abhik Ranjan Roy
-date: "2023-09-07"
+date: "2023-09-20"
 output:
   pagedown::html_resume:
     self_contained: true
@@ -142,7 +142,7 @@ West Virginia University
 
 - Authored and co-authored 15 peer-reviewed publications, contributing to various fields including program evaluation.
 - Conducted over 20 rigorous evaluations leading to increases in program effectiveness.
-- Designed and deployed interactive surveys using HTML, CSS, and JavaScript on the Qualtrics platform, reaching up to 4,000 respondents.
+- Designed and deployed multiple interactive surveys using HTML, CSS, and JavaScript on the Qualtrics platform, eliciting responses from a total of about 7,000 respondents.
 - Extracted and cleaned data from multiple remote sources; developed and published 20+ interactive visualizations for public reporting and client dissemination using Rmarkdown and Shiny.
 - Mentored 4 Masters and Doctoral students, guiding them to successful completion of their academic research projects.
 - Taught courses in evaluation, measurement, research methods, and survey design, with a focus on data science techniques, to over 500 students.
@@ -215,12 +215,12 @@ West Virginia University
 
 <div class="concise">
 
-- Analyzed large datasets using frequentist and Bayesian methods, influencing the direction and activities of 8 programs.
-- Authored quarterly and internal/external annual evaluation reports for dissemination via hard copy and interactive R.
-- Conducted local and multi-site multi-cluster evaluation studies, impacting 5 different core units.
-- Created numerous data visualizations and 4+ Shiny applications for public and internal outcome data exploration.
-- Developed and distributed customized Qualtrics surveys built with CSS and JavaScript, reaching 5,000+ individuals.
-- Mentored 6 future graduate social data scientists, guiding them through successful research projects.
+- Analyzed extensive datasets using both frequentist and Bayesian methodologies, guiding the direction and activities of eight distinct programs.
+- Authored quarterly reports as well as internal and external annual evaluation documents, disseminated both in print and through interactive formats developed in Rmarkdown.
+- Crafted over 100 data visualizations and developed over four Shiny applications for internal and public data exploration, including research collaborations using social network analysis, grant activities pulled from the NCBI API crossed with WVCTSI grant numbers, and dissemination of result and changes in practice within and beyond West Virginia.
+- Designed and disseminated tailored Qualtrics surveys enhanced with HTML, CSS, and JavaScript, reaching an audience of over 5,000 individuals.
+- Led local and multi-site, multi-cluster evaluation studies that influenced five core medical research and community engagement units.
+- Mentored six aspiring graduate students in social data science, steering them through successful research endeavors.
 
 </div>
 
@@ -243,23 +243,15 @@ Colorado State University
 
 </div>
 
-## <i class="fa-solid fa-chalkboard-user" data-fa-mask="fa-solid fa-comment" style="background:white"></i> Select Presentations and Talks
+## <i class="fa-solid fa-users" data-fa-mask="fa-solid fa-comment" style="background:white"></i> Memberships
 
-### Best of Both Worlds: Affordances of Mixing Machine Learning and Qualitative Content Analysis.
+### American Evaluation Association
 
-*American Educational Research Association Annual Meeting*
+N/A
 
-  San Diego, CA
+N/A
 
-2022
-
-### Why Is It That Writers Write but Fingers Don’t Fing? Using Machine Learning and Lexemes to Make Sense of Nonsense.
-
-*American Evaluation Association Annual Conference*
-
-  Minneapolis, MN
-
-2019
+N/A
 
 ## Disclaimer
 
@@ -267,6 +259,6 @@ Colorado State University
 
 <div id="custom-footnote">
 
-Made with    <i style="color:#3365B3; margin-top: 3px; margin-left: -7px; margin-right: -5px;" class="fab fa-r-project"></i>  : <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-html.Rmd" target="&#39;_blank">Source code</a>. Last updated on September 07, 2023
+Made with    <i style="color:#3365B3; margin-top: 3px; margin-left: -7px; margin-right: -5px;" class="fab fa-r-project"></i>   : <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-html.Rmd" target="&#39;_blank">Source code</a>. Last updated on September 20, 2023
 
 </div>

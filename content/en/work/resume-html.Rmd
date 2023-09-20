@@ -155,7 +155,7 @@ West Virginia University
 
 - Authored and co-authored 15 peer-reviewed publications, contributing to various fields including program evaluation.
 - Conducted over 20 rigorous evaluations leading to increases in program effectiveness.
-- Designed and deployed interactive surveys using HTML, CSS, and JavaScript on the Qualtrics platform, reaching up to 4,000 respondents.
+- Designed and deployed multiple interactive surveys using HTML, CSS, and JavaScript on the Qualtrics platform, eliciting responses from a total of about 7,000 respondents.
 - Extracted and cleaned data from multiple remote sources; developed and published 20+ interactive visualizations for public reporting and client dissemination using Rmarkdown and Shiny.
 - Mentored 4 Masters and Doctoral students, guiding them to successful completion of their academic research projects.
 - Taught courses in evaluation, measurement, research methods, and survey design, with a focus on data science techniques, to over 500 students.
@@ -225,12 +225,12 @@ West Virginia University
 2022 - 2017
 
 ::: concise
-- Analyzed large datasets using frequentist and Bayesian methods, influencing the direction and activities of 8 programs.
-- Authored quarterly and internal/external annual evaluation reports for dissemination via hard copy and interactive R.
-- Conducted local and multi-site multi-cluster evaluation studies, impacting 5 different core units.
-- Created numerous data visualizations and 4+ Shiny applications for public and internal outcome data exploration.
-- Developed and distributed customized Qualtrics surveys built with CSS and JavaScript, reaching 5,000+ individuals.
-- Mentored 6 future graduate social data scientists, guiding them through successful research projects.
+- Analyzed extensive datasets using both frequentist and Bayesian methodologies, guiding the direction and activities of eight distinct programs.
+- Authored quarterly reports as well as internal and external annual evaluation documents, disseminated both in print and through interactive formats developed in Rmarkdown.
+- Crafted over 100 data visualizations and developed over four Shiny applications for internal and public data exploration, including research collaborations using social network analysis, grant activities pulled from the NCBI API crossed with WVCTSI grant numbers, and dissemination of result and changes in practice within and beyond West Virginia.
+- Designed and disseminated tailored Qualtrics surveys enhanced with HTML, CSS, and JavaScript, reaching an audience of over 5,000 individuals.
+- Led local and multi-site, multi-cluster evaluation studies that influenced five core medical research and community engagement units.
+- Mentored six aspiring graduate students in social data science, steering them through successful research endeavors.
 :::
 
 ### <i>Lead Program Evaluator</i><br>GAUSSI: Generating, Analyzing, and Understanding Sensory and Sequencing Information: A Trans-Disciplinary Graduate Training Program in Biosensing and Computational Biology ([*2017-NSF 1450032*](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1450032&HistoricalAwards=false) Total Award: *$3,013,779*)
@@ -250,27 +250,18 @@ Colorado State University
 - Implemented mixed methods evaluations, resulting in 9 published reports that influenced program policies and were used for reporting to the funding agency.
 :::
 
-<i class="fa-solid fa-chalkboard-user" data-fa-mask="fa-solid fa-comment" style="background:white"></i> Select Presentations and Talks {data-icon=NULL}
+<i class="fa-solid fa-users" data-fa-mask="fa-solid fa-comment" style="background:white"></i> Memberships {data-icon=NULL}
 --------------------------------------------------------------------------------
 
-### Best of Both Worlds: Affordances of Mixing Machine Learning and Qualitative Content Analysis.
+### American Evaluation Association
 
-*American Educational Research Association Annual Meeting*
+N/A
 
-&nbsp;&nbsp;San Diego, CA
+N/A
 
-2022
-
-### Why Is It That Writers Write but Fingers Don’t Fing? Using Machine Learning and Lexemes to Make Sense of Nonsense.
-
-*American Evaluation Association Annual Conference*
-
-&nbsp;&nbsp;Minneapolis, MN
-
-2019
-
+N/A
 
 Disclaimer {#disclaimer style="width: calc(var(--content-width) - var(--sidebar-width)); padding-left: var(--sidebar-horizontal-padding);"}
 --------------------------------------------------------------------------------
 
-Made with &nbsp;&nbsp;&nbsp;<i style="color:#3365B3; margin-top: 3px; margin-left: -7px; margin-right: -5px;" class="fab fa-r-project"></i>&nbsp;&nbsp;: [Source code](https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-html.Rmd){target='_blank}. Last updated on `r format(Sys.Date(), format="%B %d, %Y")`
+Made with &nbsp;&nbsp;&nbsp;<i style="color:#3365B3; margin-top: 3px; margin-left: -7px; margin-right: -5px;" class="fab fa-r-project"></i>&nbsp;&nbsp;&nbsp;: [Source code](https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-html.Rmd){target='_blank}. Last updated on `r format(Sys.Date(), format="%B %d, %Y")`
