@@ -1,7 +1,7 @@
 ---
 title: "Abhik Ranjan Roy"
 author: Abhik Ranjan Roy
-date: "2023-09-20"
+date: "2023-11-01"
 output:
   pagedown::html_resume:
     self_contained: true
@@ -131,7 +131,7 @@ West Virginia University
 
 <div class="concise">
 
-- Authored and co-authored 15 peer-reviewed publications, contributing to various fields including program evaluation.
+- Authored and co-authored 10+ peer-reviewed publications, contributing to various fields including program evaluation.
 - Conducted over 20 rigorous evaluations leading to increases in program effectiveness.
 - Designed and deployed multiple interactive surveys using HTML, CSS, and JavaScript on the Qualtrics platform, eliciting responses from a total of about 7,000 respondents.
 - Extracted and cleaned data from multiple remote sources; developed and published 20+ interactive visualizations for public reporting and client dissemination using Rmarkdown and Shiny.
@@ -916,4 +916,4 @@ N/A
 
 Made with    <i style="color:#3365B3; margin-left: -7px; margin-right: -5px;" class="fab fa-r-project"></i>   : <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-html.Rmd" target="&#39;_blank">Source code</a>
 
-Last updated on September 20, 2023
+Last updated on November 01, 2023
