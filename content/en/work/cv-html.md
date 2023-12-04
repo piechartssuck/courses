@@ -1,7 +1,7 @@
 ---
 title: "Abhik Ranjan Roy"
 author: Abhik Ranjan Roy
-date: "2023-11-01"
+date: "2023-12-04"
 output:
   pagedown::html_resume:
     self_contained: true
@@ -160,6 +160,16 @@ University of Kansas
 
 ## <i class="fa-solid fa-file-text-o" data-fa-mask="fa-solid fa-comment" style="background:white"></i> Select Publications
 
+### Experiences and Perceptions of Engineering Students Towards Cross-Disciplinary Course Using Sentiment Analysis
+
+*Journal of Civil Engineering Education*
+
+N/A
+
+2024
+
+Dey, K., Rahman, M.T., <b>Roy, A.</b>, Pyrialakou, V.D., Martinelli, D., Fraustino, J.D., Deskins, J, Rambo-Hernandez, K.E., & Plein, L.C. <https://doi.org/10.1061/JCEECD/EIENG-1976>
+
 ### Teaching science via computational thinking? Enabling future science teachers’ access to computational thinking.
 
 *Contemporary Issues in Technology and Teacher Education*
@@ -168,7 +178,7 @@ N/A
 
 2023
 
-Kale U., Kooken, A., Yuan, J., & <b>Roy, A.</b> ([<i>doi pending</i>](https://citejournal.org/volume-23/issue-3-23/science/teaching-science-via-computational-thinking-enabling-future-science-teachers-access-to-computational-thinking/))
+Kale U., Kooken, A., Yuan, J., & <b>Roy, A.</b> <https://citejournal.org/volume-23/issue-3-23/science/teaching-science-via-computational-thinking-enabling-future-science-teachers-access-to-computational-thinking>
 
 ### Program evaluation standards for utility facilitate stakeholder internalization of evaluative thinking in the West Virginia Clinical Translational Science Institute.
 
@@ -916,4 +926,4 @@ N/A
 
 Made with    <i style="color:#3365B3; margin-left: -7px; margin-right: -5px;" class="fab fa-r-project"></i>   : <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-html.Rmd" target="&#39;_blank">Source code</a>
 
-Last updated on November 01, 2023
+Last updated on December 04, 2023
