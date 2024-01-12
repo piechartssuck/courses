@@ -1,7 +1,7 @@
 ---
 title: "Abhik Ranjan Roy"
 author: Abhik Ranjan Roy
-date: "2023-11-01"
+date: "2024-01-12"
 output:
   pagedown::html_resume:
     self_contained: true
@@ -132,6 +132,20 @@ N/A
 
 ## <i class="fa-solid fa-pen-to-square" data-fa-mask="fa-solid fa-comment" style="background:white"></i> Professional Experience
 
+### <i>Associate Research Scientist</i>
+
+Indiana University
+
+  Bloomington, IN
+
+Current - 2023
+
+<div class="concise">
+
+- Conducting various program evaluations.
+
+</div>
+
 ### <i>Assistant Professor</i>
 
 West Virginia University
@@ -224,25 +238,6 @@ West Virginia University
 
 </div>
 
-### <i>Lead Program Evaluator</i><br>GAUSSI: Generating, Analyzing, and Understanding Sensory and Sequencing Information: A Trans-Disciplinary Graduate Training Program in Biosensing and Computational Biology ([*2017-NSF 1450032*](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1450032&HistoricalAwards=false) Total Award: *\$3,013,779*)
-
-Colorado State University
-
-  Fort Collins, CO
-
-2020 - 2017
-
-<div class="concise">
-
-- Conducted process evaluations for 4 grant-related programs, leading to gains in member tracking, program efficiency, and participant satisfaction.
-- Constructed assessment and longitudinal data visualizations, supporting inferential statistical analyses to study trends and assist in recruitment and retention efforts.
-- Developed and distributed customized Qualtrics surveys built with CSS and JavaScript, achieving a 95% response rate.
-- Directed unstructured and semi-structured interviews and focus groups, gathering qualitative data from 100+ participants.
-- Extracted, cleaned, and visualized secondary data for various research objectives.
-- Implemented mixed methods evaluations, resulting in 9 published reports that influenced program policies and were used for reporting to the funding agency.
-
-</div>
-
 ## <i class="fa-solid fa-users" data-fa-mask="fa-solid fa-comment" style="background:white"></i> Memberships
 
 ### American Evaluation Association
@@ -259,6 +254,6 @@ N/A
 
 <div id="custom-footnote">
 
-Made with    <i style="color:#3365B3; margin-top: 3px; margin-left: -7px; margin-right: -5px;" class="fab fa-r-project"></i>   : <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-html.Rmd" target="&#39;_blank">Source code</a>. Last updated on November 01, 2023
+Made with    <i style="color:#3365B3; margin-top: 3px; margin-left: -7px; margin-right: -5px;" class="fab fa-r-project"></i>   : <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-html.Rmd" target="&#39;_blank">Source code</a>. Last updated on January 12, 2024
 
 </div>

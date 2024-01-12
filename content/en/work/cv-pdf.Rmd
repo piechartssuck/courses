@@ -146,6 +146,18 @@ N/A
 <i class="fa-solid fa-pen-to-square" data-fa-mask="fa-solid fa-comment" style="background:white"></i>  Professional Experience {data-icon=NULL}
 --------------------------------------------------------------------------------
 
+### Associate Research Scientist
+
+Indiana University
+
+&nbsp;&nbsp;Bloomington, IN
+
+Current - 2023
+
+::: concise
+- Conducting various program evaluations.
+:::
+
 ### Assistant Professor
 
 West Virginia University

@@ -143,6 +143,18 @@ N/A
 <i class="fa-solid fa-pen-to-square" data-fa-mask="fa-solid fa-comment" style="background:white"></i>  Professional Experience {data-icon=NULL}
 --------------------------------------------------------------------------------
 
+### <i>Associate Research Scientist</i>
+
+Indiana University
+
+&nbsp;&nbsp;Bloomington, IN
+
+Current - 2023
+
+::: concise
+- Conducting various program evaluations.
+:::
+
 ### <i>Assistant Professor</i>
 
 West Virginia University
@@ -229,23 +241,6 @@ West Virginia University
 - Designed and disseminated tailored Qualtrics surveys enhanced with HTML, CSS, and JavaScript, reaching an audience of over 5,000 individuals.
 - Led local and multi-site, multi-cluster evaluation studies that influenced five core medical research and community engagement units.
 - Mentored six aspiring graduate students in social data science, steering them through successful research endeavors.
-:::
-
-### <i>Lead Program Evaluator</i><br>GAUSSI: Generating, Analyzing, and Understanding Sensory and Sequencing Information: A Trans-Disciplinary Graduate Training Program in Biosensing and Computational Biology ([*2017-NSF 1450032*](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1450032&HistoricalAwards=false) Total Award: *$3,013,779*)
-
-Colorado State University
-
-&nbsp;&nbsp;Fort Collins, CO
-
-2020 - 2017
-
-::: concise
-- Conducted process evaluations for 4 grant-related programs, leading to gains in member tracking, program efficiency, and participant satisfaction.
-- Constructed assessment and longitudinal data visualizations, supporting inferential statistical analyses to study trends and assist in recruitment and retention efforts.
-- Developed and distributed customized Qualtrics surveys built with CSS and JavaScript, achieving a 95% response rate.
-- Directed unstructured and semi-structured interviews and focus groups, gathering qualitative data from 100+ participants.
-- Extracted, cleaned, and visualized secondary data for various research objectives.
-- Implemented mixed methods evaluations, resulting in 9 published reports that influenced program policies and were used for reporting to the funding agency.
 :::
 
 <i class="fa-solid fa-users" data-fa-mask="fa-solid fa-comment" style="background:white"></i> Memberships {data-icon=NULL}
