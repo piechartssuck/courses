@@ -1,7 +1,7 @@
 ---
 title: "Abhik Ranjan Roy"
 author: Abhik Ranjan Roy
-date: "2024-01-12"
+date: "2024-03-04"
 output:
   pagedown::html_resume:
     self_contained: true
@@ -131,11 +131,20 @@ Current - 2023
 
 <div class="concise">
 
-- Conducting various program evaluations.
+- <b>Applying Advanced Research Techniques</b>. Utilizing both quantitative and qualitative research methodologies to design studies that accurately address complex social, behavioral, and policy questions.
+- <b>Conducting Comprehensive Data Analysis</b>. Employing statistical software and qualitative analysis tools to extract, process, and interpret data, leading to evidence-based conclusions and recommendations.
+- <b>Crafting and Delivering Impactful Presentations</b>. Developing presentations and reports that clearly articulate research findings, methodologies, and implications to both academic and non-academic audiences.
+- <b>Driving Stakeholder Engagement</b>. Actively engaging with partners and clients to understand their needs, ensuring research findings are directly applicable to policy and program decisions.
+- <b>Guiding Projects to Successful Completion</b>. Strategically managing the execution of research projects, ensuring they remain on schedule, within budget, and achieve intended outcomes.
+- <b>Initiating and Managing Research Proposals</b>. Spearheading the creation of detailed research proposals, including objectives, methodology, budget, and timelines, to secure funding and support.
+- <b>Liaising with Diverse Stakeholders</b>. Building and maintaining strong relationships with project partners, funders, and community stakeholders to ensure research activities are aligned with broader goals and expectations.
+- <b>Mentoring and Developing Team Talent</b>. Providing leadership and guidance to research staff, fostering professional growth and ensuring the team’s skills are effectively utilized in project tasks.
+- <b>Promoting Collaborative Innovation</b>. Leading initiatives that encourage team members to contribute unique insights and solutions, enhancing the overall quality and impact of research projects.
+- <b>Translating Research into Actionable Strategies</b>. Analyzing data to produce insights that inform the development, implementation, and refinement of policies and programs.
 
 </div>
 
-### Assistant Professor
+### Associate Professor
 
 West Virginia University
 
@@ -145,12 +154,12 @@ West Virginia University
 
 <div class="concise">
 
-- Authored and co-authored 10+ peer-reviewed publications, contributing to various fields including program evaluation.
-- Conducted over 20 rigorous evaluations leading to increases in program effectiveness.
-- Designed and deployed multiple interactive surveys using HTML, CSS, and JavaScript on the Qualtrics platform, eliciting responses from a total of about 7,000 respondents.
-- Extracted and cleaned data from multiple remote sources; developed and published 20+ interactive visualizations for public reporting and client dissemination using Rmarkdown and Shiny.
-- Mentored 4 Masters and Doctoral students, guiding them to successful completion of their academic research projects.
-- Taught courses in evaluation, measurement, research methods, and survey design, with a focus on data science techniques, to over 500 students.
+- <b>Authored Publications</b>. Contributed to various fields including program evaluation through authoring and co-authoring over 10 peer-reviewed publications.
+- <b>Conducted Rigorous Evaluations</b>. Led more than 20 evaluations that resulted in increases in program effectiveness and capacity building.
+- <b>Designed and Deployed Interactive Surveys</b>. Utilized HTML, CSS, and JavaScript on the Qualtrics platform to create multiple surveys, garnering approximately 7,000 responses.
+- <b>Extracted and Cleaned Data for Visualization</b>. Pulled data from various remote sources; cleaned and wrangled it, then developed and published over 20 interactive visualizations for public reporting and client dissemination using RMarkdown and Shiny.
+- <b>Mentored Students</b>. Guided 4 Masters and Doctoral students to the successful completion of their academic research projects.
+- <b>Taught Methods Based Courses</b>. Instructed over 500 students in evaluation, measurement, research methods, and survey design, emphasizing data science techniques.
 
 </div>
 
@@ -164,11 +173,11 @@ University of Kansas
 
 <div class="concise">
 
-- Conducted comprehensive studies using qualitative, quantitative, and mixed-methods approaches, and presented findings to senior management, influencing policy changes.
-- Crafted tailored evaluations that met the needs of diverse stakeholders, resulting in actionable insights for multiple non-academic departments.
-- Designed and administered surveys to over 300 university students and staff, achieving response rates ranging from 47% - 91%.
-- Engineered web applications using R and Tableau, streamlining data extraction and visualization processes.
-- Spearheaded research initiatives that increased student retention rates by 3% - 5% through predictive statistical modeling.
+- <b>Conducted Comprehensive Studies</b>. Utilized qualitative, quantitative, and mixed-methods approaches, presenting findings to senior management to influence policy changes.
+- <b>Crafted Tailored Evaluations</b>. Met the needs of diverse stakeholders, resulting in actionable insights for multiple non-academic departments.
+- <b>Designed and Administered Surveys</b>. Reached over 300 university students and staff, achieving response rates ranging from 47% to 91%.
+- <b>Engineered Web Applications</b>. Utilized R and Tableau to streamline the processes of data extraction and visualization.
+- <b>Spearheaded Research Initiatives</b>. Increased student retention rates for specific at-risk groups by 3% to 5% through predictive statistical modeling.
 
 </div>
 
@@ -940,4 +949,4 @@ N/A
 
 Made with    <i style="color:#3365B3; margin-left: -7px; margin-right: -5px;" class="fab fa-r-project"></i>   : <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-html.Rmd" target="&#39;_blank">Source code</a>
 
-Last updated on January 12, 2024
+Last updated on March 04, 2024
