@@ -9,8 +9,10 @@
     "postcss": "^8.4.6",
     "postcss-cli": "^9.1.0"
   },
+  "optionalDependencies": {
+    "fsevents": "^2.3.3"
+  },
   "dependencies": {
-    "fsevents": "^2.3.3",
     "node": "^18.5.0"
   }
 }
