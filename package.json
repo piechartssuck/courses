@@ -1,7 +1,9 @@
 {
   "scripts": {
-    "build": "npm install -g postcss postcss-cli autoprefixer && cd exampleSite && hugo --gc --minify -t ../.. -d ../docs -v -b https://hugo-introduction.netlify.app/",
-    "dev": "cd exampleSite && ENVIRONMENT=development hugo -t ../.. server"
+      "build": "npm install -g postcss postcss-cli autoprefixer && cd exampleSite && hugo --gc --minify -t ../.. -d ../docs -v -b https://hugo-introduction.netlify.app/",
+      "dev": "cd exampleSite && ENVIRONMENT=development hugo -t ../.. server",
+      "postinstall": "node -e 'const fs = require(\"fs\"); fs.existsSync(\"./node_modules/fsevents\") && fs.rmdirSync(\"./node_modules/fsevents\", { recursive: true, force: true });'"
+    }
   },
   "devDependencies": {
     "autoprefixer": "^10.4.2",
