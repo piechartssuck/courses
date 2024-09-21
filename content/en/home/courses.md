@@ -146,28 +146,28 @@ output:
 	<input type="radio" name="testimonial" id="t-8">
 	<div class="testimonials">
 		<label class="item" for="t-1">
-			<a href='https://edp611.asocialdatascientist.com' target='_blank'><img src='/img/hex/edp611.png' alt='RM hex' width='250'></a>
+			<a href='https://edp611.abhikroyphd.com' target='_blank'><img src='/img/hex/edp611.png' alt='RM hex' width='250'></a>
 		</label>
 		<label class="item" for="t-2">
-			<a href='https://edp612.asocialdatascientist.com' target='_blank'><img src='/img/hex/edp612.png' alt='PE hex' width='250'></a>
+			<a href='https://edp612.abhikroyphd.com' target='_blank'><img src='/img/hex/edp612.png' alt='PE hex' width='250'></a>
 		</label>
 		<label class="item" for="t-3">
-			<a href='https://edp613.asocialdatascientist.com' target='_blank'><img src='/img/hex/edp613.png' alt='RM hex' width='250'></a>
+			<a href='https://edp613.abhikroyphd.com' target='_blank'><img src='/img/hex/edp613.png' alt='RM hex' width='250'></a>
 		</label>
 		<label class="item" for="t-4">
-			<a href='https://edp617.asocialdatascientist.com' target='_blank'><img src='/img/hex/edp617.png' alt='PE hex' width='250'></a>
+			<a href='https://edp617.abhikroyphd.com' target='_blank'><img src='/img/hex/edp617.png' alt='PE hex' width='250'></a>
 		</label>
 		<label class="item" for="t-5">
-<a href='https://edp618.asocialdatascientist.com' target='_blank'><img src='/img/hex/edp618.png' alt='RM hex' width='250'></a>
+<a href='https://edp618.abhikroyphd.com' target='_blank'><img src='/img/hex/edp618.png' alt='RM hex' width='250'></a>
 		</label>
 		<label class="item" for="t-6">
-<a href='https://edp619.asocialdatascientist.com' target='_blank'><img src='/img/hex/edp619.png' alt='PE hex' width='250'></a>
+<a href='https://edp619.abhikroyphd.com' target='_blank'><img src='/img/hex/edp619.png' alt='PE hex' width='250'></a>
 		</label>
 		<label class="item" for="t-7">
-<a href='https://edp693e.asocialdatascientist.com' target='_blank'><img src='/img/hex/edp693e.png' alt='RM hex' width='250'></a>
+<a href='https://edp693e.abhikroyphd.com' target='_blank'><img src='/img/hex/edp693e.png' alt='RM hex' width='250'></a>
 		</label>
 		<label class="item" for="t-8">
-<a href='https://edp693g.asocialdatascientist.com' target='_blank'><img src='/img/hex/edp693g.png' alt='PE hex' width='250'></a>
+<a href='https://edp693g.abhikroyphd.com' target='_blank'><img src='/img/hex/edp693g.png' alt='PE hex' width='250'></a>
 		</label>
 	</div>
 	<br/>
