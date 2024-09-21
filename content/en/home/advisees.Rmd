@@ -1,5 +1,5 @@
 ---
-title: "Advisees"
+title: "My Former Advisees"
 # image: img/*.png
 weight: 3
 output:
@@ -48,9 +48,8 @@ source("initlib.R")
 <div class="right">
 
 <table>
-    <tr><th>Advisee since 2019</th></tr>
-    <tr><th>Earned a <b><a href="https://graduateadmissions.wvu.edu/academics/graduate-programs/learning-sciences-human-development-phd">Ph.D. in Learning Sciences and Human Development</a></b></th></tr>
-    <tr><th>Earned a <b><a href="http://catalog.wvu.edu/graduate/collegeofappliedhumansciences/schoolofeducation/edp/">Master of Arts in Educational Psychology</a></b></th></tr>
+    <tr><th>Earned a <b>Ph.D. in Learning Sciences and Human Development</b> in 2023</th></tr>
+    <tr><th>Earned a <b>Master of Arts in Educational Psychology</b>in 2020</th></tr>
 </table>
 
 <center>
@@ -58,9 +57,10 @@ source("initlib.R")
 </center>
 
 <table>
-    <tr><th>Abilities in data wrangling, statistics, reporting, and visualizations (R/Rmarkdown)</th></tr>
-    <tr><th>Expertise in quantitative, qualitative, and mixed-methods</th></tr>
-    <tr><th>Skilled in text mining, analytics, and content analysis</th></tr>
+    <tr><th>Assistant Clinical Professor & Assistant Director at The University of Maryland Office of Undergraduate Research</th></tr>
+    <tr><th style="padding-left: 20px;">Abilities in data wrangling, statistics, reporting, and visualizations (R/Rmarkdown)</th></tr>
+    <tr><th style="padding-left: 20px;">Expertise in quantitative, qualitative, and mixed-methods</th></tr>
+    <tr><th style="padding-left: 20px;">Skilled in text mining, analytics, and content analysis</th></tr>
 </table>
 
 </div>
@@ -85,7 +85,7 @@ paste0("<a href=", loc, " target='_blank'>", icon,"&nbsp;&nbsp; Click here to se
   htmltools::HTML()
 ```
 </div>
--->
+
 
 <div class="holder">
 
@@ -119,8 +119,8 @@ paste0("<a href=", loc, " target='_blank'>", icon,"&nbsp;&nbsp; Click here to se
 </div>
 
 </div>
-<br>
-<br>
+-->
+
 
 <div class="holder">
 
@@ -135,9 +135,10 @@ paste0("<a href=", loc, " target='_blank'>", icon,"&nbsp;&nbsp; Click here to se
 
 
 <table>
-    <tr><th>Advisee since 2021</th></tr>
-     <tr><th>Earned a <b><a href="http://catalog.wvu.edu/graduate/collegeofappliedhumansciences/schoolofeducation/edp/">Master of Arts in Educational Psychology</a></b></th></tr>
+     <tr><th>Earned a <b>Master of Arts in Educational Psychology</b> in 2023</th></tr>
+<!-- 
     <tr><th>Earned a <b><a href="https://www.geo.wvu.edu/">Master of Science in Geology</a></b></th></tr>
+-->
 </table>
 
 <center>
@@ -146,9 +147,9 @@ paste0("<a href=", loc, " target='_blank'>", icon,"&nbsp;&nbsp; Click here to se
 
 
 <table>
-    <tr><th>Evaluator and analyst for West Virginia University Extension Energy Express Summer Literacy Program</th></tr>
-    <tr><th>Expertise in program evaluation and computational statistics</th></tr>
-    <tr><th>Skilled in participatory evaluation, research methodology, and survey design</th></tr>
+    <tr><th>Associate Program Evaluation Specialist, University of Pittsburgh-PERU</th></tr>
+    <tr><th style="padding-left: 20px;">Expertise in program evaluation and computational statistics</th></tr>
+    <tr><th style="padding-left: 20px;">Skilled in participatory evaluation, research methodology, and survey design</th></tr>
 </table>
 
 </div>
@@ -170,9 +171,10 @@ paste0("<a href=", loc, " target='_blank'>", icon,"&nbsp;&nbsp; Click here to se
 
 
 <table>
-    <tr><th>Advisee since 2022</th></tr>
-    <tr><th>Earned a <b><a href="http://catalog.wvu.edu/graduate/collegeofappliedhumansciences/schoolofeducation/edp/">Master of Arts in Educational Psychology</a></b></th></tr>
+    <tr><th>Earned a <b>Master of Arts in Educational Psychology</b>  in 2023</th></tr>
+<!--
     <tr><th>Earned a <b><a href="http://catalog.wvu.edu/undergraduate/eberlycollegeofartsandsciences/criminology/">Bachelor of Arts in Criminology </a></b></th></tr>
+-->
 </table>
 
 <center>
@@ -181,9 +183,9 @@ paste0("<a href=", loc, " target='_blank'>", icon,"&nbsp;&nbsp; Click here to se
 
 
 <table>
-    <tr><th>Certified Healthcare Simulation Educator (CHSE), Project Manager, WVU Health Science Department of Interprofessional Education, Research Coordinator, STEPS Medical Simulation Lab</th></tr>
-    <tr><th>Expertise in experiential learning, healthcare simulation, and interprofessional education</th></tr>
-    <tr><th>Skilled in policy development, program evaluation, research design, and survey design</th></tr>
+    <tr><th>Inter-Professional Education (IPE) Project Manager/Simulation Research Coordinator</th></tr>
+   <tr><th style="padding-left: 20px;">Expertise in experiential learning, healthcare simulation, and interprofessional education</th></tr>
+    <tr><th style="padding-left: 20px;">Skilled in policy development, program evaluation, research design, and survey design</th></tr>
 </table>
 
 </div>

@@ -80,13 +80,14 @@ fa_i(name = "arrow-down", fill = "#3365B3")
 <table>
     <tr><th>Content, cluster, and social network analysis</b></th></tr> 
     <tr><th>Data visualization</th></tr> 
+    <tr><th>Machine learning-driven program evaluation methods</th></tr>
     <tr><th>Markup using</b> <code>$\LaTeX$</code> </th></tr>
     <tr><th>Program evaluations from planning to reporting</th></tr>
     <tr><th>Quantitative, qualitative, and mixed method studies</th></tr>
-    <tr><th>Planning and conducting program evaluations</th></tr>
     <tr><th></b><i style="color:#3365B3;" class="fab fa-r-project fa-lg"></i> programming</th></tr> 
     <tr><th>Small- and large-scale survey design, administration, and research</th></tr>
     <tr><th>Statistical modeling and analysis</th></tr>
+    <tr><th>Program evaluation methods using machine learning techniques</th></tr>
     <tr><th>Web application development and static/dynamic reporting using</b></th></tr> 
 </table>
 <div class="holder" style="margin-top: -25px">
