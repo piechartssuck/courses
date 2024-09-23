@@ -1,0 +1,24 @@
+---
+title: "About the Readings"
+menu:
+  content:
+    parent: Overview
+    weight: 1
+type: docs
+weight: 1
+---
+
+## The Course Texts
+The course texts are generally for reference purposes. Please browse through the but know that in general, reading code is neither fun nor overtly beneficial. Instead you will learn by doing (and likely failing multiple times) but in the end and while it may sound silly, there is no better feeling than getting a piece of code to work correctly! 
+
+## The Course Nontext
+Many of us are visual learners with me included, so a lot of what I provide outside of the text and created *in-house* is visually based. Resources such as presentations, videos, visualizations, walkthroughs, etc. take a lot of time to construct so please go through them. Are they Hollywood? No because I'm a professor at a public university, have three children and drive a car with duct tape on it BUT they will be decent. I am always open to suggestions so if you have any, send them along!
+<br>
+<br>
+*Pictures are better than words because some words are big and hard to understand.* 
+<br> 
+- Peter Griffin
+
+### Need Help?
+I always prefer a face to face meeting if possible but since that's not possible, you can schedule a Zoom via the [Calendar](https://calendly.com/nopiecharts/short30){target="_blank"} or contact me within [Slack](http:/2021edp693e.slack.com){target="_blank"} by tagging my name `@Dr. Abhik Roy` in a text box along with your message.
+

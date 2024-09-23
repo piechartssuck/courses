@@ -1,0 +1,2294 @@
+---
+title: "I'm the Map"
+linktitle: "Week 6: I'm the Map"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  assignment:
+    parent: Weekly Tasks
+    weight: 6
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+<script src="/rmarkdown-libs/font-awesome/js/script.js"></script>
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+<link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
+
+<div id="TOC">
+<ul>
+<li><a href="#getting-prepped">Getting Prepped</a>
+<ul>
+<li><a href="#first-things-first-set-your-working-directory">First Things First! Set your Working Directory</a></li>
+<li><a href="#download-the-script">Download the script</a></li>
+<li><a href="#read-the-submission-directions">Read the Submission Directions</a></li>
+<li><a href="#load-up-some-libraries">Load Up Some Libraries</a></li>
+<li><a href="#whats-an-api">What’s an API?</a></li>
+<li><a href="#api-credentials">API Credentials</a></li>
+<li><a href="#the-census-api">The Census API</a></li>
+<li><a href="#selecting-the-proper-census-data-sets">Selecting The Proper Census Data Sets</a></li>
+<li><a href="#part-i-the-map">PART I: The Map</a>
+<ul>
+<li><a href="#country-level-data">Country Level Data</a></li>
+<li><a href="#state-level-data">State Level Data</a></li>
+<li><a href="#county-level-data">County Level Data</a></li>
+</ul></li>
+<li><a href="#part-ii-the-us-census">PART II: The US Census</a>
+<ul>
+<li><a href="#gathering-and-making-important-decisions">Gathering and Making Important Decisions</a></li>
+<li><a href="#scraping-the-web-using-r">Scraping the Web using R</a></li>
+</ul></li>
+<li><a href="#getting-the-data-you-want">Getting the Data You Want</a></li>
+<li><a href="#part-iii-plotting">PART III: Plotting</a></li>
+<li><a href="#example-tract-data">Example: Tract Data</a>
+<ul>
+<li><a href="#getting-census-tract-level-data">Getting Census Tract Level Data</a></li>
+<li><a href="#single-map">Single Map</a></li>
+<li><a href="#faceting-map">Faceting Map</a></li>
+</ul></li>
+<li><a href="#example-alternate-projections">Example: Alternate Projections</a>
+<ul>
+<li><a href="#getting-census-state-and-county-level-data">Getting Census State and County Level Data</a></li>
+<li><a href="#wrangling">Wrangling</a></li>
+<li><a href="#mapping-using-estimated-curvatures">Mapping Using Estimated Curvatures</a></li>
+<li><a href="#saving">Saving</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#possible-solutions">Possible Solutions</a></li>
+</ul>
+</div>
+
+<style>
+.hvr-sweep-to-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+}
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:   #003277;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 700px;
+  background: #efefef;
+  box-shadow: 0 48px 80px -32px rgba(0,0,0,0.3);
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+}
+
+.label {
+  width: 100%;
+  padding: 20px 30px;
+  background: #e5e5e5;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  color: #7f7f7f;
+  transition: background 0.1s, color 0.1s;
+}
+
+.label:hover {
+  background: #d8d8d8;
+}
+
+.label:active {
+  background: #ccc;
+}
+
+.input:focus + .label {
+  box-shadow: inset 0px 0px 0px 3px #2aa1c0;
+  z-index: 1;
+}
+
+.input:checked + .label {
+  background: #fff;
+  color: #000;
+}
+
+@media (min-width: 600px) {
+  .label {
+    width: auto;
+  }
+}
+
+.panel {
+  display: none;
+  padding: 20px 30px 30px;
+  background: #fff;
+}
+
+@media (min-width: 600px) {
+  .panel {
+    order: 99;
+  }
+}
+
+.input:checked + .label + .panel {
+  display: block;
+}
+</style>
+<div id="getting-prepped" class="section level1">
+<h1>Getting Prepped</h1>
+<div id="first-things-first-set-your-working-directory" class="section level2">
+<h2>First Things First! Set your Working Directory</h2>
+<p>Your <em>working directory</em> is simply where your script will look for anything it needs like external data sets. There are a few ways to go about doing this which we will cover. However for now, just do the following:</p>
+<ol style="list-style-type: decimal">
+<li>Open up a new script by going to <code>File &gt; New File &gt; R Script</code>.</li>
+<li>Save it in a preferably empty folder as whatever you want.</li>
+<li>Go to the menu bar and select <code>Session &gt; Set Working Directory &gt; To Source File Location</code>.</li>
+</ol>
+</div>
+<div id="download-the-script" class="section level2">
+<h2>Download the script</h2>
+<p>Copying and pasting syntax from a browser can cause problems. To avoid this issue, please download a script with all of the needed code presented in this walkthrough.</p>
+<a href="data:text/plain;base64,CmxpYnJhcnkoZ2dtYXApCmxpYnJhcnkobWFwcykKbGlicmFyeShtYXBkYXRhKQpsaWJyYXJ5KHJnZGFsKSAKbGlicmFyeSh0aWR5dmVyc2UpCmxpYnJhcnkodG9vbHMpCmxpYnJhcnkodmlyaWRpcykKbGlicmFyeShjZW5zdXNhcGkpCgpTeXMuc2V0ZW52KENFTlNVU19LRVk9IllPVVIgQVBJIEtFWSBIRVJFIikKCgoKcmVhZFJlbnZpcm9uKCJ+Ly5SZW52aXJvbiIpICMgWW91IG1heSBnZXQgYSB3YXJuaW5nLi4uaWdub3JlIGl0CgoKClN5cy5nZXRlbnYoIkNFTlNVU19LRVkiKQoKCgphdmFpbGFibGVhcGlzIDwtIGxpc3RDZW5zdXNBcGlzKCkKCgoKZGF0YXRhYmxlKGF2YWlsYWJsZWFwaXMpCgoKCgoKbnJvdyhhdmFpbGFibGVhcGlzKQoKCgphdmFpbGFibGVhcGlzICU+JQogIGZpbHRlcl9hbGwoYW55X3ZhcnMoZ3JlcGwoImluY29tZSIsIC4pKSkgJT4lCiAgZGF0YXRhYmxlKCkKCgoKCgphdmFpbGFibGVhcGlzICU+JQogIGZpbHRlcihzdHJfZGV0ZWN0KGRlc2NyaXB0aW9uLCAnaW5jb21lJykpICU+JQogIGRhdGF0YWJsZSgpCgoKCgoKYXZhaWxhYmxlYXBpcyAlPiUKICBmaWx0ZXIoc3RyX2RldGVjdChkZXNjcmlwdGlvbiwgYygnZ2VvJykpKSAlPiUKICBmaWx0ZXIoc3RyX2RldGVjdChkZXNjcmlwdGlvbiwgYygnZGVtbycpKSkgJT4lCiAgZHJvcF9uYSh2aW50YWdlKSAlPiUKICBhcnJhbmdlKC12aW50YWdlKSAlPiUKICBkYXRhdGFibGUoKQoKCgoKCmxpc3RDZW5zdXNNZXRhZGF0YShuYW1lID0gImFjcy9hY3M1L3Byb2ZpbGUiLCAKICAgICAgICAgICAgICAgICAgIHZpbnRhZ2UgPSAyMDE4LAogICAgICAgICAgICAgICAgICAgdHlwZSA9ICJnZW9ncmFwaHkiKSAlPiUKICBhc190aWJibGUoKSAlPiUKICB1bm5lc3QoY29scyA9IGMoKSkgCgoKCnZhcnMgPC0gbGlzdENlbnN1c01ldGFkYXRhKG5hbWUgPSAiYWNzL2FjczUvcHJvZmlsZSIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgIHZpbnRhZ2UgPSAyMDE4LCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgdHlwZSA9ICJ2YXJpYWJsZXMiKSAKCgoKdmFycyAlPiUKICBhc190aWJibGUoKSAlPiUKICAgIGRhdGF0YWJsZSgpCgoKCgoKdXNhIDwtIG1hcF9kYXRhKCJ1c2EiKQoKCgpkaW0odXNhKQoKCgpoZWFkKHVzYSkgCgoKCnRhaWwodXNhKSAKCgoKZ2dwbG90KCkgKyAKICBnZW9tX3BvbHlnb24oZGF0YSA9IHVzYSwgCiAgICAgICAgICAgICAgIGFlcyh4PWxvbmcsIHkgPSBsYXQsIGdyb3VwID0gZ3JvdXApKQoKCgpnZ3Bsb3QoKSArIAogIGdlb21fcG9seWdvbihkYXRhID0gdXNhLCAKICAgICAgICAgICAgICAgYWVzKHg9bG9uZywgeSA9IGxhdCwgZ3JvdXAgPSBncm91cCkpICsgCiAgY29vcmRfZml4ZWQoMS4zKSAjIDEuMyBpcyBhIGRlY2VudCBzdGFuZGFyZCBlc3RpbWF0ZQoKCgpnZ3Bsb3QoKSArIAogIGdlb21fcG9seWdvbihkYXRhID0gdXNhLCBhZXMoeD1sb25nLCB5ID0gbGF0LCBncm91cCA9IGdyb3VwKSwgY29sb3IgPSAiIzFiODViOCIsIAogICAgICAgICAgICAgICBmaWxsID0gIiM1NTllODMiKSArIAogIGNvb3JkX2ZpeGVkKDEuMykKCgoKc3RhdGUgPC0gbWFwX2RhdGEoInN0YXRlIikKCgoKQ2FsaWZvcm5pYSA8LSBtYXBfZGF0YSgic3RhdGUiLCByZWdpb24gPSAiQ0EiKQoKCgpLYW5zYXMgPC0gbWFwX2RhdGEoInN0YXRlIiwgcmVnaW9uID0gIktTIikKCgoKTWljaGlnYW4gPC0gbWFwX2RhdGEoInN0YXRlIiwgcmVnaW9uID0gIk1JIikKCgoKdW5pcXVlKE1pY2hpZ2FuJHJlZ2lvbikKCgoKTWljaGlnYW4gPC0gbWFwX2RhdGEoInN0YXRlIiwgCiAgICAgICAgICAgICAgICAgICAgIHJlZ2lvbiA9ICJNaWNoaWdhbiIpCgoKCnVuaXF1ZShNaWNoaWdhbiRyZWdpb24pCgoKCm1pIDwtIHN1YnNldChzdGF0ZSwgCiAgICAgICAgICAgICByZWdpb249PSJtaWNoaWdhbiIpCgoKCmdncGxvdCgpICsgCiAgZ2VvbV9wb2x5Z29uKGRhdGEgPSBtaSwgCiAgICAgICAgICAgICAgICAgICAgICAgIGFlcyh4PWxvbmcsIHkgPSBsYXQsIGdyb3VwID0gZ3JvdXApKSArIAogIGNvb3JkX2ZpeGVkKDEuMykKCgoKZ2dwbG90KCkgKyAKICBnZW9tX3BvbHlnb24oZGF0YSA9IG1pLCBhZXMoeD1sb25nLCB5ID0gbGF0LCBncm91cCA9IGdyb3VwLCBmaWxsPXJlZ2lvbikpICsKICBzY2FsZV9maWxsX21hbnVhbCh2YWx1ZXM9YygiIzZBMDAzMiIpKSArCiAgY29vcmRfZml4ZWQoMS4zKQoKCgpjb3VudHkgPC0gbWFwX2RhdGEoImNvdW50eSIpCgoKCm1pX2NvdW50IDwtIHN1YnNldChjb3VudHksIHJlZ2lvbj09Im1pY2hpZ2FuIikKCgpnZ3Bsb3QoKSArIAogIGdlb21fcG9seWdvbihkYXRhID0gbWlfY291bnQsIGFlcyh4PWxvbmcsIHkgPSBsYXQsIGdyb3VwID0gZ3JvdXAsIGZpbGw9c3VicmVnaW9uKSwgCiAgICAgICAgICAgICAgIGNvbG9yID0gIiNGRkZGRkYiKSArCiAgc2NhbGVfZmlsbF92aXJpZGlzKGRpc2NyZXRlID0gVFJVRSwgCiAgICAgICAgICAgICAgICAgICAgIGFscGhhPTAuNywgCiAgICAgICAgICAgICAgICAgICAgIG9wdGlvbj0iaW5mZXJubyIpICsKICB0aGVtZV9idygpICsKICB0aGVtZShwbG90LnRpdGxlID0gZWxlbWVudF90ZXh0KHNpemUgPSAyNiwgY29sb3IgPSIjMTA1NDU2IiwgIHZqdXN0ID0gLTEpLAogICAgICAgIGxlZ2VuZC5wb3NpdGlvbiA9ImJvdHRvbSIsCiAgICAgICAgbGVnZW5kLmRpcmVjdGlvbiA9ICd2ZXJ0aWNhbCcsCiAgICAgICAgbGVnZW5kLnRleHQgPSBlbGVtZW50X3RleHQoc2l6ZT0xNSwgY29sb3IgPSAiIzU5NTk1QiIpLAogICAgICAgIGxlZ2VuZC50aXRsZSA9IGVsZW1lbnRfYmxhbmsoKSwKICAgICAgICBsZWdlbmQudGl0bGUuYWxpZ24gPSAwLjUsCiAgICAgICAgbGVnZW5kLnNwYWNpbmcueCA9IHVuaXQoMC41LCAiY20iKSwgCiAgICAgICAgbGVnZW5kLnNwYWNpbmcueSA9IHVuaXQoMC41LCAiY20iKSwKICAgICAgICBsZWdlbmQuYmFja2dyb3VuZCA9IGVsZW1lbnRfcmVjdChsaW5ldHlwZSA9IDAsIHNpemUgPSAwLjUsIGNvbG91ciA9IDEpLAogICAgICAgIHBhbmVsLmJhY2tncm91bmQgPSBlbGVtZW50X2JsYW5rKCksCiAgICAgICAgYXhpcy50aXRsZS54ID0gZWxlbWVudF9ibGFuaygpLAogICAgICAgIGF4aXMudGl0bGUueSA9IGVsZW1lbnRfYmxhbmsoKSwKICAgICAgICBheGlzLnRpY2tzID0gZWxlbWVudF9ibGFuaygpLAogICAgICAgIGF4aXMudGV4dCA9IGVsZW1lbnRfYmxhbmsoKSwKICAgICAgICBwYW5lbC5ib3JkZXIgPSBlbGVtZW50X2JsYW5rKCksCiAgICAgICAgcGFuZWwuZ3JpZC5tYWpvciA9IGVsZW1lbnRfYmxhbmsoKSwgCiAgICAgICAgcGFuZWwuZ3JpZC5taW5vciA9IGVsZW1lbnRfYmxhbmsoKSkgKwogIGNvb3JkX2ZpeGVkKDEuMykKCgoKZ2dwbG90KCkgKyAKICBnZW9tX3BvbHlnb24oZGF0YSA9IG1pX2NvdW50LCBhZXMoeD1sb25nLCB5ID0gbGF0LCBncm91cCA9IGdyb3VwLCBmaWxsPXN1YnJlZ2lvbiksIAogICAgICAgICAgICAgICBjb2xvciA9ICIjRkZGRkZGIikgKwogIHNjYWxlX2ZpbGxfdmlyaWRpcyhkaXNjcmV0ZSA9IFRSVUUsIAogICAgICAgICAgICAgICAgICAgICBhbHBoYT0wLjcsIAogICAgICAgICAgICAgICAgICAgICBvcHRpb249ImluZmVybm8iLCAKICAgICAgICAgICAgICAgICAgICAgZ3VpZGUgPSBGQUxTRSkgKyAjSEVSRSBJVCBJUwogIHRoZW1lX2J3KCkgKwogIHRoZW1lKHBsb3QudGl0bGUgPSBlbGVtZW50X3RleHQoc2l6ZSA9IDI2LCBjb2xvciA9IiMxMDU0NTYiLCAgdmp1c3QgPSAtMSksCiAgICAgICAgbGVnZW5kLnBvc2l0aW9uID0iYm90dG9tIiwKICAgICAgICBsZWdlbmQuZGlyZWN0aW9uID0gJ3ZlcnRpY2FsJywKICAgICAgICBsZWdlbmQudGV4dCA9IGVsZW1lbnRfdGV4dChzaXplPTE1LCBjb2xvciA9ICIjNTk1OTVCIiksCiAgICAgICAgbGVnZW5kLnRpdGxlID0gZWxlbWVudF9ibGFuaygpLAogICAgICAgIGxlZ2VuZC50aXRsZS5hbGlnbiA9IDAuNSwKICAgICAgICBsZWdlbmQuc3BhY2luZy54ID0gdW5pdCgwLjUsICJjbSIpLCAKICAgICAgICBsZWdlbmQuc3BhY2luZy55ID0gdW5pdCgwLjUsICJjbSIpLAogICAgICAgIGxlZ2VuZC5iYWNrZ3JvdW5kID0gZWxlbWVudF9yZWN0KGxpbmV0eXBlID0gMCwgc2l6ZSA9IDAuNSwgY29sb3VyID0gMSksCiAgICAgICAgcGFuZWwuYmFja2dyb3VuZCA9IGVsZW1lbnRfYmxhbmsoKSwKICAgICAgICBheGlzLnRpdGxlLnggPSBlbGVtZW50X2JsYW5rKCksCiAgICAgICAgYXhpcy50aXRsZS55ID0gZWxlbWVudF9ibGFuaygpLAogICAgICAgIGF4aXMudGlja3MgPSBlbGVtZW50X2JsYW5rKCksCiAgICAgICAgYXhpcy50ZXh0ID0gZWxlbWVudF9ibGFuaygpLAogICAgICAgIHBhbmVsLmJvcmRlciA9IGVsZW1lbnRfYmxhbmsoKSwKICAgICAgICBwYW5lbC5ncmlkLm1ham9yID0gZWxlbWVudF9ibGFuaygpLCAKICAgICAgICBwYW5lbC5ncmlkLm1pbm9yID0gZWxlbWVudF9ibGFuaygpKSArCiAgY29vcmRfZml4ZWQoMS4zKQoKCgphcGlzIDwtIGxpc3RDZW5zdXNBcGlzKCkKCgoKVmlldyhhcGlzKQoKCgphY3MyMDE3X3ZhcnMgPC0gbGlzdENlbnN1c01ldGFkYXRhKG5hbWUgPSAiMjAxNy9wZXAvcG9wdWxhdGlvbi8iLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgdHlwZSA9ICJ2YXJpYWJsZXMiKQoKCgpoZWFkKGFjczIwMTdfdmFycykKCgoKYWNzMjAxN19nZW9zIDwtIGxpc3RDZW5zdXNNZXRhZGF0YShuYW1lID0gIjIwMTcvcGVwL3BvcHVsYXRpb24vIiwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgdHlwZSA9ICJnZW9ncmFwaHkiKQoKCgpWaWV3KGFjczIwMTdfZ2VvcykKCgoKbGlicmFyeShydmVzdCkKCgoKd2VicGFnZSA8LSByZWFkX2h0bWwoImh0dHBzOi8vYXBpLmNlbnN1cy5nb3YvZGF0YS8yMDE3L3BlcC9wb3B1bGF0aW9uL3ZhcmlhYmxlcy5odG1sIikKCgoKdGJscyA8LSBodG1sX25vZGVzKHdlYnBhZ2UsICJ0YWJsZSIpIAoKCgp0YmxzICMgb3IgaWYgdGhlcmUgYXJlIG11bHRpcGxlIHRhYmxlcywgY29uc2lkZXIgdXNpbmcgaGVhZCh0YmxzKQoKCgp0YmxzX2xzIDwtIHdlYnBhZ2UgJT4lCiAgICAgICAgaHRtbF9ub2RlcygidGFibGUiKSAlPiUgIyBDcmVhdGVzIGEgbXVsdGlkaW1lbnNpb25hbCBsaXN0IChpLmUuIGEgbGlzdCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAjIHdpdGggbGF5ZXJzIGFuZCBkZXB0aCBha2luIHRvIGZvbGRlcnMgd2l0aGluIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICMgZm9sZGVycyB3aXRoaW4gZm9sZGVycywgZWN0LikKICAgICAgICAuWzFdICU+JSAjIFdlIG9ubHkgaGF2ZSB0YWJsZSBzbyB3ZSBwdXQuWzFdIGhlcmUuIElmIHdlIGhhZCBtdWx0aXBsZSAKICAgICAgICAgICAgICAgICAjIHRhYmxlcyBhbmQgd2Ugd2FudGVkIHNheSB0aGUgZmlyc3QgdGhyZWUsIHdlIGNvdWxkIGhhdmUgCiAgICAgICAgICAgICAgICAgIyB1c2VkIC5bMTozXQogICAgICAgIGh0bWxfdGFibGUoZmlsbCA9IFRSVUUpICMgQ29udmVydCB0aGUgZGF0YSB0byBhIHRhYmxlIGZvcm1hdCBhbmQgcG9wdWxhdGUgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIyB0aGUgZW50cmllcwoKCgpWaWV3KHRibHNfbHMpCgoKCnRibHNfbHMgPC0gZG8uY2FsbChyYmluZC5kYXRhLmZyYW1lLCB0YmxzX2xzKSAjIENvbmNhdGVuYXRlcyBhIGxpc3Qgb2YgZGF0YSBmcmFtZXMgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAjIGludG8gYSBzaW5nbGUgZGF0YSBmcmFtZQoKCgpWaWV3KHRibHNfbHMpCgoKCmZpbHRlcmVkX3RibHNfbHMgPC0gdGJsc19sc1t0YmxzX2xzJFJlcXVpcmVkID09ICJkZWZhdWx0IGRpc3BsYXllZCIsIF0gCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIyBGaWx0ZXIgb3V0IHRoZSByb3dzIHRoYXQKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAjIGRvbid0IGhhdmUgYGRlZmF1bHQgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIyBkaXNwbGF5ZWRgIHVuZGVyIHRoZSAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAjIGNvbHVtbiAqKlJlcXVpcmVkKioKCgoKZmlsdGVyZWRfdGJsc19scyROYW1lICMgSnVzdCBzaG93cyB0aGUgTmFtZXMgb2YgdGhlIHJlcXVpcmVkIHZhcmlhYmxlcwoKCgpsaWJyYXJ5KHJ2ZXN0KQoKcmVhZF9odG1sKCJodHRwczovL2FwaS5jZW5zdXMuZ292L2RhdGEvMjAxNy9wZXAvcG9wdWxhdGlvbi92YXJpYWJsZXMuaHRtbCIpICU+JQpodG1sX25vZGVzKCJ0YWJsZSIpICAlPiUgIyBDcmVhdGVzIGEgbXVsdGlkaW1lbnNpb25hbCBsaXN0IChpLmUuIGEgbGlzdCB3aXRoIGxheWVycyAKICAgICAgICAgICAgICAgICAgICAgICAgICMgYW5kIGRlcHRoIGFraW4gdG8gZm9sZGVycyB3aXRoaW4gZm9sZGVycyB3aXRoaW4gZm9sZGVycywgCiAgICAgICAgICAgICAgICAgICAgICAgICAjIGVjdC4pCiAgLlsxXSAlPiUgIyBXZSBvbmx5IGhhdmUgdGFibGUgc28gd2UgcHV0LlsxXSBoZXJlLiBJZiB3ZSBoYWQgbXVsdGlwbGUgdGFibGVzIGFuZCAKICAgICAgICAgICAjIHdlIHdhbnRlZCBzYXkgdGhlIGZpcnN0IHRocmVlLCB3ZSBjb3VsZCBoYXZlIHVzZWQgLlsxOjNdCiAgaHRtbF90YWJsZShmaWxsID0gVFJVRSkgJT4lICMgQ29udmVydCB0aGUgZGF0YSB0byBhIHRhYmxlIGZvcm1hdCBhbmQgcG9wdWxhdGUgdGhlIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAjIGVudHJpZXMKICBiaW5kX3Jvd3MoKSAlPiUgIyBDb25jYXRlbmF0ZXMgYSBsaXN0IG9mIGRhdGEgZnJhbWVzIGludG8gYSBzaW5nbGUgZGF0YSBmcmFtZQogIGZpbHRlcihSZXF1aXJlZCA9PSAiZGVmYXVsdCBkaXNwbGF5ZWQiKSAlPiUgIyBGaWx0ZXIgb3V0IHRoZSByb3dzIHRoYXQgZG9uJ3QgaGF2ZQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIyBgZGVmYXVsdCBkaXNwbGF5ZWRgIHVuZGVyIHRoZSBjb2x1bW4gCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAjICoqUmVxdWlyZWQqKgogIHNlbGVjdChOYW1lKSAjIEp1c3Qgc2hvd3MgdGhlIE5hbWVzIG9mIHRoZSByZXF1aXJlZCB2YXJpYWJsZXMKCgoKdGJsc19scyROYW1lCgoKCnJlYWRfaHRtbCgiaHR0cHM6Ly9hcGkuY2Vuc3VzLmdvdi9kYXRhLzIwMTcvcGVwL3BvcHVsYXRpb24vdmFyaWFibGVzLmh0bWwiKSAlPiUKICBodG1sX25vZGVzKCJ0YWJsZSIpICAlPiUgIyBUaGlzIGlzIGEgbXVsdGlkaW1lbnNpb25hbCBsaXN0IChpLmUuIGEgbGlzdCB3aXRoIGxheWVycykKICAuWzFdICU+JSAKICBodG1sX3RhYmxlKGZpbGwgPSBUUlVFKSAlPiUKICBiaW5kX3Jvd3MoKSAlPiUgCiAgc2VsZWN0KE5hbWUpCgoKCmdldENlbnN1cyhuYW1lID0gIjIwMTcvcGVwL3BvcHVsYXRpb24iLAogICAgICAgICAgdmFycyA9IGMoIkRFTlNJVFkiKSwgCiAgICAgICAgICByZWdpb24gPSAic3RhdGU6MjYiKQoKCgpUaWdlcnMgPC0gZ2V0Q2Vuc3VzKG5hbWUgPSAiMjAxNy9wZXAvcG9wdWxhdGlvbiIsCiAgICAgICAgICAgICAgICAgICAgICAgICB2YXJzID0gYygiR0VPTkFNRSIsICJDT1VOVFkiLCAiREVOU0lUWSIpLCAKICAgICAgICAgICAgICAgICAgICAgICAgIHJlZ2lvbiA9ICJjb3VudHk6KiIsCiAgICAgICAgICAgICAgICAgICAgICAgICByZWdpb25pbiA9ICJzdGF0ZToyNiIpCgoKCmhlYWQoVGlnZXJzLCBuPTE1TCkKCgoKZHJvcHMgPC0gYygic3RhdGUiLCAiY291bnR5IiwgIkNPVU5UWSIpICMgQXNzaWducyBjb2x1bW4gbmFtZXMgdG8gYmUgZHJvcHBlZApUaWdlcnMgPC0gVGlnZXJzWyAsICEobmFtZXMoVGlnZXJzKSAlaW4lIGRyb3BzKV0gIyBEcm9wcyB0aG9zZSBjb2x1bW5zIAoKCgpoZWFkKFRpZ2VycykKCgoKaGVhZChtaV9jb3VudCkKCgoKVGlnZXJzIDwtIFRpZ2VycyAlPiUgCiAgc2VwYXJhdGUoR0VPTkFNRSwgaW50byA9IHBhc3RlMCgndGhpbmcnLCAxOjIpLCBzZXAgPSAnWyxdJykKCgoKaGVhZChUaWdlcnMpCgoKClRpZ2VycyA8LSBzZXROYW1lcyhUaWdlcnMsIGMoIkNvdW50eSIsIlN0YXRlIiwiRGVuc2l0eSIpKSAKCgoKaGVhZChUaWdlcnMpCgoKClRpZ2VycyRDb3VudHkgPC0gc3RyX3JlcGxhY2VfYWxsKFRpZ2VycyRDb3VudHksICIgQ291bnR5IiwgIiIpIAojIEZpbmQgdGhlIHRlcm0gQ291bnR5IGluIHRoZSBDb3VudHkgY29sdW1uIGFuZCByZXBsYWNlIGl0IG5vdGhpbmcgKGdpdmVuIGJ5ICIiKS4gTm90aWNlIAojIHRoYXQgdGhlcmUgaXMgYSBzcGFjZSBiZXR3ZWVuIHRoZSBmaXJzdCBxdW90ZSBhbmQgdGhlIHRlcm0gQ291bnR5IHRvIGFjY291bnQgZm9yIHRoZSAKIyBzcGFjZSBiZXR3ZWVuIHRoZSB0d28gd29yZHMuCgoKCmRyb3BGcm9tQ2Vuc3VzIDwtIGMoIlN0YXRlIikKVGlnZXJzIDwtIFRpZ2Vyc1sgLCAhKG5hbWVzKFRpZ2VycykgJWluJSBkcm9wRnJvbUNlbnN1cyldICMgRHJvcHMgdGhvc2UgY29sdW1ucwoKCgpoZWFkKFRpZ2VycykKCgoKaGVhZChtaV9jb3VudCkKCgoKZHJvcEZyb21NYXBEYXRhIDwtIGMoImdyb3VwIiwgIm9yZGVyIiwgInJlZ2lvbiIpCm1pX2NvdW50IDwtIG1pX2NvdW50WyAsICEobmFtZXMobWlfY291bnQpICVpbiUgZHJvcEZyb21NYXBEYXRhKV0gIyBEcm9wcyB0aG9zZSBjb2x1bW5zCmhlYWQobWlfY291bnQpCgoKCm1pX2NvdW50IDwtIHNldE5hbWVzKG1pX2NvdW50LCBjKCJsb25nIiwibGF0IiwiQ291bnR5IikpIAoKCgpoZWFkKG1pX2NvdW50KQoKCgptaV9jb3VudCRDb3VudHkgPC0gc3RyX3RvX3RpdGxlKG1pX2NvdW50JENvdW50eSkKCgoKaGVhZChtaV9jb3VudCkKCgoKaGVhZChUaWdlcnMpCmhlYWQobWlfY291bnQpCgoKCnRvdGFsX3RoaW5nIDwtIGxlZnRfam9pbihtaV9jb3VudCwgVGlnZXJzLCBieSA9IGMoIkNvdW50eSIpKQoKCgpoZWFkKG1pX2NvdW50KQoKCgpnZ3Bsb3QoKSArIAogIGdlb21fcG9seWdvbihkYXRhID0gdG90YWxfdGhpbmcsIGFlcyh4PWxvbmcsIHkgPSBsYXQsIGZpbGw9RGVuc2l0eSwgZ3JvdXA9Q291bnR5KSwgCiAgICAgICAgICAgICAgIGNvbG9yID0gIiNmOGY4ZmEiLCBzaXplID0gMC4yNSwgc2hvdy5sZWdlbmQgPSBUKSArCiAgc2NhbGVfY29sb3JfdmlyaWRpcyhhbHBoYT0xLCBvcHRpb249InZpcmlkaXMiKSArICMgY29sb3IgdGVsbHMgUiB0byBsb29rIGZvciBkaXNjcmV0ZSBkYXRhIHRvIGNvbG9yCiAgdGhlbWVfYncoKSArCiAgdGhlbWUocGxvdC50aXRsZSA9IGVsZW1lbnRfdGV4dChzaXplID0gMjYsY29sb3IgPSIjMTA1NDU2IiwgIHZqdXN0ID0gLTEpLAogICAgICAgIGxlZ2VuZC5wb3NpdGlvbiA9InJpZ2h0IiwKICAgICAgICBsZWdlbmQuZGlyZWN0aW9uID0gJ3ZlcnRpY2FsJywKICAgICAgICBsZWdlbmQua2V5ID0gZWxlbWVudF9yZWN0KHNpemUgPSA1LCBjb2xvciA9IE5BKSwKICAgICAgICBsZWdlbmQua2V5LnNpemUgPSB1bml0KDEuNSwgJ2xpbmVzJyksCiAgICAgICAgbGVnZW5kLnRleHQgPSBlbGVtZW50X3RleHQoc2l6ZT0xNSwgY29sb3IgPSAiIzU5NTk1QiIpLAogICAgICAgIGxlZ2VuZC50aXRsZSA9IGVsZW1lbnRfYmxhbmsoKSwKICAgICAgICBsZWdlbmQudGl0bGUuYWxpZ24gPSAwLjUsCiAgICAgICAgbGVnZW5kLnNwYWNpbmcueCA9IHVuaXQoMC41LCAiY20iKSwgCiAgICAgICAgbGVnZW5kLnNwYWNpbmcueSA9IHVuaXQoMC41LCAiY20iKSwKICAgICAgICBsZWdlbmQuYmFja2dyb3VuZCA9IGVsZW1lbnRfcmVjdChsaW5ldHlwZSA9IDAsIHNpemUgPSAwLjUsIGNvbG91ciA9IDEpLAogICAgICAgIHBhbmVsLmJhY2tncm91bmQgPSBlbGVtZW50X2JsYW5rKCksCiAgICAgICAgYXhpcy50aXRsZS54ID0gZWxlbWVudF9ibGFuaygpLAogICAgICAgIGF4aXMudGl0bGUueSA9IGVsZW1lbnRfYmxhbmsoKSwKICAgICAgICBheGlzLnRpY2tzID0gZWxlbWVudF9ibGFuaygpLAogICAgICAgIGF4aXMudGV4dCA9IGVsZW1lbnRfYmxhbmsoKSwKICAgICAgICBwYW5lbC5ib3JkZXIgPSBlbGVtZW50X2JsYW5rKCksCiAgICAgICAgcGFuZWwuZ3JpZC5tYWpvciA9IGVsZW1lbnRfYmxhbmsoKSwgCiAgICAgICAgcGFuZWwuZ3JpZC5taW5vciA9IGVsZW1lbnRfYmxhbmsoKSkgKwogIGNvb3JkX2ZpeGVkKDEuMykKCgoKdG90YWxfdGhpbmckRGVuc2l0eSA8LSBhcy5udW1lcmljKGFzLmNoYXJhY3Rlcih0b3RhbF90aGluZyREZW5zaXR5KSkKCgoKZ2dwbG90KCkgKyAKICBnZW9tX3BvbHlnb24oZGF0YSA9IHRvdGFsX3RoaW5nLCBhZXMoeD1sb25nLCB5ID0gbGF0LCBmaWxsPURlbnNpdHksIGdyb3VwPUNvdW50eSksIAogICAgICAgICAgICAgICBjb2xvciA9ICIjZjhmOGZhIiwgc2l6ZSA9IDAuMjUsIHNob3cubGVnZW5kID0gVCkgKwogIHNjYWxlX2ZpbGxfdmlyaWRpcyhhbHBoYT0xLCBvcHRpb249InZpcmlkaXMiKSArICMgZmlsbCB0ZWxscyBSIHRvIGxvb2sgZm9yIGNvbnRpbnVvdXMgZGF0YSB0byBjb2xvcgogIHRoZW1lX2J3KCkgKwogIHRoZW1lKHBsb3QudGl0bGUgPSBlbGVtZW50X3RleHQoc2l6ZSA9IDI2LGNvbG9yID0iIzEwNTQ1NiIsICB2anVzdCA9IC0xKSwKICAgICAgICBsZWdlbmQucG9zaXRpb24gPSJyaWdodCIsCiAgICAgICAgbGVnZW5kLmRpcmVjdGlvbiA9ICd2ZXJ0aWNhbCcsCiAgICAgICAgbGVnZW5kLmtleSA9IGVsZW1lbnRfcmVjdChzaXplID0gNSwgY29sb3IgPSBOQSksCiAgICAgICAgbGVnZW5kLmtleS5zaXplID0gdW5pdCgxLjUsICdsaW5lcycpLAogICAgICAgIGxlZ2VuZC50ZXh0ID0gZWxlbWVudF90ZXh0KHNpemU9MTUsIGNvbG9yID0gIiM1OTU5NUIiKSwKICAgICAgICBsZWdlbmQudGl0bGUgPSBlbGVtZW50X2JsYW5rKCksCiAgICAgICAgbGVnZW5kLnRpdGxlLmFsaWduID0gMC41LAogICAgICAgIGxlZ2VuZC5zcGFjaW5nLnggPSB1bml0KDAuNSwgImNtIiksIAogICAgICAgIGxlZ2VuZC5zcGFjaW5nLnkgPSB1bml0KDAuNSwgImNtIiksCiAgICAgICAgbGVnZW5kLmJhY2tncm91bmQgPSBlbGVtZW50X3JlY3QobGluZXR5cGUgPSAwLCBzaXplID0gMC41LCBjb2xvdXIgPSAxKSwKICAgICAgICBwYW5lbC5iYWNrZ3JvdW5kID0gZWxlbWVudF9ibGFuaygpLAogICAgICAgIGF4aXMudGl0bGUueCA9IGVsZW1lbnRfYmxhbmsoKSwKICAgICAgICBheGlzLnRpdGxlLnkgPSBlbGVtZW50X2JsYW5rKCksCiAgICAgICAgYXhpcy50aWNrcyA9IGVsZW1lbnRfYmxhbmsoKSwKICAgICAgICBheGlzLnRleHQgPSBlbGVtZW50X2JsYW5rKCksCiAgICAgICAgcGFuZWwuYm9yZGVyID0gZWxlbWVudF9ibGFuaygpLAogICAgICAgIHBhbmVsLmdyaWQubWFqb3IgPSBlbGVtZW50X2JsYW5rKCksIAogICAgICAgIHBhbmVsLmdyaWQubWlub3IgPSBlbGVtZW50X2JsYW5rKCkpICsKICBjb29yZF9maXhlZCgxLjMpCgoKCmxpYnJhcnkodGlkeWNlbnN1cykKbGlicmFyeSh0aWR5dmVyc2UpCmxpYnJhcnkodG9vbHMpIApsaWJyYXJ5KHNmKQojIEZvciBvcmUgaW5mb3JtYXRpb24gb24gc2Y6IGh0dHBzOi8vci1zcGF0aWFsLmdpdGh1Yi5pby9zZi9hcnRpY2xlcy9zZjEuaHRtbApsaWJyYXJ5KERUKSAKbGlicmFyeShnZ3RoZW1lcykKbGlicmFyeSh3ZXNhbmRlcnNvbikKb3B0aW9ucyh0aWdyaXNfdXNlX2NhY2hlID0gVFJVRSkgCgoKCgoKCgptb24gPC0gZ2V0X2FjcyhzdGF0ZSA9ICJXViIsIAogICAgICAgICAgICAgICBjb3VudHkgPSAiTW9ub25nYWxpYSIsIAogICAgICAgICAgICAgICBnZW9ncmFwaHkgPSAidHJhY3QiLCAKICAgICAgICAgICAgICAgdmFyaWFibGVzID0gIkIxOTAxM18wMDEiLCAKICAgICAgICAgICAgICAgZ2VvbWV0cnkgPSBUUlVFKQoKCgpkYXRhdGFibGUobW9uKQoKCgoKCndlc19wYWxldHRlKCJSdXNobW9yZTEiKQoKCgpwYWwgPC0gd2VzX3BhbGV0dGUoIlJ1c2htb3JlMSIsIAogICAgICAgICAgICAgICAgICAgbWF4KG1vbiRlc3RpbWF0ZSksIAogICAgICAgICAgICAgICAgICAgdHlwZSA9ICJjb250aW51b3VzIikKCgoKbW9uICU+JQogIGdncGxvdChhZXMoZmlsbCA9IGVzdGltYXRlKSkgKyAKICBnZW9tX3NmKGNvbG9yID0gTkEpICsgCiAgc2NhbGVfZmlsbF9ncmFkaWVudG4oY29sb3JzID0gcGFsKSArCiAgdGhlbWVfbWFwKCkgCgoKCnJhY2V2YXJzIDwtIGMoV2hpdGUgPSAiUDAwNTAwMyIsIAogICAgICAgICAgICAgIEJsYWNrID0gIlAwMDUwMDQiLCAKICAgICAgICAgICAgICBBc2lhbiA9ICJQMDA1MDA2IiwgCiAgICAgICAgICAgICAgSGlzcGFuaWMgPSAiUDAwNDAwMyIpCgoKCm1vbl9yYWNlIDwtIGdldF9kZWNlbm5pYWwoZ2VvZ3JhcGh5ID0gInRyYWN0IiwKICAgICAgICAgICAgICAgICAgICAgICAgICB2YXJpYWJsZXMgPSByYWNldmFycywKICAgICAgICAgICAgICAgICAgICAgICAgICBzdGF0ZSA9ICJXViIsIAogICAgICAgICAgICAgICAgICAgICAgICAgIGNvdW50eSA9ICJNb25vbmdhbGlhIENvdW50eSIsIAogICAgICAgICAgICAgICAgICAgICAgICAgIGdlb21ldHJ5ID0gVFJVRSwKICAgICAgICAgICAgICAgICAgICAgICAgICBzdW1tYXJ5X3ZhciA9ICJQMDAxMDAxIikgCgoKCmRhdGF0YWJsZShtb25fcmFjZSkKCgoKCgptb25fcmFjZSAlPiUKICBtdXRhdGUocGN0ID0gMTAwICogKHZhbHVlIC8gc3VtbWFyeV92YWx1ZSkpICU+JQogIGdncGxvdChhZXMoZmlsbCA9IHBjdCkpICsKICBmYWNldF93cmFwKH52YXJpYWJsZSkgKwogIGdlb21fc2YoY29sb3IgPSBOQSkgKyAKICBzY2FsZV9maWxsX2dyYWRpZW50bihjb2xvcnMgPSBwYWwpICsKICB0aGVtZV9tYXAoKSAKCgoKbW9uX3JhY2UgJT4lCiAgbXV0YXRlKHBjdCA9IDEwMCAqICh2YWx1ZSAvIHN1bW1hcnlfdmFsdWUpKSAlPiUKICBnZ3Bsb3QoYWVzKGZpbGwgPSBwY3QpKSArCiAgZmFjZXRfd3JhcCh+dmFyaWFibGUpICsKICBnZW9tX3NmKGNvbG9yID0gTkEpICsgCiAgc2NhbGVfZmlsbF9ncmFkaWVudG4oY29sb3JzID0gcGFsLAogICAgICAgICAgICAgICAgICAgICAgIHRyYW5zPSJsb2cxMCIpICsKICB0aGVtZV9tYXAoKSAKCgoKdmFycyA8LSBsaXN0Q2Vuc3VzTWV0YWRhdGEobmFtZSA9ICJhY3MvYWNzNS9wcm9maWxlIiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgdmludGFnZSA9IDIwMTgsIAogICAgICAgICAgICAgICAgICAgICAgICAgICB0eXBlID0gInZhcmlhYmxlcyIpIAoKCgp2YXJzICU+JQogIGFzX3RpYmJsZSgpICU+JQogICAgZmlsdGVyKHN0cl9kZXRlY3QobGFiZWwsICJyZWxhdGUiKSkKCgoKCgpwb3ZlcnR5X2RhdGEgPC0gZ2V0Q2Vuc3VzKG5hbWUgPSAiYWNzL2FjczUvcHJvZmlsZSIsICMgc2FtZSBhcyBhYm92ZQogICAgICAgICAgICAgICAgICAgICAgICAgIHZpbnRhZ2UgPSAyMDE4LAogICAgICAgICAgICAgICAgICAgICAgICAgIHZhcnMgPSBjKCJOQU1FIiwgIkRQMDNfMDEyNlBFIiksICMgY29sdW1uL3ZhcmlhYmxlIG5hbWUKICAgICAgICAgICAgICAgICAgICAgICAgICBrZXkgPSBTeXMuZ2V0ZW52KCJDRU5TVVNfS0VZIiksICMgdXNpbmcgdGhlIGNlbnN1cyBrZXkgZnJvbSBiZWZvcmUKICAgICAgICAgICAgICAgICAgICAgICAgICByZWdpb24gPSAiY291bnR5OioiLCMgYW55IGNvdW50eQogICAgICAgICAgICAgICAgICAgICAgICAgIHJlZ2lvbmluID0gInN0YXRlOioiKSAjIGFueSBzdGF0ZQoKCgpwb3ZlcnR5X2RhdGFfY2xlYW5lZCA8LSBwb3ZlcnR5X2RhdGEgJT4lCiAgICAgICAgICAgICAgICAgICAgICAgIHNlcGFyYXRlKE5BTUUsIGludG8gPSBwYXN0ZTAoJ3RoaW5nJywgMToyKSwgc2VwID0gJ1ssXScpICU+JQogICAgICAgICAgICAgICAgICAgICAgICBtdXRhdGUodGhpbmcxID0gc3RyX3JlcGxhY2VfYWxsKHRoaW5nMSwgIiBDb3VudHkiLCAiIikpICU+JSAjIFJlbW92ZSB0aGUgdGVybSBDb3VudHkgKHdpdGggYSBzcGFjZSBpbiBmcm9udCkgCiAgICAgICAgICAgICAgICAgICAgICAgIG11dGF0ZSh0aGluZzIgPSBzdHJfc3F1aXNoKHRoaW5nMikpICU+JQogICAgICAgICAgICAgICAgICAgICAgICBzZWxlY3QoLWMoc3RhdGUsIGNvdW50eSkpICU+JSAjIEdldCByaWQgb2YgdGhlc2UgYmVjYXVzZSB3ZSdsbCBiZSB1c2luZyBzdGF0ZSBhbmQgY291bnR5IG5hbWVzIHRvIG1lcmdlCiAgICAgICAgICAgICAgICAgICAgICAgIHJlbmFtZShjb3VudHkgPSB0aGluZzEsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgc3RhdGUgPSB0aGluZzIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBwb3ZlcnR5X3BlcmNlbnRhZ2UgPSBEUDAzXzAxMjZQRSkgJT4lCiAgICAgICAgICAgICAgICAgICAgICAgIG11dGF0ZShwb3ZlcnR5X3BlcmNlbnRhZ2UgPSByZXBsYWNlKHBvdmVydHlfcGVyY2VudGFnZSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgd2hpY2gocG92ZXJ0eV9wZXJjZW50YWdlIDw9IDApLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBOQSkpICU+JQogICAgICAgICAgICAgICAgICAgICAgICBhcnJhbmdlKHN0YXRlLCBjb3VudHkpCgoKCnBvdmVydHlfZGF0YV9jbGVhbmVkICU+JSAKICBoZWFkKCkKCgoKY291bnR5X2RhdGEgPC0gbWFwX2RhdGEoImNvdW50eSIpICU+JSAKICAgICAgICAgICAgICAgcmVuYW1lKHN0YXRlID0gcmVnaW9uLCAjIHJlbmFtZSBiZWNhdXNlIHdlJ2xsIHVzZSB0aGlzIHRvIG1lcmdlIHdpdGggdGhlIGluY29tZV9kYXRhX2NsZWFuZWQgc2V0CiAgICAgICAgICAgICAgICAgICAgICBjb3VudHkgPSBzdWJyZWdpb24pICU+JSAjIHJlbmFtZSBiZWNhdXNlIHdlJ2xsIHVzZSB0aGlzIHRvIG1lcmdlIHdpdGggdGhlIGluY29tZV9kYXRhX2NsZWFuZWQgc2V0CiAgICAgICAgICAgICAgIG11dGF0ZShzdGF0ZSA9IHN0cl90b190aXRsZShzdGF0ZSkpICU+JSAjIG1ha2UgaW50byBhIHRpdGxlIGNhc2UKICAgICAgICAgICAgICAgbXV0YXRlKGNvdW50eSA9IHN0cl90b190aXRsZShjb3VudHkpKSAjIG1ha2UgaW50byBhIHRpdGxlIGNhc2UgCgoKCmNvdW50eV9kYXRhICU+JSAKICBoZWFkKCkKCgoKbWFwX2RhdGEgPC0gbGVmdF9qb2luKGNvdW50eV9kYXRhLCAKICAgICAgICAgICAgICAgICAgICAgIHBvdmVydHlfZGF0YV9jbGVhbmVkLCAKICAgICAgICAgICAgICAgICAgICAgIGJ5ID0gYygic3RhdGUiLCJjb3VudHkiKSkgCgoKCm1hcF9kYXRhICU+JSAKICBoZWFkKCkKCgoKZXN0aW1hdGVfbWFwIDwtIAogIGdncGxvdCgpICsgCiAgZ2VvbV9wb2x5Z29uKGRhdGEgPSBtYXBfZGF0YSwgYWVzKHggPSBsb25nLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgeSA9IGxhdCwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZpbGwgPSBwb3ZlcnR5X3BlcmNlbnRhZ2UsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBncm91cCA9IGdyb3VwKSwKICAgICAgICAgICAgICAgY29sb3IgPSAiI2Y4ZjhmYSIsIAogICAgICAgICAgICAgICBzaXplID0gMC4yMCwgCiAgICAgICAgICAgICAgIHNob3cubGVnZW5kID0gVFJVRSkgKwogIGdlb21fcG9seWdvbihkYXRhPXN1YnNldChtYXBfZGF0YSgic3RhdGUiKSksIAogICAgICAgICAgICAgICBhZXMoeCA9IGxvbmcsIAogICAgICAgICAgICAgICAgICAgeSA9IGxhdCwgCiAgICAgICAgICAgICAgICAgICBncm91cCA9IGdyb3VwKSwgCiAgICAgICAgICAgICAgIHNpemUgPSAwLjUsCiAgICAgICAgICAgICAgIGNvbG9yPSJ3aGl0ZSIsIAogICAgICAgICAgICAgICBmaWxsID0gTkEpICsKICBzY2FsZV9maWxsX2dyYWRpZW50KG5hbWU9IkVzdGltYXRlcyIsIAogICAgICAgICAgICAgICAgICAgICAgbG93ID0gIiNmYTlmYjUiLCAKICAgICAgICAgICAgICAgICAgICAgIGhpZ2ggPSAiIzdhMDE3NyIsCiAgICAgICAgICAgICAgICAgICAgICBicmVha3MgPSBjKDAsIDI1LCA1MCwgNzUsIDEwMCksCiAgICAgICAgICAgICAgICAgICAgICBsaW1pdHMgPSBjKDAsMTAwKSwgCiAgICAgICAgICAgICAgICAgICAgICBuYS52YWx1ZSA9ICIjYzlkM2Q5IiwKICAgICAgICAgICAgICAgICAgICAgIGxhYmVscyA9IGMoc3RyX3dyYXAoIjAuMDAlIC0gMjQuOTklIiwgMTApLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgc3RyX3dyYXAoIjI1LjAwIC0gNDkuOTklIiwgMTApLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBzdHJfd3JhcCgiNTAuMDAlIC0gNzQuOTklIiwgMTApLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBzdHJfd3JhcCgiNzUuMDAlIC0gOTkuOTklIiwgMTApLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAiMTAwJSIpLAogICAgICAgICAgICAgICAgICAgICAgZ3VpZGUgPSAibGVnZW5kIikgKwogIHRoZW1lKHBsb3QudGl0bGUgPSBlbGVtZW50X3RleHQoc2l6ZSA9IDEzLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgY29sb3IgPSIjNDY4MmI0IiwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB2anVzdCA9IC0xLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgaGp1c3QgPSAwLjUsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBmYWNlID0gImJvbGQiKSwKICAgICAgICBwbG90LmNhcHRpb24gPSBlbGVtZW50X3RleHQoc2l6ZSA9IDgsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNvbG9yID0iIzQ2ODJiNCIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZhY2UgPSAiaXRhbGljIiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgbWFyZ2luID0gbWFyZ2luKHQgPSAxLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHVuaXQgPSAiY20iKSksCiAgICAgICAgbGVnZW5kLnBvc2l0aW9uID0gImJvdHRvbSIsCiAgICAgICAgbGVnZW5kLmRpcmVjdGlvbiA9ICJob3Jpem9udGFsIiwKICAgICAgICBsZWdlbmQua2V5ID0gZWxlbWVudF9yZWN0KHNpemUgPSA1LCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNvbG9yID0gTkEpLAogICAgICAgIGxlZ2VuZC5rZXkud2lkdGggPSB1bml0KDIsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgImNtIiksCiAgICAgICAgbGVnZW5kLmtleS5oZWlnaHQgPSB1bml0KDAuMywgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAiY20iKSwKICAgICAgICBsZWdlbmQudGV4dCA9IGVsZW1lbnRfdGV4dChzaXplID0gOCwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgY29sb3IgPSAiIzQ2ODJiNCIpLAogICAgICAgIGxlZ2VuZC50aXRsZS5hbGlnbiA9IDAuNSwKICAgICAgICBsZWdlbmQudGl0bGUgPSBlbGVtZW50X3RleHQoc2l6ZSA9IDEwLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgY29sb3IgPSAiIzQ2ODJiNCIpLAogICAgICAgIGxlZ2VuZC5iYWNrZ3JvdW5kID0gZWxlbWVudF9yZWN0KGxpbmV0eXBlID0gMCwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgc2l6ZSA9IDAuNSwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgY29sb3IgPSAxKSwKICAgICAgICBwYW5lbC5iYWNrZ3JvdW5kID0gZWxlbWVudF9ibGFuaygpLAogICAgICAgIGF4aXMudGl0bGUueCA9IGVsZW1lbnRfYmxhbmsoKSwKICAgICAgICBheGlzLnRpdGxlLnkgPSBlbGVtZW50X2JsYW5rKCksCiAgICAgICAgYXhpcy50aWNrcyA9IGVsZW1lbnRfYmxhbmsoKSwKICAgICAgICBheGlzLnRleHQgPSBlbGVtZW50X2JsYW5rKCksCiAgICAgICAgcGFuZWwuYm9yZGVyID0gZWxlbWVudF9ibGFuaygpLAogICAgICAgIHBhbmVsLmdyaWQubWFqb3IgPSBlbGVtZW50X2JsYW5rKCksIAogICAgICAgIHBhbmVsLmdyaWQubWlub3IgPSBlbGVtZW50X2JsYW5rKCkpICsKICBsYWJzKHRpdGxlID0gc3RyX3RvX3RpdGxlKHN0cl93cmFwKCIyMDE0LTIwMTggZXN0aW1hdGUgb2YgZmFtaWxpZXMgd2l0aCBmZW1hbGUgaG91c2Vob2xkZXIsIG5vIGh1c2JhbmQgcHJlc2VudCB3aXRoIHJlbGF0ZWQgY2hpbGRyZW4gb2YgdGhlIGhvdXNlaG9sZGVyIHVuZGVyIDE4IHllYXJzIiwgNTApKSwKICAgICAgIGNhcHRpb24gPSAiU291cmNlOiAyMDE4IEFtZXJpY2FuIENvbW11bml0eSBTdXJ2ZXk6IDUtWWVhciBFc3RpbWF0ZXMiKSArCiAgZ3VpZGVzKGZpbGwgPSBndWlkZV9sZWdlbmQodGl0bGUucG9zaXRpb24gPSAidG9wIiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICBsYWJlbC5wb3NpdGlvbiA9ICJib3R0b20iLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICBsYWJlbC5oanVzdCA9IDAuNSkpIAoKCi0tLS0KZXN0aW1hdGVfbWFwCgoKLS0tLQplc3RpbWF0ZV9tYXAgKyAKICBjb29yZF9tYXAoImFsYmVycyIsIAogICAgICAgICAgICBsYXQwID0gMzksIAogICAgICAgICAgICBsYXQxID0gNDUpCgoKLS0tLQplc3RpbWF0ZV9tYXAgKyAKICBjb29yZF9xdWlja21hcCgpCgoKLS0tLQplc3RpbWF0ZV9tYXAgKyAKICBjb29yZF9tYXAoImF6ZXF1YWxhcmVhIikKCgotLS0tCmVzdGltYXRlX21hcCArIAogIGNvb3JkX21hcCgiYm9ubmUiLCAKICAgICAgICAgICAgbGF0MCA9IDUwKQoKCi0tLS0KZXN0aW1hdGVfbWFwICsgCiAgY29vcmRfbWFwKCJjeWxpbmRyaWNhbCIpCgoKLS0tLQplc3RpbWF0ZV9tYXAgKyAKICBjb29yZF9tYXAoImdpbGJlcnQiKQoKCi0tLS0KZXN0aW1hdGVfbWFwICsgCiAgY29vcmRfbWFwKCJsYWdyYW5nZSIpCgoKLS0tLQplc3RpbWF0ZV9tYXAgKyAKICBjb29yZF9tYXAoIm1lcmNhdG9yIikKCgoKZXN0aW1hdGVfbWFwICsKICBjb29yZF9tYXAoKQoKCi0tLS0KZXN0aW1hdGVfbWFwICsgCiAgY29vcmRfbWFwKCJvcnRob2dyYXBoaWMiKQoKCi0tLS0KZXN0aW1hdGVfbWFwICsgCiAgY29vcmRfbWFwKCJzdGVyZW9ncmFwaGljIikKCgoKcG92ZXJ0eV9lc3RpbWF0ZXNfYWxiZXJzIDwtIGVzdGltYXRlX21hcCArCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjb29yZF9tYXAoIm1lcmNhdG9yIikKCgoKZ2dzYXZlKCJwb3ZlcnR5X2VzdGltYXRlcy5wZGYiLAogICAgICAgcG92ZXJ0eV9lc3RpbWF0ZXNfYWxiZXJzLAogICAgICAgd2lkdGggPSAyOTcsCiAgICAgICBoZWlnaHQgPSAyMTAsCiAgICAgICB1bml0cyA9ICJtbSIpCgo=" download="Week 6 Assignment Script Outline.R">
+<button class="btn btn-default hvr-sweep-to-left"><i class="fa fa-save"></i> Download the Script</button>
+</a>
+</div>
+<div id="read-the-submission-directions" class="section level2">
+<h2>Read the Submission Directions</h2>
+<p>Please submit a PDF out using an Rmarkdown file of five different maps using the Census data at the tract, county, state, <a href="https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf" target="_blank">region</a>, and national levels to <a href="https://2021edp693e.slack.com/archives/C01PB0Z18FP" target="_blank">Slack</a> for the out of class task.</p>
+</div>
+<div id="load-up-some-libraries" class="section level2">
+<h2>Load Up Some Libraries</h2>
+<p>Please go ahead and download the libraries below you don’t have and load them up</p>
+<pre class="r"><code>library(ggmap)
+library(maps)
+library(mapdata)
+library(rgdal) 
+library(tidyverse)
+library(tools)
+library(viridis)</code></pre>
+<p>There are a lot of mapping and support packages in R so we should first take a look at the ones being used here</p>
+<center>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Library
+</th>
+<th style="text-align:left;">
+Description
+</th>
+<th style="text-align:center;">
+Repository
+</th>
+<th style="text-align:center;">
+Example
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<code>ggmap</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Gives the ability to visualize spatial data
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://github.com/dkahle/ggmap" target="_blank">Github</a>
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://www.nceas.ucsb.edu/sites/default/files/2020-04/ggmapCheatsheet.pdf" target="_blank">Cheatsheet</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; vertical-align: middle !important;">
+<code>maps</code>
+</td>
+<td style="text-align:left;width: 30em; vertical-align: middle !important;">
+Computes the areas of regions in a projected map
+</td>
+<td style="text-align:center;width: 10em; vertical-align: middle !important;">
+<a href="https://github.com/adeckmyn/maps" target="_blank">Github</a>
+</td>
+<td style="text-align:center;width: 10em; vertical-align: middle !important;">
+<a href="https://eriqande.github.io/rep-res-web/lectures/making-maps-with-R.html" target="_blank">Walkthrough</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<code>mapdata</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Provides both larger and higher-resolution databases
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://github.com/cran/mapdata" target="_blank">Github</a>
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://www.r-graph-gallery.com/278-the-maps-library.html" target="_blank">Walkthrough</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<code>rgdal</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Bindings for the <a href="https://www.gdal.org/" target="_blank">Geospatial Data Abstraction Library</a>
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://github.com/OSGeo/gdal" target="_blank">Github</a>
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://www.r-graph-gallery.com/168-load-a-shape-file-into-r.html" target="_blank">Walkthrough</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<code>tidyverse</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Nope
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://github.com/tidyverse/tidyverse" target="_blank">Github</a>
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://www.tidyverse.org/" target="_blank">Homepage</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<code>tools</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Used to manipulating R packages and their documentation
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://www.rdocumentation.org/packages/tools/versions/3.6.2" target="_blank">None<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></a>
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://stackoverflow.com/questions/7779037/extract-file-extension-from-file-path/47115540#47115540" target="_blank">StackOverflow</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<code>viridis</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Viridis color and fill palette
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://github.com/sjmgarnier/viridis" target="_blank">Github</a>
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html" target="_blank">Vignette</a>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+</div>
+<div id="whats-an-api" class="section level2">
+<h2>What’s an API?</h2>
+<p>API stands for <em>Application Programming Interface</em> which is essentially a fancy name for a program that acts as a middleman between two services with sets of instructions.</p>
+<p><img src="/assignment/06-assignment_files/API.png" /></p>
+<p>We’ll be using the <a href="https://www.census.gov/data/developers.html" target="_blank">U.S. Census API</a>.</p>
+</div>
+<div id="api-credentials" class="section level2">
+<h2>API Credentials</h2>
+<p>There are a few things you need to do when grabbing Census data.</p>
+<ol style="list-style-type: decimal">
+<li><p>You must have a key from <a href="https://api.census.gov/data/key_signup.html" target="_blank">https://api.census.gov/data/key_signup.html</a></p></li>
+<li><p>Load up (or install and then load up) the library <code>censusapi</code></p></li>
+</ol>
+<pre class="r"><code>library(censusapi)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;censusapi&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:methods&#39;:
+## 
+##     getFunction</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Add key to the <code>.Renviron</code> (the place in the <code>censusapi</code> where your unique identifier, or key, is stored)</li>
+</ol>
+<pre class="r"><code>Sys.setenv(CENSUS_KEY=&quot;YOUR API KEY HERE&quot;)</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>Reload the <code>.Renviron</code></li>
+</ol>
+<pre class="r"><code>readRenviron(&quot;~/.Renviron&quot;) # You may get a warning...ignore it</code></pre>
+<ol start="5" style="list-style-type: decimal">
+<li>Check to see that your key stored within R</li>
+</ol>
+<pre class="r"><code>Sys.getenv(&quot;CENSUS_KEY&quot;)</code></pre>
+<p><code>## [1] "YOUR UNIQUE IDENTIFIER HERE"</code></p>
+</div>
+<div id="the-census-api" class="section level2">
+<h2>The Census API</h2>
+<p>Let’s a list of <em>all</em> data sets associated with the US Census through their API.</p>
+<pre class="r"><code>availableapis &lt;- listCensusApis()</code></pre>
+<p>You can use the <code>datatable()</code> command from the <code>DT</code> package to see an better view of the output. Yours will look similar to what is shown below but with more functionality.</p>
+<pre class="r"><code>datatable(availableapis)</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+title
+</th>
+<th style="text-align:left;">
+name
+</th>
+<th style="text-align:right;">
+vintage
+</th>
+<th style="text-align:left;">
+url
+</th>
+<th style="text-align:left;">
+isTimeseries
+</th>
+<th style="text-align:left;">
+temporal
+</th>
+<th style="text-align:left;">
+description
+</th>
+<th style="text-align:left;">
+modified
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+457
+</td>
+<td style="text-align:left;">
+Annual Economic Surveys: Annual Business Survey
+</td>
+<td style="text-align:left;">
+abscb
+</td>
+<td style="text-align:right;">
+2017
+</td>
+<td style="text-align:left;">
+<a href="https://api.census.gov/data/2017/abscb" class="uri">https://api.census.gov/data/2017/abscb</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+unidentified
+</td>
+<td style="text-align:left;">
+The Annual Business Survey (ABS) provides information on selected economic and demographic characteristics for businesses and business owners by sex, ethnicity, race, and veteran status. Further, the survey measures research and development (for microbusinesses), new business topics such as innovation and technology, as well as other business characteristics. The U.S. Census Bureau and the National Center conduct the ABS jointly for Science and Engineering Statistics within the National Science Foundation. The ABS replaces the five-year Survey of Business Owners (SBO) for employer businesses, the Annual Survey of Entrepreneurs (ASE), the Business R&amp;D and Innovation for Microbusinesses survey (BRDI-M), and the innovation section of the Business R&amp;D and Innovation Survey (BRDI-S). <a href="https://www.census.gov/programs-surveys/abs.html" class="uri">https://www.census.gov/programs-surveys/abs.html</a>
+</td>
+<td style="text-align:left;">
+2020-04-30 00:00:00.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+541
+</td>
+<td style="text-align:left;">
+Annual Economic Surveys: Annual Business Survey
+</td>
+<td style="text-align:left;">
+abscb
+</td>
+<td style="text-align:right;">
+2018
+</td>
+<td style="text-align:left;">
+<a href="https://api.census.gov/data/2018/abscb" class="uri">https://api.census.gov/data/2018/abscb</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+unidentified
+</td>
+<td style="text-align:left;">
+The Annual Business Survey (ABS) provides information on selected economic and demographic characteristics for businesses and business owners by sex, ethnicity, race, and veteran status. Further, the survey measures research and development (for microbusinesses), new business topics such as innovation and technology, as well as other business characteristics. The U.S. Census Bureau and the National Center conduct the ABS jointly for Science and Engineering Statistics within the National Science Foundation. The ABS replaces the five-year Survey of Business Owners (SBO) for employer businesses, the Annual Survey of Entrepreneurs (ASE), the Business R&amp;D and Innovation for Microbusinesses survey (BRDI-M), and the innovation section of the Business R&amp;D and Innovation Survey (BRDI-S). <a href="https://www.census.gov/programs-surveys/abs.html" class="uri">https://www.census.gov/programs-surveys/abs.html</a>
+</td>
+<td style="text-align:left;">
+2020-10-26 00:00:00.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+458
+</td>
+<td style="text-align:left;">
+Annual Economic Surveys: Annual Business Survey
+</td>
+<td style="text-align:left;">
+abscbo
+</td>
+<td style="text-align:right;">
+2017
+</td>
+<td style="text-align:left;">
+<a href="https://api.census.gov/data/2017/abscbo" class="uri">https://api.census.gov/data/2017/abscbo</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+unidentified
+</td>
+<td style="text-align:left;">
+The Annual Business Survey (ABS) provides information on selected economic and demographic characteristics for businesses and business owners by sex, ethnicity, race, and veteran status. Further, the survey measures research and development (for microbusinesses), new business topics such as innovation and technology, as well as other business characteristics. The U.S. Census Bureau and the National Center conduct the ABS jointly for Science and Engineering Statistics within the National Science Foundation. The ABS replaces the five-year Survey of Business Owners (SBO) for employer businesses, the Annual Survey of Entrepreneurs (ASE), the Business R&amp;D and Innovation for Microbusinesses survey (BRDI-M), and the innovation section of the Business R&amp;D and Innovation Survey (BRDI-S). <a href="https://www.census.gov/programs-surveys/abs.html" class="uri">https://www.census.gov/programs-surveys/abs.html</a>
+</td>
+<td style="text-align:left;">
+2020-04-30 00:00:00.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+542
+</td>
+<td style="text-align:left;">
+Annual Economic Surveys: Annual Business Survey
+</td>
+<td style="text-align:left;">
+abscbo
+</td>
+<td style="text-align:right;">
+2018
+</td>
+<td style="text-align:left;">
+<a href="https://api.census.gov/data/2018/abscbo" class="uri">https://api.census.gov/data/2018/abscbo</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+unidentified
+</td>
+<td style="text-align:left;">
+The Annual Business Survey (ABS) provides information on selected economic and demographic characteristics for businesses and business owners by sex, ethnicity, race, and veteran status. Further, the survey measures research and development (for microbusinesses), new business topics such as innovation and technology, as well as other business characteristics. The U.S. Census Bureau and the National Center conduct the ABS jointly for Science and Engineering Statistics within the National Science Foundation. The ABS replaces the five-year Survey of Business Owners (SBO) for employer businesses, the Annual Survey of Entrepreneurs (ASE), the Business R&amp;D and Innovation for Microbusinesses survey (BRDI-M), and the innovation section of the Business R&amp;D and Innovation Survey (BRDI-S). <a href="https://www.census.gov/programs-surveys/abs.html" class="uri">https://www.census.gov/programs-surveys/abs.html</a>
+</td>
+<td style="text-align:left;">
+2020-10-26 00:00:00.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+459
+</td>
+<td style="text-align:left;">
+Annual Economic Surveys: Annual Business Survey
+</td>
+<td style="text-align:left;">
+abscs
+</td>
+<td style="text-align:right;">
+2017
+</td>
+<td style="text-align:left;">
+<a href="https://api.census.gov/data/2017/abscs" class="uri">https://api.census.gov/data/2017/abscs</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+unidentified
+</td>
+<td style="text-align:left;">
+The Annual Business Survey (ABS) provides information on selected economic and demographic characteristics for businesses and business owners by sex, ethnicity, race, and veteran status. Further, the survey measures research and development (for microbusinesses), new business topics such as innovation and technology, as well as other business characteristics. The U.S. Census Bureau and the National Center conduct the ABS jointly for Science and Engineering Statistics within the National Science Foundation. The ABS replaces the five-year Survey of Business Owners (SBO) for employer businesses, the Annual Survey of Entrepreneurs (ASE), the Business R&amp;D and Innovation for Microbusinesses survey (BRDI-M), and the innovation section of the Business R&amp;D and Innovation Survey (BRDI-S). <a href="https://www.census.gov/programs-surveys/abs.html" class="uri">https://www.census.gov/programs-surveys/abs.html</a>
+</td>
+<td style="text-align:left;">
+2020-04-30 00:00:00.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+543
+</td>
+<td style="text-align:left;">
+Annual Economic Surveys: Annual Business Survey
+</td>
+<td style="text-align:left;">
+abscs
+</td>
+<td style="text-align:right;">
+2018
+</td>
+<td style="text-align:left;">
+<a href="https://api.census.gov/data/2018/abscs" class="uri">https://api.census.gov/data/2018/abscs</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+unidentified
+</td>
+<td style="text-align:left;">
+The Annual Business Survey (ABS) provides information on selected economic and demographic characteristics for businesses and business owners by sex, ethnicity, race, and veteran status. Further, the survey measures research and development (for microbusinesses), new business topics such as innovation and technology, as well as other business characteristics. The U.S. Census Bureau and the National Center conduct the ABS jointly for Science and Engineering Statistics within the National Science Foundation. The ABS replaces the five-year Survey of Business Owners (SBO) for employer businesses, the Annual Survey of Entrepreneurs (ASE), the Business R&amp;D and Innovation for Microbusinesses survey (BRDI-M), and the innovation section of the Business R&amp;D and Innovation Survey (BRDI-S). <a href="https://www.census.gov/programs-surveys/abs.html" class="uri">https://www.census.gov/programs-surveys/abs.html</a>
+</td>
+<td style="text-align:left;">
+2020-10-26 00:00:00.0
+</td>
+</tr>
+</tbody>
+</table>
+<p>The Census APIs have over 550 different data repositories, each with numerous data sets within those.</p>
+<pre class="r"><code>nrow(availableapis)</code></pre>
+<pre><code>## [1] 552</code></pre>
+<p>Trying to locate what you want can be difficult but there are ways to reduce the time needed. Say I wanted any data set where income is mentioned anywhere…</p>
+<pre class="r"><code>availableapis %&gt;%
+  filter_all(any_vars(grepl(&quot;income&quot;, .))) %&gt;%
+  datatable()</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+title
+</th>
+<th style="text-align:left;">
+name
+</th>
+<th style="text-align:right;">
+vintage
+</th>
+<th style="text-align:left;">
+url
+</th>
+<th style="text-align:left;">
+isTimeseries
+</th>
+<th style="text-align:left;">
+temporal
+</th>
+<th style="text-align:left;">
+description
+</th>
+<th style="text-align:left;">
+modified
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+</tr>
+</tbody>
+</table>
+<p>… or I could just narrow and search just the <code>description</code></p>
+<pre class="r"><code>availableapis %&gt;%
+  filter(str_detect(description, &#39;income&#39;)) %&gt;%
+  datatable()</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+title
+</th>
+<th style="text-align:left;">
+name
+</th>
+<th style="text-align:right;">
+vintage
+</th>
+<th style="text-align:left;">
+url
+</th>
+<th style="text-align:left;">
+isTimeseries
+</th>
+<th style="text-align:left;">
+temporal
+</th>
+<th style="text-align:left;">
+description
+</th>
+<th style="text-align:left;">
+modified
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+</tr>
+</tbody>
+</table>
+<p>I could also arrange the set filtering the descriptions by geography and demographics. There are a lot of ways go about doing this. Here’s one</p>
+<pre class="r"><code>availableapis %&gt;%                                     
+  filter(str_detect(description, c(&#39;geo&#39;))) %&gt;% 
+  filter(str_detect(description, c(&#39;demo&#39;))) %&gt;%
+  drop_na(vintage) %&gt;% 
+  arrange(-vintage) %&gt;%  
+  datatable()</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+title
+</th>
+<th style="text-align:left;">
+name
+</th>
+<th style="text-align:right;">
+vintage
+</th>
+<th style="text-align:left;">
+url
+</th>
+<th style="text-align:left;">
+isTimeseries
+</th>
+<th style="text-align:left;">
+temporal
+</th>
+<th style="text-align:left;">
+description
+</th>
+<th style="text-align:left;">
+modified
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+</tr>
+</tbody>
+</table>
+<p>which translates to</p>
+<p>refer to the data set we need <code>%&gt;%</code><br>we need geographic data but the description could also say geography, geographical, etc so we search by the term stem <code>%&gt;%</code><br>same idea as above for demographical information <code>%&gt;%</code><br>drop the rows that have <code>NA</code> for years <code>%&gt;%</code><br>arrange the years from most recent going backwards <code>%&gt;%</code><br>show this in a <code>datatable()</code> format</p>
+<p>Assume I want to look at the 2018 American Community Survey: 5-Year Estimates which is described as <em>an ongoing survey that provides data every year – giving communities the current information they need to plan investments and services. The ACS covers a broad range of topics about social, economic, demographic, and housing characteristics of the U.S. population. The Comparison Profiles include the following geographies: nation, all states (including DC and Puerto Rico), all metropolitan areas, all congressional districts, all counties, all places and all tracts. Comparison Profiles contain broad social, economic, housing, and demographic information. The data are presented as both counts and percentages.</em></p>
+<p>There are over 2,400 variables in this dataset! You can find out more from the <a href="https://api.census.gov/data/2018/acs/acs5/profile.html" target="_blank">Census ACS API page</a>.</p>
+</div>
+<div id="selecting-the-proper-census-data-sets" class="section level2">
+<h2>Selecting The Proper Census Data Sets</h2>
+<p>We need to check for geographic data in the ACS because not everything in the Census API has geographical information</p>
+<pre class="r"><code>listCensusMetadata(name = &quot;acs/acs5/profile&quot;, 
+                   vintage = 2018,
+                   type = &quot;geography&quot;) %&gt;%
+  as_tibble() %&gt;%
+  unnest(cols = c()) </code></pre>
+<pre><code>## # A tibble: 53 x 6
+##    name        geoLevelDisplay referenceDate requires  wildcard optionalWithWCF…
+##    &lt;chr&gt;       &lt;chr&gt;           &lt;chr&gt;         &lt;list&gt;    &lt;list&gt;   &lt;chr&gt;           
+##  1 us          010             2018-01-01    &lt;NULL&gt;    &lt;NULL&gt;   &lt;NA&gt;            
+##  2 region      020             2018-01-01    &lt;NULL&gt;    &lt;NULL&gt;   &lt;NA&gt;            
+##  3 division    030             2018-01-01    &lt;NULL&gt;    &lt;NULL&gt;   &lt;NA&gt;            
+##  4 state       040             2018-01-01    &lt;NULL&gt;    &lt;NULL&gt;   &lt;NA&gt;            
+##  5 county      050             2018-01-01    &lt;chr [1]&gt; &lt;chr [1… state           
+##  6 county sub… 060             2018-01-01    &lt;chr [2]&gt; &lt;chr [1… county          
+##  7 subminor c… 067             2018-01-01    &lt;chr [3]&gt; &lt;NULL&gt;   &lt;NA&gt;            
+##  8 tract       140             2018-01-01    &lt;chr [2]&gt; &lt;chr [1… county          
+##  9 place       160             2018-01-01    &lt;chr [1]&gt; &lt;chr [1… state           
+## 10 consolidat… 170             2018-01-01    &lt;chr [1]&gt; &lt;chr [1… state           
+## # … with 43 more rows</code></pre>
+<p>Good! This API has a lot of geographies including: us, region, division, state, county, etc.</p>
+<pre class="r"><code>vars &lt;- listCensusMetadata(name = &quot;acs/acs5/profile&quot;,
+                           vintage = 2018, 
+                           type = &quot;variables&quot;) </code></pre>
+<pre class="r"><code>vars %&gt;%
+  as_tibble() %&gt;%
+    datatable()</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+name
+</th>
+<th style="text-align:left;">
+label
+</th>
+<th style="text-align:left;">
+concept
+</th>
+<th style="text-align:left;">
+predicateType
+</th>
+<th style="text-align:left;">
+group
+</th>
+<th style="text-align:left;">
+limit
+</th>
+<th style="text-align:left;">
+attributes
+</th>
+<th style="text-align:left;">
+required
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+DP02_0126E
+</td>
+<td style="text-align:left;">
+Estimate!!ANCESTRY!!Total population!!Danish
+</td>
+<td style="text-align:left;">
+SELECTED SOCIAL CHARACTERISTICS IN THE UNITED STATES
+</td>
+<td style="text-align:left;">
+int
+</td>
+<td style="text-align:left;">
+DP02
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+DP02_0126EA,DP02_0126M,DP02_0126MA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+DP05_0050PE
+</td>
+<td style="text-align:left;">
+Percent Estimate!!RACE!!Total population!!One race!!Asian!!Vietnamese
+</td>
+<td style="text-align:left;">
+ACS DEMOGRAPHIC AND HOUSING ESTIMATES
+</td>
+<td style="text-align:left;">
+float
+</td>
+<td style="text-align:left;">
+DP05
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+DP05_0050PM,DP05_0050PMA,DP05_0050PEA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+DP04_0047E
+</td>
+<td style="text-align:left;">
+Estimate!!HOUSING TENURE!!Occupied housing units!!Renter-occupied
+</td>
+<td style="text-align:left;">
+SELECTED HOUSING CHARACTERISTICS
+</td>
+<td style="text-align:left;">
+int
+</td>
+<td style="text-align:left;">
+DP04
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+DP04_0047M,DP04_0047MA,DP04_0047EA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+DP02PR_0083PE
+</td>
+<td style="text-align:left;">
+Percent Estimate!!RESIDENCE 1 YEAR AGO!!Population 1 year and over!!Different house in Puerto Rico or the U.S.!!In Puerto Rico!!Different municipio
+</td>
+<td style="text-align:left;">
+SELECTED SOCIAL CHARACTERISTICS IN PUERTO RICO
+</td>
+<td style="text-align:left;">
+float
+</td>
+<td style="text-align:left;">
+DP02PR
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+DP02PR_0083PM,DP02PR_0083PMA,DP02PR_0083PEA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+DP02PR_0106PE
+</td>
+<td style="text-align:left;">
+Percent Estimate!!WORLD REGION OF BIRTH OF FOREIGN BORN!!Foreign-born population, excluding population born at sea!!Africa
+</td>
+<td style="text-align:left;">
+SELECTED SOCIAL CHARACTERISTICS IN PUERTO RICO
+</td>
+<td style="text-align:left;">
+float
+</td>
+<td style="text-align:left;">
+DP02PR
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+DP02PR_0106PM,DP02PR_0106PMA,DP02PR_0106PEA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+DP04_0046E
+</td>
+<td style="text-align:left;">
+Estimate!!HOUSING TENURE!!Occupied housing units!!Owner-occupied
+</td>
+<td style="text-align:left;">
+SELECTED HOUSING CHARACTERISTICS
+</td>
+<td style="text-align:left;">
+int
+</td>
+<td style="text-align:left;">
+DP04
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+DP04_0046M,DP04_0046MA,DP04_0046EA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="part-i-the-map" class="section level2">
+<h2>PART I: The Map</h2>
+<div id="country-level-data" class="section level3">
+<h3>Country Level Data</h3>
+<p>Load some United States demographic data.</p>
+<pre class="r"><code>usa &lt;- map_data(&quot;usa&quot;)</code></pre>
+<p>Before you look at it by running <code>usa</code>, Census data sets are typically huge for obvious reasons. Let’s see how big the file actually is.</p>
+<pre class="r"><code>dim(usa)</code></pre>
+<pre><code>## [1] 7243    6</code></pre>
+<p>With 43,458 entries, that’s pretty big! Maybe we shouldn’t load it up (even in <code>View()</code> it takes awhile). Let’s instead just see the first and last six rows to get an idea of what it looks like to get an idea.</p>
+<pre class="r"><code>head(usa) </code></pre>
+<pre><code>##        long      lat group order region subregion
+## 1 -101.4078 29.74224     1     1   main      &lt;NA&gt;
+## 2 -101.3906 29.74224     1     2   main      &lt;NA&gt;
+## 3 -101.3620 29.65056     1     3   main      &lt;NA&gt;
+## 4 -101.3505 29.63911     1     4   main      &lt;NA&gt;
+## 5 -101.3219 29.63338     1     5   main      &lt;NA&gt;
+## 6 -101.3047 29.64484     1     6   main      &lt;NA&gt;</code></pre>
+<pre class="r"><code>tail(usa) </code></pre>
+<pre><code>##           long      lat group order         region subregion
+## 7247 -122.6187 48.37482    10  7247 whidbey island      &lt;NA&gt;
+## 7248 -122.6359 48.35764    10  7248 whidbey island      &lt;NA&gt;
+## 7249 -122.6703 48.31180    10  7249 whidbey island      &lt;NA&gt;
+## 7250 -122.7218 48.23732    10  7250 whidbey island      &lt;NA&gt;
+## 7251 -122.7104 48.21440    10  7251 whidbey island      &lt;NA&gt;
+## 7252 -122.6703 48.17429    10  7252 whidbey island      &lt;NA&gt;</code></pre>
+<p>We have columns that can be used! The most obvious choice for map data is using the coordinates for longitude and latitude. So let’s plot using the longitudinal (<code>long</code>) and latitudinal (<code>lat</code>) columns.</p>
+<pre class="r"><code>ggplot() + 
+  geom_polygon(data = usa, 
+               aes(x=long, y = lat, group = group))</code></pre>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
+<p>Well that looks terrible. So what’s happening here? In a nutshell, it’s plotting exactly how you would see the US if you flattened (aka projected) the coordinates from a sphere to a flat surface. Most maps account for this using a correction via an aspect ratio. In R, we use a command called <code>coord_fixed</code></p>
+<pre class="r"><code>ggplot() + 
+  geom_polygon(data = usa, 
+               aes(x=long, y = lat, group = group)) + 
+  coord_fixed(1.3) # 1.3 is a decent standard estimate</code></pre>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
+<p>There we go. That looks better but of course its just a grey silhouette. Let’s first try adding some base color.</p>
+<pre class="r"><code>ggplot() + 
+  geom_polygon(data = usa, aes(x=long, y = lat, group = group), color = &quot;#1b85b8&quot;, 
+               fill = &quot;#559e83&quot;) + 
+  coord_fixed(1.3)</code></pre>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
+<p>Its looking better but something is missing. Hmmm….Oh!…Its the “S” part of “USA” - To get that, we need to look at state level data.</p>
+</div>
+<div id="state-level-data" class="section level3">
+<h3>State Level Data</h3>
+<p>We have two choices: we can either bring in a particular state or bring them all in and then filter later. Unless you specifically know which state you want, its a good rule of thumb to bring in all state level data.</p>
+<pre class="r"><code>state &lt;- map_data(&quot;state&quot;)</code></pre>
+<p>As a side note, if you know which state you want to look at, then just do the following. I’ll use California as an example.</p>
+<pre class="r"><code>California &lt;- map_data(&quot;state&quot;, region = &quot;CA&quot;)</code></pre>
+<p>A good thing to note is that <code>region =</code> is a bit misleading. At first you may think that it is a state’s abbreviation but it is not. In fact, you can’t even use abbreviations in that field. For example, if we use the abbreviation for Kansas, you’ll get nonsense</p>
+<pre class="r"><code>Kansas &lt;- map_data(&quot;state&quot;, region = &quot;KS&quot;)</code></pre>
+<pre><code>## Error in map.poly(database, regions, exact, xlim, ylim, boundary, interior, : no recognized region names</code></pre>
+<p>(Yes the output is going off the page and no I can’t do anything about it)<br />
+<br>
+The command <code>region =</code> is actually a filter so you need to put as much information as you can to ensure that you only get the state you want. For example, let’s see what happens when I do the following</p>
+<pre class="r"><code>Michigan &lt;- map_data(&quot;state&quot;, region = &quot;MI&quot;)</code></pre>
+<p>Well MI is certainly the standard abbreviation for Michigan but again, that is not what the command is doing. Other states have those letters:</p>
+<pre class="r"><code>unique(Michigan$region)</code></pre>
+<pre><code>## [1] &quot;michigan&quot;    &quot;minnesota&quot;   &quot;mississippi&quot; &quot;missouri&quot;</code></pre>
+<p>That is not what we wanted so please make sure you use the region filter correctly. In a worst case scenario or if you don’t mind the extra effort, just type in the name of the state.</p>
+<pre class="r"><code>Michigan &lt;- map_data(&quot;state&quot;, 
+                     region = &quot;Michigan&quot;)</code></pre>
+<pre class="r"><code>unique(Michigan$region)</code></pre>
+<pre><code>## [1] &quot;michigan&quot;</code></pre>
+<p>That’s much better! OK back to mapping. I’m actually going to stick with Michigan. Notice here that I am using the entire state data set and filtering Michigan out with the command <code>subset</code> and the <code>==</code> (double equals sign).</p>
+<pre class="r"><code>mi &lt;- subset(state, 
+             region==&quot;michigan&quot;)</code></pre>
+<p>For a basic plot, we do the following:</p>
+<pre class="r"><code>ggplot() + 
+  geom_polygon(data = mi, 
+                        aes(x=long, y = lat, group = group)) + 
+  coord_fixed(1.3)</code></pre>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-40-1.png" width="47%" /></p>
+<p>Michigan’s shape is pretty unique and that sure looks like it but the plot is pretty bland. Let’s give it some color and a legend.</p>
+<pre class="r"><code>ggplot() + 
+  geom_polygon(data = mi, aes(x=long, y = lat, group = group, fill=region)) +
+  scale_fill_manual(values=c(&quot;#6A0032&quot;)) +
+  coord_fixed(1.3)</code></pre>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-41-1.png" width="672" /></p>
+<p>Not bad but we can get even more granular. Let’s look at county level data.</p>
+</div>
+<div id="county-level-data" class="section level3">
+<h3>County Level Data</h3>
+<p>Much like before, we’re going to pull in all of the county level data,</p>
+<pre class="r"><code>county &lt;- map_data(&quot;county&quot;)</code></pre>
+<p>then we’ll filter it for Michigan,</p>
+<pre class="r"><code>mi_count &lt;- subset(county, region==&quot;michigan&quot;)</code></pre>
+<p>and finally we’ll plot it.</p>
+<pre class="r"><code>ggplot() + 
+  geom_polygon(data = mi_count, aes(x=long, y = lat, group = group, fill=subregion), 
+               color = &quot;#FFFFFF&quot;) +
+  scale_fill_viridis(discrete = TRUE, 
+                     alpha=0.7, 
+                     option=&quot;inferno&quot;) +
+  theme_bw() +
+  theme(plot.title = element_text(size = 26, color =&quot;#105456&quot;,  vjust = -1),
+        legend.position =&quot;bottom&quot;,
+        legend.direction = &#39;vertical&#39;,
+        legend.text = element_text(size=15, color = &quot;#59595B&quot;),
+        legend.title = element_blank(),
+        legend.title.align = 0.5,
+        legend.spacing.x = unit(0.5, &quot;cm&quot;), 
+        legend.spacing.y = unit(0.5, &quot;cm&quot;),
+        legend.background = element_rect(linetype = 0, size = 0.5, colour = 1),
+        panel.background = element_blank(),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank(),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank()) +
+  coord_fixed(1.3)</code></pre>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-45-1.png" width="672" /></p>
+<p><em>Your output may look a little different depending on your system settings.</em><br />
+<br>
+That legend is taking up way too much space AND we don’t need the counties color coded by their names. Let’s get rid of it with <code>guide = FALSE</code> within <code>scale_fill_viridis</code> to get rid of that particular one or to turn all <code>fill</code> legends off, you can use <code>guides(fill=FALSE)</code> which is switch off in the plot above. In the example below, let’s try the one with <code>guide = FALSE</code>.</p>
+<pre class="r"><code>ggplot() + 
+  geom_polygon(data = mi_count, aes(x=long, y = lat, group = group, fill=subregion), 
+               color = &quot;#FFFFFF&quot;) +
+  scale_fill_viridis(discrete = TRUE, 
+                     alpha=0.7, 
+                     option=&quot;inferno&quot;, 
+                     guide = FALSE) + #HERE IT IS
+  theme_bw() +
+  theme(plot.title = element_text(size = 26, color =&quot;#105456&quot;,  vjust = -1),
+        legend.position =&quot;bottom&quot;,
+        legend.direction = &#39;vertical&#39;,
+        legend.text = element_text(size=15, color = &quot;#59595B&quot;),
+        legend.title = element_blank(),
+        legend.title.align = 0.5,
+        legend.spacing.x = unit(0.5, &quot;cm&quot;), 
+        legend.spacing.y = unit(0.5, &quot;cm&quot;),
+        legend.background = element_rect(linetype = 0, size = 0.5, colour = 1),
+        panel.background = element_blank(),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank(),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank()) +
+  coord_fixed(1.3)</code></pre>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-46-1.png" width="672" /></p>
+<p>Well now we definitely have county level data for Michigan.</p>
+<p><strong>Please take a bit to review and play around with every layer. Many of the typical things you would want to change or amend about a plot are included.</strong><br />
+<br>
+OK now we should probably do something with this map. Let get some Census data.</p>
+</div>
+</div>
+<div id="part-ii-the-us-census" class="section level2">
+<h2>PART II: The US Census</h2>
+<div id="gathering-and-making-important-decisions" class="section level3">
+<h3>Gathering and Making Important Decisions</h3>
+<p>Choose an endpoint <em>aka a set of data</em> that you want.</p>
+<p>At this point it is completely understandable if you are wondering what an API is. Without getting overtly technical, an API is the acronym for <strong>Application Programming Interface</strong>. This is essentially a text based software that allows two applications to talk to each other. Why text based? Well its really the only aspect that all computers share. In fact, each time you use an app like YouTube, send a text message, or check the weather on your phone, etc. from any device worldwide, you’re using an API. As an example, take a look at the Twitter API <a href="https://developer.twitter.com/en/docs/tweets/search/api-reference.html" target="_blank">https://developer.twitter.com/en/docs/tweets/search/api-reference.html</a> that we’ll be using later in the term to perform some network data visualizations.<br />
+<br>
+Now when looking at our endpoint, what should we choose? As of 2018, there are over 200 Census API endpoints are available, including the Decennial Census, American Community Survey, Poverty Statistics, and Population Estimates. You can find a list here: <a href="https://api.census.gov/data.html" target="_blank">https://api.census.gov/data.html</a>. Please look them over!<br />
+<br>
+The <code>censusapi</code> package is designed to let you get data from all of those APIs using the same main function <code>getCensus</code> and the same syntax for each data set. In this example case, let’s look at the 2017 Density Estimates (variables can be found here: <a href="https://api.census.gov/data/2017/pep/population/variables.html" target="_blank">https://api.census.gov/data/2017/pep/population/variables.html</a>) for all states within the US. Alternatively you can get that information directly through the API we have been using:</p>
+<pre class="r"><code>apis &lt;- listCensusApis()</code></pre>
+<pre class="r"><code>View(apis)</code></pre>
+<p>Now certain repositories require certain basic variables to be run (for example if years are a factor). To get an idea, the 2017 American Community Survey which is used to update some data within the primary Census.</p>
+<ol style="list-style-type: decimal">
+<li>Here are the available variables</li>
+</ol>
+<pre class="r"><code>acs2017_vars &lt;- listCensusMetadata(name = &quot;2017/pep/population/&quot;, 
+                                 type = &quot;variables&quot;)</code></pre>
+<pre class="r"><code>head(acs2017_vars)</code></pre>
+<pre><code>##      name                          label                concept predicateType
+## 1    MDIV     Metropolitan Division code Selectable Geographies           int
+## 2  COUSUB Minor Civil Division FIPS code              Estimates           int
+## 3  SUMLEV                  Summary Level              Estimates          &lt;NA&gt;
+## 4   STATE                State FIPS code              Estimates          &lt;NA&gt;
+## 5 GEONAME                Geographic Name              Estimates          &lt;NA&gt;
+## 6   DATE_                           Date              Estimates           int
+##   group limit          required
+## 1   N/A     0              &lt;NA&gt;
+## 2   N/A     0              &lt;NA&gt;
+## 3   N/A     0              &lt;NA&gt;
+## 4   N/A     0              &lt;NA&gt;
+## 5   N/A     0              &lt;NA&gt;
+## 6   N/A     0 default displayed</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Here are the available geographies</li>
+</ol>
+<pre class="r"><code>acs2017_geos &lt;- listCensusMetadata(name = &quot;2017/pep/population/&quot;, 
+                                   type = &quot;geography&quot;)</code></pre>
+<pre class="r"><code>View(acs2017_geos)</code></pre>
+<p>If you want to see which variables are required for mapping, then there is a problem and that is actually due to bad luck as a result of timing. The Census is going through a new update with a new API format that was supposed to go live two weeks ago. It has, however, been pushed back to October 31. Until then, you will have to utilize the website. However if you are adamant about using R for the whole process as I typically am, then you can get table, aka tabular data from any website. If this interests you, please seethe section below. Otherwise move on to the next section.</p>
+</div>
+<div id="scraping-the-web-using-r" class="section level3">
+<h3>Scraping the Web using R</h3>
+<p>In order to grab data off of the web, you will need to several things. At first it may seem arduous but having lengthy tables as data within R can be very beneficial, especially when filtering or if you just don’t want to manually load or type in entries. Included are steps to get the data you need in a usable form within R.</p>
+<ol style="list-style-type: decimal">
+<li>Download and run the <code>rvest</code> package (though there are others like a package called <code>XML</code> that may be useful in other circumstances)</li>
+</ol>
+<pre class="r"><code>library(rvest)</code></pre>
+<pre><code>## Loading required package: xml2</code></pre>
+<pre><code>## 
+## Attaching package: &#39;rvest&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:purrr&#39;:
+## 
+##     pluck</code></pre>
+<pre><code>## The following object is masked from &#39;package:readr&#39;:
+## 
+##     guess_encoding</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Define the website you want to pull the data from</li>
+</ol>
+<pre class="r"><code>webpage &lt;- read_html(&quot;https://api.census.gov/data/2017/pep/population/variables.html&quot;)</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Tell <code>rvest</code> that you want the tables using the command <code>html_nodes</code>. This does a lot of things but in a nutshell, it recognizes if a page is a webpage by scanning the HTML code and then finds what you need. In our case, we’re asking it to recognize the Census webpage from above and to identify the HTML codes where the term <code>table</code> exists.</li>
+</ol>
+<pre class="r"><code>tbls &lt;- html_nodes(webpage, &quot;table&quot;) </code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>See information regarding all of the tables</li>
+</ol>
+<pre class="r"><code>tbls # or if there are multiple tables, consider using head(tbls)</code></pre>
+<pre><code>## {xml_nodeset (1)}
+## [1] &lt;table&gt;\n&lt;caption&gt;Census Data API: Variables in /data/2017/pep/population ...</code></pre>
+<p>By the output, we only have one table which is indicated by <code>[1]</code>.</p>
+<ol start="5" style="list-style-type: decimal">
+<li>Now do some piping via <code>dplyr</code> to get a list of everything within that table</li>
+</ol>
+<pre class="r"><code>tbls_ls &lt;- webpage %&gt;%
+        html_nodes(&quot;table&quot;) %&gt;% # Creates a multidimensional list (i.e. a list 
+                                # with layers and depth akin to folders within 
+                                # folders within folders, ect.)
+        .[1] %&gt;% # We only have table so we put.[1] here. If we had multiple 
+                 # tables and we wanted say the first three, we could have 
+                 # used .[1:3]
+        html_table(fill = TRUE) # Convert the data to a table format and populate 
+                                # the entries</code></pre>
+<ol start="6" style="list-style-type: decimal">
+<li>See the result</li>
+</ol>
+<pre class="r"><code>View(tbls_ls)</code></pre>
+<p>Notice that its a list and can go pretty deep down the rabbit hole depending on how many tables you are looking at. In this case, we have one so ts pretty simple.</p>
+<ol start="7" style="list-style-type: decimal">
+<li>Now narrow down the results. Say you only wanted the ones that were required. You can figure that out by filtering for the term <code>default displayed</code> under the column <strong>Required</strong>. To do this, we first run the following which splits up all of the tables and then attaches them together by corresponding entries.</li>
+</ol>
+<pre class="r"><code>tbls_ls &lt;- do.call(rbind.data.frame, tbls_ls) # Concatenates a list of data frames 
+                                              # into a single data frame</code></pre>
+<ol start="8" style="list-style-type: decimal">
+<li>(Optional) Take a look to see that it looks like an actual table</li>
+</ol>
+<pre class="r"><code>View(tbls_ls)</code></pre>
+<ol start="9" style="list-style-type: decimal">
+<li>Now we get rid of the rows that that don’t have <code>default displayed</code> under <strong>Required</strong></li>
+</ol>
+<pre class="r"><code>filtered_tbls_ls &lt;- tbls_ls[tbls_ls$Required == &quot;default displayed&quot;, ] 
+                                                              # Filter out the rows that
+                                                              # don&#39;t have `default 
+                                                              # displayed` under the 
+                                                              # column **Required**</code></pre>
+<ol start="10" style="list-style-type: decimal">
+<li>Just show the names of the required variables</li>
+</ol>
+<pre class="r"><code>filtered_tbls_ls$Name # Just shows the Names of the required variables</code></pre>
+<pre><code>## [1] &quot;DATE_&quot;    &quot;UNIVERSE&quot;</code></pre>
+<p>So here we see that the variables DATE and UNIVERSE are required.</p>
+<p>Alternatively and if you understand the above, you can simply use the following in one fell swoop using <code>dplyr</code>:</p>
+<pre class="r"><code>library(rvest)
+
+read_html(&quot;https://api.census.gov/data/2017/pep/population/variables.html&quot;) %&gt;%
+html_nodes(&quot;table&quot;)  %&gt;% # Creates a multidimensional list (i.e. a list with layers 
+                         # and depth akin to folders within folders within folders, 
+                         # ect.)
+  .[1] %&gt;% # We only have table so we put.[1] here. If we had multiple tables and 
+           # we wanted say the first three, we could have used .[1:3]
+  html_table(fill = TRUE) %&gt;% # Convert the data to a table format and populate the 
+                              # entries
+  bind_rows() %&gt;% # Concatenates a list of data frames into a single data frame
+  filter(Required == &quot;default displayed&quot;) %&gt;% # Filter out the rows that don&#39;t have
+                                              # `default displayed` under the column 
+                                              # **Required**
+  select(Name) # Just shows the Names of the required variables</code></pre>
+<pre><code>## New names:
+## * NA -&gt; ...9</code></pre>
+<pre><code>##       Name
+## 1    DATE_
+## 2 UNIVERSE</code></pre>
+<p>Life is much easier with pipes! Note that this and the other method should work with many of the Census web tables but may not for all, especially for older tables that may have not been updated and do not have the column <strong>Required</strong>. Part of understanding what is going on in each line affords you the ability to change commands and variables as necessary.<br />
+<br>
+OK now back to the mapping!</p>
+</div>
+</div>
+<div id="getting-the-data-you-want" class="section level2">
+<h2>Getting the Data You Want</h2>
+<p>Backtracking on the two methods presented above, if we wanted to figure out which variables are available in general, we could</p>
+<ul>
+<li>Go back to step 9 and run</li>
+</ul>
+<pre class="r"><code>tbls_ls$Name</code></pre>
+<pre><code>##  [1] &quot;23 variables&quot; &quot;CBSA&quot;         &quot;CONCIT&quot;       &quot;COUNTY&quot;       &quot;COUSUB&quot;      
+##  [6] &quot;CSA&quot;          &quot;DATE_&quot;        &quot;DATE_DESC&quot;    &quot;DENSITY&quot;      &quot;DIVISION&quot;    
+## [11] &quot;for&quot;          &quot;FUNCSTAT&quot;     &quot;GEONAME&quot;      &quot;in&quot;           &quot;LASTUPDATE&quot;  
+## [16] &quot;MDIV&quot;         &quot;NATION&quot;       &quot;PLACE&quot;        &quot;POP&quot;          &quot;PRIMGEOFLAG&quot; 
+## [21] &quot;REGION&quot;       &quot;STATE&quot;        &quot;SUMLEV&quot;       &quot;UNIVERSE&quot;</code></pre>
+<p>OR</p>
+<ul>
+<li>Rerun parts of the piping system</li>
+</ul>
+<pre class="r"><code>read_html(&quot;https://api.census.gov/data/2017/pep/population/variables.html&quot;) %&gt;%
+  html_nodes(&quot;table&quot;)  %&gt;% # This is a multidimensional list (i.e. a list with layers)
+  .[1] %&gt;% 
+  html_table(fill = TRUE) %&gt;%
+  bind_rows() %&gt;% 
+  select(Name)</code></pre>
+<pre><code>## New names:
+## * NA -&gt; ...9</code></pre>
+<pre><code>##            Name
+## 1  23 variables
+## 2          CBSA
+## 3        CONCIT
+## 4        COUNTY
+## 5        COUSUB
+## 6           CSA
+## 7         DATE_
+## 8     DATE_DESC
+## 9       DENSITY
+## 10     DIVISION
+## 11          for
+## 12     FUNCSTAT
+## 13      GEONAME
+## 14           in
+## 15   LASTUPDATE
+## 16         MDIV
+## 17       NATION
+## 18        PLACE
+## 19          POP
+## 20  PRIMGEOFLAG
+## 21       REGION
+## 22        STATE
+## 23       SUMLEV
+## 24     UNIVERSE</code></pre>
+<p>Alternative if you are pretty sure that a variable is already in a Census table and want verification, you cab check for it. For example, let’s see if the variable DENSITY exists in the 2017 Density Estimates (I bet it does since the word Density is right in the title) for the state of Michigan.</p>
+<pre class="r"><code>getCensus(name = &quot;2017/pep/population&quot;,
+          vars = c(&quot;DENSITY&quot;), 
+          region = &quot;state:26&quot;)</code></pre>
+<pre><code>##   state DENSITY
+## 1    26 176.139</code></pre>
+<p>Yup its available but right now you may be wondering how I got that number 26. Well the Census assigns a number (called a <strong>FIPS state code</strong>) to every territory the US controls. You can find grouped listings here <a href="https://www.census.gov/geo/reference/ansi_statetables.html" target="_blank">https://www.census.gov/geo/reference/ansi_statetables.html</a>.</p>
+<p>Well let’s get county and state level data and run it!</p>
+<pre class="r"><code>Tigers &lt;- getCensus(name = &quot;2017/pep/population&quot;,
+                         vars = c(&quot;GEONAME&quot;, &quot;COUNTY&quot;, &quot;DENSITY&quot;), 
+                         region = &quot;county:*&quot;,
+                         regionin = &quot;state:26&quot;)</code></pre>
+<p>Now take a peek at the first 15 entries in the Michigan list.</p>
+<pre class="r"><code>head(Tigers, n=15L)</code></pre>
+<pre><code>##    state county                     GEONAME COUNTY     DENSITY
+## 1     26    073   Isabella County, Michigan    073  124.088901
+## 2     26    075    Jackson County, Michigan    075  226.080702
+## 3     26    077  Kalamazoo County, Michigan    077  467.780995
+## 4     26    079   Kalkaska County, Michigan    079   31.504614
+## 5     26    081       Kent County, Michigan    081  765.161412
+## 6     26    083   Keweenaw County, Michigan    083    3.897341
+## 7     26    085       Lake County, Michigan    085   21.165346
+## 8     26    087     Lapeer County, Michigan    087  136.875440
+## 9     26    089   Leelanau County, Michigan    089   62.378722
+## 10    26    091    Lenawee County, Michigan    091  131.575529
+## 11    26    093 Livingston County, Michigan    093  335.585145
+## 12    26    095       Luce County, Michigan    095    7.071703
+## 13    26    097   Mackinac County, Michigan    097   10.482856
+## 14    26    099     Macomb County, Michigan    099 1818.397780
+## 15    26    101   Manistee County, Michigan    101   45.041218</code></pre>
+<p>Notice that we can get rid of the columns <code>state</code>, <code>county</code>, and <code>COUNTY</code> since we only need the columns <code>GEOMNAME</code> and <code>DENSITY</code>. We can do this by running the following</p>
+<pre class="r"><code>drops &lt;- c(&quot;state&quot;, &quot;county&quot;, &quot;COUNTY&quot;) # Assigns column names to be dropped
+Tigers &lt;- Tigers[ , !(names(Tigers) %in% drops)] # Drops those columns </code></pre>
+<p>This is actually one of the few times that Base R is easier to use than a tidy approach. Anyway now let’s take a look at the Census data set now.</p>
+<pre class="r"><code>head(Tigers)</code></pre>
+<pre><code>##                      GEONAME    DENSITY
+## 1  Isabella County, Michigan 124.088901
+## 2   Jackson County, Michigan 226.080702
+## 3 Kalamazoo County, Michigan 467.780995
+## 4  Kalkaska County, Michigan  31.504614
+## 5      Kent County, Michigan 765.161412
+## 6  Keweenaw County, Michigan   3.897341</code></pre>
+<p>Recall that our map data looks like this</p>
+<pre class="r"><code>head(mi_count)</code></pre>
+<pre><code>##            long      lat group order   region subregion
+## 38512 -83.88675 44.85686  1198 38512 michigan    alcona
+## 38513 -83.36536 44.86832  1198 38513 michigan    alcona
+## 38514 -83.33098 44.83968  1198 38514 michigan    alcona
+## 38515 -83.30806 44.80530  1198 38515 michigan    alcona
+## 38516 -83.30233 44.77665  1198 38516 michigan    alcona
+## 38517 -83.28515 44.72509  1198 38517 michigan    alcona</code></pre>
+<p>We have to merge both of these sets so that the Census data and map data line up. We have a bit of work to do but its all about identifying what we need. Now I should note that the process below is just one way to get there. Steps are provided for convenience, but again they are contingent on your own table.</p>
+<ol style="list-style-type: decimal">
+<li>The column <code>GEONAME</code> is a concatenation of county and state level data. Let’s split them up using the <code>,</code> (comma) as the delimiter…</li>
+</ol>
+<pre class="r"><code>Tigers &lt;- Tigers %&gt;% 
+  separate(GEONAME, into = paste0(&#39;thing&#39;, 1:2), sep = &#39;[,]&#39;)</code></pre>
+<p>…and then take a look at the results.</p>
+<pre class="r"><code>head(Tigers)</code></pre>
+<pre><code>##             thing1    thing2    DENSITY
+## 1  Isabella County  Michigan 124.088901
+## 2   Jackson County  Michigan 226.080702
+## 3 Kalamazoo County  Michigan 467.780995
+## 4  Kalkaska County  Michigan  31.504614
+## 5      Kent County  Michigan 765.161412
+## 6  Keweenaw County  Michigan   3.897341</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Notice that the columns have been split and renamed <code>thing1</code> and <code>thing2</code>. But we want the column names to be representative of what they are. So we can rename them in order of appearance from left to right</li>
+</ol>
+<pre class="r"><code>Tigers &lt;- setNames(Tigers, c(&quot;County&quot;,&quot;State&quot;,&quot;Density&quot;)) </code></pre>
+<p>…and then take a look at the results.</p>
+<pre class="r"><code>head(Tigers)</code></pre>
+<pre><code>##             County     State    Density
+## 1  Isabella County  Michigan 124.088901
+## 2   Jackson County  Michigan 226.080702
+## 3 Kalamazoo County  Michigan 467.780995
+## 4  Kalkaska County  Michigan  31.504614
+## 5      Kent County  Michigan 765.161412
+## 6  Keweenaw County  Michigan   3.897341</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Now notice that the term <strong>County</strong> appears perpetually with the <strong>County</strong> columns and does not appear in the <code>mi_count</code> set. So we have a choice in that we can either leave it be here and add the term County to <code>mi_count</code> or drop the term from this set. I like to have less clutter so choosing the latter makes sense. However, you could just as well do the other and the intended outcome that columns look the same would work all the same.<br />
+<br>
+Now there are many ways to attack this. Similar to the process above, you could just split the column again based on the space and then delete one of the resulting columns with the term <strong>County</strong> in it. However, since you have already been exposed to the <code>stringr</code> package, let’s use that.</li>
+</ol>
+<pre class="r"><code>Tigers$County &lt;- str_replace_all(Tigers$County, &quot; County&quot;, &quot;&quot;) 
+# Find the term County in the County column and replace it nothing (given by &quot;&quot;). Notice 
+# that there is a space between the first quote and the term County to account for the 
+# space between the two words.</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>Finally we certainly know that we’re in Michigan so let’s get rid of that column</li>
+</ol>
+<pre class="r"><code>dropFromCensus &lt;- c(&quot;State&quot;)
+Tigers &lt;- Tigers[ , !(names(Tigers) %in% dropFromCensus)] # Drops those columns</code></pre>
+<ol start="5" style="list-style-type: decimal">
+<li>OK we are done with the Census data for now. Moving on the map data, lets compare both again</li>
+</ol>
+<pre class="r"><code>head(Tigers)</code></pre>
+<pre><code>##      County    Density
+## 1  Isabella 124.088901
+## 2   Jackson 226.080702
+## 3 Kalamazoo 467.780995
+## 4  Kalkaska  31.504614
+## 5      Kent 765.161412
+## 6  Keweenaw   3.897341</code></pre>
+<pre class="r"><code>head(mi_count)</code></pre>
+<pre><code>##            long      lat group order   region subregion
+## 38512 -83.88675 44.85686  1198 38512 michigan    alcona
+## 38513 -83.36536 44.86832  1198 38513 michigan    alcona
+## 38514 -83.33098 44.83968  1198 38514 michigan    alcona
+## 38515 -83.30806 44.80530  1198 38515 michigan    alcona
+## 38516 -83.30233 44.77665  1198 38516 michigan    alcona
+## 38517 -83.28515 44.72509  1198 38517 michigan    alcona</code></pre>
+<p>First thing here and because of personal preference, I want to get rid of the clutter. In this case, that means dropping columns we do not need. In this case, these are <code>group</code>, <code>order</code>, and <code>region</code>. Now the code down here is a bit tricky if you are not used to it. In the first line, we are just defining a column vector with column names so there’s nothing new here. The second line needs a bit more explanation because there is a lot going on. Foremost, the rows and columns for all data frames can be called using [row,column]. For example, I can tell R that I want to do something to the rows in <code>mi_count</code> by stating <code>mi_count[some operation here , ]</code>. Alternatively, I can also tell R that I want to do something to the columns in <code>mi_count</code> by stating <code>mi_count[ , some operation here ]</code> which is exactly what was done. I realize that may be confusing so think about it and ask questions. Now for the operation itself, we read those in parts:</p>
+<ol style="list-style-type: decimal">
+<li><p><code>names(mi_count)</code> tells R the to look at the names of the columns in <code>mi_count</code>.</p></li>
+<li><p><code>names(mi_count) %in% dropFromMapData</code> tells R to take the names of the columns in <code>mi_count</code> and look for them in the vector <code>dropFromMapData</code>.</p></li>
+<li><p><code>!(names(mi_count) %in% dropFromMapData)</code> tells R to take those names from <code>dropFromMapData</code> that are also in <code>mi_count</code> and to not use them (aka to drop them).</p></li>
+</ol>
+<pre class="r"><code>dropFromMapData &lt;- c(&quot;group&quot;, &quot;order&quot;, &quot;region&quot;)
+mi_count &lt;- mi_count[ , !(names(mi_count) %in% dropFromMapData)] # Drops those columns
+head(mi_count)</code></pre>
+<pre><code>##            long      lat subregion
+## 38512 -83.88675 44.85686    alcona
+## 38513 -83.36536 44.86832    alcona
+## 38514 -83.33098 44.83968    alcona
+## 38515 -83.30806 44.80530    alcona
+## 38516 -83.30233 44.77665    alcona
+## 38517 -83.28515 44.72509    alcona</code></pre>
+<p>Looking at the code as whole is often overwhelming. Remember you are learning a new language so first view its most basic parts and then build up.</p>
+<ol start="7" style="list-style-type: decimal">
+<li>Then rename the column we’re going to merge one which in this case means renaming <code>subregion</code> to <code>County</code> while maintaining the others as is.</li>
+</ol>
+<pre class="r"><code>mi_count &lt;- setNames(mi_count, c(&quot;long&quot;,&quot;lat&quot;,&quot;County&quot;)) </code></pre>
+<p>…and take a look.</p>
+<pre class="r"><code>head(mi_count)</code></pre>
+<pre><code>##            long      lat County
+## 38512 -83.88675 44.85686 alcona
+## 38513 -83.36536 44.86832 alcona
+## 38514 -83.33098 44.83968 alcona
+## 38515 -83.30806 44.80530 alcona
+## 38516 -83.30233 44.77665 alcona
+## 38517 -83.28515 44.72509 alcona</code></pre>
+<ol start="8" style="list-style-type: decimal">
+<li>And finally, let’s capitalize the column <code>county</code>.</li>
+</ol>
+<pre class="r"><code>mi_count$County &lt;- str_to_title(mi_count$County)</code></pre>
+<p>…and take a look.</p>
+<pre class="r"><code>head(mi_count)</code></pre>
+<pre><code>##            long      lat County
+## 38512 -83.88675 44.85686 Alcona
+## 38513 -83.36536 44.86832 Alcona
+## 38514 -83.33098 44.83968 Alcona
+## 38515 -83.30806 44.80530 Alcona
+## 38516 -83.30233 44.77665 Alcona
+## 38517 -83.28515 44.72509 Alcona</code></pre>
+<p>In fact, let’s look it both to make sure they’re structurally similar</p>
+<pre class="r"><code>head(Tigers)</code></pre>
+<pre><code>##      County    Density
+## 1  Isabella 124.088901
+## 2   Jackson 226.080702
+## 3 Kalamazoo 467.780995
+## 4  Kalkaska  31.504614
+## 5      Kent 765.161412
+## 6  Keweenaw   3.897341</code></pre>
+<pre class="r"><code>head(mi_count)</code></pre>
+<pre><code>##            long      lat County
+## 38512 -83.88675 44.85686 Alcona
+## 38513 -83.36536 44.86832 Alcona
+## 38514 -83.33098 44.83968 Alcona
+## 38515 -83.30806 44.80530 Alcona
+## 38516 -83.30233 44.77665 Alcona
+## 38517 -83.28515 44.72509 Alcona</code></pre>
+<p>Yes! Now you might be thinking that <code>mi_count</code> is full of repeated county names. Well that’s good because (1) its the file that will inform ggplot of county borders and (2) we simply need the terms and column titles to look the same; they can differ in length (aka number of rows or how many times any entry repeats).<br />
+<br>
+We’re going to use joins which is basically a fancy way of using logic derived from a computer language called SQL. Take a look at the data-wrangling-cheatsheet PDF file or go to <a href="http://stat545.com/bit001_dplyr-cheatsheet.html">http://stat545.com/bit001_dplyr-cheatsheet.html</a> to see detailed examples.<br />
+<br>
+In each situation, you have to think about the end product and the data set that will get you there. Foremost, we want a county map of Michigan with Census density data. Which one is more important? Well logic would dictate that I can’t really draw density data without a map, or in research (and Algebraic) terms, density data is <em>dependent</em> on the map. So with that idea, we need the map data (from <code>mi_count</code>) as our primary source to merge on. The command <code>left_join</code> will work here as long as <code>mi_count</code> is literally to the left of the other data set: <code>Tigers</code>. Below you can see this and also that we’re merging, or joining on the common column <code>County</code>.</p>
+<pre class="r"><code>total_thing &lt;- left_join(mi_count, Tigers, by = c(&quot;County&quot;))</code></pre>
+<p>…and take a look.</p>
+<pre class="r"><code>head(mi_count)</code></pre>
+<pre><code>##            long      lat County
+## 38512 -83.88675 44.85686 Alcona
+## 38513 -83.36536 44.86832 Alcona
+## 38514 -83.33098 44.83968 Alcona
+## 38515 -83.30806 44.80530 Alcona
+## 38516 -83.30233 44.77665 Alcona
+## 38517 -83.28515 44.72509 Alcona</code></pre>
+<p>Nice! it worked! Now let’s try to plot it.</p>
+</div>
+<div id="part-iii-plotting" class="section level2">
+<h2>PART III: Plotting</h2>
+<p>Well let’s give it a go!</p>
+<pre class="r"><code>ggplot() + 
+  geom_polygon(data = total_thing, aes(x=long, y = lat, fill=Density, group=County), 
+               color = &quot;#f8f8fa&quot;, size = 0.25, show.legend = T) +
+  scale_color_viridis(alpha=1, option=&quot;viridis&quot;) + # color tells R to look for discrete data to color
+  theme_bw() +
+  theme(plot.title = element_text(size = 26,color =&quot;#105456&quot;,  vjust = -1),
+        legend.position =&quot;right&quot;,
+        legend.direction = &#39;vertical&#39;,
+        legend.key = element_rect(size = 5, color = NA),
+        legend.key.size = unit(1.5, &#39;lines&#39;),
+        legend.text = element_text(size=15, color = &quot;#59595B&quot;),
+        legend.title = element_blank(),
+        legend.title.align = 0.5,
+        legend.spacing.x = unit(0.5, &quot;cm&quot;), 
+        legend.spacing.y = unit(0.5, &quot;cm&quot;),
+        legend.background = element_rect(linetype = 0, size = 0.5, colour = 1),
+        panel.background = element_blank(),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank(),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank()) +
+  coord_fixed(1.3)</code></pre>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-88-1.png" width="672" /></p>
+<p>Clearly there’s a problem here. It looks like R is plotting the densities individually which means its treating the data as discrete. We don’t want this! Population data or any derivation thereof are typically given in ranges due to the massive variability in measures. This type of data is called continuous. So in this case, we need to change the form of the current data set from discrete to continuous. To do that, we must convert them to characters and then to generic numbers. While this sounds silly, R is not capable of this conversion directly (or it is possible that I am not aware of how to do it directly and would absolutely love to be proven wrong!)</p>
+<pre class="r"><code>total_thing$Density &lt;- as.numeric(as.character(total_thing$Density))</code></pre>
+<p>OK so let’s try again:</p>
+<pre class="r"><code>ggplot() + 
+  geom_polygon(data = total_thing, aes(x=long, y = lat, fill=Density, group=County), 
+               color = &quot;#f8f8fa&quot;, size = 0.25, show.legend = T) +
+  scale_fill_viridis(alpha=1, option=&quot;viridis&quot;) + # fill tells R to look for continuous data to color
+  theme_bw() +
+  theme(plot.title = element_text(size = 26,color =&quot;#105456&quot;,  vjust = -1),
+        legend.position =&quot;right&quot;,
+        legend.direction = &#39;vertical&#39;,
+        legend.key = element_rect(size = 5, color = NA),
+        legend.key.size = unit(1.5, &#39;lines&#39;),
+        legend.text = element_text(size=15, color = &quot;#59595B&quot;),
+        legend.title = element_blank(),
+        legend.title.align = 0.5,
+        legend.spacing.x = unit(0.5, &quot;cm&quot;), 
+        legend.spacing.y = unit(0.5, &quot;cm&quot;),
+        legend.background = element_rect(linetype = 0, size = 0.5, colour = 1),
+        panel.background = element_blank(),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank(),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank()) +
+  coord_fixed(1.3)</code></pre>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-90-1.png" width="672" /></p>
+<p>And we’ve got it! Was that a pain? Certainly! But you also have a powerful tool to grab a lot of demographic data and the knowledge to play and tweak aspects to fit other needs. In fact, some repositories only have their data within an API. If you are interested in pulling data from other government sites via APIs or otherwise, take a look at a running list here:
+<br></p>
+<p><a href="https://catalog.data.gov/dataset" target="_blank">https://catalog.data.gov/dataset</a></p>
+</div>
+<div id="example-tract-data" class="section level2">
+<h2>Example: Tract Data</h2>
+<p>For this example, you’ll need the following packages</p>
+<pre class="r"><code>library(tidycensus)
+library(tidyverse)
+library(tools) 
+library(sf)</code></pre>
+<pre><code>## Linking to GEOS 3.8.1, GDAL 3.1.4, PROJ 6.3.1</code></pre>
+<pre class="r"><code># For ore information on sf: https://r-spatial.github.io/sf/articles/sf1.html
+library(DT) 
+library(ggthemes)
+library(wesanderson)
+options(tigris_use_cache = TRUE) </code></pre>
+<p>Like before, let’s take a look at the packages so you get an idea what each does</p>
+<center>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Library
+</th>
+<th style="text-align:left;">
+Description
+</th>
+<th style="text-align:center;">
+Repository
+</th>
+<th style="text-align:center;">
+Example
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<code>tidycensus</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Another census package. You can actually use any of the others but this is included to give you variety
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://github.com/walkerke/tidycensus" target="_blank">Github</a>
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://walker-data.com/tidycensus/articles/basic-usage.html" target="_blank">Vignette</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; vertical-align: middle !important;">
+<code>tidyverse</code>
+</td>
+<td style="text-align:left;width: 30em; vertical-align: middle !important;">
+Nope
+</td>
+<td style="text-align:center;width: 10em; vertical-align: middle !important;">
+<a href="https://github.com/tidyverse/tidyverse" target="_blank">Github</a>
+</td>
+<td style="text-align:center;width: 10em; vertical-align: middle !important;">
+<a href="https://www.tidyverse.org/" target="_blank">Homepage</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<code>tools</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Used to manipulating R packages and their documentation
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://www.rdocumentation.org/packages/tools/versions/3.6.2" target="_blank">None<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></a>
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://stackoverflow.com/questions/7779037/extract-file-extension-from-file-path/47115540#47115540" target="_blank">StackOverflow</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<code>sf</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Package that houses spatial geometries and provides a relatively easy way to convert data frames to map objects
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://github.com/r-spatial/sf" target="_blank">Github</a>
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://r-spatial.github.io/sf/articles/sf1.html" target="_blank">Vignette</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<code>DT</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Nice package to see data frames in a more interactive display
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://github.com/rstudio/DT" target="_blank">Github</a>
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://rstudio.github.io/DT/" target="_blank">Vignette</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<code>ggthemes</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Additional ggplot themes you can use
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://github.com/jrnold/ggthemes" target="_blank">Github</a>
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://mran.microsoft.com/snapshot/2017-02-04/web/packages/ggthemes/vignettes/ggthemes.html" target="_blank">Walkthrough</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; ">
+<code>wesanderson</code>
+</td>
+<td style="text-align:left;width: 30em; ">
+Palette based on Wes Anderson movies
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://github.com/karthik/wesanderson" target="_blank">Github</a>
+</td>
+<td style="text-align:center;width: 10em; ">
+<a href="https://apreshill.github.io/data-vis-labs-2018/03-colors.html#95_built-in_discrete_palettes" target="_blank">Walkthrough</a>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+<div id="getting-census-tract-level-data" class="section level3">
+<h3>Getting Census Tract Level Data</h3>
+<p>Its not so obvious to get tract data sets. While there are multiple approaches, the easiest is to just ask for it. Here we’ll use the median household income from the 2015-2019 ACS in Monongalia County, WV.</p>
+<pre class="r"><code>mon &lt;- get_acs(state = &quot;WV&quot;, 
+               county = &quot;Monongalia&quot;, 
+               geography = &quot;tract&quot;, 
+               variables = &quot;B19013_001&quot;, 
+               geometry = TRUE)</code></pre>
+<pre class="r"><code>datatable(mon)</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+GEOID
+</th>
+<th style="text-align:left;">
+NAME
+</th>
+<th style="text-align:left;">
+variable
+</th>
+<th style="text-align:right;">
+estimate
+</th>
+<th style="text-align:right;">
+moe
+</th>
+<th style="text-align:left;">
+geometry
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+54061010101
+</td>
+<td style="text-align:left;">
+Census Tract 101.01, Monongalia County, West Virginia
+</td>
+<td style="text-align:left;">
+B19013_001
+</td>
+<td style="text-align:right;">
+16184
+</td>
+<td style="text-align:right;">
+12299
+</td>
+<td style="text-align:left;">
+MULTIPOLYGON (((-79.95389 3…
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+54061012000
+</td>
+<td style="text-align:left;">
+Census Tract 120, Monongalia County, West Virginia
+</td>
+<td style="text-align:left;">
+B19013_001
+</td>
+<td style="text-align:right;">
+75667
+</td>
+<td style="text-align:right;">
+18721
+</td>
+<td style="text-align:left;">
+MULTIPOLYGON (((-79.97551 3…
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+54061010102
+</td>
+<td style="text-align:left;">
+Census Tract 101.02, Monongalia County, West Virginia
+</td>
+<td style="text-align:left;">
+B19013_001
+</td>
+<td style="text-align:right;">
+13352
+</td>
+<td style="text-align:right;">
+9778
+</td>
+<td style="text-align:left;">
+MULTIPOLYGON (((-79.96402 3…
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+54061011300
+</td>
+<td style="text-align:left;">
+Census Tract 113, Monongalia County, West Virginia
+</td>
+<td style="text-align:left;">
+B19013_001
+</td>
+<td style="text-align:right;">
+58900
+</td>
+<td style="text-align:right;">
+6618
+</td>
+<td style="text-align:left;">
+MULTIPOLYGON (((-80.17178 3…
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+54061011900
+</td>
+<td style="text-align:left;">
+Census Tract 119, Monongalia County, West Virginia
+</td>
+<td style="text-align:left;">
+B19013_001
+</td>
+<td style="text-align:right;">
+88967
+</td>
+<td style="text-align:right;">
+18567
+</td>
+<td style="text-align:left;">
+MULTIPOLYGON (((-80.08072 3…
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+54061010901
+</td>
+<td style="text-align:left;">
+Census Tract 109.01, Monongalia County, West Virginia
+</td>
+<td style="text-align:left;">
+B19013_001
+</td>
+<td style="text-align:right;">
+43986
+</td>
+<td style="text-align:right;">
+7240
+</td>
+<td style="text-align:left;">
+MULTIPOLYGON (((-79.96288 3…
+</td>
+</tr>
+</tbody>
+</table>
+<p>Here is the discrete scale with five colors…</p>
+<pre class="r"><code>wes_palette(&quot;Rushmore1&quot;)</code></pre>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-97-1.png" width="50%" /></p>
+<p>…that has been converted to a continuous scale with 105,474 colors.</p>
+<pre class="r"><code>pal &lt;- wes_palette(&quot;Rushmore1&quot;, 
+                   max(mon$estimate), 
+                   type = &quot;continuous&quot;)</code></pre>
+</div>
+<div id="single-map" class="section level3">
+<h3>Single Map</h3>
+<p>We can plot the median household income using</p>
+<pre class="r"><code>mon %&gt;%
+  ggplot(aes(fill = estimate)) + 
+  geom_sf(color = NA) + 
+  scale_fill_gradientn(colors = pal) +
+  theme_map() </code></pre>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-99-1.png" width="672" /></p>
+</div>
+<div id="faceting-map" class="section level3">
+<h3>Faceting Map</h3>
+<p>We can also break down a map using <code>facet_wrap()</code>. For example, let’s pull data for race, in particular for White, Black, Asian and Hispanic Populations.</p>
+<pre class="r"><code>racevars &lt;- c(White = &quot;P005003&quot;, 
+              Black = &quot;P005004&quot;, 
+              Asian = &quot;P005006&quot;, 
+              Hispanic = &quot;P004003&quot;)</code></pre>
+<pre class="r"><code>mon_race &lt;- get_decennial(geography = &quot;tract&quot;,
+                          variables = racevars,
+                          state = &quot;WV&quot;, 
+                          county = &quot;Monongalia County&quot;, 
+                          geometry = TRUE,
+                          summary_var = &quot;P001001&quot;) </code></pre>
+<p>Again we can use the <code>datatable()</code> command from the <code>DT</code> package to see an interactive view of the output</p>
+<pre class="r"><code>datatable(mon_race)</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+GEOID
+</th>
+<th style="text-align:left;">
+NAME
+</th>
+<th style="text-align:left;">
+variable
+</th>
+<th style="text-align:right;">
+value
+</th>
+<th style="text-align:right;">
+summary_value
+</th>
+<th style="text-align:left;">
+geometry
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+54061010101
+</td>
+<td style="text-align:left;">
+Census Tract 101.01, Monongalia County, West Virginia
+</td>
+<td style="text-align:left;">
+White
+</td>
+<td style="text-align:right;">
+1257
+</td>
+<td style="text-align:right;">
+1424
+</td>
+<td style="text-align:left;">
+MULTIPOLYGON (((-79.94987 3…
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+54061010101
+</td>
+<td style="text-align:left;">
+Census Tract 101.01, Monongalia County, West Virginia
+</td>
+<td style="text-align:left;">
+Black
+</td>
+<td style="text-align:right;">
+38
+</td>
+<td style="text-align:right;">
+1424
+</td>
+<td style="text-align:left;">
+MULTIPOLYGON (((-79.94987 3…
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+54061010101
+</td>
+<td style="text-align:left;">
+Census Tract 101.01, Monongalia County, West Virginia
+</td>
+<td style="text-align:left;">
+Asian
+</td>
+<td style="text-align:right;">
+45
+</td>
+<td style="text-align:right;">
+1424
+</td>
+<td style="text-align:left;">
+MULTIPOLYGON (((-79.94987 3…
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+54061010101
+</td>
+<td style="text-align:left;">
+Census Tract 101.01, Monongalia County, West Virginia
+</td>
+<td style="text-align:left;">
+Hispanic
+</td>
+<td style="text-align:right;">
+66
+</td>
+<td style="text-align:right;">
+1424
+</td>
+<td style="text-align:left;">
+MULTIPOLYGON (((-79.94987 3…
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+54061010202
+</td>
+<td style="text-align:left;">
+Census Tract 102.02, Monongalia County, West Virginia
+</td>
+<td style="text-align:left;">
+White
+</td>
+<td style="text-align:right;">
+3424
+</td>
+<td style="text-align:right;">
+3823
+</td>
+<td style="text-align:left;">
+MULTIPOLYGON (((-79.95593 3…
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+54061010202
+</td>
+<td style="text-align:left;">
+Census Tract 102.02, Monongalia County, West Virginia
+</td>
+<td style="text-align:left;">
+Black
+</td>
+<td style="text-align:right;">
+143
+</td>
+<td style="text-align:right;">
+3823
+</td>
+<td style="text-align:left;">
+MULTIPOLYGON (((-79.95593 3…
+</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>mon_race %&gt;%
+  mutate(pct = 100 * (value / summary_value)) %&gt;%
+  ggplot(aes(fill = pct)) +
+  facet_wrap(~variable) +
+  geom_sf(color = NA) + 
+  scale_fill_gradientn(colors = pal) +
+  theme_map() </code></pre>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-104-1.png" width="672" /></p>
+<p>Well we know that West Virginia is primarily White resulting in a skewed distribution. To see how the other populations look proportionally by facet rather than overall, we can use a transformation in our scaling. In particular using a logarithmic transformation via <code>trans="log10"</code> when within a <code>scale_</code> is sufficient. Remember that maps are generally considered to be approximations of the actual data, rather than an exact representation.</p>
+<pre class="r"><code>mon_race %&gt;%
+  mutate(pct = 100 * (value / summary_value)) %&gt;%
+  ggplot(aes(fill = pct)) +
+  facet_wrap(~variable) +
+  geom_sf(color = NA) + 
+  scale_fill_gradientn(colors = pal,
+                       trans=&quot;log10&quot;) +
+  theme_map() </code></pre>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-105-1.png" width="672" /></p>
+</div>
+</div>
+<div id="example-alternate-projections" class="section level2">
+<h2>Example: Alternate Projections</h2>
+<p>We can use different <em>representations</em>, or <em>projections</em> of maps. To explore this, let’s take a look at the available variables. Hopefully one is interesting</p>
+<pre class="r"><code>vars &lt;- listCensusMetadata(name = &quot;acs/acs5/profile&quot;,
+                           vintage = 2018, 
+                           type = &quot;variables&quot;) </code></pre>
+<pre class="r"><code>vars %&gt;%
+  as_tibble() %&gt;%
+    filter(str_detect(label, &quot;relate&quot;))</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+name
+</th>
+<th style="text-align:left;">
+label
+</th>
+<th style="text-align:left;">
+concept
+</th>
+<th style="text-align:left;">
+predicateType
+</th>
+<th style="text-align:left;">
+group
+</th>
+<th style="text-align:left;">
+limit
+</th>
+<th style="text-align:left;">
+attributes
+</th>
+<th style="text-align:left;">
+required
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+</tr>
+</tbody>
+</table>
+<p>From that let’s use the variable <code>DP03_0126PE</code>, that is a <em>2014-2018 estimate of families with female householder, no husband present with related children of the householder under 18 years</em>.</p>
+<div id="getting-census-state-and-county-level-data" class="section level3">
+<h3>Getting Census State and County Level Data</h3>
+<p>We need to first grab the data set</p>
+<pre class="r"><code>poverty_data &lt;- getCensus(name = &quot;acs/acs5/profile&quot;, # same as above
+                          vintage = 2018,
+                          vars = c(&quot;NAME&quot;, &quot;DP03_0126PE&quot;), # column/variable name
+                          key = Sys.getenv(&quot;CENSUS_KEY&quot;), # using the census key from before
+                          region = &quot;county:*&quot;,# any county
+                          regionin = &quot;state:*&quot;) # any state</code></pre>
+</div>
+<div id="wrangling" class="section level3">
+<h3>Wrangling</h3>
+<p>A majority of your time is spent actually wrangling data. This often includes cleaning and restructuring it into a form you can us. For this example, we’ll do just that</p>
+<p>First we’ll clean the data set</p>
+<pre class="r"><code>poverty_data_cleaned &lt;- poverty_data %&gt;%
+                        separate(NAME, into = paste0(&#39;thing&#39;, 1:2), sep = &#39;[,]&#39;) %&gt;%
+                        mutate(thing1 = str_replace_all(thing1, &quot; County&quot;, &quot;&quot;)) %&gt;% # Remove the term County (with a space in front) 
+                        mutate(thing2 = str_squish(thing2)) %&gt;%
+                        select(-c(state, county)) %&gt;% # Get rid of these because we&#39;ll be using state and county names to merge
+                        rename(county = thing1, 
+                               state = thing2,
+                               poverty_percentage = DP03_0126PE) %&gt;%
+                        mutate(poverty_percentage = replace(poverty_percentage,
+                                                            which(poverty_percentage &lt;= 0),
+                                                            NA)) %&gt;%
+                        arrange(state, county)</code></pre>
+<p>Let’s take a look</p>
+<pre class="r"><code>poverty_data_cleaned %&gt;% 
+  head()</code></pre>
+<pre><code>##    county   state poverty_percentage
+## 1 Autauga Alabama               52.3
+## 2 Baldwin Alabama               35.0
+## 3 Barbour Alabama               60.6
+## 4    Bibb Alabama               50.6
+## 5  Blount Alabama               46.1
+## 6 Bullock Alabama               66.5</code></pre>
+<p>So now that we have the figures, we need data about the mapping.</p>
+<pre class="r"><code>county_data &lt;- map_data(&quot;county&quot;) %&gt;% 
+               rename(state = region, # rename because we&#39;ll use this to merge with the income_data_cleaned set
+                      county = subregion) %&gt;% # rename because we&#39;ll use this to merge with the income_data_cleaned set
+               mutate(state = str_to_title(state)) %&gt;% # make into a title case
+               mutate(county = str_to_title(county)) # make into a title case </code></pre>
+<p>Again, let’s take a look</p>
+<pre class="r"><code>county_data %&gt;% 
+  head()</code></pre>
+<pre><code>##        long      lat group order   state  county
+## 1 -86.50517 32.34920     1     1 Alabama Autauga
+## 2 -86.53382 32.35493     1     2 Alabama Autauga
+## 3 -86.54527 32.36639     1     3 Alabama Autauga
+## 4 -86.55673 32.37785     1     4 Alabama Autauga
+## 5 -86.57966 32.38357     1     5 Alabama Autauga
+## 6 -86.59111 32.37785     1     6 Alabama Autauga</code></pre>
+<p>Now we can merge them together using <code>joins</code></p>
+<pre class="r"><code>map_data &lt;- left_join(county_data, 
+                      poverty_data_cleaned, 
+                      by = c(&quot;state&quot;,&quot;county&quot;)) </code></pre>
+<pre class="r"><code>map_data %&gt;% 
+  head()</code></pre>
+<pre><code>##        long      lat group order   state  county poverty_percentage
+## 1 -86.50517 32.34920     1     1 Alabama Autauga               52.3
+## 2 -86.53382 32.35493     1     2 Alabama Autauga               52.3
+## 3 -86.54527 32.36639     1     3 Alabama Autauga               52.3
+## 4 -86.55673 32.37785     1     4 Alabama Autauga               52.3
+## 5 -86.57966 32.38357     1     5 Alabama Autauga               52.3
+## 6 -86.59111 32.37785     1     6 Alabama Autauga               52.3</code></pre>
+</div>
+<div id="mapping-using-estimated-curvatures" class="section level3">
+<h3>Mapping Using Estimated Curvatures</h3>
+<p>Let’s go ahead and map the data</p>
+<pre class="r"><code>estimate_map &lt;- 
+  ggplot() + 
+  geom_polygon(data = map_data, aes(x = long, 
+                                    y = lat, 
+                                    fill = poverty_percentage, 
+                                    group = group),
+               color = &quot;#f8f8fa&quot;, 
+               size = 0.20, 
+               show.legend = TRUE) +
+  geom_polygon(data=subset(map_data(&quot;state&quot;)), 
+               aes(x = long, 
+                   y = lat, 
+                   group = group), 
+               size = 0.5,
+               color=&quot;white&quot;, 
+               fill = NA) +
+  scale_fill_gradient(name=&quot;Estimates&quot;, 
+                      low = &quot;#fa9fb5&quot;, 
+                      high = &quot;#7a0177&quot;,
+                      breaks = c(0, 25, 50, 75, 100),
+                      limits = c(0,100), 
+                      na.value = &quot;#c9d3d9&quot;,
+                      labels = c(str_wrap(&quot;0.00% - 24.99%&quot;, 10), 
+                                 str_wrap(&quot;25.00 - 49.99%&quot;, 10),
+                                 str_wrap(&quot;50.00% - 74.99%&quot;, 10),
+                                 str_wrap(&quot;75.00% - 99.99%&quot;, 10),
+                                 &quot;100%&quot;),
+                      guide = &quot;legend&quot;) +
+  theme(plot.title = element_text(size = 13,
+                                  color =&quot;#4682b4&quot;, 
+                                  vjust = -1,
+                                  hjust = 0.5,
+                                  face = &quot;bold&quot;),
+        plot.caption = element_text(size = 8,
+                                    color =&quot;#4682b4&quot;,
+                                    face = &quot;italic&quot;,
+                                    margin = margin(t = 1, 
+                                                    unit = &quot;cm&quot;)),
+        legend.position = &quot;bottom&quot;,
+        legend.direction = &quot;horizontal&quot;,
+        legend.key = element_rect(size = 5, 
+                                  color = NA),
+        legend.key.width = unit(2, 
+                               &quot;cm&quot;),
+        legend.key.height = unit(0.3, 
+                               &quot;cm&quot;),
+        legend.text = element_text(size = 8, 
+                                   color = &quot;#4682b4&quot;),
+        legend.title.align = 0.5,
+        legend.title = element_text(size = 10, 
+                                    color = &quot;#4682b4&quot;),
+        legend.background = element_rect(linetype = 0, 
+                                         size = 0.5, 
+                                         color = 1),
+        panel.background = element_blank(),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank(),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank()) +
+  labs(title = str_to_title(str_wrap(&quot;2014-2018 estimate of families with female householder, no husband present with related children of the householder under 18 years&quot;, 50)),
+       caption = &quot;Source: 2018 American Community Survey: 5-Year Estimates&quot;) +
+  guides(fill = guide_legend(title.position = &quot;top&quot;,
+                             label.position = &quot;bottom&quot;, 
+                             label.hjust = 0.5)) </code></pre>
+<pre class="r"><code>estimate_map</code></pre>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-117-1.png" width="100%" /></p>
+<p>Well that’s the default map projection and its just terrible. You can fool around with the <em>representation</em>, or <em>projection</em> of the map using any number of coordinate systems via <code>coord_map()</code>. Below are just a few but a full list can be found on the <a href="https://rdrr.io/cran/mapproj/man/mapproject.html" target="_blank"><code>mapproj CRAN site</code></a>.</p>
+<details>
+<summary>
+Albers projection
+</summary>
+<pre class="r"><code>estimate_map + 
+  coord_map(&quot;albers&quot;, 
+            lat0 = 39, 
+            lat1 = 45)</code></pre>
+<img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-118-1.png" width="100%" />
+</details>
+<details>
+<summary>
+projection with an approximated aspect ratio
+</summary>
+<pre class="r"><code>estimate_map + 
+  coord_quickmap()</code></pre>
+<img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-119-1.png" width="100%" />
+</details>
+<details>
+<summary>
+Lambert azimuthal equal-area projection
+</summary>
+<pre class="r"><code>estimate_map + 
+  coord_map(&quot;azequalarea&quot;)</code></pre>
+<img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-120-1.png" width="100%" />
+</details>
+<details>
+<summary>
+Bonne projection
+</summary>
+<pre class="r"><code>estimate_map + 
+  coord_map(&quot;bonne&quot;, 
+            lat0 = 50)</code></pre>
+<img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-121-1.png" width="100%" />
+</details>
+<details>
+<summary>
+cylindrical projection
+</summary>
+<pre class="r"><code>estimate_map + 
+  coord_map(&quot;cylindrical&quot;)</code></pre>
+<img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-122-1.png" width="100%" />
+</details>
+<details>
+<summary>
+Gilbert projection
+</summary>
+<pre class="r"><code>estimate_map + 
+  coord_map(&quot;gilbert&quot;)</code></pre>
+<img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-123-1.png" width="100%" />
+</details>
+<details>
+<summary>
+LaGrange projection
+</summary>
+<pre class="r"><code>estimate_map + 
+  coord_map(&quot;lagrange&quot;)</code></pre>
+<img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-124-1.png" width="100%" />
+</details>
+<details>
+<summary>
+Mercator projection
+</summary>
+<pre class="r"><code>estimate_map + 
+  coord_map(&quot;mercator&quot;)</code></pre>
+<p><img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-125-1.png" width="100%" />
+<em>Note: This is the default projection so you can just run</em></p>
+<pre class="r"><code>estimate_map + 
+  coord_map()</code></pre>
+<em>to get the same result.</em>
+</details>
+<details>
+<summary>
+orthographic projection
+</summary>
+<pre class="r"><code>estimate_map + 
+  coord_map(&quot;orthographic&quot;)</code></pre>
+<img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-127-1.png" width="100%" />
+</details>
+<details>
+<summary>
+stereographic projection
+</summary>
+<pre class="r"><code>estimate_map + 
+  coord_map(&quot;stereographic&quot;)</code></pre>
+<img src="/assignment/06-assignment_files/figure-html/unnamed-chunk-128-1.png" width="100%" />
+</details>
+</div>
+<div id="saving" class="section level3">
+<h3>Saving</h3>
+<p>You can even save any of the plots as a pdf on standard A4 paper in landscape mode</p>
+<pre class="r"><code>poverty_estimates_albers &lt;- estimate_map + 
+                            coord_map(&quot;mercator&quot;)</code></pre>
+<pre class="r"><code>ggsave(&quot;poverty_estimates.pdf&quot;,
+       poverty_estimates_albers,
+       width = 297, 
+       height = 210, 
+       units = &quot;mm&quot;)</code></pre>
+<hr style"width:50%; margin-left:25% !important; margin-right:25% !important;" />
+</div>
+</div>
+</div>
+<div id="possible-solutions" class="section level1">
+<h1>Possible Solutions</h1>
+<p>For a walkthrough covering one of many possible approaches that may be used in this task, please click <a href="/assignment/06-assignment-sols">here</a>.</p>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Documentation provided<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>Documentation provided<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>

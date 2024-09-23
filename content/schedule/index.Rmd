@@ -1,0 +1,75 @@
+---
+title: "Schedule"
+slug: schedule
+---
+
+```{r echo=FALSE,message=FALSE}
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+library(fontawesome)
+```
+
+## Table of Contents
+
+```{r icontibble, echo=FALSE, message=FALSE}
+faread <-  as.character(fa("book", fill = "#739670", height = "17px"))
+falesson <-  as.character(fa("chalkboard", fill = "#764874", height = "17px"))
+faexample <-  as.character(fa("lightbulb", fill = "#eb7b59", height = "17px"))
+faass <- as.character(fa("tasks", fill = "#cf4647", height = "17px"))
+fadue <- as.character(fa("folder-open", fill = "#2a6e84", height = "17px"))
+
+
+tableofcontent <- tibble(
+  
+  type <- c("Readings", 
+            "Lesson",
+            "Example",
+            "Assignment",
+            "Due"),
+  
+  location <- c("[Go](/readings/)",
+                "[Go](/lesson/)",
+                "[Go](/example/)",
+                "[Go](/assignment/)",
+                "[Go](/due/)"),
+  
+  icon <- c(faread,
+            falesson,
+            faexample,
+            faass,
+            fadue),
+  
+  descr <- c("This page contains the readings for the topic which should be the first place you go to.",
+             "Here are interactive lessons, slides, and/or walkthroughs that helps with any content.",
+             "Extra items that are picked or created to help you understand the current material exist on this page.",
+             "Instructions for all student related tasks including information about the tasks and deliverables are provided in this location.",
+             "This page contains instructions on what to submit by on a weekly basis."
+             ),
+  
+  .name_repair = "minimal"
+
+  ) 
+```
+
+<center>
+```{r, echo=FALSE}
+tableofcontent %>%
+  kbl(col.names = NULL, 
+      "html", 
+      escape = FALSE,
+      align = 'lccl') %>%
+  column_spec(1, 
+              bold = TRUE)
+```
+</center>
+
+<span style="font-size:17px">*Note: Assignments are due by* ***Wednesday at 11:59 PM*** *unless otherwise noted.*</span>
+<br>
+<br>
+
+<hr style"width:50%; margin-left:25% !important; margin-right:25% !important;" />
+
+## Weekly Overview 
+
+`r blogdown::shortcode("schedule")`

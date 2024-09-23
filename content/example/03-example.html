@@ -1,0 +1,456 @@
+---
+title: "ggplotting"
+linktitle: "Week 3: ggplotting"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  example:
+    parent: Examples
+    weight: 3
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+<script src="/rmarkdown-libs/font-awesome/js/script.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#getting-prepped">Getting Prepped</a>
+<ul>
+<li><a href="#first-things-first-set-your-working-directory">First Things First! Set your Working Directory</a></li>
+<li><a href="#download-the-script">Download the script</a></li>
+<li><a href="#load-up-some-libraries">Load Up Some Libraries</a></li>
+</ul></li>
+<li><a href="#its-all-about-layers">Its All About Layers</a>
+<ul>
+<li><a href="#example-diamonds">Example: Diamonds</a></li>
+<li><a href="#another-example-bar-plots">Another Example: Bar Plots</a></li>
+<li><a href="#yet-another-example-more-bar-plots">Yet Another Example: More Bar Plots!</a></li>
+<li><a href="#comparisons-using-bar-charts">Comparisons Using Bar Charts</a></li>
+<li><a href="#adding-values">Adding Values</a></li>
+</ul></li>
+</ul>
+</div>
+
+<style>
+.hvr-sweep-to-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+}
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:   #003277;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+</style>
+<div id="getting-prepped" class="section level1">
+<h1>Getting Prepped</h1>
+<div id="first-things-first-set-your-working-directory" class="section level2">
+<h2>First Things First! Set your Working Directory</h2>
+<p>Your <em>working directory</em> is simply where your script will look for anything it needs like external data sets. There are a few ways to go about doing this which we will cover. However for now, just do the following:</p>
+<ol style="list-style-type: decimal">
+<li>Open up a new script by going to <code>File &gt; New File &gt; R Script</code>.</li>
+<li>Save it in a preferably empty folder as whatever you want.</li>
+<li>Go to the menu bar and select <code>Session &gt; Set Working Directory &gt; To Source File Location</code>.</li>
+</ol>
+</div>
+<div id="download-the-script" class="section level2">
+<h2>Download the script</h2>
+<p>Copying and pasting syntax from a browser can cause problems. To avoid this issue, please download a script with all of the needed code presented in this walkthrough.</p>
+<a href="data:text/plain;base64,IyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KbGlicmFyeShnZ3Bsb3QyKQpsaWJyYXJ5KGNvd3Bsb3QpCmxpYnJhcnkoUkNvbG9yQnJld2VyKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmdncGxvdCgpICsKICBsYXllcigKICAgIGRhdGEgPSBkaWFtb25kcywgCiAgICBtYXBwaW5nID0gYWVzKHggPSBjYXJhdCwgeSA9IHByaWNlKSwKICAgIGdlb20gPSAicG9pbnQiLCAgCiAgICBzdGF0ID0gImlkZW50aXR5IiwgCiAgICBwb3NpdGlvbiA9ICJpZGVudGl0eSIgKSArCiAgc2NhbGVfeV9jb250aW51b3VzKCkgKwogIHNjYWxlX3hfY29udGludW91cygpICsKICBjb29yZF9jYXJ0ZXNpYW4oKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmdncGxvdChkYXRhID0gZGlhbW9uZHMsIAogIG1hcHBpbmcgPSBhZXMoeCA9IGNhcmF0LCB5ID0gcHJpY2UpKSArCiAgZ2VvbV9wb2ludCgpCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KZ2dwbG90KGRpYW1vbmRzLCBhZXMoY2FyYXQsIHByaWNlKSkgKwogIGdlb21fcG9pbnQoKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmRhdGEgPC0gc3RydWN0dXJlKGxpc3QoVjEgPSBjKDM0Ljg4MzcyMDkzLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMzUuMDc3NTE5MzgsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAzNS4yNzEzMTc4MywgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDM1LjQ2NTExNjI4LCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMzUuNjU4OTE0NzMsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAzNS44NTI3MTMxOCksIAogICAgICAgICAgICAgICAgICAgICAgIFYyID0gYygwLjAwMDI5OTk3LCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMC4wMDAxOTk5OCwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDAuMDAwMjk5OTcsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAwLjAwMDI5OTk3LCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMC4wMDA2OTk5MywgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDAuMDAwNjk5OTMpKSwgCiAgICAgICAgICAgICAgICAgICAgICAuTmFtZXMgPSBjKCJQZXJjIiwgIlByb3AiKSwgCiAgICAgICAgICAgICAgICAgIHJvdy5uYW1lcyA9IGMoTkEsIDZMKSwgCiAgICAgICAgICAgICAgICAgIGNsYXNzID0gImRhdGEuZnJhbWUiKQoKCgojIyAtLS0tZXZhbD1GQUxTRS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQojIyBWaWV3KGRhdGEpCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KYmFycGxvdChkYXRhJFBlcmMsIAogICAgICAgIGRhdGEkUGVyYywgCiAgICAgICAgeGxhYj0iUGVyY2VudGFnZSIsIAogICAgICAgIHlsYWI9IlByb3BvcnRpb24iKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmdncGxvdChkYXRhLCBhZXMoeD1QZXJjLCB5PVByb3ApKSArIAogIGdlb21fYmFyKHN0YXQ9ImlkZW50aXR5IikgKyAKICBsYWJzKHg9IlBlcmNlbnRhZ2UiLCB5PSJQcm9wb3J0aW9uIikKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpnZ3Bsb3QoZGF0YSwgYWVzKHg9UGVyYywgeT1Qcm9wLCBmaWxsID0gUGVyYykpICsgCiAgZ2VvbV9iYXIoc3RhdD0iaWRlbnRpdHkiKSArIAogIGxhYnMoeD0iUGVyY2VudGFnZSIsIHk9IlByb3BvcnRpb24iKSArCiAgc2NhbGVfY29sb3JfYnJld2VyKCkKCgojIyAtLS0tbWVzc2FnZT1GQUxTRS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpsaWJyYXJ5KHhsc3gpICAgICAgICAgICAjIGZvciByZWFkaW5nIGluIEV4Y2VsIGRhdGEKbGlicmFyeShtYWdyaXR0cikgICAgICAgIyBmb3IgZWFzaWVyIHN5bnRheCBpbiBvbmUgb3IgdHdvIGFyZWFzCmxpYnJhcnkoZ3JpZEV4dHJhKSAgICAgICMgb2xkIG1ldGhvZCBmb3IgZ2VuZXJhdGluZyBzb21lIGNvbXBhcmlzb24gcGxvdHMKbGlicmFyeShwYXRjaHdvcmspICAgICAgIyBuZXcgbWV0aG9kIGZvciBnZW5lcmF0aW5nIHNvbWUgY29tcGFyaXNvbiBwbG90cwpsaWJyYXJ5KGdncGxvdDIpICAgICAgICAjIGZvciBnZW5lcmF0aW5nIHRoZSB2aXN1YWxpemF0aW9ucwpsaWJyYXJ5KHZpcmlkaXMpICAgICAgICAjIGJlY2F1c2UgY29sb3JzIGFyZSBmdW4hCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KaGVhZChtdGNhcnMpCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KIyB4LWF4aXMgYXMgY29udGludW91cwpwMSA8LSBnZ3Bsb3QobXRjYXJzLCBhZXMoeCA9IGN5bCkpICsKICBnZW9tX2JhcigpICsKICBnZ3RpdGxlKCJGaWcuIEE6IHgtYXhpcyBhcyBhIGNvbnRpbnVvdXMgdmFyaWFibGUiKQoKIyB4LWF4aXMgYXMgZGlzY3JldGUKcDIgPC0gZ2dwbG90KG10Y2FycywgYWVzKHggPSBmYWN0b3IoY3lsKSkpICsKICBnZW9tX2JhcigpICsKICBnZ3RpdGxlKCJGaWcgQjogeC1heGlzIGFzIGEgZGlzY3JldGUgKGZhY3RvcikgdmFyaWFibGUiKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmdyaWQuYXJyYW5nZShwMSwgcDIsIG5jb2wgPSAyKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCnAxICsgcDIKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQplMSA8LSBnZ3Bsb3QobXRjYXJzLCBhZXMoeCA9IGZhY3RvcihjeWwpKSkgKwogIGdlb21fYmFyKHdpZHRoID0gLjUpICsKICBnZ3RpdGxlKCJiYXIgd2lkdGggPSAwLjUiKQoKZTIgPC0gZ2dwbG90KG10Y2FycywgYWVzKHggPSBmYWN0b3IoY3lsKSkpICsKICBnZW9tX2Jhcih3aWR0aCA9IC43NSkgKwogIGdndGl0bGUoImJhciB3aWR0aCA9IDAuNzUiKQoKZTMgPC0gZ2dwbG90KG10Y2FycywgYWVzKHggPSBmYWN0b3IoY3lsKSkpICsKICBnZW9tX2Jhcih3aWR0aCA9IC45KSArCiAgZ2d0aXRsZSgiYmFyIHdpZHRoID0gMC45IikKCmU0IDwtIGdncGxvdChtdGNhcnMsIGFlcyh4ID0gZmFjdG9yKGN5bCkpKSArCiAgZ2VvbV9iYXIod2lkdGggPSAuOTkpICsKICBnZ3RpdGxlKCJiYXIgd2lkdGggPSAwLjk5IikKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQplMSArIGUyICsgZTMgKyBlNAoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmUxICsgZTIgKyBlMyArIGU0ICsgcGxvdF9sYXlvdXQobmNvbCA9IDEpCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KZTEgKyBlMiArIGUzICsgZTQgKyBwbG90X2xheW91dChucm93ID0gMSkKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpnZ3Bsb3QobXRjYXJzLCBhZXMoeCA9IGZhY3RvcihjeWwpKSkgKwogIGdlb21fYmFyKGZpbGwgPSAiZG9kZ2VyYmx1ZSIsIAogICAgICAgICAgIGNvbG9yID0gImdyZXk0MCIsIAogICAgICAgICAgIGFscGhhID0gMC41KQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCnQxIDwtIGdncGxvdChtdGNhcnMsIGFlcyh4ID0gcm93Lm5hbWVzKG10Y2FycyksIHkgPSBtcGcpKSArCiAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIpICsKICBnZ3RpdGxlKCJGaWcuIEE6IERlZmF1bHQgeC1heGlzIikKCnQxCgp0MiA8LSBnZ3Bsb3QobXRjYXJzLCBhZXMoeCA9IHJvdy5uYW1lcyhtdGNhcnMpLCB5ID0gbXBnKSkgKwogIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiKSArCiAgdGhlbWUoYXhpcy50ZXh0LnggPSBlbGVtZW50X3RleHQoYW5nbGUgPSA5MCwgaGp1c3QgPSAxLCB2anVzdCA9IC41KSkgKwogIGdndGl0bGUoIkZpZy4gQjogUm90YXRlZCB4LWF4aXMiKQoKdDIKCnQxICsgdDIgKyBwbG90X2xheW91dChuY29sID0gMSkKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpyMSA8LSBnZ3Bsb3QobXRjYXJzLCBhZXMoeCA9IHJvdy5uYW1lcyhtdGNhcnMpLCBtcGcpKSArCiAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIpICsKICBjb29yZF9mbGlwKCkgKwogIGdndGl0bGUoIkZpZy4gQTogRGVmYXVsdCByb3RhdGVkIHgtYXhpcyIpCgojIG9yZGVyIGJhcnMKcjIgPC0gZ2dwbG90KG10Y2FycywgYWVzKHggPSByZW9yZGVyKHJvdy5uYW1lcyhtdGNhcnMpLCBtcGcpLCB5ID0gbXBnKSkgKwogIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiKSArCiAgY29vcmRfZmxpcCgpICsKICBnZ3RpdGxlKCJGaWcuIEI6IFJvdGF0ZWQgb3JkZXJlZCB4LWF4aXMiKQoKcjEgKyByMiArIHBsb3RfbGF5b3V0KG5yb3cgPSAxKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCm0xIDwtIGdncGxvdChtdGNhcnMsIGFlcyh4ID0gcmVvcmRlcihyb3cubmFtZXMobXRjYXJzKSwgbXBnKSwgeSA9IG1wZywgZmlsbCA9IGZhY3RvcihjeWwpKSkgKwogIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiKSArCiAgY29vcmRfZmxpcCgpICsKICB0aGVtZV9taW5pbWFsKCkgKwogIGdndGl0bGUoIkZpZy4gQTogRGVmYXVsdCBmaWxsIGNvbG9ycyIpCgptMiA8LSBnZ3Bsb3QobXRjYXJzLCBhZXMoeCA9IHJlb3JkZXIocm93Lm5hbWVzKG10Y2FycyksIG1wZyksIHkgPSBtcGcsIGZpbGwgPSBmYWN0b3IoY3lsKSkpICsKICBzY2FsZV9maWxsX21hbnVhbCh2YWx1ZXMgPSBjKCIjZTVmNWUwIiwgIiNhMWQ5OWIiLCAiIzMxYTM1NCIpKSArCiAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIpICsKICBjb29yZF9mbGlwKCkgKwogIHRoZW1lX21pbmltYWwoKSArCiAgZ2d0aXRsZSgiRmlnLiBCOiBNYW51YWxseSBzZXQgZmlsbCBjb2xvcnMiKQoKCm0xICsgbTIgKyBwbG90X2xheW91dChuY29sID0gMikKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQp0MSA8LSBnZ3Bsb3QobXRjYXJzLCBhZXMoZmFjdG9yKGN5bCksIG1wZywgZmlsbCA9IGZhY3RvcihhbSkpKSArCiAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIsIHBvc2l0aW9uID0gImRvZGdlIikgKwogIGdndGl0bGUoIkRlZmF1bHQgY29sb3IgY29tcGFyaXNvbiIpCgojIG1vcmUgcGxlYXNpbmcgY29sb3JzCnQyIDwtIGdncGxvdChtdGNhcnMsIGFlcyhmYWN0b3IoY3lsKSwgbXBnLCBmaWxsID0gZmFjdG9yKGFtKSkpICsKICBnZW9tX2JhcihzdGF0ID0gImlkZW50aXR5IiwgcG9zaXRpb24gPSAiZG9kZ2UiKSArCiAgc2NhbGVfZmlsbF9icmV3ZXIocGFsZXR0ZSA9ICJQYXN0ZWwxIikgKwogIGdndGl0bGUoIkFkanVzdGVkIGNvbG9yIGNvbXBhcmlzb24iKQoKdDEgKyB0MiArIHBsb3RfbGF5b3V0KG5jb2wgPSAyKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmwxIDwtIGdncGxvdChtdGNhcnMsIGFlcyhmYWN0b3IoY3lsKSwgbXBnLCBmaWxsID0gZmFjdG9yKGFtKSkpICsKICBnZW9tX2JhcihzdGF0ID0gImlkZW50aXR5IiwgcG9zaXRpb24gPSAiZG9kZ2UiKSArCiAgZ2d0aXRsZSgiRGVmYXVsdCBkb2RnZSBwb3NpdGlvbmluZyIpICsKICB0aGVtZShsZWdlbmQucG9zaXRpb24gPSAibm9uZSIpCgpsMiA8LSBnZ3Bsb3QobXRjYXJzLCBhZXMoZmFjdG9yKGN5bCksIG1wZywgZmlsbCA9IGZhY3RvcihhbSkpKSArCiAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIsIHBvc2l0aW9uID0gcG9zaXRpb25fZG9kZ2Uod2lkdGggPSAuNSkpICsKICBnZ3RpdGxlKCJPdmVybGFwIG9mIHNpZGUtYnktc2lkZSBiYXJzIikgKwogIHRoZW1lKGxlZ2VuZC5wb3NpdGlvbiA9ICJub25lIikKCmwzIDwtIGdncGxvdChtdGNhcnMsIGFlcyhmYWN0b3IoY3lsKSwgbXBnLCBmaWxsID0gZmFjdG9yKGFtKSkpICsKICBnZW9tX2JhcihzdGF0ID0gImlkZW50aXR5IiwgcG9zaXRpb24gPSBwb3NpdGlvbl9kb2RnZSh3aWR0aCA9IDEpKSArCiAgZ2d0aXRsZSgiU3BhY2luZyBiZXR3ZWVuIHNpZGUtYnktc2lkZSBiYXJzIikgKwogIGxhYnMoZmlsbCA9ICJBTSIpICsKICB0aGVtZShsZWdlbmQucG9zaXRpb24gPSBjKDEsMSksIGxlZ2VuZC5qdXN0aWZpY2F0aW9uID0gYygxLDEpLAogICAgICAgIGxlZ2VuZC5iYWNrZ3JvdW5kID0gZWxlbWVudF9ibGFuaygpKQoKCmwxICsgbDIgKyBsMyArIHBsb3RfbGF5b3V0KG5jb2wgPSAzKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmdncGxvdChtdGNhcnMsIGFlcyhmYWN0b3IoY3lsKSwgbXBnLCBmaWxsID0gZmFjdG9yKGFtKSkpICsKICBnZW9tX2JhcihzdGF0ID0gImlkZW50aXR5IikKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQojIHJldmVyc2UgbGVnZW5kIGNvbG9yIGNvZGluZyBsYXlvdXQKcTEgPC0gZ2dwbG90KG10Y2FycywgYWVzKGZhY3RvcihjeWwpLCBtcGcsIGZpbGwgPSBmYWN0b3IoYW0pKSkgKwogIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiKSArCiAgZ3VpZGVzKGZpbGwgPSBndWlkZV9sZWdlbmQocmV2ZXJzZSA9IFRSVUUpKSArCiAgbGFicyhmaWxsID0gImFtIikgKwogIGdndGl0bGUoIkZpZyBBOiBSZXZlcnNlIGxlZ2VuZCIpCgojIG9yIHJldmVyc2Ugc3RhY2tpbmcgb3JkZXIgYnkgY2hhbmdpbmcgdGhlIGZhY3RvciBsZXZlbHMKcTIgPC0gZ2dwbG90KG10Y2FycywgYWVzKGZhY3RvcihjeWwpLCBtcGcsIGZpbGwgPSBmYWN0b3IoYW0sIGxldmVscyA9IGMoMSwgMCkpKSkgKwogIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiKSArCiAgbGFicyhmaWxsID0gImFtIikgKwogIGdndGl0bGUoIkZpZyBCOiBTcGVjaWZ5IGxldmVscyIpCgpxMSArIHEyICsgcGxvdF9sYXlvdXQobmNvbCA9IDIpCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KZ2dwbG90KG10Y2FycywgYWVzKGZhY3RvcihjeWwpLCBtcGcsIGZpbGwgPSBmYWN0b3IoYW0sIGxldmVscyA9IGMoMSwgMCkpKSkgKwogIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiKSArCiAgc2NhbGVfZmlsbF9tYW51YWwodmFsdWVzID0gYygiI2ExZDk5YiIsICIjMzFhMzU0IikpICsKICBsYWJzKGZpbGwgPSAiQU0iKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCnAxIDwtIGdncGxvdChtdGNhcnMsIGFlcyhyZW9yZGVyKHJvdy5uYW1lcyhtdGNhcnMpLCBtcGcpLCBtcGcpKSArCiAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIpICsKICBjb29yZF9mbGlwKCkgKwogIGdlb21fdGV4dChhZXMobGFiZWwgPSBtcGcpLCBudWRnZV95ID0gMikKCnAyIDwtIGdncGxvdChtdGNhcnMsIGFlcyhyZW9yZGVyKHJvdy5uYW1lcyhtdGNhcnMpLCBtcGcpLCBtcGcpKSArCiAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIpICsKICBjb29yZF9mbGlwKCkgKwogIGdlb21fdGV4dChhZXMobGFiZWwgPSBtcGcpLCBudWRnZV95ID0gLTIsIGNvbG9yID0gIndoaXRlIikKCnAxICsgcDIgKyBwbG90X2xheW91dChuY29sID0gMikKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpwMSA8LSBnZ3Bsb3QobXRjYXJzLCBhZXMoZmFjdG9yKGN5bCksIG1wZywgZmlsbCA9IGZhY3RvcihhbSkpKSArCiAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIsIHBvc2l0aW9uID0gImRvZGdlIikgKwogIGdlb21fdGV4dChhZXMobGFiZWwgPSByb3VuZChtcGcsIDEpKSwgcG9zaXRpb24gPSBwb3NpdGlvbl9kb2RnZSgwLjkpKSArCiAgZ2d0aXRsZSgiRmlnIEE6IERlZmF1bHQgdGV4dCBhbGlnbm1lbnQiKQoKcDIgPC0gZ2dwbG90KG10Y2FycywgYWVzKGZhY3RvcihjeWwpLCBtcGcsIGZpbGwgPSBmYWN0b3IoYW0pKSkgKwogIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiLCBwb3NpdGlvbiA9ICJkb2RnZSIpICsKICBnZW9tX3RleHQoYWVzKGxhYmVsID0gcm91bmQobXBnLCAxKSksIHBvc2l0aW9uID0gcG9zaXRpb25fZG9kZ2UoMC45KSwKICAgICAgICAgICAgdmp1c3QgPSAxLjUsIGNvbG9yID0gIndoaXRlIikgKwogIGdndGl0bGUoIkZpZyBCOiBBZGp1c3RlZCB0ZXh0IGFsaWdubWVudCIpCgpwMSArIHAyICsgcGxvdF9sYXlvdXQobmNvbCA9IDIpCgoKIyMgLS0tLWV2YWw9RkFMU0UtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KIyMgcDEgPC0gZ2dwbG90KG10Y2FycywgYWVzKGZhY3RvcihjeWwpLCBtcGcsIGZpbGwgPSBmYWN0b3IoYW0pKSkgKwojIyAgIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiLCBwb3NpdGlvbiA9ICJkb2RnZSIpICsKIyMgICBnZW9tX3RleHQoYWVzKGxhYmVsID0gcm91bmQobXBnLCAxKSksIHBvc2l0aW9uID0gcG9zaXRpb25fZG9kZ2UoMC45KSkgKwojIyAgIGdndGl0bGUoIkZpZyBBOiBEZWZhdWx0IHRleHQgYWxpZ25tZW50IikKIyMgCiMjIHAyIDwtIGdncGxvdChtdGNhcnMsIGFlcyhmYWN0b3IoY3lsKSwgbXBnLCBmaWxsID0gZmFjdG9yKGFtKSkpICsKIyMgICBnZW9tX2JhcihzdGF0ID0gImlkZW50aXR5IiwgcG9zaXRpb24gPSAiZG9kZ2UiKSArCiMjICAgc2NhbGVfZmlsbF92aXJpZGlzX2Mob3B0aW9uID0gIkQiKSArCiMjICAgZ2VvbV90ZXh0KGFlcyhsYWJlbCA9IHJvdW5kKG1wZywgMSkpLCBwb3NpdGlvbiA9IHBvc2l0aW9uX2RvZGdlKDAuOSksCiMjICAgICAgICAgICAgIHZqdXN0ID0gMS41LCBjb2xvciA9ICJ3aGl0ZSIpICsKIyMgICBnZ3RpdGxlKCJGaWcgQjogQWRqdXN0ZWQgdGV4dCBhbGlnbm1lbnQiKQojIyAKIyMgcDIKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpwMiA8LSBnZ3Bsb3QobXRjYXJzLCBhZXMoZmFjdG9yKGN5bCksIG1wZywgZmlsbCA9IGFtKSkgKwogIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiLCBwb3NpdGlvbiA9ICJkb2RnZSIpICsKICBzY2FsZV9maWxsX3ZpcmlkaXNfYyhvcHRpb24gPSAiRCIpICsKICBnZW9tX3RleHQoYWVzKGxhYmVsID0gcm91bmQobXBnLCAxKSksIHBvc2l0aW9uID0gcG9zaXRpb25fZG9kZ2UoMC45KSwKICAgICAgICAgICAgdmp1c3QgPSAxLjUsIGNvbG9yID0gIndoaXRlIikgKwogIGdndGl0bGUoIkZpZyBCOiBBZGp1c3RlZCB0ZXh0IGFsaWdubWVudCIpCgpwMgoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCnAyIDwtIGdncGxvdChtdGNhcnMsIGFlcyhmYWN0b3IoY3lsKSwgbXBnLCBmaWxsID0gZmFjdG9yKGFtKSkpICsKICBnZW9tX2JhcihzdGF0ID0gImlkZW50aXR5IiwgcG9zaXRpb24gPSAiZG9kZ2UiKSArCiAgc2NhbGVfZmlsbF92aXJpZGlzX2Qob3B0aW9uID0gIkQiKSArCiAgZ2VvbV90ZXh0KGFlcyhsYWJlbCA9IHJvdW5kKG1wZywgMSkpLCBwb3NpdGlvbiA9IHBvc2l0aW9uX2RvZGdlKDAuOSksCiAgICAgICAgICAgIHZqdXN0ID0gMS41LCBjb2xvciA9ICJ3aGl0ZSIpICsKICBnZ3RpdGxlKCJGaWcgQjogQWRqdXN0ZWQgdGV4dCBhbGlnbm1lbnQiKQoKcDIKCg==" download="Week 3 Script Outline.R">
+<button class="btn btn-default hvr-sweep-to-left"><i class="fa fa-save"></i> Download the Script</button>
+</a>
+</div>
+<div id="load-up-some-libraries" class="section level2">
+<h2>Load Up Some Libraries</h2>
+<p>Please go ahead and download the libraries below you don’t have and load them up</p>
+<pre class="r"><code>library(ggplot2)
+library(cowplot)
+library(RColorBrewer)</code></pre>
+</div>
+</div>
+<div id="its-all-about-layers" class="section level1">
+<h1>Its All About Layers</h1>
+<center>
+<img src="/example/03-example_files/ggplothavelayers.png" />
+</center>
+<p>ggplot runs on layers<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<p>We’ll work on this throughout the term, but here is a basic picture of the framework</p>
+<center>
+<img src="/example/03-example_files/ggplot_layers.png" title="fig:" alt="layers of ggplot2" />
+</center>
+<div id="example-diamonds" class="section level2">
+<h2>Example: Diamonds</h2>
+<p>We’ll use the <em>diamonds</em> data set that’s included in <code>ggplot</code>, in particular we’ll start with this plot with a bunch of foundational commands</p>
+<pre class="r"><code>ggplot() +
+  layer(
+    data = diamonds, 
+    mapping = aes(x = carat, y = price),
+    geom = &quot;point&quot;,  
+    stat = &quot;identity&quot;, 
+    position = &quot;identity&quot; ) +
+  scale_y_continuous() +
+  scale_x_continuous() +
+  coord_cartesian()</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>which can be condensed to</p>
+<pre class="r"><code>ggplot(data = diamonds, 
+  mapping = aes(x = carat, y = price)) +
+  geom_point()</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>You can get <em>lazy</em> about arguments, in that <em>x</em> and <em>y</em> are always the first arguments to <code>aes</code> so we often drop the argument names</p>
+<pre class="r"><code>ggplot(diamonds, aes(carat, price)) +
+  geom_point()</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+</div>
+<div id="another-example-bar-plots" class="section level2">
+<h2>Another Example: Bar Plots</h2>
+<p>First we’ll make up a totally fake data set. Please pay close attention to the structure and what everything means.</p>
+<pre class="r"><code>data &lt;- structure(list(V1 = c(34.88372093, 
+                              35.07751938, 
+                              35.27131783, 
+                              35.46511628, 
+                              35.65891473, 
+                              35.85271318), 
+                       V2 = c(0.00029997, 
+                              0.00019998, 
+                              0.00029997, 
+                              0.00029997, 
+                              0.00069993, 
+                              0.00069993)), 
+                      .Names = c(&quot;Perc&quot;, &quot;Prop&quot;), 
+                  row.names = c(NA, 6L), 
+                  class = &quot;data.frame&quot;)</code></pre>
+<p>and view it!</p>
+<pre class="r"><code>View(data)</code></pre>
+<p>The above says: I want a structure a list with two columns with variable Names V1 and V2 with the associated values in columns (given by c). Moreover, I want to name those columns <strong>Prop</strong> and <strong>Perc</strong>, with no row names (NA) and of length 6 (6 rows given by 6L). Finally, and possibly most importantly, it has to be a data frame!</p>
+<p>Now let’s look at a barplot of the data using</p>
+<ol style="list-style-type: decimal">
+<li><strong>Base R</strong></li>
+</ol>
+<pre class="r"><code>barplot(data$Perc, 
+        data$Perc, 
+        xlab=&quot;Percentage&quot;, 
+        ylab=&quot;Proportion&quot;)</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<ol style="list-style-type: decimal">
+<li><strong>ggplot</strong></li>
+</ol>
+<pre class="r"><code>ggplot(data, aes(x=Perc, y=Prop)) + 
+  geom_bar(stat=&quot;identity&quot;) + 
+  labs(x=&quot;Percentage&quot;, y=&quot;Proportion&quot;)</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p>Now let’s try colors by using the <em>Perc</em> column</p>
+<pre class="r"><code>ggplot(data, aes(x=Perc, y=Prop, fill = Perc)) + 
+  geom_bar(stat=&quot;identity&quot;) + 
+  labs(x=&quot;Percentage&quot;, y=&quot;Proportion&quot;) +
+  scale_color_brewer()</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+</div>
+<div id="yet-another-example-more-bar-plots" class="section level2">
+<h2>Yet Another Example: More Bar Plots!</h2>
+<p>Please download the libraries below you don’t have and load them up</p>
+<pre class="r"><code>library(xlsx)           # for reading in Excel data
+library(magrittr)       # for easier syntax in one or two areas
+library(gridExtra)      # old method for generating some comparison plots
+library(patchwork)      # new method for generating some comparison plots
+library(ggplot2)        # for generating the visualizations
+library(viridis)        # because colors are fun!</code></pre>
+<p>We’ll use the mtcars data set. It is a standard example set that comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles.</p>
+<pre class="r"><code>head(mtcars)</code></pre>
+<pre><code>##                    mpg cyl disp  hp drat    wt  qsec vs am gear carb
+## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+## Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre>
+<p>If we wanted to get the count of vehicles that have 4, 6 and 8 cylinders we can simply identify the <em>x</em>-axis variable and apply <code>geom_bar()</code>. This, by default will plot the count of 4, 6, and 8 cylinder vehicles in the data set. However, note that if the variable is numeric it may be interpreted as a continuous variable. This is the case in the first plot you will do below which is why the x-axis is continuous in nature. However, we can force the cylinder variable to a categorical (factor) variable by applying <code>x = factor(cyl)</code> using the second plot you will do below which produces a discrete <em>x</em>-axis.</p>
+<pre class="r"><code># x-axis as continuous
+p1 &lt;- ggplot(mtcars, aes(x = cyl)) +
+  geom_bar() +
+  ggtitle(&quot;Fig. A: x-axis as a continuous variable&quot;)
+
+# x-axis as discrete
+p2 &lt;- ggplot(mtcars, aes(x = factor(cyl))) +
+  geom_bar() +
+  ggtitle(&quot;Fig B: x-axis as a discrete (factor) variable&quot;)</code></pre>
+<p><em>We’ll see how to deal with the cut off text later</em></p>
+<p>We’ll display the results in two ways</p>
+<ol style="list-style-type: decimal">
+<li>Using the <strong>gridExtra</strong> package</li>
+</ol>
+<pre class="r"><code>grid.arrange(p1, p2, ncol = 2)</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<ol style="list-style-type: decimal">
+<li>Using the <strong>patchwork</strong> package</li>
+</ol>
+<pre class="r"><code>p1 + p2</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<p>Although the default width of the bars is aesthetically pleasing, you do have the ability to adjust this attribute by setting the width in <code>geom_bar()</code>. The default width is 0.9;</p>
+<ol style="list-style-type: decimal">
+<li>smaller values (min width of 0) make the bars narrower and</li>
+<li>larger values (max width of 1) make the bars wider.</li>
+</ol>
+<p>Here are some examples</p>
+<pre class="r"><code>e1 &lt;- ggplot(mtcars, aes(x = factor(cyl))) +
+  geom_bar(width = .5) +
+  ggtitle(&quot;bar width = 0.5&quot;)
+
+e2 &lt;- ggplot(mtcars, aes(x = factor(cyl))) +
+  geom_bar(width = .75) +
+  ggtitle(&quot;bar width = 0.75&quot;)
+
+e3 &lt;- ggplot(mtcars, aes(x = factor(cyl))) +
+  geom_bar(width = .9) +
+  ggtitle(&quot;bar width = 0.9&quot;)
+
+e4 &lt;- ggplot(mtcars, aes(x = factor(cyl))) +
+  geom_bar(width = .99) +
+  ggtitle(&quot;bar width = 0.99&quot;)</code></pre>
+<pre class="r"><code>e1 + e2 + e3 + e4</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+<pre class="r"><code>e1 + e2 + e3 + e4 + plot_layout(ncol = 1)</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+<pre class="r"><code>e1 + e2 + e3 + e4 + plot_layout(nrow = 1)</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
+<p>Take a look at some more examples over at the <strong>patchwork</strong> <a href="#%20https://patchwork.data-imaginist.com/articles/guides/assembly.html" target="_blank">vignette</a>.</p>
+<p>We can also adjust the fill and outline colors of the bars along with the opacity by applying <code>fill</code>, <code>color</code>, and <code>alpha</code> arguments respectively in the <code>geom_bar()</code> function.</p>
+<pre class="r"><code>ggplot(mtcars, aes(x = factor(cyl))) +
+  geom_bar(fill = &quot;dodgerblue&quot;, 
+           color = &quot;grey40&quot;, 
+           alpha = 0.5)</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<p>There are also times when we want to plot many categories along the x-axis and the length of the names make it difficult to read. One approach to resolving this issue is to use <code>axis.text.x</code> argument within the <code>theme()</code> function to rotate the text.</p>
+<pre class="r"><code>t1 &lt;- ggplot(mtcars, aes(x = row.names(mtcars), y = mpg)) +
+  geom_bar(stat = &quot;identity&quot;) +
+  ggtitle(&quot;Fig. A: Default x-axis&quot;)
+
+t1</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<pre class="r"><code>t2 &lt;- ggplot(mtcars, aes(x = row.names(mtcars), y = mpg)) +
+  geom_bar(stat = &quot;identity&quot;) +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = .5)) +
+  ggtitle(&quot;Fig. B: Rotated x-axis&quot;)
+
+t2</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-22-2.png" width="672" /></p>
+<pre class="r"><code>t1 + t2 + plot_layout(ncol = 1)</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-22-3.png" width="672" /></p>
+<p>However, you may hate to read rotated x-axis labels since it can be difficult. In cases like these rotated bar charts are far more appealing. We can rotate the axes by applying the <code>coord_flip()</code> function, which flips the <em>x</em> and <em>y</em> coordinates. To make this even easier to digest we can order the vehicles based on their <em>mpg</em> values as illustrated in the second plot you’ll do below. To do this just reorder the <em>x</em> variable by applying the <code>reorder()</code> function.</p>
+<pre class="r"><code>r1 &lt;- ggplot(mtcars, aes(x = row.names(mtcars), mpg)) +
+  geom_bar(stat = &quot;identity&quot;) +
+  coord_flip() +
+  ggtitle(&quot;Fig. A: Default rotated x-axis&quot;)
+
+# order bars
+r2 &lt;- ggplot(mtcars, aes(x = reorder(row.names(mtcars), mpg), y = mpg)) +
+  geom_bar(stat = &quot;identity&quot;) +
+  coord_flip() +
+  ggtitle(&quot;Fig. B: Rotated ordered x-axis&quot;)
+
+r1 + r2 + plot_layout(nrow = 1)</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
+</div>
+<div id="comparisons-using-bar-charts" class="section level2">
+<h2>Comparisons Using Bar Charts</h2>
+<p>Sometimes we want to compare different groups across the categorical variables of interest. This is primarily done via color, side-by-side bars, or stacked bars. To add a color dimension we simply add a fill argument to our first line of code to tell R what variable we want to use to color our bars.</p>
+<p>In this example we compare mpg across all the vehicles but also color the vehicles based on number of cylinders. R will use default color codings but you can</p>
+<ol style="list-style-type: decimal">
+<li>set the colors manually using scale_fill_manual as in the second plot you’ll do. But you can also</li>
+<li>use <code>scale_fill_brewer</code> to color with preset color schemes (see more about ColorBrewer <a href="http://colorbrewer2.org" target="_blank">here</a>) and</li>
+<li>many others! (if you type <code>scale_fill</code> into your RStudio Help search field you will see all the possibilities)</li>
+</ol>
+<p>Let’s compare mpg across all cars and color based on cyl</p>
+<pre class="r"><code>m1 &lt;- ggplot(mtcars, aes(x = reorder(row.names(mtcars), mpg), y = mpg, fill = factor(cyl))) +
+  geom_bar(stat = &quot;identity&quot;) +
+  coord_flip() +
+  theme_minimal() +
+  ggtitle(&quot;Fig. A: Default fill colors&quot;)
+
+m2 &lt;- ggplot(mtcars, aes(x = reorder(row.names(mtcars), mpg), y = mpg, fill = factor(cyl))) +
+  scale_fill_manual(values = c(&quot;#e5f5e0&quot;, &quot;#a1d99b&quot;, &quot;#31a354&quot;)) +
+  geom_bar(stat = &quot;identity&quot;) +
+  coord_flip() +
+  theme_minimal() +
+  ggtitle(&quot;Fig. B: Manually set fill colors&quot;)
+
+
+m1 + m2 + plot_layout(ncol = 2)</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+<p>We can also use side-by-side bars to make comparisons. Say we want to compare the average mpg for cars across the different 4, 6, and 8 cylinder categories but also assess the impact that transmission (variable am where 0 = automatic, 1 = manual) has. we apply the fill argument to color bars based on transmission type then include the <code>position = "dodge"</code> in the <code>geom_bar()</code> function. This tells R to have two bars for each cylinder type, color fill each bar based on the type of transmission and then adjust (aka “dodge”) the position of the bars so that they are side-by-side.</p>
+<pre class="r"><code>t1 &lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
+  geom_bar(stat = &quot;identity&quot;, position = &quot;dodge&quot;) +
+  ggtitle(&quot;Default color comparison&quot;)
+
+# more pleasing colors
+t2 &lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
+  geom_bar(stat = &quot;identity&quot;, position = &quot;dodge&quot;) +
+  scale_fill_brewer(palette = &quot;Pastel1&quot;) +
+  ggtitle(&quot;Adjusted color comparison&quot;)
+
+t1 + t2 + plot_layout(ncol = 2)</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
+<p>You can adjust the dodge width by incorporating the <code>position = position_dodge(width = x)</code> argument in the <code>geom_bar()</code> function. By default, the width is 0.90 and a lower value will create overlap of your side-by-side bars and a larger value will create spacing between the bars.</p>
+<pre class="r"><code>l1 &lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
+  geom_bar(stat = &quot;identity&quot;, position = &quot;dodge&quot;) +
+  ggtitle(&quot;Default dodge positioning&quot;) +
+  theme(legend.position = &quot;none&quot;)
+
+l2 &lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
+  geom_bar(stat = &quot;identity&quot;, position = position_dodge(width = .5)) +
+  ggtitle(&quot;Overlap of side-by-side bars&quot;) +
+  theme(legend.position = &quot;none&quot;)
+
+l3 &lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
+  geom_bar(stat = &quot;identity&quot;, position = position_dodge(width = 1)) +
+  ggtitle(&quot;Spacing between side-by-side bars&quot;) +
+  labs(fill = &quot;AM&quot;) +
+  theme(legend.position = c(1,1), legend.justification = c(1,1),
+        legend.background = element_blank())
+
+
+l1 + l2 + l3 + plot_layout(ncol = 3)</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
+<p>Stacked bars are the third common approach to compare groups with bar charts. By default, when you introduce a variable to color fill with in the first line, if you enter no other arguments ggplot will produce a stacked bar chart.</p>
+<pre class="r"><code>ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
+  geom_bar(stat = &quot;identity&quot;)</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-27-1.png" width="672" /></p>
+<p>Unfortunately, the way ggplot color codes the bars is opposite to how the colors are displayed in the legend. We can resolve this two different ways; either reverse the legend with the arguments displayed in the guides() function in your first plotbelow. or specify the direction of the levels when transforming the transmission (am) variable into a factor as displayed in the first line of code in Fig B. Both will align the legend color coding layout to the color coding of the stacked bars but each option also helps determine which color is top versus on the bottom.</p>
+<pre class="r"><code># reverse legend color coding layout
+q1 &lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
+  geom_bar(stat = &quot;identity&quot;) +
+  guides(fill = guide_legend(reverse = TRUE)) +
+  labs(fill = &quot;am&quot;) +
+  ggtitle(&quot;Fig A: Reverse legend&quot;)
+
+# or reverse stacking order by changing the factor levels
+q2 &lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am, levels = c(1, 0)))) +
+  geom_bar(stat = &quot;identity&quot;) +
+  labs(fill = &quot;am&quot;) +
+  ggtitle(&quot;Fig B: Specify levels&quot;)
+
+q1 + q2 + plot_layout(ncol = 2)</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+<p>As before we can change the color of our stacked bars by incorporating one of the many <code>scale_fill_xxxx</code> arguments. Here I manually specify the colors to apply with <code>scale_fill_manual()</code>.</p>
+<pre class="r"><code>ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am, levels = c(1, 0)))) +
+  geom_bar(stat = &quot;identity&quot;) +
+  scale_fill_manual(values = c(&quot;#a1d99b&quot;, &quot;#31a354&quot;)) +
+  labs(fill = &quot;AM&quot;)</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
+</div>
+<div id="adding-values" class="section level2">
+<h2>Adding Values</h2>
+<p>Often, it is helpful to provide labels/markers on the bar charts to help the reader interpret the results correctly or just to make it easier to read the graphic. For instance, we can add the actual mpg value to the following vertical bar chart by incorporating the <code>geom_text()</code> function and telling the function to label each bar with the mpg value. I can also tell ggplot to nudge the values left or right sit within or outside the bar and also color the text.</p>
+<pre class="r"><code>p1 &lt;- ggplot(mtcars, aes(reorder(row.names(mtcars), mpg), mpg)) +
+  geom_bar(stat = &quot;identity&quot;) +
+  coord_flip() +
+  geom_text(aes(label = mpg), nudge_y = 2)
+
+p2 &lt;- ggplot(mtcars, aes(reorder(row.names(mtcars), mpg), mpg)) +
+  geom_bar(stat = &quot;identity&quot;) +
+  coord_flip() +
+  geom_text(aes(label = mpg), nudge_y = -2, color = &quot;white&quot;)
+
+p1 + p2 + plot_layout(ncol = 2)</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
+<p>Labeling grouped bars is similar, however, we need to add a <code>position = position_dodge(0.9)</code> argument to the <code>geom_text()</code> function to tell ggplot to adjust the text location. By default, the values will be centered on the top of the bar but you can adjust the text to the top of the bar by including a <code>vjust = 0.5</code> argument or adjust the text to within the bar with <code>vjust = 1.5</code></p>
+<pre class="r"><code>p1 &lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
+  geom_bar(stat = &quot;identity&quot;, position = &quot;dodge&quot;) +
+  geom_text(aes(label = round(mpg, 1)), position = position_dodge(0.9)) +
+  ggtitle(&quot;Fig A: Default text alignment&quot;)
+
+p2 &lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
+  geom_bar(stat = &quot;identity&quot;, position = &quot;dodge&quot;) +
+  geom_text(aes(label = round(mpg, 1)), position = position_dodge(0.9),
+            vjust = 1.5, color = &quot;white&quot;) +
+  ggtitle(&quot;Fig B: Adjusted text alignment&quot;)
+
+p1 + p2 + plot_layout(ncol = 2)</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
+<p>You can change the colors palettes using hex (aka hexidecimal) colors! Take a look here for an <a href="https://www.color-hex.com/" target="_blank">example</a>. In this case, we’ll be using the <a href="https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html" target="_blank">viridis color set</a>.</p>
+<pre class="r"><code>p1 &lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
+  geom_bar(stat = &quot;identity&quot;, position = &quot;dodge&quot;) +
+  geom_text(aes(label = round(mpg, 1)), position = position_dodge(0.9)) +
+  ggtitle(&quot;Fig A: Default text alignment&quot;)
+
+p2 &lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
+  geom_bar(stat = &quot;identity&quot;, position = &quot;dodge&quot;) +
+  scale_fill_viridis_c(option = &quot;D&quot;) +
+  geom_text(aes(label = round(mpg, 1)), position = position_dodge(0.9),
+            vjust = 1.5, color = &quot;white&quot;) +
+  ggtitle(&quot;Fig B: Adjusted text alignment&quot;)
+
+p2</code></pre>
+<p>*Uh oh! Did you see something that said <code>## Error: Discrete value supplied to continuous scale</code>?</p>
+<p>The error says that we tried to add a continuous scale to discrete values! Well we could use this by either</p>
+<ol style="list-style-type: decimal">
+<li>Getting rid of the factor</li>
+</ol>
+<pre class="r"><code>p2 &lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = am)) +
+  geom_bar(stat = &quot;identity&quot;, position = &quot;dodge&quot;) +
+  scale_fill_viridis_c(option = &quot;D&quot;) +
+  geom_text(aes(label = round(mpg, 1)), position = position_dodge(0.9),
+            vjust = 1.5, color = &quot;white&quot;) +
+  ggtitle(&quot;Fig B: Adjusted text alignment&quot;)
+
+p2</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-33-1.png" width="672" /></p>
+<ol style="list-style-type: decimal">
+<li>Changing the type of scaling</li>
+</ol>
+<pre class="r"><code>p2 &lt;- ggplot(mtcars, aes(factor(cyl), mpg, fill = factor(am))) +
+  geom_bar(stat = &quot;identity&quot;, position = &quot;dodge&quot;) +
+  scale_fill_viridis_d(option = &quot;D&quot;) +
+  geom_text(aes(label = round(mpg, 1)), position = position_dodge(0.9),
+            vjust = 1.5, color = &quot;white&quot;) +
+  ggtitle(&quot;Fig B: Adjusted text alignment&quot;)
+
+p2</code></pre>
+<p><img src="/example/03-example_files/figure-html/unnamed-chunk-34-1.png" width="672" /></p>
+<p>Notice that the plots are different! Your fill and color variables define how the plot will look!</p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Much like Adobe Photoshop for those of you who may be familiar with that software.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>

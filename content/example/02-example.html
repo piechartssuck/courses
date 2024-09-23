@@ -1,0 +1,859 @@
+---
+title: "Base R is a Thing"
+linktitle: "Week 2: Base R is a Thing"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  example:
+    parent: Examples
+    weight: 2
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+<script src="/rmarkdown-libs/font-awesome/js/script.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#getting-prepped">Getting Prepped</a>
+<ul>
+<li><a href="#first-things-first-set-your-working-directory">First Things First! Set your Working Directory</a></li>
+<li><a href="#download-the-script">Download the script</a></li>
+<li><a href="#foundational-structures">Foundational Structures</a></li>
+<li><a href="#data-types">Data Types</a></li>
+<li><a href="#classes">Classes</a>
+<ul>
+<li><a href="#example-100-fake-data">Example: 100% Fake Data</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#data-frames---a-format-you-absolutely-want">Data Frames - A Format You Absolutely Want</a>
+<ul>
+<li><a href="#importing-and-viewing-data">Importing and Viewing Data</a></li>
+<li><a href="#looking-at-variables-in-a-data-frame">Looking at Variables in a Data Frame</a></li>
+<li><a href="#assigning-variables">Assigning Variables</a></li>
+<li><a href="#basic-visualizations">Basic Visualizations</a></li>
+</ul></li>
+<li><a href="#a-bit-of-context">A Bit of Context</a></li>
+<li><a href="#basic-visualizations-1">Basic Visualizations</a>
+<ul>
+<li><a href="#histograms">Histograms</a></li>
+<li><a href="#line-graph">Line Graph</a></li>
+<li><a href="#scatterplots">Scatterplots</a></li>
+<li><a href="#boxplots">Boxplots</a></li>
+</ul></li>
+<li><a href="#plot-options">Plot Options</a>
+<ul>
+<li><a href="#rendering-more-than-one-plot-in-a-window">Rendering more than one plot in a window</a></li>
+</ul></li>
+</ul>
+</div>
+
+<style>
+.hvr-sweep-to-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+}
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:   #003277;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+</style>
+<div id="getting-prepped" class="section level1">
+<h1>Getting Prepped</h1>
+<div id="first-things-first-set-your-working-directory" class="section level2">
+<h2>First Things First! Set your Working Directory</h2>
+<p>Your <em>working directory</em> is simply where your script will look for anything it needs like external data sets. There are a few ways to go about doing this which we will cover. However for now, just do the following:</p>
+<ol style="list-style-type: decimal">
+<li>Open up a new script by going to <code>File &gt; New File &gt; R Script</code>.</li>
+<li>Save it in a preferably empty folder as whatever you want.</li>
+<li>Go to the menu bar and select <code>Session &gt; Set Working Directory &gt; To Source File Location</code>.</li>
+</ol>
+</div>
+<div id="download-the-script" class="section level2">
+<h2>Download the script</h2>
+<p>Copying and pasting syntax from a browser can cause problems. To avoid this issue, please download a script with all of the needed code presented in this walkthrough.</p>
+<a href="data:text/plain;base64,IyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0Kbm90aGluZ192ZWN0b3IgPC0gYygpCiAgICAKbm90aGluZ192ZWN0b3IKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpudW1iZXJfdmVjdG9yIDwtIGMoMSwyLDMsNCw1KQogICAgCm51bWJlcl92ZWN0b3IKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpjaGFyYWN0ZXJfdmVjdG9yIDwtIAogIGMoCiAgICAiT2JhbiIsIAogICAgIk1hY2FsbGFuIiwgCiAgICAiUGl0dHl2YWljaCIsIAogICAgIkJhbGJsYWlyIiwgCiAgICAiR2xlbm1vcmFuZ2llIgogICAgKQogICAgCmNoYXJhY3Rlcl92ZWN0b3IKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpzb21lX21hdHJpeCA8LSBtYXRyaXgoYygxLDEsMiwzLDUsOCksIG5yb3cgPSAyLCBuY29sID0gMykKICAgIApzb21lX21hdHJpeCAKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpzb21lX2FycmF5IDwtIGFycmF5KDEsIGRpbSA9IGMoMiwgMywgMykpCiAgICAgICAgCnNvbWVfYXJyYXkKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpzb21lX2RmIDwtIGRhdGEuZnJhbWUoY29sMSA9IDE6MywgCiAgICAgICAgICAgICAgICAgY29sMiA9IGMoInRha2UiLCAiYSIsICJuYXAiKSwgCiAgICAgICAgICAgICAgICAgY29sMyA9IGMoVFJVRSwgRkFMU0UsIFRSVUUpLCAKICAgICAgICAgICAgICAgICBjb2w0ID0gYygxLjUsIDMuMiwgcGkpKQogICAgICAgIApzb21lX2RmCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0Kc29tZV9saXN0IDwtbGlzdCgxLDIsMyw0LDUpCiAgICAgICAgICAgIApzb21lX2xpc3QKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpoZWlnaHQgPC0gYygxNDUsMTY3LDE3NiwxMjMsMTUwKSAKd2VpZ2h0IDwtIGMoNTEsNjMsNjQsNDAsNTUpCgoKIyMgLS0tLWRldj0ncG5nJy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KaGVpZ2h0IDwtIGMoMTQ1LCAxNjcsIDE3NiwgMTIzLCAxNTApCndlaWdodCA8LSBjKDUxLCA2MywgNjQsIDQwLCA1NSkKCnBsb3QoaGVpZ2h0LHdlaWdodCkKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpjbGFzcyh3ZWlnaHQpICMgWXVwIHRoZXJlIGFyZSBudW1iZXJzIHNvIG51bWVyaWMgbWFrZXMgc2Vuc2UuCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KdHlwZW9mKHdlaWdodCkgIyBZb3Ugc2VlIHRoZSB0ZXJtICdkb3VibGUnIGhlcmUgYnV0IHlvdSBtYXkgYWxzbyBzZWUgJ3NpbmdsZScgb3IgJ2ludGVnZXInLiBBbGwgdGhpcyByZWZlcnMgdG8gaXMgdGhlIHByZWNpc2lvbiBvZiB0aGUgbnVtYmVyIGFuZCB5b3UgY2FuIGFzc3VtZSB0aGV5IGFyZSBhbGwgaW50ZWdlcnMuCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KbGVuZ3RoKHdlaWdodCkgIyBUaGVyZSBhcmUgNSBvYmplY3RzIGluIHdlaWdodCBzbyBsZW5ndGgod2VpZ2h0KSA9IDUgbWFrZXMgc2Vuc2UuCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KYXR0cmlidXRlcyh3ZWlnaHQpICMgTnVsbCBzaW5jZSB0aGVyZSBpc24ndCBhbnkgb3RoZXIgaW5mb3JtYXRpb24gZXhjZXB0IGZvciB3aGF0IHlvdSBzZWUuCgoKIyMgLS0tLWVjaG89VFJVRSwgZXZhbD1GQUxTRS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KIyMgcG9wdWxhdGlvbiA8LSByZWFkLmNzdigiVVNwb3AyMDEwdG8yMDE3LmNzdiIsCiMjICAgICAgICAgICAgICAgICAgICAgICAgaGVhZGVyID0gVFJVRSwKIyMgICAgICAgICAgICAgICAgICAgICAgICBzdHJpbmdzQXNGYWN0b3JzID0gVFJVRSkKCgoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCnBvcHVsYXRpb24KCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpoZWFkKHBvcHVsYXRpb24pCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KaGVhZChwb3B1bGF0aW9uLCA0KQoKCiMjIC0tLS0gZXZhbD1GQUxTRS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiMjIFZpZXcocG9wdWxhdGlvbikKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpzdHIocG9wdWxhdGlvbikKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpnbGltcHNlKHBvcHVsYXRpb24pCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KcG9wdWxhdGlvbiRDZW5zdXNfSUQKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpwb3B1bGF0aW9uJENvbGxlY3Rpb25feWVhcgoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCnBvcHVsYXRpb24kVG90YWxfUG9wCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KcG9wdWxhdGlvbiRNYWxlX1BvcAoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCnBvcHVsYXRpb24kRmVtYWxlX1BvcAoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmNlbnN1cyA8LSBwb3B1bGF0aW9uJENlbnN1c19JRAoKY2Vuc3VzCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KY2Vuc3VzIDwtIHBvcHVsYXRpb24kQ2Vuc3VzX0lEOyBjZW5zdXMKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQp5ZWFyIDwtIHBvcHVsYXRpb24kQ29sbGVjdGlvbl95ZWFyOyB5ZWFyCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KdG90YWwgPC0gcG9wdWxhdGlvbiRUb3RhbF9Qb3A7IHRvdGFsCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KbWFsZSA8LSBwb3B1bGF0aW9uJE1hbGVfUG9wOyBtYWxlCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KZmVtYWxlIDwtIHBvcHVsYXRpb24kRmVtYWxlX1BvcDsgZmVtYWxlCgoKIyMgLS0tLWV2YWw9RkFMU0UtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KIyMgcGxvdCh5ZWFyLCB0b3RhbCkKIyMgIyBOb3RpY2UgdGhhdCB0aGUgeC1heGlzIHZhcmlhYmxlIGdvZXMgZmlyc3QhCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KIyBXZSBkb24ndCBkaXZpZGUgYW55dGhpbmcgaW4gY2Vuc3VzIGJlY2F1c2UgaXQganVzdCBjb250YWlucyB0aGUgb3JpZ2luYWwgdmFyaWFibGVzCmNlbnN1cyA8LSBwb3B1bGF0aW9uJENlbnN1c19JRCAKCiMgV2UgZG9uJ3Qgd2FudCB0byBkaXZpZGUgYW55dGhpbmcgaGVyZSBiZWNhdXNlIHRoaXMgY29sdW1uIGhhcyBkYXRhIG9uIHllYXJzCnllYXIgPC0gcG9wdWxhdGlvbiRDb2xsZWN0aW9uX3llYXIgCgojIFRoZXNlIGFyZSB0aGUgYWN0dWFsIGRhdGEgc28gdGhhdCdzIHdoZXJlIHdlJ2xsIHJlZHVjZS4gCnRpbnl0b3RhbCA8LSBwb3B1bGF0aW9uJFRvdGFsX1BvcC8xMDAwMDAwMDAgCnRpbnltYWxlIDwtIHBvcHVsYXRpb24kTWFsZV9Qb3AvMTAwMDAwMDAwCnRpbnlmZW1hbGUgPC0gcG9wdWxhdGlvbiRGZW1hbGVfUG9wLzEwMDAwMDAwMAoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCnBsb3QoeWVhciwgdGlueXRvdGFsKSAKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpwbG90KHllYXIsIHRpbnl0b3RhbCwgCiAgICAgeGxhYiA9ICJZZWFycyIsIAogICAgIHlsYWIgPSAiTnVtYmVyIG9mIFBlb3BsZSAoaW4gaHVuZHJlZHMgb2YgbWlsbGlvbnMpIikgCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KcGxvdCh5ZWFyLCB0aW55dG90YWwsIAogICAgIHhsYWIgPSAiWWVhcnMiLCAKICAgICB5bGFiID0gIk51bWJlciBvZiBQZW9wbGUgKGluIGh1bmRyZWRzIG9mIG1pbGxpb25zKSIsIAogICAgIGNleC5sYWIgPSAxLjUpIAoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCnBsb3QoeWVhciwgdGlueXRvdGFsLCAKICAgICB4bGFiID0gIlllYXJzIiwgCiAgICAgeWxhYiA9ICJOdW1iZXIgb2YgUGVvcGxlKGluIGh1bmRyZWRzIG9mIG1pbGxpb25zKSIsIAogICAgIGNleC5sYWIgPSAxLjUsIAogICAgIGNvbC5sYWI9IiNlZTQwMzUiLCAKICAgICBjb2w9IiM3YmMwNDMiKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCnBsb3QoeWVhciwgdGlueXRvdGFsLCAKICAgICB4bGFiID0gIlllYXJzIiwgCiAgICAgeWxhYiA9ICJOdW1iZXIgb2YgUGVvcGxlKGluIGh1bmRyZWRzIG9mIG1pbGxpb25zKSIsIAogICAgIGNleC5sYWIgPSAxLjUsIAogICAgIGNvbC5sYWI9IiNlZTQwMzUiLAogICAgIGNvbD0iIzdiYzA0MyIsIAogICAgIHBjaCA9IDE5KQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCnBsb3QoeWVhciwgdGlueXRvdGFsLCAKICAgICB4bGFiID0gIlllYXJzIiwgCiAgICAgeWxhYiA9ICJOdW1iZXIgb2YgUGVvcGxlIChpbiBodW5kcmVkcyBvZiBtaWxsaW9ucykiLCAKICAgICBjZXgubGFiID0gMS41LCAKICAgICBjb2wubGFiPSIjZWU0MDM1IiwKICAgICBjb2w9IiM3YmMwNDMiLCAKICAgICBwY2ggPSAxOSwgCiAgICAgY2V4ID0gMS41KQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCnBsb3QoeWVhciwgdGlueXRvdGFsLCAKICAgICB4bGFiID0gIlllYXJzIiwgCiAgICAgeWxhYiA9ICJOdW1iZXIgb2YgUGVvcGxlIChpbiBodW5kcmVkcyBvZiBtaWxsaW9ucykiLCAKICAgICBjZXgubGFiID0gMS41LCAKICAgICBjb2wubGFiPSIjZWU0MDM1IiwKICAgICBjb2w9IiM3YmMwNDMiLCAKICAgICBwY2ggPSAxOSwgCiAgICAgY2V4ID0gMikKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpwbG90KHllYXIsIHRpbnl0b3RhbCwgCiAgICAgeGxhYiA9ICJZZWFycyIsIAogICAgIHlsYWIgPSAiTnVtYmVyIG9mIFBlb3BsZSAoaW4gaHVuZHJlZHMgb2YgbWlsbGlvbnMpIiwgCiAgICAgY2V4LmxhYiA9IDEuNSwgCiAgICAgY29sLmxhYj0iI2VlNDAzNSIsCiAgICAgY29sPSIjN2JjMDQzIiwgCiAgICAgcGNoID0gMTksIAogICAgIGNleCA9IDIsCiAgICAgYnR5ID0gIm4iKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCnBsb3QoeWVhciwgdGlueXRvdGFsLCAKICAgICB4bGFiID0gIlllYXJzIiwgCiAgICAgeWxhYiA9ICJOdW1iZXIgb2YgUGVvcGxlIChpbiBodW5kcmVkcyBvZiBtaWxsaW9ucykiLCAKICAgICBjZXgubGFiID0gMS41LCAKICAgICBjb2wubGFiPSIjZWU0MDM1IiwKICAgICBjb2w9IiM3YmMwNDMiLCAKICAgICBwY2ggPSAxOSwgCiAgICAgY2V4ID0gMiwKICAgICBidHkgPSAibiIsCiAgICAgbWFpbiA9ICJVbml0ZWQgU3RhdGVzIFBvcHVsYXRpb24gRXN0aW1hdGVzICgyMDEwLTIwMTcpIiwgCiAgICAgY2V4Lm1haW4gPSAxLjUsCiAgICAgY29sLm1haW4gPSAiIzAzOTJjZiIpCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KcGxvdCh5ZWFyLCB0aW55dG90YWwsIAogICAgIHhsYWIgPSAiWWVhcnMiLCAKICAgICB5bGFiID0gIk51bWJlciBvZiBQZW9wbGUgKGluIGh1bmRyZWRzIG9mIG1pbGxpb25zKSIsIAogICAgIGNleC5sYWIgPSAxLjUsIAogICAgIGNvbC5sYWI9IiNlZTQwMzUiLAogICAgIGNvbD0iIzdiYzA0MyIsIAogICAgIHBjaCA9IDE5LCAKICAgICBjZXggPSAyLAogICAgIGJ0eSA9ICJuIiwKICAgICBtYWluID0gIlVuaXRlZCBTdGF0ZXMgUG9wdWxhdGlvbiBFc3RpbWF0ZXMgKDIwMTAtMjAxNykiLCAKICAgICBjZXgubWFpbiA9IDEuNSwKICAgICBjb2wubWFpbiA9ICIjMDM5MmNmIiwKICAgICB0eXBlID0gIm8iKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCnBsb3QoeWVhciwgdGlueXRvdGFsLCAKICAgICB4bGFiID0gIlllYXJzIiwgCiAgICAgeWxhYiA9ICJOdW1iZXIgb2YgUGVvcGxlIChpbiBodW5kcmVkcyBvZiBtaWxsaW9ucykiLCAKICAgICBjZXgubGFiID0gMS41LCAKICAgICBjb2wubGFiPSIjZWU0MDM1IiwKICAgICBjb2w9IiM3YmMwNDMiLCAKICAgICBwY2ggPSAxOSwgCiAgICAgY2V4ID0gMiwKICAgICBidHkgPSAibiIsCiAgICAgbWFpbiA9ICJVbml0ZWQgU3RhdGVzIFBvcHVsYXRpb24gRXN0aW1hdGVzICgyMDEwLTIwMTcpIiwgCiAgICAgY2V4Lm1haW4gPSAxLjUsCiAgICAgY29sLm1haW4gPSAiIzAzOTJjZiIsCiAgICAgdHlwZSA9ICJvIiwKICAgICBsd2QgPSAzLjUpCgoKIyMgLS0tLWVjaG89VFJVRSwgZXZhbD1GQUxTRS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KIyMgZmFjZWJvb2sgPC0gcmVhZC5jc3YoIkFjdGl2ZUZhY2Vib29rVXNlcnMuY3N2IiwKIyMgICAgICAgICAgICAgICAgICAgICAgICBoZWFkZXIgPSBUUlVFLAojIyAgICAgICAgICAgICAgICAgICAgICAgIHN0cmluZ3NBc0ZhY3RvcnMgPSBUUlVFKQoKCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KaGVhZChmYWNlYm9vaykKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpzdHIoZmFjZWJvb2spIAojIEFsdGVybmF0aXZlbHksIHlvdSBjYW4gdXNlIGdsaW1wc2UoKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmZhY2Vib29rJFF1YXJ0ZXIKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpmYWNlYm9vayROdW1iZXIub2YudXNlcnMuaW4ubWlsbGlvbnMKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQp1c2VycyA8LSBmYWNlYm9vayROdW1iZXIub2YudXNlcnMuaW4ubWlsbGlvbnMKcXVhcnRlciA8LSBmYWNlYm9vayRRdWFydGVyCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KaGlzdCh1c2VycykgCiMgSGV5IGl0cyBhIG5vcm1hbCBkaXN0cmlidXRpb24hCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KaGlzdCh1c2VycywKICAgICBicmVha3MgPSA0MCkgCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KbWluKHVzZXJzKSAKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQptYXgodXNlcnMpIAoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCihtYXgodXNlcnMpIC0gbWluKHVzZXJzKSkvMzAwCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KY2VpbGluZygobWF4KHVzZXJzKSAtIG1pbih1c2VycykpLzMwMCkKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpoaXN0KHVzZXJzLCAKICAgICBicmVha3MgPSBjKDEwMCw0MDAsNzAwLDEwMDAsMTMwMCwxNjAwLDE5MDAsMjEwMCwyNDAwKSkKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpoaXN0KHVzZXJzLCAKICAgICBicmVha3MgPSBzZXEobWluKHVzZXJzKSwgCiAgICAgICAgICAgICAgICAgIG1heCh1c2VycyksICAKICAgICAgICAgICAgICAgICAgbGVuZ3RoLm91dD04KSkKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpoaXN0KHVzZXJzLCBicmVha3MgPSBzZXEobWluKHVzZXJzKSwgCiAgICAgICAgICAgICAgICAgICAgICAgICBtYXgodXNlcnMpLCAgIAogICAgICAgICAgICAgICAgICAgICAgICAgbGVuZ3RoLm91dD04KSwgCiAgICAgeGxhYiA9ICJBY3RpdmUgVXNlcnMgKGluIG1pbGxpb25zKSIsIAogICAgIG1haW4gPSAiRmFjZWJvb2sgdXRpbGl0eSB3b3JsZHdpZGUgYXMgb2YgMm5kIHF1YXJ0ZXIgMjAxOCIsCiAgICAgY29sID0gYygiIzNiNTk5OCIsIiM2ZDg0YjQiLCAiI2FmYmRkNCIsICIjZDhkZmVhIiwgIiNmZmZmZmYiKSwgCiAgICAgYm9yZGVyID0gIiNkOGRmZWEiLCAKICAgICBjZXgubGFiID0gMS4xKSAKCgojIyAtLS0tZWNobz1UUlVFLCBldmFsPUZBTFNFLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQojIyB0d2l0dGVyIDwtIHJlYWQuY3N2KCJBY3RpdmVUd2l0dGVyVXNlcnMuY3N2IiwKIyMgICAgICAgICAgICAgICAgICAgICAgICBoZWFkZXIgPSBUUlVFLAojIyAgICAgICAgICAgICAgICAgICAgICAgIHN0cmluZ3NBc0ZhY3RvcnMgPSBUUlVFKQoKCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KaGVhZCh0d2l0dGVyKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCnN0cih0d2l0dGVyKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCnR3aXR0ZXIkUXVhcnRlcgoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCnR3aXR0ZXIkTnVtYmVyLm9mLm1vbnRobHkuYWN0aXZlLnVzZXJzLmluLm1pbGxpb25zCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KdHdlZXRlcnMgPC0gdHdpdHRlciROdW1iZXIub2YubW9udGhseS5hY3RpdmUudXNlcnMuaW4ubWlsbGlvbnMKc2Vhc29uIDwtIHR3aXR0ZXIkUXVhcnRlcgoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCnBsb3Qoc2Vhc29uLCB0d2VldGVycykKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpwbG90KHNlYXNvbiwgdHdlZXRlcnMsCiAgICAgdHlwZSA9ICJsIikKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpwbG90KHNlYXNvbiwgdHdlZXRlcnMsCiAgICAgdHlwZSA9ICJvIikKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpwbG90KHNlYXNvbiwgdHdlZXRlcnMsCiAgICAgdHlwZSA9ICJwIikKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpwbG90KHNlYXNvbiwgdHdlZXRlcnMsCiAgICAgdHlwZSA9ICJiIikKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpwbG90KHNlYXNvbiwgdHdlZXRlcnMsIAogICAgIHR5cGUgPSAibCIsIAogICAgIGx0eSA9ICJkYXNoZWQiKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCnBsb3Qoc2Vhc29uLCB0d2VldGVycywgCiAgICAgdHlwZSA9ICJsIiwgCiAgICAgbHR5ID0gImRvdHRlZCIpCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KcGxvdChzZWFzb24sIHR3ZWV0ZXJzLAogICAgIHR5cGUgPSAibCIpCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KcGxvdChzZWFzb24sIHR3ZWV0ZXJzLAogICAgIHR5cGUgPSAibCIsCiAgICAgY29sID0gIiM1Y2I4NWMiKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCnBsb3Qoc2Vhc29uLCB0d2VldGVycywKICAgICB0eXBlID0gImwiLAogICAgIGNvbCA9IDMpCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KcGxvdChzZWFzb24sIHR3ZWV0ZXJzLAogICAgIGNvbCA9ICIjNWNiODVjIiwgCiAgICAgbHdkID0gMykKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpwbG90KHNlYXNvbiwgdHdlZXRlcnMsIAogICAgIHR5cGUgPSAibCIsIAogICAgIGNvbCA9ICIjNWNiODVjIiwgCiAgICAgbHdkID0gMywKICAgICB4bGFiID0gIlF1YXJ0ZXIiLAogICAgIHlsYWIgPSAiVHdlZXRlcnMgKGluIG1pbGxpb25zKSIsCiAgICAgbWFpbiA9ICJBY3RpdmUgVXNlcnMgb24gVHdpdHRlciIpCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KZml0MSA8LSBsbSAodHdlZXRlcnMgfiBzZWFzb24sIAogICAgICAgICAgICBkYXRhID0gdHdpdHRlcikgCgpzdW1tYXJ5KGZpdDEpCgpwbG90KGZpdDEpCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KZGF0YShpcmlzKQpoZWFkKGlyaXMpCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KcGFpcnMoaXJpcykKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpwYWlycyhpcmlzLCAKICAgICAgY29sID0gaXJpcyRTcGVjaWVzKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCnBsb3QoaXJpcyRTZXBhbC5MZW5ndGgsIAogICAgIGlyaXMkUGV0YWwuTGVuZ3RoLCAKICAgICBjb2wgPSBpcmlzJFNwZWNpZXMpCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KcGxvdChpcmlzJFNlcGFsLkxlbmd0aCwgCiAgICAgaXJpcyRQZXRhbC5MZW5ndGgsIAogICAgIGNvbCA9IGlyaXMkU3BlY2llcywgCiAgICAgcGNoID0gMTUpCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KcGxvdChpcmlzJFNlcGFsLkxlbmd0aCwgCiAgICAgaXJpcyRQZXRhbC5MZW5ndGgsIAogICAgIGNvbCA9IGlyaXMkU3BlY2llcywgCiAgICAgcGNoID0gIkEiKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCnBsb3QoaXJpcyRTZXBhbC5MZW5ndGgsIAogICAgIGlyaXMkUGV0YWwuTGVuZ3RoLCAKICAgICBjb2wgPSBpcmlzJFNwZWNpZXMsIAogICAgIHBjaCA9IDIxLCAKICAgICBiZyA9ICJibHVlIikKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpwbG90KGlyaXMkU2VwYWwuTGVuZ3RoLCAKICAgICBpcmlzJFBldGFsLkxlbmd0aCwgCiAgICAgY29sID0gaXJpcyRTcGVjaWVzLCAKICAgICBwY2ggPSAxNikKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpwbG90KGlyaXMkU2VwYWwuTGVuZ3RoLCAKICAgICBpcmlzJFBldGFsLkxlbmd0aCwgCiAgICAgY29sID0gaXJpcyRTcGVjaWVzLCAKICAgICBwY2ggPSAxNiwKICAgICBjZXggPSAyKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmhlYWQoaXJpcykKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpib3hwbG90KGlyaXMkU2VwYWwuTGVuZ3RoIH4gaXJpcyRTcGVjaWVzKQoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmJveHBsb3QoaXJpcyRTZXBhbC5MZW5ndGggfiBpcmlzJFNwZWNpZXMsIAogICAgICAgIG5vdGNoID0gVCkKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpib3hwbG90KGlyaXMkU2VwYWwuTGVuZ3RoIH4gaXJpcyRTcGVjaWVzLCAKICAgICAgICBub3RjaCA9IFQsCiAgICAgICAgbGFzID0gMSkgCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KYm94cGxvdChpcmlzJFNlcGFsLkxlbmd0aCB+IGlyaXMkU3BlY2llcywgCiAgICAgICAgbm90Y2ggPSBULAogICAgICAgIGxhcyA9IDEsCiAgICAgICAgeGxhYiA9ICJTcGVjaWVzIiwgCiAgICAgICAgeWxhYiA9ICJTZXBhbCBMZW5ndGgiLCAKICAgICAgICBtYWluID0gIlNlcGFsIExlbmd0aCBieSBTcGVjaWVzIGluIElyaXMiKSAKCgojIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpib3hwbG90KGlyaXMkU2VwYWwuTGVuZ3RoIH4gaXJpcyRTcGVjaWVzLCAKICAgICAgICBub3RjaCA9IFQsCiAgICAgICAgbGFzID0gMSwKICAgICAgICB4bGFiID0gIlNwZWNpZXMiLCAKICAgICAgICB5bGFiID0gIlNlcGFsIExlbmd0aCIsIAogICAgICAgIG1haW4gPSAiU2VwYWwgTGVuZ3RoIGJ5IFNwZWNpZXMgaW4gSXJpcyIsCiAgICAgICAgY2V4LmxhYiA9IDEuNSwKICAgICAgICBjZXguYXhpcyA9IDEuNSwKICAgICAgICBjZXgubWFpbiA9IDIpIAoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiMgbnVtYmVyIG9mIHJvd3MsIG51bWJlciBvZiBjb2x1bW5zCnBhcihtZnJvdz1jKDEsMikpCgpwbG90KAogICAgICMgeCB2YXJpYWJsZSwgeSB2YXJpYWJsZQogICAgIGlyaXMkU2VwYWwuTGVuZ3RoLCBpcmlzJFBldGFsLkxlbmd0aCwgCiAgICAgCiAgICAgICMgY29sb3IgYnkgc3BlY2llcwogICAgIGNvbCA9IGlyaXMkU3BlY2llcywgICAgIAogICAgIAogICAgICMgcGxvdCB0aXRsZQogICAgIG1haW4gPSAiU2VwYWwgdnMgUGV0YWwgTGVuZ3RoIGluIElyaXMiCiAgICAgKSAgICAgIAoKcGxvdCgKICAgICMgeCB2YXJpYWJsZSwgeSB2YXJpYWJsZQogICAgIGlyaXMkU2VwYWwuTGVuZ3RoLCBpcmlzJFBldGFsLkxlbmd0aCwgCiAgICAgCiAgICAgICMgY29sb3IgYnkgc3BlY2llcwogICAgIGNvbCA9IGlyaXMkU3BlY2llcywgICAgIAogICAgIAogICAgICMgcGxvdCB0aXRsZQogICAgIG1haW4gPSAiU2VwYWwgdnMgUGV0YWwgTGVuZ3RoIGluIElyaXMiCiAgICAgKSAgICAgICAgCgoKIyMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KcGFyKG1mcm93PWMoMSwxKSkgICAgCgpwbG90KAogICAgICMgeCB2YXJpYWJsZSwgeSB2YXJpYWJsZQogICAgIGlyaXMkU2VwYWwuTGVuZ3RoLCBpcmlzJFBldGFsLkxlbmd0aCwgCiAgICAgCiAgICAgICMgY29sb3IgYnkgc3BlY2llcwogICAgIGNvbCA9IGlyaXMkU3BlY2llcywgICAgIAogICAgIAogICAgICMgcGxvdCB0aXRsZQogICAgIG1haW4gPSAiU2VwYWwgdnMgUGV0YWwgTGVuZ3RoIGluIElyaXMiCiAgICAgKSAgIAoKCiMjIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmRldi5vZmYoKSAgICAgICAKCg==" download="Week 2 Script Outline.R">
+<button class="btn btn-default hvr-sweep-to-left"><i class="fa fa-save"></i> Download the Script</button>
+</a>
+</div>
+<div id="foundational-structures" class="section level2">
+<h2>Foundational Structures</h2>
+<p>Akin to how atoms were viewed as the building blocks of life, these are the basic structures of R.</p>
+<ul>
+<li><p><em>vector</em> - The very basic structure of R where one type of information can be stored. These are given by a single row or column of things that have to be the same data type.</p>
+<pre class="r"><code>nothing_vector &lt;- c()
+
+nothing_vector</code></pre>
+<pre><code>## NULL</code></pre>
+<pre class="r"><code>number_vector &lt;- c(1,2,3,4,5)
+
+number_vector</code></pre>
+<pre><code>## [1] 1 2 3 4 5</code></pre>
+<pre class="r"><code>character_vector &lt;- 
+  c(
+    &quot;Oban&quot;, 
+    &quot;Macallan&quot;, 
+    &quot;Pittyvaich&quot;, 
+    &quot;Balblair&quot;, 
+    &quot;Glenmorangie&quot;
+    )
+
+character_vector</code></pre>
+<pre><code>## [1] &quot;Oban&quot;         &quot;Macallan&quot;     &quot;Pittyvaich&quot;   &quot;Balblair&quot;     &quot;Glenmorangie&quot;</code></pre></li>
+<li><p><em>object</em> - These are the different ways you can structure your data to do something with it. All objects are made up of one or more vectors.</p></li>
+</ul>
+</div>
+<div id="data-types" class="section level2">
+<h2>Data Types</h2>
+<p>There are six types of data that R can read on its own without the help of any other piece of software. These are known as atomic vectors where <em>atomic</em> means the vector only holds data of a single type</p>
+<ol style="list-style-type: decimal">
+<li>character: “a”, “swc”</li>
+<li>numeric: 2, 15.5</li>
+<li>integer: 2L (the L tells R to store this as an integer)</li>
+<li>logical: TRUE, FALSE</li>
+<li>complex: 1+4i (complex numbers with real and imaginary parts)<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></li>
+<li>raw: 01010010</li>
+</ol>
+</div>
+<div id="classes" class="section level2">
+<h2>Classes</h2>
+<p>A <em>class</em> is the blueprint that helps to create an object. These are</p>
+<ul>
+<li><p><em>matrix</em> - A two-dimensional object made up of rows and columns. These are essentially a bunch of vectors stacked on top or beside each other that have to be the same data type.</p>
+<pre class="r"><code>some_matrix &lt;- matrix(c(1,1,2,3,5,8), nrow = 2, ncol = 3)
+
+some_matrix </code></pre>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    2    5
+## [2,]    1    3    8</code></pre></li>
+<li><p><em>array</em> - A three-dimensional object made up of a bunch of matrices that have to be the same data type.</p>
+<pre class="r"><code>some_array &lt;- array(1, dim = c(2, 3, 3))
+
+some_array</code></pre>
+<pre><code>## , , 1
+## 
+##      [,1] [,2] [,3]
+## [1,]    1    1    1
+## [2,]    1    1    1
+## 
+## , , 2
+## 
+##      [,1] [,2] [,3]
+## [1,]    1    1    1
+## [2,]    1    1    1
+## 
+## , , 3
+## 
+##      [,1] [,2] [,3]
+## [1,]    1    1    1
+## [2,]    1    1    1</code></pre></li>
+<li><p><em>dataframe</em> - Similar to a matrix, BUT columns can vary by data type.</p>
+<pre class="r"><code>some_df &lt;- data.frame(col1 = 1:3, 
+                 col2 = c(&quot;take&quot;, &quot;a&quot;, &quot;nap&quot;), 
+                 col3 = c(TRUE, FALSE, TRUE), 
+                 col4 = c(1.5, 3.2, pi))
+
+some_df</code></pre>
+<pre><code>##   col1 col2  col3     col4
+## 1    1 take  TRUE 1.500000
+## 2    2    a FALSE 3.200000
+## 3    3  nap  TRUE 3.141593</code></pre></li>
+<li><p><em>list</em> - A set of objects.</p>
+<pre class="r"><code>some_list &lt;-list(1,2,3,4,5)
+
+some_list</code></pre>
+<pre><code>## [[1]]
+## [1] 1
+## 
+## [[2]]
+## [1] 2
+## 
+## [[3]]
+## [1] 3
+## 
+## [[4]]
+## [1] 4
+## 
+## [[5]]
+## [1] 5</code></pre></li>
+</ul>
+<div id="example-100-fake-data" class="section level3">
+<h3>Example: 100% Fake Data</h3>
+<pre class="r"><code>height &lt;- c(145,167,176,123,150) 
+weight &lt;- c(51,63,64,40,55)</code></pre>
+<p>Both <code>height</code> and <code>weight</code> are called <em>variables</em> because they have been assigned a bunch of stuff which in this case are integers. Well we have these, might as well do something with them.</p>
+<pre class="r"><code>height &lt;- c(145, 167, 176, 123, 150)
+weight &lt;- c(51, 63, 64, 40, 55)
+
+plot(height,weight)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p>Well that wasn’t exciting at all was it? It’ll get interesting soon.</p>
+<p>R provides many functions to examine features of vectors and other objects, for example</p>
+<ol style="list-style-type: decimal">
+<li><code>class()</code> - what kind of object is it (high-level)?</li>
+<li><code>typeof()</code> - what is the object’s data type (low-level)?</li>
+<li><code>length()</code> - how long is it? What about two dimensional objects?</li>
+<li><code>attributes()</code> - does it have any metadata? (underlying set of data that describes and gives information about other data)</li>
+</ol>
+<pre class="r"><code>class(weight) # Yup there are numbers so numeric makes sense.</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<pre class="r"><code>typeof(weight) # You see the term &#39;double&#39; here but you may also see &#39;single&#39; or &#39;integer&#39;. All this refers to is the precision of the number and you can assume they are all integers.</code></pre>
+<pre><code>## [1] &quot;double&quot;</code></pre>
+<pre class="r"><code>length(weight) # There are 5 objects in weight so length(weight) = 5 makes sense.</code></pre>
+<pre><code>## [1] 5</code></pre>
+<pre class="r"><code>attributes(weight) # Null since there isn&#39;t any other information except for what you see.</code></pre>
+<pre><code>## NULL</code></pre>
+</div>
+</div>
+</div>
+<div id="data-frames---a-format-you-absolutely-want" class="section level1">
+<h1>Data Frames - A Format You Absolutely Want</h1>
+<p>We want all of our data to be in this form. A <em>data frame</em> is a table or a two-dimensional array-like structure in which each column contains values of one variable and each row contains one set of values from each column. Characteristics of a data frame are as follows and in no particular order:</p>
+<ol style="list-style-type: decimal">
+<li>The column names should be non-empty.</li>
+<li>The row names should be unique.</li>
+<li>The data stored in a data frame can be of numeric, factor or character type.</li>
+<li>Each column should contain same number of data items.</li>
+</ol>
+<p><em>NOTE: You can always check if a variable is a data frame by <code>is.data.frame(whatever)</code></em></p>
+<div id="importing-and-viewing-data" class="section level2">
+<h2>Importing and Viewing Data</h2>
+<p>Read in the file <code>USpop2010to2017.csv</code> that has data on US population estimates from 2010 to 2017. You can do this in multiple ways but for now and since you’re getting used to menu. To bring in the file, go to the <code>Environment</code> tab in the upper right window and then <code>Import Dataset &gt; From Text (readr) &gt; Browse</code> to find your file and load it in. Before clicking on the <code>Import</code> button, name the variable <code>population</code> under <code>Import options</code>. You should get an output similar to the one shown below.</p>
+<p>But know that we will be moving away from the idea of using a mouse/trackpad to do things because it wastes time and is generally disruptive. Instead we’ll use the file’s <em>relative path</em>, that is the locations of all other files in comparison to your script to bring in data. If the <code>USpop2010to2017.csv</code> data set is in the same folder as your script, then run the following command</p>
+<pre class="r"><code>population &lt;- read.csv(&quot;USpop2010to2017.csv&quot;, 
+                       header = TRUE, 
+                       stringsAsFactors = TRUE) </code></pre>
+<p>Now take a look at the file by running</p>
+<pre class="r"><code>population</code></pre>
+<pre><code>##         Census_ID Collection_year Total_Pop  Male_Pop Female_Pop Estimate
+## 1 POPESTIMATE2010            2010 309338421 152082993  157255428        N
+## 2 POPESTIMATE2011            2011 311644280 153242210  158402070        Y
+## 3 POPESTIMATE2012            2012 313993272 154452348  159540924        Y
+## 4 POPESTIMATE2013            2013 316234505 155596820  160637685        Y
+## 5 POPESTIMATE2014            2014 318622525 156807419  161815106        Y
+## 6 POPESTIMATE2015            2015 321039839 158048153  162991686        Y
+## 7 POPESTIMATE2016            2016 323405935 159243817  164162118        Y
+## 8 POPESTIMATE2017            2017 325719178 160408119  165311059        Y</code></pre>
+<p>Well that is long and annoying. We can use the <code>head()</code> command to make it only display six lines.</p>
+<pre class="r"><code>head(population)</code></pre>
+<pre><code>##         Census_ID Collection_year Total_Pop  Male_Pop Female_Pop Estimate
+## 1 POPESTIMATE2010            2010 309338421 152082993  157255428        N
+## 2 POPESTIMATE2011            2011 311644280 153242210  158402070        Y
+## 3 POPESTIMATE2012            2012 313993272 154452348  159540924        Y
+## 4 POPESTIMATE2013            2013 316234505 155596820  160637685        Y
+## 5 POPESTIMATE2014            2014 318622525 156807419  161815106        Y
+## 6 POPESTIMATE2015            2015 321039839 158048153  162991686        Y</code></pre>
+<p>or any number actually</p>
+<pre class="r"><code>head(population, 4)</code></pre>
+<pre><code>##         Census_ID Collection_year Total_Pop  Male_Pop Female_Pop Estimate
+## 1 POPESTIMATE2010            2010 309338421 152082993  157255428        N
+## 2 POPESTIMATE2011            2011 311644280 153242210  158402070        Y
+## 3 POPESTIMATE2012            2012 313993272 154452348  159540924        Y
+## 4 POPESTIMATE2013            2013 316234505 155596820  160637685        Y</code></pre>
+<p>You can actually look at the entire dataset in a spreadsheet like window by using</p>
+<pre class="r"><code>View(population)</code></pre>
+<p>If you want to know more about how a data set is made up you can use the command <code>str()</code> or <code>glimpse()</code>. This essentially asks R for information about the internal structure of any set of data.</p>
+<pre class="r"><code>str(population)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    8 obs. of  6 variables:
+##  $ Census_ID      : chr  &quot;POPESTIMATE2010&quot; &quot;POPESTIMATE2011&quot; &quot;POPESTIMATE2012&quot; &quot;POPESTIMATE2013&quot; ...
+##  $ Collection_year: int  2010 2011 2012 2013 2014 2015 2016 2017
+##  $ Total_Pop      : int  309338421 311644280 313993272 316234505 318622525 321039839 323405935 325719178
+##  $ Male_Pop       : int  152082993 153242210 154452348 155596820 156807419 158048153 159243817 160408119
+##  $ Female_Pop     : int  157255428 158402070 159540924 160637685 161815106 162991686 164162118 165311059
+##  $ Estimate       : chr  &quot;N&quot; &quot;Y&quot; &quot;Y&quot; &quot;Y&quot; ...</code></pre>
+<pre class="r"><code>glimpse(population)</code></pre>
+<pre><code>## Rows: 8
+## Columns: 6
+## $ Census_ID       &lt;chr&gt; &quot;POPESTIMATE2010&quot;, &quot;POPESTIMATE2011&quot;, &quot;POPESTIMATE201…
+## $ Collection_year &lt;int&gt; 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017
+## $ Total_Pop       &lt;int&gt; 309338421, 311644280, 313993272, 316234505, 318622525…
+## $ Male_Pop        &lt;int&gt; 152082993, 153242210, 154452348, 155596820, 156807419…
+## $ Female_Pop      &lt;int&gt; 157255428, 158402070, 159540924, 160637685, 161815106…
+## $ Estimate        &lt;chr&gt; &quot;N&quot;, &quot;Y&quot;, &quot;Y&quot;, &quot;Y&quot;, &quot;Y&quot;, &quot;Y&quot;, &quot;Y&quot;, &quot;Y&quot;</code></pre>
+<p>This may seem like a mess but it actually tells you a lot. First thing you should notice is that all of the columns are laid out into lines to be “easily” readable but the structure of the data set does not change! Here is some other important things in no particular order:</p>
+<ol style="list-style-type: decimal">
+<li>We have an 8 x 5 matrix (aka a data set with 8 columns and 5 rows)</li>
+<li>It is a data frame with variables given by <code>$</code>. More about this below.</li>
+<li>The first column is a character vector (made up only of strings of text).</li>
+<li>The remaining columns are integer vectors (made up only of numbers in the form of integers).</li>
+<li>You may be wondering why we skipped over the <code>factors</code> and <code>levels</code>. That’s a bit complicated for this session but we will get to it because they play an important role in visualizing the data.</li>
+</ol>
+</div>
+<div id="looking-at-variables-in-a-data-frame" class="section level2">
+<h2>Looking at Variables in a Data Frame</h2>
+<p>To call a variable in the dataframe, we use the <code>$</code> notation.</p>
+<pre class="r"><code>population$Census_ID</code></pre>
+<pre><code>## [1] &quot;POPESTIMATE2010&quot; &quot;POPESTIMATE2011&quot; &quot;POPESTIMATE2012&quot; &quot;POPESTIMATE2013&quot;
+## [5] &quot;POPESTIMATE2014&quot; &quot;POPESTIMATE2015&quot; &quot;POPESTIMATE2016&quot; &quot;POPESTIMATE2017&quot;</code></pre>
+<p>Now try to use the same method for the other two columns.</p>
+<details>
+<summary>
+Solutions
+</summary>
+<pre class="r"><code>population$Collection_year</code></pre>
+<pre><code>## [1] 2010 2011 2012 2013 2014 2015 2016 2017</code></pre>
+<pre class="r"><code>population$Total_Pop</code></pre>
+<pre><code>## [1] 309338421 311644280 313993272 316234505 318622525 321039839 323405935
+## [8] 325719178</code></pre>
+<pre class="r"><code>population$Male_Pop</code></pre>
+<pre><code>## [1] 152082993 153242210 154452348 155596820 156807419 158048153 159243817
+## [8] 160408119</code></pre>
+<pre class="r"><code>population$Female_Pop</code></pre>
+<pre><code>## [1] 157255428 158402070 159540924 160637685 161815106 162991686 164162118
+## [8] 165311059</code></pre>
+</details>
+</div>
+<div id="assigning-variables" class="section level2">
+<h2>Assigning Variables</h2>
+<p>Now let’s call these something because writing those out over and over is annoying</p>
+<pre class="r"><code>census &lt;- population$Census_ID
+
+census</code></pre>
+<pre><code>## [1] &quot;POPESTIMATE2010&quot; &quot;POPESTIMATE2011&quot; &quot;POPESTIMATE2012&quot; &quot;POPESTIMATE2013&quot;
+## [5] &quot;POPESTIMATE2014&quot; &quot;POPESTIMATE2015&quot; &quot;POPESTIMATE2016&quot; &quot;POPESTIMATE2017&quot;</code></pre>
+<p>or to do this quicker, use a semicolon <code>;</code>.</p>
+<pre class="r"><code>census &lt;- population$Census_ID; census</code></pre>
+<pre><code>## [1] &quot;POPESTIMATE2010&quot; &quot;POPESTIMATE2011&quot; &quot;POPESTIMATE2012&quot; &quot;POPESTIMATE2013&quot;
+## [5] &quot;POPESTIMATE2014&quot; &quot;POPESTIMATE2015&quot; &quot;POPESTIMATE2016&quot; &quot;POPESTIMATE2017&quot;</code></pre>
+<p>Now try to use the same method for the other columns by using the variables <code>year</code>, <code>total</code>, <code>male</code> and <code>female</code>, respectively.</p>
+<details>
+<summary>
+Solutions
+</summary>
+<pre class="r"><code>year &lt;- population$Collection_year; year</code></pre>
+<pre><code>## [1] 2010 2011 2012 2013 2014 2015 2016 2017</code></pre>
+<pre class="r"><code>total &lt;- population$Total_Pop; total</code></pre>
+<pre><code>## [1] 309338421 311644280 313993272 316234505 318622525 321039839 323405935
+## [8] 325719178</code></pre>
+<pre class="r"><code>male &lt;- population$Male_Pop; male</code></pre>
+<pre><code>## [1] 152082993 153242210 154452348 155596820 156807419 158048153 159243817
+## [8] 160408119</code></pre>
+<pre class="r"><code>female &lt;- population$Female_Pop; female</code></pre>
+<pre><code>## [1] 157255428 158402070 159540924 160637685 161815106 162991686 164162118
+## [8] 165311059</code></pre>
+</details>
+</div>
+<div id="basic-visualizations" class="section level2">
+<h2>Basic Visualizations</h2>
+<p>Let’s plot these</p>
+<pre class="r"><code>plot(year, total)
+# Notice that the x-axis variable goes first!</code></pre>
+<p>OK well that’s better but it looks funny - the y-axis looks like the output on a mid 90s calculator that couldn’t handle exponents. So we’re going to divide and round. Since everything is in hundreds of millions in our data set, let’s divide each column by one hundred million but keep the original figures.</p>
+<pre class="r"><code># We don&#39;t divide anything in census because it just contains the original variables
+census &lt;- population$Census_ID 
+
+# We don&#39;t want to divide anything here because this column has data on years
+year &lt;- population$Collection_year 
+
+# These are the actual data so that&#39;s where we&#39;ll reduce. 
+tinytotal &lt;- population$Total_Pop/100000000 
+tinymale &lt;- population$Male_Pop/100000000
+tinyfemale &lt;- population$Female_Pop/100000000</code></pre>
+<p>Now that these are proportionally smaller, let’s hope the visuals are more understandable</p>
+<pre class="r"><code>plot(year, tinytotal) </code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-37-1.png" width="672" /></p>
+<p>Looks much better but let’s change the axis labels to be more descriptive.</p>
+<pre class="r"><code>plot(year, tinytotal, 
+     xlab = &quot;Years&quot;, 
+     ylab = &quot;Number of People (in hundreds of millions)&quot;) </code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-38-1.png" width="672" /></p>
+<p>That’s good but the size of the labels should be bigger.</p>
+<pre class="r"><code>plot(year, tinytotal, 
+     xlab = &quot;Years&quot;, 
+     ylab = &quot;Number of People (in hundreds of millions)&quot;, 
+     cex.lab = 1.5) </code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-39-1.png" width="672" /></p>
+<p>Well its bland so how about a little color?</p>
+<pre class="r"><code>plot(year, tinytotal, 
+     xlab = &quot;Years&quot;, 
+     ylab = &quot;Number of People(in hundreds of millions)&quot;, 
+     cex.lab = 1.5, 
+     col.lab=&quot;#ee4035&quot;, 
+     col=&quot;#7bc043&quot;)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-40-1.png" width="672" /></p>
+<p>Sure but those dots are difficult to see. Let’s make them different.</p>
+<pre class="r"><code>plot(year, tinytotal, 
+     xlab = &quot;Years&quot;, 
+     ylab = &quot;Number of People(in hundreds of millions)&quot;, 
+     cex.lab = 1.5, 
+     col.lab=&quot;#ee4035&quot;,
+     col=&quot;#7bc043&quot;, 
+     pch = 19)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-41-1.png" width="672" /></p>
+<p>No bigger!</p>
+<pre class="r"><code>plot(year, tinytotal, 
+     xlab = &quot;Years&quot;, 
+     ylab = &quot;Number of People (in hundreds of millions)&quot;, 
+     cex.lab = 1.5, 
+     col.lab=&quot;#ee4035&quot;,
+     col=&quot;#7bc043&quot;, 
+     pch = 19, 
+     cex = 1.5)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-42-1.png" width="672" /></p>
+<p>I said bigger dammit!</p>
+<pre class="r"><code>plot(year, tinytotal, 
+     xlab = &quot;Years&quot;, 
+     ylab = &quot;Number of People (in hundreds of millions)&quot;, 
+     cex.lab = 1.5, 
+     col.lab=&quot;#ee4035&quot;,
+     col=&quot;#7bc043&quot;, 
+     pch = 19, 
+     cex = 2)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-43-1.png" width="672" /></p>
+<p>And without that annoying box</p>
+<pre class="r"><code>plot(year, tinytotal, 
+     xlab = &quot;Years&quot;, 
+     ylab = &quot;Number of People (in hundreds of millions)&quot;, 
+     cex.lab = 1.5, 
+     col.lab=&quot;#ee4035&quot;,
+     col=&quot;#7bc043&quot;, 
+     pch = 19, 
+     cex = 2,
+     bty = &quot;n&quot;)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-44-1.png" width="672" /></p>
+<p>Maybe a colorful title?</p>
+<pre class="r"><code>plot(year, tinytotal, 
+     xlab = &quot;Years&quot;, 
+     ylab = &quot;Number of People (in hundreds of millions)&quot;, 
+     cex.lab = 1.5, 
+     col.lab=&quot;#ee4035&quot;,
+     col=&quot;#7bc043&quot;, 
+     pch = 19, 
+     cex = 2,
+     bty = &quot;n&quot;,
+     main = &quot;United States Population Estimates (2010-2017)&quot;, 
+     cex.main = 1.5,
+     col.main = &quot;#0392cf&quot;)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-45-1.png" width="672" /></p>
+<p>And a line</p>
+<pre class="r"><code>plot(year, tinytotal, 
+     xlab = &quot;Years&quot;, 
+     ylab = &quot;Number of People (in hundreds of millions)&quot;, 
+     cex.lab = 1.5, 
+     col.lab=&quot;#ee4035&quot;,
+     col=&quot;#7bc043&quot;, 
+     pch = 19, 
+     cex = 2,
+     bty = &quot;n&quot;,
+     main = &quot;United States Population Estimates (2010-2017)&quot;, 
+     cex.main = 1.5,
+     col.main = &quot;#0392cf&quot;,
+     type = &quot;o&quot;)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-46-1.png" width="672" /></p>
+<p>No that’s too skinny!</p>
+<pre class="r"><code>plot(year, tinytotal, 
+     xlab = &quot;Years&quot;, 
+     ylab = &quot;Number of People (in hundreds of millions)&quot;, 
+     cex.lab = 1.5, 
+     col.lab=&quot;#ee4035&quot;,
+     col=&quot;#7bc043&quot;, 
+     pch = 19, 
+     cex = 2,
+     bty = &quot;n&quot;,
+     main = &quot;United States Population Estimates (2010-2017)&quot;, 
+     cex.main = 1.5,
+     col.main = &quot;#0392cf&quot;,
+     type = &quot;o&quot;,
+     lwd = 3.5)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-47-1.png" width="672" /></p>
+<p>That’ll do for now but that is a ton of work and a lot of not so obvious commands to memorize. So what’s the big deal?</p>
+</div>
+</div>
+<div id="a-bit-of-context" class="section level1">
+<h1>A Bit of Context</h1>
+<p>Well what you just went through is the <em>OG</em> R which was released publicly in 1995. While nowadays it is commonly known as <em>Base R</em>, a majority of its functionality, structure and syntax were derived from another piece of software called S-Plus which was a commercial product from 1988 primarily used only by statisticians. Regardless of the name, this would continue to be the case until the 2007 when <a href="%22http://hadley.nz/%22" target="_blank">Hadley Wickham</a> officially released an R add-on, or <em>package</em> called <code>ggplot2</code>. Little did anybody know that this would alter the future of data visualization. Starting next week, we’ll move on from Base R to <code>ggplot</code> and its companion packages known as the <code>tidyverse</code>. If you want to get a preview, click on the image below</p>
+<center>
+<div style="width:180px; height:180px">
+<p><a href="https://www.tidyverse.org/" target="_blank"><img src="/img/logos/tidyverse.png" alt="Tidyverse Hex" /></a></p>
+</div>
+</center>
+<p><br></p>
+<p>Now that’s not to say there isn’t value in knowing Base R. There are many commands that are quick and easy and don’t need add-ons. In fact, some of the syntax has survived the transition to the <em>tidy</em> format we’ll get to next week so for now, back to Base R!</p>
+</div>
+<div id="basic-visualizations-1" class="section level1">
+<h1>Basic Visualizations</h1>
+<div id="histograms" class="section level2">
+<h2>Histograms</h2>
+<p>For this part, we will use data on the number of users on facebook. Lets read the data into R like so</p>
+<pre class="r"><code>facebook &lt;- read.csv(&quot;ActiveFacebookUsers.csv&quot;, 
+                       header = TRUE, 
+                       stringsAsFactors = TRUE) </code></pre>
+<p>Take a look at the first six rows and get some information about the columns</p>
+<pre class="r"><code>head(facebook)</code></pre>
+<pre><code>##   Quarter Number.of.users.in.millions
+## 1  Q3 &#39;08                         100
+## 2  Q1 &#39;09                         197
+## 3  Q2 &#39;09                         242
+## 4  Q3 &#39;09                         305
+## 5  Q4 &#39;09                         360
+## 6  Q1 &#39;10                         431</code></pre>
+<pre class="r"><code>str(facebook) </code></pre>
+<pre><code>## &#39;data.frame&#39;:    39 obs. of  2 variables:
+##  $ Quarter                    : chr  &quot;Q3 &#39;08&quot; &quot;Q1 &#39;09&quot; &quot;Q2 &#39;09&quot; &quot;Q3 &#39;09&quot; ...
+##  $ Number.of.users.in.millions: int  100 197 242 305 360 431 482 550 608 680 ...</code></pre>
+<pre class="r"><code># Alternatively, you can use glimpse()</code></pre>
+<pre class="r"><code>facebook$Quarter</code></pre>
+<pre><code>##  [1] &quot;Q3 &#39;08&quot; &quot;Q1 &#39;09&quot; &quot;Q2 &#39;09&quot; &quot;Q3 &#39;09&quot; &quot;Q4 &#39;09&quot; &quot;Q1 &#39;10&quot; &quot;Q2 &#39;10&quot; &quot;Q3 &#39;10&quot;
+##  [9] &quot;Q4 &#39;10&quot; &quot;Q1 &#39;11&quot; &quot;Q2 &#39;11&quot; &quot;Q3 &#39;11&quot; &quot;Q4 &#39;11&quot; &quot;Q1 &#39;12&quot; &quot;Q2 &#39;12&quot; &quot;Q3 &#39;12&quot;
+## [17] &quot;Q4 &#39;12&quot; &quot;Q1 &#39;13&quot; &quot;Q2 &#39;13&quot; &quot;Q3 &#39;13&quot; &quot;Q4 &#39;13&quot; &quot;Q1 &#39;14&quot; &quot;Q2 &#39;14&quot; &quot;Q3 &#39;14&quot;
+## [25] &quot;Q4 &#39;14&quot; &quot;Q1 &#39;15&quot; &quot;Q2 &#39;15&quot; &quot;Q3 &#39;15&quot; &quot;Q4 &#39;15&quot; &quot;Q1 &#39;16&quot; &quot;Q2 &#39;16&quot; &quot;Q3 &#39;16&quot;
+## [33] &quot;Q4 &#39;16&quot; &quot;Q1 &#39;17&quot; &quot;Q2 &#39;17&quot; &quot;Q3 &#39;17&quot; &quot;Q4 &#39;17&quot; &quot;Q1 &#39;18&quot; &quot;Q2 &#39;18&quot;</code></pre>
+<pre class="r"><code>facebook$Number.of.users.in.millions</code></pre>
+<pre><code>##  [1]  100  197  242  305  360  431  482  550  608  680  739  800  845  901  955
+## [16] 1007 1056 1110 1155 1189 1228 1276 1317 1350 1393 1441 1490 1545 1591 1654
+## [31] 1712 1788 1860 1936 2006 2072 2129 2196 2234</code></pre>
+<p>Let’s rename the columns</p>
+<pre class="r"><code>users &lt;- facebook$Number.of.users.in.millions
+quarter &lt;- facebook$Quarter</code></pre>
+<p>We’re going to use the <code>hist()</code> function to plot a basic histogram of the number of users and quarters</p>
+<pre class="r"><code>hist(users) </code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-55-1.png" width="672" /></p>
+<pre class="r"><code># Hey its a normal distribution!</code></pre>
+<p>We can specify the number of cells for the histogram using the <code>breaks</code> option</p>
+<pre class="r"><code>hist(users,
+     breaks = 40) </code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-56-1.png" width="672" /></p>
+<p>This essentially breaks up the default way that the histogram is constructed. You can also do it within the range of the data set. First to see the minimum and maximum, we use <code>min()</code> and <code>max()</code>, respectively.</p>
+<pre class="r"><code>min(users) </code></pre>
+<pre><code>## [1] 100</code></pre>
+<pre class="r"><code>max(users) </code></pre>
+<pre><code>## [1] 2234</code></pre>
+<p>So if I wanted to see how this histogram looks say broken into bars of 300, we can do</p>
+<pre class="r"><code>(max(users) - min(users))/300</code></pre>
+<pre><code>## [1] 7.113333</code></pre>
+<p>or better yet if we round up, we’ll get the actual number of bars we need. To always round to the next integer, we can use the <code>ceiling()</code> function</p>
+<pre class="r"><code>ceiling((max(users) - min(users))/300)</code></pre>
+<pre><code>## [1] 8</code></pre>
+<p>Now you can count in 300s and get the output you want</p>
+<pre class="r"><code>hist(users, 
+     breaks = c(100,400,700,1000,1300,1600,1900,2100,2400))</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-61-1.png" width="672" /></p>
+<p>but that’s a lot of work and its a bit odd because our data aren’t greater than the the maximum. We can still get the eight bars we want of even width if we let R do it for us using the <code>seq</code>, or sequence option with <code>length.out</code>, or the number of desired bars</p>
+<pre class="r"><code>hist(users, 
+     breaks = seq(min(users), 
+                  max(users),  
+                  length.out=8))</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-62-1.png" width="672" /></p>
+<p>Let’s make it look decent</p>
+<pre class="r"><code>hist(users, breaks = seq(min(users), 
+                         max(users),   
+                         length.out=8), 
+     xlab = &quot;Active Users (in millions)&quot;, 
+     main = &quot;Facebook utility worldwide as of 2nd quarter 2018&quot;,
+     col = c(&quot;#3b5998&quot;,&quot;#6d84b4&quot;, &quot;#afbdd4&quot;, &quot;#d8dfea&quot;, &quot;#ffffff&quot;), 
+     border = &quot;#d8dfea&quot;, 
+     cex.lab = 1.1) </code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-63-1.png" width="672" /></p>
+<p>Notice that you can define colors in a vector and the plot will simply repeat that layout.</p>
+</div>
+<div id="line-graph" class="section level2">
+<h2>Line Graph<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></h2>
+<p>Let’s look at another population, but this time we’ll use Twitter data</p>
+<pre class="r"><code>twitter &lt;- read.csv(&quot;ActiveTwitterUsers.csv&quot;, 
+                       header = TRUE, 
+                       stringsAsFactors = TRUE) </code></pre>
+<pre class="r"><code>head(twitter)</code></pre>
+<pre><code>##   Quarter Number.of.monthly.active.users.in.millions
+## 1   20101                                         30
+## 2   20102                                         40
+## 3   20103                                         49
+## 4   20104                                         54
+## 5   20111                                         68
+## 6   20112                                         85</code></pre>
+<pre class="r"><code>str(twitter)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    37 obs. of  2 variables:
+##  $ Quarter                                   : int  20101 20102 20103 20104 20111 20112 20113 20114 20121 20122 ...
+##  $ Number.of.monthly.active.users.in.millions: num  30 40 49 54 68 85 101 117 138 151 ...</code></pre>
+<pre class="r"><code>twitter$Quarter</code></pre>
+<pre><code>##  [1] 20101 20102 20103 20104 20111 20112 20113 20114 20121 20122 20123 20124
+## [13] 20131 20132 20133 20134 20141 20142 20143 20144 20151 20152 20153 20154
+## [25] 20161 20162 20163 20164 20171 20172 20173 20174 20181 20182 20183 20184
+## [37] 20191</code></pre>
+<pre class="r"><code>twitter$Number.of.monthly.active.users.in.millions</code></pre>
+<pre><code>##  [1]  30.0  40.0  49.0  54.0  68.0  85.0 101.0 117.0 138.0 151.0 167.0 185.0
+## [13] 204.0 218.0 231.7 241.0 255.0 271.0 284.0 288.0 302.0 304.0 307.0 305.0
+## [25] 310.0 313.0 317.0 318.0 327.0 326.0 330.0 330.0 336.0 335.0 326.0 321.0
+## [37] 330.0</code></pre>
+<p>Let’s rename the columns</p>
+<pre class="r"><code>tweeters &lt;- twitter$Number.of.monthly.active.users.in.millions
+season &lt;- twitter$Quarter</code></pre>
+<p>Let’s first create a basic plot</p>
+<pre class="r"><code>plot(season, tweeters)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-71-1.png" width="672" /></p>
+<p>There are several types of plot within the plot function which we can access by using the <code>type</code> option</p>
+<pre class="r"><code>plot(season, tweeters,
+     type = &quot;l&quot;)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-72-1.png" width="672" /></p>
+<p>Now try options “o”, “p”, and “b” on your own. Check the solutions below to see if your plot rendered correctly</p>
+<details>
+<summary>
+Solutions
+</summary>
+<pre class="r"><code>plot(season, tweeters,
+     type = &quot;o&quot;)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-73-1.png" width="672" /></p>
+<pre class="r"><code>plot(season, tweeters,
+     type = &quot;p&quot;)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-74-1.png" width="672" /></p>
+<pre class="r"><code>plot(season, tweeters,
+     type = &quot;b&quot;)</code></pre>
+<img src="/example/02-example_files/figure-html/unnamed-chunk-75-1.png" width="672" />
+</details>
+<p>We can also change the line type using the <code>lty</code> option</p>
+<pre class="r"><code>plot(season, tweeters, 
+     type = &quot;l&quot;, 
+     lty = &quot;dashed&quot;)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-76-1.png" width="672" /></p>
+<pre class="r"><code>plot(season, tweeters, 
+     type = &quot;l&quot;, 
+     lty = &quot;dotted&quot;)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-77-1.png" width="672" /></p>
+<p>Well it looks like the solid line is likely the best so we’ll stick with it.</p>
+<pre class="r"><code>plot(season, tweeters,
+     type = &quot;l&quot;)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-78-1.png" width="672" /></p>
+<p>Black and white plots can be great but that’s rarely true for data with ore information than two dimensions.</p>
+<pre class="r"><code>plot(season, tweeters,
+     type = &quot;l&quot;,
+     col = &quot;#5cb85c&quot;)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-79-1.png" width="672" /></p>
+<p>You can also use a standard palette in R by using numbers</p>
+<pre class="r"><code>plot(season, tweeters,
+     type = &quot;l&quot;,
+     col = 3)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-80-1.png" width="672" /></p>
+<p>That line is just too thin. We can make it thicker by using the <code>lwd</code> option</p>
+<pre class="r"><code>plot(season, tweeters,
+     col = &quot;#5cb85c&quot;, 
+     lwd = 3)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-81-1.png" width="672" /></p>
+<p>Finally, we can sort out the axes and plot titles</p>
+<pre class="r"><code>plot(season, tweeters, 
+     type = &quot;l&quot;, 
+     col = &quot;#5cb85c&quot;, 
+     lwd = 3,
+     xlab = &quot;Quarter&quot;,
+     ylab = &quot;Tweeters (in millions)&quot;,
+     main = &quot;Active Users on Twitter&quot;)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-82-1.png" width="672" /></p>
+<p>I did promise regression didn’t I? OK well what if we wanted to know the answer to the question: <em>is the Twitter population increasing in size?</em>
+Well we can add a basic linear regression to the plot to estimate if that’s true. First let’s calculate the regression line…</p>
+<pre class="r"><code>fit1 &lt;- lm (tweeters ~ season, 
+            data = twitter) 
+
+summary(fit1)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = tweeters ~ season, data = twitter)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -72.465 -33.476  -3.424  32.275  54.490 
+## 
+## Coefficients:
+##               Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) -7.218e+04  4.468e+03  -16.15   &lt;2e-16 ***
+## season       3.595e+00  2.218e-01   16.21   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 36 on 35 degrees of freedom
+## Multiple R-squared:  0.8824, Adjusted R-squared:  0.879 
+## F-statistic: 262.6 on 1 and 35 DF,  p-value: &lt; 2.2e-16</code></pre>
+<pre class="r"><code>plot(fit1)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-83-1.png" width="672" /><img src="/example/02-example_files/figure-html/unnamed-chunk-83-2.png" width="672" /><img src="/example/02-example_files/figure-html/unnamed-chunk-83-3.png" width="672" /><img src="/example/02-example_files/figure-html/unnamed-chunk-83-4.png" width="672" /></p>
+</div>
+<div id="scatterplots" class="section level2">
+<h2>Scatterplots</h2>
+<p>Let’s load a dataset of Flower characteristics in 3 species of Iris.</p>
+<pre class="r"><code>data(iris)
+head(iris)</code></pre>
+<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa</code></pre>
+<p>There is a lot of data here! Let’s explore using the <code>pairs()</code> function</p>
+<pre class="r"><code>pairs(iris)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-85-1.png" width="672" /></p>
+<p>This doesn’t tell us much about the species differences. We can tell R to plot using a different color for the three species of iris</p>
+<pre class="r"><code>pairs(iris, 
+      col = iris$Species)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-86-1.png" width="672" /></p>
+<p>Sepal.Length and Petal.Length look interesting! Let’s start by looking at that</p>
+<pre class="r"><code>plot(iris$Sepal.Length, 
+     iris$Petal.Length, 
+     col = iris$Species)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-87-1.png" width="672" /></p>
+<p>These points are difficult to see! Let’s pick some different ones using the <code>pch</code> option</p>
+<pre class="r"><code>plot(iris$Sepal.Length, 
+     iris$Petal.Length, 
+     col = iris$Species, 
+     pch = 15)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-88-1.png" width="672" /></p>
+<pre class="r"><code>plot(iris$Sepal.Length, 
+     iris$Petal.Length, 
+     col = iris$Species, 
+     pch = &quot;A&quot;)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-89-1.png" width="672" /></p>
+<p><code>pch</code> 21:25 also specify an edge color (col) and a background color (bg)</p>
+<pre class="r"><code>plot(iris$Sepal.Length, 
+     iris$Petal.Length, 
+     col = iris$Species, 
+     pch = 21, 
+     bg = &quot;blue&quot;)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-90-1.png" width="672" /></p>
+<p>OK settling on solid circles…</p>
+<pre class="r"><code>plot(iris$Sepal.Length, 
+     iris$Petal.Length, 
+     col = iris$Species, 
+     pch = 16)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-91-1.png" width="672" /></p>
+<p>…that need to be bigger</p>
+<pre class="r"><code>plot(iris$Sepal.Length, 
+     iris$Petal.Length, 
+     col = iris$Species, 
+     pch = 16,
+     cex = 2)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-92-1.png" width="672" /></p>
+</div>
+<div id="boxplots" class="section level2">
+<h2>Boxplots</h2>
+<p>We’ll continue to use the Iris dataset for this section</p>
+<pre class="r"><code>head(iris)</code></pre>
+<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa</code></pre>
+<p>Lets first examine the distribution of Sepal Length for each species</p>
+<pre class="r"><code>boxplot(iris$Sepal.Length ~ iris$Species)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-94-1.png" width="672" /></p>
+<p>f you wish to compare the medians of the boxplot, you can use the function “notch”. If the notches of two plots do not overlap, this is ‘strong evidence’ that the two medians differ.</p>
+<pre class="r"><code>boxplot(iris$Sepal.Length ~ iris$Species, 
+        notch = T)</code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-95-1.png" width="672" /></p>
+<p>You may have noticed that the y-axis labels are always orientated to be perpendicular to the axis. We can rotate all axis labels using the <code>las</code> option.</p>
+<pre class="r"><code>boxplot(iris$Sepal.Length ~ iris$Species, 
+        notch = T,
+        las = 1) </code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-96-1.png" width="672" /></p>
+<p>Now we can add in all the axis and plot labels…</p>
+<pre class="r"><code>boxplot(iris$Sepal.Length ~ iris$Species, 
+        notch = T,
+        las = 1,
+        xlab = &quot;Species&quot;, 
+        ylab = &quot;Sepal Length&quot;, 
+        main = &quot;Sepal Length by Species in Iris&quot;) </code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-97-1.png" width="672" /></p>
+<p>…and change sizes</p>
+<pre class="r"><code>boxplot(iris$Sepal.Length ~ iris$Species, 
+        notch = T,
+        las = 1,
+        xlab = &quot;Species&quot;, 
+        ylab = &quot;Sepal Length&quot;, 
+        main = &quot;Sepal Length by Species in Iris&quot;,
+        cex.lab = 1.5,
+        cex.axis = 1.5,
+        cex.main = 2) </code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-98-1.png" width="672" /></p>
+</div>
+</div>
+<div id="plot-options" class="section level1">
+<h1>Plot Options</h1>
+<div id="rendering-more-than-one-plot-in-a-window" class="section level2">
+<h2>Rendering more than one plot in a window</h2>
+<pre class="r"><code># number of rows, number of columns
+par(mfrow=c(1,2))
+
+plot(
+     # x variable, y variable
+     iris$Sepal.Length, iris$Petal.Length, 
+     
+      # color by species
+     col = iris$Species,     
+     
+     # plot title
+     main = &quot;Sepal vs Petal Length in Iris&quot;
+     )      
+
+plot(
+    # x variable, y variable
+     iris$Sepal.Length, iris$Petal.Length, 
+     
+      # color by species
+     col = iris$Species,     
+     
+     # plot title
+     main = &quot;Sepal vs Petal Length in Iris&quot;
+     )        </code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-99-1.png" width="672" /></p>
+<p>Adding the following sets the plot window back to normal</p>
+<pre class="r"><code>par(mfrow=c(1,1))    
+
+plot(
+     # x variable, y variable
+     iris$Sepal.Length, iris$Petal.Length, 
+     
+      # color by species
+     col = iris$Species,     
+     
+     # plot title
+     main = &quot;Sepal vs Petal Length in Iris&quot;
+     )   </code></pre>
+<p><img src="/example/02-example_files/figure-html/unnamed-chunk-100-1.png" width="672" /></p>
+<p>or you can just clear the plot history by running</p>
+<pre class="r"><code>dev.off()       </code></pre>
+<pre><code>## null device 
+##           1</code></pre>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Remember Algebra?<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>Now with 22% more linear regression<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>

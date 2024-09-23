@@ -1,0 +1,113 @@
+lessons:
+  - title: '<span style="font-weight:bold">Content</span>'
+    header: True
+
+  - title: "Friends Don't Let Friends Use Pie Chart"
+    session: 1
+    date: "January 21, 2021"
+    readings: "01-readings"
+    lesson: "01-lesson"
+    example: "01-example"
+    assignment: "01-assignment"
+    due: "01-due"
+
+  - title: 'Base R is a Thing'
+    session: 2
+    date: "January 28, 2021"
+    readings: "02-readings"
+    lesson: "02-lesson"
+    example: "02-example"
+    assignment: "02-assignment"
+    solutions: "02-solutions"
+    due: "02-due"
+
+  - title: 'ggplotting'
+    session: 3
+    date: "February 4, 2021"
+    lesson: "03-lesson"
+    example: "03-example"
+    assignment: "03-assignment"
+    solutions: "03-solutions"
+    due: "03-due"
+
+  - title: 'Tidy Themes'
+    session: 4
+    date: "February 11, 2021"
+    example: "04-example"
+
+  - title: 'Making Copies'
+    session: 5
+    date: "February 18, 2021"
+    lesson: "05-lesson"
+    example: "05-example"
+    assignment: "05-assignment"
+    solutions: "05-solutions"
+    due: "05-due"
+
+  - title: "I'm the Map"
+    session: 6
+    date: "February 25, 2021"
+    lesson: "06-lesson"
+    example: "06-example"
+    assignment: "06-assignment"
+    solutions: "06-solutions"
+    due: "06-due"
+
+  - title: 'A Map to the Past'
+    session: 7
+    date: "March 4, 2021"
+    lesson: "07-lesson"
+    example: "07-example"
+    assignment: "07-assignment"
+    solutions: "07-solutions"
+    due: "07-due"
+
+  - title: 'Hooked on Feelings'
+    session: 8
+    date: "March 11, 2021"
+    lesson: "08-lesson"
+    example: "08-example"
+    assignment: "08-assignment"
+    solutions: "08-solutions"
+    due: "08-due"
+
+  - title: 'The Social Network'
+    session: 9
+    date: "March 18, 2021"
+    lesson: "09-lesson"
+    example: "09-example"
+    assignment: "09-assignment"
+    due: "09-due"
+
+  - title: 'Shiny Everything'
+    session: 11
+    date: "April 1, 2021"
+    lesson: "11-lesson"
+    assignment: "11-assignment"
+    due: "11-due"
+
+  # - title: 'Cross-Examinations'
+  #   session: 12
+  #   date: "November 22, 2020"
+  #   assignment: "13-assignment"
+  #   due: "13-due"
+  #
+  # - title: 'Tuning Instruments'
+  #   session: 13
+  #   date: "November 22, 2020"
+  #   assignment: "13-assignment"
+  #   due: "13-due"
+  #
+  # - title: 'Finals'
+  #   session: 14
+  #   date: "November 22, 2020"
+  #   assignment: "13-assignment"
+  #   due: "13-due"
+  #
+  # - title: 'Presentations'
+  #   session: 15
+  #   date: "November 22, 2020"
+  #   assignment: "13-assignment"
+  #   due: "13-due"
+
+# command + /

@@ -1,0 +1,40 @@
+---
+title: "About the Assignments"
+menu:
+  assignment:
+    parent: Overview
+    weight: 1
+type: docs
+weight: 1
+output:
+  blogdown::html_page:
+    toc: true
+---
+
+Foremost please note that these pages populate information about course related tasks on the left hand side **when they are assigned**. Due dates are given within the description of each assignment.
+
+## Keeping Up
+
+There are a lot of moving parts to this class. Students who gain the most out of the course generally follow these general notions:
+
+1. Engaging with the readings and materials;
+2. Following all R related materials and using the software to complete any [data wrangling](https://en.wikipedia.org/wiki/Data_wrangling){target="_blank"} or analysis;
+3. Putting in a solideffort but also asking for help when needed; 
+4. Keeping a respectful, open, and honest line of communication with me and your peers if possible.
+
+
+## Lessons
+
+Most class sessions have [interactive modules](/lesson/) via [Data Camp](https://www.datacamp.com/). Your task is simply to go through these. 
+
+I will grade these modules using a check system:
+
+- ✔+: (*11.5 points (115%) in gradebook*) Modules are 100% completed. Every task was attempted and answered, and most answers are correct. These are not earned often.
+- ✔: (*10 points (100%) in gradebook*) Modules are 70–99% complete and answers are more or less on point. This is the expected level of performance.
+- ✔−: (*5 points (50%) in gradebook*) Modules are less than 70% complete and most answers are generally off-point. This indicates that you likely need to do something like putting in ore of an effort or asking for help. Hopefully people will not earn this often.
+
+Otherwise *0 points (0%) in gradebook*.
+
+### Need Help?
+I always prefer a face to face meeting if possible but since that's not possible, you can schedule a Zoom via the [Calendar](https://calendly.com/nopiecharts/short30){target="_blank"} or contact me within [Slack](http:/2021edp693e.slack.com){target="_blank"} by tagging my name `@Dr. Abhik Roy` in a text box along with your message.
+

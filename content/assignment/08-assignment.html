@@ -1,0 +1,544 @@
+---
+title: "Hooked on Feelings"
+linktitle: "Week 8: Hooked on Feelings"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  assignment:
+    parent: Weekly Tasks
+    weight: 8
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+<link href="/rmarkdown-libs/tabwid/tabwid.css" rel="stylesheet" />
+
+<div id="TOC">
+<ul>
+<li><a href="#read-the-submission-directions">Read the Submission Directions</a></li>
+<li><a href="#getting-text">Getting Text</a></li>
+<li><a href="#tasks">Tasks</a></li>
+</ul>
+</div>
+
+<style>
+.hvr-sweep-to-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+}
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:   #003277;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 700px;
+  background: #efefef;
+  box-shadow: 0 48px 80px -32px rgba(0,0,0,0.3);
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+}
+
+.label {
+  width: 100%;
+  padding: 20px 30px;
+  background: #e5e5e5;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  color: #7f7f7f;
+  transition: background 0.1s, color 0.1s;
+}
+
+.label:hover {
+  background: #d8d8d8;
+}
+
+.label:active {
+  background: #ccc;
+}
+
+.input:focus + .label {
+  box-shadow: inset 0px 0px 0px 3px #2aa1c0;
+  z-index: 1;
+}
+
+.input:checked + .label {
+  background: #fff;
+  color: #000;
+}
+
+@media (min-width: 600px) {
+  .label {
+    width: auto;
+  }
+}
+
+.panel {
+  display: none;
+  padding: 20px 30px 30px;
+  background: #fff;
+}
+
+@media (min-width: 600px) {
+  .panel {
+    order: 99;
+  }
+}
+
+.input:checked + .label + .panel {
+  display: block;
+}
+</style>
+<div id="read-the-submission-directions" class="section level2">
+<h2>Read the Submission Directions</h2>
+<p>Please submit a PDF using an Rmarkdown file for this task<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> both to eCampus and <a href="https://2021edp693e.slack.com/archives/C01RG3MB56D" target="_blank">Slack</a>.</p>
+<p>You can use a chapter book of your choice or get one using the process below a go.</p>
+</div>
+<div id="getting-text" class="section level2">
+<h2>Getting Text</h2>
+<p>In addition to the packages listed in the example, you can use the library <code>gutenbergr</code> which gives you the ability to download and process public domain works from the <a href="https://www.gutenberg.org/" target="_blank">Project Gutenberg collection</a>. Follow the mini walkthrough below to see how to get a text of your choice<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>.</p>
+<pre class="r"><code>library(tidyverse)
+library(gutenbergr)
+library(tidytext)
+library(flextable)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;flextable&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:purrr&#39;:
+## 
+##     compose</code></pre>
+<pre><code>## The following objects are masked from &#39;package:kableExtra&#39;:
+## 
+##     as_image, footnote</code></pre>
+<pre class="r"><code>gutenberg_metadata</code></pre>
+<pre><code>## # A tibble: 51,997 x 8
+##    gutenberg_id title  author  gutenberg_autho… language gutenberg_books… rights
+##           &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;              &lt;int&gt; &lt;chr&gt;    &lt;chr&gt;            &lt;chr&gt; 
+##  1            0  &lt;NA&gt;  &lt;NA&gt;                  NA en       &lt;NA&gt;             Publi…
+##  2            1 &quot;The … Jeffer…             1638 en       United States L… Publi…
+##  3            2 &quot;The … United…                1 en       American Revolu… Publi…
+##  4            3 &quot;John… Kenned…             1666 en       &lt;NA&gt;             Publi…
+##  5            4 &quot;Linc… Lincol…                3 en       US Civil War     Publi…
+##  6            5 &quot;The … United…                1 en       American Revolu… Publi…
+##  7            6 &quot;Give… Henry,…                4 en       American Revolu… Publi…
+##  8            7 &quot;The … &lt;NA&gt;                  NA en       &lt;NA&gt;             Publi…
+##  9            8 &quot;Abra… Lincol…                3 en       US Civil War     Publi…
+## 10            9 &quot;Abra… Lincol…                3 en       US Civil War     Publi…
+## # … with 51,987 more rows, and 1 more variable: has_text &lt;lgl&gt;</code></pre>
+<p>Let’s say we want <em>The War of the Worlds</em>. We can get it by running the following</p>
+<pre class="r"><code>war &lt;- gutenberg_works() %&gt;%
+            filter(title == &quot;The War of the Worlds&quot;)
+
+war</code></pre>
+<pre><code>## # A tibble: 1 x 8
+##   gutenberg_id title  author  gutenberg_author… language gutenberg_books… rights
+##          &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;               &lt;int&gt; &lt;chr&gt;    &lt;chr&gt;            &lt;chr&gt; 
+## 1           36 The W… Wells,…                30 en       Movie Books/Sci… Publi…
+## # … with 1 more variable: has_text &lt;lgl&gt;</code></pre>
+<p>Well that’s a bit difficult to read. Instead of using the <code>DT</code> package, let’s give <code>flextable</code> a go.</p>
+<pre class="r"><code>war_flex &lt;- flextable(war) %&gt;%
+                  autofit() %&gt;%
+                  theme_booktabs()
+
+war_flex</code></pre>
+<template id="8aebda92-3b1a-4bc0-b345-c57cdfe1a3e3"><style>
+.tabwid table{
+  border-collapse:collapse;
+  line-height:1;
+  margin-left:auto;
+  margin-right:auto;
+  border-width: 0;
+  display: table;
+  margin-top: 1.275em;
+  margin-bottom: 1.275em;
+  border-spacing: 0;
+  border-color: transparent;
+}
+.tabwid_left table{
+  margin-left:0;
+}
+.tabwid_right table{
+  margin-right:0;
+}
+.tabwid td {
+    padding: 0;
+}
+.tabwid a {
+  text-decoration: none;
+}
+.tabwid thead {
+    background-color: transparent;
+}
+.tabwid tfoot {
+    background-color: transparent;
+}
+.tabwid table tr {
+background-color: transparent;
+}
+</style><div class="tabwid"><style>.cl-57d9e130{border-collapse:collapse;}.cl-57d2aece{font-family:'Helvetica';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-57d2c472{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-57d2c490{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-57d2fe92{width:166pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-57d2feb0{width:122.1pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-57d2feba{width:161.1pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-57d2fec4{width:84.8pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-57d2fec5{width:62.1pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-57d2fece{width:65.8pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-57d2fed8{width:148.3pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-57d2fee2{width:130.6pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-57d2feec{width:166pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-57d2feed{width:122.1pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-57d2ff00{width:161.1pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-57d2ff0a{width:84.8pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-57d2ff14{width:62.1pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-57d2ff15{width:65.8pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-57d2ff28{width:148.3pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-57d2ff29{width:130.6pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class='cl-57d9e130'>
+<thead><tr style="overflow-wrap:break-word;"><td class="cl-57d2ff0a"><p class="cl-57d2c472"><span class="cl-57d2aece">gutenberg_id</span></p></td><td class="cl-57d2ff29"><p class="cl-57d2c490"><span class="cl-57d2aece">title</span></p></td><td class="cl-57d2feec"><p class="cl-57d2c490"><span class="cl-57d2aece">author</span></p></td><td class="cl-57d2feed"><p class="cl-57d2c472"><span class="cl-57d2aece">gutenberg_author_id</span></p></td><td class="cl-57d2ff15"><p class="cl-57d2c490"><span class="cl-57d2aece">language</span></p></td><td class="cl-57d2ff00"><p class="cl-57d2c490"><span class="cl-57d2aece">gutenberg_bookshelf</span></p></td><td class="cl-57d2ff28"><p class="cl-57d2c490"><span class="cl-57d2aece">rights</span></p></td><td class="cl-57d2ff14"><p class="cl-57d2c472"><span class="cl-57d2aece">has_text</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-57d2fec4"><p class="cl-57d2c472"><span class="cl-57d2aece">36</span></p></td><td class="cl-57d2fee2"><p class="cl-57d2c490"><span class="cl-57d2aece">The War of the Worlds</span></p></td><td class="cl-57d2fe92"><p class="cl-57d2c490"><span class="cl-57d2aece">Wells, H. G. (Herbert George)</span></p></td><td class="cl-57d2feb0"><p class="cl-57d2c472"><span class="cl-57d2aece">30</span></p></td><td class="cl-57d2fece"><p class="cl-57d2c490"><span class="cl-57d2aece">en</span></p></td><td class="cl-57d2feba"><p class="cl-57d2c490"><span class="cl-57d2aece">Movie Books/Science Fiction</span></p></td><td class="cl-57d2fed8"><p class="cl-57d2c490"><span class="cl-57d2aece">Public domain in the USA.</span></p></td><td class="cl-57d2fec5"><p class="cl-57d2c472"><span class="cl-57d2aece">TRUE</span></p></td></tr></tbody></table></div></template>
+<div class="flextable-shadow-host" id="5847c8b1-7ba6-4cae-8aff-2cbff1db61ad"></div>
+<script>
+var dest = document.getElementById("5847c8b1-7ba6-4cae-8aff-2cbff1db61ad");
+var template = document.getElementById("8aebda92-3b1a-4bc0-b345-c57cdfe1a3e3");
+var caption = template.content.querySelector("caption");
+if(caption) {
+  caption.style.cssText = "display:block;text-align:center;";
+  var newcapt = document.createElement("p");
+  newcapt.appendChild(caption)
+  dest.parentNode.insertBefore(newcapt, dest.previousSibling);
+}
+var fantome = dest.attachShadow({mode: 'open'});
+var templateContent = template.content;
+fantome.appendChild(templateContent);
+</script>
+
+<p>That helps! If you’re interested, more customization options can be found on the <a href="https://davidgohel.github.io/flextable/" target="_blank">package site</a>.</p>
+<p>Anyway we actually need the number, or <em>index</em> given by the ‘gutenberg_id’ column because we haven’t done anything barring grabbing the catalog. In our case that index number is <code>36</code>. We can use that identification along with the <code>gutenberg_download()</code> function to get the entire text.</p>
+<pre class="r"><code>war_get &lt;- gutenberg_works() %&gt;%
+                filter(title == &quot;The War of the Worlds&quot;)
+
+war_get</code></pre>
+<pre><code>## # A tibble: 1 x 8
+##   gutenberg_id title  author  gutenberg_author… language gutenberg_books… rights
+##          &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;               &lt;int&gt; &lt;chr&gt;    &lt;chr&gt;            &lt;chr&gt; 
+## 1           36 The W… Wells,…                30 en       Movie Books/Sci… Publi…
+## # … with 1 more variable: has_text &lt;lgl&gt;</code></pre>
+<pre class="r"><code>war_text &lt;- gutenberg_download(36)</code></pre>
+<pre><code>## Determining mirror for Project Gutenberg from http://www.gutenberg.org/robot/harvest</code></pre>
+<pre><code>## Using mirror http://aleph.gutenberg.org</code></pre>
+<pre class="r"><code>war_flex_text &lt;- war_text %&gt;%
+                      head(n = 15) %&gt;%
+                      flextable() %&gt;%
+                      autofit() %&gt;%
+                      theme_booktabs()
+
+war_flex_text</code></pre>
+<template id="a39522f9-ee4c-4590-bc73-61d3823a077d"><style>
+.tabwid table{
+  border-collapse:collapse;
+  line-height:1;
+  margin-left:auto;
+  margin-right:auto;
+  border-width: 0;
+  display: table;
+  margin-top: 1.275em;
+  margin-bottom: 1.275em;
+  border-spacing: 0;
+  border-color: transparent;
+}
+.tabwid_left table{
+  margin-left:0;
+}
+.tabwid_right table{
+  margin-right:0;
+}
+.tabwid td {
+    padding: 0;
+}
+.tabwid a {
+  text-decoration: none;
+}
+.tabwid thead {
+    background-color: transparent;
+}
+.tabwid tfoot {
+    background-color: transparent;
+}
+.tabwid table tr {
+background-color: transparent;
+}
+</style><div class="tabwid"><style>.cl-58dcffe0{border-collapse:collapse;}.cl-58d6587a{font-family:'Helvetica';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-58d668a6{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-58d668ba{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-58d6a6fe{width:84.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-58d6a71c{width:293.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-58d6a726{width:84.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-58d6a730{width:293.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-58d6a73a{width:84.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-58d6a744{width:293.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-58d6a745{width:84.8pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-58d6a758{width:293.8pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-58d6a759{width:84.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-58d6a762{width:293.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-58d6a76c{width:84.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-58d6a776{width:293.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-58d6a780{width:84.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-58d6a78a{width:293.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-58d6a794{width:84.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-58d6a79e{width:293.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-58d6a7a8{width:84.8pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-58d6a7b2{width:293.8pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class='cl-58dcffe0'>
+<thead><tr style="overflow-wrap:break-word;"><td class="cl-58d6a7a8"><p class="cl-58d668a6"><span class="cl-58d6587a">gutenberg_id</span></p></td><td class="cl-58d6a7b2"><p class="cl-58d668ba"><span class="cl-58d6587a">text</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-58d6a6fe"><p class="cl-58d668a6"><span class="cl-58d6587a">36</span></p></td><td class="cl-58d6a71c"><p class="cl-58d668ba"><span class="cl-58d6587a">The War of the Worlds</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-58d6a726"><p class="cl-58d668a6"><span class="cl-58d6587a">36</span></p></td><td class="cl-58d6a730"><p class="cl-58d668ba"><span class="cl-58d6587a"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-58d6a759"><p class="cl-58d668a6"><span class="cl-58d6587a">36</span></p></td><td class="cl-58d6a762"><p class="cl-58d668ba"><span class="cl-58d6587a">by H. G. Wells [1898]</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-58d6a726"><p class="cl-58d668a6"><span class="cl-58d6587a">36</span></p></td><td class="cl-58d6a730"><p class="cl-58d668ba"><span class="cl-58d6587a"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-58d6a726"><p class="cl-58d668a6"><span class="cl-58d6587a">36</span></p></td><td class="cl-58d6a730"><p class="cl-58d668ba"><span class="cl-58d6587a"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-58d6a76c"><p class="cl-58d668a6"><span class="cl-58d6587a">36</span></p></td><td class="cl-58d6a776"><p class="cl-58d668ba"><span class="cl-58d6587a">     But who shall dwell in these worlds if they be</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-58d6a76c"><p class="cl-58d668a6"><span class="cl-58d6587a">36</span></p></td><td class="cl-58d6a776"><p class="cl-58d668ba"><span class="cl-58d6587a">     inhabited? .  .  .  Are we or they Lords of the</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-58d6a780"><p class="cl-58d668a6"><span class="cl-58d6587a">36</span></p></td><td class="cl-58d6a78a"><p class="cl-58d668ba"><span class="cl-58d6587a">     World? .  .  .  And how are all things made for man?--</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-58d6a794"><p class="cl-58d668a6"><span class="cl-58d6587a">36</span></p></td><td class="cl-58d6a79e"><p class="cl-58d668ba"><span class="cl-58d6587a">          KEPLER (quoted in The Anatomy of Melancholy)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-58d6a726"><p class="cl-58d668a6"><span class="cl-58d6587a">36</span></p></td><td class="cl-58d6a730"><p class="cl-58d668ba"><span class="cl-58d6587a"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-58d6a726"><p class="cl-58d668a6"><span class="cl-58d6587a">36</span></p></td><td class="cl-58d6a730"><p class="cl-58d668ba"><span class="cl-58d6587a"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-58d6a726"><p class="cl-58d668a6"><span class="cl-58d6587a">36</span></p></td><td class="cl-58d6a730"><p class="cl-58d668ba"><span class="cl-58d6587a"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-58d6a73a"><p class="cl-58d668a6"><span class="cl-58d6587a">36</span></p></td><td class="cl-58d6a744"><p class="cl-58d668ba"><span class="cl-58d6587a">BOOK ONE</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-58d6a726"><p class="cl-58d668a6"><span class="cl-58d6587a">36</span></p></td><td class="cl-58d6a730"><p class="cl-58d668ba"><span class="cl-58d6587a"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-58d6a745"><p class="cl-58d668a6"><span class="cl-58d6587a">36</span></p></td><td class="cl-58d6a758"><p class="cl-58d668ba"><span class="cl-58d6587a">THE COMING OF THE MARTIANS</span></p></td></tr></tbody></table></div></template>
+<div class="flextable-shadow-host" id="deed2af6-7723-4d9b-b938-111f1707b2aa"></div>
+<script>
+var dest = document.getElementById("deed2af6-7723-4d9b-b938-111f1707b2aa");
+var template = document.getElementById("a39522f9-ee4c-4590-bc73-61d3823a077d");
+var caption = template.content.querySelector("caption");
+if(caption) {
+  caption.style.cssText = "display:block;text-align:center;";
+  var newcapt = document.createElement("p");
+  newcapt.appendChild(caption)
+  dest.parentNode.insertBefore(newcapt, dest.previousSibling);
+}
+var fantome = dest.attachShadow({mode: 'open'});
+var templateContent = template.content;
+fantome.appendChild(templateContent);
+</script>
+
+<p>But recall what we need is at least the title but here we’ll also get chapter information.</p>
+<pre class="r"><code>war_text_tc &lt;- gutenberg_download(36,
+                                    meta_fields = &quot;title&quot;)
+
+war_flex_text_tc &lt;- war_text_tc %&gt;%
+                          head(n = 15) %&gt;%
+                          flextable() %&gt;%
+                          autofit() %&gt;%
+                          theme_booktabs()
+
+war_flex_text_tc</code></pre>
+<template id="e5f61dc8-7044-429a-8a61-b157ea254014"><style>
+.tabwid table{
+  border-collapse:collapse;
+  line-height:1;
+  margin-left:auto;
+  margin-right:auto;
+  border-width: 0;
+  display: table;
+  margin-top: 1.275em;
+  margin-bottom: 1.275em;
+  border-spacing: 0;
+  border-color: transparent;
+}
+.tabwid_left table{
+  margin-left:0;
+}
+.tabwid_right table{
+  margin-right:0;
+}
+.tabwid td {
+    padding: 0;
+}
+.tabwid a {
+  text-decoration: none;
+}
+.tabwid thead {
+    background-color: transparent;
+}
+.tabwid tfoot {
+    background-color: transparent;
+}
+.tabwid table tr {
+background-color: transparent;
+}
+</style><div class="tabwid"><style>.cl-59a76208{border-collapse:collapse;}.cl-59a241a6{font-family:'Helvetica';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-59a24e9e{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-59a24eb2{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-59a28256{width:293.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59a2826a{width:84.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59a28274{width:130.6pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59a2827e{width:293.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59a2827f{width:84.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59a28288{width:130.6pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59a28292{width:293.8pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59a2829c{width:84.8pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59a2829d{width:130.6pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59a282a6{width:130.6pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59a282b0{width:293.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59a282b1{width:84.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59a282ba{width:293.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59a282c4{width:130.6pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59a282c5{width:84.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59a282ce{width:130.6pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59a282cf{width:293.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59a282d8{width:84.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59a282e2{width:84.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59a282e3{width:293.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59a282ec{width:130.6pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59a282f6{width:84.8pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59a28300{width:293.8pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59a28301{width:130.6pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class='cl-59a76208'>
+<thead><tr style="overflow-wrap:break-word;"><td class="cl-59a282f6"><p class="cl-59a24e9e"><span class="cl-59a241a6">gutenberg_id</span></p></td><td class="cl-59a28300"><p class="cl-59a24eb2"><span class="cl-59a241a6">text</span></p></td><td class="cl-59a28301"><p class="cl-59a24eb2"><span class="cl-59a241a6">title</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-59a2826a"><p class="cl-59a24e9e"><span class="cl-59a241a6">36</span></p></td><td class="cl-59a28256"><p class="cl-59a24eb2"><span class="cl-59a241a6">The War of the Worlds</span></p></td><td class="cl-59a28274"><p class="cl-59a24eb2"><span class="cl-59a241a6">The War of the Worlds</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59a2826a"><p class="cl-59a24e9e"><span class="cl-59a241a6">36</span></p></td><td class="cl-59a28256"><p class="cl-59a24eb2"><span class="cl-59a241a6"></span></p></td><td class="cl-59a28274"><p class="cl-59a24eb2"><span class="cl-59a241a6">The War of the Worlds</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59a282b1"><p class="cl-59a24e9e"><span class="cl-59a241a6">36</span></p></td><td class="cl-59a282b0"><p class="cl-59a24eb2"><span class="cl-59a241a6">by H. G. Wells [1898]</span></p></td><td class="cl-59a282a6"><p class="cl-59a24eb2"><span class="cl-59a241a6">The War of the Worlds</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59a2826a"><p class="cl-59a24e9e"><span class="cl-59a241a6">36</span></p></td><td class="cl-59a28256"><p class="cl-59a24eb2"><span class="cl-59a241a6"></span></p></td><td class="cl-59a28274"><p class="cl-59a24eb2"><span class="cl-59a241a6">The War of the Worlds</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59a2826a"><p class="cl-59a24e9e"><span class="cl-59a241a6">36</span></p></td><td class="cl-59a28256"><p class="cl-59a24eb2"><span class="cl-59a241a6"></span></p></td><td class="cl-59a28274"><p class="cl-59a24eb2"><span class="cl-59a241a6">The War of the Worlds</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59a282c5"><p class="cl-59a24e9e"><span class="cl-59a241a6">36</span></p></td><td class="cl-59a282ba"><p class="cl-59a24eb2"><span class="cl-59a241a6">     But who shall dwell in these worlds if they be</span></p></td><td class="cl-59a282c4"><p class="cl-59a24eb2"><span class="cl-59a241a6">The War of the Worlds</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59a282c5"><p class="cl-59a24e9e"><span class="cl-59a241a6">36</span></p></td><td class="cl-59a282ba"><p class="cl-59a24eb2"><span class="cl-59a241a6">     inhabited? .  .  .  Are we or they Lords of the</span></p></td><td class="cl-59a282c4"><p class="cl-59a24eb2"><span class="cl-59a241a6">The War of the Worlds</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59a282d8"><p class="cl-59a24e9e"><span class="cl-59a241a6">36</span></p></td><td class="cl-59a282cf"><p class="cl-59a24eb2"><span class="cl-59a241a6">     World? .  .  .  And how are all things made for man?--</span></p></td><td class="cl-59a282ce"><p class="cl-59a24eb2"><span class="cl-59a241a6">The War of the Worlds</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59a282e2"><p class="cl-59a24e9e"><span class="cl-59a241a6">36</span></p></td><td class="cl-59a282e3"><p class="cl-59a24eb2"><span class="cl-59a241a6">          KEPLER (quoted in The Anatomy of Melancholy)</span></p></td><td class="cl-59a282ec"><p class="cl-59a24eb2"><span class="cl-59a241a6">The War of the Worlds</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59a2826a"><p class="cl-59a24e9e"><span class="cl-59a241a6">36</span></p></td><td class="cl-59a28256"><p class="cl-59a24eb2"><span class="cl-59a241a6"></span></p></td><td class="cl-59a28274"><p class="cl-59a24eb2"><span class="cl-59a241a6">The War of the Worlds</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59a2826a"><p class="cl-59a24e9e"><span class="cl-59a241a6">36</span></p></td><td class="cl-59a28256"><p class="cl-59a24eb2"><span class="cl-59a241a6"></span></p></td><td class="cl-59a28274"><p class="cl-59a24eb2"><span class="cl-59a241a6">The War of the Worlds</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59a2826a"><p class="cl-59a24e9e"><span class="cl-59a241a6">36</span></p></td><td class="cl-59a28256"><p class="cl-59a24eb2"><span class="cl-59a241a6"></span></p></td><td class="cl-59a28274"><p class="cl-59a24eb2"><span class="cl-59a241a6">The War of the Worlds</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59a2827f"><p class="cl-59a24e9e"><span class="cl-59a241a6">36</span></p></td><td class="cl-59a2827e"><p class="cl-59a24eb2"><span class="cl-59a241a6">BOOK ONE</span></p></td><td class="cl-59a28288"><p class="cl-59a24eb2"><span class="cl-59a241a6">The War of the Worlds</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59a2826a"><p class="cl-59a24e9e"><span class="cl-59a241a6">36</span></p></td><td class="cl-59a28256"><p class="cl-59a24eb2"><span class="cl-59a241a6"></span></p></td><td class="cl-59a28274"><p class="cl-59a24eb2"><span class="cl-59a241a6">The War of the Worlds</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59a2829c"><p class="cl-59a24e9e"><span class="cl-59a241a6">36</span></p></td><td class="cl-59a28292"><p class="cl-59a24eb2"><span class="cl-59a241a6">THE COMING OF THE MARTIANS</span></p></td><td class="cl-59a2829d"><p class="cl-59a24eb2"><span class="cl-59a241a6">The War of the Worlds</span></p></td></tr></tbody></table></div></template>
+<div class="flextable-shadow-host" id="15024b82-f94f-49ad-ac69-300ccbdbc1e6"></div>
+<script>
+var dest = document.getElementById("15024b82-f94f-49ad-ac69-300ccbdbc1e6");
+var template = document.getElementById("e5f61dc8-7044-429a-8a61-b157ea254014");
+var caption = template.content.querySelector("caption");
+if(caption) {
+  caption.style.cssText = "display:block;text-align:center;";
+  var newcapt = document.createElement("p");
+  newcapt.appendChild(caption)
+  dest.parentNode.insertBefore(newcapt, dest.previousSibling);
+}
+var fantome = dest.attachShadow({mode: 'open'});
+var templateContent = template.content;
+fantome.appendChild(templateContent);
+</script>
+
+<p>Now divide into documents, each representing one chapter. Please Note that this assumes that the text column includes the term <em>chapter</em>. So you can ether amend the <code>mutate</code> below or look at the data set to make sure it includes the term to indicate the different chapters.</p>
+<pre class="r"><code>war_chapters &lt;- war_text_tc %&gt;%
+  group_by(title) %&gt;%
+  mutate(chapter = cumsum(str_detect(text, regex(&quot;^chapter &quot;, ignore_case = TRUE)))) %&gt;%
+  ungroup() %&gt;%
+  filter(chapter &gt; 0) %&gt;%
+  unite(document, title, chapter)
+
+war_chapters %&gt;%
+  head(n = 15) %&gt;%
+  flextable() %&gt;%
+  autofit() %&gt;%
+  theme_booktabs()</code></pre>
+<template id="ee6ac2b3-afdb-4685-8d7f-445da4876225"><style>
+.tabwid table{
+  border-collapse:collapse;
+  line-height:1;
+  margin-left:auto;
+  margin-right:auto;
+  border-width: 0;
+  display: table;
+  margin-top: 1.275em;
+  margin-bottom: 1.275em;
+  border-spacing: 0;
+  border-color: transparent;
+}
+.tabwid_left table{
+  margin-left:0;
+}
+.tabwid_right table{
+  margin-right:0;
+}
+.tabwid td {
+    padding: 0;
+}
+.tabwid a {
+  text-decoration: none;
+}
+.tabwid thead {
+    background-color: transparent;
+}
+.tabwid tfoot {
+    background-color: transparent;
+}
+.tabwid table tr {
+background-color: transparent;
+}
+</style><div class="tabwid"><style>.cl-59bd839e{border-collapse:collapse;}.cl-59b8df06{font-family:'Helvetica';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-59b8eb68{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-59b8eb7c{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-59b91660{width:142.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59b91674{width:84.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59b91675{width:367.2pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59b9167e{width:142.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59b91688{width:367.2pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59b91692{width:84.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59b91693{width:142.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59b9169c{width:367.2pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59b916a6{width:84.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59b916a7{width:367.2pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59b916b0{width:84.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59b916ba{width:142.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59b916c4{width:142.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59b916c5{width:367.2pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59b916ce{width:84.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59b916cf{width:84.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59b916d8{width:367.2pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59b916e2{width:142.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59b916ec{width:84.8pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59b916ed{width:142.8pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59b916f6{width:367.2pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59b91700{width:142.8pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59b9170a{width:84.8pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59b9170b{width:367.2pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class='cl-59bd839e'>
+<thead><tr style="overflow-wrap:break-word;"><td class="cl-59b9170a"><p class="cl-59b8eb68"><span class="cl-59b8df06">gutenberg_id</span></p></td><td class="cl-59b9170b"><p class="cl-59b8eb7c"><span class="cl-59b8df06">text</span></p></td><td class="cl-59b91700"><p class="cl-59b8eb7c"><span class="cl-59b8df06">document</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-59b91674"><p class="cl-59b8eb68"><span class="cl-59b8df06">36</span></p></td><td class="cl-59b91675"><p class="cl-59b8eb7c"><span class="cl-59b8df06">CHAPTER ONE</span></p></td><td class="cl-59b91660"><p class="cl-59b8eb7c"><span class="cl-59b8df06">The War of the Worlds_1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59b91674"><p class="cl-59b8eb68"><span class="cl-59b8df06">36</span></p></td><td class="cl-59b91675"><p class="cl-59b8eb7c"><span class="cl-59b8df06"></span></p></td><td class="cl-59b91660"><p class="cl-59b8eb7c"><span class="cl-59b8df06">The War of the Worlds_1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59b91674"><p class="cl-59b8eb68"><span class="cl-59b8df06">36</span></p></td><td class="cl-59b91675"><p class="cl-59b8eb7c"><span class="cl-59b8df06">THE EVE OF THE WAR</span></p></td><td class="cl-59b91660"><p class="cl-59b8eb7c"><span class="cl-59b8df06">The War of the Worlds_1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59b91674"><p class="cl-59b8eb68"><span class="cl-59b8df06">36</span></p></td><td class="cl-59b91675"><p class="cl-59b8eb7c"><span class="cl-59b8df06"></span></p></td><td class="cl-59b91660"><p class="cl-59b8eb7c"><span class="cl-59b8df06">The War of the Worlds_1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59b91674"><p class="cl-59b8eb68"><span class="cl-59b8df06">36</span></p></td><td class="cl-59b91675"><p class="cl-59b8eb7c"><span class="cl-59b8df06"></span></p></td><td class="cl-59b91660"><p class="cl-59b8eb7c"><span class="cl-59b8df06">The War of the Worlds_1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59b916b0"><p class="cl-59b8eb68"><span class="cl-59b8df06">36</span></p></td><td class="cl-59b916a7"><p class="cl-59b8eb7c"><span class="cl-59b8df06">No one would have believed in the last years of the nineteenth</span></p></td><td class="cl-59b916ba"><p class="cl-59b8eb7c"><span class="cl-59b8df06">The War of the Worlds_1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59b916a6"><p class="cl-59b8eb68"><span class="cl-59b8df06">36</span></p></td><td class="cl-59b9169c"><p class="cl-59b8eb7c"><span class="cl-59b8df06">century that this world was being watched keenly and closely by</span></p></td><td class="cl-59b91693"><p class="cl-59b8eb7c"><span class="cl-59b8df06">The War of the Worlds_1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59b916a6"><p class="cl-59b8eb68"><span class="cl-59b8df06">36</span></p></td><td class="cl-59b9169c"><p class="cl-59b8eb7c"><span class="cl-59b8df06">intelligences greater than man's and yet as mortal as his own; that as</span></p></td><td class="cl-59b91693"><p class="cl-59b8eb7c"><span class="cl-59b8df06">The War of the Worlds_1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59b91692"><p class="cl-59b8eb68"><span class="cl-59b8df06">36</span></p></td><td class="cl-59b91688"><p class="cl-59b8eb7c"><span class="cl-59b8df06">men busied themselves about their various concerns they were</span></p></td><td class="cl-59b9167e"><p class="cl-59b8eb7c"><span class="cl-59b8df06">The War of the Worlds_1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59b91692"><p class="cl-59b8eb68"><span class="cl-59b8df06">36</span></p></td><td class="cl-59b91688"><p class="cl-59b8eb7c"><span class="cl-59b8df06">scrutinised and studied, perhaps almost as narrowly as a man with a</span></p></td><td class="cl-59b9167e"><p class="cl-59b8eb7c"><span class="cl-59b8df06">The War of the Worlds_1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59b916a6"><p class="cl-59b8eb68"><span class="cl-59b8df06">36</span></p></td><td class="cl-59b9169c"><p class="cl-59b8eb7c"><span class="cl-59b8df06">microscope might scrutinise the transient creatures that swarm and</span></p></td><td class="cl-59b91693"><p class="cl-59b8eb7c"><span class="cl-59b8df06">The War of the Worlds_1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59b916b0"><p class="cl-59b8eb68"><span class="cl-59b8df06">36</span></p></td><td class="cl-59b916a7"><p class="cl-59b8eb7c"><span class="cl-59b8df06">multiply in a drop of water.  With infinite complacency men went to</span></p></td><td class="cl-59b916ba"><p class="cl-59b8eb7c"><span class="cl-59b8df06">The War of the Worlds_1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59b916ce"><p class="cl-59b8eb68"><span class="cl-59b8df06">36</span></p></td><td class="cl-59b916c5"><p class="cl-59b8eb7c"><span class="cl-59b8df06">and fro over this globe about their little affairs, serene in their</span></p></td><td class="cl-59b916c4"><p class="cl-59b8eb7c"><span class="cl-59b8df06">The War of the Worlds_1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59b916cf"><p class="cl-59b8eb68"><span class="cl-59b8df06">36</span></p></td><td class="cl-59b916d8"><p class="cl-59b8eb7c"><span class="cl-59b8df06">assurance of their empire over matter.  It is possible that the</span></p></td><td class="cl-59b916e2"><p class="cl-59b8eb7c"><span class="cl-59b8df06">The War of the Worlds_1</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59b916ec"><p class="cl-59b8eb68"><span class="cl-59b8df06">36</span></p></td><td class="cl-59b916f6"><p class="cl-59b8eb7c"><span class="cl-59b8df06">infusoria under the microscope do the same.  No one gave a thought to</span></p></td><td class="cl-59b916ed"><p class="cl-59b8eb7c"><span class="cl-59b8df06">The War of the Worlds_1</span></p></td></tr></tbody></table></div></template>
+<div class="flextable-shadow-host" id="82639900-469a-49b3-9f27-e0f3e8754657"></div>
+<script>
+var dest = document.getElementById("82639900-469a-49b3-9f27-e0f3e8754657");
+var template = document.getElementById("ee6ac2b3-afdb-4685-8d7f-445da4876225");
+var caption = template.content.querySelector("caption");
+if(caption) {
+  caption.style.cssText = "display:block;text-align:center;";
+  var newcapt = document.createElement("p");
+  newcapt.appendChild(caption)
+  dest.parentNode.insertBefore(newcapt, dest.previousSibling);
+}
+var fantome = dest.attachShadow({mode: 'open'});
+var templateContent = template.content;
+fantome.appendChild(templateContent);
+</script>
+
+<p>Then split the into words</p>
+<pre class="r"><code>war_chapters_word &lt;- war_chapters %&gt;%
+                      unnest_tokens(word, text)</code></pre>
+<p>and assess document-word counts</p>
+<pre class="r"><code>war_word_counts &lt;- war_chapters_word %&gt;%
+                    anti_join(stop_words) %&gt;%
+                    count(document, word, sort = TRUE) %&gt;%
+                    ungroup()</code></pre>
+<pre><code>## Joining, by = &quot;word&quot;</code></pre>
+<pre class="r"><code>war_word_counts</code></pre>
+<pre><code>## # A tibble: 15,367 x 3
+##    document                 word         n
+##    &lt;chr&gt;                    &lt;chr&gt;    &lt;int&gt;
+##  1 The War of the Worlds_16 brother     50
+##  2 The War of the Worlds_25 ulla        28
+##  3 The War of the Worlds_14 brother     26
+##  4 The War of the Worlds_16 road        25
+##  5 The War of the Worlds_14 people      24
+##  6 The War of the Worlds_16 people      24
+##  7 The War of the Worlds_12 people      20
+##  8 The War of the Worlds_16 lane        20
+##  9 The War of the Worlds_12 water       19
+## 10 The War of the Worlds_19 martians    19
+## # … with 15,357 more rows</code></pre>
+<p>or better yet</p>
+<pre class="r"><code>war_word_counts %&gt;%
+  head(n = 15) %&gt;%
+  flextable() %&gt;%
+  autofit() %&gt;%
+  theme_booktabs()</code></pre>
+<template id="065d69da-5893-4a0a-8426-d378bca73305"><style>
+.tabwid table{
+  border-collapse:collapse;
+  line-height:1;
+  margin-left:auto;
+  margin-right:auto;
+  border-width: 0;
+  display: table;
+  margin-top: 1.275em;
+  margin-bottom: 1.275em;
+  border-spacing: 0;
+  border-color: transparent;
+}
+.tabwid_left table{
+  margin-left:0;
+}
+.tabwid_right table{
+  margin-right:0;
+}
+.tabwid td {
+    padding: 0;
+}
+.tabwid a {
+  text-decoration: none;
+}
+.tabwid thead {
+    background-color: transparent;
+}
+.tabwid tfoot {
+    background-color: transparent;
+}
+.tabwid table tr {
+background-color: transparent;
+}
+</style><div class="tabwid"><style>.cl-59f738aa{border-collapse:collapse;}.cl-59f28dd2{font-family:'Helvetica';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-59f29b10{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-59f29b24{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-59f2cbee{width:148.9pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59f2cc0c{width:32.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59f2cc16{width:62.7pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59f2cc17{width:148.9pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59f2cc20{width:32.8pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59f2cc2a{width:62.7pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59f2cc34{width:62.7pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59f2cc3e{width:148.9pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59f2cc48{width:32.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59f2cc49{width:148.9pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59f2cc52{width:62.7pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-59f2cc5c{width:32.8pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class='cl-59f738aa'>
+<thead><tr style="overflow-wrap:break-word;"><td class="cl-59f2cc49"><p class="cl-59f29b10"><span class="cl-59f28dd2">document</span></p></td><td class="cl-59f2cc52"><p class="cl-59f29b10"><span class="cl-59f28dd2">word</span></p></td><td class="cl-59f2cc5c"><p class="cl-59f29b24"><span class="cl-59f28dd2">n</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-59f2cbee"><p class="cl-59f29b10"><span class="cl-59f28dd2">The War of the Worlds_16</span></p></td><td class="cl-59f2cc16"><p class="cl-59f29b10"><span class="cl-59f28dd2">brother</span></p></td><td class="cl-59f2cc0c"><p class="cl-59f29b24"><span class="cl-59f28dd2">50</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59f2cbee"><p class="cl-59f29b10"><span class="cl-59f28dd2">The War of the Worlds_25</span></p></td><td class="cl-59f2cc16"><p class="cl-59f29b10"><span class="cl-59f28dd2">ulla</span></p></td><td class="cl-59f2cc0c"><p class="cl-59f29b24"><span class="cl-59f28dd2">28</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59f2cbee"><p class="cl-59f29b10"><span class="cl-59f28dd2">The War of the Worlds_14</span></p></td><td class="cl-59f2cc16"><p class="cl-59f29b10"><span class="cl-59f28dd2">brother</span></p></td><td class="cl-59f2cc0c"><p class="cl-59f29b24"><span class="cl-59f28dd2">26</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59f2cbee"><p class="cl-59f29b10"><span class="cl-59f28dd2">The War of the Worlds_16</span></p></td><td class="cl-59f2cc16"><p class="cl-59f29b10"><span class="cl-59f28dd2">road</span></p></td><td class="cl-59f2cc0c"><p class="cl-59f29b24"><span class="cl-59f28dd2">25</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59f2cc3e"><p class="cl-59f29b10"><span class="cl-59f28dd2">The War of the Worlds_14</span></p></td><td class="cl-59f2cc34"><p class="cl-59f29b10"><span class="cl-59f28dd2">people</span></p></td><td class="cl-59f2cc48"><p class="cl-59f29b24"><span class="cl-59f28dd2">24</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59f2cc3e"><p class="cl-59f29b10"><span class="cl-59f28dd2">The War of the Worlds_16</span></p></td><td class="cl-59f2cc34"><p class="cl-59f29b10"><span class="cl-59f28dd2">people</span></p></td><td class="cl-59f2cc48"><p class="cl-59f29b24"><span class="cl-59f28dd2">24</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59f2cc3e"><p class="cl-59f29b10"><span class="cl-59f28dd2">The War of the Worlds_12</span></p></td><td class="cl-59f2cc34"><p class="cl-59f29b10"><span class="cl-59f28dd2">people</span></p></td><td class="cl-59f2cc48"><p class="cl-59f29b24"><span class="cl-59f28dd2">20</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59f2cbee"><p class="cl-59f29b10"><span class="cl-59f28dd2">The War of the Worlds_16</span></p></td><td class="cl-59f2cc16"><p class="cl-59f29b10"><span class="cl-59f28dd2">lane</span></p></td><td class="cl-59f2cc0c"><p class="cl-59f29b24"><span class="cl-59f28dd2">20</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59f2cbee"><p class="cl-59f29b10"><span class="cl-59f28dd2">The War of the Worlds_12</span></p></td><td class="cl-59f2cc16"><p class="cl-59f29b10"><span class="cl-59f28dd2">water</span></p></td><td class="cl-59f2cc0c"><p class="cl-59f29b24"><span class="cl-59f28dd2">19</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59f2cbee"><p class="cl-59f29b10"><span class="cl-59f28dd2">The War of the Worlds_19</span></p></td><td class="cl-59f2cc16"><p class="cl-59f29b10"><span class="cl-59f28dd2">martians</span></p></td><td class="cl-59f2cc0c"><p class="cl-59f29b24"><span class="cl-59f28dd2">19</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59f2cbee"><p class="cl-59f29b10"><span class="cl-59f28dd2">The War of the Worlds_15</span></p></td><td class="cl-59f2cc16"><p class="cl-59f29b10"><span class="cl-59f28dd2">guns</span></p></td><td class="cl-59f2cc0c"><p class="cl-59f29b24"><span class="cl-59f28dd2">17</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59f2cbee"><p class="cl-59f29b10"><span class="cl-59f28dd2">The War of the Worlds_20</span></p></td><td class="cl-59f2cc16"><p class="cl-59f29b10"><span class="cl-59f28dd2">machine</span></p></td><td class="cl-59f2cc0c"><p class="cl-59f29b24"><span class="cl-59f28dd2">17</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59f2cbee"><p class="cl-59f29b10"><span class="cl-59f28dd2">The War of the Worlds_14</span></p></td><td class="cl-59f2cc16"><p class="cl-59f29b10"><span class="cl-59f28dd2">martians</span></p></td><td class="cl-59f2cc0c"><p class="cl-59f29b24"><span class="cl-59f28dd2">16</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59f2cbee"><p class="cl-59f29b10"><span class="cl-59f28dd2">The War of the Worlds_14</span></p></td><td class="cl-59f2cc16"><p class="cl-59f29b10"><span class="cl-59f28dd2">street</span></p></td><td class="cl-59f2cc0c"><p class="cl-59f29b24"><span class="cl-59f28dd2">16</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-59f2cc17"><p class="cl-59f29b10"><span class="cl-59f28dd2">The War of the Worlds_24</span></p></td><td class="cl-59f2cc2a"><p class="cl-59f29b10"><span class="cl-59f28dd2">night</span></p></td><td class="cl-59f2cc20"><p class="cl-59f29b24"><span class="cl-59f28dd2">16</span></p></td></tr></tbody></table></div></template>
+<div class="flextable-shadow-host" id="66c42c1e-8c39-4b6e-9d99-30b0f5b519e9"></div>
+<script>
+var dest = document.getElementById("66c42c1e-8c39-4b6e-9d99-30b0f5b519e9");
+var template = document.getElementById("065d69da-5893-4a0a-8426-d378bca73305");
+var caption = template.content.querySelector("caption");
+if(caption) {
+  caption.style.cssText = "display:block;text-align:center;";
+  var newcapt = document.createElement("p");
+  newcapt.appendChild(caption)
+  dest.parentNode.insertBefore(newcapt, dest.previousSibling);
+}
+var fantome = dest.attachShadow({mode: 'open'});
+var templateContent = template.content;
+fantome.appendChild(templateContent);
+</script>
+
+<p>Now that is a form you should be able to work with!</p>
+</div>
+<div id="tasks" class="section level2">
+<h2>Tasks</h2>
+<p>Perform the following</p>
+<ol style="list-style-type: decimal">
+<li><p>a chapterwise or bookwise sentient analysis of your text using AFINN, Bing, and NRC with a visual of each.</p></li>
+<li><p>BONUS<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>: Follow the approach given in <a href="https://www.tidytextmining.com/" target="_blank">Text Mining with R</a> to construct a topic model of the work with a visual of the top 10 topics by prevalence.</p></li>
+</ol>
+<p>:::</p>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>If you use an external file for your data, please submit that as well.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>As long as it exists in the public domain.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>Will replace the 2016 general election map activity<a href="#fnref3" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>

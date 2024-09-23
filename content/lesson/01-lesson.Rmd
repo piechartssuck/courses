@@ -1,0 +1,28 @@
+---
+title: "Friends Don't Let Friends Use Pie Charts"
+linktitle: "Week 1: Friends Don't Let Friends Use Pie Charts"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  lesson:
+    parent: Lessons
+    weight: 1
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+## First Timers Note
+You'll see R related walkthroughts and other possible course tasks posted here every week.
+
+## Data Camp
+The purpose of these modules is not have you become a programmer! Rather these lay a foundation for a common language and software we'll be using. Some are better than others and some are more technical than others as well. Just remember, this is not a programming class but you need to ask for help when needed! Falling behind on these can make some material we cover in the course inaccessible. If you get stuck, please search the Internet, ask your peers or me for help or worst case scenario, move on! 
+
+With that said, please go ahead and start the first module covering the basics of R on [Data Camp](https://www.datacamp.com/){target="_blank"}. There is a lot on there and please refer to the [syllabus](/syllabus/) for the grading policy regarding those tasks. 
+
+## Installing R and RStudio
+Go to the [Installing R, RStudio, and tidyverse](/resource/install/) page under Resources to get both R and RStudio installed on your system.
+
+
+
