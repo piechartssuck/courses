@@ -72,9 +72,8 @@ tr,
 <table>
     <tr><th>Content, cluster, and social network analysis</b></th></tr> 
     <tr><th>Data visualization</th></tr> 
-    <tr><th>Machine learning-driven program evaluation methods</th></tr>
     <tr><th>Markup using</b> <code>$\LaTeX$</code> </th></tr>
-    <tr><th>Program evaluations from planning to reporting</th></tr>
+    <tr><th>Program evaluations integrating both traditional and machine learning methods</th></tr>
     <tr><th>Quantitative, qualitative, and mixed method studies</th></tr>
     <tr><th></b><i style="color:#3365B3;" class="fab fa-r-project fa-lg"></i> programming</th></tr> 
     <tr><th>Small- and large-scale survey design, administration, and research</th></tr>
