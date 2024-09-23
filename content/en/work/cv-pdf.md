@@ -1,7 +1,7 @@
 ---
 title: "Abhik Ranjan Roy"
 author: Abhik Ranjan Roy
-date: "2024-09-21"
+date: "2024-09-23"
 output:
   pagedown::html_resume:
     self_contained: true
@@ -38,11 +38,9 @@ weight: NULL
 
 - <b>Data visualization</b>
 
-- <b>Machine learning-driven program evaluation methods</b>
-
 - <b>Markup using</b> `\(\LaTeX\)`
 
-- <b>Program evaluations from planning to reporting</b>
+- <b>Program evaluations integrating both traditional and machine learning methods</b>
 
 - <b>Quantitative, qualitative, and mixed method studies</b>
 
@@ -974,6 +972,6 @@ N/A
 
 <div id="custom-footnote">
 
-Made with    <i style="color:#3365B3; margin-top: 3px; margin-left: -7px; margin-right: -5px;" class="fab fa-r-project"></i>   : <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-html.Rmd" target="&#39;_blank">Source code</a>. Last updated on September 21, 2024
+Made with    <i style="color:#3365B3; margin-top: 3px; margin-left: -7px; margin-right: -5px;" class="fab fa-r-project"></i>   : <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-html.Rmd" target="&#39;_blank">Source code</a>. Last updated on September 23, 2024
 
 </div>

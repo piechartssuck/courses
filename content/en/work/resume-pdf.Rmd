@@ -53,11 +53,9 @@ Expertise {#skills}
 
 - <b>Data visualization</b> 
 
-- <b>Machine learning-driven program evaluation methods</b>
-
 - <b>Markup using</b> $\LaTeX$
 
-- <b>Program evaluations from planning to reporting</b>
+- <b>Program evaluations integrating both traditional and machine learning methods</b>
 
 - <b>Quantitative, qualitative, and mixed method studies</b>
 
