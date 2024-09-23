@@ -29,7 +29,7 @@ source_rmd("resume-pdf.Rmd")
 
 ```{r, echo=FALSE}
 source("convert2html.R")
-pagedown::chrome_print("cv-pdf.Rmd", output = "cv.pdf")
+pagedown::chrome_print("cv-pdf.Rmd", output = "cv.pdf", timeout = 100)
 pagedown::chrome_print("resume-pdf.Rmd", output = "resume.pdf")
 file.remove('cv-pdf.html')
 file.remove('resume-pdf.html')

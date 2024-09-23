@@ -6,14 +6,11 @@ output:
   pagedown::html_resume:
     self_contained: true
     paged-footnotes: true
+    mathjax: "https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
     css: ["updatedaes.css", "resume"]
 weight: NULL 
 ---
 
-<script src="//yihui.org/js/math-code.js" defer></script>
-<script defer
-  src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
 <style type="text/css">
 .pagedjs_page:not(:first-of-type) {
   --sidebar-width: 0rem;
