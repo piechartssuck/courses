@@ -106,24 +106,16 @@ kable(textitems,
 ```
 </center>
 
-# FAQ
+## FAQ
 
 ### *Is the course content difficult?*
-You have likely heard a response like this before:  *...at times some of the material can be hard...* While vague, difficulty is subjective, varies, and will depend on your academic and practical background. Instead, focus on this question:
-
-<center>
-<p id="rounded_corners">
-Can I search for help independently first and then reach out if needed?
-</p>
-</center>
-
-If your answer is yes, then you are likely well-positioned to succeed in this class. Make sure to go through the <a href="#rstats"><span style="color:#03dac6"><b>How to Ask for Help with R and RStudio</b></span></a>.
+You've probably heard an answer like this before: *At times some of the material can be dense.* Well that isn't much of a response. Difficulty is not the issue here since as humans with differing educational background, we will have strengths in some areas more than others. Instead the question is can you identify areas that need strengthened and communicate them? If you can, then you have a good shot at succeeding in this class.
 
 ### *Is R difficult?*
-Learning `r fa("r-project", fill = "steelblue")` can be especially challenging at first—it’s like learning a new language, whether it’s Spanish or even math. Even experienced R users get frustrated—some of us even have swear jars! However, as silly as it sounds, one of the best feelings is overcoming a logical roadblock. So, if you find yourself getting irritated, try this: take a break, step away for a bit, sleep on it, and/or discuss it with a peer. If you are reaching your limit, take a few deep breaths and reach out to me!
+Learning R can be especially challenging at first—it's akin to learning a new language like Spanish or even mathematics. Even experienced R users get frustrated...and so much so that some of us have swear jars. However as silly as it sounds one of the best feelings is to overcome a roadblock. With that said, if you find yourself getting irritated, try the following: take a break, go let some frustration out, sleep, discuss with a peer, etc. If you are at your limit, take a few breaths and contact me!
 
-### *What if I'm a Visual/Aural/Read-write/Kinesthetic learner?*
-You do not fall into any one of those categories. In fact, there is no widely accepted study that supports a single learning style over another, nor is there solid evidence backing these four specific classifications. Research shows that people learn best through multiple approaches, which is why this course includes both a [Readings](/readings/) and [Trainings](/trainings/) section. At one point, I provided several papers to support this, but many of those sources are also referenced in this excellent video:
+### *What if I'm a Visual/Aural/Read-write/Kinesthetic learner...*
+You're not one of those or even any of those. There's not one accepted study that supports one type of learning style over another. In fact, there aren't even any studies that support these four classifications either. You learn the best using multiple approaches. At one time I denoted multiple papers to support this, but recently a fantastic video was released and many of the sources I listed were also cited so enjoy this instead:
 
 <center>
 <iframe src="https://www.youtube.com/embed/rhgwIhB58PA" width="640" height="360" frameborder="0" allow="fullscreen" style="display: block; margin: 0 auto 1rem;"></iframe>
