@@ -23,9 +23,12 @@ output:
 
 {{% aes-header %}}
 
-## Most People Forget the Mixed Part of Mixed Methods
+## Many Mixed-Methods Studies Lack the Mixing Component
 
-Mixed-Method studies are the natural byproduct of an ongoing war between people who are distinctly qualitative or quantitative. For many, the ability to look at data through two dynamically opposing approaches has opened doors that simply did not exist before and provides many design choices which can be run sequentially, concurrently, or even at times both. Furthermore when a one method is weaker, its complement can provide additional support through the mixing process. With all of these benefits, *why aren’t most studies mixed methods?* This can be answered in two ways: 1) misunderstanding/misidentification: researchers for whatever reason do not to conduct the mixing process resulting in a multi-methods study and 2) methodological/structural: there is a greater risk of an entire study collapsing if errors in one approach affects the other.
+Mixed-method studies emerged from the ongoing divide between proponents of qualitative and quantitative approaches. For many, combining these two distinct perspectives has opened new possibilities, offering flexibility in research design that can be sequential, concurrent, or even a blend of both. Additionally, when one method shows weaknesses, its complement can provide valuable support through the mixing process. Given these advantages, *why aren’t more studies mixed-methods?* Good question. There are two main reasons:
+
+- Misunderstanding or misidentification: Researchers may incorrectly label their study as mixed-methods without fully engaging in the integration process, resulting in a multi-methods study instead.
+- Methodological or structural challenges: Mixed-method studies carry greater risk, as errors in one approach can affect the other, potentially jeopardizing the entire study.
 
 ## Course objectives
 
@@ -87,19 +90,19 @@ Please note that the slideshow goes through highlights of the syllabus, but you 
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;width: 20em; color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 20em; color: rgba(255, 255, 255, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 Larger version of the Overview
 </td>
-<td style="text-align:center;width: 20em; color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 20em; color: rgba(255, 255, 255, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 PDF of the Overview
 </td>
 </tr>
 <tr>
-<td style="text-align:center;width: 20em; color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/slides/Descriptions/Slides-Basics.html" target="_blank"><img src="/logos/web-ico.png" alt="Slack icon" width="35"></a>
+<td style="text-align:center;width: 20em; color: rgba(255, 255, 255, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
+\<a href=‘/slides/Descriptions/Slides-Basics.html’ target=’\_blank’\>\<img src=‘/logos/web-ico.png’ alt=‘Slack icon’ width=‘35’\>\</a\>
 </td>
-<td style="text-align:center;width: 20em; color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/slides/Descriptions/Slides-Basics.pdf" target="_blank"><img src="/logos/pdf-ico.png" alt="Slack icon" width="35"></a>
+<td style="text-align:center;width: 20em; color: rgba(255, 255, 255, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
+\<a href=‘/slides/Descriptions/Slides-Basics.pdf’ target=’\_blank’\>\<img src=‘/logos/pdf-ico.png’ alt=‘Slack icon’ width=‘35’\>\</a\>
 </td>
 </tr>
 </tbody>
@@ -110,23 +113,23 @@ PDF of the Overview
 
 ### *Is the course content difficult?*
 
-You’ve probably heard an answer like this before: *…at times some of the material can be dense.* While ambiguous, difficulty is subjective, varies, and will likely depend on your academic and practical history. Instead consider focusing on the following question
+You have likely heard a response like this before: *…at times some of the material can be hard…* While vague, difficulty is subjective, varies, and will depend on your academic and practical background. Instead, focus on this question:
 
 <center>
 <p id="rounded_corners">
-Can I first search for help independently and then reach out as needed?
+Can I search for help independently first and then reach out if needed?
 </p>
 </center>
 
-If the answer is an overall yes, then you have a good shot at succeeding in this class. Make sure to go through the <a href="#rstats"><span style="color:#03dac6"><b>How to Ask for Help with R and RStudio</b></span></a>.
+If your answer is yes, then you are likely well-positioned to succeed in this class. Make sure to go through the <a href="#rstats"><span style="color:#03dac6"><b>How to Ask for Help with R and RStudio</b></span></a>.
 
 ### *Is R difficult?*
 
-Learning <svg aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:steelblue;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg> can be especially challenging at first—it’s akin to learning a new language like Spanish or even mathematics. Even experienced R users get frustrated…and so much so that some of us have swear jars. However as silly as it sounds one of the best feelings is to overcome a logical roadblock so if you find yourself getting irritated, try the following: take a break, go let some frustration out, sleep, discuss with a peer, etc. If you are at your limit, take a few breaths and contact me!
+Learning <svg aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:steelblue;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg> can be especially challenging at first—it’s like learning a new language, whether it’s Spanish or even math. Even experienced R users get frustrated—some of us even have swear jars! However, as silly as it sounds, one of the best feelings is overcoming a logical roadblock. So, if you find yourself getting irritated, try this: take a break, step away for a bit, sleep on it, and/or discuss it with a peer. If you are reaching your limit, take a few deep breaths and reach out to me!
 
 ### *What if I’m a Visual/Aural/Read-write/Kinesthetic learner?*
 
-You’re not one or even any of those. There’s not one accepted study that supports one type of learning style over another. In fact, there aren’t even any studies that support these four classifications either. You learn the best using multiple approaches which is why there is both a [Readings](/readings/) and [Trainings](/trainings/) section. At one time I denoted multiple papers to support this, but many of the sources I listed were also cited in this fantastic video:
+You do not fall into any one of those categories. In fact, there is no widely accepted study that supports a single learning style over another, nor is there solid evidence backing these four specific classifications. Research shows that people learn best through multiple approaches, which is why this course includes both a [Readings](/readings/) and [Trainings](/trainings/) section. At one point, I provided several papers to support this, but many of those sources are also referenced in this excellent video:
 
 <center>
 <iframe src="https://www.youtube.com/embed/rhgwIhB58PA" width="640" height="360" frameborder="0" allow="fullscreen" style="display: block; margin: 0 auto 1rem;">
@@ -145,82 +148,82 @@ These are given in the order you see them in top of the site.
 <table>
 <tbody>
 <tr>
-<td style="text-align:left;font-weight: bold;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;font-weight: bold;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 Readings
 </td>
-<td style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/readings/">Go</a>
 </td>
-<td style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:17px;width:14.88px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#74d86f;overflow:visible;position:relative;">
 <path d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"></path>
 </svg>
 </td>
-<td style="text-align:left;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 Weekly readings
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;font-weight: bold;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 Trainings
 </td>
-<td style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/trainings/">Go</a>
 </td>
-<td style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <svg aria-hidden="true" role="img" viewbox="0 0 576 512" style="height:17px;width:19.12px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#6fd8d3;overflow:visible;position:relative;">
-<path d="M565.6 36.24C572.1 40.72 576 48.11 576 56V392C576 401.1 569.8 410.9 560.5 414.4L392.5 478.4C387.4 480.4 381.7 480.5 376.4 478.8L192.5 417.5L32.54 478.4C25.17 481.2 16.88 480.2 10.38 475.8C3.882 471.3 0 463.9 0 456V120C0 110 6.15 101.1 15.46 97.57L183.5 33.57C188.6 31.6 194.3 31.48 199.6 33.23L383.5 94.52L543.5 33.57C550.8 30.76 559.1 31.76 565.6 36.24H565.6zM48 421.2L168 375.5V90.83L48 136.5V421.2zM360 137.3L216 89.3V374.7L360 422.7V137.3zM408 421.2L528 375.5V90.83L408 136.5V421.2z"></path>
+<path d="M565.6 36.2C572.1 40.7 576 48.1 576 56V392c0 10-6.2 18.9-15.5 22.4l-168 64c-5.2 2-10.9 2.1-16.1 .3L192.5 417.5l-160 61c-7.4 2.8-15.7 1.8-22.2-2.7S0 463.9 0 456V120c0-10 6.1-18.9 15.5-22.4l168-64c5.2-2 10.9-2.1 16.1-.3L383.5 94.5l160-61c7.4-2.8 15.7-1.8 22.2 2.7zM48 136.5V421.2l120-45.7V90.8L48 136.5zM360 422.7V137.3l-144-48V374.7l144 48zm48-1.5l120-45.7V90.8L408 136.5V421.2z"></path>
 </svg>
 </td>
-<td style="text-align:left;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 Modules and custom walkthroughs focused on content
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;font-weight: bold;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 Tasks
 </td>
-<td style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/tasks/">Go</a>
 </td>
-<td style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:17px;width:17px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#d86f9e;overflow:visible;position:relative;">
 <path d="M448 160H320V128H448v32zM48 64C21.5 64 0 85.5 0 112v64c0 26.5 21.5 48 48 48H464c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H48zM448 352v32H192V352H448zM48 288c-26.5 0-48 21.5-48 48v64c0 26.5 21.5 48 48 48H464c26.5 0 48-21.5 48-48V336c0-26.5-21.5-48-48-48H48z"></path>
 </svg>
 </td>
-<td style="text-align:left;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 Tasks and deliverables
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;font-weight: bold;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 Due
 </td>
-<td style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/due/">Go</a>
 </td>
-<td style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <svg aria-hidden="true" role="img" viewbox="0 0 576 512" style="height:17px;width:19.12px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#ffa700;overflow:visible;position:relative;">
-<path d="M572.6 270.3l-96 192C471.2 473.2 460.1 480 447.1 480H64c-35.35 0-64-28.66-64-64V96c0-35.34 28.65-64 64-64h117.5c16.97 0 33.25 6.742 45.26 18.75L275.9 96H416c35.35 0 64 28.66 64 64v32h-48V160c0-8.824-7.178-16-16-16H256L192.8 84.69C189.8 81.66 185.8 80 181.5 80H64C55.18 80 48 87.18 48 96v288l71.16-142.3C124.6 230.8 135.7 224 147.8 224h396.2C567.7 224 583.2 249 572.6 270.3z"></path>
+<path d="M384 480h48c11.4 0 21.9-6 27.6-15.9l112-192c5.8-9.9 5.8-22.1 .1-32.1S555.5 224 544 224H144c-11.4 0-21.9 6-27.6 15.9L48 357.1V96c0-8.8 7.2-16 16-16H181.5c4.2 0 8.3 1.7 11.3 4.7l26.5 26.5c21 21 49.5 32.8 79.2 32.8H416c8.8 0 16 7.2 16 16v32h48V160c0-35.3-28.7-64-64-64H298.5c-17 0-33.3-6.7-45.3-18.7L226.7 50.7c-12-12-28.3-18.7-45.3-18.7H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H87.7 384z"></path>
 </svg>
 </td>
-<td style="text-align:left;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 Submission information
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;font-weight: bold;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 Resources
 </td>
-<td style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/resources/">Go</a>
 </td>
-<td style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <svg aria-hidden="true" role="img" viewbox="0 0 640 512" style="height:17px;width:21.25px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#848fd3;overflow:visible;position:relative;">
 <path d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"></path>
 </svg>
 </td>
-<td style="text-align:left;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 Curated list of R and content related resources
 </td>
 </tr>
@@ -230,95 +233,95 @@ Curated list of R and content related resources
 
 ## Materials
 
-There are no required texts for the course, though three free software packages necessary. Additionally four optional resources are provided that will likely help you throughout the semester. With that said, you will receive some supplementary materials in the course as well.
+There are no required texts for this course, but three free software packages are necessary. Additionally, four optional resources are available that will likely assist you throughout the semester. You will also receive some supplementary materials during the course.
 
 ### Texts
 
-To help minimize costs, you are not required to purchase any physical texts. We’ll rely on the various materials below which, barring the APA 7th edition handbook, are either available through the [WVU library](https://library.wvu.edu/) or in digital format.
+To help keep costs down, you are not required to purchase any physical texts. We will use the materials listed below, all of which are available in digital format through the <a href='https://library.wvu.edu/' target='_blank'>WVU Libraries</a>, except for the APA 7th edition handbook.
 
 <center>
 <table>
 <tbody>
 <tr>
-<td style="text-align:left;width: 20em; font-weight: bold;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 20em; font-weight: bold;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 American Psychological Association. (2020). <i>Publication manual of the American Psychological Association</i> (7th ed.).
 </td>
-<td style="text-align:center;width: 5em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
-<td style="text-align:center;width: 5em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://apastyle.apa.org/products/publication-manual-7th-edition">Physical</a>
 </td>
-<td style="text-align:left;width: 10em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 10em; vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <img src="/img/texts/apa7th-text.png" alt="APA 7th handbook">
 </td>
 </tr>
 <tr>
-<td style="text-align:left;width: 20em; font-weight: bold;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 20em; font-weight: bold;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 Creamer, E. G. (2017). <i>An introduction to fully integrated mixed methods research</i>. Sage.
 </td>
-<td style="text-align:center;width: 5em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://methods-sagepub-com.wvu.idm.oclc.org/book/an-introduction-to-fully-integrated-mixed-methods-research">Free</a>
 </td>
-<td style="text-align:center;width: 5em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://us.sagepub.com/en-us/nam/an-introduction-to-fully-integrated-mixed-methods-research/book242814">Physical</a>
 </td>
-<td style="text-align:left;width: 10em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 10em; vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <img src="/img/texts/integmm-text.png" alt="Integrated Mixed text">
 </td>
 </tr>
 <tr>
-<td style="text-align:left;width: 20em; font-weight: bold;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 20em; font-weight: bold;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 Mertens, D. M. (2018). <i>Mixed methods design in evaluation</i>. Sage
 </td>
-<td style="text-align:center;width: 5em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://methods-sagepub-com.wvu.idm.oclc.org/book/mixed-methods-design-in-evaluation">Free</a>
 </td>
-<td style="text-align:center;width: 5em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://us.sagepub.com/en-us/nam/mixed-methods-design-in-evaluation/book249777">Physical</a>
 </td>
-<td style="text-align:left;width: 10em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 10em; vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <img src="/img/texts/mmeval-text.png" alt="Mixed Evaluation text">
 </td>
 </tr>
 <tr>
-<td style="text-align:left;width: 20em; font-weight: bold;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 20em; font-weight: bold;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 Plano Clark, V. L. & Ivankova, N. V. (2015). <i>Mixed methods research: A guide to the field</i>. Sage.
 </td>
-<td style="text-align:center;width: 5em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://methods-sagepub-com.wvu.idm.oclc.org/book/mixed-methods-research-a-guide-to-the-field">Free</a>
 </td>
-<td style="text-align:center;width: 5em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://us.sagepub.com/en-us/nam/mixed-methods-research/book241462">Physical</a>
 </td>
-<td style="text-align:left;width: 10em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 10em; vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <img src="/img/texts/mmres-text.png" alt="Mixed Research text">
 </td>
 </tr>
 <tr>
-<td style="text-align:left;width: 20em; font-weight: bold;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 20em; font-weight: bold;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 Wickham, H., Navarro, D. & Pedersen, T.L. (2021). <i>ggplot2: Elegant graphics for data analysis</i> (2nd and 3rd eds.). Springer.
 </td>
-<td style="text-align:center;width: 5em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://ggplot2-book.org/">Free</a>
 </td>
-<td style="text-align:center;width: 5em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://link.springer.com/book/10.1007/978-3-319-24277-4/">Physical</a>
 </td>
-<td style="text-align:left;width: 10em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 10em; vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <img src="/img/texts/ggplot2-text.png" alt="ggplot2 text">
 </td>
 </tr>
 <tr>
-<td style="text-align:left;width: 20em; font-weight: bold;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 20em; font-weight: bold;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 Wickham, H. (2021). <i>R for data science</i> (1st ed.). O’Reilly Media.
 </td>
-<td style="text-align:center;width: 5em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://r4ds.had.co.nz/">Free</a>
 </td>
-<td style="text-align:center;width: 5em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://www.oreilly.com/library/view/r-for-data/9781491910382/">Physical</a>
 </td>
-<td style="text-align:left;width: 10em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 10em; vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <img src="/img/texts/r-for-data-science-text.png" alt="R for DS text">
 </td>
 </tr>
@@ -326,33 +329,28 @@ Wickham, H. (2021). <i>R for data science</i> (1st ed.). O’Reilly Media.
 </table>
 </center>
 
-There will occasionally be additional articles and videos to read and watch. When this happens, links to these other resources will be included on the content page for that session.
+Occasionally, there will be additional articles and videos to read and watch. When this happens, links to these resources will be provided on the content page for that session.
 
 ### Softwares
 
-The cost of quantitative and qualitative softwares are generally ridiculous. On top of that most are proprietary and essentially make you dependent on its formatting. You’ll find none of that here as we’ll be using selected open-source packages that will never make you fel boxed in.
+Quantitative and qualitative software is often expensive, proprietary, and limit you to their specific environment. In this course you’ll be exposed to open-source software packages and platforms.
 
 #### Taguette
 
-To conduct quantitative analyses, you will be introduced to the open source (and free!) software [Taguette](https://www.taguette.org/) later in the term. Please go to the site as soon as possible to download and install the desktop version.
+To conduct quantitative analyses, you will be introduced to the open-source (and free!) software [Taguette](https://www.taguette.org/) later in the term. Please go to the site as soon as possible to download and install the desktop version.
 
 #### R and RStudio
 
-To conduct quantitative analyses, you will be introduced to the open source (and free!) statistical programming language [<svg aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:steelblue;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>](https://cran.r-project.org/) as soon as the term begins. We will use [RStudio](https://www.rstudio.com/) as the main program to access the language. You can think of R as an engine and RStudio as a car dashboard — R handles all the calculations produces the actual statistics and graphical output, while RStudio provides a nice interface for running R code. Please note that
-
-<div class="text-center">
-
-**you do not need to have any programming experience to use R**
-
-</div>
+To conduct quantitative analyses, you will be introduced to the open source (and free!) statistical programming language [<svg aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:steelblue;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>](https://cran.r-project.org/) as soon as the term begins. We will use [RStudio](https://www.rstudio.com/) s the main program to work with the R language. Think of R as the engine and RStudio as the dashboard — R handles all the computations, while RStudio provides a user-friendly interface for interacting with the code and results.
+\*\*you do not need to have any programming experience to use R!\*
 
 You can [find instructions for installing R and RStudio here](/resource/install/).
 
 ### Help
 
-Data science and statistical programming can be challenging. Computers are stupid and its always the tiny errors in your coding can result in tons of headache. People working in any syntax based software package at any level experience this!
+Data science and statistical programming can be challenging. Computers are stupid, and even the tiniest coding errors can lead to major headaches. Anyone working with syntax-based software at any level experiences this!
 
-But there are multiple resources both online and locally that are available. Prior to our first session, please take a moment to go through this slideshow for a short description of the main outlets.
+Thankfully, there are plenty of resources available both online and locally. Before our first session, please take a moment to go through this slideshow for a quick overview of the main outlets.
 
 <span id="rstats"></span>
 
@@ -390,18 +388,18 @@ But there are multiple resources both online and locally that are available. Pri
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;width: 20em; color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 20em; color: rgba(255, 255, 255, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 Larger version of the presentation
 </td>
-<td style="text-align:center;width: 20em; color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 20em; color: rgba(255, 255, 255, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 PDF of the helpfile
 </td>
 </tr>
 <tr>
-<td style="text-align:center;width: 20em; color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 20em; color: rgba(255, 255, 255, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/slides/Descriptions/Slides-MRE.html"><img src="/logos/web-ico.png" alt="Slack icon" width="35"></a>
 </td>
-<td style="text-align:center;width: 20em; color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 20em; color: rgba(255, 255, 255, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/slides/Descriptions/Slides-MRE.pdf"><img src="/logos/pdf-ico.png" alt="Slack icon" width="35"></a>
 </td>
 </tr>
@@ -417,125 +415,125 @@ You can find descriptions for all the assignments on the [tasks page](/tasks/).
 <table class=" lightable-paper table table-hover table-condensed table-responsive" style="font-family: Roboto Condensed; margin-left: auto; margin-right: auto; width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
-<th style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;">
+<th style="text-align:center;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;">
 Percent
 </th>
-<th style="text-align:left;color: #f7f7f7 !important;background-color: transparent !important;">
+<th style="text-align:left;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;">
 Assignment
 </th>
-<th style="text-align:left;color: #f7f7f7 !important;background-color: transparent !important;">
+<th style="text-align:left;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;">
 Submission
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
+<td style="text-align:center;width: 5em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;">
 10
 </td>
-<td style="text-align:left;width: 15em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
+<td style="text-align:left;width: 15em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;">
 R Training & Tasks
 </td>
-<td style="text-align:left;width: 9em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
+<td style="text-align:left;width: 9em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;">
 Data Camp
 </td>
 </tr>
 <tr>
-<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
+<td style="text-align:center;width: 5em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;">
 10
 </td>
-<td style="text-align:left;width: 15em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
+<td style="text-align:left;width: 15em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;">
 R Data EDA
 </td>
-<td style="text-align:left;width: 9em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
+<td style="text-align:left;width: 9em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;">
 eCampus
 </td>
 </tr>
 <tr>
-<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
+<td style="text-align:center;width: 5em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;">
 5
 </td>
-<td style="text-align:left;width: 15em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
+<td style="text-align:left;width: 15em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;">
 Participation
 </td>
-<td style="text-align:left;width: 9em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
+<td style="text-align:left;width: 9em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;">
 In class
 </td>
 </tr>
 <tr>
-<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
+<td style="text-align:center;width: 5em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;">
 5
 </td>
-<td style="text-align:left;width: 15em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
+<td style="text-align:left;width: 15em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;">
 Think about Studies
 </td>
-<td style="text-align:left;width: 9em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
+<td style="text-align:left;width: 9em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;">
 eCampus
 </td>
 </tr>
 <tr>
-<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
+<td style="text-align:center;width: 5em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;">
 5
 </td>
-<td style="text-align:left;width: 15em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
+<td style="text-align:left;width: 15em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;">
 Create an Argument
 </td>
-<td style="text-align:left;width: 9em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
+<td style="text-align:left;width: 9em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;">
 eCampus
 </td>
 </tr>
 <tr>
-<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
+<td style="text-align:center;width: 5em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;">
 10
 </td>
-<td style="text-align:left;width: 15em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
+<td style="text-align:left;width: 15em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;">
 Develop a Draft
 </td>
-<td style="text-align:left;width: 9em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
+<td style="text-align:left;width: 9em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;">
 eCampus
 </td>
 </tr>
 <tr>
-<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;">
 10
 </td>
-<td style="text-align:left;width: 15em; color: #ffffff !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 15em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;">
 Update the Draft
 </td>
-<td style="text-align:left;width: 9em; color: #ffffff !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 9em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;">
 eCampus
 </td>
 </tr>
 <tr>
-<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;">
 10
 </td>
-<td style="text-align:left;width: 15em; color: #ffffff !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 15em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;">
 Refine the Draft
 </td>
-<td style="text-align:left;width: 9em; color: #ffffff !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 9em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;">
 eCampus
 </td>
 </tr>
 <tr>
-<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;">
 30
 </td>
-<td style="text-align:left;width: 15em; color: #ffffff !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 15em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;">
 Revise and Resubmit
 </td>
-<td style="text-align:left;width: 9em; color: #ffffff !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 9em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;">
 eCampus
 </td>
 </tr>
 <tr>
-<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;">
 5
 </td>
-<td style="text-align:left;width: 15em; color: #ffffff !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 15em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;">
 Give an Elevator Pitch
 </td>
-<td style="text-align:left;width: 9em; color: #ffffff !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 9em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;">
 eCampus/Slack
 </td>
 </tr>
@@ -549,52 +547,52 @@ eCampus/Slack
 <table class=" lightable-paper table table-hover table-condensed table-responsive" style="font-family: Roboto Condensed; margin-left: auto; margin-right: auto; width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
-<th style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;">
+<th style="text-align:center;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;">
 Grade
 </th>
-<th style="text-align:left;color: #f7f7f7 !important;background-color: transparent !important;">
+<th style="text-align:left;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;">
 Range
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
+<td style="text-align:center;width: 5em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;">
 A
 </td>
-<td style="text-align:left;width: 6.5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
+<td style="text-align:left;width: 6.5em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;">
 90 &#150; 100%
 </td>
 </tr>
 <tr>
-<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
+<td style="text-align:center;width: 5em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;">
 B
 </td>
-<td style="text-align:left;width: 6.5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
+<td style="text-align:left;width: 6.5em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;">
 80 &#150; 89%
 </td>
 </tr>
 <tr>
-<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
+<td style="text-align:center;width: 5em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;">
 C
 </td>
-<td style="text-align:left;width: 6.5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
+<td style="text-align:left;width: 6.5em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;">
 70 &#150; 79%
 </td>
 </tr>
 <tr>
-<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
+<td style="text-align:center;width: 5em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;">
 D
 </td>
-<td style="text-align:left;width: 6.5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
+<td style="text-align:left;width: 6.5em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;">
 60 &#150; 69%
 </td>
 </tr>
 <tr>
-<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
+<td style="text-align:center;width: 5em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;">
 F
 </td>
-<td style="text-align:left;width: 6.5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;">
+<td style="text-align:left;width: 6.5em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;">
 &#60; 60%
 </td>
 </tr>
@@ -609,7 +607,7 @@ Please watch this video:
 <iframe src="https://player.vimeo.com/video/270014784" width="640" height="360" frameborder="0" allow="fullscreen" allowfullscreen id="officehours" style="display: block; margin: 0 auto 1rem;">
 </iframe>
 
-Office hours are set times dedicated to you the student![^1]). This means that I will be in my office or at home waiting for you to ~~come by~~ talk to me remotely with whatever questions you have. This is the best and easiest way to find me and the best chance for discussing class material and concerns.
+Office hours are set times dedicated to you, the student! This means I will be available either in my office or remotely, ready to discuss any questions you have. This is the best and easiest way to reach me, offering the best opportunity to talk about class material and any concerns.
 
 Due to the ongoing pandemic, we can only meet via Zoom. This can be scheduled using the [calendar](https://calendly.com/nopiecharts/short15) app.
 
@@ -632,24 +630,13 @@ Here are the rules, expectations, and policies that I came up with or stole from
       <br>
       <br>
 
-- **Technology use**: Use phones, computers, etc. responsibly. We’re all adults[^2].
+- **Technology use**: Use phones, computers, etc. responsibly. We’re all adults[^1].
 
 - **Assumptions**:<br>
 
-  1.  Just assume that all submissions are to be written **formally** and should include with the appropriate use of language, grammar, syntax, etc. and follow standard APA 7th edition formatting guidelines where applicable.
-  2.  People who are easily offended by content, believe their work to be flawless, generally unable to handle criticism, or are looking for rainbows and ponies should consider looking at another course. However if you care about data, practice and learning a highly marketable practice, you’ve come to the right place.
-  3.  There is a great deal of content in this course and you will likely struggle with some at times. Given that, there is also something to be said about the satisfaction a person gets when figuring something out, but nowhere is it written that has to be on your own. You may find that a nudge here or there elicits the same feeling so please reach out for help.
-
-### Learning and knowledge during a pandemic
-
-When course objectives are written explicitly and clearly, they provide the information you need to figure out what a student should be able to do by the end of a given term. In fact, professors often test your proficiency in an area through multiple assessments such as exams, papers, presentations, etc where you are essentially asked to show us what you have *learned*. However learning is not the same as knowledge .
-To save you from a long philosophical narrative on epistemology, in a nutshell we humans aren’t that good at evaluating a person’s knowledge mainly because its not a well-defined concept. With that said, an indicator of knowledge is in a person’s ability to successfully explain a high level concept in such a way that the lay person can understand it. Every so often, consider asking yourself this:
-
-<center>
-<p id="rounded_corners">
-Can I describe <i>whatever</i> using language so that a child could understand it?
-<p>
-</center>
+  1.  All submissions are to be written **formally** and should include with the appropriate use of language, grammar, syntax, etc. and follow standard APA 7th edition formatting guidelines where applicable.
+  2.  People who are easily offended by content, believe their work to be flawless, or are generally unable to handle criticism. However if you care about data, real-world practice, and learning a highly marketable skill then you’ve come to the right place.
+  3.  This course covers a lot of material, and it is normal to encounter challenges along the way. While there is value in the satisfaction of solving things on your own, it does not mean you have to do it entirely by yourself. Sometimes, a little guidance can bring about the same sense of accomplishment, so do not hesitate to reach out for help.
 
 ## Course Policies
 
@@ -765,6 +752,4 @@ Technical support regarding your use of eCampus is available by contacting [304-
 
 This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
-[^1]: There is some misunderstanding about what office hours actually are! [For some reason that is not clear, some graduate students have noted in my course evaluations that they believe these to be the times I *should not* be disturbed and it seems to be somewhat of a trend](https://www.chronicle.com/article/Can-This-Man-Change-How-Elite/245714/) which is the exact opposite of what they are for!
-
-[^2]: …most of the time.
+[^1]: …most of the time.

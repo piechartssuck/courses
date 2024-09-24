@@ -13,9 +13,12 @@ output:
 source(here::here("content", "com_libs.R"))
 ```
 
-## Most People Forget the Mixed Part of Mixed Methods
+## Many Mixed-Methods Studies Lack the Mixing Component
 
-Mixed-Method studies are the natural byproduct of an ongoing war between people who are distinctly qualitative or quantitative. For many, the ability to look at data through two dynamically opposing approaches has opened doors that simply did not exist before and provides many design choices which can be run sequentially, concurrently, or even at times both. Furthermore when a one method is weaker, its complement can provide additional support through the mixing process. With all of these benefits, *why aren't most studies mixed methods?* This can be answered in two ways: 1) misunderstanding/misidentification: researchers for whatever reason do not to conduct the mixing process resulting in a multi-methods study and 2) methodological/structural: there is a greater risk of an entire study collapsing if errors in one approach affects the other. 
+Mixed-method studies emerged from the ongoing divide between proponents of qualitative and quantitative approaches. For many, combining these two distinct perspectives has opened new possibilities, offering flexibility in research design that can be sequential, concurrent, or even a blend of both. Additionally, when one method shows weaknesses, its complement can provide valuable support through the mixing process. Given these advantages, *why aren’t more studies mixed-methods?* Good question. There are two main reasons:
+
+- Misunderstanding or misidentification: Researchers may incorrectly label their study as mixed-methods without fully engaging in the integration process, resulting in a multi-methods study instead.
+- Methodological or structural challenges: Mixed-method studies carry greater risk, as errors in one approach can affect the other, potentially jeopardizing the entire study.
 
 ## Course objectives
 
@@ -106,21 +109,21 @@ kable(textitems,
 # FAQ
 
 ### *Is the course content difficult?*
-You've probably heard an answer like this before: *...at times some of the material can be dense.* While ambiguous, difficulty is subjective, varies, and will likely depend on your academic and practical history. Instead consider focusing on the following question
+You have likely heard a response like this before:  *...at times some of the material can be hard...* While vague, difficulty is subjective, varies, and will depend on your academic and practical background. Instead, focus on this question:
 
 <center>
 <p id="rounded_corners">
-Can I first search for help independently and then reach out as needed?
+Can I search for help independently first and then reach out if needed?
 </p>
 </center>
 
-If the answer is an overall yes, then you have a good shot at succeeding in this class. Make sure to go through the <a href="#rstats"><span style="color:#03dac6"><b>How to Ask for Help with R and RStudio</b></span></a>.
+If your answer is yes, then you are likely well-positioned to succeed in this class. Make sure to go through the <a href="#rstats"><span style="color:#03dac6"><b>How to Ask for Help with R and RStudio</b></span></a>.
 
 ### *Is R difficult?*
-Learning `r fa("r-project", fill = "steelblue")` can be especially challenging at first—it's akin to learning a new language like Spanish or even mathematics. Even experienced R users get frustrated...and so much so that some of us have swear jars. However as silly as it sounds one of the best feelings is to overcome a logical roadblock so if you find yourself getting irritated, try the following: take a break, go let some frustration out, sleep, discuss with a peer, etc. If you are at your limit, take a few breaths and contact me!
+Learning `r fa("r-project", fill = "steelblue")` can be especially challenging at first—it’s like learning a new language, whether it’s Spanish or even math. Even experienced R users get frustrated—some of us even have swear jars! However, as silly as it sounds, one of the best feelings is overcoming a logical roadblock. So, if you find yourself getting irritated, try this: take a break, step away for a bit, sleep on it, and/or discuss it with a peer. If you are reaching your limit, take a few deep breaths and reach out to me!
 
 ### *What if I'm a Visual/Aural/Read-write/Kinesthetic learner?*
-You're not one or even any of those. There's not one accepted study that supports one type of learning style over another. In fact, there aren't even any studies that support these four classifications either. You learn the best using multiple approaches which is why there is both a [Readings](/readings/) and [Trainings](/trainings/) section. At one time I denoted multiple papers to support this, but many of the sources I listed were also cited in this fantastic video:
+You do not fall into any one of those categories. In fact, there is no widely accepted study that supports a single learning style over another, nor is there solid evidence backing these four specific classifications. Research shows that people learn best through multiple approaches, which is why this course includes both a [Readings](/readings/) and [Trainings](/trainings/) section. At one point, I provided several papers to support this, but many of those sources are also referenced in this excellent video:
 
 <center>
 <iframe src="https://www.youtube.com/embed/rhgwIhB58PA" width="640" height="360" frameborder="0" allow="fullscreen" style="display: block; margin: 0 auto 1rem;"></iframe>
@@ -185,11 +188,11 @@ tableofcontents %>%
 </center>
 
 ## Materials
-There are no required texts for the course, though three free software packages necessary. Additionally four optional resources are provided that will likely help you throughout the semester. With that said, you will receive some supplementary materials in the course as well.
+There are no required texts for this course, but three free software packages are necessary. Additionally, four optional resources are available that will likely assist you throughout the semester. You will also receive some supplementary materials during the course.
 
 ### Texts
 
-To help minimize costs, you are not required to purchase any physical texts. We'll rely on the various materials below which, barring the APA 7th edition handbook, are either available through the [WVU library](https://library.wvu.edu/) or in digital format.
+To help keep costs down, you are not required to purchase any physical texts. We will use the materials listed below, all of which are available in digital format through the  <a href='https://library.wvu.edu/' target='_blank'>WVU Libraries</a>, except for the APA 7th edition handbook.
 
 ```{r opttextstibble, echo=FALSE, message=FALSE}
 
@@ -246,32 +249,28 @@ opttextstib %>%
 ```
 </center>
 
-There will occasionally be additional articles and videos to read and watch. When this happens, links to these other resources will be included on the content page for that session.
+Occasionally, there will be additional articles and videos to read and watch. When this happens, links to these resources will be provided on the content page for that session.
 
 ### Softwares
 
-The cost of quantitative and qualitative softwares are generally ridiculous. On top of that most are proprietary and essentially make you dependent on its formatting. You'll find none of that here as we'll be using selected open-source packages that will never make you fel boxed in.
+Quantitative and qualitative software is often expensive, proprietary, and limit you to their specific environment. In this course you'll be exposed to open-source software packages and platforms.
 
 #### Taguette
 
-To conduct quantitative analyses, you will be introduced to the open source (and free!) software [Taguette](https://www.taguette.org/) later in the term. Please go to the site as soon as possible to download and install the desktop version. 
-
+To conduct quantitative analyses, you will be introduced to the open-source (and free!) software [Taguette](https://www.taguette.org/) later in the term. Please go to the site as soon as possible to download and install the desktop version. 
 
 #### R and RStudio
 
-To conduct quantitative analyses, you will be introduced to the open source (and free!) statistical programming language [`r fa("r-project", fill = "steelblue")`](https://cran.r-project.org/) as soon as the term begins. We will use [RStudio](https://www.rstudio.com/) as the main program to access the language. You can think of R as an engine and RStudio as a car dashboard — R handles all the calculations produces the actual statistics and graphical output, while RStudio provides a nice interface for running R code. Please note that
-
-<div class="text-center">
-**you do not need to have any programming experience to use R**
-</div>
+To conduct quantitative analyses, you will be introduced to the open source (and free!) statistical programming language [`r fa("r-project", fill = "steelblue")`](https://cran.r-project.org/) as soon as the term begins. We will use [RStudio](https://www.rstudio.com/) s the main program to work with the R language. Think of R as the engine and RStudio as the dashboard — R handles all the computations, while RStudio provides a user-friendly interface for interacting with the code and results. 
+**you do not need to have any programming experience to use R!*
 
 You can [find instructions for installing R and RStudio here](/resource/install/).
 
 ### Help
 
-Data science and statistical programming can be challenging. Computers are stupid and its always the tiny errors in your coding can result in tons of headache. People working in any syntax based software package at any level experience this!
+Data science and statistical programming can be challenging. Computers are stupid, and even the tiniest coding errors can lead to major headaches. Anyone working with syntax-based software at any level experiences this!
 
-But there are multiple resources both online and locally that are available. Prior to our first session, please take a moment to go through this slideshow for a short description of the main outlets.
+Thankfully, there are plenty of resources available both online and locally. Before our first session, please take a moment to go through this slideshow for a quick overview of the main outlets.
 
 <span id="rstats"></span>
 
@@ -425,7 +424,7 @@ Please watch this video:
 
 <iframe src="https://player.vimeo.com/video/270014784" width="640" height="360" frameborder="0" allow="fullscreen" allowfullscreen id="officehours" style="display: block; margin: 0 auto 1rem;"></iframe>
 
-Office hours are set times dedicated to you the student!^[There is some misunderstanding about what office hours actually are! [For some reason that is not clear, some graduate students have noted in my course evaluations that they believe these to be the times I *should not* be disturbed and it seems to be somewhat of a trend](https://www.chronicle.com/article/Can-This-Man-Change-How-Elite/245714/) which is the exact opposite of what they are for!]). This means that I will be in my office or at home waiting for you to ~~come by~~ talk to me remotely with whatever questions you have. This is the best and easiest way to find me and the best chance for discussing class material and concerns.
+Office hours are set times dedicated to you, the student! This means I will be available either in my office or remotely, ready to discuss any questions you have. This is the best and easiest way to reach me, offering the best opportunity to talk about class material and any concerns.
 
 Due to the ongoing pandemic, we can only meet via Zoom. This can be scheduled using the [calendar](https://calendly.com/nopiecharts/short15) app. 
 
@@ -446,20 +445,9 @@ Here are the rules, expectations, and policies that I came up with or stole from
 - **Technology use**: Use phones, computers, etc. responsibly. We're all adults^[...most of the time.].
 
 - **Assumptions**:<br>
-  1. Just assume that all submissions are to be written **formally** and should include with the appropriate use of language, grammar, syntax, etc. and follow standard APA 7th edition formatting guidelines where applicable. 
-  2. People who are easily offended by content, believe their work to be flawless, generally unable to handle criticism, or are looking for rainbows and ponies should consider looking at another course. However if you care about data, practice and learning a highly marketable practice, you've come to the right place.
-  3. There is a great deal of content in this course and you will likely struggle with some at times. Given that, there is also something to be said about the satisfaction a person gets when figuring something out, but nowhere is it written that has to be on your own. You may find that a nudge here or there elicits the same feeling so please reach out for help.
-
-### Learning and knowledge during a pandemic
-
-When course objectives are written explicitly and clearly, they provide the information you need to figure out what a student should be able to do by the end of a given term. In fact, professors often test your proficiency in an area through multiple assessments such as exams, papers, presentations, etc where you are essentially asked to show us what you have *learned*. However learning is not the same as knowledge . 
-To save you from a long philosophical narrative on epistemology, in a nutshell we humans aren't that good at evaluating a person's knowledge mainly because its not a well-defined concept. With that said, an indicator of knowledge is in a person's ability to successfully explain a high level concept in such a way that the lay person can understand it. Every so often, consider asking yourself this:
-
-<center>
-<p id="rounded_corners">
-Can I describe <i>whatever</i> using language so that a child could understand it? 
-<p>
-</center>
+  1. All submissions are to be written **formally** and should include with the appropriate use of language, grammar, syntax, etc. and follow standard APA 7th edition formatting guidelines where applicable. 
+  2. People who are easily offended by content, believe their work to be flawless, or are generally unable to handle criticism. However if you care about data, real-world practice, and learning a highly marketable skill then you've come to the right place.
+  3. This course covers a lot of material, and it is normal to encounter challenges along the way. While there is value in the satisfaction of solving things on your own, it does not mean you have to do it entirely by yourself. Sometimes, a little guidance can bring about the same sense of accomplishment, so do not hesitate to reach out for help. 
 
 ## Course Policies
 
