@@ -1,0 +1,1378 @@
+---
+title: "Selecting a Topic and Detecting Literature for Review"
+subtitle: "EDP 612 Week 2"
+author: "Dr. Abhik Roy"
+output: 
+ xaringan::moon_reader:
+   css: ['xaringan-themer.css', 'custom.css']
+   nature:
+     ratio: 16:9
+     highlightStyle: github
+     highlightLines: true
+     countIncrementalSlides: false
+     navigation:
+         scroll: false
+---
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+  MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+    cancel: ["Extension","cancel"],
+    bcancel: ["Extension","cancel"],
+    xcancel: ["Extension","cancel"],
+    cancelto: ["Extension","cancel"]
+  });
+});
+</script>
+
+<style>
+section {
+    display: flex;
+    display: -webkit-flex;
+}
+
+section p {
+    margin: auto;
+}
+
+section {
+    height: 600px;
+    width: 60%;
+    margin: auto;
+    border-radius: 20px;
+    background-color: #212121;
+}
+
+section p {
+    text-align: center;
+    font-size: 30px;
+    background-color: #212121;
+    border-radius: 20px;
+    font-family: Roboto Condensed;
+    font-style: bold;
+    padding: 15px;
+    color: #bff4ee;
+}
+
+#center {
+
+text-align: center;
+
+}
+
+.center p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.tab {
+    display: inline-block;
+    margin-left: 40px;
+}
+</style>
+
+```{r setup, include=FALSE, purl=FALSE}
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+library(fontawesome)
+library(here)
+library(DT)
+library(scales)
+library(latex2exp)
+library(rvest)
+library(showtext)
+font_add_google("Roboto Condensed", "roboto")
+showtext_auto()
+```
+
+```{css echo=FALSE}
+.highlight-last-item > ul > li,
+.highlight-last-item > ol > li {
+  opacity: 0.5;
+}
+.highlight-last-item > ul > li:last-of-type,
+.highlight-last-item > ol > li:last-of-type {
+  opacity: 1;
+}
+```
+
+```{r echo = FALSE, purl=FALSE}
+xaringanthemer::style_duo(
+  primary_color = "#212121",
+  secondary_color = "#bff4ee",
+  table_row_border_color = "#212121",
+  table_row_even_background_color = "#212121",
+  footnote_font_size = "0.6em",
+  header_font_google = xaringanthemer::google_font("Roboto Condensed", "700"),
+  text_font_google   = xaringanthemer::google_font("Roboto Condensed", "400")
+)
+
+xaringanExtra::use_xaringan_extra(c("tile_view", 
+                                    "animate_css", 
+                                    "tachyons"))
+
+xaringanExtra::use_logo(
+  image_url = here::here("static", "img", "course_hex.png"),
+  link_url = "https://edp612.asocialdatascientist.com",
+  position = xaringanExtra::css_position(top = "1em", right = "1em")
+)
+
+```
+
+
+# Research Stages
+
+--
+
+1. Identifying a research problem
+
+--
+
+>- research purpose(s) *or*
+
+--
+
+>- research question(s) *or*
+
+--
+
+>- both!
+
+--
+
+<ol start=2>
+<li> Writing a research proposal
+</ol>
+
+--
+
+<ol start=3>
+<li> Conducting a pilot study 
+</ol>
+
+--
+
+>- optional but ***highly*** recommended
+
+--
+
+>- we will get into the reason later in the term
+
+--
+
+<ol start=4>
+<li> Conducting the main study
+</ol>
+
+--
+
+<ol start=5>
+<li> Preparing a report
+</ol>
+
+--
+
+
+---
+
+# Ways to Find a Research Question
+
+--
+
+- Replicate and extent research
+
+--
+
+- Research assistantship
+
+--
+
+- Theory-based research
+
+--
+
+- Volunteer to assist with research 
+
+--
+
+- Work on a team project
+
+---
+
+## Replicate and Extend Research
+
+--
+
+- Replicates and extends the study of a problem that was investigated by other researchers
+
+--
+
+- Extension methods:
+
+--
+
+>- Check the findings of a “breakthrough” study
+
+--
+
+>- Check the validity of research findings across different populations
+
+--
+
+>- Check trends or change over time
+
+--
+
+>- Check findings using different methodology
+
+--
+
+>- Develop more effective or efficient interventions
+
+---
+
+## Research assistantship
+
+- Look for an opportunity to conduct research under someone. 
+
+--
+
+>- Typically paid and covers tuition (but not fees!)
+
+--
+
+>- Requires 20 hours per week on average (but that can fluctuate)
+
+--
+
+<br>
+- Even if its not something you are directly interested in, often the experience matters
+
+--
+
+>- Other opportunities
+
+--
+
+>- Higher salaries outside of academia
+
+--
+
+>- Publications
+
+--
+
+>- Recognition
+
+--
+
+>- Recommendations
+
+---
+
+## Theory-Based Research
+
+--
+
+- Tests a developed theory
+
+--
+
+- Supports a theory but never proves it!
+
+--
+
+  - Advantages:
+  
+--
+  
+  >- Yields important findings
+  
+--
+  
+  >- Theory can provide a rational basis for explaining or interpreting the results of research
+
+---
+
+## Volunteer to assist with research 
+
+--
+
+- Same advantages as a research assistantship but 
+
+--
+
+  - you can often work as much or as little as you wish
+  
+--
+
+  - is typically unpaid or paid on an hourly basis
+
+---
+
+## Working on Team Projects
+
+--
+
+<center>
+Conduct studies that fall within a larger project’s scope
+</center>
+
+--
+
+.pull-left[
+<b><i>Advantages</i></b><br>
+- Experience with the dynamics of a research team
+
+- Learn from team members
+
+- Participate in a larger, more sophisticated study
+
+- Financial support is usually available
+]
+
+--
+
+.pull-right[
+<b><i>Disadvantages</i></b><br>
+- Disagreements of ownership of data
+
+- Incompatible goals among team members
+
+- Interdependency and/or uncooperative team members
+]
+
+---
+
+### Note: Not Being Pushy but Needing to Be Straightforward   
+
+--
+
+</center>
+**You should always ask what potential benefits may come from your work** 
+</center>
+
+--
+
+>- Authorships
+
+--
+
+>- Independence
+
+--
+
+>- Presentations
+
+--
+
+>- Proposals
+
+--
+
+>- Monetary
+
+---
+
+# Preparing a Research Proposal
+
+--
+
+- Detailed plan of the study, aka blueprint
+
+--
+
+>- Absolutely necessary for <span style="color:#428bca">quantitative</span> research
+
+--
+
+>- May or may not be necessary for <span style="color:#d9534f">qualitative</span> research
+
+--
+
+- Sections
+
+  1. Introduction
+
+--
+
+  2. Literature review
+
+--
+
+  3. Research design
+
+--
+
+  4. Research method
+
+--
+
+  5. Data analysis
+
+--
+
+  6. Human subjects protection (if applicable)
+
+--
+
+  7. Anticipated timeline
+
+---
+
+## Introduction Section
+
+--
+
++ States research problem
+
+--
+
+	+ Explains how the proposed study is grounded in research literature
+	
+--
+
+	+ Suggests its potential contribution to research knowledge and educational practice
+	
+--
+
+	+ Lists the research hypotheses, questions, or objectives
+
+---
+
+## Research Hypotheses
+
+--
+
++ <span style="color:#428bca">Quantitative</span> research
+
+--
+
+	+ Directional hypothesis
+	+ Null hypothesis
+	+ Qualitative research
+	+ Formal hypothesis not typically used
+	
+---
+
+## Literature Review Section
+
+--
+
++ Findings of other studies in the line of research that includes each critical study
+
+--
+
+>- Findings of students in lines of research that have some degree of relevance to the proposed study
+
+--
+
+>- Critique of methods used in previous research
+	
+--
+
+>- Conclusions drawn by researchers who previously have reviewed the literature relevant to your proposed study
+	
+--
+
+>- Applications, if any, of previous research findings to professional practice
+	
+---
+
+## Research Methods Section
+
+--
+
++ Sampling procedures
+
+--
+
+	+ <span style="color:#428bca">Quantitative</span>: Explain how sample is representative of population
+
+--
+
+	+ <span style="color:#d9534f">Qualitative</span>: Explain why case selected will yield significant insights about phenomenon of interest
+
+--
+
++ Data collection procedures
+
+--
+
++ Instruments
+
+--
+
++ Variables proposed to be measured
+
+--
+
++ Validity
+
+--
+
++ Reliability
+
+--
+
++ Steps in measurement
+
+--
+
++ Other procedures critical to study
+
+---
+
+## Data Analysis Section
+
+--
+
++ Tentative plan for data analysis
+
+--
+
+	+ Procedures for scoring tests or other measures
+	
+--
+
+	+ Procedures for creating computer data files
+	
+---
+
+## Protection of Human Subjects Section
+
+--
+
++ If involve human subjects, must include
+
+--
+
+>- [Completion of Applicable CITI Training Modules](https://human.research.wvu.edu/get-started/training/citi-ethics-training)
+
+--
+
+>- [IRB Approval](https://human.research.wvu.edu/get-started/training/wvu-e-submission-system)
+
+---
+
+## Time Line Section
+
+--
+
++ Each step of study with approximate date when to be completed
+  
+  
+--
+
+>- Estimated number of hours of days required per step
+  
+--
+ 
+>- Provide a linear visualization if possible
+  
+---
+
+#  Conducting a Pilot Study
+
+--
+
++ Small scale testing of the procedures that you plan to use in the main study
+
+--
+
+>- Revisions of procedures based on pilot study findings
+	
+--
+
+>- Use multiple iterations if needed
+  
+---
+
+#  Thesis/Dissertation Organization
+
+--
+
+- Traditional Oxford design
+
+--
+
+- Slowly becoming obselete
+
+--
+
+- Publications preferred
+
+---
+
+## Front
+
+--
+
+- Common Format/not Mandated
+
+--
+
+- Title page
+
+>- Preface and acknowledgements
+
+>- Table of contents
+
+>- List of tables
+
+>- List of figures
+	
+---
+
+## Body
+
+--
+
+- Common Format/not Mandated
+
+--
+
+- First three chapters correspond to proposal
+
+>- Chapter 1: Introduction
+
+>- Chapter 2: Literature
+Review
+
+>- Chapter 3: Research Method
+
+>- Chapter 4: Results
+
+>- Chapter 5: Discussion
+
+---
+
+###  Chapter 1: Introduction
+
+--
+
++ General statement of the problem
+
+--
+
+>- Significance of the study
+
+>- Research hypotheses, questions, objectives, or purposes
+
+---
+
+###  Chapter 2: Review of Literature
+
+--
+
++ Review of previous research and opinion
+
+--
+
+>- Interpretive summary of the current state of knowledge
+
+---
+
+###  Chapter 3: Research Method
+
+--
+
++ Research design
+
+--
+
+>- Sample selection and procedures for human subject protection
+
+>- Measures
+
+>- Other procedures
+
+>- Time line
+
+---
+
+###  Chapter 4: Results
+
+--
+
++ Overview of statistical procedures
+
+--
+
+>- Description of results for each hypothesis, question, objective, or purpose
+
+>- Supplemental analyses
+
+---
+
+###  Chapter 5: Discussion
+
+--
+
++ Interpretation of each result
+
+--
+
+--
+
+>- Limitations of the study
+
+>- Implications for future research
+
+>- Implications for practice
+
+---
+
+## Organization 
+
+--
+
+- Common Format/not Mandated
+
+--
+
+>- Bibliography
+
+>- Appendixes
+
+---
+
+## Dissemination
+
+--
+
+>- Journals
+
+>- Professional meetings
+
+---
+
+##  Ethical Considerations
+
+- Honestly is always the best policy
+
+--
+
+- It is very difficult to get away with unethical practices in academia, though it unfortuantely still happens
+
+---
+
+### Planning and Designing Research 
+
+--
+
++ Researcher qualifications
+
+--
+
+>- Conflict of interest
+
+>- Neglect of important topics
+
+---
+
+### Research Methodology 
+
++ Control group experience
+
+--
+
+>- Use of deception
+
+>>- Dehoaxing
+
+>>- Desensitization
+
+--
+
+>- Use of tests
+
+--
+
+>- Termination of treatment conditions
+
+--
+
+>- Data collection and analysis
+
+---
+
+### Reporting of Research 
+
+--
+
++ Authorship
+
+--
+
+>- Ethical Standards of the American Educational Research Association
+
+--
+
+>- Plagiarism, paraphragiarism, and overuse of quotes
+
+--
+
+>- Partial and dual publication
+
+---
+
+### Formal Regulations
+
+--
+
++ Statements of ethical principles by governmental and professional organizations
+
+	+ Ethical Standards of the American Educational Research Association
+	
+	+ Ethical Principles of Psychologists and Code of Conduct
+	
+	+ Institutional Review Boards
+
+---
+
+#  Institutional Review Boards 
+
+--
+
++ IRB has at least five members and their qualifications must satisfy criteria specified in Federal code
+
+--
+
++ Research that is a “systematic investigation…designed to contribute to generalizable knowledge” must undergo IRB approval
+
+---
+
+#  Criteria for IRB Approval of Research 
+
++ Risks to subjects are minimized
+
+--
+
+>- Risks to subjects are reasonable in relation to anticipated benefits, if any, to subjects, and the importance of the knowledge that may reasonably be expected to result
+
+--
+
+>- Selection of subjects is equitable
+
+--
+
+>- Informed consent will be sought from each prospective subject or the subject’s legally authorized representative
+
+---
+
+#  Criteria for IRB Approval of Research 
+
++ Informed consent will be documented appropriately
+
+--
+
+>- When appropriate, the research plan makes adequate provision for monitoring the data collected to ensure the safety of subjects
+
+--
+
+>- When appropriate, there are adequate provisions to protect the privacy of subjects and to maintain the confidentiality of data
+	
+--
+	
+>- When some or all of the subjects are likely to be vulnerable to coercion or undue influence, additional safeguards have been included in the study to protect the rights and welfare of these subjects
+
+---
+
+#  Site Relations in Educational Research 
+
++ Location of a research site
+
+--
+
+>- Securing permission and cooperation
+
+>- Building a relationship with the site
+
+>- Dealing with human relations issues
+
+---
+
+#  Literature Review Purposes 
+
+--
+
++ Delimiting the research problem
+
+--
+
+>- Seeking new lines of inquiry
+
+>- Avoiding fruitless approaches
+
+>- Gaining methodological insights
+
+>- Identifying recommendations for further research
+
+>- Seeking support for grounded theory
+
+---
+
+#  Major Steps in a Literature Review 
+
+--
+
++ Search preliminary sources
+
+--
+
+>- Use secondary sources
+
+--
+
+>- Read primary sources
+
+--
+
+>- Synthesize the literature
+
+---
+
+#  Preliminary Sources 
+
+--
+
+<center>
+Online Preliminary Sources
+</center>
+
+--
+
+.pull-left[
+>- Bibliographies
+
+>- Book reviews
+
+>- Books
+
+>- Directories
+
+>- Dissertations Abstracts
+
+>- Journal articles
+]
+
+--
+
+.pull-right[
+>- [ERIC](https://eric.ed.gov/)
+
+>- [Closed Dissertations and Theses](https://about.proquest.com/en/dissertations/)
+
+>- [Open Dissertations and Theses](https://biblioboard.com/opendissertations/)
+
+>- [Google Scholar](https://scholar.google.com/)
+
+>- [NCBI](https://www.ncbi.nlm.nih.gov/)
+
+>- [PsycINFO](https://www.apa.org/pubs/databases/psycinfo)
+
+>- [SCOPUS](https://www.scopus.com/home.uri)
+
+>- [Web of Science](https://clarivate.com/webofsciencegroup/solutions/web-of-science/)
+]
+
+---
+
+#  Search Strategies in Using Preliminary Sources 
+
++ Keyword 
+
+	+ Boolean operator
+	
+	+ Truncation
+
+---
+
+#  Using Secondary Sources 
+
+--
+
++ Combine knowledge from many primary sources into a single publication
+
+--
+
++ Generally discouraged
+
+--
+
++ Extremely hard to defend
+
+--
+
+>- Annual reviews
+
+--
+
+>- Encyclopedias
+
+--
+
+>- Journals specializing in literature reviews
+
+--
+
+>- Handbooks
+
+---
+
+#  Reading Primary Sources 
+
+--
+
++ Direct report of an event by an individual who actually observed or participated in it
+
+--
+
+>- Use coding scheme to classify articles
+
+--
+
+>- Evaluate primary studies
+
+---
+#  Synthesizing Findings of Literature Review 
+
++ Read Example literature reviews
+
+--
+
++ Common flaws - Review
+
+--
+
+>- is not related to study being reported
+
+--
+
+>- focuses on research findings without considering soundness of methodology
+
+--
+
+>- does not include a description of search procedures
+
+--
+
+>- consists of a set of isolated findings, opinions, and ideas
+
+---
+
+##  Synthesizing <span style="color:#428bca">Quantitative</span> Research Findings 
+
+--
+
++ Identify all documents from literature search that report statistical results
+
+--
+
++ Determine how to synthesize results
+
+--
+
+>- Narrative review
+
+>- Vote counting
+
+>- $\chi^2$ (Chi-Square) method
+
+>- Meta-analysis and effect sizes
+
+>- Confidence intervals
+
+>- Machine Learning (when absolutely necessary)
+
+>- etc...
+
+---
+
+##  Synthesizing <span style="color:#d9534f">Qualitative</span> Research Findings 
+--
+
++ “Retain the uniqueness and holism of accounts even as we synthesize them”
+
+--
+
++ Multivocal literature
+
+>- Create an audit trail
+
+>- Define the focus of the review
+
+>- Search for relevant literature
+
+>- Classify the documents
+
+>- Create summary databases
+
+>- Identify constructs and hypothesized causal linkages
+
+>- Search for contrary findings and rival interpretations
+
+>- Use colleagues or informants to corroborate findings
+
+>- etc...
+
+---
+
+# Keeping Track of Sources
+
+.pull-left[
+<b><i>Some Notable Paid Softwares</i></b><br>
+- [Citavi](https://www.citavi.com/en)
+
+- [EndNote](https://endnote.com/)
+
+- [Papers](https://www.papersapp.com/)
+
+- [RefWorks](https://www.refworks.com)
+]
+
+.pull-right[
+<b><i>Some Notable Free or Freemium  Softwares</i></b><br>
+- [BibDesk](https://bibdesk.sourceforge.io/)
+
+- [JabRef](https://www.jabref.org/)
+
+- [Mendeley](https://www.mendeley.com/)
+
+- [Zotero](https://www.zotero.org/)
+]
+
+---
+
+# Battle of the Freemiums: Mendeley vs Zotero 
+
+```{r echo=FALSE}
+webpage <- 
+  read_html("https://www.library.yorku.ca/web/research-learn/citing-your-work-academic-integrity/citations/zotero-vs-mendeley-comparison/")
+
+webpage %>%
+  html_element("table") %>% 
+  html_table(convert = FALSE) %>% 
+  slice(1:5) %>%
+  kbl(col.names = c("Category", "Mendeley", "Zotero"), 
+      "html", 
+      escape = FALSE,
+      align = 'lll') %>%
+  kable_paper(full_width = FALSE,
+              font_size = 12) %>%
+  column_spec(1, width = "10em", color = "#ffffff", italic = TRUE) %>%
+  column_spec(2, width = "20em", color = "#ffffff") %>%
+  column_spec(3, width = "20em", color = "#ffffff") %>%
+  row_spec(0, color = "#f7f7f7") %>%
+  footnote(
+    general = "<span style='color:#ffffff'><i><a href='https://www.library.yorku.ca/web/research-learn/citing-your-work-academic-integrity/citations/zotero-vs-mendeley-comparison/'>Courtesy York University</a></i></span>",
+    general_title = "<span style='color:#ffffff'><i>Note: </i></span>",
+    footnote_as_chunk = TRUE, 
+    escape = FALSE
+    )
+```
+
+---
+
+```{r echo=FALSE}
+webpage <- 
+  read_html("https://www.library.yorku.ca/web/research-learn/citing-your-work-academic-integrity/citations/zotero-vs-mendeley-comparison/")
+
+webpage %>%
+  html_element("table") %>% 
+  html_table(convert = FALSE) %>% 
+  slice(6:12) %>%
+  kbl(col.names = c("Category", "Mendeley", "Zotero"), 
+      "html", 
+      escape = FALSE,
+      align = 'lll') %>%
+  kable_paper(full_width = FALSE,
+              font_size = 12) %>%
+  column_spec(1, width = "10em", color = "#ffffff", italic = TRUE) %>%
+  column_spec(2, width = "20em", color = "#ffffff") %>%
+  column_spec(3, width = "20em", color = "#ffffff") %>%
+  row_spec(0, color = "#f7f7f7") %>%
+  footnote(
+    general = "<span style='color:#ffffff'><i><a href='https://www.library.yorku.ca/web/research-learn/citing-your-work-academic-integrity/citations/zotero-vs-mendeley-comparison/'>Courtesy York University</a></i></span>",
+    general_title = "<span style='color:#ffffff'><i>Note: </i></span>",
+    footnote_as_chunk = TRUE, 
+    escape = FALSE
+    )
+```
+
+---
+
+```{r echo=FALSE}
+webpage <- 
+  read_html("https://www.library.yorku.ca/web/research-learn/citing-your-work-academic-integrity/citations/zotero-vs-mendeley-comparison/")
+
+webpage %>%
+  html_element("table") %>% 
+  html_table(convert = FALSE) %>% 
+  slice(13:16) %>%
+  kbl(col.names = c("Category", "Mendeley", "Zotero"), 
+      "html", 
+      escape = FALSE,
+      align = 'lll') %>%
+  kable_paper(full_width = FALSE,
+              font_size = 12) %>%
+  column_spec(1, width = "10em", color = "#ffffff", italic = TRUE) %>%
+  column_spec(2, width = "20em", color = "#ffffff") %>%
+  column_spec(3, width = "20em", color = "#ffffff") %>%
+  row_spec(0, color = "#f7f7f7") %>%
+  footnote(
+    general = "<span style='color:#ffffff'><i><a href='https://www.library.yorku.ca/web/research-learn/citing-your-work-academic-integrity/citations/zotero-vs-mendeley-comparison/'>Courtesy York University</a></i></span>",
+    general_title = "<span style='color:#ffffff'><i>Note: </i></span>",
+    footnote_as_chunk = TRUE, 
+    escape = FALSE
+    )
+```
+
+---
+
+```{r echo=FALSE}
+webpage <- 
+  read_html("https://www.library.yorku.ca/web/research-learn/citing-your-work-academic-integrity/citations/zotero-vs-mendeley-comparison/")
+
+webpage %>%
+  html_element("table") %>% 
+  html_table(convert = FALSE) %>% 
+  slice(17:21) %>%
+  kbl(col.names = c("Category", "Mendeley", "Zotero"), 
+      "html", 
+      escape = FALSE,
+      align = 'lll') %>%
+  kable_paper(full_width = FALSE,
+              font_size = 12) %>%
+  column_spec(1, width = "10em", color = "#ffffff", italic = TRUE) %>%
+  column_spec(2, width = "20em", color = "#ffffff") %>%
+  column_spec(3, width = "20em", color = "#ffffff") %>%
+  row_spec(0, color = "#f7f7f7") %>%
+  footnote(
+    general = "<span style='color:#ffffff'><i><a href='https://www.library.yorku.ca/web/research-learn/citing-your-work-academic-integrity/citations/zotero-vs-mendeley-comparison/'>Courtesy York University</a></i></span>",
+    general_title = "<span style='color:#ffffff'><i>Note: </i></span>",
+    footnote_as_chunk = TRUE, 
+    escape = FALSE
+    )
+```
+
+---
+
+# Support @WVU
+
+.center2[
+```{r, echo=FALSE}
+image_link <- 
+  function(image,url,...){
+  htmltools::a(
+    href=url,
+    target="_blank",
+    htmltools::img(src=image,...)
+    )
+}
+```
+
+.pull-left[
+<center>
+```{r eval = TRUE, echo = FALSE, fig.align = "center"}
+image_link("img/mendeley.png",
+           "https://libguides.wvu.edu/Mendeley",
+           width="150px") 
+```
+</center>
+]
+
+
+
+.pull-right[
+<center>
+<br>
+```{r eval = TRUE, echo = FALSE, fig.align = "center"}
+image_link("img/zotero.png",
+           "https://libguides.wvu.edu/zotero/home",
+           width="250px") 
+```
+</center>
+]
+]
+
+---
+
+# Zotero<sup>1</sup>
+
+.pull-left[
+Organization
+
+> Tags
+
+> Journals
+
+> Year
+
+> Authors
+]
+
+.pull-right[
+```{r eval = TRUE, echo = FALSE, fig.align='center', out.width="100%"}
+image_link("img/zotero1.png",
+           "img/zotero1.png",
+           width = "450px") 
+```
+]
+
+.footnote[
+<span class="tab"></span><span class="tab"></span><sup>1</sup> Click on the image to see it as a full sized screenshot.
+]
+
+---
+
+# Zotero<sup>1</sup>
+
+.pull-left[
+Use in Microsoft Word for 
+
+> In-text citations
+
+> References Page <sup>2</sup>
+]
+
+.pull-right[
+```{r eval = TRUE, echo = FALSE, fig.align='center'}
+image_link("img/zotero2.png",
+           "img/zotero2.png",
+           width = "250px") 
+```
+
+```{r eval = TRUE, echo = FALSE, fig.align='center'}
+image_link("img/zotero3.png",
+           "img/zotero3.png",
+           width = "250px") 
+```
+]
+
+.footnote[
+<span class="tab"></span><span class="tab"></span><sup>1</sup> Click on the image to see it as a full sized screenshot.
+
+<span class="tab"></span><span class="tab"></span><sup>2</sup> Likely will need revision!
+]
+
+---
+
+## That's it. Questions?

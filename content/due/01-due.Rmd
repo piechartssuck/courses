@@ -1,0 +1,85 @@
+---
+title: "Introductions"
+linktitle: "Week 1: Introductions"
+output:
+  rmarkdown::html_document
+menu:
+  due:
+    parent: "To Do List"
+    weight: 1
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(tidyverse)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+```{r eval = TRUE, echo = FALSE}
+unchecked <- as.character(fontawesome::fa("circle", fill = "#3e464a", height = "15px"))
+
+checked <- as.character(fontawesome::fa("check-circle", fill = "#89f0de", height = "25px"))
+
+wk_post <- tibble(
+
+"Description" = c("Review the website",
+                  "Read <i>Introduction to Social Research</i>",
+                  "Sign up for Slack and introduce yourself in <a style='color:#ff8384;'>#introduce-yourself</a>",
+                  "Verify your Qualtrics account",
+                  "Begin CITI Training"),
+
+"Details" = c("<a href='/readings/01-readings/#review-website'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+              "<a href='/readings/01-readings/#read-something'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+              "<a href='/tasks/01-tasks/#class-slack-account-access'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+              "<a href='/tasks/01-tasks/#verify-qualtrics-account-login'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+             "<a href='/tasks/01-tasks/#begin-citi-ethics-training'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"),
+
+Icon = c("", 
+         "", 
+         "slack",
+         "qualtrics",
+         "citi"),
+
+Site = c("",
+         "",
+         "https://2022edp612.slack.com/archives/C02TAS3GG1J",
+         "https://wvu.qualtrics.com/",
+         "https://www.citiprogram.org/Shibboleth.sso/Login?target=https%3A%2F%2Fwww.citiprogram.org%2FSecure%2FWelcome.cfm%3finst%3d827&entityID=https%3A%2F%2Fidp.wvu.edu%2Fidp%2Fshibboleth")
+
+)
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+wk_post %>%
+  mutate(Icon = case_when(
+    str_detect(`Icon`, "slack") ~ '<img src="/logos/slack-ico.png" alt="Slack icon" width="25">',
+    str_detect(`Icon`, "ecampus") ~ '<img src="/logos/wvu-gold-ico.png" alt="Slack icon" width="25">',
+    str_detect(`Icon`, "qualtrics") ~ '<img src="/logos/qualtrics-ico.png" alt="Qualtrics icon" width="27">',
+    str_detect(`Icon`, "citi") ~ '<img src="/logos/citi-ico.png" alt="Qualtrics icon" width="45">',
+    TRUE ~ NA_character_
+      )
+    ) %>%
+  mutate(Site = na_if(Site, "")) %>%
+  mutate(Link = case_when(
+    !is.na(Icon) ~ paste0("<a href=",Site," target='_blank'>",Icon,"</a>"),
+    TRUE ~ NA_character_
+      )
+    ) %>%
+  select(-Icon, -Site) %>% 
+  mutate_all(replace_na,"") %>%
+kbl("html",
+    escape = FALSE,
+    align = 'lcc') %>%
+  kable_styling(full_width = FALSE)%>%
+  column_spec(1, width = "20em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>%
+  column_spec(2:3, width = "5em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(0, extra_css = 'vertical-align: middle !important;', color = "#f7f7f7") %>%
+  row_spec(1:3, extra_css = 'vertical-align: middle !important;')
+```
+</center>

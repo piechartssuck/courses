@@ -1,0 +1,89 @@
+---
+title: "L1: Selecting a Topic and Annotated Bibliography"
+linktitle: "L1: Selecting a Topic and Annotated Bibliography"
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  tasks:
+    parent: Deliverables
+    weight: 1
+type: docs
+weight: 2
+editor_options: 
+  chunk_output_type: console
+---
+
+<style>
+ul {
+    margin-left: 1.5em
+}
+</style>
+
+### <span style="color:#35d6ed">Submission</span>
+<i>[eCampus](https://ecampus.wvu.edu)</i>
+
+### <span style="color:#65ddef">Type</span>
+
+<i>Individual Submission</i>. Each student in the course must write their own narrative and should treat this as an individual submission. 
+
+### <span style="color:#7ae5f5">Description</span>
+
+This first paper focuses on your ideas regarding topics of choice and justifications. Content is based on an inclusion of the following areas which should *not be used as titles or headers*, rather they should guide your writing:
+
+-	an *overview* describing a general area of research that you are interested in
+
+- A *narrative* outlining at least three possible topic areas that interest you from general overview using contexts/justifications of each as a researchable area by finding journal citations that at minimum address the need for research and the intended purpose or purposes of the aforementioned areas. Strive to reach the goal of <span style="color:#a9fdfa">*triangulation*</span>, in that use at least three verifiable primary sources providing context/justifications of each point.
+
+### <span style="color:#97ebf4">Structure</span>
+
+This paper must be constructed using the following general components and should be uploaded to [eCampus](https://ecampus.wvu.edu/) as a single submission following the formatting guidelines given in the main [tasks page](/tasks/#formatting)
+
+1.	450-550 words for the narrative discussing selecting a topic
+
+2.	literature review matrix with five entries<a href="#1"><sup>1</sup></a>
+
+----
+
+#### <span style="color:#abeff6">A Note About Writing</span>
+
+While you will develop your writing skills as we move forward, at this point you should concentrate on incorporating the needed items and satisfying the criteria outlines in this task. With that said, please strive for the following in your submissions
+
+-	a consistent and formal tone including language/grammar
+
+-	the use of third-person perspective, though first- and second- are allowable under particular circumstances
+
+-	a bare minimum utilization of quotes - use ones that are seminal if and only if 
+
+    - they directly apply to the context
+  
+    - there is no other conceivable way to summarize what is being stated
+
+-	a clear focus on the research problem under investigation
+
+-	the proper use of punctuation
+
+-	precise word choices and be clarity in what you mean - ambiguity can
+  
+    - indicate to a reader that you may know what you are writing about
+  
+    - lead to confusion which often results more work for you
+
+----
+
+### <span style="color:#c9f6ff">Extra Help?</span>
+
+- *Some examples*
+
+    >- <b><span style="color:#d3f7ff">a *need for research* arguement with justifications.</span></b><span style="color:#f7f7f7"> Although the established practice of academic advising is fairly recent (Harrison, 2004), the field has developed relatively quick from a collection of disjoint practices to a model-based approach founded by developmental, prescriptive and intrusive advising (e.g. Creamer & Creamer, 1994Crookston, 1994Jeschke, Johnson & Williams, 2001). As developmental advising has become the dominant practice (Grites & Gordon, 2000Lowenstein, 1999Pardee, 1994), describing its impact on student progression, persistence and retention, and its effect on sets of students can be difficult.</span>
+
+    >- <b><span style="color:#d3f7ff">an *intended purposes* arguement with justifications.</span></b><span style="color:#f7f7f7"> Historically, a primary instrument used for evaluation and assessment has been in the utilization of surveys. Typically, this has come in two forms: surveys administered to students to evaluate (1) individual or group advisors and (2) advising centers (e.g. Lynch, 2004Srebnik, 1988). Even recently, this has appeared to be a continuing trend (Powers, Carlstrom, & Hughey, 2014). While surveys represent an often easily utilizable method to gauge progress, they are indirect measures of advisor impact measured either individually or at the programmatic level. Moreover, the value of these instruments lies in the fact that they are assessment measures implying that outcome data does not allow for a sufficient description of the perceived role of advisors or effectively indicating the synthesizing advisor and advisee perception of the advising experience (Alexitch, 1997Broadbridge, 1996). Trusting evaluations of advising practice is a tricky process due to the potential that response sets reflect student biases towards advisors or advising process, rather than the actual intent or objectives of any session (Powers, Carlstrom, & Hughey, 2014). This creates a unidimensional model of evaluating advising that is predominantly dependent on student feedback, rather than studying the actual effects of any given advising session or saggregate sessions.</span>
+
+- *External source*. Take a look at the [USC Libraries Research Guides](http://libguides.usc.edu/writingguide/academicwriting) website. In particular, for this section, select the tabs labeled 1. Choosing a Research Problem, 2. Preparing to Write, and Annotated Bibliography for further advice. This site is arguably one of the best repositories for the development of social science research papers. The recommendations/guidelines aren’t just for their students so please use them as a resource!
+
+<br>
+<hr align="center" width="50%">
+<br>
+
+<a id="1" href="#" onclick="history.back();" style="font-size:14px;"><sup>1</sup></a> <a style="font-size:14px;"> If it appears that five sources for three topic areas may be insufficient, hen you would be correct. Given that, you will expand in this list in L2 to 25. Remember that we are building our way to a full literature review.</a>

@@ -1,0 +1,45 @@
+---
+title: "You're Pretty Reliable But Are You Valid Too?"
+linktitle: "Week 6: You're Pretty Reliable But Are You Valid Too?"
+output:
+  rmarkdown::html_document
+menu:
+  extras:
+    parent: Extras
+    weight: 6
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+`r blogdown::shortcode("materials-header")`
+
+```{r load_packages, echo = FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+## OpenAcademics Resources
+
+Take a look at the academic writing resources over at [OpenAcademics](https://www.oacommunity.org/resources)
+
+If you prefer, here is a download of all of the literature review materials from the site
+
+<center>
+```{r echo=FALSE,eval=TRUE,message=FALSE,purl=FALSE}
+loc <- here::here("static", "handouts", "EDP612Week6Extras.zip")
+
+downloadthis::download_file(
+  path = loc,
+  output_name = "Week 6 Literature Review",
+  button_label = "&nbsp;&nbsp;&nbsp;<span style='color:#ffffff'>Download</span>",
+  button_type = "primary",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+</center>

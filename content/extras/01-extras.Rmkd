@@ -1,0 +1,15 @@
+---
+title: "Introductions"
+linktitle: "Week 1: Introductions"
+output:
+  rmarkdown::html_document
+menu:
+  extras:
+    parent: Extras
+    weight: 1
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+

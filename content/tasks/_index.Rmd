@@ -1,0 +1,129 @@
+---
+title: "About the Tasks"
+menu:
+  tasks:
+    parent: Overview
+    weight: 1
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+type: docs
+weight: 1
+---
+
+```{r setup, message=FALSE, warning=FALSE, include=FALSE}
+library(tidyverse)
+library(pander)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+library(here)
+```
+
+```{css,echo=FALSE}
+.article-container {
+  max-width: 960px;
+}
+
+iframe {
+  width: 1px;
+  min-width: 100%;
+  border:0;
+}
+
+#TableOfContents, .docs-toc-title {
+  border-left: 1px solid $sta-primary;
+}
+
+td, th, tr, table {
+    border: 0 !important;
+    border-spacing:0 !important;
+  }
+```
+
+This section contains descriptions of course tasks. Materials will be posted on a weekly basis. Please note that these pages populate information about course related tasks on the left hand side **when they are assigned**. Due dates are given with the description of each task.
+
+There are a lot of moving parts to this class. Students who gain the most out of the course generally follow these general notions:
+
+1. Engaging with the readings and materials;
+2. Putting in a good faith effort but also asking for help when needed; 
+3. Keeping a respectful, open, and honest line of communication with me and your peers if possible.
+
+## Formatting
+
+Unless noted otherwise, all submissions must adhere to the following formatting
+
+- Cover page^[not in APA 7th Edition formatting] consisting of 
+  - 12-point Times New Roman font
+  - A working title in bold
+  - Your name underneath
+  - Top left justified
+- Main Body^[APA 7th Edition formatting]
+  - 12-point Times New Roman font
+  - Double spaced
+  - 1-inch margins
+  - Supporting Pages/Documents
+  - References
+
+eCampus portal submissions must follow the proper naming structure: 
+
+<center>
+
+`LastName_FirstName_Designation.docx`
+
+</center>
+
+in Microsoft Word formatting (`.doc` is acceptable as well). For example, the first literature review assignment (L1) would be submitted by me as `Roy_Abhik_L1.docx`.
+
+## General Course Makeup
+
+### Engagement
+You are expected to attend class regularly, participate in class discussions, and provide constructive feedback to others in the course. Your overall class participation grade will be based on (a) attending class and arriving in a timely manner, (b) actively discussing the class materials, (c) engaging others in the class, (d) contributing information and experiences when needed, and (e) providing informative feedback to others. A list of these out-of-class tasks are given below:
+
+### Literature Reviews
+Six literature assignments will be given throughout the summer session. These assignments are designed to give you practice in developing the mechanics of a literature review. An evaluation of the work will be contingent on suitable progress toward a final product.
+
+```{r eval = TRUE, echo = FALSE, message=FALSE}
+unchecked <- as.character(fontawesome::fa("square", fill = "steelblue"))
+
+checked <- as.character(fontawesome::fa("check-square", fill = "steelblue"))
+
+read_schedule <- 
+  read_csv("tasks.csv",
+           show_col_types = FALSE) %>% 
+  as_tibble()  %>%
+  mutate(across(everything(), as.character)) %>%
+  filter_all(any_vars(!is.na(.))) %>% 
+  mutate(
+    across(everything(), ~replace_na(.x, ""))
+    ) %>%
+  select_if(~!all(is.na(.))) 
+  
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(read_schedule, 
+      "html", 
+      escape = FALSE,
+      align = 'clccl') %>%
+  kable_paper(full_width = FALSE) %>%
+  column_spec(1, width = "10em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>%
+  column_spec(2, width = "20em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>%
+  column_spec(3, width = "5em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>%
+  column_spec(4, width = "5em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>%
+  column_spec(5, width = "20em", color = "#ffffff", extra_css = 'vertical-align: middle !important;')  %>%
+  row_spec(0:8, extra_css = 'vertical-align: middle !important;', color = "#ffffff", background = "transparent")
+```
+
+<i>Through an iterative process, you will construct a full literature review. The final draft is a narrative between 10-15 pages (L6), double spaced with 12-point Times New Roman font with proper APA 7th Edition formatting. Please note that additional pages including cover pages and a bibliography section are required but do not count as part of the narrative.</i>
+
+### Presentation
+You will give a two to three minute pitch that addresses the entire breadth of your literature review followed by Q&A session. An evaluation of the work will be contingent on staying within the allotted timeframe, covering adequate content, and addressing questions with proper professional tones and response sets. 
+
+#### Weeklies
+These are class tasks that either occur within class, as homework, or both. Assignments will vary depending on the topic covered. 
+
+### Need Help?
+
+`r blogdown::shortcode("meetings")`

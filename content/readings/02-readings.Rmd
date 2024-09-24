@@ -1,0 +1,61 @@
+---
+title: "Sourcing Resources"
+linktitle: "Week 2: Sourcing Resources"
+menu:
+  readings:
+    parent: Readings
+    weight: 2
+output:
+  rmarkdown::html_document
+type: docs
+weight: 2
+---
+
+`r blogdown::shortcode("materials-header")`
+
+```{r load_packages, message=FALSE, warning=FALSE, echo=FALSE}
+library(tidyverse)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+### Read Something
+
+```{r eval = TRUE, echo = FALSE, message=FALSE}
+unchecked <- as.character(fontawesome::fa("square", fill = "#63d6c6"))
+
+checked <- as.character(fontawesome::fa("check-square", fill = "#63d6c6"))
+
+read_schedule <- read_csv("readings.csv",
+                          show_col_types = FALSE) %>% 
+                  as_tibble() %>%
+                  mutate(Required = case_when(
+                  Required == "checked" ~ as.character(fontawesome::fa("check-circle", fill = "#428bca", height = "15px")),
+                Required == "unchecked" ~ as.character(fontawesome::fa("times-circle", fill = "#d9534f", height = "15px"))
+              )) %>%
+                  mutate(across(everything(), as.character)) %>%
+                    filter(Week == 2) %>% #CHANGE HERE
+                    select(-Week) %>%
+                  filter_all(any_vars(!is.na(.))) %>% 
+                  mutate(
+                    across(everything(), ~replace_na(.x, ""))
+                  ) %>%
+                select_if(~!all(is.na(.))) 
+  
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(read_schedule, 
+      "html", 
+      escape = FALSE,
+      align = 'lllccccccccc') %>%
+  kable_paper(full_width = F) %>%
+  column_spec(1, width = "15em") %>%
+  column_spec(2, width = "20em") %>%
+  column_spec(3, width = "7em") %>%
+  column_spec(4, width = "10em") %>%
+  column_spec(5, width = "10em") %>%
+  column_spec(6, width = "5em") %>%
+  row_spec(0:1, extra_css = 'vertical-align: middle !important;', color = "#ffffff", background = "transparent")
+```

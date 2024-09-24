@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Theory and Terminology</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr. Abhik Roy" />
+    <script src="Slides-Week-1b-pres_files/header-attrs-2.13/header-attrs.js"></script>
+    <link href="Slides-Week-1b-pres_files/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
+    <script src="Slides-Week-1b-pres_files/tile-view-0.2.6/tile-view.js"></script>
+    <link href="Slides-Week-1b-pres_files/animate.css-3.7.2/animate.xaringan.css" rel="stylesheet" />
+    <link href="Slides-Week-1b-pres_files/tachyons-4.12.0/tachyons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Theory and Terminology
+## EDP 612 Week 1
+### Dr. Abhik Roy
+
+---
+
+
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/x-mathjax-config"&gt;
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+  MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+    cancel: ["Extension","cancel"],
+    bcancel: ["Extension","cancel"],
+    xcancel: ["Extension","cancel"],
+    cancelto: ["Extension","cancel"]
+  });
+});
+&lt;/script&gt;
+
+&lt;style&gt;
+section {
+    display: flex;
+    display: -webkit-flex;
+}
+
+section p {
+    margin: auto;
+}
+
+section {
+    height: 600px;
+    width: 60%;
+    margin: auto;
+    border-radius: 20px;
+    background-color: #212121;
+}
+
+section p {
+    text-align: center;
+    font-size: 30px;
+    background-color: #212121;
+    border-radius: 20px;
+    font-family: Roboto Condensed;
+    font-style: bold;
+    padding: 15px;
+    color: #bff4ee;
+}
+
+#center {
+
+text-align: center;
+
+}
+
+.center p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#center {
+
+text-align: center;
+
+}
+
+&lt;/style&gt;
+
+&lt;style type="text/css"&gt;
+.highlight-last-item &gt; ul &gt; li,
+.highlight-last-item &gt; ol &gt; li {
+  opacity: 0.5;
+}
+.highlight-last-item &gt; ul &gt; li:last-of-type,
+.highlight-last-item &gt; ol &gt; li:last-of-type {
+  opacity: 1;
+}
+&lt;/style&gt;
+
+
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 110px;
+height: 128px;
+z-index: 0;
+background-image: url(/Users/skynet/Documents/WVU/Teaching/GitHub.nosync/edp612/static/img/course_hex.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:1em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('a')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = 'https://edp612.asocialdatascientist.com'
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+---
+
+class: highlight-last-item
+layout: true
+
+---
+
+# Promises...promises
+
+--
+
+The material here is dense
+
+--
+
+There is philosophy
+
+--
+
+This is the only day that it will be like this
+
+---
+
+# Nature of Educational Research
+
+Four types of knowledge yielded by educational research
+
+&lt;br&gt;
+&lt;br&gt;
+.pull-left[
+&lt;p id="center" style="color:#91b8ff; font-weight: bold; border:1px; border-style:solid; border-color:#91b8ff; border-radius: 25px; padding: 0.3em;"&gt;
+Descriptive
+&lt;/p&gt;
+]
+
+--
+
+.pull-right[
+&lt;p id="center" style="color:#ff91b8; font-weight: bold; border:1px; border-style:solid; border-color:#ff91b8; border-radius: 25px; padding: 0.3em;"&gt;
+Predictive
+&lt;/p&gt;
+]
+
+--
+
+.pull-left[
+&lt;p id="center" style="color:#91efff; font-weight: bold; border:1px; border-style:solid; border-color:#91efff; border-radius: 25px; padding: 0.3em;"&gt;
+Improvement
+&lt;/p&gt;
+]
+
+--
+
+.pull-right[
+&lt;p id="center" style="color:#ffd891; font-weight: bold; border:1px; border-style:solid; border-color:#ffd891; border-radius: 25px; padding: 0.3em;"&gt;
+Explanative
+&lt;/p&gt;
+]
+
+---
+
+# &lt;span style="color:#91b8ff"&gt; Descriptive&lt;/span&gt; Studies
+
+--
+
+- Describe natural or social phenomena
+
+  &gt;- To identify areas for further research
+
+--
+
+  &gt;- To help in planning resource allocation (aka needs assessment)
+
+--
+
+  &gt;- Provide informational information about a condition or disease
+  
+--
+
+- Dependent upon instrumentation for measurement and observation
+
+--
+
+&lt;br&gt;
+&lt;hr&gt;
+
+--
+
+&lt;br&gt;
+&lt;i&gt;Example&lt;/i&gt; 
+&lt;br&gt;&lt;br&gt;
+Study of 5 homosexual males who developed a rare pneumonia. This case report study led to the eventual discovery of HIV
+
+---
+
+# &lt;span style="color:#ff91b8"&gt; Predictive&lt;/span&gt; Studies
+
+--
+
+- Predict a phenomena that will occur at a certain time from information available at an earlier time
+
+--
+
+&lt;br&gt;
+&lt;hr&gt;
+
+--
+
+&lt;br&gt;
+&lt;i&gt;Example&lt;/i&gt; 
+&lt;br&gt;&lt;br&gt;
+Scholastic Aptitude Test (SAT) scores are used to predict college freshmen grade point averages
+
+---
+
+# &lt;span style="color:#91efff"&gt; Improvement&lt;/span&gt; Studies
+
+--
+
+- Concern the effectiveness of practices and interventions designed to improve practice
+
+--
+
+- Not really its own type of study
+
+--
+
+&lt;br&gt;
+&lt;hr&gt;
+
+--
+
+&lt;br&gt;
+&lt;i&gt;Example&lt;/i&gt; 
+&lt;br&gt;&lt;br&gt;
+Secondary schools that run all year improve knowledge retention
+
+---
+
+# &lt;span style="color:#ffd891"&gt; Explanative&lt;/span&gt; Studies
+
+--
+
+- Explains a phenomenon
+
+
+--
+
+&lt;br&gt;
+&lt;hr&gt;
+
+--
+
+&lt;br&gt;
+&lt;i&gt;Example&lt;/i&gt; 
+&lt;br&gt;&lt;br&gt;
+Study habits change due to drinking behavior in college
+
+---
+ 
+# Activity
+
+Working in groups of two or three, determine each study’s purpose
+
+---
+
+# Theory (Formal Definition)
+
+--
+
+- Explanation of a certain set of observed phenomena in terms of a system of constructs and laws that relate these constructs to each other
+
+--
+
+  &gt;- Specifies relations between theoretical constructs
+  
+--
+
+  &gt;- Describes relations between constructs and measures
+
+--
+
+- System consists of a set of constructs and their relation to each other
+
+---
+
+# Theory (Informal Definition)
+
+--
+
+- General or overarching ideas that describe something
+
+---
+
+# Elements of Theory
+
+--
+
+- Theoretical construct
+
+--
+
+  &gt;- &lt;i&gt;Constitutively defined construct&lt;/i&gt;: having the power to establish existence.
+
+--
+
+  &gt;- &lt;i&gt;Operationally defined construct&lt;/i&gt;: having the power to define process(es)
+
+--
+
+- Variable
+
+--
+
+- Law
+
+---
+
+# Construct (Formal)
+
+--
+
+- Theoretical construct is a concept that is inferred from observed phenomena, defined constitutively or operationally
+
+--
+
+  &gt;- &lt;i&gt;Constitutively defined construct&lt;/i&gt;: Defined by referring to another construct
+  
+--
+
+  &gt;- &lt;i&gt;Operationally defined construct&lt;/i&gt;: Defined by specifying the activities used to measure or manipulate it
+
+
+---
+
+# Construct (Informal)
+
+- A way of bringing theory down to earth, helping to explain the different components of theories, as well as measure/observe their behavior.
+
+--
+
+&lt;br&gt;
+&lt;hr&gt;
+
+--
+
+&lt;br&gt;
+&lt;i&gt;Examples&lt;/i&gt; 
+&lt;br&gt;&lt;br&gt;
+
+- Ideas defined by poverty, trust, social justice, marriage, etc.
+
+- People defined by race, ethnicity, age, etc.
+
+---
+
+# Variable (Formal)
+
+--
+
+- Quantitative or qualitative expression of a construct.
+
+---
+
+# Variable (Informal)
+
+- A characteristic that differs from others.
+
+--
+
+&lt;br&gt;
+&lt;hr&gt;
+
+--
+
+&lt;br&gt;
+&lt;i&gt;Examples&lt;/i&gt; 
+&lt;br&gt;&lt;br&gt;
+
+- &lt;i&gt;Qualitative&lt;/i&gt;: Suit on a deck of cards (Spades, Hearts, Diamonds, Clubs)
+
+
+- &lt;i&gt;Quantitative&lt;/i&gt;People defined by race, ethnicity, age, etc.
+
+---
+
+# Law
+
+- Generalization about the causal, sequential, or other relationship between two or more constructs
+
+--
+
+&lt;br&gt;
+&lt;hr&gt;
+
+--
+
+&lt;br&gt;
+&lt;i&gt;Example&lt;/i&gt; 
+&lt;br&gt;&lt;br&gt;
+
+---
+
+- &lt;i&gt;Logic&lt;/i&gt;: If this then that
+
+---
+
+# Uses of Theory
+
+--
+
+- Theoretical constructs identify commonalities
+
+--
+
+- Laws of a theory enables one to predict and control phenomena
+
+---
+
+# Approaches to Theory Development
+
+--
+
+- Grounded theory approach
+
+  &gt;- Deriving constructs and laws directly from data collected
+
+--
+
+- Theory testing
+
+  &gt;- Formulating theory and then test the theory by collecting data
+  
+---
+
+# Steps in Testing Theory
+
+--
+
+&gt;- Formulate a hypothesis
+
+&gt;- Deduct observable consequences of the hypothesis
+
+&gt;- Test the hypothesis by making observations
+
+---
+
+# Application of Research to Educational Practice
+
+--
+
+- Improveing society and individual lives
+
+--
+
+- Developing tests
+  &gt;- Academic achievement
+  &gt;- Aptitudes
+  &gt;- Interests
+  &gt;- School-related personality characteristics
+
+--
+
+- No Child Left Behind Act
+
+--
+
+- [Institute of Education Sciences What Works Clearinghouse](https://ies.ed.gov/ncee/wwc/)
+
+
+---
+
+# Research Knowledgevs. Research Practice
+
+--
+
+&lt;center&gt;
+&lt;b&gt;&lt;i&gt;is&lt;/i&gt;&lt;/b&gt; vs. &lt;b&gt;&lt;i&gt;ought&lt;/i&gt;&lt;/b&gt;
+&lt;/center&gt;
+
+.pull-left[
+Questions involving &lt;b&gt;&lt;i&gt;is&lt;/i&gt;&lt;/b&gt; can be answered objectively
+]
+
+.pull-right[
+Questions involving &lt;b&gt;&lt;i&gt;is&lt;/i&gt;&lt;/b&gt; are value laden and only can be resolved through dialogue and a decision-making process
+]
+
+---
+
+# Limitations of Research Knowledge
+
+--
+
+- Findings have limited generalizability
+
+--
+
+- Determines &lt;b&gt;&lt;i&gt;is&lt;/i&gt;&lt;/b&gt; but within a certain worldview and set of values
+
+--
+
+- Cannot be sole base for professional practice
+
+---
+
+# Importance of Basic Research
+
+--
+
+Even when this is not its purpose and even when practitioners are unaware of the research, research can influence practice
+
+---
+
+# Funding for Educational Research
+
+Of Federal funding for public schools, less than 1% allocated for research annually between 1975 and 2003
+
+---
+
+# Activity
+
+Parts of a manuscript
+
+---
+
+# Epistemology
+
+--
+
+- Branch of philosophy that studies the nature of knowledge and the process by which knowledge is acquired and validated
+
+--
+
+- Philosophers of science study nature of inquiry and knowledge in the natural and social sciences
+
+--
+
+- Variety of world views
+
+---
+
+# Positivism
+
+--
+
+- Assumes &lt;i&gt;objective reality&lt;/i&gt; where physical and social reality is independent of those who observe it
+
+--
+
+- Observations of this independent reality, if unbiased, constitute scientific knowledge
+
+--
+
+- Focus on the study of observable behavior as the basis for building scientific knowledge
+
+---
+
+# Positivism
+
+--
+
+- Assumes &lt;i&gt;objective reality&lt;/i&gt; that can only be known imperfectly
+
+--
+
+- Theories about objective reality cannot be validated in an absolute sense, but their validity can be strengthened through their resistance to research efforts to refute them
+
+---
+
+# Postpositivism: Research Practice
+
+--
+
+- Creates concepts and procedures that are shared and publicly accessible
+
+--
+
+- Replicability of findings
+
+--
+
+- Refutability of knowledge claims
+
+--
+
+- Controls for errors and biases
+
+--
+
+- Boundedness of knowledge claims
+
+--
+
+- Moral commitment to progressive discourse
+
+---
+
+# Constructivism
+
+--
+
+- Assumes &lt;i&gt;social reality&lt;/i&gt;  is constructed by the individuals who participate in it where ascription of meanings are reliant on the social environment
+
+--
+
+- Each person constructs a self
+
+--
+
+- &lt;i&gt;Reflexivity&lt;i&gt;: researcher’s self is an integral constructor of the social reality
+
+--
+
+- Reflexivity – researcher’s self is an integral constructor of the social reality
+
+---
+
+# Modernism
+
+--
+
+- Promotes the advancement of knowledge through scientific observation
+
+--
+
+- Believes that “…under the seeming surface chaos of the world, of society, there exists a rationality, a basic truth that can be identified and harnessed for human good”
+
+---
+
+# Postmodernism
+
+--
+
+- Questions the rationality of human judgment
+
+--
+
+- Doubts that any method or theory, discourse or genre, tradition or novelty is “right” or better than another
+
+---
+
+# Realism
+
+--
+
+- Believes real world consists of layers of causal structures, some of them hidden from view, that interact to produce effects that may or may not be observable
+
+---
+
+Analytic Induction vs. Deduction
+
+.pull-left[
+&lt;b&gt;&lt;i&gt;Induction&lt;/i&gt;&lt;/b&gt;: Researcher analyzes the data and then infers findings
+]
+
+--
+
+.pull-right[
+&lt;b&gt;&lt;i&gt;Deduction&lt;/i&gt;&lt;/b&gt;: Researcher identifies findings prior to data collection and then searches for instances of findings
+]
+
+---
+
+# Views of Causation
+
+--
+
+- Positivists:
+
+  &gt;- mechanical view of causation
+
+--
+
+  &gt;- every step from cause can be traced to the effect
+  
+--
+
+- Constructivists 
+
+  &gt;- interpretive view of causation
+  
+--
+
+  &gt;- people develop interpretations of the social environment that affect their subsequent action
+  
+--
+
+- Realists 
+
+  &gt;- structural view of causation
+  
+--
+
+  &gt;- multiple layers of causal structures, which are real objects that interact with each other to cause people to take certain actions or, in some cases, to take no action. 
+
+---
+
+# &lt;span style="color:#428bca"&gt;Quantitative&lt;/span&gt; Research
+
+--
+
+- Assumes an objective social reality (positivist)
+
+--
+
+- Assumes that social reality is relatively constant across time and place
+
+--
+
+- Views causal relationships among social phenomena from a mechanistic perspective
+
+--
+
+- Takes a objective, detached stance toward research participants and their settings
+
+--
+
+- Studies populations or samples that represent populations
+
+--
+
+- Studies behavior and other observable phenomena
+
+---
+
+# &lt;span style="color:#d9534f"&gt;Qualitative&lt;/span&gt; Research
+
+--
+
+- Studies human actions in natural settings
+
+--
+
+- Makes holistic observations of the total context within which social action occurs
+
+--
+
+- Discovers concepts and theories after data have been collected
+
+--
+
+- Generates verbal and pictorial data to represent the social environment
+
+--
+
+- Uses analytic induction to analyze data
+
+--
+
+- Generalizes case findings by identifying other similar cases
+
+--
+
+- Prepares interpretive reports that reflect researchers’ constructions of the data and an awareness that readers will form their own constructions from what is reported
+
+---
+
+# Mixed Method Research
+
+--
+
+- Combines both quantitative and qualitative methods in a single study
+
+--
+
+- Not enough just to have both, they have to be &lt;i&gt;mixed&lt;/i&gt; somehow!
+
+
+---
+
+# Formal Research Definition
+
+--
+
+A form of inquiry in which
+
+--
+
+1. Key concepts and procedures are carefully defined in such a way that inquiry can be replicated and possibly refuted
+
+--
+
+2. Controls are in place to minimize error and bias
+
+--
+
+3. Generalizability limits of the study are made explicit
+
+--
+
+4. Results of the study are interpreted in terms of what they contribute to the cumulative body of knowledge about the object of inquiry
+
+---
+
+# Scientific Research
+
+--
+
+Six guiding principles
+
+--
+
+1. Poses significant questions that can be investigated empirically
+
+--
+
+2. Links research to relevant theory and continually generates and refines theories
+
+--
+
+3. Uses methods that permit direct investigation of the questions
+
+--
+
+4. Provides a coherent and explicit chain of reasoning from an investigation’s empirical results to inferences based on these results
+
+--
+
+5. Calls for replication studies to validate, generalize, and synthesize the results of individual studies
+
+--
+
+6. Discloses a study’s findings to encourage professional scrutiny and critique
+
+---
+
+## That's it. Questions?
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"navigation": {
+"scroll": false
+}
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

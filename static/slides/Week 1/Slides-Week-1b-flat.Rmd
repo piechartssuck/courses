@@ -1,0 +1,850 @@
+---
+title: " Theory and Terminology"
+subtitle: "EDP 612 Week 1"
+author: "Dr. Abhik Roy"
+output: 
+ xaringan::moon_reader:
+   css: ['xaringan-themer.css', 'custom.css']
+   nature:
+     ratio: 16:9
+     highlightStyle: github
+     highlightLines: true
+     countIncrementalSlides: false
+     navigation:
+         scroll: false
+---
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+  MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+    cancel: ["Extension","cancel"],
+    bcancel: ["Extension","cancel"],
+    xcancel: ["Extension","cancel"],
+    cancelto: ["Extension","cancel"]
+  });
+});
+</script>
+
+<style>
+section {
+    display: flex;
+    display: -webkit-flex;
+}
+
+section p {
+    margin: auto;
+}
+
+section {
+    height: 600px;
+    width: 60%;
+    margin: auto;
+    border-radius: 20px;
+    background-color: #212121;
+}
+
+section p {
+    text-align: center;
+    font-size: 30px;
+    background-color: #212121;
+    border-radius: 20px;
+    font-family: Roboto Condensed;
+    font-style: bold;
+    padding: 15px;
+    color: #bff4ee;
+}
+
+#center {
+
+text-align: center;
+
+}
+
+.center p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#center {
+
+text-align: center;
+
+}
+
+</style>
+
+```{css echo=FALSE}
+.highlight-last-item > ul > li,
+.highlight-last-item > ol > li {
+  opacity: 0.5;
+}
+.highlight-last-item > ul > li:last-of-type,
+.highlight-last-item > ol > li:last-of-type {
+  opacity: 1;
+}
+```
+
+```{r setup, include=FALSE, purl=FALSE}
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+library(fontawesome)
+library(here)
+library(DT)
+library(scales)
+library(latex2exp)
+library(showtext)
+font_add_google("Roboto Condensed", "roboto")
+showtext_auto()
+```
+
+```{r echo = FALSE, purl=FALSE}
+xaringanthemer::style_duo(
+  primary_color = "#212121",
+  secondary_color = "#bff4ee",
+  table_row_border_color = "#212121",
+  table_row_even_background_color = "#212121",
+  footnote_font_size = "0.6em",
+  header_font_google = xaringanthemer::google_font("Roboto Condensed", "700"),
+  text_font_google   = xaringanthemer::google_font("Roboto Condensed", "400")
+)
+
+xaringanExtra::use_xaringan_extra(c("tile_view", 
+                                    "animate_css", 
+                                    "tachyons"))
+
+xaringanExtra::use_logo(
+  image_url = here::here("static", "img", "course_hex.png"),
+  link_url = "https://edp612.asocialdatascientist.com",
+  position = xaringanExtra::css_position(top = "1em", right = "1em")
+)
+
+```
+
+# Promises...promises
+
+--
+
+The material here is dense
+
+--
+
+There is philosophy
+
+--
+
+This is the only day that it will be like this
+
+---
+
+# Nature of Educational Research
+
+Four types of knowledge yielded by educational research
+
+<br>
+<br>
+.pull-left[
+<p id="center" style="color:#91b8ff; font-weight: bold; border:1px; border-style:solid; border-color:#91b8ff; border-radius: 25px; padding: 0.3em;">
+Descriptive
+</p>
+]
+
+--
+
+.pull-right[
+<p id="center" style="color:#ff91b8; font-weight: bold; border:1px; border-style:solid; border-color:#ff91b8; border-radius: 25px; padding: 0.3em;">
+Predictive
+</p>
+]
+
+--
+
+.pull-left[
+<p id="center" style="color:#91efff; font-weight: bold; border:1px; border-style:solid; border-color:#91efff; border-radius: 25px; padding: 0.3em;">
+Improvement
+</p>
+]
+
+--
+
+.pull-right[
+<p id="center" style="color:#ffd891; font-weight: bold; border:1px; border-style:solid; border-color:#ffd891; border-radius: 25px; padding: 0.3em;">
+Explanative
+</p>
+]
+
+---
+
+# <span style="color:#91b8ff"> Descriptive</span> Studies
+
+--
+
+- Describe natural or social phenomena
+
+  >- To identify areas for further research
+
+--
+
+  >- To help in planning resource allocation (aka needs assessment)
+
+--
+
+  >- Provide informational information about a condition or disease
+  
+--
+
+- Dependent upon instrumentation for measurement and observation
+
+--
+
+<br>
+<hr>
+
+--
+
+<br>
+<i>Example</i> 
+<br><br>
+Study of 5 homosexual males who developed a rare pneumonia. This case report study led to the eventual discovery of HIV
+
+---
+
+# <span style="color:#ff91b8"> Predictive</span> Studies
+
+--
+
+- Predict a phenomena that will occur at a certain time from information available at an earlier time
+
+--
+
+<br>
+<hr>
+
+--
+
+<br>
+<i>Example</i> 
+<br><br>
+Scholastic Aptitude Test (SAT) scores are used to predict college freshmen grade point averages
+
+---
+
+# <span style="color:#91efff"> Improvement</span> Studies
+
+--
+
+- Concern the effectiveness of practices and interventions designed to improve practice
+
+--
+
+- Not really its own type of study
+
+--
+
+<br>
+<hr>
+
+--
+
+<br>
+<i>Example</i> 
+<br><br>
+Secondary schools that run all year improve knowledge retention
+
+---
+
+# <span style="color:#ffd891"> Explanative</span> Studies
+
+--
+
+- Explains a phenomenon
+
+
+--
+
+<br>
+<hr>
+
+--
+
+<br>
+<i>Example</i> 
+<br><br>
+Study habits change due to drinking behavior in college
+
+---
+ 
+# Activity
+
+Working in groups of two or three, determine each study’s purpose
+
+---
+
+# Theory (Formal Definition)
+
+--
+
+- Explanation of a certain set of observed phenomena in terms of a system of constructs and laws that relate these constructs to each other
+
+--
+
+  >- Specifies relations between theoretical constructs
+  
+--
+
+  >- Describes relations between constructs and measures
+
+--
+
+- System consists of a set of constructs and their relation to each other
+
+---
+
+# Theory (Informal Definition)
+
+--
+
+- General or overarching ideas that describe something
+
+---
+
+# Elements of Theory
+
+--
+
+- Theoretical construct
+
+--
+
+  >- <i>Constitutively defined construct</i>: having the power to establish existence.
+
+--
+
+  >- <i>Operationally defined construct</i>: having the power to define process(es)
+
+--
+
+- Variable
+
+--
+
+- Law
+
+---
+
+# Construct (Formal)
+
+--
+
+- Theoretical construct is a concept that is inferred from observed phenomena, defined constitutively or operationally
+
+--
+
+  >- <i>Constitutively defined construct</i>: Defined by referring to another construct
+  
+--
+
+  >- <i>Operationally defined construct</i>: Defined by specifying the activities used to measure or manipulate it
+
+
+---
+
+# Construct (Informal)
+
+- A way of bringing theory down to earth, helping to explain the different components of theories, as well as measure/observe their behavior.
+
+--
+
+<br>
+<hr>
+
+--
+
+<br>
+<i>Examples</i> 
+<br><br>
+
+- Ideas defined by poverty, trust, social justice, marriage, etc.
+
+- People defined by race, ethnicity, age, etc.
+
+---
+
+# Variable (Formal)
+
+--
+
+- Quantitative or qualitative expression of a construct.
+
+---
+
+# Variable (Informal)
+
+- A characteristic that differs from others.
+
+--
+
+<br>
+<hr>
+
+--
+
+<br>
+<i>Examples</i> 
+<br><br>
+
+- <i>Qualitative</i>: Suit on a deck of cards (Spades, Hearts, Diamonds, Clubs)
+
+
+- <i>Quantitative</i>People defined by race, ethnicity, age, etc.
+
+---
+
+# Law
+
+- Generalization about the causal, sequential, or other relationship between two or more constructs
+
+--
+
+<br>
+<hr>
+
+--
+
+<br>
+<i>Example</i> 
+<br><br>
+
+---
+
+- <i>Logic</i>: If this then that
+
+---
+
+# Uses of Theory
+
+--
+
+- Theoretical constructs identify commonalities
+
+--
+
+- Laws of a theory enables one to predict and control phenomena
+
+---
+
+# Approaches to Theory Development
+
+--
+
+- Grounded theory approach
+
+  >- Deriving constructs and laws directly from data collected
+
+--
+
+- Theory testing
+
+  >- Formulating theory and then test the theory by collecting data
+  
+---
+
+# Steps in Testing Theory
+
+--
+
+>- Formulate a hypothesis
+
+>- Deduct observable consequences of the hypothesis
+
+>- Test the hypothesis by making observations
+
+---
+
+# Application of Research to Educational Practice
+
+--
+
+- Improveing society and individual lives
+
+--
+
+- Developing tests
+  >- Academic achievement
+  >- Aptitudes
+  >- Interests
+  >- School-related personality characteristics
+
+--
+
+- No Child Left Behind Act
+
+--
+
+- [Institute of Education Sciences What Works Clearinghouse](https://ies.ed.gov/ncee/wwc/)
+
+
+---
+
+# Research Knowledgevs. Research Practice
+
+--
+
+<center>
+<b><i>is</i></b> vs. <b><i>ought</i></b>
+</center>
+
+.pull-left[
+Questions involving <b><i>is</i></b> can be answered objectively
+]
+
+.pull-right[
+Questions involving <b><i>is</i></b> are value laden and only can be resolved through dialogue and a decision-making process
+]
+
+---
+
+# Limitations of Research Knowledge
+
+--
+
+- Findings have limited generalizability
+
+--
+
+- Determines <b><i>is</i></b> but within a certain worldview and set of values
+
+--
+
+- Cannot be sole base for professional practice
+
+---
+
+# Importance of Basic Research
+
+--
+
+Even when this is not its purpose and even when practitioners are unaware of the research, research can influence practice
+
+---
+
+# Funding for Educational Research
+
+Of Federal funding for public schools, less than 1% allocated for research annually between 1975 and 2003
+
+---
+
+# Activity
+
+Parts of a manuscript
+
+---
+
+# Epistemology
+
+--
+
+- Branch of philosophy that studies the nature of knowledge and the process by which knowledge is acquired and validated
+
+--
+
+- Philosophers of science study nature of inquiry and knowledge in the natural and social sciences
+
+--
+
+- Variety of world views
+
+---
+
+# Positivism
+
+--
+
+- Assumes <i>objective reality</i> where physical and social reality is independent of those who observe it
+
+--
+
+- Observations of this independent reality, if unbiased, constitute scientific knowledge
+
+--
+
+- Focus on the study of observable behavior as the basis for building scientific knowledge
+
+---
+
+# Positivism
+
+--
+
+- Assumes <i>objective reality</i> that can only be known imperfectly
+
+--
+
+- Theories about objective reality cannot be validated in an absolute sense, but their validity can be strengthened through their resistance to research efforts to refute them
+
+---
+
+# Postpositivism: Research Practice
+
+--
+
+- Creates concepts and procedures that are shared and publicly accessible
+
+--
+
+- Replicability of findings
+
+--
+
+- Refutability of knowledge claims
+
+--
+
+- Controls for errors and biases
+
+--
+
+- Boundedness of knowledge claims
+
+--
+
+- Moral commitment to progressive discourse
+
+---
+
+# Constructivism
+
+--
+
+- Assumes <i>social reality</i>  is constructed by the individuals who participate in it where ascription of meanings are reliant on the social environment
+
+--
+
+- Each person constructs a self
+
+--
+
+- <i>Reflexivity<i>: researcher’s self is an integral constructor of the social reality
+
+--
+
+- Reflexivity – researcher’s self is an integral constructor of the social reality
+
+---
+
+# Modernism
+
+--
+
+- Promotes the advancement of knowledge through scientific observation
+
+--
+
+- Believes that “…under the seeming surface chaos of the world, of society, there exists a rationality, a basic truth that can be identified and harnessed for human good”
+
+---
+
+# Postmodernism
+
+--
+
+- Questions the rationality of human judgment
+
+--
+
+- Doubts that any method or theory, discourse or genre, tradition or novelty is “right” or better than another
+
+---
+
+# Realism
+
+--
+
+- Believes real world consists of layers of causal structures, some of them hidden from view, that interact to produce effects that may or may not be observable
+
+---
+
+Analytic Induction vs. Deduction
+
+.pull-left[
+<b><i>Induction</i></b>: Researcher analyzes the data and then infers findings
+]
+
+--
+
+.pull-right[
+<b><i>Deduction</i></b>: Researcher identifies findings prior to data collection and then searches for instances of findings
+]
+
+---
+
+# Views of Causation
+
+--
+
+- Positivists:
+
+  >- mechanical view of causation
+
+--
+
+  >- every step from cause can be traced to the effect
+  
+--
+
+- Constructivists 
+
+  >- interpretive view of causation
+  
+--
+
+  >- people develop interpretations of the social environment that affect their subsequent action
+  
+--
+
+- Realists 
+
+  >- structural view of causation
+  
+--
+
+  >- multiple layers of causal structures, which are real objects that interact with each other to cause people to take certain actions or, in some cases, to take no action. 
+
+---
+
+# <span style="color:#428bca">Quantitative</span> Research
+
+--
+
+- Assumes an objective social reality (positivist)
+
+--
+
+- Assumes that social reality is relatively constant across time and place
+
+--
+
+- Views causal relationships among social phenomena from a mechanistic perspective
+
+--
+
+- Takes a objective, detached stance toward research participants and their settings
+
+--
+
+- Studies populations or samples that represent populations
+
+--
+
+- Studies behavior and other observable phenomena
+
+---
+
+# <span style="color:#d9534f">Qualitative</span> Research
+
+--
+
+- Studies human actions in natural settings
+
+--
+
+- Makes holistic observations of the total context within which social action occurs
+
+--
+
+- Discovers concepts and theories after data have been collected
+
+--
+
+- Generates verbal and pictorial data to represent the social environment
+
+--
+
+- Uses analytic induction to analyze data
+
+--
+
+- Generalizes case findings by identifying other similar cases
+
+--
+
+- Prepares interpretive reports that reflect researchers’ constructions of the data and an awareness that readers will form their own constructions from what is reported
+
+---
+
+# Mixed Method Research
+
+--
+
+- Combines both quantitative and qualitative methods in a single study
+
+--
+
+- Not enough just to have both, they have to be <i>mixed</i> somehow!
+
+
+---
+
+# Formal Research Definition
+
+--
+
+A form of inquiry in which
+
+--
+
+1. Key concepts and procedures are carefully defined in such a way that inquiry can be replicated and possibly refuted
+
+--
+
+2. Controls are in place to minimize error and bias
+
+--
+
+3. Generalizability limits of the study are made explicit
+
+--
+
+4. Results of the study are interpreted in terms of what they contribute to the cumulative body of knowledge about the object of inquiry
+
+---
+
+# Scientific Research
+
+--
+
+Six guiding principles
+
+--
+
+1. Poses significant questions that can be investigated empirically
+
+--
+
+2. Links research to relevant theory and continually generates and refines theories
+
+--
+
+3. Uses methods that permit direct investigation of the questions
+
+--
+
+4. Provides a coherent and explicit chain of reasoning from an investigation’s empirical results to inferences based on these results
+
+--
+
+5. Calls for replication studies to validate, generalize, and synthesize the results of individual studies
+
+--
+
+6. Discloses a study’s findings to encourage professional scrutiny and critique
+
+---
+
+## That's it. Questions?

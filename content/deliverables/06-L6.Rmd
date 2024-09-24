@@ -1,0 +1,61 @@
+---
+title: "L6: The (Never) Final Draft"
+linktitle: "L6: The (Never) Final Draft"
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  tasks:
+    parent: Deliverables
+    weight: 6
+type: docs
+weight: 2
+editor_options: 
+  chunk_output_type: console
+---
+
+<style>
+ul {
+    margin-left: 1.5em
+    }
+
+#center {
+text-align: center;
+}
+
+td, th, tr, table {
+    border: 0 !important;
+    border-spacing:0 !important;
+  }
+</style>
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(tidyverse)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+### <span style="color:#35d6ed">Submission</span>
+<i>[eCampus](https://ecampus.wvu.edu)</i>
+
+### <span style="color:#65ddef">Type</span>
+
+<i>Individual Submission</i>. Each student in the course must write their own narrative and should treat this as an individual submission. 
+
+### <span style="color:#7ae5f5">Description</span>
+
+Please consider all of the feedback and suggestions given in previous versions and construct your final literature review draft.
+
+### <span style="color:#97ebf4">Structure</span>
+
+This draft must be constructed using the following general components and should be uploaded to [eCampus](https://ecampus.wvu.edu/) following the formatting guidelines given in the main [tasks page](/tasks/#formatting)
+
+Building on the feedback you reviewed on our narrative from L5, expand on your literature review by completing a final summary and synthesis. 
+
+Please submit your outline using the following components:
+
+1. A cover page
+2. 2500-4000 words for the narrative
+3. A references page following APA 7 guidelines

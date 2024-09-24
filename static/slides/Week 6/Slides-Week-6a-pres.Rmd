@@ -1,0 +1,521 @@
+---
+title: 'Analyzing Literature'
+subtitle: "EDP 612 Week 6"
+author: "Dr. Abhik Roy"
+output: 
+ xaringan::moon_reader:
+   css: ['xaringan-themer.css', 'custom.css']
+   nature:
+     ratio: 16:9
+     highlightStyle: github
+     highlightLines: true
+     countIncrementalSlides: false
+     navigation:
+         scroll: false
+---
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+  MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+    cancel: ["Extension","cancel"],
+    bcancel: ["Extension","cancel"],
+    xcancel: ["Extension","cancel"],
+    cancelto: ["Extension","cancel"]
+  });
+});
+</script>
+
+<style>
+section {
+    display: flex;
+    display: -webkit-flex;
+}
+
+section p {
+    margin: auto;
+}
+
+section {
+    height: 600px;
+    width: 60%;
+    margin: auto;
+    border-radius: 21px;
+    background-color: #212121;
+}
+
+section p {
+    text-align: center;
+    font-size: 30px;
+    background-color: #212121;
+    border-radius: 21px;
+    font-family: Roboto Condensed;
+    font-style: bold;
+    padding: 12px;
+    color: #bff4ee;
+}
+
+#center {
+
+text-align: center;
+
+}
+
+.center p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.tab {
+    display: inline-block;
+    margin-left: 40px;
+}
+</style>
+
+```{css echo=FALSE}
+.highlight-last-item > ul > li,
+.highlight-last-item > ol > li {
+  opacity: 0.5;
+}
+.highlight-last-item > ul > li:last-of-type,
+.highlight-last-item > ol > li:last-of-type {
+  opacity: 1;
+}
+```
+
+```{r setup, include=FALSE, purl=FALSE}
+library(tidyverse)
+library(patchwork)
+library(knitr)
+library(kableExtra)
+library(fontawesome)
+library(here)
+library(DT)
+library(scales)
+library(latex2exp)
+library(rvest)
+library(showtext)
+font_add_google("Roboto Condensed", "roboto")
+showtext_auto()
+```
+
+```{r echo = FALSE, purl=FALSE}
+xaringanthemer::style_duo(
+  primary_color = "#212121",
+  secondary_color = "#bff4ee",
+  table_row_border_color = "#212121",
+  table_row_even_background_color = "#212121",
+  footnote_font_size = "0.6em",
+  header_font_google = xaringanthemer::google_font("Roboto Condensed", "700"),
+  text_font_google   = xaringanthemer::google_font("Roboto Condensed", "400")
+)
+
+xaringanExtra::use_xaringan_extra(c("tile_view", 
+                                    "animate_css", 
+                                    "tachyons"))
+
+xaringanExtra::use_logo(
+  image_url = here::here("static", "img", "course_hex.png"),
+  link_url = "https://edp612.asocialdatascientist.com",
+  position = xaringanExtra::css_position(top = "1em", right = "1em")
+)
+
+```
+
+---
+
+class: highlight-last-item
+layout: true
+
+---
+
+#  Reference Text 
+
+.center2[
+<center>Please download</center><br><br>
+[Machi, L.A., & McEvoy, B.T. (2021). The Literature Review: Six Steps to Success (4th ed.). SAGE Publications.](https://libwvu.on.worldcat.org/oclc/1289372718)
+]
+
+---
+
+# Part I: Basic Overview
+
+---
+
+## Guideline 1 
+
+--
+
++ Scan the articles to get an overview of each one
+
+--
+
+  + Read the first few paragraphs
+	
+--
+
+	+ Read the entire Methods section
+
+--
+
+	+ Scan rest of article
+
+---
+
+## Guideline 2 
+
+
+--
+
++ Based on your overview, group the articles by category
+
+--
+
+	+ By topics and then subtopics
+	
+--
+
+	+ By chronological order within subtopic
+
+---
+
+## Guideline 3 
+
+--
+
+Note: This slide will sound like study skills but it is still highly recommended!
+
+--
+
++ Organize yourself before reading the articles
+
+--
+
+	+ Computer
+	
+--
+
+	+ Pack of note cards to write your comments on
+
+--
+
+	+ Self-adhesive flags that you can use to identify noteworthy comments (or word processing program to highlight)
+
+---
+
+## Guideline 4
+
+--
+
++ Use a consistent format in your notes
+
+--
+
+	+ Example
+	
+--
+
+		+ Author(s)’ Last Name(s), Initial(s)
+		
+--
+
+		+ Title of Article
+
+--
+	
+		+ Publication Year
+		
+--
+
+		+ Name of Journal, Volume, Edition, Page Numbers
+		
+--
+
+		+ Notes
+
+---
+
+## Guideline 5 
+		
+--
+
++ Look for explicit definitions of key terms in the literature
+
+---
+
+## Guideline 6
+		
+--
+
++ Look for methodological strengths
+
+---
+
+## Guideline 7
+		
+--
+
++ Look for methodological weaknesses
+
+---
+
+## Guideline 8
+		
+--
+
++ Distinguish between assertion and evidence
+		
+--
+
+	+ Assertion = author’s opinion
+		
+--
+
+	+ Evidence = results of study
+
+---
+
+## Guideline 9
+		
+--
+
++ Identify the major trends or patterns in the results of previous studies
+
+--
+
++ Generalization based on sources included in literature review
+
+---
+
+## Guideline 10
+		
+--
+
++ Identify gaps in the literature
+
+---
+
+## Guideline 11 
+		
+--
+
++ Identify relationships among studies
+
+---
+
+## Guideline 12
+		
+--
+
++ Note how each reviewed article relates to your topic
+
+---
+
+## Guideline 13
+		
+--
+ 
++ Evaluate your reference list for relevancy and coverage
+		
+--
+
+	+ Should demonstrate latest work done in subject area
+
+---
+
+# Part II: Analyzing Literature from the Viewpoint of a Researcher
+
+---
+
+## Guideline 1 
+
++ State whether the study is quantitative or qualitative		
+
+--
+
+	+ Research is neither quantitative or qualitative
+			
+--
+
+  + So please do not say *the research was...*
+
+---
+
+## Guideline 2 	
+
+--
+
++ Determine whether a study is experimental or nonexperimental	
+
+--
+
+	+ *Experimental*. Treatments are administered to participants for the purposes of the study and their effects are assessed	
+
+--
+
+	+ *Nonexperimental*. Participants’ traits are measured without attempting to change them
+
+---
+
+## Guideline 3 	
+
+--
+
++ In an experiment, note whether the participants were assigned at random to treatment conditions	
+
+--
+
+	+ *True experiment*. Participants randomly assigned to treatment and control groups
+
+---
+
+## Guideline 4	
+
+--
+
++ Note attempts to examine cause-and-effect issues in nonexperimental studies	
+
+--
+
+	+ *Causal-comparative*. Uncover relationships between independent and dependent variables after an action or event has already occurred
+	
+--
+	
+  > aka *retroactive* 
+  
+--
+	
+  > aka *ex post facto*
+
+---
+
+## Guideline 5 
+
++ Note how the major variables were measured
+
+--
+
+	+ *Valid*. Measure what they claim to measure
+	
+--
+
+	+ *Reliable*. Yield consistent results
+
+---
+
+## Guideline 6
+
+--
+ 
++ Note the characteristics of the samples of participants, such as
+
+--
+
+	+ Demographics
+
+--
+
+	+ Geographic location
+	
+--
+
+	+ Gender
+	
+--
+
+	+ Race
+	
+--
+
+	+ Ethnicity
+	
+--
+
+	+ Age
+	
+--
+
+	+ SES
+
+---
+
+## Guideline 7
+	
+--
+
++ Note how large a difference is – not just whether it is statistically significant
+	
+--
+
++ So don't just report the $p$-value which by itself is nonsense
+
+---
+
+## Guideline 8 
+	
+--
+
++ It is safe to presume that all empirical studies are flawed
+	
+--
+
++ Never ever ever ever use the word "prove" when discussing results
+
+---
+
+# Guideline 9
+
+--
+
+> Make note of the limitations within each study
+
+<br>
+<br>
+
+--
+
+.pull-left[
+These <span style="color:#d9534f;font-weight:bold;">are not</span> limits placed on<br>your own study due to another study!
+]
+  
+--
+
+.pull-right[
+These <span style="color:#428bca;font-weight:bold;">are</span> constraints placed on the<br>ability to generalize from the results
+]
+
+--
+
+<br>
+<br>
+<br>
+> Given enough of a pattern, this provides you with justification to conduct a study of your own without infringing on another 
+
+--
+
+>> Found by summarizing and synthesizing
+
+--
+
+>> Ultimate purpose of the literaure review!
+
+
+---
+
+#  That’s it! 
+
+Any questions?

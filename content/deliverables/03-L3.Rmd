@@ -1,0 +1,172 @@
+---
+title: "L3: Outlining Your Literature Review"
+linktitle: "L3: Outlining Your Literature Review"
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  tasks:
+    parent: Deliverables
+    weight: 3
+type: docs
+weight: 2
+editor_options: 
+  chunk_output_type: console
+---
+
+<style>
+ul {
+    margin-left: 1.5em
+}
+
+#center {
+
+text-align: center;
+
+}
+</style>
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(tidyverse)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+### <span style="color:#35d6ed">Submission</span>
+<i>[eCampus](https://ecampus.wvu.edu)</i>
+
+### <span style="color:#65ddef">Type</span>
+
+<i>Individual Submission</i>. Each student in the course must write their own narrative and should treat this as an individual submission. 
+
+### <span style="color:#7ae5f5">Description</span>
+
+While the construction of a literature review is a fluid process without well-defined criteria, there are some elements that can be outlined and will serve those individuals who enjoy having a list or checklist of items the best. Outlining your literature review will help you to 
+
+1. organize themes in order of what makes most sense for the overall flow of your paper
+2. organize citations based on themes and your synthesis
+3. provide you a starting point for writing your literature review!  
+
+Outlines can take on many formats and vary in degrees of formality. In literature reviews, sentence outlines are useful in organizing your thoughts and citations in a predetermined format. As its name implies, a *sentence outline* is an outline written in full sentences that provides enough detail on each theme, topic, or subtopic that someone reading your outline will be able to clearly follow the basic narrative of your future narrative.
+
+### <span style="color:#97ebf4">Structure</span>
+
+This submission must be constructed using the following general components and should be uploaded to [eCampus](https://ecampus.wvu.edu/) following the formatting guidelines given in the main [tasks page](/tasks/#formatting)
+
+Building on the feedback you reviewed on our narrative from L1 and your matrix of your 25 articles, you will construct an outline of your literature review. To practice the formatting of APA 7th papers, please submit your outline using the following components:
+
+1. A cover page
+2. An outline of all components of your literature review using your 25 articles (please see below)
+3. A references page following APA 7 guidelines. 
+<br>
+<center>
+<hr style="width:10%"> 
+</center>
+<br>
+
+### <span style="color:#c9f6ff">Extra Help?</span>
+
+<i>An example of the task structure is given below<a href="#1"><sup>1</sup></a></i>
+
+1. Global warming is a gradual warming of the Earth from human activities (Union, 2010)
+    
+    A. It is characterized by a high concentration of carbon dioxide in the atmosphere 
+      + Each year five tons of CO2 are pumped into the atmosphere.
+      + The carbon dioxide traps heat.
+      + 1998 set temperature records.
+    <br>
+    <br>
+    
+    B. Carbon pollutants also eat a hole in the ozone layer (NOAA, 2021).
+      + In 1998 this hole set a size record.
+      + This allows more ultraviolet radiation to reach Earth.
+    <br>
+    <br>
+    
+    C. If this problem is not corrected; we may see disastrous results (National Issues Forums)
+      + There could be dramatic climate changes (Citation, 2016; Citation, 2017; Citation 2020)
+        + There could be drought in the middle of continents
+        + There could be many severe storms (Citation, 2020; Citation, 2017)
+        + There could be rising sea levels that would destroy coastal areas
+    <br>
+    <br>
+    
+      + There could be serious health problems (Citation, 2015; Citation 2018)
+        + There could be an increase in skin cancer (Citation, 2015; Citation, 2013) 
+        + There could be an increase in cataracts (Citation, 2017) 
+        + There could be damaged immune systems
+    <br>
+    <br>
+    
+2. The loss of woodlands adds to global warming (Citation, 2012, Citation 2013, Citation 2020)
+  
+    A. One football-field-sized area of forest is lost every second (Citation 2013)
+    <br>
+    <br>
+    B. Some loss occurs through cutting trees (Citation 2012, Citation 2013)
+    <br>
+    <br>
+    C. Burning adds more carbon dioxide form smoke (Citation 2020; Citation 2021; Citation 2022)
+    <br>
+    <br>
+    
+3. Industrial emissions accelerate global warming (Citation, 2008; Citation 2010)
+  
+    A. These account for more than 20 percent of our air pollution (Citation, 2010; Citation, 2015)
+    <br>
+    <br>
+    B. Americans are the worst offenders(Citation 2020)
+      + We use 26 percent of the world’s oil (Citation, 2019)
+      + We release 26 percent of nitrogen oxides (Citation, 2019
+      + We release 22 percent of carbon dioxide.
+    <br>
+    <br>
+    
+    C. There is light on the horizon.
+      + The rate of emission is slowing (Dept. of Energy, 2022)
+      + Companies are uniting to arrest climate change (“New Initiative”, 2020)
+    <br>
+    <br>
+    
+4. Personal energy consumption magnifies global warming (Citation, 2018; Citation 2020; Citation 2022)
+
+    A. Energy consumption is the single largest cause of global warming (Citation, 2007, Citation 2018) 
+      + Fossil fuel use accounts for 90 percent of America’s energy consumption (Citation 2018)
+      + Transportation-related energy accounts for half of all air pollution
+    <br>
+    <br>
+    
+    B. America is on an energy binge (Myerson, 2019)
+      + We are using more fuel in our homes
+        + New homes are much larger
+        + People have more energy-hungry equipment
+    <br>
+    <br>
+      + We are using more fuel for transportation (Citation, 2022) 
+        + Commutes are longer
+        + Vehicle horsepower is increasing
+        + People are buying gas-guzzlers
+<br>
+<br>
+<center>
+<hr style="width:10%"> 
+</center>
+<br>
+You should use a structure like (or similar to) the example above, but you can adjust the exact formatting like roman numerals, bullet points, etc to best suit your personal organizational style. Regardless of the structure, your outline should include 
+<br>
+<br>
+
++ The topics of your literature in the order you plan to discuss them
+
++ Each line of your outline as a full sentence with the reference you are pulling your information from multiple citations for each sentence are okay and encouraged, as it shows synthesis between articles! 
+
++ At least an introduction section, 3 themes or topic sections, and one concluding section
+
+Remember as you are constructing your sentence outline that a literature review should follow a funneling pattern, beginning with the broader topics and themes in your research subject area, synthesize the research related to your subject area, and end with a clear focus on the research area, gap, or question you are making the argument to address with your research. 
+<br>
+<br>
+<hr style="width:30%;text-align:left;margin-left:0">
+
+<font size="-1"><a id="1" href="#" onclick="history.back();"><sup>1</sup></a> Adapted from an <a href="http://clt.astate.edu/mhayes/exampleoutline.htm" target="_blank"> example</a> by Dr. Marceline Thompson-Hayes, Arkansas State University</a></font>

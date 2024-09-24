@@ -1,0 +1,890 @@
+---
+title: 'A "Short" Introduction to Experimental and Quasi-Experimental Designs'
+subtitle: "EDP 612 Week 5"
+author: "Dr. Abhik Roy"
+output: 
+ xaringan::moon_reader:
+   css: ['xaringan-themer.css', 'custom.css']
+   nature:
+     ratio: 16:9
+     highlightStyle: github
+     highlightLines: true
+     countIncrementalSlides: false
+     navigation:
+         scroll: false
+---
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+  MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+    cancel: ["Extension","cancel"],
+    bcancel: ["Extension","cancel"],
+    xcancel: ["Extension","cancel"],
+    cancelto: ["Extension","cancel"]
+  });
+});
+</script>
+
+<style>
+section {
+    display: flex;
+    display: -webkit-flex;
+}
+
+section p {
+    margin: auto;
+}
+
+section {
+    height: 600px;
+    width: 60%;
+    margin: auto;
+    border-radius: 21px;
+    background-color: #212121;
+}
+
+section p {
+    text-align: center;
+    font-size: 30px;
+    background-color: #212121;
+    border-radius: 21px;
+    font-family: Roboto Condensed;
+    font-style: bold;
+    padding: 12px;
+    color: #bff4ee;
+}
+
+#center {
+
+text-align: center;
+
+}
+
+.center p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.tab {
+    display: inline-block;
+    margin-left: 40px;
+}
+</style>
+
+```{css echo=FALSE}
+.highlight-last-item > ul > li,
+.highlight-last-item > ol > li {
+  opacity: 0.5;
+}
+.highlight-last-item > ul > li:last-of-type,
+.highlight-last-item > ol > li:last-of-type {
+  opacity: 1;
+}
+```
+
+```{r setup, include=FALSE, purl=FALSE}
+library(tidyverse)
+library(patchwork)
+library(knitr)
+library(kableExtra)
+library(fontawesome)
+library(here)
+library(DT)
+library(scales)
+library(latex2exp)
+library(rvest)
+library(showtext)
+font_add_google("Roboto Condensed", "roboto")
+showtext_auto()
+```
+
+```{r echo = FALSE, purl=FALSE}
+xaringanthemer::style_duo(
+  primary_color = "#212121",
+  secondary_color = "#bff4ee",
+  table_row_border_color = "#212121",
+  table_row_even_background_color = "#212121",
+  footnote_font_size = "0.6em",
+  header_font_google = xaringanthemer::google_font("Roboto Condensed", "700"),
+  text_font_google   = xaringanthemer::google_font("Roboto Condensed", "400")
+)
+
+xaringanExtra::use_xaringan_extra(c("tile_view", 
+                                    "animate_css", 
+                                    "tachyons"))
+
+xaringanExtra::use_logo(
+  image_url = here::here("static", "img", "course_hex.png"),
+  link_url = "https://edp612.asocialdatascientist.com",
+  position = xaringanExtra::css_position(top = "1em", right = "1em")
+)
+
+```
+
+```{r echo = FALSE, eval = TRUE, message=FALSE}
+library(tidyverse)
+``` 
+
+---
+
+class: highlight-last-item
+layout: true
+
+---
+
+# A Typical List of Variable Types
+
+--
+
+> There are just so many!
+
+--
+
+<br>
+> You may need to memorize these in the future but for now, this is a not very comprehensive list
+
+
+--
+
+<br>
+> Mostly jargon free because communication is more important than sounding smart
+
+
+--
+
+<br>
+> Popular falesly attributed quotes but still apply:
+
+  >-  *You do not really understand something unless you can explain it to your grandmother*
+  
+  >- *If you can't explain it simply, you don't understand it well enough*
+  
+  >- *Explain it to me like I'm an idiot*
+
+---
+
+## The Basic Comparisons
+
+.pull-left[ 
+<span style="color:#729ec6;">Independent</span>
+<br>
+the cause
+] 
+
+--
+
+<br>
+.pull-right[ 
+<span style="color:#faa1a1;">Dependent</span>
+<br>
+the effect
+] 
+
+--
+
+<br>
+.pull-left[ 
+<span style="color:#729ec6;">Explanatory</span>
+<br>
+what is changed
+] 
+
+--
+
+<br>
+.pull-right[ 
+<span style="color:#faa1a1;">Response</span>
+<br>
+what happens from that change
+] 
+
+--
+
+<br>
+.pull-left[ 
+<span style="color:#729ec6;">Mediator</span>
+<br>
+something that can somewhat or fully explain cause and effect
+] 
+
+--
+
+<br>
+.pull-right[ 
+<span style="color:#faa1a1;">Moderator</span>
+<br>
+something that impacts the direction and/or strength between cause and effect 
+] 
+
+---
+
+## The Basic Ones Without Good Comparisons
+
+--
+
+<center>
+<span style="color:#b6d7a8;">Extraneous</span>
+<br>
+<br>
+something known but not being studied that could influence cause and effect
+</center>
+
+--
+
+<br>
+<center>
+<span style="color:#b6d7a8;">Confounding</span>
+<br>
+<br>
+something not known that could influence cause and effect
+</center>
+
+--
+
+<br>
+<center>
+<span style="color:#b6d7a8;">Control</span>
+<br>
+<br>
+a baseline that doesn't change
+</center>
+
+---
+
+# Part I: Nonexperimental Research
+
+- Lacks the manipulation of an independent variable
+
+--
+
+- While we cannot show causation, this type of research is still very important
+		
+---
+
+##  When Should We Use Non-Experimental Research? 
+
+--
+
+-  You only have a single variable
+
+--
+
+-  You have a non-causal relationship between variables
+
+--
+
+- There is a causal relationship, but you can’t (practically or ethically) randomly assign participants
+
+--
+
+- There's a broad or exploratory question that needs answered
+
+--
+
+- Need to make sense of data
+
+--
+
+- *Examples*
+
+  > *Does damage to a person’s hippocampus impair the formation of long-term memory traces?*
+  
+  > *Is there some relationship between verbal intelligence and mathematical intelligence? *
+  
+  > *How accurate are people’s first impressions?*
+  
+  > *What is it like to be a working mother diagnosed with depression?*
+
+---
+
+## Types: Correlational Research
+
+---
+
+###  What is Correlational Research? 
+
+- Non-experimental research design used to assess the statistical relationship between two variables
+
+--
+
+- Little to no effort is used to account for confounding variables
+
+---
+
+###  Why Do Correlation Research? 
+
+- If there’s no correlation, then there can’t be eventual causation
+
+--
+
+- Ideas for future experiments
+
+--
+
+- Some studies are too impractical or unethical to be done using an experiment
+
+---
+
+###  Goals for Correlation  
+
+--
+
+1. *Descriptive*. 
+
+--
+
+  - Describes relationships
+  
+--
+  
+  - *Example*. “Does bragging about wealth correlate with scores on the [Narcissistic Personality Inventory](https://openpsychometrics.org/tests/NPI/)?”
+
+--
+
+2. *Predictive*. 
+
+--
+
+  - Predict behavior
+  
+--
+
+  - *Example*. “If a rich person scores 34 (greater level of narcissism) on the Narcissistic Personality Inventory (predictor variable), can we can predict that individual is more likely to brag about wealth (outcome variable)?”
+
+---
+
+###  Maybe / Could Be vs Probably / Certainly
+
+--
+
+.pull-left[ 
+<center>
+<span style="color:#faa1a1;">Correlational</span>
+<hr style="width:50%;">
+</center>
+]
+
+--
+
+.pull-right[ 
+<center>
+<span style="color:#729ec6;">Experimental</span>
+<hr style="width:50%;">
+</center>
+]
+
+--
+
+<br>
+.pull-left[ 
+<center>
+<span style="color:#fdd1d1;">Cannot determine cause</span>
+</center>
+]
+
+--
+
+.pull-right[ 
+<center>
+<span style="color:#a8c3dc;">Causal</span>
+</center>
+]
+
+--
+
+<br>
+.pull-left[
+<center>
+<span style="color:#fdd1d1;">Cannot control variables</span>
+</center>
+]
+
+--
+
+.pull-right[
+<center>
+<span style="color:#a8c3dc;">Experimental control</span>
+</center>
+]
+
+--
+
+<br>
+.pull-left[
+<center>
+<span style="color:#fdd1d1;">Observe and describe possible relationships</span>
+</center>
+]
+
+--
+
+.pull-right[
+<center>
+<span style="color:#a8c3dc;">Manipulate and describe changes</span>
+</center>
+]
+
+--
+
+<br>
+.pull-left[
+<center>
+<span style="color:#fdd1d1;">Find individual differences</span>
+</center>
+]
+
+--
+
+.pull-right[ 
+<center>
+<span style="color:#a8c3dc;">Find group differences</span>
+</center>
+]
+
+---
+
+### Sometimes Making Sense Out a Mess
+
+```{r, echo=FALSE,  warning=FALSE, message=FALSE, error=FALSE}
+auto <- read_csv("data/Auto.csv",
+                 show_col_types = FALSE)
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, error=FALSE, out.width="25%"}
+neg <- 
+  ggplot(data=auto, mapping = aes(x = weight, y = mpg)) + 
+  geom_point(aes(color = origin),
+             shape = 21,
+             show.legend = FALSE) +
+ scale_color_distiller(palette = "Spectral") +
+ theme_void(base_family = "roboto") +
+ theme(plot.title = element_text(color = "#ffffff",
+                                 hjust = 0.5,
+                                 size = 20),
+       plot.background = element_rect(fill = "#212121",
+                                      color = "#212121"),
+       panel.border = element_blank()) +
+  ggtitle("Negative Correlation")
+```
+
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, error=FALSE, out.width="25%"}
+pos <- 
+  ggplot(data=auto, mapping = aes(x = weight, y = horsepower)) + 
+  geom_point(aes(color = origin),
+             shape = 21,
+             show.legend = FALSE) +
+ scale_color_distiller(palette = "Spectral") +
+ theme_void(base_family = "roboto") +
+ theme(plot.title = element_text(color = "#ffffff",
+                                 hjust = 0.5,
+                                 size = 20),
+       plot.background = element_rect(fill = "#212121",
+                                      color = "#212121"),
+       panel.border = element_blank()) +
+  ggtitle("Postive Correlation")
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, error=FALSE, out.width="25%"}
+no <-
+  ggplot(data=auto, mapping = aes(x = weight, y = acceleration)) + 
+  geom_point(aes(color = origin),
+             shape = 21,
+             show.legend = FALSE) +
+ scale_color_distiller(palette = "Spectral") +
+ theme_void(base_family = "roboto") +
+ theme(plot.title = element_text(color = "#ffffff",
+                                 hjust = 0.5,
+                                 size = 20),
+       plot.background = element_rect(fill = "#212121",
+                                      color = "#212121"),
+       panel.border = element_blank()) +
+  ggtitle("Weak or No Correlation")
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, error=FALSE, fig.height=5, fig.width=15, fig.align='center'}
+neg + no + pos + 
+  plot_annotation(
+    theme = theme(plot.background = element_rect(fill = "#212121",
+                                                 color = "#212121"))
+  )
+```
+
+---
+
+# Calendar of Tasks
+
+```{r echo=FALSE}
+taskitems <- tibble(
+  
+  task = c("L0",
+           "L1",
+           "L2",
+           "L3",
+           "L4",
+           "L5",
+           "L6"),
+  
+  description = c("L0: Lit Review Process",
+           "L1: Topic Selection & Annotated Bib",
+           "L2: Annotated Bibliography",
+           "L3: Lit Review First Draft",
+           "L4:  Lit Review Second Draft",
+           "L5: Lit Review Third Draft",
+           "L6: Lit Review Final Version!"),
+  
+  due = c("Week 3",
+          "Week 5",
+          "Week 7",
+          "Week 9",
+          "Week 11",
+          "Week 13",
+          "Week 15 <sup>1</sup>")
+  
+)
+
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(taskitems, 
+      col.names = c("", "", ""),
+      escape = FALSE,
+      align = 'cll') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "5em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>%
+  column_spec(2, width = "20em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>%
+  column_spec(3, width = "10em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') 
+```
+</center>
+
+<a style="font-size:14px;"><sup>1</sup>This is the week of final exams.</a>
+
+---
+
+# Part II: Experimental Design 
+
+---
+
+#  Two Features of an Experiment 
+
+--
+
++ Manipulation of the Independent Variable
+
+--
+
+	+ Can “cause” this independent variable to occur
+	
+--
+
+	+ This “cause” elicits the response (depenedent variable)
+	
+--
+
+	+ Random Sampling
+	
+--
+
+	+ Control of Extraneous Variables
+	
+--
+
+	+ Can hold variable(s) constant
+	
+--
+
+	+ Limit variable to a specific category
+	
+--
+
+	+ (Random Assignment)
+	
+--
+
+*Quasi Experiment* - Can typically manipulate the IV, but cannot randomly assign participants to conditions
+
+---
+
+#  Types of Treatment & Control Groups  
+
+--
+
++ Randomized clinical trial
+
+--
+
+	+ One group gets the “treatment” and another group doesn’t –the control
+	
+--
+
+	+ No-treatment control condition	
+--
+
+	+ Zero Treatment (they get nothing)	
+--
+
+	+ Problem: placebo effect	
+--
+
+	+ Placebo Control group	
+--
+
+	+ Given Placebo	
+--
+
+	+ Checks for placebo effect	
+--
+
+	+ Wait-list control condition	
+--
+
+	+ Delayed treatment	
+--
+
+	+ Checks for “expectation of improving”
+
+---
+
+## Random vs. Random
+ 
+--
+
+.pull-left[ 
+<center>
+<span style="color:#faa1a1;">Random Sampling</span>
+<hr style="width:50%;">
+</center>
+]
+
+--
+
+.pull-right[ 
+<center>
+<span style="color:#729ec6;">Random Assignment</span>
+<hr style="width:50%;">
+</center>
+]
+
+--
+
+<br>
+.pull-left[ 
+<center>
+<span style="color:#fdd1d1;">Cannot determine cause</span>
+</center>
+]
+
+--
+
+.pull-right[ 
+<center>
+<span style="color:#a8c3dc;">Causal</span>
+</center>
+]
+
+--
+
+<br>
+.pull-left[
+<center>
+<span style="color:#fdd1d1;">Cannot control variables</span>
+</center>
+]
+
+--
+
+.pull-right[
+<center>
+<span style="color:#a8c3dc;">Experimental control</span>
+</center>
+]
+
+--
+
+<br>
+.pull-left[
+<center>
+<span style="color:#fdd1d1;">Observe and describe possible relationships</span>
+</center>
+]
+
+--
+
+.pull-right[
+<center>
+<span style="color:#a8c3dc;">Manipulate and describe changes</span>
+</center>
+]
+
+--
+
+<br>
+.pull-left[
+<center>
+<span style="color:#fdd1d1;">Find individual differences</span>
+</center>
+]
+
+--
+
+.pull-right[ 
+<center>
+<span style="color:#a8c3dc;">Find group differences</span>
+</center>
+]
+ 
+
+---
+
+#  Types of Designs 
+
+--
+
++ Between Subjects Experiments
+
+--
+
+	+ Each participant tested only once
+	
+--
+
+	+ Relies on random assignment	
+--
+
+	+ Matched group design	
+
+--
+
++ Simultaneous Within Subject Design	
+
+--
+
+	+ Mixed trials/conditions
+	
+---
+
++ Within subject Experiments
+	
+--
+
+	+ Each participant tested in all conditions (Blocked)	
+	
+--
+
+	  + Order Effects	
+
+--
+
+	  + Carryover Effects
+		
+--
+
+		+ Practice Effects
+		
+--
+
+		+ Fatigue effect
+		
+--
+
+		+ Context effects
+		
+--
+
+	+ Counterbalancing
+
+--
+
+	   + Repeated
+
+---
+
+#  Which One is Better? 
+
+--
+
+
+Between Subject
+
+--
+
++ Conceptually simple
+
+--
+
+	+ Less testing time for an individual
+	
+--
+
+	+ Avoids carryover effects and no need for counterbalancing
+	
+--
+
+	+ *Best when you only get one shot
+
+--
+
+Within Subject
+
+--
+
++ Controls for extraneous participant variables (lowered noise)
+
+--
+
+	+ Fewer subjects
+	
+--
+
+	+ Less testing time overall
+	
+--
+
+	+ *Best option if the participant has time and don’t think carryover is an issue
+	
+
+---
+
+# Design an experiment
+
+1. Go to [Open Psychometrics](https://openpsychometrics.org)
+
+2. Take one of the assessments with your partner
+
+3. Design an experimental study 
+  
+  - What are you testing?
+  
+  - Who are you testing?
+  
+  - What are you testing for?
+  
+  - What are you measuring?
+  
+  - What do you expect to happen?
+  
+--
+  
+Be prepared to talk about them in about 30 minutes.
+
+---
+
+#  That’s it! 
+
+Any questions?

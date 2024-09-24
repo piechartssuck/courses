@@ -1,0 +1,604 @@
+---
+title: 'Someone Help, My Methods Are All Mixed Up'
+subtitle: 'EDP 612 Week 11'
+author: Dr. Abhik Roy (& numerous pieces stolen from Dr. Reagan Curtis)
+output: 
+ xaringan::moon_reader:
+   css: ['xaringan-themer.css', 'custom.css']
+   nature:
+     ratio: 16:9
+     highlightStyle: github
+     highlightLines: true
+     countIncrementalSlides: false
+     navigation:
+         scroll: false
+---
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+<link href='https://fonts.googleapis.com/css?family=Roboto Condensed' rel='stylesheet'>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+  MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+    cancel: ["Extension","cancel"],
+    bcancel: ["Extension","cancel"],
+    xcancel: ["Extension","cancel"],
+    cancelto: ["Extension","cancel"]
+  });
+});
+</script>
+
+<style>
+section {
+    display: flex;
+    display: -webkit-flex;
+}
+
+
+section {
+    height: 600px;
+    width: 60%;
+    margin: auto;
+    border-radius: 21px;
+    background-color: #212121;
+}
+
+section p {
+    text-align: center;
+    font-size: 30px;
+    background-color: #212121;
+    border-radius: 21px;
+    font-family: Roboto Condensed;
+    font-style: bold;
+    padding: 12px;
+    color: #bff4ee;
+    margin: auto;
+}
+
+#center {
+
+text-align: center;
+
+}
+
+.center p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.tab {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+td, th, tr, table {
+    border: 0 !important;
+    border-spacing:0 !important;
+  }
+</style>
+
+```{css echo=FALSE}
+.highlight-last-item > ul > li,
+.highlight-last-item > ol > li {
+  opacity: 0.5;
+}
+.highlight-last-item > ul > li:last-of-type,
+.highlight-last-item > ol > li:last-of-type {
+  opacity: 1;
+}
+```
+
+```{r setup, include=FALSE, purl=FALSE}
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+library(fontawesome)
+library(here)
+library(clt)
+library(showtext)
+font_add_google("Roboto Condensed", "roboto")
+showtext_auto()
+```
+
+```{r echo = FALSE, purl=FALSE}
+xaringanthemer::style_duo(
+  primary_color = "#212121",
+  secondary_color = "#bff4ee",
+  table_row_border_color = "#212121",
+  table_row_even_background_color = "#212121",
+  footnote_font_size = "0.6em",
+  header_font_google = xaringanthemer::google_font("Roboto Condensed", "700"),
+  text_font_google   = xaringanthemer::google_font("Roboto Condensed", "400")
+)
+
+xaringanExtra::use_xaringan_extra(c("tile_view", 
+                                    "animate_css", 
+                                    "tachyons"))
+
+xaringanExtra::use_logo(
+  image_url = here::here("static", "img", "course_hex.png"),
+  link_url = "https://edp612.asocialdatascientist.com",
+  position = xaringanExtra::css_position(top = "1em", right = "1em")
+)
+
+```
+
+---
+
+# <span style="color:#c1e7f3">Shameless plug</span>
+
+--
+
+<b>EDP 618 Mixing Research Methodologies</b>
+<br>
+
+--
+
+.pull-left[
+> <span style="color:#00ecff">Summer II Online CRN 51971 with Dr. Reagan Curtis</span>
+]
+
+--
+
+.pull-right[
+> <span style="color:#00ff93">Fall Face-to-face CRN 87727 with me</span>
+]
+
+--
+
+.pull-left[
+This course is designed to allow you to acquire an understanding of the choices available for and processes involved in conducting mixed methodological research and evaluation. We will work together to identify potential research questions and/or evaluation foci you are interested in and for which mixed methodological approaches could usefully be applied. We will read and discuss both examples of mixed methodological research and writers discussing important issues to think about when doing mixed methods work. 
+<br>
+<br>
+<br>
+Here’s the book we use for EDP 618, and much of what we will discuss today is in there <i class="fas fa-angle-double-right" style="color:#00ecff"></i><i class="fas fa-angle-double-right" style="color:#00ff93"></i>
+]
+
+.pull-right[
+
+<center>
+<img src="img/image1.png" width="45%">
+</center>
+]
+
+---
+
+#  Plan for this PowerPoint 
+
+- General qualitative (vs. quantitative) orientation 
+
+--
+
+- General mixed methodological orientation
+
+--
+
+- Matching research questions to appropriate methodologies
+
+--
+
+- Mixed methodologies and models
+
+--
+
+- Logistic constraints and considerations
+
+---
+
+#  Remember? Contrasting Paradigms      
+
+.pull-left[
+<center>
+<b><span style="color:#bbf4b9">Positivist</span></b>
+</center>
+<br>
+- Reality is single, tangible, fragmentable , and measureable
+
+- Knower and known are independent – objectivity
+
+- Time- and context-free generalizations are possible – Big “T” Truth, [etic](http://faculty.irsc.edu/FACULTY/JLett/Article%20on%20Emics%20and%20Etics.htm) preference
+
+- There are real causes, precedent to or simultaneous with effects
+
+- Inquiry is value-free
+]
+
+.pull-right[
+<center>
+<b><span style="color:#f2b9f4">Naturalist</span></b>
+</center>
+<br>
+- Realities are multiple, socially constructed, and holistic
+
+- Knower and known are interactive, inseparable
+
+- Only time- and context-bound generalizations are possible – truths are [idiographic](http://en.wikipedia.org/wiki/Idiographic), 
+]
+
+.footnote[
+Naturalistic Inquiry by Lincoln & Guba (1985)
+]
+
+---
+
+#  Activating prior knowledge 
+
+<span style="color:#b9bbf4">Pair-Share Activity<span>
+
+--
+
+- Step 1: Find a partner
+
+--
+
+- Step 2: Discuss your current understanding of what Mixed Methods Research entails and why anyone would want to do it.
+
+  *If you finish this before others, also discuss how Mixed Methods Research 	does or does not seem useful for your own interests.*
+
+--
+
+- Step 3: Co-write a single sentence definition of Mixed Methods Research and 	decide which partner will read it to the class.
+
+--
+
+- Step 4: Read aloud and discuss similarities / differences across definitions.
+
+---
+
+#  Differing Standards Across Research Traditions 
+
+--
+
+<span style="color:#b9bbf4">Pair-Share</span>: What do you know about philosophical foundations, especially epistemologies, related to qualitative and quantitative research traditions?
+
+--
+
+<span style="color:#b9bbf4">Whole class</span>: How do you see these fitting together (or not) in mixed methodological research?
+
+--
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+.pull-right[
+Looking for more depth?
+Lincoln & Guba’s (1985) view<br>
+[www.socialresearchmethods.net/kb/qualval.php](http://www.socialresearchmethods.net/kb/qualval.php)
+
+More details; some dissension<br>
+[http://scholar.lib.vt.edu/ejournals/JTE/v9n1/hoepfl.html](http://scholar.lib.vt.edu/ejournals/JTE/v9n1/hoepfl.html)
+]
+
+---
+
+#  Triangulation 
+
+> By <b>data source</b> - multiple data collection points
+
+--
+
+> By <b>researcher</b> – multiple researchers
+
+--
+
+> By <b>theory</b> – multiple researchers with different theoretical perspectives
+
+--
+
+> By <b>method</b> – multiple methods
+
+.pull-right[
+<center>
+Looking for more detail? Look over Luttrell (2005)<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://edp612.asocialdatascientist.com/handouts/Luttrell%20(2005).pdf" target='_blank' download="Luttrell (2005)">
+<img src="img/pdf-ico.png" alt="Luttrell (2005)" width='35'>
+</a>
+<center>
+<br>
+]
+
+--
+
+> By <b>verification</b> – member checking, inquiry audit
+
+--
+
+> By <b>examination of subjectivity</b> – researcher journaling, inquiry audit
+
+
+
+
+---
+
+#  A working definition of MMR 
+
+--
+
+
+Mixed methodological approaches use paradigms, data sources, and/or analytic procedures from both quantitative and qualitative studies in various combinations.
+
+--
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+.pull-right[
+Notice that there is a lot of detail NOT specified in this definition: <i>Which paradigms</i>, <i>which data</i>, <i>which analyses</i>, and <i>how might they be combined</i>?
+]
+
+---
+
+# Pragmatism side-steps paradigm wars 
+
+--
+
+Inquiries designed to understand <span style="color:#ffdfba">workability</span> of potential <span style="color:#ffb3ba">lines of Action</span> or basis for claims of <span style="color:#bae1ff">warranted assertions</span>
+
+--
+
+> <span style="color:#ffb3ba">lines of Action</span> -  <i>George Herbert Mead</i>
+
+> <span style="color:#ffdfba">workability</span> -  both William James and John Dewey
+
+> <span style="color:#bae1ff">warranted assertions</span> (John Dewey)
+
+--
+
+<br>
+<br>
+.pull-left[
+<span style="text-align: center; display: inline-block; width: 100%;"><span style="display: inline-block;">Rather than focus on nature of reality or the possibility of objective truth, focus on <br><br><i>What are the likely consequences of believing or acting on</span><br>
+<span style="display: inline-block; border-bottom: 1px solid white; width: 200px"></span>,<br> and combine elements of qualitative and quantitative<br> approaches to achieve stronger foundations for action.</i>
+</span>
+]
+
+--
+
+.pull-right[
+Looking for more depth? Read Morgan (2007) from the very first issue of the *Journal of Mixed Methods Research*<br>
+<center>
+<a href="https://edp612.asocialdatascientist.com/handouts/Morgan%20(2007).pdf" target='_blank' download="Morgan (2007)">
+<img src="img/pdf-ico.png" alt="Morgan (2007)" width='35'>
+</center>
+</a>
+]
+
+---
+
+#  Purposes for mixing 
+
+--
+
+<br>
+<br>
+<br>
+.pull-left[
+
+<font size="+2">
+<span style="color:#ff99ff">
+Greene, Caracelli, & Graham (1989)
+</span>
+</font>
+
+<span style="color:#ffe6ff">
+<i>A critical source for understanding the multiplicity of purposes mixed methods research is suited to address. Provides a “language” (actually one of several) for thinking about and describing mixed methods components in your evaluation, your research (dissertation?), and in sources your review.</i>
+<span>
+<br>
+<br>
+<center>
+<a href="https://edp612.asocialdatascientist.com/handouts/Greene,%20Caracelli,%20&%20Graham%20(1989).pdf" target='_blank' download="Greene, Caracelli, & Graham (1989)">
+<img src="img/pdf-ico.png" alt="Greene, Caracelli, & Graham (1989)" width='35'>
+</center>
+</a>
+]
+
+--
+
+.pull-right[
+
+<font size="+2">
+<span style="color:#99ff99">
+Bryman (2006)
+</span>
+</font>
+
+
+<span style="color:#e6ffe6">
+<i>A combination of some elements derived from the ideas that mixed methods research reflects a tendency for the rationales for using multi-strategy research not to be thought
+through sufficiently and that multi-strategy research provides such a wealth of data that researchers discover uses of the ensuing findings that they had not anticipated.</i>
+</span>
+<br>
+<br>
+<center>
+<a href="https://edp612.asocialdatascientist.com/handouts/Bryman%20(2006).pdf" target='_blank' download="Bryman (2006)">
+<img src="img/pdf-ico.png" alt="Bryman (2006)" width='35'>
+</center>
+</a>
+]
+
+---
+
+<center>
+<img src="img/image2.png" width="85%">
+</center>
+
+---
+
+#  5 Mixed Methods Approaches 
+
+--
+  
+  **Triangulation** - single phenomenon
+
+--
+  
+  **Complementarity** - overlapping phenomena
+
+--
+  
+  **Development** - one method informs the next
+
+--
+  
+  **Initiation** - seeking paradox / contradiction
+
+--
+  
+  **Expansion** - study more w/ different methods for different phenomena
+
+---
+
+<center>
+<img src="img/image3.png" width="55%">
+</center>
+
+---
+
+#  Sequential Explanatory Example 
+
+--
+
+Way, Stauber, Nakkula, and London (1994) began with quantitative measures of depression and substance use from one suburban and one inner city high schools (*n* = 164 and 242).
+
+--
+
+<br>
+<span style="color:#ffde59">
+Authors identified a puzzling finding: Substance use predicted depression at the suburban high school, but not at inner city high school.
+</span>
+
+--
+
+<br>
+Thematic analysis of 19 qualitative interviews (selected based on quantitative CDI data) allowed authors to describe different meanings of substance use across the two schools.
+
+---
+
+<center>
+<img src="img/image4.png" width="90%">
+</center>
+
+
+---
+
+#  Concurrent Triangulation Example 
+
+Idler, Hudson, and Leventhal (1999), working with 159 elderly African Americans, collected quantitative measures (health ratings, demographics, and medical history) and conducted qualitative interviews about the meanings of their ratings .
+
+--
+
+<br>
+<span style="color:#ffde59">
+They initially analyzed the two data sets separately, but after coding the qualitative responses, they transformed qualitative codes into quantitative scores.
+
+--
+
+<br>
+Next, they statistically analyzed the quantified qualitative results to determine if initially qualitative responses were related to quantitative ratings.
+
+---
+
+<center>
+<img src="img/image5.png" width="75%">
+</center>
+
+---
+
+#  What structural differences do you see? 
+
+
+<center>
+Sequential Explanatory
+<br>
+<br>
+<img src="img/image7.png" width="55%">
+</center>
+<br>
+<br>
+
+
+<center>
+<br>
+Concurrent Triangulation
+<br>
+<br>
+<img src="img/image6.png" width="75%">
+</center>
+
+
+---
+
+#  Something
+
+--
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+.pull-right[
+Parting Shot: Truly mixed designs optimize potentials for synergy across the entire lifespan of the study, while many designs are only superficially mixed or mixed in name only.
+<br>
+<br>
+Feel free to contact either [me](mailto:abhik.roy@mail.wvu.edu) or [Dr. Curtis](mailto:Reagan.Curtis@mail.wvu.edu) to discuss a MMR idea or if you just have a question about it
+]
+
+---
+
+#  That’s It! 
+
+Any questions?
+
+--
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<center>
+<br><br>
+<div class="fade_rule"></div>  
+<br><br>
+</center>
+
+<center>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><br />This work is licensed under a <br /><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>
+</center>
+

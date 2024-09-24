@@ -1,0 +1,498 @@
+---
+title: ' Plan for Second Half of Class '
+subtitle: "EDP 612 Week 8"
+author: "Carinna Ferguson"
+# date: 2022-03-02
+output: 
+ xaringan::moon_reader:
+   css: ['xaringan-themer.css', 'custom.css']
+   nature:
+     ratio: 16:9
+     highlightStyle: github
+     highlightLines: true
+     countIncrementalSlides: false
+     navigation:
+         scroll: false
+---
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+  MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+    cancel: ["Extension","cancel"],
+    bcancel: ["Extension","cancel"],
+    xcancel: ["Extension","cancel"],
+    cancelto: ["Extension","cancel"]
+  });
+});
+</script>
+
+<style>
+section {
+    display: flex;
+    display: -webkit-flex;
+}
+
+
+section {
+    height: 600px;
+    width: 60%;
+    margin: auto;
+    border-radius: 21px;
+    background-color: #212121;
+}
+
+section p {
+    text-align: center;
+    font-size: 30px;
+    background-color: #212121;
+    border-radius: 21px;
+    font-family: Roboto Condensed;
+    font-style: bold;
+    padding: 12px;
+    color: #bff4ee;
+    margin: auto;
+}
+
+#center {
+
+text-align: center;
+
+}
+
+.center p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.tab {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+td, th, tr, table {
+    border: 0 !important;
+    border-spacing:0 !important;
+  }
+  
+img.middle { 
+vertical-align: middle; 
+}
+
+</style>
+
+```{css echo=FALSE}
+.highlight-last-item > ul > li,
+.highlight-last-item > ol > li {
+  opacity: 0.5;
+}
+.highlight-last-item > ul > li:last-of-type,
+.highlight-last-item > ol > li:last-of-type {
+  opacity: 1;
+}
+```
+
+```{r setup, include=FALSE, purl=FALSE}
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+library(fontawesome)
+library(here)
+library(clt)
+library(showtext)
+font_add_google("Roboto Condensed", "roboto")
+showtext_auto()
+```
+
+```{r echo = FALSE, purl=FALSE}
+xaringanthemer::style_duo(
+  primary_color = "#212121",
+  secondary_color = "#bff4ee",
+  table_row_border_color = "#212121",
+  table_row_even_background_color = "#212121",
+  footnote_font_size = "0.6em",
+  header_font_google = xaringanthemer::google_font("Roboto Condensed", "700"),
+  text_font_google   = xaringanthemer::google_font("Roboto Condensed", "400")
+)
+
+xaringanExtra::use_xaringan_extra(c("tile_view", 
+                                    "animate_css", 
+                                    "tachyons"))
+
+xaringanExtra::use_logo(
+  image_url = here::here("static", "img", "course_hex.png"),
+  link_url = "https://edp612.asocialdatascientist.com",
+  position = xaringanExtra::css_position(top = "1em", right = "1em")
+)
+
+```
+
+---
+
+class: highlight-last-item
+layout: true
+
+---
+
+#  Designing Qualitative Research Instruments 
+
+--
+
+
+*Things to consider*
+
+--
+
+Interviews
+
+--
+
++ 1:1 Interviews v. Focus Group Interviews
+
+--
+
+	+ Your relationship to the researched
+	
+--
+
++ Three Suggestions for Conducting Qualitative Interviews (Turner, 2010)
+
+--
+
++ Preparation prior to the interview
+
+--
+
+	+ Developing effective research questions
+	
+--
+
+	+ Actual interview of the participants
+	
+--
+
++ Developing An Interview Protocol
+
+.footnote[[Three Suggestions for Conducting Qualitative Interviews (Turner, 2010)](https://kodu.ut.ee/~hellex/aya/kirjandus/meetod/ArtikkelIntervjuudest.pdf)]
+
+---
+
+#  Designing Qualitative Research Instruments 
+
+--
+
+Three Suggestions for Conducting Qualitative Interviews
+
+--
+
++ Preparation prior to the interview
+
+--
+
+	+ Choose a setting with privacy and limited distraction
+	
+--
+
+	+ Explain the purpose of the interview, the structure, and about how long it will take
+	
+--
+
+	+ Allow participant to ask questions before you begin
+	
+--
+
+	+ Have some way to record the interview prepared ( ie video, audio, etc )
+	
+--
+
+	+ Consider pilot testing your interview protocol!
+	
+--
+
++ Developing effective research questions for the interview
+
+--
+
++ Actual interview of the participants
+
+---
+
+#  Designing Qualitative Research Instruments 
+
+Three Suggestions for Conducting Qualitative Interviews
+
+--
+
++ Preparation prior to the interview
+
+--
+
+	+ Developing effective research questions for the interview
+	
+--
+
+		+ Open-ended wording
+		
+--
+
+		+ Neutral questions (avoid questions that are judgmental or leading)
+		
+--
+
+		+ Ask questions one at a time – Don’t double barrel questions!
+		
+--
+
+		+ Clear,  easily understood questions
+		
+--
+
+		+ Ask follow up and probing questions as appropriate to learn more about participant’s experiences.
+		
+--
+
+	+ Actual interview of the participants
+
+---
+
+#  Designing Qualitative Research Instruments 
+
+--
+
+Three Suggestions for Conducting Qualitative Interviews
+
+--
+
++ Preparation prior to the interview
+
+--
+
+  + Developing effective research questions for the interview
+	
+--
+
++ Actual interview of the participants
+	
+--
+
+	+ Double check throughout that your audio recorder is still recording!
+		
+--
+
+	+ Ask one question at a time
+		
+--
+
+	+ Try to remain neutral during the interview
+		
+--
+
+	+ Encourage responses with nodding and/or affirmative words
+		
+--
+
+	+ Provide transition between questions “I am now going to ask some questions about a different topic” or “Shifting gears to a different question”
+		
+--
+
+	+ Maintain control of the interview – keep interview on task and relevant to research!
+
+---
+
+#  Developing an Interview Protocol 
+
+--
+
++ Initial priority is developing a rapport with the participant
+
+--
+
+	+ Communicate the purpose of the research
+	
+--
+
+	+ Review consent form
+	
+--
+
+	+ Begin with broad, general, open-ended questions that are easy for the participant to answer
+	
+--
+
+	+ Ask high-risk questions later in the interview after rapport has been developed
+	
+--
+
+	+ Ensure the questions you are asking will actually answer your research questions!
+	
+	
+.footnote[Research in the College Context: Approaches and Methods.(2015).United Kingdom:Taylor & Francis]
+
+---
+
+#  Designing a Qualitative Survey 
+
++ Many of the same points as before!
+
+--
+
+	+ Explain the purpose of the interview, the structure, and about how long it will take
+	
+--
+
+	+ Open-ended wording
+	
+--
+
+	+ Neutral questions (avoid questions that are judgmental or leading)
+	
+--
+
+	+ Ask questions one at a time – Don’t double barrel questions!
+	
+--
+
+	+ Clear,  easily understood questions
+	
+--
+
+	+ Consider pilot testing your survey prior to sending it to your participants!
+	
+--
+
+	+ Ensure the questions you are asking will actually answer your research questions!
+	
+--
+
+*Next week and the week after we will talk more about making sure surveys meet these requirements!*
+
+---
+
+#  Being and Becoming a Researcher Activity 
+
+---
+
+#  In Your Groups 
+
+--
+
++ Find a way to record your discussion! I recommend using someone’s phone.
+
+--
+
+	+ Discuss as a group (in an interview-style format) questions on the following slide related to being and becoming a researcher
+
+--
+
+	+ Feel free to deviate from the set questions as appropriate
+	
+--
+
+	+ Listen to the recording individually and begin to generate some initial codes, or things you feel were important parts of your conversation
+	
+--
+
+	+ Discuss your initial codes as a group – Come together as a group to generate some broader codes or themes from your conversation
+	
+--
+
+	+ Be prepared to share your themes and codes with the class
+	
+--
+
+		+ Provide some quotes to use as examples for any codes you all agreed on or any themes you identified.
+		
+--
+
+			+ You do not need to display all of your codes!
+			
+--
+
+		+ You may want to make a 1-2 slide PowerPoint to display your codes and themes.
+		
+--
+
+.footnote[Note: Record your conversation for about 15 minutes, then begin individual initial coding! Come back to class after ~ 25-30 minutes!]
+
+---
+
+#  Questions to Consider 
+
+---
+
+#  Sharing with the Class 
+
+---
+
+#  Parts of a Qualitative Manuscript? 
+
+--
+
++ https://www.apa.org/pubs/journals/features/qualitative-manuscript-guidelines.pdf
+
+--
+
+	+ I will put this PDF in the Slack!
+	
+--
+
+	+ This outlines how to write a qualitative manuscript but is useful for thinking about where to find information in published qualitative research!
+	
+--
+
+.footnote[[https://www.apa.org/pubs/journals/features/qualitative-manuscript-guidelines.pdf](https://www.apa.org/pubs/journals/features/qualitative-manuscript-guidelines.pdf)]
+
+---
+
+#  Ethics in Qualitative Research 
+
+--
+
++ Informed consent!
+
+--
+
++ Researcher/Participant Relationship
+	
+--
+
+	+ Power, Conflicts of Interest
+		
+--
+
++ Researcher’s Subjective interpretation
+	
+--
+
+	+ Subjectivity Statements
+		
+--
+
+	+ Protection of Participants
+	
+--
+
+		+ Anonymity, results/narrative not traceable to participant
+		
+--
+
+		+ Pseudonyms
+		
+---
+
+# Questions?
+

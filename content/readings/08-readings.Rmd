@@ -1,0 +1,104 @@
+---
+title: "Quality Qualitative Queries"
+linktitle: "Week 8: Quality Qualitative Queries"
+menu:
+  readings:
+    parent: Readings
+    weight: 8
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+type: docs
+weight: 2
+---
+
+`r blogdown::shortcode("materials-header")`
+  
+
+```{r echo=FALSE, message=FALSE}
+library(tidyverse)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+<!--
+### Read The Text
+```{r eval = TRUE, echo = FALSE, message=FALSE}
+
+read_schedule <- read_csv("readings.csv",
+                          show_col_types = FALSE) %>% 
+                  as_tibble() %>%
+                  mutate(Required = case_when(
+                  Required == "checked" ~ as.character(fontawesome::fa("check-circle", fill = "#428bca", height = "15px"))
+              )) %>%
+                  mutate(across(everything(), as.character)) %>%
+                    filter(Week == 8) %>% #CHANGE HERE
+                    select(-Week) %>%
+                  filter_all(any_vars(!is.na(.))) %>% 
+                  mutate(
+                    across(everything(), ~replace_na(.x, ""))
+                  ) %>%
+                select_if(~!all(is.na(.))) 
+  
+```
+
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(read_schedule, 
+      escape = FALSE,
+      align = 'lllccccccccc') %>%
+  kable_styling(full_width = FALSE,
+                bootstrap_options = c("striped", "hover")) %>%
+  column_spec(1, width = "15em") %>%
+  column_spec(2, width = "25em") %>%
+  column_spec(3, width = "5em") %>%
+  column_spec(4, width = "10em") %>%
+  column_spec(5, width = "10em") %>%
+  column_spec(6, width = "5em") %>%
+  column_spec(1:6, color = "#ffffff") %>%
+  row_spec(0:1, color = "#ffffff", extra_css = 'vertical-align: middle !important;')
+```
+-->
+
+### Read A Paper
+
+```{r echo=FALSE}
+unchecked <- as.character(fontawesome::fa("square", fill = "#63d6c6"))
+
+checked <- as.character(fontawesome::fa("check-square", fill = "#63d6c6"))
+
+pdf_link1 <- function() {
+ paste0("<a href='/handouts/Iloh%20(2021).pdf' target='_blank'>", "<img src='/logos/pdf-ico.png' alt='Slack icon' width='40'>", "</a>")
+}
+
+readings <- tibble(
+  
+  paper <- c("Iloh (2021). Do It for the Culture: The Case for Memes in Qualitative Research. <i>International Journal of Qualitative Methods</i> (20). 1-10. <a href='https://doi.org/10.1177/16094069211025896' target='_blank'>https://doi.org/10.1177/16094069211025896</a>"
+  ),
+  
+  download <- c(
+    pdf_link1()
+  ),
+  
+  .name_repair = "minimal"
+  
+)
+
+```
+
+<center>
+```{r, echo=FALSE}
+readings %>%
+  kbl(col.names = c("Source", "Link"), 
+      "html", 
+      escape = FALSE,
+      align = 'lc') %>%
+  kable_paper(full_width = F) %>%
+  column_spec(1, width = "30em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>%
+  column_spec(2, width = "10em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>% 
+  row_spec(0:1, extra_css = 'vertical-align: middle !important;', color = "#ffffff", background = "transparent") 
+
+```
+</center>
+  

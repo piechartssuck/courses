@@ -1,0 +1,43 @@
+---
+title: "Scratching the Surface of Quasi-Experimental Designs"
+linktitle: "Week 7: Scratching the Surface of Quasi-Experimental Designs"
+output:
+  rmarkdown::html_document
+menu:
+  extras:
+    parent: Extras
+    weight: 7
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+`r blogdown::shortcode("materials-header")`
+
+```{r load_packages, echo = FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+## APA Resources
+
+This week download a curated list of APA resources that will likely help you organize and even write.
+
+<center>
+```{r echo=FALSE,eval=TRUE,message=FALSE,purl=FALSE}
+loc <- here::here("static", "handouts", "EDP612Week7Extras.zip")
+
+downloadthis::download_file(
+  path = loc,
+  output_name = "Week 7 APA Resources",
+  button_label = "&nbsp;&nbsp;&nbsp;<span style='color:#ffffff'>Download</span>",
+  button_type = "primary",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  class = "hvr-sweep-to-left"
+  )
+```
+</center>

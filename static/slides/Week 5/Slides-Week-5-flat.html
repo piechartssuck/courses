@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>A “Short” Introduction to Experimental and Quasi-Experimental Designs</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr. Abhik Roy" />
+    <script src="Slides-Week-5-flat_files/header-attrs-2.13/header-attrs.js"></script>
+    <link href="Slides-Week-5-flat_files/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
+    <script src="Slides-Week-5-flat_files/tile-view-0.2.6/tile-view.js"></script>
+    <link href="Slides-Week-5-flat_files/animate.css-3.7.2/animate.xaringan.css" rel="stylesheet" />
+    <link href="Slides-Week-5-flat_files/tachyons-4.12.0/tachyons.min.css" rel="stylesheet" />
+    <script src="Slides-Week-5-flat_files/kePrint-0.0.1/kePrint.js"></script>
+    <link href="Slides-Week-5-flat_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# A “Short” Introduction to Experimental and Quasi-Experimental Designs
+## EDP 612 Week 5
+### Dr. Abhik Roy
+
+---
+
+
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/x-mathjax-config"&gt;
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+  MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+    cancel: ["Extension","cancel"],
+    bcancel: ["Extension","cancel"],
+    xcancel: ["Extension","cancel"],
+    cancelto: ["Extension","cancel"]
+  });
+});
+&lt;/script&gt;
+
+&lt;style&gt;
+section {
+    display: flex;
+    display: -webkit-flex;
+}
+
+section p {
+    margin: auto;
+}
+
+section {
+    height: 600px;
+    width: 60%;
+    margin: auto;
+    border-radius: 21px;
+    background-color: #212121;
+}
+
+section p {
+    text-align: center;
+    font-size: 30px;
+    background-color: #212121;
+    border-radius: 21px;
+    font-family: Roboto Condensed;
+    font-style: bold;
+    padding: 12px;
+    color: #bff4ee;
+}
+
+#center {
+
+text-align: center;
+
+}
+
+.center p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.tab {
+    display: inline-block;
+    margin-left: 40px;
+}
+&lt;/style&gt;
+
+&lt;style type="text/css"&gt;
+.highlight-last-item &gt; ul &gt; li,
+.highlight-last-item &gt; ol &gt; li {
+  opacity: 0.5;
+}
+.highlight-last-item &gt; ul &gt; li:last-of-type,
+.highlight-last-item &gt; ol &gt; li:last-of-type {
+  opacity: 1;
+}
+&lt;/style&gt;
+
+
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 110px;
+height: 128px;
+z-index: 0;
+background-image: url(/Users/skynet/Documents/WVU/Teaching/GitHub.nosync/edp612/static/img/course_hex.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:1em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('a')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = 'https://edp612.asocialdatascientist.com'
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+
+
+# A Typical List of Variable Types
+
+--
+
+&gt; There are just so many!
+
+--
+
+&lt;br&gt;
+&gt; You may need to memorize these in the future but for now, this is a not very comprehensive list
+
+
+--
+
+&lt;br&gt;
+&gt; Mostly jargon free because communication is more important than sounding smart
+
+
+--
+
+&lt;br&gt;
+&gt; Popular falesly attributed quotes but still apply:
+
+  &gt;-  *You do not really understand something unless you can explain it to your grandmother*
+  
+  &gt;- *If you can't explain it simply, you don't understand it well enough*
+  
+  &gt;- *Explain it to me like I'm an idiot*
+
+---
+
+## The Basic Comparisons
+
+.pull-left[ 
+&lt;span style="color:#729ec6;"&gt;Independent&lt;/span&gt;
+&lt;br&gt;
+the cause
+] 
+
+--
+
+&lt;br&gt;
+.pull-right[ 
+&lt;span style="color:#faa1a1;"&gt;Dependent&lt;/span&gt;
+&lt;br&gt;
+the effect
+] 
+
+--
+
+&lt;br&gt;
+.pull-left[ 
+&lt;span style="color:#729ec6;"&gt;Explanatory&lt;/span&gt;
+&lt;br&gt;
+what is changed
+] 
+
+--
+
+&lt;br&gt;
+.pull-right[ 
+&lt;span style="color:#faa1a1;"&gt;Response&lt;/span&gt;
+&lt;br&gt;
+what happens from that change
+] 
+
+--
+
+&lt;br&gt;
+.pull-left[ 
+&lt;span style="color:#729ec6;"&gt;Mediator&lt;/span&gt;
+&lt;br&gt;
+something that can somewhat or fully explain cause and effect
+] 
+
+--
+
+&lt;br&gt;
+.pull-right[ 
+&lt;span style="color:#faa1a1;"&gt;Moderator&lt;/span&gt;
+&lt;br&gt;
+something that impacts the direction and/or strength between cause and effect 
+] 
+
+---
+
+## The Basic Ones Without Good Comparisons
+
+--
+
+&lt;center&gt;
+&lt;span style="color:#b6d7a8;"&gt;Extraneous&lt;/span&gt;
+&lt;br&gt;
+&lt;br&gt;
+something known but not being studied that could influence cause and effect
+&lt;/center&gt;
+
+--
+
+&lt;br&gt;
+&lt;center&gt;
+&lt;span style="color:#b6d7a8;"&gt;Confounding&lt;/span&gt;
+&lt;br&gt;
+&lt;br&gt;
+something not known that could influence cause and effect
+&lt;/center&gt;
+
+--
+
+&lt;br&gt;
+&lt;center&gt;
+&lt;span style="color:#b6d7a8;"&gt;Control&lt;/span&gt;
+&lt;br&gt;
+&lt;br&gt;
+a baseline that doesn't change
+&lt;/center&gt;
+
+---
+
+# Part I: Nonexperimental Research
+
+- Lacks the manipulation of an independent variable
+
+--
+
+- While we cannot show causation, this type of research is still very important
+		
+---
+
+##  When Should We Use Non-Experimental Research? 
+
+--
+
+-  You only have a single variable
+
+--
+
+-  You have a non-causal relationship between variables
+
+--
+
+- There is a causal relationship, but you can’t (practically or ethically) randomly assign participants
+
+--
+
+- There's a broad or exploratory question that needs answered
+
+--
+
+- Need to make sense of data
+
+--
+
+- *Examples*
+
+  &gt; *Does damage to a person’s hippocampus impair the formation of long-term memory traces?*
+  
+  &gt; *Is there some relationship between verbal intelligence and mathematical intelligence? *
+  
+  &gt; *How accurate are people’s first impressions?*
+  
+  &gt; *What is it like to be a working mother diagnosed with depression?*
+
+---
+
+## Types: Correlational Research
+
+---
+
+###  What is Correlational Research? 
+
+- Non-experimental research design used to assess the statistical relationship between two variables
+
+--
+
+- Little to no effort is used to account for confounding variables
+
+---
+
+###  Why Do Correlation Research? 
+
+- If there’s no correlation, then there can’t be eventual causation
+
+--
+
+- Ideas for future experiments
+
+--
+
+- Some studies are too impractical or unethical to be done using an experiment
+
+---
+
+###  Goals for Correlation  
+
+--
+
+1. *Descriptive*. 
+
+--
+
+  - Describes relationships
+  
+--
+  
+  - *Example*. “Does bragging about wealth correlate with scores on the [Narcissistic Personality Inventory](https://openpsychometrics.org/tests/NPI/)?”
+
+--
+
+2. *Predictive*. 
+
+--
+
+  - Predict behavior
+  
+--
+
+  - *Example*. “If a rich person scores 34 (greater level of narcissism) on the Narcissistic Personality Inventory (predictor variable), can we can predict that individual is more likely to brag about wealth (outcome variable)?”
+
+---
+
+###  Maybe / Could Be vs Probably / Certainly
+
+--
+
+.pull-left[ 
+&lt;center&gt;
+&lt;span style="color:#faa1a1;"&gt;Correlational&lt;/span&gt;
+&lt;hr style="width:50%;"&gt;
+&lt;/center&gt;
+]
+
+--
+
+.pull-right[ 
+&lt;center&gt;
+&lt;span style="color:#729ec6;"&gt;Experimental&lt;/span&gt;
+&lt;hr style="width:50%;"&gt;
+&lt;/center&gt;
+]
+
+--
+
+&lt;br&gt;
+.pull-left[ 
+&lt;center&gt;
+&lt;span style="color:#fdd1d1;"&gt;Cannot determine cause&lt;/span&gt;
+&lt;/center&gt;
+]
+
+--
+
+.pull-right[ 
+&lt;center&gt;
+&lt;span style="color:#a8c3dc;"&gt;Causal&lt;/span&gt;
+&lt;/center&gt;
+]
+
+--
+
+&lt;br&gt;
+.pull-left[
+&lt;center&gt;
+&lt;span style="color:#fdd1d1;"&gt;Cannot control variables&lt;/span&gt;
+&lt;/center&gt;
+]
+
+--
+
+.pull-right[
+&lt;center&gt;
+&lt;span style="color:#a8c3dc;"&gt;Experimental control&lt;/span&gt;
+&lt;/center&gt;
+]
+
+--
+
+&lt;br&gt;
+.pull-left[
+&lt;center&gt;
+&lt;span style="color:#fdd1d1;"&gt;Observe and describe possible relationships&lt;/span&gt;
+&lt;/center&gt;
+]
+
+--
+
+.pull-right[
+&lt;center&gt;
+&lt;span style="color:#a8c3dc;"&gt;Manipulate and describe changes&lt;/span&gt;
+&lt;/center&gt;
+]
+
+--
+
+&lt;br&gt;
+.pull-left[
+&lt;center&gt;
+&lt;span style="color:#fdd1d1;"&gt;Find individual differences&lt;/span&gt;
+&lt;/center&gt;
+]
+
+--
+
+.pull-right[ 
+&lt;center&gt;
+&lt;span style="color:#a8c3dc;"&gt;Find group differences&lt;/span&gt;
+&lt;/center&gt;
+]
+
+---
+
+### Sometimes Making Sense Out a Mess
+
+
+
+
+
+
+
+
+
+
+&lt;img src="Slides-Week-5-flat_files/figure-html/unnamed-chunk-8-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Calendar of Tasks
+
+
+
+&lt;center&gt;
+&lt;table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt;  &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;"&gt; L0 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; color: #ffffff !important;vertical-align: middle !important;"&gt; L0: Lit Review Process &lt;/td&gt;
+   &lt;td style="text-align:left;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Week 3 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;"&gt; L1 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; color: #ffffff !important;vertical-align: middle !important;"&gt; L1: Topic Selection &amp;amp; Annotated Bib &lt;/td&gt;
+   &lt;td style="text-align:left;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Week 5 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;"&gt; L2 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; color: #ffffff !important;vertical-align: middle !important;"&gt; L2: Annotated Bibliography &lt;/td&gt;
+   &lt;td style="text-align:left;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Week 7 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;"&gt; L3 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; color: #ffffff !important;vertical-align: middle !important;"&gt; L3: Lit Review First Draft &lt;/td&gt;
+   &lt;td style="text-align:left;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Week 9 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;"&gt; L4 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; color: #ffffff !important;vertical-align: middle !important;"&gt; L4:  Lit Review Second Draft &lt;/td&gt;
+   &lt;td style="text-align:left;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Week 11 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;"&gt; L5 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; color: #ffffff !important;vertical-align: middle !important;"&gt; L5: Lit Review Third Draft &lt;/td&gt;
+   &lt;td style="text-align:left;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Week 13 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;"&gt; L6 &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; color: #ffffff !important;vertical-align: middle !important;"&gt; L6: Lit Review Final Version! &lt;/td&gt;
+   &lt;td style="text-align:left;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Week 15 &lt;sup&gt;1&lt;/sup&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/center&gt;
+
+&lt;a style="font-size:14px;"&gt;&lt;sup&gt;1&lt;/sup&gt;This is the week of final exams.&lt;/a&gt;
+
+---
+
+# Part II: Experimental Design 
+
+---
+
+#  Two Features of an Experiment 
+
+--
+
++ Manipulation of the Independent Variable
+
+--
+
+	+ Can “cause” this independent variable to occur
+	
+--
+
+	+ This “cause” elicits the response (depenedent variable)
+	
+--
+
+	+ Random Sampling
+	
+--
+
+	+ Control of Extraneous Variables
+	
+--
+
+	+ Can hold variable(s) constant
+	
+--
+
+	+ Limit variable to a specific category
+	
+--
+
+	+ (Random Assignment)
+	
+--
+
+*Quasi Experiment* - Can typically manipulate the IV, but cannot randomly assign participants to conditions
+
+---
+
+#  Types of Treatment &amp; Control Groups  
+
+--
+
++ Randomized clinical trial
+
+--
+
+	+ One group gets the “treatment” and another group doesn’t –the control
+	
+--
+
+	+ No-treatment control condition	
+--
+
+	+ Zero Treatment (they get nothing)	
+--
+
+	+ Problem: placebo effect	
+--
+
+	+ Placebo Control group	
+--
+
+	+ Given Placebo	
+--
+
+	+ Checks for placebo effect	
+--
+
+	+ Wait-list control condition	
+--
+
+	+ Delayed treatment	
+--
+
+	+ Checks for “expectation of improving”
+
+---
+
+## Random vs. Random
+ 
+--
+
+.pull-left[ 
+&lt;center&gt;
+&lt;span style="color:#faa1a1;"&gt;Random Sampling&lt;/span&gt;
+&lt;hr style="width:50%;"&gt;
+&lt;/center&gt;
+]
+
+--
+
+.pull-right[ 
+&lt;center&gt;
+&lt;span style="color:#729ec6;"&gt;Random Assignment&lt;/span&gt;
+&lt;hr style="width:50%;"&gt;
+&lt;/center&gt;
+]
+
+--
+
+&lt;br&gt;
+.pull-left[ 
+&lt;center&gt;
+&lt;span style="color:#fdd1d1;"&gt;Cannot determine cause&lt;/span&gt;
+&lt;/center&gt;
+]
+
+--
+
+.pull-right[ 
+&lt;center&gt;
+&lt;span style="color:#a8c3dc;"&gt;Causal&lt;/span&gt;
+&lt;/center&gt;
+]
+
+--
+
+&lt;br&gt;
+.pull-left[
+&lt;center&gt;
+&lt;span style="color:#fdd1d1;"&gt;Cannot control variables&lt;/span&gt;
+&lt;/center&gt;
+]
+
+--
+
+.pull-right[
+&lt;center&gt;
+&lt;span style="color:#a8c3dc;"&gt;Experimental control&lt;/span&gt;
+&lt;/center&gt;
+]
+
+--
+
+&lt;br&gt;
+.pull-left[
+&lt;center&gt;
+&lt;span style="color:#fdd1d1;"&gt;Observe and describe possible relationships&lt;/span&gt;
+&lt;/center&gt;
+]
+
+--
+
+.pull-right[
+&lt;center&gt;
+&lt;span style="color:#a8c3dc;"&gt;Manipulate and describe changes&lt;/span&gt;
+&lt;/center&gt;
+]
+
+--
+
+&lt;br&gt;
+.pull-left[
+&lt;center&gt;
+&lt;span style="color:#fdd1d1;"&gt;Find individual differences&lt;/span&gt;
+&lt;/center&gt;
+]
+
+--
+
+.pull-right[ 
+&lt;center&gt;
+&lt;span style="color:#a8c3dc;"&gt;Find group differences&lt;/span&gt;
+&lt;/center&gt;
+]
+ 
+
+---
+
+#  Types of Designs 
+
+--
+
++ Between Subjects Experiments
+
+--
+
+	+ Each participant tested only once
+	
+--
+
+	+ Relies on random assignment	
+--
+
+	+ Matched group design	
+
+--
+
++ Simultaneous Within Subject Design	
+
+--
+
+	+ Mixed trials/conditions
+	
+---
+
++ Within subject Experiments
+	
+--
+
+	+ Each participant tested in all conditions (Blocked)	
+	
+--
+
+	  + Order Effects	
+
+--
+
+	  + Carryover Effects
+		
+--
+
+		+ Practice Effects
+		
+--
+
+		+ Fatigue effect
+		
+--
+
+		+ Context effects
+		
+--
+
+	+ Counterbalancing
+
+--
+
+	   + Repeated
+
+---
+
+#  Which One is Better? 
+
+--
+
+
+Between Subject
+
+--
+
++ Conceptually simple
+
+--
+
+	+ Less testing time for an individual
+	
+--
+
+	+ Avoids carryover effects and no need for counterbalancing
+	
+--
+
+	+ *Best when you only get one shot
+
+--
+
+Within Subject
+
+--
+
++ Controls for extraneous participant variables (lowered noise)
+
+--
+
+	+ Fewer subjects
+	
+--
+
+	+ Less testing time overall
+	
+--
+
+	+ *Best option if the participant has time and don’t think carryover is an issue
+	
+
+---
+
+# Design an experiment
+
+1. Go to [Open Psychometrics](https://openpsychometrics.org)
+
+2. Take one of the assessments with your partner
+
+3. Design an experimental study 
+  
+  - What are you testing?
+  
+  - Who are you testing?
+  
+  - What are you testing for?
+  
+  - What are you measuring?
+  
+  - What do you expect to happen?
+  
+--
+  
+Be prepared to talk about them in about 30 minutes.
+
+---
+
+#  That’s it! 
+
+Any questions?
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"navigation": {
+"scroll": false
+}
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

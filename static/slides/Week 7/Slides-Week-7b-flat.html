@@ -1,0 +1,1811 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>The QEDesigns</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr. Abhik Roy" />
+    <script src="Slides-Week-7b-flat_files/header-attrs-2.13/header-attrs.js"></script>
+    <script src="Slides-Week-7b-flat_files/kePrint-0.0.1/kePrint.js"></script>
+    <link href="Slides-Week-7b-flat_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# The QEDesigns
+## EDP 612 Week 7
+### Dr. Abhik Roy
+
+---
+
+
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/x-mathjax-config"&gt;
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+  MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+    cancel: ["Extension","cancel"],
+    bcancel: ["Extension","cancel"],
+    xcancel: ["Extension","cancel"],
+    cancelto: ["Extension","cancel"]
+  });
+});
+&lt;/script&gt;
+
+&lt;style&gt;
+section {
+    display: flex;
+    display: -webkit-flex;
+}
+
+section {
+    height: 600px;
+    width: 60%;
+    margin: auto;
+    border-radius: 21px;
+    background-color: #212121;
+}
+
+section p {
+    text-align: center;
+    font-size: 30px;
+    background-color: #212121;
+    border-radius: 21px;
+    font-family: Roboto Condensed;
+    font-style: bold;
+    padding: 12px;
+    color: #bff4ee;
+    margin: auto;
+}
+
+#center {
+text-align: center;
+}
+
+.center p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.tab {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+td, th, tr, table {
+    border: 0 !important;
+    border-spacing:0 !important;
+  }
+&lt;/style&gt;
+
+&lt;style type="text/css"&gt;
+.highlight-last-item &gt; ul &gt; li,
+.highlight-last-item &gt; ol &gt; li {
+  opacity: 0.5;
+}
+.highlight-last-item &gt; ul &gt; li:last-of-type,
+.highlight-last-item &gt; ol &gt; li:last-of-type {
+  opacity: 1;
+}
+.normal-list &gt; ul &gt; li,
+.normal-list &gt; ol &gt; li {
+  opacity: 1;
+}
+&lt;/style&gt;
+
+
+   
+
+
+&lt;!--
+class: highlight-last-item
+layout: true
+--&gt;
+
+---
+
+# Modern Descriptions of Experiments 
+
+---
+
+## Randomized Experiment 
+
+--
+
++ Units are assigned to conditions randomly
+
+--
+
++ Randomly assigned units are probabilistically equivalent based on expectancy (if certain conditions are met)
+
+--
+
++ Under the appropriate conditions, randomized experiments provide unbiased estimates of an effect
+
+---
+
+## Quasi-Experiments
+
+--
+
++ Shares all features of randomized experiments except assignment
+
+--
+
++ Assignment to conditions occurs by self-selection
+
+--
+
++ Greater emphasis on enumerating and ruling out alternative explanations
+
+--
+
+  + ... through logic and reasoning, design, and measurement
+
+---
+
+#  Basic Design Elements and Notation 
+
+---
+
+class: normal-list
+
+##  Assignment
+
+--
+ 
++ Random assignment
+
++ Cutoff-based assignment
+
++ Other nonrandom assignment
+
++ Matching and stratifying
+
++ Masking
+
+---
+
+class: normal-list
+
+##  Measurement
+
+--
+
++ Posttest observations
+
++ Single posttests
+
++ Nonequivalent dependent variables
+
++ Multiple substantive posttests
+
++ Pretest observations
+
++ Single pretest
+
++ Retrospective pretest
+
++ Proxy pretest
+
++ Repeated pretests over time
+
++ Pretests on independent samples
+
++ Moderator variable with predicted interaction
+
++ Measuring threats to validity
+
+---
+
+class: normal-list
+
+##  Comparison Groups 
+
+--
+
++ Single nonequivalent groups
+
++ Multiple nonequivalent groups
+
++ Cohorts
+
++ Internal versus external controls
+
++ Constructed contrasts
+
+	+ Regression extrapolation contrasts
+	
+	+ Normed contrasts
+	
+	+ Secondary data contrasts
+
+---
+
+class: normal-list
+
+##  Treatments 
+
+--
+
++ Switching replications
+
++ Reversed treatments
+
++ Removed treatments
+
++ Repeated treatments
+
+---
+
+##  Notation 
+
+$$
+  \require{enclose}
+$$
+
+&lt;center&gt;
+&lt;table class=" lightable-paper" style='font-family: "Arial Narrow", arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;'&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;color: #ffffff !important;vertical-align: middle !important;"&gt; Variable 
+   &lt;/th&gt;
+&lt;th style="text-align:left;color: #ffffff !important;vertical-align: middle !important;"&gt; Description 
+  &lt;/th&gt;
+&lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 20em; color: #ffffff !important;vertical-align: middle !important;"&gt; `X` &lt;/td&gt;
+   &lt;td style="text-align:left;width: 30em; color: #ffffff !important;vertical-align: middle !important;"&gt; treatment &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 20em; color: #ffffff !important;vertical-align: middle !important;"&gt; `O` &lt;/td&gt;
+   &lt;td style="text-align:left;width: 30em; color: #ffffff !important;vertical-align: middle !important;"&gt; observation &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 20em; color: #ffffff !important;vertical-align: middle !important;"&gt; `R` &lt;/td&gt;
+   &lt;td style="text-align:left;width: 30em; color: #ffffff !important;vertical-align: middle !important;"&gt; random assignment &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 20em; color: #ffffff !important;vertical-align: middle !important;"&gt; `NR` &lt;/td&gt;
+   &lt;td style="text-align:left;width: 30em; color: #ffffff !important;vertical-align: middle !important;"&gt; nonrandom assignment &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 20em; color: #ffffff !important;vertical-align: middle !important;"&gt; ` `\(\enclose{horizontalstrike}{X}\)` ` &lt;/td&gt;
+   &lt;td style="text-align:left;width: 30em; color: #ffffff !important;vertical-align: middle !important;"&gt; removed treatment &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 20em; color: #ffffff !important;vertical-align: middle !important;"&gt; `X_+` &lt;/td&gt;
+   &lt;td style="text-align:left;width: 30em; color: #ffffff !important;vertical-align: middle !important;"&gt; treatment expected to produce an effect in one direction &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 20em; color: #ffffff !important;vertical-align: middle !important;"&gt; `X_-` &lt;/td&gt;
+   &lt;td style="text-align:left;width: 30em; color: #ffffff !important;vertical-align: middle !important;"&gt; conceptually opposite treatment expected to reverse an effect &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 20em; color: #ffffff !important;vertical-align: middle !important;"&gt; `C` &lt;/td&gt;
+   &lt;td style="text-align:left;width: 30em; color: #ffffff !important;vertical-align: middle !important;"&gt; cutting score &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 20em; color: #ffffff !important;vertical-align: middle !important;"&gt; --- &lt;/td&gt;
+   &lt;td style="text-align:left;width: 30em; color: #ffffff !important;vertical-align: middle !important;"&gt; non-randomly formed groups &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 20em; color: #ffffff !important;vertical-align: middle !important;"&gt; ··· &lt;/td&gt;
+   &lt;td style="text-align:left;width: 30em; color: #ffffff !important;vertical-align: middle !important;"&gt; cohort &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/center&gt;
+
+
+
+---
+
+# The Logic of Quasi-Experimentation 
+
+---
+
+##  Rationale 
+
+--
+
++ Quasi-experiments are often a necessity given practical and logistical constraints
+
+--
+
++ Greater emphasis on construct or external validity rather than cause-effect associations - ***least common***
+
+--
+
++ Funding, ethics, administration - ***somewhat common***
+
+--
+
++ The intervention has already occurred - ***most common***
+
+--
+
++ Sometimes they are the best alternative, even if causal inferences are weaker than is possible with other designs
+
+---
+
+## Central Principles 
+  
+--
+  
+  + Identification and study of plausible threats to internal validity
+
+--
+  
+  + Careful scrutiny of plausible alternative explanations for treatment-outcome covariation
+
+--
+  
+  + Primacy of control by design
+
+--
+  
+  + Use carefully planned and implemented design elements rather than statistical controls for anticipated confounds
+
+--
+  
+  + Coherent pattern matching
+  
+--
+
+  + Complex (a priori) causal hypotheses that reduce the plausibility of alternative explanations
+
+--
+
+  + Even so, great care must be taken when planning such studies as numerous threats that cannot be controlled are often operating
+  
+---
+
+# Designs without Control Groups
+
+---
+  
+## One-Group Posttest Only Design 
+
+--
+
+.center2[
+&lt;table class=" lightable-paper" style='font-family: "Arial Narrow", arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;'&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `X` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `O_2` &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Treatment &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ` `\(\rightarrow\)` ` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Posttest &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&gt; Absence of pretest makes it difficult to know if change has occurred and absence of a control group makes it difficult to know what would have happened without treatment
+
+--
+
+&lt;br&gt;
+&gt; Known as a one-shot study
+
+---
+
+## One-Group Pretest-Posttest Design
+
+--
+
+.center2[
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `O_1` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `X` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `O_2` &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Pretest &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ` `\(\rightarrow\)` ` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Treatment &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ` `\(\rightarrow\)` ` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Posttest &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&gt; Adding a pretest provides weak information concerning what might have happened to participants had the treatment not occurred
+
+--
+
+&lt;br&gt;
+&gt; Known as a one-shot study
+
+---
+
+## One-Group Pretest-Posttest Design with Double Pretest
+
+--
+
+.center2[
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `O_1` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `O_2` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `X` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `O_3` &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Pretest &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ` `\(\rightarrow\)` ` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Pretest &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ` `\(\rightarrow\)` ` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Treatment &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ` `\(\rightarrow\)` ` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Posttest &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&gt; Adding multiple pretests reduces the plausibility of maturation and regression effects
+
+--
+
+&lt;br&gt;
+&gt; Additional pretests can confirm maturational trends
+
+---
+
+## One-Group Pretest-Posttest Design Using a Nonequivalent Variable
+
+--
+
+.center2[
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `\{O_{1A}, O_{1B}\}` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `X` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `\{O_{2A}, O_{2B}\}` &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Pretest &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ` `\(\rightarrow\)` ` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Treatment &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ` `\(\rightarrow\)` ` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Posttest &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&gt; Measure `\(A\)` is expected to change because of treatment, `\(B\)` is not
+
+--
+
+&lt;br&gt;
+&gt; Both `\(A\)` and `\(B\)` are expected to respond to the same validity threats in the same way
+
+---
+
+### Example
+
+*Lottery ticket sales in convenience stores after introduction of signs in store windows reading “did you buy your ticket?”*
+
+&lt;br&gt;
+&lt;center&gt;
+&lt;img src="img/pretest-posttest1.png" alt="pretest-posttest" style="width: 600px;"/&gt;
+&lt;center&gt;
+
+---
+
+## Removed-Treatment Design
+
+--
+
+$$
+  \require{enclose}
+$$
+
+.center2[
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `O_1` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `X` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `O_2` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `O_3` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; ` `\(\enclose{horizontalstrike}{X}\)` ` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `O_4` &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Pretest &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ` `\(\rightarrow\)` ` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Treatment &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ` `\(\rightarrow\)` ` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Posttest &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ` `\(\rightarrow\)` ` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Pretest &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ` `\(\rightarrow\)` ` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Removal &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ` `\(\rightarrow\)` ` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Posttest &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&gt; Demonstrates that outcomes rise and fall with the presence or absence of treatment
+
+---
+
+### Example
+
+*Generally interpretable outcome pattern*
+
+&lt;br&gt;
+&lt;center&gt;
+&lt;img src="img/removed-treatment1.png" alt="removed-treatment" style="width: 650px;"/&gt;
+&lt;center&gt;
+
+---
+
+## Repeated-Treatment Design
+
+--
+
+$$
+  \require{enclose}
+$$
+
+.center2[
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `O_1` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `X` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `O_2` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; ` `\(\enclose{horizontalstrike}{X}\)` ` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `O_3` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `X` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `O_4` &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Pretest &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ` `\(\rightarrow\)` ` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Treatment &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ` `\(\rightarrow\)` ` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Posttest &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ` `\(\rightarrow\)` ` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Removal &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ` `\(\rightarrow\)` ` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Posttest &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ` `\(\rightarrow\)` ` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Treatment &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ` `\(\rightarrow\)` ` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Posttest &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&gt; Few threats could explain a close relationship between treatment introductions and removals and parallel outcome changes
+
+---
+
+### Example
+
+*Mean narcotics use over multiple Methadone maintenance on/off conditions*
+
+&lt;br&gt;
+&lt;center&gt;
+&lt;img src="img/repeated-treatment1.png" alt="repeated-treatment" style="width: 650px;"/&gt;
+&lt;center&gt;
+
+---
+
+# `\(A - B\)` Designs 
+
+--
+  
++ Multiple-baseline design (a class of single-subject designs), or collection of `\(A - B\)` designs, to assess the effects of an intervention across separate baselines
+
+--
+
++ Variables
+
+&gt;- `\(A\)` = baseline
+
+--
+
+&gt;- `\(B\)` = treatment
+
+--
+
++ The intervention is introduced in a staggered manner and the baseline provides a predicted level of the dependent variable in absence of the treatment
+
+--
+
++ `\(A - B - A\)` designs are sometimes called removal designs (i.e., the treatment is removed)
+
+---
+
+### Example
+
+&lt;br&gt;
+&lt;center&gt;
+&lt;img src="img/a-b-design1.png" alt="a-b" style="width: 600px;"/&gt;
+&lt;center&gt;
+
+---
+
+# Designs that use a Control Group but no Pretest 
+
+---
+
+##  Posttest-Only Design with Nonequivalent Control Group 
+
+--
+
+.center2[
+&lt;table class="table" style="margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `NR` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `X` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `O_1` &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; ------ &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ------ &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; ------ &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ------ &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; ------ &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `NR` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `O_1` &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Non Random Assignment &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ` `\(\rightarrow\)` ` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Treatment &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ` `\(\rightarrow\)` ` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Posttest &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&gt; Unknown pretest group differences make it extremely difficult to separate treatment effects from selection effects
+
+---
+
+##  Posttest-Only Design using an Independent Sample Pretest 
+
+--
+
+.center2[
+&lt;table class="table" style="margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `NR` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `O_1` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ¦ &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `X` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `O_2` &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; ------ &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ------ &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; ------ &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ------ &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; ------ &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ------ &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; ------ &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `NR` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `O_1` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ¦ &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `O_2` &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Non Random Assignment &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ` `\(\rightarrow\)` ` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Pretest &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ` `\(\rightarrow\)` ` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Treatment &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ` `\(\rightarrow\)` ` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Posttest &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&gt; Assumes overlapping group membership
+
+--
+
+&gt; Useful when
+
+--
+
+&gt;&gt; Pretest measurements may be reactive 
+
+--
+
+&gt;&gt; Cannot follow same groups over time
+
+--
+
+&gt;&gt; When interested in studying intact communities whose members change over time
+
+---
+
+#  Case Control Studies 
+
+--
+  
++ Predominant method for many forms of epidemiological research
+
+--
+
++ Used to identify factors that may contribute to a condition by comparing subjects who have that condition (i.e., 'cases ') with those who do not have the condition but are otherwise similar (i.e., 'controls' )
+
+--
+
++ Example: Famously used to determine the association between smoking and lung cancer
+
+---
+
+##  Untreated Control Group Design with Dependent Pretest and Posttest Samples
+
+--
+
+.center2[
+&lt;table class="table" style="margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `NR` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `O_1` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `X` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `O_2` &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; ------ &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ------ &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; ------ &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ------ &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; ------ &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ------ &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; ------ &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `NR` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `O_1` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `O_2` &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Non Random Assignment &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ` `\(\rightarrow\)` ` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Pretest &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ` `\(\rightarrow\)` ` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Treatment &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ` `\(\rightarrow\)` ` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Posttest &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&gt; A selection bias is always present, but the pretest observation allows for determining the magnitude and direction of bias
+
+---
+
+### Outcome Pattern 1
+
+--
+
+&gt; *Both groups grow apart at different average rates in the same direction*
+
+--
+
+&gt; This pattern is consistent with treatment effects and can sometimes be causally interpreted, but it is subject to numerous threats, especially selection-maturation
+
+--
+
+.pull-right[
+&lt;img src="img/outcome1.png" alt="outcome1" style="width: 450px;"/&gt;
+]
+
+---
+
+### Outcome Pattern 2
+
+--
+
+&gt; *Spontaneous growth only occurs in the treatment group*
+
+--
+
+&gt; Not a lot of reliance can be placed on this pattern as the reasons why spontaneous growth only occurred in the treatment group must be explained (e.g., selection-maturation) 
+
+--
+
+.pull-right[
+&lt;img src="img/outcome2.png" alt="outcome2" style="width: 450px;"/&gt;
+]
+
+---
+
+### Outcome Pattern 3
+
+--
+
+&gt; *Initial pretest differences favoring the treatment group diminish over time*
+
+--
+
+&gt; Same internal validity threats as outcome patterns #1 and #2 except that selection-maturation threats are less plausible
+
+--
+
+.pull-right[
+&lt;img src="img/outcome3.png" alt="outcome3" style="width: 450px;"/&gt;
+]
+
+---
+
+### Outcome Pattern 4
+
+--
+
+&gt; *Initial pretest differences favoring the control group diminish over time*
+
+--
+
+&gt; Subject to numerous validity threats (e.g., selection-instrumentation, selection-history), but generally can be causally interpreted
+
+--
+
+.pull-right[
+&lt;img src="img/outcome4.png" alt="outcome4" style="width: 450px;"/&gt;
+]
+
+---
+
+### Outcome Pattern 5
+
+--
+
+&gt; *Outcomes that crossover in the direction of relationships*
+
+--
+
+&gt; Most amenable to causal interpretation and most threats cannot plausibly explain this pattern
+
+--
+
+.pull-right[
+&lt;img src="img/outcome5.png" alt="outcome5" style="width: 450px;"/&gt;
+]
+
+---
+
+# Modeling Selection Bias
+
+--
+
+- *Simple matching and stratifying* 
+
+  - Overt biases with respect to measured variables/characteristics
+
+--
+
+- *Instrumental variable analysis* 
+
+  - Statistical modeling of covariates believed to explain selection biases
+
+--
+
+- *Hidden bias analysis* 
+
+  - Difference with respect to unmeasured variables/characteristics
+  
+  - Sensitivity analysis (how much hidden bias would need to be present to explain observed differences)
+  
+--
+
+- *Propensity score analysis* 
+  
+  - Predicted probabilities of group membership
+  
+  - Propensities then used for matching or as covariate
+
+---
+
+# Interrupted Time-Series
+
+--
+
+A large series of observations made on the same variable consecutively over time
+
+--
+
+- Observations can be made on the same units (e.g., people) or on constantly changing units (e.g., populations)
+
+--
+
+- Must know the exact point at which a treatment or intervention occurred (i.e., the interruption)
+
+--
+
+- Interrupted time-series designs are powerful cause-probing designs when experimental designs cannot be used and when a time series is feasible
+
+---
+
+## Types of Effects
+
+--
+
+- Form of the effect (slope or intercept)
+
+--
+
+- Permanence of the effect (continuous or discontinuous)
+
+--
+
+- Immediacy of the effect (immediate or delayed)
+
+--
+
+- Independence of observations
+
+--
+
+  - (Most) statistical analyses assume observations are independent (one observation is independent of another)
+  
+--
+
+  - In interrupted time-series, observations are autocorrelated (related to prior observations or lags)
+  
+--
+
+  - Requires a large number of observations to estimate autocorrelation
+  
+--
+
+- Seasonality
+
+--
+
+  - Observations that coincide with seasonal patterns
+  
+--
+
+  - Seasonality effects must be modeled and removed from a time-series before assessing treatment impact
+
+---
+
+.center2[
+&lt;img src="img/effect-delay.png" alt="removed-treatment" style="width: 650px;"/&gt;
+]
+
+---
+
+.center2[
+&lt;table class=" lightable-paper" style='font-family: "Arial Narrow", arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;'&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt;  &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `O_1` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `O_2` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `O_3` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `O_4` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `O_5` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `X` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `O_6` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `O_7` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `O_8` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `O_9` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; `O_{10}` &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Prettest &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ` `\(\rightarrow\)` ` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Pretest &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ` `\(\rightarrow\)` ` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Pretest &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ` `\(\rightarrow\)` ` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Pretest &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ` `\(\rightarrow\)` ` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Pretest &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ` `\(\rightarrow\)` ` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Treatment &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ` `\(\rightarrow\)` ` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Posttest &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ` `\(\rightarrow\)` ` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Posttest &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ` `\(\rightarrow\)` ` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Posttest &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ` `\(\rightarrow\)` ` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Posttest &lt;/td&gt;
+   &lt;td style="text-align:center;width: 3em; color: #ffffff !important;vertical-align: middle !important;"&gt; ` `\(\rightarrow\)` ` &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; color: #ffffff !important;vertical-align: middle !important;"&gt; Posttest &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&gt; The basic interrupted time-series design requires one treatment group with many observations before and after a treatment
+
+---
+
+.center2[
+&lt;img src="img/irr1.png" alt="removed-treatment" style="width: 650px;"/&gt;
+]
+
+---
+
+.center2[
+&lt;img src="img/irr2.png" alt="removed-treatment" style="width: 650px;"/&gt;
+]
+
+---
+
+.center2[
+&lt;img src="img/irr3.png" alt="removed-treatment" style="width: 650px;"/&gt;
+]
+
+---
+
+.center2[
+&lt;img src="img/irr4.png" alt="removed-treatment" style="width: 650px;"/&gt;
+]
+
+---
+
+.center2[
+&lt;img src="img/irr5.png" alt="removed-treatment" style="width: 650px;"/&gt;
+]
+
+---
+
+.center2[
+&lt;img src="img/irr6.png" alt="removed-treatment" style="width: 650px;"/&gt;
+]
+
+---
+
+#  That's It!
+
+Any questions?
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"navigation": {
+"scroll": false
+}
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+---
+title: "Survey Says ... Nobody is Taking Our Survey"
+linktitle: "Week 9: Survey Says ... Nobody is Taking Our Survey"
+output:
+  rmarkdown::html_document
+menu:
+  due:
+    parent: "To Do List"
+    weight: 9
+type: docs
+weight: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(tidyverse)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+```{r eval = TRUE, echo = FALSE}
+unchecked <- as.character(fontawesome::fa("circle", fill = "#3e464a", height = "15px"))
+
+checked <- as.character(fontawesome::fa("check-circle", fill = "#89f0de", height = "25px"))
+
+wk_post <- tibble(
+
+"Description" = c("Read <i>Mixed Methods Research Design</i>",
+                  "Read <i>Toward a Conceptual Framework for Mixed-Method Evaluation Designs</i>",
+                  "Read <i>How to Create a Bad Survey Instrument</i>",
+                  "Review the in-class presentation <i>Survey Design</i>",
+                  "Take a look at Pew Research",
+                  "Review the criteria for <i>L4: Refining the Review</i>"),
+
+"Details" = c("<a href='/readings/09-readings/#read-the-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+              "<a href='/readings/09-readings/#read-papers'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+              "<a href='/readings/09-readings/#read-papers'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+              "<a href='/materials/09-materials/#in-class-notes'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+              "<a href='/extras/09-extras/#additional-survey-design-information-and-data'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
+              "<a href='/deliverables/04-L4/'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>"),
+
+Icon = c("", 
+         "",
+         "",
+         "",
+         "",
+         ""),
+
+Site = c("", 
+         "",
+         "",
+         "",
+         "",
+         "")
+)
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+wk_post %>%
+  mutate(Icon = case_when(
+    str_detect(`Icon`, "slack") ~ '<img src="/logos/slack-ico.png" alt="Slack icon" width="25">',
+    str_detect(`Icon`, "ecampus") ~ '<img src="/logos/wvu-gold-ico.png" alt="WVU icon" width="25">',
+    str_detect(`Icon`, "external") ~ '<div style="font-size: 0.5rem;"><i class="fa fa-external-link fa-2x" aria-hidden="true" style="color:#559977"></i></div>',
+    TRUE ~ NA_character_
+      )
+    ) %>%
+  mutate(Site = na_if(Site, "")) %>%
+  mutate(Link = case_when(
+    !is.na(Icon) ~ paste0("<a href=",Site," target='_blank'>",Icon,"</a>"),
+    TRUE ~ NA_character_
+      )
+    ) %>%
+  select(-Icon, -Site) %>% 
+  mutate_all(replace_na,"") %>%
+kbl("html",
+    escape = FALSE,
+    align = 'lcc') %>%
+  kable_styling(full_width = FALSE)%>%
+  column_spec(1, width = "20em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>%
+  column_spec(2:3, width = "5em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>%
+  row_spec(0, extra_css = 'vertical-align: middle !important;', color = "#f7f7f7")
+```
+</center>

@@ -1,0 +1,235 @@
+---
+title: 'Validity and Reliability'
+subtitle: "EDP 612 Week 6"
+author: "Dr. Abhik Roy"
+output: 
+ xaringan::moon_reader:
+   css: ['xaringan-themer.css', 'custom.css']
+   nature:
+     ratio: 16:9
+     highlightStyle: github
+     highlightLines: true
+     countIncrementalSlides: false
+     navigation:
+         scroll: false
+---
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+  MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+    cancel: ["Extension","cancel"],
+    bcancel: ["Extension","cancel"],
+    xcancel: ["Extension","cancel"],
+    cancelto: ["Extension","cancel"]
+  });
+});
+</script>
+
+<style>
+section {
+    display: flex;
+    display: -webkit-flex;
+}
+
+section {
+    height: 600px;
+    width: 60%;
+    margin: auto;
+    border-radius: 21px;
+    background-color: #212121;
+}
+
+section p {
+    text-align: center;
+    font-size: 30px;
+    background-color: #212121;
+    border-radius: 21px;
+    font-family: Roboto Condensed;
+    font-style: bold;
+    padding: 12px;
+    color: #bff4ee;
+    margin: auto;
+    }
+
+#center {
+
+text-align: center;
+
+}
+
+.center p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.tab {
+    display: inline-block;
+    margin-left: 40px;
+}
+</style>
+
+```{css echo=FALSE}
+.highlight-last-item > ul > li,
+.highlight-last-item > ol > li {
+  opacity: 0.5;
+}
+.highlight-last-item > ul > li:last-of-type,
+.highlight-last-item > ol > li:last-of-type {
+  opacity: 1;
+}
+```
+
+```{r echo = FALSE, purl=FALSE}
+xaringanthemer::style_duo(
+  primary_color = "#212121",
+  secondary_color = "#bff4ee",
+  table_row_border_color = "#212121",
+  table_row_even_background_color = "#212121",
+  footnote_font_size = "0.6em",
+  header_font_google = xaringanthemer::google_font("Roboto Condensed", "700"),
+  text_font_google   = xaringanthemer::google_font("Roboto Condensed", "400")
+)
+
+xaringanExtra::use_xaringan_extra(c("tile_view", 
+                                    "animate_css", 
+                                    "tachyons"))
+
+xaringanExtra::use_logo(
+  image_url = here::here("static", "img", "course_hex.png"),
+  link_url = "https://edp612.asocialdatascientist.com",
+  position = xaringanExtra::css_position(top = "1em", right = "1em")
+)
+
+```
+
+---
+
+class: highlight-last-item
+layout: true
+
+---
+
+#  <span style="color:#d9534f;font-weight:bold;">Reliability</span> and <span style="color:#428bca;font-weight:bold;">Validity</span> 
+
+--
+
++ <span style="color:#d9534f;font-weight:bold;">Reliability</span> and <span style="color:#428bca;font-weight:bold;">Validity</span> are important concepts in both measurement and the full experiment to insure the link between our statistics and conclusions is sound. 
+
+--
+
+<center>
+<span style="color:#d9534f;font-weight:bold;">Reliability</span><br><br><i>being consistent</i>
+</center>
+
+--
+
+<center>
+<span style="color:#428bca;font-weight:bold;">Validity</span><br><br><i>on target</i>
+</center>
+
+---
+
+# <span style="color:#d9534f;font-weight:bold;">Reliability</span> 
+
+--
+
++ <span style="color:#d9534f;font-weight:bold;">Reliability</span> is the extent to which the measurements of a test remain consistent over repeated tests of the same subject under identical conditions.
+
+--
+
+	+ *Officially*. An experiment is reliable if it yields consistent results of the same measure. It is unreliable if repeated measurements give different results.
+
+--
+
+	+ *Lay terms* Results aren’t just a one-off
+	
+--
+
+	+ *Day to day example*. A car
+	
+--
+
+	+ *Research world example*. Reliability of experiment, replication, and error rate
+
+---
+
+#  <span style="color:#428bca;font-weight:bold;">Validity</span>
+
+--
+
+
++ <span style="color:#428bca;font-weight:bold;">Validity</span> of a measure is the degree to which the variable measures what it is intended to measure
+
+--
+
+	+ *Officially*. An experiment is valid if it yields outcomes suitable for answering original questions
+	
+--
+
+	+ *Lay terms*. Do the results answer what is supposed to be answered?
+
+--
+
+	+ *Day to day example*. Medical results
+
+--
+
+	+ *Research world example*. Validity of standardized test scores, research results and findings
+
+---
+
+No <span style="color:#d9534f;font-weight:bold;">Reliability</span> and Not <span style="color:#428bca;font-weight:bold;">Valid</span>
+![](img/image10.png)
+
+
+---
+
+<span style="color:#d9534f;font-weight:bold;">Reliable</span> but No <span style="color:#428bca;font-weight:bold;">Validity</span>
+![](img/image12.png)
+
+
+---
+
+Low <span style="color:#d9534f;font-weight:bold;">Reliability</span> and Possibly High <span style="color:#428bca;font-weight:bold;">Validity</span>
+![](img/image13.png)
+
+
+---
+
+<span style="color:#d9534f;font-weight:bold;">Reliable</span> and <span style="color:#428bca;font-weight:bold;">Valid</span>
+![](img/image14.png)
+
+---
+
+#  Two important points 
+
+.pull-left[
+A test can be <span style="color:#d9534f;font-weight:bold;">Reliable</span> without being <span style="color:#428bca;font-weight:bold;">Valid</span>.
+]
+
+--
+
+.pull-right[
++ A test cannot be <span style="color:#428bca;font-weight:bold;">Valid</span> unless it is <span style="color:#d9534f;font-weight:bold;">Reliable</span>.
+]
+
+---
+
+#  That’s it! 
+
+Any questions?

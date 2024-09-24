@@ -1,0 +1,93 @@
+---
+title: "L2: Expanded Annotated Bibliography"
+linktitle: "L2: Expanded Annotated Bibliography"
+toc: true
+output:
+  rmarkdown::html_document:
+    toc: true
+menu:
+  tasks:
+    parent: Deliverables
+    weight: 2
+type: docs
+weight: 2
+editor_options: 
+  chunk_output_type: console
+---
+
+<style>
+ul {
+    margin-left: 1.5em
+}
+</style>
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(tidyverse)
+library(fontawesome)
+library(knitr)
+library(kableExtra)
+```
+
+### <span style="color:#35d6ed">Submission</span>
+<i>[eCampus](https://ecampus.wvu.edu)</i>
+
+### <span style="color:#65ddef">Type</span>
+
+<i>Individual Submission</i>. Each student in the course must write their own narrative and should treat this as an individual submission. 
+
+### <span style="color:#7ae5f5">Description</span>
+
+In this follow-up task, you are asked to further develop your annotated bibliography by expanding on the number of summaries while beginning the preliminary work towards a synthesis. Please note while you do not have to turn in an updated narrative, we strongly suggest that you continue to work on it.
+
+### <span style="color:#97ebf4">Structure</span>
+
+This submission must be constructed using the following general components and should be uploaded to [eCampus](https://ecampus.wvu.edu/) following the formatting guidelines given in the main [tasks page](/tasks/#formatting)
+
+1. literature review matrix with twenty-five entries<a href="#1"><sup>1</sup></a>
+
+----
+
+### <span style="color:#c9f6ff">Extra Help?</span>
+
+*An example of what to consider while you collect and pick studies apart*
+```{r echo=FALSE}
+pdf_link <- function() {
+ paste0("<a href='/slides/Week 5/Slides-Week-5.pdf'>", "<img src='/logos/pdf-ico.png' alt='Slack icon' width='30'>", "</a>")
+}
+
+textitems <- tibble(
+  
+  citation <- c("Reed, J. A., Einstein, G., Hahn, E., Hooker, S. P., Gross, V. P., & Kravitz, J. (2010). Examining the impact of integrating physical activity on fluid intelligence and academic 
+performance in an elementary school setting: A preliminary investigation. <i>Journal of Physical Activity and Health, 7</i>(3), 343."),
+  
+  pdf <- c(pdf_link())
+)
+```
+
+<center>
+```{r message=FALSE, warning=FALSE, eval = TRUE, echo = FALSE}
+kable(textitems, 
+      col.names = c("", ""),
+      escape = FALSE,
+      align = 'lc') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, width = "30em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') %>%
+  column_spec(2, width = "5em", color = "#ffffff", extra_css = 'vertical-align: middle !important;') 
+```
+</center>
+
+  >- <b><span style="color:#d3f7ff">Topic</span></b><span style="color:#f7f7f7"> Reed, et al. (2010) examined the influence of integrating physical education (PA) in the classroom on elementary third grade students ($n =$ 155) fluid intelligence and academic achievement.</span>
+
+  >- <b><span style="color:#d3f7ff">What did they do?</span></b><span style="color:#f7f7f7"> Third-grade classroom teachers ($n =$ 6) participated, with half of the teachers ($n =$ 3) implementing PA into the core academic content 30 minutes a day, three days a week for three months. Teachers implementing PA in the classroom were trained prior to the intervention and were provided further support throughout. Performance scores on the South Carolina academic standardized Palmetto Achievement Challenge Tests (PACT) and The Standard Progressive Matrices (SPM) Fluid Intelligence Test were collected to measure student’s academic achievement.</span>
+    
+  >- <b><span style="color:#d3f7ff">What did they find?</span></b><span style="color:#f7f7f7"> Students that participated in the PA intervention classrooms had an average of 1200 steps per day when PA was implemented, adding up to an average of 3600 steps a week. The fluid intelligence assessment examined that students that experienced PA in the classroom scored significantly higher ($M =$ 38.61;$p =$ 0.045) than control group students ($M =$ 36.66) in mathematics and reading fluid intelligence. Students that received the PA intervention also scored higher on the PACT than control students, scoring at proficient of advance in English/language arts (82% > 75.3%;$p =$ 0.478), math (49% > 34,7%;$p =$ 0.09), science (80% > 72.2%;$p =$ 0.140), and social studies (82% > 60.9%;$p =$ 0.004), with significance in social studies scores. This data suggests that students who experienced PA classroom interventions on a daily basis had higher levels of cognitive function, fluid intelligence, and score at higher levels on academic achievement test (Reed et al., 2010).</span>
+     
+  >- <b><span style="color:#d3f7ff">Why was this important?</span></b><span style="color:#f7f7f7"> This examination of standard test scores and its results provide support behind movement in the classroom and the positive effect on improving elementary level students fluid intelligence, cognitive development, and academic achievement. Reed et al. (2010) wanted to determine the relationship between PA in the classroom and elementary students development of fluid intelligence and academic achievement. Reed and colleague found that an increase of PA in the academic classroom led to significantly higher scores in fluid intelligence and academic achievement.</span>
+     
+  >- <b><span style="color:#d3f7ff">What were the limitations?</span></b><span style="color:#f7f7f7"> A limitation of this study is that SPM Fluid Intelligence test were not compared to pre scores, limited to availability (Reed et al., 2010). Comparing pre and post scores would develop a better examination of significant effect of PA on fluid intelligence development of the elementary students. Another limitation is that standardized test scores strictly measured academic achievement, where both formative and summative assessments should be observed to determine true student academic achievement growth.</span>
+
+<br>
+<hr align="center" width="50%">
+<br>
+
+<a id="1" href="#" onclick="history.back();" style="font-size:14px;"><sup>1</sup></a> <a style="font-size:14px;"> If it appears that five sources for three topic areas may be insufficient, hen you would be correct. Given that, you will expand in this list in L2 to 25. Remember that we are building our way to a full literature review.</a>

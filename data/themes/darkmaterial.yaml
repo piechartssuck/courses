@@ -1,0 +1,23 @@
+# Theme metadata
+name: "DarkMaterial"
+
+# Is theme light or dark?
+light: false
+
+# Primary
+primary: "#bb86fc"
+
+# Links
+link: "#5eb0e5" # "#03dac6"
+link_hover: "#4565F6"
+
+# Menu
+menu_primary: "#282A35"
+menu_text: "#f7f7f7"
+menu_text_active: "#bb86fc"
+menu_title: "#03dac6"
+
+# Home sections
+background: "#282A35"
+home_section_odd: "rgb(255, 255, 255)"
+home_section_even: "rgb(247, 247, 247)"
