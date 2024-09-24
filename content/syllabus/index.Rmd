@@ -14,6 +14,7 @@ output:
 library(tidyverse)
 library(pander)
 library(kableExtra)
+library(fontawesome)
 ```
 
 `r blogdown::shortcode("courseinfo")`
@@ -30,7 +31,6 @@ Students will be expected to develop the following knowledge, skills, and abilit
 7. Presenting and reporting findings to a diverse audience.
 8. Understanding how to construct data visualizations that present ideas effectively while being visually appealing and functional.
 9. utilizing evaluative criteria to assess proper outlets of free and open source data.
-
 
 ## FAQ
 
