@@ -342,7 +342,7 @@ To conduct quantitative analyses, you will be introduced to the open-source (and
 #### R and RStudio
 
 To conduct quantitative analyses, you will be introduced to the open source (and free!) statistical programming language [<svg aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:steelblue;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>](https://cran.r-project.org/) as soon as the term begins. We will use [RStudio](https://www.rstudio.com/) s the main program to work with the R language. Think of R as the engine and RStudio as the dashboard — R handles all the computations, while RStudio provides a user-friendly interface for interacting with the code and results.
-\*\*you do not need to have any programming experience to use R!\*
+*You do not need to have any programming experience to use R!*
 
 You can [find instructions for installing R and RStudio here](/resource/install/).
 
@@ -602,12 +602,13 @@ F
 
 ### Office Hours
 
-Please watch this video:
+T
+hese are set times dedicated to you the student. If you are unfamiliar with the concept of office hours, please watch the following video
 
 <iframe src="https://player.vimeo.com/video/270014784" width="640" height="360" frameborder="0" allow="fullscreen" allowfullscreen id="officehours" style="display: block; margin: 0 auto 1rem;">
 </iframe>
 
-Office hours are set times dedicated to you, the student! This means I will be available either in my office or remotely, ready to discuss any questions you have. This is the best and easiest way to reach me, offering the best opportunity to talk about class material and any concerns.
+On that note, I am happy to meet face-to-face or via Zoom.
 
 Due to the ongoing pandemic, we can only meet via Zoom. This can be scheduled using the [calendar](https://calendly.com/nopiecharts/short15) app.
 
@@ -640,11 +641,11 @@ Here are the rules, expectations, and policies that I came up with or stole from
 
 ## Course Policies
 
-**In a nutshell** ***keep an open line of communication***, **be** ***honest***, ***nice***, **&** ***respectful*** **to everyone**.
+**In a nutshell** ***keep an open line of communication***, **be** ***honest***, ***nice***, ***respectful*** **to everyone**, **&** *follow the* <a href='https://studentconduct.wvu.edu/campus-student-code' target='_blank'>Code of Conduct</a>.
 
-Additionally please follow [WVU’s Code of Conduct](https://studentconduct.wvu.edu/campus-student-code).
+### Modifications
 
-This syllabus reflects a plan for the term but things change and plans change. so deviations may become necessary as we move along during the term. Note that **I reserve the right to alter or amend this syllabus**.
+This syllabus outlines a plan for the term, but adjustments may become necessary as circumstances change. Therefore, **I reserve the right to modify this syllabus** as we progress through the course.
 
 ### Health statement
 

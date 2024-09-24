@@ -262,7 +262,7 @@ To conduct quantitative analyses, you will be introduced to the open-source (and
 #### R and RStudio
 
 To conduct quantitative analyses, you will be introduced to the open source (and free!) statistical programming language [`r fa("r-project", fill = "steelblue")`](https://cran.r-project.org/) as soon as the term begins. We will use [RStudio](https://www.rstudio.com/) s the main program to work with the R language. Think of R as the engine and RStudio as the dashboard — R handles all the computations, while RStudio provides a user-friendly interface for interacting with the code and results. 
-**you do not need to have any programming experience to use R!*
+*You do not need to have any programming experience to use R!*
 
 You can [find instructions for installing R and RStudio here](/resource/install/).
 
@@ -419,12 +419,12 @@ grading %>%
 </center>
 
 ### Office Hours
-
-Please watch this video:
+T
+hese are set times dedicated to you the student. If you are unfamiliar with the concept of office hours, please watch the following video
 
 <iframe src="https://player.vimeo.com/video/270014784" width="640" height="360" frameborder="0" allow="fullscreen" allowfullscreen id="officehours" style="display: block; margin: 0 auto 1rem;"></iframe>
 
-Office hours are set times dedicated to you, the student! This means I will be available either in my office or remotely, ready to discuss any questions you have. This is the best and easiest way to reach me, offering the best opportunity to talk about class material and any concerns.
+On that note, I am happy to meet face-to-face or via Zoom.
 
 Due to the ongoing pandemic, we can only meet via Zoom. This can be scheduled using the [calendar](https://calendly.com/nopiecharts/short15) app. 
 
@@ -451,11 +451,11 @@ Here are the rules, expectations, and policies that I came up with or stole from
 
 ## Course Policies
 
-**In a nutshell** ***keep an open line of communication***, **be** ***honest***, ***nice***, **&** ***respectful*** **to everyone**.
+**In a nutshell** ***keep an open line of communication***, **be** ***honest***, ***nice***, ***respectful*** **to everyone**, **&** *follow the* <a href='https://studentconduct.wvu.edu/campus-student-code' target='_blank'>Code of Conduct</a>.
 
-Additionally please follow [WVU's Code of Conduct](https://studentconduct.wvu.edu/campus-student-code).
+### Modifications
 
-This syllabus reflects a plan for the term but things change and plans change. so deviations may become necessary as we move along during the term. Note that **I reserve the right to alter or amend this syllabus**.
+This syllabus outlines a plan for the term, but adjustments may become necessary as circumstances change. Therefore, **I reserve the right to modify this syllabus** as we progress through the course.
 
 ### Health statement
 
