@@ -178,7 +178,7 @@ There are one text and two free software packages for this course. You will also
 
 #### Required
 
-o help keep costs down, you are not required to purchase any physical texts. We will use the materials listed below, all of which are available in digital format through the <a href='https://library.wvu.edu/' target='_blank'>WVU Libraries</a>, except for the APA 7th edition handbook”
+To help keep costs down, you are not required to purchase any physical texts. We will use the materials listed below, all of which are available in digital format through the <a href='https://library.wvu.edu/' target='_blank'>WVU Libraries</a>, except for the APA 7th edition handbook”
 
 - Leavy, P. (2017). *Research design: Quantitative, qualitative, mixed methods, arts-based, and community-based participatory research approaches* (1st ed.). The Guilford Press.
   - [Digital edition](https://ebookcentral.proquest.com/lib/wvu/detail.action?docID=4832778) (free!)
