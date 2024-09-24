@@ -22,7 +22,7 @@ We live in a data-driven world, and surveys provide a significant portion of tha
 
 The overall purpose of this course is to empower you to
 
--  <span style="color:#ffffff">administer both flat traditional and modern interactive surveys via the Internet</span>
+- <span style="color:#ffffff">administer both flat traditional and modern interactive surveys via the Internet</span>
 
 - <span style="color:#ffffff">assess missingness and determine next steps</span>
 
@@ -194,7 +194,7 @@ There are two required texts for this course, but three free software packages a
 
 ### Texts
 
-o help keep costs down, you are not required to purchase any physical texts. We will use the materials listed below, all of which are available in digital format through the  <a href='https://library.wvu.edu/' target='_blank'>WVU Libraries</a>.
+To help keep costs down, you are not required to purchase any physical texts. We will use the materials listed below, all of which are available in digital format through the  <a href='https://library.wvu.edu/' target='_blank'>WVU Libraries</a>.
 
 #### Required
 
@@ -558,7 +558,7 @@ Effective teaching is a primary mission of West Virginia University. Student eva
 
 ### University Attendance Policy
 
-At West Virginia University, class attendance contributes significantly to academic success. Students who attend classes regularly tend to earn higher grades and have higher passing rates in courses. Excessive absences may jeopardize students' grades or even their ability to continue in their courses. There is a strong correlation between regular class attendance and academic success. 
+At West Virginia University, class attendance contributes significantly to academic success. Students who attend classes regularly tend to earn higher grades and have higher passing rates in courses. Excessive absences may jeopardize students' grades or even their ability to continue in their courses.
 
 ### Postings
 
