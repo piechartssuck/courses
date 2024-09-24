@@ -22,15 +22,15 @@ library(fontawesome)
 ## Course objectives
 
 Students will be expected to develop the following knowledge, skills, and abilities, including but not limited to: 
-1. Defining and understanding the purpose of visualization.
-2. Delineating between various types and classifications of visualization techniques.
-3. Demonstrating how to locate and utilize publicly available data sets.
-4. Explaining the history of data visualization.
-5. Outlining methods and techniques for establishing and evaluating reliability and validity of data sets.
-6. Obtaining an understanding of ethical, social, political, and cultural issues confronted by data scientists.
+1. Constructing data visualizations that effectively communicate ideas while being visually appealing and functional.
+2. Defining and understanding the purpose of visualization.
+3. Demonstrating how to locate and use publicly available datasets.
+4. Distinguishing between various types and classifications of visualization techniques.
+5. Explaining the history of data visualization.
+6. Outlining methods for evaluating the reliability and validity of datasets.
 7. Presenting and reporting findings to a diverse audience.
-8. Understanding how to construct data visualizations that present ideas effectively while being visually appealing and functional.
-9. utilizing evaluative criteria to assess proper outlets of free and open source data.
+8. Understanding ethical, social, political, and cultural issues faced by data scientists.
+9. Using evaluative criteria to assess appropriate outlets for free and open-source data.
 
 ## FAQ
 
@@ -183,6 +183,7 @@ Here are the rules, expectations, and policies that I came up with or stole from
   2. People who are easily offended by content, believe their work to be flawless, or are generally unable to handle criticism. However if you care about data, real-world practice, and learning a highly marketable skill then you've come to the right place.
   3. This course covers a lot of material, and it is normal to encounter challenges along the way. While there is value in the satisfaction of solving things on your own, it does not mean you have to do it entirely by yourself. Sometimes, a little guidance can bring about the same sense of accomplishment, so do not hesitate to reach out for help. 
 
+
 ## Course policies
 
 <div class="text-center">
@@ -265,7 +266,7 @@ Please follow these simple netiquette rules:
 -	Never give your password to another person. 
 -	Respect the virtual classroom. Never forward in-class communications or posts by others outside of this virtual space. 
 -	Never spam your classmates. 
--	If you quote someone's previous post, only quote enough to make your point. 
+-	If you quote someone's previous post, only quote enough to make your point.
 
 Be aware of the University’s Academic Integrity and Dishonesty Policy [http://catalog.wvu.edu/undergraduate/coursecreditstermsclassification/#academicintegritytext](http://catalog.wvu.edu/undergraduate/coursecreditstermsclassification/#academicintegritytext){target="_blank"}. You can review the rules, regulations, and procedures concerning student conduct and discipline for the main campus of West Virginia University, at [http://campuslife.wvu.edu/r/download/1802350](http://campuslife.wvu.edu/r/download/180235){target="_blank"}.
 
