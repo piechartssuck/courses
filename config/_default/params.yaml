@@ -24,7 +24,6 @@ font: "fira"
 # Sizes: XS (extra small), S (small), M (medium), L (large - DEFAULT), XL (extra large)
 font_size: "L"
 
-
 ############################
 ## Basic Info
 ############################
@@ -42,7 +41,6 @@ description: "A foundational course dealing with the communication of data throu
 # Display a logo in navigation bar rather than title (optional).
 #   To enable, place an image in `static/img/` and reference its filename below. To disable, set the value to "".
 logo: ""
-
 
 ############################
 ## Site Features
@@ -74,8 +72,8 @@ privacy_pack: false
 # Enable visitors to edit pages?
 #   `repo` defines the repository URL. `editable` defines which page types can be edited.
 edit_page:
-  repo_url: 'https://github.com/piechartssuck/Courses/edp693e'
-  content_dir: ''
+  repo_url: "https://github.com/piechartssuck/Courses/edp693e"
+  content_dir: ""
   repo_branch: master
   editable:
     docs: true
@@ -106,8 +104,8 @@ instructor:
   name: Dr. Abhik Roy
   email: Abhik.Roy@mail.wvu.edu
   url: "https://lshd.wvu.edu/faculty-staff/roy"
-  twitter: DrTheoreticalPE
-  github: piechartssuck
+  twitter: drabhikroy
+  github: drabhikroy
   office: "Allen Hall 504O"
   contact_policy: >-
     Slack is the best way to get in contact with me. Response times are typically much quicker than the standard 24-48 hours given to emails. Please remember that life is still chaotic at this time!
@@ -121,7 +119,6 @@ university:
   name: West Virginia University
   url: "https://www.wvu.edu"
 
-
 ############################
 ## Social
 ############################
@@ -130,8 +127,7 @@ university:
 sharing_image: "course_info.png"
 
 # Twitter username (without @). Used when a visitor shares your site on Twitter.
-twitter: "piechartssuck"
-
+twitter: "drabhikroy"
 
 ############################
 ## Regional Settings
@@ -142,7 +138,6 @@ twitter: "piechartssuck"
 date_format: "January 2, 2006"
 #   Examples: "3:04 pm" or "15:04"
 time_format: "3:04 PM"
-
 
 ############################
 ## Advanced
@@ -161,7 +156,7 @@ reading_time: false
 
 # Display next/previous section pager? (true/false)
 section_pager: false
-docs_section_pager: false  # Display pager in Docs layout (e.g. tutorials)?
+docs_section_pager: false # Display pager in Docs layout (e.g. tutorials)?
 
 # Enable in-built social sharing buttons? (true/false)
 sharing: false
@@ -172,7 +167,6 @@ link_authors: false
 # Load JS plugins
 #   E.g. To load `/assets/js/custom.js`, set `plugins_js: ["custom"]`.
 plugins_js: []
-
 
 ############################
 ## Comments
@@ -196,14 +190,13 @@ comments:
 
   # Configuration of Disqus.
   disqus:
-    shortname: ''  # Paste the shortname from your Disqus dashboard
-    show_count: true  # Show comment count in page header? (true/false)
+    shortname: "" # Paste the shortname from your Disqus dashboard
+    show_count: true # Show comment count in page header? (true/false)
 
   # Configuration of Commento.
   commento:
     # If self-hosting Commento, enter its URL here (e.g. "https://commento.?.com"), otherwise leave empty.
-    url: ''
-
+    url: ""
 
 ############################
 ## Search
@@ -218,15 +211,14 @@ search:
   # Configuration of Algolia search engine.
   # Paste the values from your Algolia dashboard.
   algolia:
-    app_id: ''
-    api_key: ''
-    index_name: ''
+    app_id: ""
+    api_key: ""
+    index_name: ""
     show_logo: false
-
 
 ############################
 ## Marketing
 ############################
 marketing:
-  google_analytics: ''
-  google_tag_manager: ''
+  google_analytics: ""
+  google_tag_manager: ""
