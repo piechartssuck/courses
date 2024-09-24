@@ -24,7 +24,6 @@ font: "roboto-condensed"
 # Sizes: XS (extra small), S (small), M (medium), L (large - DEFAULT), XL (extra large)
 font_size: "L"
 
-
 ############################
 ## Basic Info
 ############################
@@ -42,7 +41,6 @@ description: "An introductory course for many things program evaluation"
 # Display a logo in navigation bar rather than title (optional).
 #   To enable, place an image in `static/img/` and reference its filename below. To disable, set the value to "".
 logo: ""
-
 
 ############################
 ## Site Features
@@ -74,8 +72,8 @@ privacy_pack: false
 # Enable visitors to edit pages?
 #   `repo` defines the repository URL. `editable` defines which page types can be edited.
 edit_page:
-  repo_url: 'https://github.com/drabhikroy/Courses/tree/edp617'
-  content_dir: ''
+  repo_url: "https://github.com/drabhikroy/Courses/tree/edp617"
+  content_dir: ""
   repo_branch: master
   editable:
     docs: true
@@ -95,7 +93,7 @@ course:
   number: "EDP 617"
   semester: "Spring 2023"
   days: "Neverending"
-#  time: "Soon"
+  #  time: "Soon"
   location: "Asynchronous"
   dates: "January 9 - May 5"
   github: drabhikroy/Courses/tree/edp617
@@ -105,7 +103,7 @@ course:
 instructor:
   name: Dr. Abhik Roy
   email: Abhik.Roy@mail.wvu.edu
-  url: "https://iam.asocialdatascientist.com/"
+  url: "https://abhikroyphd.com/"
   twitter: asocialdatasci
   github: drabhikroy
   office: "Allen Hall 609C"
@@ -123,7 +121,6 @@ university:
   name: West Virginia University
   url: "https://www.wvu.edu"
 
-
 ############################
 ## Social
 ############################
@@ -134,7 +131,6 @@ sharing_image: "course_info.png"
 # Twitter username (without @). Used when a visitor shares your site on Twitter.
 # witter: "asocialdatasci"
 
-
 ############################
 ## Regional Settings
 ############################
@@ -144,7 +140,6 @@ sharing_image: "course_info.png"
 date_format: "January 2, 2006"
 #   Examples: "3:04 pm" or "15:04"
 time_format: "3:04 PM"
-
 
 ############################
 ## Advanced
@@ -163,7 +158,7 @@ reading_time: false
 
 # Display next/previous section pager? (true/false)
 section_pager: false
-docs_section_pager: false  # Display pager in Docs layout (e.g. tutorials)?
+docs_section_pager: false # Display pager in Docs layout (e.g. tutorials)?
 
 # Enable in-built social sharing buttons? (true/false)
 sharing: false
@@ -174,7 +169,6 @@ link_authors: false
 # Load JS plugins
 #   E.g. To load `/assets/js/custom.js`, set `plugins_js: ["custom"]`.
 plugins_js: []
-
 
 ############################
 ## Comments
@@ -198,14 +192,13 @@ comments:
 
   # Configuration of Disqus.
   disqus:
-    shortname: ''  # Paste the shortname from your Disqus dashboard
-    show_count: true  # Show comment count in page header? (true/false)
+    shortname: "" # Paste the shortname from your Disqus dashboard
+    show_count: true # Show comment count in page header? (true/false)
 
   # Configuration of Commento.
   commento:
     # If self-hosting Commento, enter its URL here (e.g. "https://commento.?.com"), otherwise leave empty.
-    url: ''
-
+    url: ""
 
 ############################
 ## Search
@@ -220,15 +213,14 @@ search:
   # Configuration of Algolia search engine.
   # Paste the values from your Algolia dashboard.
   algolia:
-    app_id: ''
-    api_key: ''
-    index_name: ''
+    app_id: ""
+    api_key: ""
+    index_name: ""
     show_logo: false
-
 
 ############################
 ## Marketing
 ############################
 marketing:
-  google_analytics: ''
-  google_tag_manager: ''
+  google_analytics: ""
+  google_tag_manager: ""
