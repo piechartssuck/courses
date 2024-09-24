@@ -15,7 +15,7 @@
  *    - xaringan wiki: https://github.com/yihui/xaringan/wiki
  *    - remarkjs wiki: https://github.com/gnab/remark/wiki
  *
- *  Version: 0.4.2
+ *  Version: 0.4.3
  *
  * ------------------------------------------------------- */
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400&display=swap);
@@ -43,22 +43,22 @@
   --header-h3-font-size: 1.75rem;
 
   /* Colors */
-  --text-color: #FEFEFE;
-  --header-color: #c4e0f2;
+  --text-color: #FDFEFD;
+  --header-color: #48b297;
   --background-color: #212121;
-  --link-color: #c4e0f2;
-  --text-bold-color: #c4e0f2;
-  --code-highlight-color: #db6464;
+  --link-color: #48b297;
+  --text-bold-color: #48b297;
+  --code-highlight-color: rgba(255,255,0,0.5);
   --inverse-text-color: #212121;
-  --inverse-background-color: #c4e0f2;
+  --inverse-background-color: #48b297;
   --inverse-header-color: #212121;
-  --inverse-link-color: #c4e0f2;
+  --inverse-link-color: #48b297;
   --title-slide-background-color: #212121;
-  --title-slide-text-color: #c4e0f2;
-  --header-background-color: #c4e0f2;
+  --title-slide-text-color: #48b297;
+  --header-background-color: #48b297;
   --header-background-text-color: #212121;
   --primary: #212121;
-  --secondary: #c4e0f2;
+  --secondary: #48b297;
 }
 
 html {
@@ -99,12 +99,12 @@ h1, h2, h3 {
 }
 .remark-inline-code {
   font-size: var(--code-inline-font-size);
-  color: #b2dfdb;
-  background-color: transparent;
+  color: #48b297;
+  background-color: #212121;
   padding: 2px;
 }
 .remark-slide-number {
-  color: #FEFEFE;
+  color: #FDFEFD;
   opacity: 1;
   font-size: 0.9rem;
 }
@@ -152,10 +152,10 @@ a, a > code {
   float: left;
 }
 .left-column h2, .left-column h3 {
-  color: #c4e0f299;
+  color: #48b29799;
 }
 .left-column h2:last-of-type, .left-column h3:last-child {
-  color: #c4e0f2;
+  color: #48b297;
 }
 .right-column {
   width: 75%;
@@ -177,7 +177,7 @@ img, video, iframe {
   max-width: 100%;
 }
 blockquote {
-  border-left: solid 5px #c4e0f280;
+  border-left: solid 5px #48b29780;
   padding-left: 1em;
 }
 .remark-slide table {

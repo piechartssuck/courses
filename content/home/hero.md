@@ -25,4 +25,4 @@ cta_note:
   label: <span style="color:#fafafa">Fall 2021<br>Counseling & Learning Sciences<br>West Virginia University</span>
 ---
 
-**A foundational course with odds and ends**
+**A foundational course with some odds and ends**
