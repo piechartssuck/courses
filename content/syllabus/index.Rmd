@@ -326,7 +326,7 @@ grading %>%
 </center>
 
 <br>
-All materials are due on a weekly basis by <i>Monday night at 11:59 PM</i> unless otherwise noted. New material will be posted on the course website by <i>Wednesday afternoon at 12:00 PM</i>. 
+All materials are due on a weekly basis by <i>Monday night at 11:59 PM</i> unless otherwise noted. New material will be posted on the course website by <i>12:00 PM on Tuesday</i>.
 
 ### Office Hours
 
