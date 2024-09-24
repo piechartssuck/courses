@@ -26,9 +26,9 @@ editor_options:
 
 {{% aes-header %}}
 
-## What the \*\*\*\* is program evaluation?
+## What is program evaluation?
 
-That question comes up more than you probably think! In practitioner-oriented fields like (but certainly not limited to) education and counseling, studies are often directed at developing and understanding the impact various programs have on those who receive services, those who provide services, and/or the larger context within which those programs operate. This mode of uncovering if something works and why it works is a basis for evaluating programs and in turn policy decision-making. Program evaluation has philosophical, theoretical, methodological, and practical peculiarities that make it necessary to devote an entire class to understanding why and how it is done. This course is designed to allow you to acquire an understanding of the choices available for and processes involved in conducting program evaluation by giving you hands-on experience conducting a small-scale evaluation study relevant to your interests.
+That question comes up more often than you might expect! In fields like education and counseling, as well as other practitioner-oriented areas, research frequently focuses on understanding the impact of various programs on service recipients, providers, and the broader context in which these programs operate. This process of determining whether and why something works forms the foundation for evaluation, which in turn can inform program and policy decisions. Evaluation has its own set of philosophical, theoretical, methodological, and practical considerations, making it essential to dedicate an entire course to understanding its purpose and execution. This course is designed to help you gain a clear understanding of the choices and processes involved in program evaluation through hands-on experience conducting a small-scale evaluation study relevant to your own interests.
 
 ## Course objectives
 
@@ -81,19 +81,19 @@ Please note that the slideshow goes through highlights of the syllabus, but you 
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;width: 20em; color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 20em; color: rgba(255, 255, 255, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 Larger version of the Guide
 </td>
-<td style="text-align:center;width: 20em; color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 20em; color: rgba(255, 255, 255, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 PDF of the Guide
 </td>
 </tr>
 <tr>
-<td style="text-align:center;width: 20em; color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/slides/Quick%20Start/Slides-Basics-pres.html" target="_blank"><img src="/logos/web-ico.png" alt="Slack icon" width="35"></a>
+<td style="text-align:center;width: 20em; color: rgba(255, 255, 255, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
+\<a href=‘/slides/Quick%20Start/Slides-Basics-pres.html’ target=’\_blank’\>\<img src=‘/logos/web-ico.png’ alt=‘Slack icon’ width=‘35’\>\</a\>
 </td>
-<td style="text-align:center;width: 20em; color: #ffffff !important;background-color: transparent !important;vertical-align: middle !important;">
-<a href="/slides/Quick%20Start/Slides-Basics-flat.pdf" target="_blank"><img src="/logos/pdf-ico.png" alt="Slack icon" width="35"></a>
+<td style="text-align:center;width: 20em; color: rgba(255, 255, 255, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
+\<a href=‘/slides/Quick%20Start/Slides-Basics-flat.pdf’ target=’\_blank’\>\<img src=‘/logos/pdf-ico.png’ alt=‘Slack icon’ width=‘35’\>\</a\>
 </td>
 </tr>
 </tbody>
@@ -104,23 +104,23 @@ PDF of the Guide
 
 ### *Is the course content difficult?*
 
-There is really no way to sugar coat it - **the first seven to eight weeks prior to your evaluation are fairly intense** so please plan accordingly. You are essentially asked to both learn about evaluations and then administer one which for all intents and purposes is not easy. Given that, difficulty is subjective, it varies, and often depends on your academic and practical history. Instead consider focusing on the following question
+There is really no way to sugarcoat it - **the first seven to eight weeks prior to your evaluation are fairly intense** so please plan accordingly. You will be learning about evaluations while simultaneously administering one, which is not an easy task. That said, difficulty is subjective; it varies and often depends on your academic and practical background. Instead of focusing on the level of difficulty, consider the following question:
 
 <center>
 <p id="rounded_corners">
-Can I first search for help independently and then reach out as needed?
+Can I search for help independently first and then reach out if needed?
 </p>
 </center>
 
-If the answer is an overall yes, then you have a good shot at succeeding in this class.
+If your answer is yes, then you are likely well-positioned to succeed in this class.
 
 ### *Is there a lot of theory?*
 
-Evaluation is foremost a practice based field so much of what you will come across will align with that notion. Given that, there are times where theory will show up but they will be limited.
+Evaluation is primarily a practice-based field, so much of what you encounter will reflect that. While theory will appear at times, its role will be limited.
 
 ### *What if I’m a Visual/Aural/Read-write/Kinesthetic learner?*
 
-You’re not one or even any of those. There’s not one accepted study that supports one type of learning style over another. In fact, there aren’t even any studies that support these four classifications either. You learn the best using multiple approaches which is why there are both a [Readings](/readings/) and [Tasks & Deliverables](/tasks/) section. At one time I denoted multiple papers to support this, but many of the sources I listed were also cited in this fantastic video:
+You do not fall into any one of those categories. In fact, there is no widely accepted study that supports a single learning style over another, nor is there solid evidence backing these four specific classifications. Research shows that people learn best through multiple approaches, which is why this course includes both a [Readings](/readings/) and [Tasks & Deliverables](/tasks/) section. At one point, I provided several papers to support this, but many of those sources are also referenced in this excellent video:
 
 <center>
 <iframe src="https://www.youtube.com/embed/rhgwIhB58PA" width="640" height="360" frameborder="0" allow="fullscreen" style="display: block; margin: 0 auto 1rem;">
@@ -129,7 +129,7 @@ You’re not one or even any of those. There’s not one accepted study that sup
 
 ### *What if I find a mistake?*
 
-Tell me! I strive to be error free but unfortunately like everyone else, make silly mistakes including grammar and spelling errors as well!
+Let me know if you spot anything! I strive to be error-free, but like everyone else, I occasionally make silly mistakes, including grammar and spelling errors.
 
 ### *What do the different pages on the site mean?*
 
@@ -139,66 +139,66 @@ These are given in the order you see them in top of the site.
 <table>
 <tbody>
 <tr>
-<td style="text-align:left;font-weight: bold;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;font-weight: bold;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 Readings
 </td>
-<td style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/readings/">Go</a>
 </td>
-<td style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:17px;width:14.88px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#74d86f;overflow:visible;position:relative;">
 <path d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"></path>
 </svg>
 </td>
-<td style="text-align:left;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 Weekly readings
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;font-weight: bold;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 Tasks & Deliverables
 </td>
-<td style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/tasks/">Go</a>
 </td>
-<td style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:17px;width:17px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#d86f9e;overflow:visible;position:relative;">
 <path d="M448 160H320V128H448v32zM48 64C21.5 64 0 85.5 0 112v64c0 26.5 21.5 48 48 48H464c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H48zM448 352v32H192V352H448zM48 288c-26.5 0-48 21.5-48 48v64c0 26.5 21.5 48 48 48H464c26.5 0 48-21.5 48-48V336c0-26.5-21.5-48-48-48H48z"></path>
 </svg>
 </td>
-<td style="text-align:left;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 Course materials and assessment items
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;font-weight: bold;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 Due
 </td>
-<td style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/due/">Go</a>
 </td>
-<td style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <svg aria-hidden="true" role="img" viewbox="0 0 576 512" style="height:17px;width:19.12px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#ffa700;overflow:visible;position:relative;">
-<path d="M572.6 270.3l-96 192C471.2 473.2 460.1 480 447.1 480H64c-35.35 0-64-28.66-64-64V96c0-35.34 28.65-64 64-64h117.5c16.97 0 33.25 6.742 45.26 18.75L275.9 96H416c35.35 0 64 28.66 64 64v32h-48V160c0-8.824-7.178-16-16-16H256L192.8 84.69C189.8 81.66 185.8 80 181.5 80H64C55.18 80 48 87.18 48 96v288l71.16-142.3C124.6 230.8 135.7 224 147.8 224h396.2C567.7 224 583.2 249 572.6 270.3z"></path>
+<path d="M384 480h48c11.4 0 21.9-6 27.6-15.9l112-192c5.8-9.9 5.8-22.1 .1-32.1S555.5 224 544 224H144c-11.4 0-21.9 6-27.6 15.9L48 357.1V96c0-8.8 7.2-16 16-16H181.5c4.2 0 8.3 1.7 11.3 4.7l26.5 26.5c21 21 49.5 32.8 79.2 32.8H416c8.8 0 16 7.2 16 16v32h48V160c0-35.3-28.7-64-64-64H298.5c-17 0-33.3-6.7-45.3-18.7L226.7 50.7c-12-12-28.3-18.7-45.3-18.7H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H87.7 384z"></path>
 </svg>
 </td>
-<td style="text-align:left;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 List of things to do
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;font-weight: bold;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 Resources
 </td>
-<td style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="/resources/">Go</a>
 </td>
-<td style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <svg aria-hidden="true" role="img" viewbox="0 0 640 512" style="height:17px;width:21.25px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#848fd3;overflow:visible;position:relative;">
 <path d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"></path>
 </svg>
 </td>
-<td style="text-align:left;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 Curated directory of resources
 </td>
 </tr>
@@ -208,7 +208,7 @@ Curated directory of resources
 
 ### Texts
 
-To help minimize costs, you are not required to purchase any physical texts. We’ll rely on the various materials below which, barring the APA 7th edition handbook, are available through <a href='https://library.wvu.edu/' target='_blank'>WVU Libraries</a> in a digital format.
+To help keep costs down, you are not required to purchase any physical texts. We will use the materials listed below, all of which are available in digital format through the <a href='https://library.wvu.edu/' target='_blank'>WVU Libraries</a>, except for the APA 7th edition handbook.
 
 #### Required
 
@@ -216,17 +216,17 @@ To help minimize costs, you are not required to purchase any physical texts. We�
 <table>
 <tbody>
 <tr>
-<td style="text-align:left;width: 20em; font-weight: bold;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 20em; font-weight: bold;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 Davidson, E. J. (2007). <i>Evaluation methodology basics: The nuts and
 bolts of sound evaluation</i> (1st ed.). SAGE.
 </td>
-<td style="text-align:center;width: 5em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://libwvu.on.worldcat.org/oclc/646022580" target="_blank">Free</a>
 </td>
-<td style="text-align:center;width: 5em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://us.sagepub.com/en-us/nam/evaluation-methodology-basics/book226129" target="_blank">Physical</a>
 </td>
-<td style="text-align:left;width: 10em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 10em; vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <img src="/img/texts/eval-text.png" alt="Measurement text">
 </td>
 </tr>
@@ -240,43 +240,43 @@ bolts of sound evaluation</i> (1st ed.). SAGE.
 <table>
 <tbody>
 <tr>
-<td style="text-align:left;width: 20em; font-weight: bold;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 20em; font-weight: bold;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 American Psychological Association. (2020). <i>Publication manual of the American Psychological Association</i> (7th ed.).
 </td>
-<td style="text-align:center;width: 5em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 </td>
-<td style="text-align:center;width: 5em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://apastyle.apa.org/products/publication-manual-7th-edition" target="_blank">Physical</a>
 </td>
-<td style="text-align:left;width: 10em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 10em; vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <img src="/img/texts/apa7th-text.png" alt="APA 7th Handbook">
 </td>
 </tr>
 <tr>
-<td style="text-align:left;width: 20em; font-weight: bold;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 20em; font-weight: bold;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 Dillman, D.A., Smyth, J.D., & Christian, L.M. (2014). <i>Internet, phone, mail, and mixed-mode surveys: The Tailored Design Method</i> (4th ed.). Wiley.
 </td>
-<td style="text-align:center;width: 5em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://ebookcentral.proquest.com/lib/wvu/detail.action?docID=1762797" target="_blank">Free</a>
 </td>
-<td style="text-align:center;width: 5em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://www.wiley.com/en-us/Internet%2C+Phone%2C+Mail%2C+and+Mixed+Mode+Surveys%3A+The+Tailored+Design+Method%2C+4th+Edition-p-9781118456149" target="_blank">Physical</a>
 </td>
-<td style="text-align:left;width: 10em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 10em; vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <img src="/img/texts/survey-text.png" alt="Internet, Phone, Mail, and Mixed-Mode Surveys">
 </td>
 </tr>
 <tr>
-<td style="text-align:left;width: 20em; font-weight: bold;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 20em; font-weight: bold;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 Mertens, D. M. (2018). <i>Mixed methods design in evaluation</i>. SAGE.
 </td>
-<td style="text-align:center;width: 5em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://methods-sagepub-com.wvu.idm.oclc.org/book/mixed-methods-design-in-evaluation" target="_blank">Free</a>
 </td>
-<td style="text-align:center;width: 5em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <a href="https://us.sagepub.com/en-us/nam/mixed-methods-design-in-evaluation/book249777" target="_blank">Physical</a>
 </td>
-<td style="text-align:left;width: 10em; vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 10em; vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 <img src="/img/texts/mixedevals-text.png" alt="Mixed Methods Designs in Evaluation">
 </td>
 </tr>
@@ -290,9 +290,7 @@ There will occasionally be additional articles and videos to read and watch. Whe
 
 #### Quatrics
 
-You will need access to your WVU <a href='https://wvu.qualtrics.com/' target='_blank'>Qualtrics</a> account. Please go to the site and check if you can login. If you are
-enrolled as a WVU student, then you should have access. However if you
-do not, submit a <a href='https://wvu.atlassian.net/servicedesk/customer/portals' target='_blank'>ticket to IT</a> or give them a ring at [304-293-4444](callto:%20304-293-4444).
+You will need access to your WVU <a href='https://wvu.qualtrics.com/' target='_blank'>Qualtrics</a> account. Please go to the site and check if you can login. If not, please submit a <a href='https://wvu.atlassian.net/servicedesk/customer/portals' target='_blank'>ticket to IT</a> or give them a ring at [304-293-4444](callto:%20304-293-4444).
 
 ## Assignments and Grades
 
@@ -302,68 +300,68 @@ You can find descriptions for all posted assignments on the [Tasks & Deliverable
 <table class=" lightable-paper" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
-<th style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<th style="text-align:center;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 Percent
 </th>
-<th style="text-align:left;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<th style="text-align:left;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 Assignment
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 15
 </td>
-<td style="text-align:left;width: 12em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 12em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 Weekly Tasks
 </td>
 </tr>
 <tr>
-<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 15
 </td>
-<td style="text-align:left;width: 12em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 12em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 Synchronous Meetings
 </td>
 </tr>
 <tr>
-<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 5
 </td>
-<td style="text-align:left;width: 12em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 12em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 Evaluation Prospectus
 </td>
 </tr>
 <tr>
-<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 20
 </td>
-<td style="text-align:left;width: 12em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 12em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 Needs Assessment
 </td>
 </tr>
 <tr>
-<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 15
 </td>
-<td style="text-align:left;width: 12em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 12em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 Evaluation Proposal
 </td>
 </tr>
 <tr>
-<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 25
 </td>
-<td style="text-align:left;width: 12em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 12em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 Final Report
 </td>
 </tr>
 <tr>
-<td style="text-align:center;width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 5
 </td>
-<td style="text-align:left;width: 12em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 12em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 Presentation of Results
 </td>
 </tr>
@@ -377,52 +375,52 @@ Presentation of Results
 <table class=" lightable-paper" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
-<th style="text-align:center;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<th style="text-align:center;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 Grade
 </th>
-<th style="text-align:left;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<th style="text-align:left;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 Range
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;width: 5em; width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; width: 5em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 A
 </td>
-<td style="text-align:left;width: 12em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 12em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 90–100%
 </td>
 </tr>
 <tr>
-<td style="text-align:center;width: 5em; width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; width: 5em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 B
 </td>
-<td style="text-align:left;width: 12em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 12em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 80%-89%
 </td>
 </tr>
 <tr>
-<td style="text-align:center;width: 5em; width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; width: 5em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 C
 </td>
-<td style="text-align:left;width: 12em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 12em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 70–79%
 </td>
 </tr>
 <tr>
-<td style="text-align:center;width: 5em; width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; width: 5em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 D
 </td>
-<td style="text-align:left;width: 12em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 12em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 60–69%
 </td>
 </tr>
 <tr>
-<td style="text-align:center;width: 5em; width: 5em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:center;width: 5em; width: 5em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 F
 </td>
-<td style="text-align:left;width: 12em; color: #ffffff !important;vertical-align: middle !important;color: #f7f7f7 !important;background-color: transparent !important;vertical-align: middle !important;">
+<td style="text-align:left;width: 12em; color: rgba(255, 255, 255, 255) !important;vertical-align: middle !important;color: rgba(247, 247, 247, 255) !important;background-color: transparent !important;vertical-align: middle !important;">
 &lt; 60%
 </td>
 </tr>
@@ -456,20 +454,20 @@ Unless another mode is determined beforehand, we will conduct group meetings via
 
 ## Conduct and Expectations
 
-Here are the rules, expectations, and policies that I came up with or stole from other professors:
+Here are the rules, expectations, and policies that I have developed or adapted from other professors:
 
-- **Late work**: Barring the in-class only tasks (if applicable), past due deliverables will only be accepted up to 48 hours after the initial time and due date. For each full day an assignment is late, 10% of the final calculated grade will be deducted. All submissions must be made via <a href='https://ecampus.wvu.edu/' target='_blank'>eCampus</a> and are not accepted by any other means (e.g. email, paper, singing telegram). <span style="color:#20c499; font-weight: bold">There are no exceptions to this overarching policy</span>.
+- **Late work**: Except for in-class tasks (if applicable), late submissions will be accepted up to 48 hours after the original due date. A 10% deduction from the final grade will be applied for each full day the assignment is late. All submissions must be made via <a href='https://ecampus.wvu.edu/' target='_blank'>eCampus</a> and are not accepted by any other means (e.g. email, paper, singing telegram). <span style="color:#20c499; font-weight: bold">There are no exceptions to this overarching policy</span>.
 
-- **Participation**: Please ensure that you are engaged and participate. Engagement is mostly defined by you — if that means commenting and asking/answering questions - great; but if it means being being disrespectful or flaking off - not so great.
+- **Participation**: Please stay engaged and actively participate. How you engage is up to you — whether it’s through commenting, asking, or answering questions, that’s great. However, if engagement means being disrespectful or disengaging, that’s not so great.
 
-- **Justifications**: On any submission or posting, you must justify any assertion. I don’t know what you know so its your job to provide all of the necessary evidence to convince me that you do know what you say you know. While you’ve probably heard this multiple times over your life, think of it this way: if someone tells you that *the core of the Earth is made of glitter*, the first question you should be asking is *what’s your evidence?*.
+- **Justifications**: For every submission or post, you must justify your assertions. Since I cannot assume what you already know, it is your responsibility to provide the necessary evidence to demonstrate your understanding. While you’ve probably heard this multiple times over your life, think of it this way: if someone tells you that *the core of the Earth is made of glitter*, the first question you should be asking is *what’s your evidence?*.
 
 - **Rubrics**: While there are valid reasons for the utilization of a rubric in undergraduate classes, at the graduate level I do not (often) provide nor use a such an item to guide or evaluate your submission due to four primary concerns:<br>
 
-  1.  When writing anything in academia that is pivotal (a thesis, dissertation, journal article, report, etc.), a rubric isn’t typically provided.
-  2.  If you write within the limitations as defined in a rubric, then creativity may be stifled (i.e. writing to the rubric rather than constructing a product from the ground up).
-  3.  Feedback can only be given along the criteria listed within a rubric which limits your learning as a student and constrains me as the instructor.
-  4.  Unless you are in a very specific area, the real world does not use rubrics!
+  1.  In academic writing, especially for significant works like a thesis, dissertation, journal article, or report, a rubric is not usually provided.
+  2.  Writing strictly within the constraints of a rubric can sometimes limit creativity (i.e. writing to the rubric rather than constructing a product from the ground up).
+  3.  Feedback is restricted to the criteria outlined in a rubric, which can limit your learning as a student and constrain me as the instructor.
+  4.  Outside of very specific fields, the real world typically does not rely on rubrics!
       <br>
       <br>
 
@@ -477,9 +475,9 @@ Here are the rules, expectations, and policies that I came up with or stole from
 
 - **Assumptions**:<br>
 
-  1.  Just assume that all submissions are to be written **formally** and should include with the appropriate use of language, grammar, syntax, etc. and follow standard APA 7th edition formatting guidelines where applicable.
-  2.  People who are easily offended by content, believe their work to be flawless, generally unable to handle criticism, or are looking for rainbows and ponies should consider looking at another course. However if you care about data, real-world practice, and learning a highly marketable skill then you’ve come to the right place.
-  3.  There is a great deal of content in this course and you will likely struggle with some at times. Given that, there is also something to be said about the satisfaction a person gets when figuring something out, but nowhere is it written that has to be on your own. You may find that a nudge here or there elicits the same feeling so please reach out for help.
+  1.  All submissions are to be written **formally** and should include with the appropriate use of language, grammar, syntax, etc. and follow standard APA 7th edition formatting guidelines where applicable.
+  2.  People who are easily offended by content, believe their work to be flawless, or are generally unable to handle criticism. However if you care about data, real-world practice, and learning a highly marketable skill then you’ve come to the right place.
+  3.  This course covers a lot of material, and it is normal to encounter challenges along the way. While there is value in the satisfaction of solving things on your own, it does not mean you have to do it entirely by yourself. Sometimes, a little guidance can bring about the same sense of accomplishment, so do not hesitate to reach out for help.
 
 ## Communication
 
@@ -505,7 +503,7 @@ One-on-one video conferences can be created via the class <a href='https://calen
 
 ### Modifications
 
-This syllabus reflects a plan for the term but things change and plans change so deviations may become necessary as we move along during the term. This means that **I reserve the right to alter or amend this syllabus**.
+This syllabus outlines a plan for the term, but adjustments may become necessary as circumstances change. Therefore, **I reserve the right to modify this syllabus** as we progress through the course..
 
 ### Health statement
 
@@ -567,24 +565,24 @@ At West Virginia University, class attendance contributes significantly to acade
 
 ### Postings
 
-Following these simple netiquette rules in your online class or education environment will ensure your success:
+Please follow these simple netiquette rules:
 
-- Never type in ALL CAPS, because it reads as if you ARE SHOUTING AT PEOPLE.
-- Act as professionally, via your writing, as you would in a face to face classroom.
-- Refrain from inappropriate language and derogatory or personal attacks.
-- Do not dominate any discussion. Give other students the opportunity to join in the discussion.
-- Disagree with ideas but avoid challenges that may be interpreted as a personal attack.
-- Check that you are replying to the specific person you intend, and not to the entire class.
+- Act as professionally in your writing as you would in a face-to-face classroom.
+- Avoid typing in ALL CAPS, as it comes across as SHOUTING.
+- Check that you are replying to the specific person you intend, and not the entire class.
+- Disagree with ideas, but avoid comments that could be seen as personal attacks.
+- Do not dominate any discussion; allow other students the chance to participate.
+- If you reference someone’s post, quote only what is necessary to make your point.
+- Never forward in-class communications or posts by others outside of this virtual space.
 - Never give your password to another person.
-- Respect the virtual classroom. Never forward in-class communications or posts by others outside of this virtual space.
 - Never spam your classmates.
-- If you quote someone’s previous post, only quote enough to make your point.
+- Refrain from inappropriate language and derogatory or personal attacks.
 
 Be aware of the University’s <a href='http://catalog.wvu.edu/undergraduate/coursecreditstermsclassification/#academicintegritytext' target='_blank'>Academic Integrity and Dishonesty Policy</a>. You can review the rules, regulations, and procedures concerning student conduct and discipline for the main campus of West Virginia University, at <a href='https://studentresponsibility.wvu.edu' target='_blank'>Student Conduct</a>.
 
 ### Response Time
 
-I typically respond to Slack queries on the same day while emails and discussion posts are within 48 hours, except during holidays. Please plan accordingly so that you don’t miss deadlines! I generally return assignments within two weeks after a final submission date.
+I typically respond to Slack queries on the same day, while emails and discussion posts are answered within 48 hours, except during holidays. Please plan accordingly so that you do not miss deadlines! I usually return assignments within one week after the final submission date.
 
 ### Technical Requirements
 

@@ -16,9 +16,9 @@ editor_options:
 source(here::here("content", "com_libs.R"))
 ```
 
-## What the **** is program evaluation?
+## What is program evaluation?
 
-That question comes up more than you probably think! In practitioner-oriented fields like (but certainly not limited to) education and counseling, studies are often directed at developing and understanding the impact various programs have on those who receive services, those who provide services, and/or the larger context within which those programs operate. This mode of uncovering if something works and why it works is a basis for evaluating programs and in turn policy decision-making. Program evaluation has philosophical, theoretical, methodological, and practical peculiarities that make it necessary to devote an entire class to understanding why and how it is done. This course is designed to allow you to acquire an understanding of the choices available for and processes involved in conducting program evaluation by giving you hands-on experience conducting a small-scale evaluation study relevant to your interests.
+That question comes up more often than you might expect! In fields like education and counseling, as well as other practitioner-oriented areas, research frequently focuses on understanding the impact of various programs on service recipients, providers, and the broader context in which these programs operate. This process of determining whether and why something works forms the foundation for evaluation, which in turn can inform program and policy decisions. Evaluation has its own set of philosophical, theoretical, methodological, and practical considerations, making it essential to dedicate an entire course to understanding its purpose and execution. This course is designed to help you gain a clear understanding of the choices and processes involved in program evaluation through hands-on experience conducting a small-scale evaluation study relevant to your own interests.
 
 ## Course objectives
 
@@ -101,29 +101,29 @@ kable(textitems,
 
 ### *Is the course content difficult?*
 
-There is really no way to sugar coat it - **the first seven to eight weeks prior to your evaluation are fairly intense** so please plan accordingly. You are essentially asked to both learn about evaluations and then administer one which for all intents and purposes is not easy. Given that, difficulty is subjective, it varies, and often depends on your academic and practical history. Instead consider focusing on the following question
+There is really no way to sugarcoat it - **the first seven to eight weeks prior to your evaluation are fairly intense** so please plan accordingly. You will be learning about evaluations while simultaneously administering one, which is not an easy task. That said, difficulty is subjective; it varies and often depends on your academic and practical background. Instead of focusing on the level of difficulty, consider the following question:
 
 <center>
 <p id="rounded_corners">
-Can I first search for help independently and then reach out as needed?
+Can I search for help independently first and then reach out if needed?
 </p>
 </center>
 
-If the answer is an overall yes, then you have a good shot at succeeding in this class. 
+If your answer is yes, then you are likely well-positioned to succeed in this class.
 
 ### *Is there a lot of theory?*
 
-Evaluation is foremost a practice based field so much of what you will come across will align with that notion. Given that, there are times where theory will show up but they will be limited.
+Evaluation is primarily a practice-based field, so much of what you encounter will reflect that. While theory will appear at times, its role will be limited.
 
 ### *What if I'm a Visual/Aural/Read-write/Kinesthetic learner?*
-You're not one or even any of those. There's not one accepted study that supports one type of learning style over another. In fact, there aren't even any studies that support these four classifications either. You learn the best using multiple approaches which is why there are both a [Readings](/readings/) and [Tasks & Deliverables](/tasks/) section. At one time I denoted multiple papers to support this, but many of the sources I listed were also cited in this fantastic video:
+You do not fall into any one of those categories. In fact, there is no widely accepted study that supports a single learning style over another, nor is there solid evidence backing these four specific classifications. Research shows that people learn best through multiple approaches, which is why this course includes both a [Readings](/readings/) and [Tasks & Deliverables](/tasks/) section. At one point, I provided several papers to support this, but many of those sources are also referenced in this excellent video:
 
 <center>
 <iframe src="https://www.youtube.com/embed/rhgwIhB58PA" width="640" height="360" frameborder="0" allow="fullscreen" style="display: block; margin: 0 auto 1rem;"></iframe>
 </center>
 
 ### *What if I find a mistake?*
-Tell me! I strive to be error free but unfortunately like everyone else, make silly mistakes including grammar and spelling errors as well! 
+Let me know if you spot anything! I strive to be error-free, but like everyone else, I occasionally make silly mistakes, including grammar and spelling errors.
 
 ### *What do the different pages on the site mean?*
 
@@ -178,7 +178,7 @@ tableofcontents %>%
 
 ### Texts
 
-To help minimize costs, you are not required to purchase any physical texts. We'll rely on the various materials below which, barring the APA 7th edition handbook, are available through <a href='https://library.wvu.edu/' target='_blank'>WVU Libraries</a> in a digital format.
+To help keep costs down, you are not required to purchase any physical texts. We will use the materials listed below, all of which are available in digital format through the  <a href='https://library.wvu.edu/' target='_blank'>WVU Libraries</a>, except for the APA 7th edition handbook.
 
 #### Required
 
@@ -269,9 +269,7 @@ There will occasionally be additional articles and videos to read and watch. Whe
 
 #### Quatrics
 
-You will need access to your WVU <a href='https://wvu.qualtrics.com/' target='_blank'>Qualtrics</a> account. Please go to the site and check if you can login. If you are
-enrolled as a WVU student, then you should have access. However if you
-do not, submit a <a href='https://wvu.atlassian.net/servicedesk/customer/portals' target='_blank'>ticket to IT</a> or give them a ring at [304-293-4444](callto:%20304-293-4444).
+You will need access to your WVU <a href='https://wvu.qualtrics.com/' target='_blank'>Qualtrics</a> account. Please go to the site and check if you can login. If not, please submit a <a href='https://wvu.atlassian.net/servicedesk/customer/portals' target='_blank'>ticket to IT</a> or give them a ring at [304-293-4444](callto:%20304-293-4444).
 
 
 ## Assignments and Grades
@@ -362,24 +360,24 @@ Unless another mode is determined beforehand, we will conduct group meetings via
 
 ## Conduct and Expectations
 
-Here are the rules, expectations, and policies that I came up with or stole from other professors:
+Here are the rules, expectations, and policies that I have developed or adapted from other professors:
 
-- **Late work**: Barring the in-class only tasks (if applicable), past due deliverables will only be accepted up to 48 hours after the initial time and due date. For each full day an assignment is late, 10% of the final calculated grade will be deducted. All submissions must be made via <a href='https://ecampus.wvu.edu/' target='_blank'>eCampus</a> and are not accepted by any other means (e.g. email, paper, singing telegram). <span style="color:#20c499; font-weight: bold">There are no exceptions to this overarching policy</span>.
-- **Participation**: Please ensure that you are engaged and participate. Engagement is mostly defined by you — if that means commenting and asking/answering questions - great; but if it means being being disrespectful or flaking off - not so great.
-- **Justifications**: On any submission or posting, you must justify any assertion. I don't know what you know so its your job to provide all of the necessary evidence to convince me that you do know what you say you know. While you've probably heard this multiple times over your life, think of it this way: if someone tells you that *the core of the Earth is made of glitter*, the first question you should be asking is *what's your evidence?*.
+- **Late work**: Except for in-class tasks (if applicable), late submissions will be accepted up to 48 hours after the original due date. A 10% deduction from the final grade will be applied for each full day the assignment is late. All submissions must be made via <a href='https://ecampus.wvu.edu/' target='_blank'>eCampus</a> and are not accepted by any other means (e.g. email, paper, singing telegram). <span style="color:#20c499; font-weight: bold">There are no exceptions to this overarching policy</span>.
+- **Participation**: Please stay engaged and actively participate. How you engage is up to you — whether it’s through commenting, asking, or answering questions, that’s great. However, if engagement means being disrespectful or disengaging, that’s not so great.
+- **Justifications**: For every submission or post, you must justify your assertions. Since I cannot assume what you already know, it is your responsibility to provide the necessary evidence to demonstrate your understanding.  While you've probably heard this multiple times over your life, think of it this way: if someone tells you that *the core of the Earth is made of glitter*, the first question you should be asking is *what's your evidence?*.
 - **Rubrics**: While there are valid reasons for the utilization of a rubric in undergraduate classes, at the graduate level I do not (often) provide nor use a such an item to guide or evaluate your submission due to four primary concerns:<br>
-  1. When writing anything in academia that is pivotal (a thesis, dissertation, journal article, report, etc.), a rubric isn't typically provided.
-  2. If you write within the limitations as defined in a rubric, then creativity may be stifled (i.e. writing to the rubric rather than constructing a product from the ground up). 
-  3. Feedback can only be given along the criteria listed within a rubric which limits your learning as a student and constrains me as the instructor. 
-  4. Unless you are in a very specific area, the real world does not use rubrics!
+  1. In academic writing, especially for significant works like a thesis, dissertation, journal article, or report, a rubric is not usually provided.
+  2. Writing strictly within the constraints of a rubric can sometimes limit creativity (i.e. writing to the rubric rather than constructing a product from the ground up). 
+  3. Feedback is restricted to the criteria outlined in a rubric, which can limit your learning as a student and constrain me as the instructor.
+  4. Outside of very specific fields, the real world typically does not rely on rubrics!
 <br>
 <br>
 - **Technology use**: Use phones, computers, etc. responsibly. We're all adults^[...most of the time.].
 
 - **Assumptions**:<br>
-  1. Just assume that all submissions are to be written **formally** and should include with the appropriate use of language, grammar, syntax, etc. and follow standard APA 7th edition formatting guidelines where applicable. 
-  2. People who are easily offended by content, believe their work to be flawless, generally unable to handle criticism, or are looking for rainbows and ponies should consider looking at another course. However if you care about data, real-world practice, and learning a highly marketable skill then you've come to the right place.
-  3. There is a great deal of content in this course and you will likely struggle with some at times. Given that, there is also something to be said about the satisfaction a person gets when figuring something out, but nowhere is it written that has to be on your own. You may find that a nudge here or there elicits the same feeling so please reach out for help. 
+  1. All submissions are to be written **formally** and should include with the appropriate use of language, grammar, syntax, etc. and follow standard APA 7th edition formatting guidelines where applicable. 
+  2. People who are easily offended by content, believe their work to be flawless, or are generally unable to handle criticism. However if you care about data, real-world practice, and learning a highly marketable skill then you've come to the right place.
+  3. This course covers a lot of material, and it is normal to encounter challenges along the way. While there is value in the satisfaction of solving things on your own, it does not mean you have to do it entirely by yourself. Sometimes, a little guidance can bring about the same sense of accomplishment, so do not hesitate to reach out for help. 
   
 ## Communication
 
@@ -405,7 +403,7 @@ One-on-one video conferences can be created via the class <a href='https://calen
 
 ### Modifications
 
-This syllabus reflects a plan for the term but things change and plans change so deviations may become necessary as we move along during the term. This means that **I reserve the right to alter or amend this syllabus**.
+This syllabus outlines a plan for the term, but adjustments may become necessary as circumstances change. Therefore, **I reserve the right to modify this syllabus** as we progress through the course..
 
 ### Health statement
 
@@ -465,23 +463,23 @@ At West Virginia University, class attendance contributes significantly to acade
 
 ### Postings
 
-Following these simple netiquette rules in your online class or education environment will ensure your success:
+Please follow these simple netiquette rules:
 
--	Never type in ALL CAPS, because it reads as if you ARE SHOUTING AT PEOPLE.
--	Act as professionally, via your writing, as you would in a face to face classroom. 
--	Refrain from inappropriate language and derogatory or personal attacks. 
--	Do not dominate any discussion. Give other students the opportunity to join in the discussion.
--	Disagree with ideas but avoid challenges that may be interpreted as a personal attack. 
--	Check that you are replying to the specific person you intend, and not to the entire class. 
--	Never give your password to another person. 
--	Respect the virtual classroom. Never forward in-class communications or posts by others outside of this virtual space. 
--	Never spam your classmates. 
--	If you quote someone's previous post, only quote enough to make your point. 
+- Act as professionally in your writing as you would in a face-to-face classroom.
+- Avoid typing in ALL CAPS, as it comes across as SHOUTING.
+- Check that you are replying to the specific person you intend, and not the entire class.
+- Disagree with ideas, but avoid comments that could be seen as personal attacks.
+- Do not dominate any discussion; allow other students the chance to participate.
+- If you reference someone’s post, quote only what is necessary to make your point.
+- Never forward in-class communications or posts by others outside of this virtual space.
+- Never give your password to another person.
+- Never spam your classmates.
+- Refrain from inappropriate language and derogatory or personal attacks.
 
 Be aware of the University’s <a href='http://catalog.wvu.edu/undergraduate/coursecreditstermsclassification/#academicintegritytext' target='_blank'>Academic Integrity and Dishonesty Policy</a>. You can review the rules, regulations, and procedures concerning student conduct and discipline for the main campus of West Virginia University, at <a href='https://studentresponsibility.wvu.edu' target='_blank'>Student Conduct</a>.
 
 ### Response Time
-I typically respond to Slack queries on the same day while emails and discussion posts are within 48 hours, except during holidays. Please plan accordingly so that you don’t miss deadlines! I generally return assignments within two weeks after a final submission date.
+I typically respond to Slack queries on the same day, while emails and discussion posts are answered within 48 hours, except during holidays. Please plan accordingly so that you do not miss deadlines! I usually return assignments within one week after the final submission date.
 
 ### Technical Requirements
 Students need to have access to a computer for word processing, e-mail and access to eCampus. Access to the Internet is necessary for completion of this course. Run the Browser Check. This tool will check that you are using a supported Internet browser and have a valid Java version installed. The required technical skills to participate in this course are:
