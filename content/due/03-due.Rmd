@@ -12,7 +12,7 @@ type: docs
 weight: 1
 ---
 
-`r blogdown::shortcode("r-walkthrough-header")`
+`r blogdown::shortcode("aes-deliverables")`
 
 ```{r libraries, message=FALSE, warning=FALSE, include=FALSE}
 source(here::here("content", "com_libs.R"))
@@ -35,7 +35,6 @@ Description = c("Read <i>Covering the Population and Selecting Who to Survey</i>
                  "Go through the slideshow <span style='color:#6ac4cd;font-weight:bold'>Sampling</span>",
                 "Begin work on your second deliverable <span style='color:#6acda5;font-weight:bold'>Create a Draft</span>"
                 ),
-
 
 Details = c("<a href='/readings/03-readings/#read-some-text'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",
             "<a href='/modules/03-module/#data-camp'><span style='font-size: 25px; color: #89cff0;'><i class='fas fa-info-circle'></i></span></a>",

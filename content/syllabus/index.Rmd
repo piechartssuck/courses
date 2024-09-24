@@ -16,8 +16,7 @@ source(here::here("content", "com_libs.R"))
 
 ## Survey Says Most People Are Terrible At Creating Surveys
 
-We live in a data-driven world with surveys providing a sizable chunk of that information. Online platforms like have made it so simple for anyone to both construct and administer a survey that it seems that we find multiple examples pop up in our inbox every week. Given that reach alone, you would think that there would simply be too much data to handle, but it turns out that the average estimated response rate falls between 20% - 30%. So what could be the problem? While some things are certainly out of a survey designer's control, approaches such as constructing an aesthetically pleasing instrument, understanding a vast array of analyses, displaying an aptitude in data visualization, constructing valid and reliable designs, having measurable outcomes, and incorporating pilot testing are just some of the things that can affect both a survey's feasibility and viability.
-
+We live in a data-driven world, and surveys provide a significant portion of that information. Online platforms have made it so easy for anyone to create and distribute surveys that many of us find multiple examples landing in our inboxes each week. Given their widespread use, you might think there would be an overwhelming amount of data, but the average response rate typically falls between 20% and 30%. So, what is the issue? While some factors are beyond a survey designer’s control, elements such as creating an aesthetically pleasing instrument, understanding various analyses, showcasing skills in data visualization, building valid and reliable designs, setting measurable outcomes, and incorporating pilot testing can all impact a survey’s feasibility and success.
 
 ## Course objectives
 
@@ -47,7 +46,7 @@ Additionally, this class will expose you to [`r fa("r-project", fill = "steelblu
 
 ## Quick Start Guide
 
-Please note that the slideshow goes through highlights of the syllabus, but you are still responsible for reading through the entire site including this page.
+Please note that the slideshow covers key highlights of the syllabus, but you are still responsible for reading the entire site, including this page.
 
 ```{=html}
 <center>
@@ -112,21 +111,21 @@ kable(textitems,
 ## FAQ
 
 ### *Is the course content difficult?*
-You've probably heard an answer like this before: *...at times some of the material can be dense.* While ambiguous, difficulty is subjective, varies, and will likely depend on your academic and practical history. Instead consider focusing on the following question
+You have likely heard a response like this before:  *...at times some of the material can be hard...* While vague, difficulty is subjective, varies, and will depend on your academic and practical background. Instead, focus on this question:
 
 <center>
 <p id="rounded_corners">
-Can I first search for help independently and then reach out as needed?
+Can I search for help independently first and then reach out if needed?
 </p>
 </center>
 
-If the answer is an overall yes, then you have a good shot at succeeding in this class. Make sure to go through the <a href="#rstats"><span style="color:#03dac6"><b>How to Ask for Help with R and RStudio</b></span></a>.
+If your answer is yes, then you are likely well-positioned to succeed in this class. Make sure to go through the <a href="#rstats"><span style="color:#03dac6"><b>How to Ask for Help with R and RStudio</b></span></a>.
 
 ### *Is R difficult?*
-Learning&nbsp; `r fa("r-project", fill = "steelblue")` can be especially challenging at first—it's akin to learning a new language like Spanish or even mathematics. Even experienced R users get frustrated...and so much so that some of us have swear jars. However as silly as it sounds one of the best feelings is to overcome a logical roadblock so if you find yourself getting irritated, try the following: take a break, go let some frustration out, sleep, discuss with a peer, etc. If you are at your limit, take a few breaths and contact me!
+Learning `r fa("r-project", fill = "steelblue")` can be especially challenging at first—it’s like learning a new language, whether it’s Spanish or even math. Even experienced R users get frustrated—some of us even have swear jars! However, as silly as it sounds, one of the best feelings is overcoming a logical roadblock. So, if you find yourself getting irritated, try this: take a break, step away for a bit, sleep on it, and/or discuss it with a peer. If you are reaching your limit, take a few deep breaths and reach out to me!
 
 ### *What if I'm a Visual/Aural/Read-write/Kinesthetic learner?*
-You're not one or even any of those. There's not one accepted study that supports one type of learning style over another. In fact, there aren't even any studies that support these four classifications either. You learn the best using multiple approaches which is why there is both a [Readings](/readings/) and [Trainings](/trainings/) section. At one time I denoted multiple papers to support this, but many of the sources I listed were also cited in this fantastic video:
+You do not fall into any one of those categories. In fact, there is no widely accepted study that supports a single learning style over another, nor is there solid evidence backing these four specific classifications. Research shows that people learn best through multiple approaches, which is why this course includes both a [Readings](/readings/) and [Trainings](/trainings/) section. At one point, I provided several papers to support this, but many of those sources are also referenced in this excellent video:
 
 <center>
 <iframe src="https://www.youtube.com/embed/rhgwIhB58PA" width="640" height="360" frameborder="0" allow="fullscreen" style="display: block; margin: 0 auto 1rem;"></iframe>
@@ -137,7 +136,7 @@ Tell me! I strive to be error free but unfortunately like everyone else, make si
 
 ### *What do the different pages on the site mean?*
 
-These are given in the order you see them in top of the site.
+Information about these is provided in the same order as they appear at the top of the site.
 
 ```{r icontibble, echo=FALSE, message=FALSE}
 faread <-  as.character(fa("book", fill = "#74d86f", height = "17px"))
@@ -191,11 +190,11 @@ tableofcontents %>%
 </center>
 
 ## Materials
-There are two required texts and software packages necessary for this course. Additionally four optional resources are provided that will likely help you throughout the semester. With that said, you will receive some supplementary materials in the course as well.
+There are two required texts for this course, but three free software packages are necessary. Additionally, four optional resources are available that will likely assist you throughout the semester. You will also receive some supplementary materials during the course.
 
 ### Texts
 
-To help minimize costs, you are not required to purchase any physical texts. We'll rely on the various materials below which, barring the APA 7th edition handbook, are either available through <a href='https://library.wvu.edu/' target='_blank'>WVU Libraries</a> or in digital format.
+o help keep costs down, you are not required to purchase any physical texts. We will use the materials listed below, all of which are available in digital format through the  <a href='https://library.wvu.edu/' target='_blank'>WVU Libraries</a>.
 
 #### Required
 
@@ -283,31 +282,26 @@ opttextstib %>%
 ```
 </center>
 
-There will occasionally be additional articles and videos to read and watch. When this happens, links to these other resources will be included on the content page for that session.
+Occasionally, there will be additional articles and videos to read and watch. When this happens, links to these resources will be provided on the content page for that session.
+
 
 ## Software
 
 ### Quatrics
 
-You will need access to your WVU <a href='https://wvu.qualtrics.com/' target='_blank'>Qualtrics</a> account. Please go to the site and check if you can login. If you are
-enrolled as a WVU student, then you should have access. However if you
-do not, submit a <a href='https://wvu.atlassian.net/servicedesk/customer/portals' target='_blank'>ticket to IT</a> or give them a ring at [304-293-4444](callto:%20304-293-4444).
+You will need access to your WVU <a href='https://wvu.qualtrics.com/' target='_blank'>Qualtrics</a> account. Please go to the site and check if you can login. If not, please submit a <a href='https://wvu.atlassian.net/servicedesk/customer/portals' target='_blank'>ticket to IT</a> or give them a ring at [304-293-4444](callto:%20304-293-4444).
 
 ### R and RStudio
 
-You will be introduced to the open source (and free!) statistical programming language [`r fa("r-project", fill = "steelblue")`](https://cran.r-project.org/)&nbsp; later in the term using <a href='https://www.rstudio.com/' target='_blank'>RStudio</a> as the main program to access the language. You can think of R as an engine and RStudio as a car dashboard — R handles all the calculations produces the actual statistics and graphical output, while RStudio provides a nice interface for running R code. Please note that
-
-<div class="text-center">
-**you do not need to have any programming experience to use R**
-</div>
+To conduct quantitative analyses, you will be introduced to the open source (and free!) statistical programming language [`r fa("r-project", fill = "steelblue")`](https://cran.r-project.org/) as soon as the term begins. We will use [RStudio](https://www.rstudio.com/) s the main program to work with the R language. Think of R as the engine and RStudio as the dashboard — R handles all the computations, while RStudio provides a user-friendly interface for interacting with the code and results. *You do not need to have any programming experience to use R!*
 
 You can [find instructions for installing R and RStudio here](/resource/install/).
 
 ## Help
 
-Data science and statistical programming can be challenging. Computers are stupid and its always the tiny errors in your coding can result in tons of headache. People working in any syntax based software package at any level experience this!
+Data science and statistical programming can be challenging. Computers are stupid, and even the tiniest coding errors can lead to major headaches. Anyone working with syntax-based software at any level experiences this!
 
-But there are multiple resources both online and locally that are available. Prior to our first session, please take a moment to go through this slideshow for a short description of the main outlets.
+Thankfully, there are plenty of resources available both online and locally. Before our first session, please take a moment to go through this slideshow for a quick overview of the main outlets.
 
 <span id="rstats"></span>
 
@@ -459,7 +453,7 @@ grading %>%
 
 ### Slack
 
-We have a class <a href='https://edp619fall2022.slack.com' target='_blank'>Slack</a> channel where you can poise a question and post as needed. This is the only mode where I have applicable class notifications turned on my devices so please utilize the platform.
+We have a class <a href='https://edp619fall2022.slack.com' target='_blank'>Slack</a> channel where you can pose questions and post as needed. This is the only platform where I have class notifications enabled on my devices, so please make use of it.
 
 ### Email
 
@@ -498,9 +492,9 @@ Here are the rules, expectations, and policies that I came up with or stole from
 - **Technology use**: Use phones, computers, etc. responsibly. We're all adults^[...most of the time.].
 
 - **Assumptions**:<br>
-  1. Just assume that all submissions are to be written **formally** and should include with the appropriate use of language, grammar, syntax, etc. and follow standard APA 7th edition formatting guidelines where applicable. 
-  2. People who are easily offended by content, believe their work to be flawless, generally unable to handle criticism, or are looking for rainbows and ponies should consider looking at another course. However if you care about data, real-world practice, and learning a highly marketable skill then you've come to the right place.
-  3. There is a great deal of content in this course and you will likely struggle with some at times. Given that, there is also something to be said about the satisfaction a person gets when figuring something out, but nowhere is it written that has to be on your own. You may find that a nudge here or there elicits the same feeling so please reach out for help. 
+  1. All submissions are to be written **formally** and should include with the appropriate use of language, grammar, syntax, etc. and follow standard APA 7th edition formatting guidelines where applicable. 
+  2. People who are easily offended by content, believe their work to be flawless, or are generally unable to handle criticism. However if you care about data, real-world practice, and learning a highly marketable skill then you've come to the right place.
+  3. This course covers a lot of material, and it is normal to encounter challenges along the way. While there is value in the satisfaction of solving things on your own, it does not mean you have to do it entirely by yourself. Sometimes, a little guidance can bring about the same sense of accomplishment, so do not hesitate to reach out for help. 
 
 ## Course Policies
 
@@ -508,7 +502,7 @@ Here are the rules, expectations, and policies that I came up with or stole from
 
 ### Modifications
 
-This syllabus reflects a plan for the term but things change and plans change so deviations may become necessary as we move along during the term. This means that **I reserve the right to alter or amend this syllabus**.
+This syllabus outlines a plan for the term, but adjustments may become necessary as circumstances change. Therefore, **I reserve the right to modify this syllabus** as we progress through the course.
 
 ### Health statement
 

@@ -1,0 +1,365 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+<link href='https://fonts.googleapis.com/css?family=Roboto Condensed' rel='stylesheet'>
+
+<style>
+ul {
+    margin-left: 1.5em;
+}
+
+.dark h1{
+    color: #52bf90;
+}
+
+.docs-sidebar .docs-toc-item.active a,
+.docs-sidebar .nav > .active:hover > a,
+.docs-sidebar .nav > .active > a {
+    font-weight: bold;
+    color: #52bf90;
+    background-color: transparent;
+}
+
+.hvr-sweep-to-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+  }
+
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  border-radius: 5px;
+  background: #9f54fb;
+    -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover:before,
+.hvr-sweep-to-left:focus:before,
+.hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+
+iframe {
+  border:0;
+}
+
+#rounded_corners_small {
+  border-radius: 25px;
+  border: 2px solid #80FFDB;
+  padding: 20px;
+  width: 400px;
+  height: 80px;
+}
+
+#rounded_corners {
+  border-radius: 25px;
+  border: 2px solid #80FFDB;
+  padding: 20px;
+  width: 400px;
+  height: 115px;
+}
+
+#rounded_corners_large {
+  border-radius: 25px;
+  border: 2px solid #80FFDB;
+  padding: 20px;
+  width: 400px;
+  height: 150px;
+}
+
+#rounded_corners_long {
+  border-radius: 25px;
+  border: 2px solid #80FFDB;
+  padding: 20px;
+  width: 400px;
+  height: 230px;
+}
+
+td, th, tr, table {
+    border: 0 !important;
+    border-spacing:0 !important;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: unset !important;
+    color: unset !important;
+  }
+
+tbody > td > tr:hover {
+      background-color: unset !important;
+      color: unset !important;
+  }
+
+tfoot {
+    text-align: left;
+    font-size: 80%;
+    font-style: italic;
+  }
+
+.wrapper{
+  display:inline-flex;
+}.wrapper .icon{
+  margin: 0 20px;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  position: relative;
+  z-index:2;}.wrapper .icon span{
+  position:relative;
+  z-index:2;
+  height: 60px;
+  width: 60px;
+  display:block;
+  background: #212121;
+  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.1);
+  border-radius:50%;
+  text-align:center;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}.wrapper .icon span i{
+  font-size:20px;
+  line-height:60px;
+}.wrapper .icon .tooltip{
+  position:absolute;
+  top:0px;
+  background: #212121;
+  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.1);
+  font-size: 20px;
+  font-family: 'Roboto Condensed';
+  padding: 10px 30px;
+  border-radius: 25px;
+  color:white;
+  opacity:0;
+  pointer-events: none;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}.wrapper .icon:hover .tooltip{
+  opacity:1;
+  pointer-events: auto;
+  top:-91px;
+}.wrapper .icon .tooltip:before{
+  position:absolute;
+  content:"";
+  height:15px;
+  width:15px;
+  bottom:-8px;
+  left:50%;
+  transform: translateX(-50%) rotate(45deg);
+}.wrapper .icon:hover span,
+.wrapp .icon:hover .tooltip{
+  text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
+}.wrapper .icon:hover span{
+  color: #fff;
+}.wrapper .leftright:hover span,
+.wrapper .leftright:hover .tooltip,
+.wrapper .leftright:hover .tooltip:before{
+  background:#1b85b8;
+}.wrapper .info:hover span,
+.wrapper .info:hover .tooltip,
+.wrapper .info:hover .tooltip:before{
+  background:#559e83;
+}.wrapper .github:hover span,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip:before{
+  background:#9e5570;
+}.wrapper .youtube:hover span,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip:before{
+  background:#55959e;
+}
+
+.holder {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.holder > * {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bigcol {
+flex: 0 0 75%;
+}
+
+.smallcol{
+flex: 0 0 25%;
+}
+
+.evener {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-basis: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.evener > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.evencol {
+  flex-grow: 1;
+    flex-basis: 0;
+    min-width: 0;
+  }
+
+.clear{
+    clear:both;
+}
+
+.stripe {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    box-orient: horizontal;
+    flex-direction: row;
+
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    justify-content: center;
+
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.subsquare {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+
+    padding: 10px;
+    margin: 10px;
+
+    text-align: center;
+}
+
+.tab {
+ margin-left: 2.5em
+}
+
+i.fa.fa-save{
+color:#ffffff;
+}
+
+.course-info {
+  font-size: 12pt;
+}
+
+kbd {
+  // Set up custom properties for colours so we can switch them in dark mode
+  --kbd-color-background: var(--color-background-primary);
+  // These interpolated variables reference a SCSS map of HSL-based greys
+  --kbd-color-border:     #{color(grey, 80)};
+  --kbd-color-text:       #12b8ff;
+
+  // In dark mode, a straight-up inversion doesn’t work for
+  // the “physical” key look so they need to be adjusted
+  @media (prefers-color-scheme: dark) {
+    --kbd-color-background: #{color(grey, 55)};
+    --kbd-color-border:     #{color(grey, 25)};
+    --kbd-color-text:       #{color(grey, 14)};
+  }
+
+  // Match the page defaults in light mode but
+  // switch to a light-ish grey in dark mode
+  background-color: var(--kbd-color-background);
+  color: var(--kbd-color-text);
+
+  // Round off the corners like physical keys have
+  border-radius: 0.25rem;
+
+  // Add a simple border
+  border: 1px solid var(--kbd-color-border);
+
+  // A sharp shadow (with no blur) really gives
+  // the old school keyboard look
+  box-shadow: 0 2px 0 1px var(--kbd-color-border);
+
+  // Remove the text cursor — totally optional
+  // but I wanted it for my hover effect
+  cursor: default;
+
+  // By default, browsers style <kbd> with a monospace typeface
+  font-family: var(--font-family-sans-serif);
+
+  // If we do all this with the default font size
+  // (mine is 18px on desktop) it’ll look massive
+  // and bump into lines above and below
+  font-size: 0.90em;
+
+  // Remove any extra space so I can accurately tweak the padding
+  line-height: 1;
+
+  // Make narrow numbers and letters look less odd
+  min-width: 0.75rem;
+  // `min-width` doesn’t work on inline elements
+  display: block;
+  // Keep the characters centred when narrower than the `max-width`
+  text-align: center;
+
+  // Seemed to look more key-like with more horizontal padding 🤷
+  padding: 2px 5px;
+
+  // These two lines pull the whole element up now that they’re
+  // bottom-heavy due to the `box-shadow`. This looks better
+  // against the cap height of regular paragraph text.
+  position: relative;
+  top: -1px;
+
+  // This is my favourite part of the whole thing. The key gets
+  // “pushed” down and the shadow gets reduced so it looks like
+  // it might when typing on a physical keyboard.
+  &:hover {
+    box-shadow: 0 1px 0 0.5px var(--kbd-color-border);
+    top: 1px;
+  }
+}
+</style>
+
+<script>
+$(document).ready(function(){
+     $('[data-toggle="tooltip"]').tooltip();
+});
+</script>

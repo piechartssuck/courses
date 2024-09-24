@@ -4,7 +4,7 @@
     <title>A Very Incomplete Survey of Basic Statistical Tests in R</title>
     <meta charset="utf-8" />
     <meta name="author" content="EDP 619" />
-    <script src="Statistical-Tests-in-R_files/header-attrs-2.19/header-attrs.js"></script>
+    <script src="Statistical-Tests-in-R_files/header-attrs-2.28/header-attrs.js"></script>
     <link href="Statistical-Tests-in-R_files/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
     <script src="Statistical-Tests-in-R_files/tile-view-0.2.6/tile-view.js"></script>
     <link href="Statistical-Tests-in-R_files/animate.css-3.7.2/animate.xaringan.css" rel="stylesheet" />
@@ -163,7 +163,7 @@ text-align: center;
 width: 110px;
 height: 128px;
 z-index: 0;
-background-image: url(/Users/skynet/Documents/WVU/Teaching/GitHub.nosync/edp619/static/img/course_hex.png);
+background-image: url(/Users/skynet/Documents/Applications and Jobs/Jobs/Old/WVU/Teaching/GitHub/edp619/static/img/course_hex.png);
 background-size: contain;
 background-repeat: no-repeat;
 position: absolute;
@@ -198,7 +198,7 @@ top:1em;right:1em;
 
 Please load up the following packages (or install and then load them as needed)
 
-```r
+``` r
 library(tidyverse)
 library(car)
 ```
@@ -224,7 +224,7 @@ library(car)
 ##     some
 ```
 
-```r
+``` r
 library(foreign)
 library(lme4)
 ```
@@ -244,7 +244,7 @@ library(lme4)
 ##     expand, pack, unpack
 ```
 
-```r
+``` r
 library(MASS)
 ```
 
@@ -265,7 +265,7 @@ library(MASS)
 ##     select
 ```
 
-```r
+``` r
 library(CCA)
 ```
 
@@ -328,7 +328,7 @@ library(CCA)
 ```
 
 ```
-## Spam version 2.9-1 (2022-08-07) is loaded.
+## Spam version 2.10-0 (2023-10-23) is loaded.
 ## Type 'help( Spam)' or 'demo( spam)' for a short introduction 
 ## and overview of this package.
 ## Help for individual functions is also obtained by adding the
@@ -357,7 +357,7 @@ library(CCA)
 ## Try help(fields) to get started.
 ```
 
-```r
+``` r
 library(psych)
 ```
 
@@ -408,19 +408,19 @@ You may come across the following icons. The table below lists what each means.
  &lt;/thead&gt;
 &lt;tbody&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:center;width: 10em; "&gt; &lt;svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#4682b4;overflow:visible;position:relative;"&gt;&lt;path d="M52.5 440.6c-9.5 7.9-22.8 9.7-34.1 4.4S0 428.4 0 416V96C0 83.6 7.2 72.3 18.4 67s24.5-3.6 34.1 4.4L224 214.3V256v41.7L52.5 440.6zM256 352V256 128 96c0-12.4 7.2-23.7 18.4-29s24.5-3.6 34.1 4.4l192 160c7.3 6.1 11.5 15.1 11.5 24.6s-4.2 18.5-11.5 24.6l-192 160c-9.5 7.9-22.8 9.7-34.1 4.4s-18.4-16.6-18.4-29V352z"&gt;&lt;/path&gt;&lt;/svg&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; &amp;lt;svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#4682b4;overflow:visible;position:relative;"&amp;gt;&amp;lt;path d="M52.5 440.6c-9.5 7.9-22.8 9.7-34.1 4.4S0 428.4 0 416V96C0 83.6 7.2 72.3 18.4 67s24.5-3.6 34.1 4.4L224 214.3V256v41.7L52.5 440.6zM256 352V256 128 96c0-12.4 7.2-23.7 18.4-29s24.5-3.6 34.1 4.4l192 160c7.3 6.1 11.5 15.1 11.5 24.6s-4.2 18.5-11.5 24.6l-192 160c-9.5 7.9-22.8 9.7-34.1 4.4s-18.4-16.6-18.4-29V352z"/&amp;gt;&amp;lt;/svg&amp;gt; &lt;/td&gt;
    &lt;td style="text-align:left;width: 40em; "&gt; Indicates that an example continues on the following slide. &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:center;width: 10em; "&gt; &lt;svg aria-hidden="true" role="img" viewbox="0 0 384 512" style="height:1em;width:0.75em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#ff6347;overflow:visible;position:relative;"&gt;&lt;path d="M0 128C0 92.7 28.7 64 64 64H320c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"&gt;&lt;/path&gt;&lt;/svg&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; &amp;lt;svg aria-hidden="true" role="img" viewBox="0 0 384 512" style="height:1em;width:0.75em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#ff6347;overflow:visible;position:relative;"&amp;gt;&amp;lt;path d="M0 128C0 92.7 28.7 64 64 64H320c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/&amp;gt;&amp;lt;/svg&amp;gt; &lt;/td&gt;
    &lt;td style="text-align:left;width: 40em; "&gt; Indicates that a section using common syntax has ended. &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:center;width: 10em; "&gt; &lt;svg aria-hidden="true" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#5cb85c;overflow:visible;position:relative;"&gt;&lt;path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"&gt;&lt;/path&gt;&lt;/svg&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; &amp;lt;svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#5cb85c;overflow:visible;position:relative;"&amp;gt;&amp;lt;path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/&amp;gt;&amp;lt;/svg&amp;gt; &lt;/td&gt;
    &lt;td style="text-align:left;width: 40em; "&gt; Indicates that there is an active hyperlink on the slide. &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:center;width: 10em; "&gt; &lt;svg aria-hidden="true" role="img" viewbox="0 0 384 512" style="height:1em;width:0.75em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#faffbd;overflow:visible;position:relative;"&gt;&lt;path d="M336 0h-288C21.49 0 0 21.49 0 48v431.9c0 24.7 26.79 40.08 48.12 27.64L192 423.6l143.9 83.93C357.2 519.1 384 504.6 384 479.9V48C384 21.49 362.5 0 336 0zM336 452L192 368l-144 84V54C48 50.63 50.63 48 53.1 48h276C333.4 48 336 50.63 336 54V452z"&gt;&lt;/path&gt;&lt;/svg&gt; &lt;/td&gt;
+   &lt;td style="text-align:center;width: 10em; "&gt; &amp;lt;svg aria-hidden="true" role="img" viewBox="0 0 384 512" style="height:1em;width:0.75em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#faffbd;overflow:visible;position:relative;"&amp;gt;&amp;lt;path d="M0 48C0 21.5 21.5 0 48 0l0 48V441.4l130.1-92.9c8.3-6 19.6-6 27.9 0L336 441.4V48H48V0H336c26.5 0 48 21.5 48 48V488c0 9-5 17.2-13 21.3s-17.6 3.4-24.9-1.8L192 397.5 37.9 507.5c-7.3 5.2-16.9 5.9-24.9 1.8S0 497 0 488V48z"/&amp;gt;&amp;lt;/svg&amp;gt; &lt;/td&gt;
    &lt;td style="text-align:left;width: 40em; "&gt; Indicates that a section covering a concept has ended. &lt;/td&gt;
   &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -449,7 +449,7 @@ This walk-through will provide you with information on how to perform a number o
 When deciding which test is appropriate to use, it is important to consider the type of variables that you have. Please load in the following data sets (and look at them by using `View()` or `head()`
 
 
-```r
+``` r
 some_ed_data &lt;- 
   read_csv("some_ed_data.csv")
 ```
@@ -457,7 +457,7 @@ some_ed_data &lt;-
 
 
 
-```r
+``` r
 some_exercise_data &lt;- 
   read_csv("some_exercise_data.csv")
 ```
@@ -465,7 +465,7 @@ some_exercise_data &lt;-
 
 
 
-```r
+``` r
 some_survey_data &lt;- 
   read_csv("some_survey_data.csv")
 ```
@@ -748,7 +748,7 @@ A majority of the information included in this survey of approached was scraped 
 
 ## ANCOVA (Analysis of Covariance)
 
-```r
+``` r
 summary(aov(some_ed_data$write ~ 
               some_ed_data$prog + 
               some_ed_data$read))
@@ -767,7 +767,7 @@ summary(aov(some_ed_data$write ~
 
 ## Binomial Test
 
-```r
+``` r
 prop.test(sum(some_ed_data$female), 
           length(some_ed_data$female), 
           p = 0.5)
@@ -791,7 +791,7 @@ prop.test(sum(some_ed_data$female),
 
 ## Canonical Correlation
 
-```r
+``` r
 cc(cbind(some_ed_data$read, 
          some_ed_data$write), 
    cbind(some_ed_data$math, 
@@ -1255,7 +1255,7 @@ cc(cbind(some_ed_data$read,
 
 ## Chi-square Test
 
-```r
+``` r
 chisq.test(table(some_ed_data$female, 
                  some_ed_data$schtyp))
 ```
@@ -1272,7 +1272,7 @@ chisq.test(table(some_ed_data$female,
 
 ## Chi-square Goodness of Fit
 
-```r
+``` r
 chisq.test(table(some_ed_data$race), 
            p = c(10, 10, 10, 70)/100)
 ```
@@ -1289,7 +1289,7 @@ chisq.test(table(some_ed_data$race),
 
 ## Correlation
 
-```r
+``` r
 cor(some_ed_data$read, 
     some_ed_data$write)
 ```
@@ -1298,7 +1298,7 @@ cor(some_ed_data$read,
 ## [1] 0.5967765
 ```
 
-```r
+``` r
 cor.test(some_ed_data$read, 
          some_ed_data$write)
 ```
@@ -1321,7 +1321,7 @@ cor.test(some_ed_data$read,
 
 ## Discriminant Analysis
 
-```r
+``` r
 lda(factor(some_ed_data$prog) ~ 
       some_ed_data$read + 
       some_ed_data$write + 
@@ -1359,7 +1359,7 @@ lda(factor(some_ed_data$prog) ~
 
 ## Factor Analysis
 
-```r
+``` r
 fa(r = cor(model.matrix(~read + write + math + science + socst - 1, 
                         data = some_ed_data)), 
    rotate = "none",
@@ -1393,8 +1393,8 @@ fa(r = cor(model.matrix(~read + write + math + science + socst - 1,
 ## Mean item complexity =  1.2
 ## Test of the hypothesis that 2 factors are sufficient.
 ## 
-## The degrees of freedom for the null model are  10  and the objective function was  2.51
-## The degrees of freedom for the model are 1  and the objective function was  0.01 
+## df null model =  10  with the objective function =  2.51
+## df of  the model are 1  and the objective function was  0.01 
 ## 
 ## The root mean square of the residuals (RMSR) is  0.01 
 ## The df corrected root mean square of the residuals is  0.03 
@@ -1411,7 +1411,7 @@ fa(r = cor(model.matrix(~read + write + math + science + socst - 1,
 
 ## Factorial ANOVA (Analysis of Variance)
 
-```r
+``` r
 anova(lm(write ~ female * ses, 
          data = some_ed_data))
 ```
@@ -1433,7 +1433,7 @@ anova(lm(write ~ female * ses,
 
 ## Factorial Logistic Regression
 
-```r
+``` r
 summary(glm(female ~ prog * schtyp, 
             data = some_ed_data, 
             family = binomial))
@@ -1443,10 +1443,6 @@ summary(glm(female ~ prog * schtyp,
 ## 
 ## Call:
 ## glm(formula = female ~ prog * schtyp, family = binomial, data = some_ed_data)
-## 
-## Deviance Residuals: 
-##    Min      1Q  Median      3Q     Max  
-## -1.698  -1.247   1.069   1.109   1.572  
 ## 
 ## Coefficients:
 ##             Estimate Std. Error z value Pr(&gt;|z|)
@@ -1468,7 +1464,7 @@ summary(glm(female ~ prog * schtyp,
 
 ## Friedman Test
 
-```r
+``` r
 friedman.test(cbind(some_ed_data$read, 
                     some_ed_data$write, 
                     some_ed_data$math))
@@ -1486,7 +1482,7 @@ friedman.test(cbind(some_ed_data$read,
 
 ## Kruskal Wallis Test
 
-```r
+``` r
 kruskal.test(some_ed_data$write, 
              some_ed_data$prog)
 ```
@@ -1503,7 +1499,7 @@ kruskal.test(some_ed_data$write,
 
 ## McNemar Test
 
-```r
+``` r
 # Some made up data in matrix form
 made_up_matrixdata &lt;- 
   matrix(c(150, 22, 21, 12), 2, 2)
@@ -1523,7 +1519,7 @@ mcnemar.test(made_up_matrixdata)
 
 ## Multiple Regression
 
-```r
+``` r
 lm(some_ed_data$write ~ 
      some_ed_data$female + 
      some_ed_data$read + 
@@ -1549,7 +1545,7 @@ lm(some_ed_data$write ~
 
 ## Multivariate Multiple Regression
 
-```r
+``` r
 mmrlm &lt;- 
   lm(cbind(write, read) ~ 
        female + math + science + socst, 
@@ -1644,7 +1640,7 @@ summary(Anova(mmrlm))
 
 ## Non-parametric Correlation
 
-```r
+``` r
 cor.test(some_ed_data$read, 
          some_ed_data$write, 
          method = "spearman")
@@ -1671,7 +1667,7 @@ cor.test(some_ed_data$read,
 
 ## One Sample *t*-test
 
-```r
+``` r
 t.test(some_ed_data$read, 
        mu = 50)
 ```
@@ -1694,7 +1690,7 @@ t.test(some_ed_data$read,
 
 ## One-way Analysis of Variance (ANOVA)
 
-```r
+``` r
 summary(aov(some_ed_data$read ~ 
               some_ed_data$prog))
 ```
@@ -1711,7 +1707,7 @@ summary(aov(some_ed_data$read ~
 
 ## One-way Multivariate Analysis of Variance (MANOVA)
 
-```r
+``` r
 summary(manova(cbind(some_ed_data$read, 
                      some_ed_data$write, 
                      some_ed_data$math) ~ 
@@ -1730,7 +1726,7 @@ summary(manova(cbind(some_ed_data$read,
 
 ## One-way Repeated Measures Analysis of Variance (ANOVA)
 
-```r
+``` r
 model &lt;- 
   lm(gender ~ item_1 + item_2, 
      data = some_survey_data)
@@ -1757,7 +1753,7 @@ print(analysis)
 
 ## Ordered Logistic Regression
 
-```r
+``` r
 # Create ordered variable write3 as 
 # a factor with levels 1, 2, and 3
 some_ed_data$write3 &lt;- 
@@ -1775,7 +1771,7 @@ table(some_ed_data$write3)
 ## 61 61 78
 ```
 
-```r
+``` r
 # fit ordered logit model and store results 'some_write_data'
 some_write_data &lt;- 
   polr(write3 ~ 
@@ -1809,7 +1805,7 @@ summary(some_write_data)
 
 ## Principal Components Analysis (PCA)
 
-```r
+``` r
 princomp(formula = ~read + write + math + science + socst, 
          data = some_ed_data)
 ```
@@ -1829,7 +1825,7 @@ princomp(formula = ~read + write + math + science + socst,
 
 ## Repeated Measures Logistic Regression
 
-```r
+``` r
 glmer(highpulse ~ diet + (1 | id), 
       data = some_exercise_data, 
       family = binomial)
@@ -1856,7 +1852,7 @@ glmer(highpulse ~ diet + (1 | id),
 
 ## Simple Linear Regression
 
-```r
+``` r
 lm(some_ed_data$write ~ 
      some_ed_data$read)
 ```
@@ -1875,7 +1871,7 @@ lm(some_ed_data$write ~
 
 ## Simple Logistic Regression
 
-```r
+``` r
 glm(some_ed_data$female ~ 
       some_ed_data$read, 
     family = binomial)
@@ -1898,7 +1894,7 @@ glm(some_ed_data$female ~
 
 ## Two Independent Samples *t*-test
 
-```r
+``` r
 t.test(some_ed_data$read ~ 
          some_ed_data$female)
 ```
@@ -1921,7 +1917,7 @@ t.test(some_ed_data$read ~
 
 ## Wilcoxon-Mann-Whitney Test
 
-```r
+``` r
 wilcox.test(some_ed_data$read ~ 
               some_ed_data$female)
 ```
@@ -1939,7 +1935,7 @@ wilcox.test(some_ed_data$read ~
 
 ## Wilcoxon Signed Rank Sum Test
 
-```r
+``` r
 wilcox.test(some_ed_data$write, 
             some_ed_data$read, 
             paired = TRUE)
