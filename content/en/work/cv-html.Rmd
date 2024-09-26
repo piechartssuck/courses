@@ -40,7 +40,7 @@ Contact Information {#contact}
 
 - `r fontawesome::fa("fas fa-at", fill = "#e7c9a9")`&nbsp;&nbsp;&nbsp;&nbsp;abhikrroy@protonmail.com
 - `r fontawesome::fa("fab fa-github", fill = "#4183c4")`&nbsp;&nbsp;&nbsp;&nbsp;[github.com/drabhikroy](https://github.com/drabhikroy)
-- `r fontawesome::fa("far fa-window-maximize", fill = "#5cb2b8")`&nbsp;&nbsp;&nbsp;&nbsp;[abhikroyphd.com](https://iam.abhikroyphd.com/)
+- `r fontawesome::fa("far fa-window-maximize", fill = "#5cb2b8")`&nbsp;&nbsp;&nbsp;&nbsp;[abhikroyphd.com](https://abhikroyphd.com)
 - `r fontawesome::fa("fas fa-mobile", fill = "#c4becf", margin_left = "2.1px")` &nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:+1 269-615-8771">+1 304-554-9436</a>
 - `r fontawesome::fa("fab fa-orcid", fill = "#aecc54")`&nbsp;&nbsp;&nbsp;&nbsp;[0000-0002-7085-8964](https://orcid.org/0000-0002-7085-8964)
 
@@ -133,16 +133,16 @@ Indiana University
 Current - 2024
 
 ::: concise
-- <b>Applying Advanced Research Techniques</b>. Utilizing both quantitative and qualitative research methodologies to design studies that accurately address complex social, behavioral, and policy questions.
-- <b>Conducting Comprehensive Data Analysis</b>. Employing statistical software and qualitative analysis tools to extract, process, and interpret data, leading to evidence-based conclusions and recommendations.
-- <b>Crafting and Delivering Impactful Presentations</b>. Developing presentations and reports that clearly articulate research findings, methodologies, and implications to both academic and non-academic audiences.
-- <b>Driving Stakeholder Engagement</b>. Actively engaging with partners and clients to understand their needs, ensuring research findings are directly applicable to policy and program decisions.
-- <b>Guiding Projects to Successful Completion</b>. Strategically managing the execution of research projects, ensuring they remain on schedule, within budget, and achieve intended outcomes.
-- <b>Initiating and Managing Research Proposals</b>. Spearheading the creation of detailed research proposals, including objectives, methodology, budget, and timelines, to secure funding and support.
-- <b>Liaising with Diverse Stakeholders</b>. Building and maintaining strong relationships with project partners, funders, and community stakeholders to ensure research activities are aligned with broader goals and expectations.
-- <b>Mentoring and Developing Team Talent</b>. Providing leadership and guidance to research staff, fostering professional growth and ensuring the team’s skills are effectively utilized in project tasks.
-- <b>Promoting Collaborative Innovation</b>. Leading initiatives that encourage team members to contribute unique insights and solutions, enhancing the overall quality and impact of research projects.
-- <b>Translating Research into Actionable Strategies</b>. Analyzing data to produce insights that inform the development, implementation, and refinement of policies and programs.
+- <b>Conducting Rigorous Data Analysis</b>. Applying statistical and qualitative analysis tools to analyze and interpret data, leading to findings that advance knowledge and inform discourse.
+- <b>Creating Accessible Data Visualizations</b>. Designing clear and accessible data visualizations to effectively communicate research findings to diverse audiences, ensuring usability for individuals with varying abilities.
+- <b>Developing Competitive Research Proposals</b>. Leading the development of grant proposals, articulating research objectives, methodologies, and timelines to secure external funding.
+- <b>Employing Advanced Research Methods</b>. Engaging in both quantitative and qualitative methodologies to design studies that address complex academic and policy-related questions.
+- <b>Engaging with Academic and Community Stakeholders</b>. Building relationships with funders, community partners, and academic colleagues to align research initiatives with broader societal goals.
+- <b>Facilitating Stakeholder Collaboration</b>. Collaborating with external partners to ensure research findings are relevant to real-world applications and policy development.
+- <b>Fostering Collaborative Research</b>. Leading efforts to engage interdisciplinary teams in generating innovative solutions and advancing research impact.
+- <b>Managing Research and Evaluation Projects</b>. Overseeing the implementation of research and evaluation projects, ensuring timely completion, adherence to budgets, and alignment with study goals.
+- <b>Presenting Research Findings</b>. Developing and delivering presentations and scholarly publications that communicate research findings, methods, and implications to academic and interdisciplinary audiences.
+- <b>Translating Research into Policy and Practice</b>. Utilizing research insights to inform the development and evaluation of policies, programs, and scholarly debates.
 :::
 
 ### Associate Professor
@@ -154,12 +154,14 @@ West Virginia University
 2023 - 2016
 
 ::: concise
-- <b>Authored Publications</b>. Contributed to various fields including program evaluation through authoring and co-authoring over 10 peer-reviewed publications.
-- <b>Conducted Rigorous Evaluations</b>. Led more than 20 evaluations that resulted in increases in program effectiveness and capacity building.
-- <b>Designed and Deployed Interactive Surveys</b>. Utilized HTML, CSS, and JavaScript on the Qualtrics platform to create multiple surveys, garnering approximately 7,000 responses.
-- <b>Extracted and Cleaned Data for Visualization</b>. Pulled data from various remote sources; cleaned and wrangled it, then developed and published over 20 interactive visualizations for public reporting and client dissemination using RMarkdown and Shiny.
-- <b>Mentored Students</b>. Guided 4 Masters and Doctoral students to the successful completion of their academic research projects.
-- <b>Taught Methods Based Courses</b>. Instructed over 500 students in evaluation, measurement, research methods, and survey design, emphasizing data science techniques.
+- <b>Authored Peer-Reviewed Publications</b>. Published over 10 articles in high-impact journals, contributing to advancements in program evaluation, research methodologies, and applied social science.
+- <b>Developed Automated Systems for Data Collection and Analysis</b>. Established automated systems to streamline data collection, cleaning, and analysis processes, improving efficiency and accuracy across multiple research projects.
+- <b>Designed and Launched Innovative Surveys</b>. Created and implemented interactive, web-based surveys using HTML, CSS, and JavaScript on the Qualtrics platform, generating over 7,000 responses across multiple projects and studies.
+- <b>Directed and Participated in Evaluations</b>. Contributed to 12 program evaluations, including serving as the lead evaluator on multiple federally funded grants.
+- <b>Extracted, Analyzed, and Visualized Data</b>. Processed and visualized data from internal research and remote sources, creating over 20 interactive visualizations using RMarkdown and Shiny for academic and stakeholder dissemination.
+- <b>Mentored Graduate Students</b>. Guided three Master’s students and one PhD student through the successful completion of their research projects, advancing their professional development.
+- <b>Presented at National Academic Conferences</b>. Delivered presentations at over 20 academic conferences, with a majority being national-level events, sharing research findings with a broad academic audience.
+- <b>Taught Research and Methods-Based Courses</b>. Instructed over 500 students in evaluation, research methods, measurement, and survey design, focusing on practical, analytical skills in data science.
 :::
 
 ### Data Analyst
@@ -171,11 +173,12 @@ University of Kansas
 2016 - 2014
 
 ::: concise
-- <b>Conducted Comprehensive Studies</b>. Utilized qualitative, quantitative, and mixed-methods approaches, presenting findings to senior management to influence policy changes.
-- <b>Crafted Tailored Evaluations</b>. Met the needs of diverse stakeholders, resulting in actionable insights for multiple non-academic departments.
-- <b>Designed and Administered Surveys</b>. Reached over 300 university students and staff, achieving response rates ranging from 47% to 91%.
-- <b>Engineered Web Applications</b>. Utilized R and Tableau to streamline the processes of data extraction and visualization.
-- <b>Spearheaded Research Initiatives</b>. Increased student retention rates for specific at-risk groups by 3% to 5% through predictive statistical modeling.
+- <b>Administered Tailored Evaluations</b>. Conducted needs assessments and led participatory evaluations, particularly those focused on empowerment, for multiple non-academic units.
+- <b>Created an Evaluation Model for Academic Advising</b>. Combined a Delphi study with academic advisors, mixed-methods research with student interviews and surveys, and survival analysis of student retention data to develop a comprehensive evaluation model for academic advising.
+- <b>Developed and Implemented Questionnaires</b>. Developed and implemented questionnaires of about 300 university students and staff, achieving response rates from 47% to 91% across multiple studies.
+- <b>Engineered Web Applications and Dashboards</b>. Utilized R and Tableau to streamline and automate the processes of data extraction and visualization of student-level data accessed from the university’s Oracle server.
+- <b>Spearheaded Research Initiatives</b>. Developed statistical models that identified weaknesses and gaps in student retention strategies, contributing to a 3% to 5% increase in continuance rates for specific at-risk groups.
+- <b>Studied the Impact of Student Services</b>. Utilized qualitative, quantitative, and mixed-methods approaches to study the impact of academic advising and engagement initiatives on student persistence, progression, retention, and completion/graduation.
 :::
 
 <i class="fa-solid fa-file-text-o" data-fa-mask="fa-solid fa-comment" style="background:white"></i>  Select Publications {data-icon=NULL}

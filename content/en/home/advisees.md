@@ -1,5 +1,5 @@
 ---
-title: "My Former Advisees"
+title: "(Former) Advisees"
 # image: img/*.png
 weight: 3
 output:
