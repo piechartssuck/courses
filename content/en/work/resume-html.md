@@ -1,7 +1,7 @@
 ---
 title: "Abhik Ranjan Roy"
 author: Abhik Ranjan Roy
-date: "2024-09-25"
+date: "2024-09-26"
 output:
   pagedown::html_resume:
     self_contained: true
@@ -188,12 +188,12 @@ University of Kansas
 
 <div class="concise">
 
-– <b>Analyzed the Impact of Student Services</b>. Conducted qualitative and quantitative analysis to assess the effect of advising and engagement initiatives on student retention and graduation outcomes.
-– <b>Built Web Applications and Dashboards</b>. Automated data extraction and visualization using R and Tableau, improving access and reporting for student-level data from the university’s Oracle server.
-– <b>Conducted Research to Improve Retention</b>. Developed statistical models that identified gaps in student retention strategies, contributing to a 3% to 5% increase in retention rates for at-risk groups.
-– <b>Designed and Executed Questionnaires</b>. Developed and implemented surveys for approximately 300 students and staff, achieving response rates between 47% and 91% across various projects.
-– <b>Developed an Evaluation Model for Advising</b>. Created a comprehensive evaluation model by integrating a Delphi study, mixed-methods research, and survival analysis of student retention data.
-– <b>Led Tailored Evaluations</b>. Conducted needs assessments and led participatory evaluations for non-academic units, focusing on data-driven insights and stakeholder empowerment.
+- <b>Analyzed the Impact of Student Services</b>. Conducted qualitative and quantitative analysis to assess the effect of advising and engagement initiatives on student retention and graduation outcomes.
+- <b>Built Web Applications and Dashboards</b>. Automated data extraction and visualization using R and Tableau, improving access and reporting for student-level data from the university’s Oracle server.
+- <b>Conducted Research to Improve Retention</b>. Developed statistical models that identified gaps in student retention strategies, contributing to a 3% to 5% increase in retention rates for at-risk groups.
+- <b>Designed and Executed Questionnaires</b>. Developed and implemented surveys for approximately 300 students and staff, achieving response rates between 47% and 91% across various projects.
+- <b>Developed an Evaluation Model for Advising</b>. Created a comprehensive evaluation model by integrating a Delphi study, mixed-methods research, and survival analysis of student retention data.
+- <b>Led Tailored Evaluations</b>. Conducted needs assessments and led participatory evaluations for non-academic units, focusing on data-driven insights and stakeholder empowerment.
 
 </div>
 
@@ -220,26 +220,20 @@ Current - 2023
 
 </div>
 
-### <span class="indented-title"><i>Program Evaluator & Mixed Methods Analyst</i> - Teaching Science with Computational Thinking: Preparing Preservice Elementary Educators of the Future STEM Workforce ([*2019-NSF 2142274*](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2142274&HistoricalAwards=false) Total Award: *\$294,958.00*)</span>
-
-<span class="indented-title">West Virginia University</span>
-
-  Morgantown, WV
-
-Current - 2022
-
-<div class="indented-section">
-
-<div class="concise">
-
+<!--
+&#10;### <span class="indented-title"><i>Program Evaluator & Mixed Methods Analyst</i> - Teaching Science with Computational Thinking: Preparing Preservice Elementary Educators of the Future STEM Workforce ([*2019-NSF 2142274*](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2142274&HistoricalAwards=false) Total Award: *$294,958.00*)</span>
+&#10;<span class="indented-title">West Virginia University</span>
+&#10;&nbsp;&nbsp;Morgantown, WV
+&#10;Current - 2022
+&#10;<div class="indented-section">
+&#10;::: concise
 - Administered process evaluations for all program activities.
 - Conducted a longitudinal mixed-method study, analyzing over 50 surveys and six interviews using thematic analysis and machine learning.
 - Designed and validated two survey tools for assessing progress and evaluating programmatic impact.
 - Produced one in-depth internal evaluation document and crafted evaluation summaries for federal reporting purposes.
-
-</div>
-
-</div>
+:::
+&#10;</div>
+&#10;-->
 
 ### <i>Community Program Evaluator & Data Scientist</i><br>WVCTSI: West Virginia Clinical and Translational Science Institute ([*2017-NIH 2U54GM104942-02*](https://reporter.nih.gov/project-details/9362155) Total Award: *\$20,000,000*)
 
@@ -262,4 +256,4 @@ West Virginia University
 
 ## Disclaimer
 
-Made with    <i style="color:#3365B3; margin-top: 3px; margin-left: -7px; margin-right: -5px;" class="fab fa-r-project"></i>   : <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-html.Rmd" target="&#39;_blank">Source code</a>. Last updated on September 25, 2024
+Made with    <i style="color:#3365B3; margin-top: 3px; margin-left: -7px; margin-right: -5px;" class="fab fa-r-project"></i>   : <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-html.Rmd" target="&#39;_blank">Source code</a>. Last updated on September 26, 2024

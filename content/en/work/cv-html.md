@@ -1,7 +1,7 @@
 ---
 title: "Abhik Ranjan Roy"
 author: Abhik Ranjan Roy
-date: "2024-09-25"
+date: "2024-09-26"
 output:
   pagedown::html_resume:
     self_contained: true
@@ -305,6 +305,18 @@ N/A
 2014
 
 <b>Roy, A.R.</b> 978-1-53612-734-8
+
+## <i class="fa-solid fa-file-text-o" data-fa-mask="fa-solid fa-comment" style="background:white"></i> Grants
+
+### Mining for Meaning: Uniting Machine Learning and Qualitative Research to Simulate Raters in Text Analysis
+
+*National Science Foundation:* [NSF 19-575: Methodology, Measurement, and Statistics (MMS)](https://new.nsf.gov/funding/opportunities/mms-methodology-measurement-statistics/nsf19-575/solicitation) - *Pending*
+
+*Bloomington, IN*
+
+2024
+
+<b>Roy, A.R.</b> - Principal investigator
 
 ## <i class="fa-solid fa-pencil-alt" data-fa-mask="fa-solid fa-comment" style="background:white"></i> Invited Contributions
 
@@ -721,7 +733,7 @@ Hobson, K.A., <b>Roy, A.R.</b> & Coryn, C.L.S.
 
 ## <i class="fa-solid fa-clipboard-check" data-fa-mask="fa-solid fa-comment" style="background:white"></i> <span class="indented-title" style="font-size: 0.90rem;">Evaluation, Measurement, and Research Methods (2016 - 2023)</span>
 
-### <span class="indented-title"><i>[Data Visualization](https://edp693e.asocialdatascientist.com/)</i></span>
+### <span class="indented-title"><i>[Data Visualization](https://edp693e.abhikroyphd.com/)</i></span>
 
 <span class="indented-title">West Virginia University</span>
 
@@ -747,7 +759,7 @@ Hobson, K.A., <b>Roy, A.R.</b> & Coryn, C.L.S.
 
 2016
 
-### <span class="indented-title"><i>[Introduction to Research](https://edp612.asocialdatascientist.com/)</i></span>
+### <span class="indented-title"><i>[Introduction to Research](https://edp612.abhikroyphd.com/)</i></span>
 
 <span class="indented-title">West Virginia University</span>
 
@@ -757,7 +769,7 @@ Hobson, K.A., <b>Roy, A.R.</b> & Coryn, C.L.S.
 
 <span class="indented-title">2022, 2018, 2017, 2016</span>
 
-### <span class="indented-title"><i>[Measurement/Evaluation in Educational Psychology](https://edp611.asocialdatascientist.com/)</i></span>
+### <span class="indented-title"><i>[Measurement/Evaluation in Educational Psychology](https://edp611.abhikroyphd.com/)</i></span>
 
 <span class="indented-title">West Virginia University</span>
 
@@ -767,7 +779,7 @@ Hobson, K.A., <b>Roy, A.R.</b> & Coryn, C.L.S.
 
 <span class="indented-title">2022, 2020, 2018</span>
 
-### <span class="indented-title"><i>[Mixing Research Methodologies](https://edp618.asocialdatascientist.com/)</i></span>
+### <span class="indented-title"><i>[Mixing Research Methodologies](https://edp618.abhikroyphd.com/)</i></span>
 
 <span class="indented-title">West Virginia University</span>
 
@@ -777,7 +789,7 @@ Hobson, K.A., <b>Roy, A.R.</b> & Coryn, C.L.S.
 
 <span class="indented-title">2022, 2019, 2018, 2017</span>
 
-### <span class="indented-title"><i>[Program Evaluation](https://edp617.asocialdatascientist.com/)</i></span>
+### <span class="indented-title"><i>[Program Evaluation](https://edp617.abhikroyphd.com/)</i></span>
 
 <span class="indented-title">West Virginia University</span>
 
@@ -787,7 +799,7 @@ Hobson, K.A., <b>Roy, A.R.</b> & Coryn, C.L.S.
 
 <span class="indented-title">2023, 2022, 2021, 2020, 2019, 2018, 2017</span>
 
-### <span class="indented-title"><i>[Social Network Analysis](https://edp693g.asocialdatascientist.com/)</i></span>
+### <span class="indented-title"><i>[Social Network Analysis](https://edp693g.abhikroyphd.com/)</i></span>
 
 <span class="indented-title">West Virginia University</span>
 
@@ -797,7 +809,7 @@ Hobson, K.A., <b>Roy, A.R.</b> & Coryn, C.L.S.
 
 <span class="indented-title">2021, 2017</span>
 
-### <span class="indented-title"><i>[Statistical Methods 1](https://edp613.asocialdatascientist.com/)</i></span>
+### <span class="indented-title"><i>[Statistical Methods 1](https://edp613.abhikroyphd.com/)</i></span>
 
 <span class="indented-title">West Virginia University</span>
 
@@ -807,7 +819,7 @@ Hobson, K.A., <b>Roy, A.R.</b> & Coryn, C.L.S.
 
 <span class="indented-title">2021, 2020, 2019, 2018, 2017</span>
 
-### <span class="indented-title"><i>[Survey Research](https://edp619.asocialdatascientist.com/)</i></span>
+### <span class="indented-title"><i>[Survey Research](https://edp619.abhikroyphd.com/)</i></span>
 
 <span class="indented-title">West Virginia University</span>
 
@@ -949,4 +961,4 @@ N/A
 
 Made with    <i style="color:#3365B3; margin-left: -7px; margin-right: -5px;" class="fab fa-r-project"></i>   : <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-html.Rmd" target="&#39;_blank">Source code</a>
 
-Last updated on September 25, 2024
+Last updated on September 26, 2024
