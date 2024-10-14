@@ -93,7 +93,7 @@ weight: NULL
 
 <div class="middle">
 
-<a href='https://iam.abhikroyphd.com/' target='_blank'><img src='img/www-cursor-icon.png' alt='website' width='90%'></a>
+<a href='https://abhikroyphd.com' target='_blank'><img src='img/www-cursor-icon.png' alt='website' width='90%'></a>
 
 </div>
 
