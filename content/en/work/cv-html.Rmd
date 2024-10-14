@@ -41,7 +41,7 @@ Contact Information {#contact}
 - `r fontawesome::fa("fas fa-at", fill = "#e7c9a9")`&nbsp;&nbsp;&nbsp;&nbsp;abhikrroy@protonmail.com
 - `r fontawesome::fa("fab fa-github", fill = "#4183c4")`&nbsp;&nbsp;&nbsp;&nbsp;[github.com/drabhikroy](https://github.com/drabhikroy)
 - `r fontawesome::fa("far fa-window-maximize", fill = "#5cb2b8")`&nbsp;&nbsp;&nbsp;&nbsp;[abhikroyphd.com](https://abhikroyphd.com)
-- `r fontawesome::fa("fas fa-mobile", fill = "#c4becf", margin_left = "2.1px")` &nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:+1 269-615-8771">+1 304-554-9436</a>
+- `r fontawesome::fa("fas fa-mobile", fill = "#c4becf", margin_left = "2.1px")` &nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:+1 812-727-7774">+1 812-727-7774</a>
 - `r fontawesome::fa("fab fa-orcid", fill = "#aecc54")`&nbsp;&nbsp;&nbsp;&nbsp;[0000-0002-7085-8964](https://orcid.org/0000-0002-7085-8964)
 
 
@@ -133,16 +133,13 @@ Indiana University
 Current - 2024
 
 ::: concise
-- <b>Conducting Rigorous Data Analysis</b>. Applying statistical and qualitative analysis tools to analyze and interpret data, leading to findings that advance knowledge and inform discourse.
-- <b>Creating Accessible Data Visualizations</b>. Designing clear and accessible data visualizations to effectively communicate research findings to diverse audiences, ensuring usability for individuals with varying abilities.
-- <b>Developing Competitive Research Proposals</b>. Leading the development of grant proposals, articulating research objectives, methodologies, and timelines to secure external funding.
-- <b>Employing Advanced Research Methods</b>. Engaging in both quantitative and qualitative methodologies to design studies that address complex academic and policy-related questions.
-- <b>Engaging with Academic and Community Stakeholders</b>. Building relationships with funders, community partners, and academic colleagues to align research initiatives with broader societal goals.
-- <b>Facilitating Stakeholder Collaboration</b>. Collaborating with external partners to ensure research findings are relevant to real-world applications and policy development.
-- <b>Fostering Collaborative Research</b>. Leading efforts to engage interdisciplinary teams in generating innovative solutions and advancing research impact.
-- <b>Managing Research and Evaluation Projects</b>. Overseeing the implementation of research and evaluation projects, ensuring timely completion, adherence to budgets, and alignment with study goals.
-- <b>Presenting Research Findings</b>. Developing and delivering presentations and scholarly publications that communicate research findings, methods, and implications to academic and interdisciplinary audiences.
-- <b>Translating Research into Policy and Practice</b>. Utilizing research insights to inform the development and evaluation of policies, programs, and scholarly debates.
+- <b>Applying Advanced Research Methods</b>. Conducting quantitative, qualitative, and mixed-methods studies to address complex academic and policy-related questions.
+- <b>Conducting Data Analysis</b>. Applying statistical, machine learning, and qualitative analysis tools to interpret data, generating insights that advance knowledge and inform evaluation outcomes.
+- <b>Creating Accessible Data Visualizations</b>. Designing clear visualizations with careful consideration of diverse abilities, including different forms of color blindness, to effectively communicate research findings to a wide range of audiences.
+- <b>Developing Competitive Research Proposals</b>. Leading the creation of grant proposals by defining research objectives, methodologies, and timelines to secure external funding.
+- <b>Engaging in Stakeholder Collaboration</b>. Partnering with external collaborators through a participatory approach to connect research findings with practical applications and inform policy development.
+- <b>Leading Research and Evaluation Projects</b>. Directing research and evaluation projects, meeting project goals, budgets, and timelines.
+- <b>Presenting Findings</b>. Developing and delivering presentations of findings, methodologies, and implications to academic and interdisciplinary audiences.
 :::
 
 ### Associate Professor
@@ -176,9 +173,9 @@ University of Kansas
 - <b>Administered Tailored Evaluations</b>. Conducted needs assessments and led participatory evaluations, particularly those focused on empowerment, for multiple non-academic units.
 - <b>Created an Evaluation Model for Academic Advising</b>. Combined a Delphi study with academic advisors, mixed-methods research with student interviews and surveys, and survival analysis of student retention data to develop a comprehensive evaluation model for academic advising.
 - <b>Developed and Implemented Questionnaires</b>. Developed and implemented questionnaires of about 300 university students and staff, achieving response rates from 47% to 91% across multiple studies.
-- <b>Engineered Web Applications and Dashboards</b>. Utilized R and Tableau to streamline and automate the processes of data extraction and visualization of student-level data accessed from the university’s Oracle server.
+- <b>Engineered Web Applications and Dashboards</b>. Used R and Tableau to streamline and automate the processes of data extraction and visualization of student-level data accessed from the university’s Oracle server.
 - <b>Spearheaded Research Initiatives</b>. Developed statistical models that identified weaknesses and gaps in student retention strategies, contributing to a 3% to 5% increase in continuance rates for specific at-risk groups.
-- <b>Studied the Impact of Student Services</b>. Utilized qualitative, quantitative, and mixed-methods approaches to study the impact of academic advising and engagement initiatives on student persistence, progression, retention, and completion/graduation.
+- <b>Studied the Impact of Student Services</b>. Applied qualitative, quantitative, and mixed-methods approaches to study the impact of academic advising and engagement initiatives on student persistence, progression, retention, and completion/graduation.
 :::
 
 <i class="fa-solid fa-file-text-o" data-fa-mask="fa-solid fa-comment" style="background:white"></i>  Select Publications {data-icon=NULL}
@@ -192,7 +189,7 @@ N/A
 
 2024
 
-Dey, K., Rahman, M.T., <b>Roy, A.</b>, Pyrialakou, V.D., Martinelli, D., Fraustino, J.D., Deskins, J, Rambo-Hernandez, K.E., & Plein, L.C. [https://doi.org/10.1061/JCEECD/EIENG-1976](https://doi.org/10.1061/JCEECD/EIENG-1976)
+Dey, K., Rahman, M.T., <b>Roy, A.</b>, Pyrialakou, V.D., Martinelli, D., Fraustino, J.D., Deskins, J, Rambo-Hernandez, K.E., & Plein, L.C. [https://doi.org/10.1061/JCEECD.EIENG-1976](https://doi.org/10.1061/JCEECD.EIENG-1976)
 
 ### Teaching science via computational thinking? Enabling future science teachers’ access to computational thinking.
 
@@ -356,7 +353,7 @@ Current - 2023
 - Conducted process, monitoring, and impact evaluations at the program level.
 - Designed and validated survey tools, evaluating the experiences of more than 50 participants.
 - Generated two comprehensive internal evaluation documents and prepared an evaluation proposal aimed at federal funding renewal.
-- Utilized a mixed-methods design to independently analyze both longitudinal and cross-sectional data, focusing on the smoking cessation efforts of mothers and the experiences of new or distant caretakers/fathers.
+- Employed a mixed-methods design to independently analyze both longitudinal and cross-sectional data, focusing on the smoking cessation efforts of mothers and the experiences of new or distant caretakers/fathers.
 :::
 
 </div>
@@ -394,12 +391,12 @@ Current - 2022
 <div class="indented-section">
 
 ::: concise
-- Analyzed extensive datasets using both frequentist and Bayesian methodologies, guiding the direction and activities of eight distinct programs.
 - Authored quarterly reports as well as internal and external annual evaluation documents, disseminated both in print and through interactive formats developed in Rmarkdown.
 - Crafted over 100 data visualizations and developed over four Shiny applications for internal and public data exploration, including research collaborations using social network analysis, grant activities pulled from the NCBI API crossed with WVCTSI grant numbers, and dissemination of result and changes in practice within and beyond West Virginia.
 - Designed and disseminated tailored Qualtrics surveys enhanced with HTML, CSS, and JavaScript, reaching an audience of over 5,000 individuals.
-- Led local and multi-site, multi-cluster evaluation studies that influenced five core medical research and community engagement units.
-- Mentored six aspiring graduate students in social data science, steering them through successful research endeavors.
+- Led local and multi-site, multi-cluster evaluation studies for five core medical research and community engagement units.
+- Mentored six graduate students in social data science, steering them through successful research endeavors.
+- Published and presented evaluation findings in academic journals and conferences.
 :::
 
 </div>
@@ -415,9 +412,9 @@ Current - 2022
 <div class="indented-section">
 
 ::: concise
-- Developed and distributed two customized interactive surveys using Qualtrics, enhanced with CSS and JavaScript, to gather feedback on programmatic activities from a specific group of 24 students.
-- Spearheaded three distinct evaluative studies focusing on student efficacy, engagement, and motivation.
+- Developed and distributed two customized interactive surveys using Qualtrics, incorporating CSS and JavaScript, to gather feedback on programmatic activities from a specific group of 24 students.
 - Produced an external evaluation summary for federal reporting.
+- Spearheaded three distinct evaluative studies focusing on student efficacy, engagement, and motivation.
 :::
 
 </div>
@@ -451,7 +448,7 @@ Current - 2022
 
 ::: concise
 - Administered in-depth evaluations of five tools designed for assessment and engagement of the deaf and hard of hearing.
-- Conducted a multi-site, multi-cluster evaluation on a large scale for all programmatic activities.
+- Designed and conducted a multi-site evaluation.
 - Produced a detailed external evaluation brief for federal reporting.
 :::
 

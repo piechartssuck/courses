@@ -1,7 +1,7 @@
 ---
 title: "Abhik Ranjan Roy"
 author: Abhik Ranjan Roy
-date: "2024-09-26"
+date: "2024-10-14"
 output:
   pagedown::html_resume:
     self_contained: true
@@ -28,7 +28,7 @@ weight: NULL
 - <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#161618;overflow:visible;position:relative;"><path d="M256 64C150 64 64 150 64 256s86 192 192 192c17.7 0 32 14.3 32 32s-14.3 32-32 32C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256v32c0 53-43 96-96 96c-29.3 0-55.6-13.2-73.2-33.9C320 371.1 289.5 384 256 384c-70.7 0-128-57.3-128-128s57.3-128 128-128c27.9 0 53.7 8.9 74.7 24.1c5.7-5 13.1-8.1 21.3-8.1c17.7 0 32 14.3 32 32v80 32c0 17.7 14.3 32 32 32s32-14.3 32-32V256c0-106-86-192-192-192zm64 192a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"/></svg>    abhikrroy@protonmail.com
 - <svg aria-hidden="true" role="img" viewBox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#161618;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>    [github.com/drabhikroy](https://github.com/drabhikroy)
 - <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#161618;overflow:visible;position:relative;"><path d="M.3 89.5C.1 91.6 0 93.8 0 96V224 416c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64V224 96c0-35.3-28.7-64-64-64H64c-2.2 0-4.4 .1-6.5 .3c-9.2 .9-17.8 3.8-25.5 8.2C21.8 46.5 13.4 55.1 7.7 65.5c-3.9 7.3-6.5 15.4-7.4 24zM48 224H464l0 192c0 8.8-7.2 16-16 16L64 432c-8.8 0-16-7.2-16-16l0-192z"/></svg>    [abhikroyphd.com](https://abhikroyphd.com)
-- <svg aria-hidden="true" role="img" viewBox="0 0 384 512" style="height:1em;width:0.75em;vertical-align:-0.125em;margin-left:x2.1px;margin-right:auto;font-size:inherit;fill:#161618;overflow:visible;position:relative;"><path d="M80 0C44.7 0 16 28.7 16 64V448c0 35.3 28.7 64 64 64H304c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H80zm80 432h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H160c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg>     <a href="tel:+1 269-615-8771">+1 304-554-9436</a>
+- <svg aria-hidden="true" role="img" viewBox="0 0 384 512" style="height:1em;width:0.75em;vertical-align:-0.125em;margin-left:x2.1px;margin-right:auto;font-size:inherit;fill:#161618;overflow:visible;position:relative;"><path d="M80 0C44.7 0 16 28.7 16 64V448c0 35.3 28.7 64 64 64H304c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H80zm80 432h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H160c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg>     <a href="tel:+1 812-727-7774">+1 812-727-7774</a>
 - <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#161618;overflow:visible;position:relative;"><path d="M294.75 188.19h-45.92V342h47.47c67.62 0 83.12-51.34 83.12-76.91 0-41.64-26.54-76.9-84.67-76.9zM256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm-80.79 360.76h-29.84v-207.5h29.84zm-14.92-231.14a19.57 19.57 0 1 1 19.57-19.57 19.64 19.64 0 0 1-19.57 19.57zM300 369h-81V161.26h80.6c76.73 0 110.44 54.83 110.44 103.85C410 318.39 368.38 369 300 369z"/></svg>    [0000-0002-7085-8964](https://orcid.org/0000-0002-7085-8964)
 
 ## Expertise
@@ -54,6 +54,8 @@ weight: NULL
 - <b>Web application development and static/dynamic reporting using</b>
 
   <div class="holder">
+
+  </div>
 
 <div class="left">
 
@@ -149,16 +151,13 @@ Current - 2024
 
 <div class="concise">
 
-- <b>Conducting Rigorous Data Analysis</b>. Applying statistical and qualitative analysis tools to analyze and interpret data, leading to findings that advance knowledge and inform discourse.
-- <b>Creating Accessible Data Visualizations</b>. Designing clear and accessible data visualizations to effectively communicate research findings to diverse audiences, ensuring usability for individuals with varying abilities.
-- <b>Developing Competitive Research Proposals</b>. Leading the development of grant proposals, articulating research objectives, methodologies, and timelines to secure external funding.
-- <b>Employing Advanced Research Methods</b>. Engaging in both quantitative and qualitative methodologies to design studies that address complex academic and policy-related questions.
-- <b>Engaging with Academic and Community Stakeholders</b>. Building relationships with funders, community partners, and academic colleagues to align research initiatives with broader societal goals.
-- <b>Facilitating Stakeholder Collaboration</b>. Collaborating with external partners to ensure research findings are relevant to real-world applications and policy development.
-- <b>Fostering Collaborative Research</b>. Leading efforts to engage interdisciplinary teams in generating innovative solutions and advancing research impact.
-- <b>Managing Research and Evaluation Projects</b>. Overseeing the implementation of research and evaluation projects, ensuring timely completion, adherence to budgets, and alignment with study goals.
-- <b>Presenting Research Findings</b>. Developing and delivering presentations and scholarly publications that communicate research findings, methods, and implications to academic and interdisciplinary audiences.
-- <b>Translating Research into Policy and Practice</b>. Utilizing research insights to inform the development and evaluation of policies, programs, and scholarly debates.
+- <b>Applying Advanced Research Methods</b>. Conducting quantitative, qualitative, and mixed-methods studies to address complex academic and policy-related questions.
+- <b>Conducting Data Analysis</b>. Applying statistical, machine learning, and qualitative analysis tools to interpret data, generating insights that advance knowledge and inform evaluation outcomes.
+- <b>Creating Accessible Data Visualizations</b>. Designing clear visualizations with careful consideration of diverse abilities, including different forms of color blindness, to effectively communicate research findings to a wide range of audiences.
+- <b>Developing Competitive Research Proposals</b>. Leading the creation of grant proposals by defining research objectives, methodologies, and timelines to secure external funding.
+- <b>Engaging in Stakeholder Collaboration</b>. Partnering with external collaborators through a participatory approach to connect research findings with practical applications and inform policy development.
+- <b>Leading Research and Evaluation Projects</b>. Directing research and evaluation projects, meeting project goals, budgets, and timelines.
+- <b>Presenting Findings</b>. Developing and delivering presentations of findings, methodologies, and implications to academic and interdisciplinary audiences.
 
 </div>
 
@@ -194,11 +193,11 @@ University of Kansas
 <div class="concise">
 
 - <b>Administered Tailored Evaluations</b>. Conducted needs assessments and led participatory evaluations, particularly those focused on empowerment, for multiple non-academic units.
-- <b>Created an Evaluation Model for Academic Advising</b>. Combined a Delphi study with academic advisors, mixed-methods research with student interviews and surveys, and survival analysis of student retention data to develop a comprehensive evaluation model for academic advising.
+- <b>Created an Evaluation Model for Academic Advising</b>. Combined a Delphi study with academic advisors, mixed-methods research with student interviews and surveys, and survival analysis of student retention data to develop an evaluation model for academic advising.
 - <b>Developed and Implemented Questionnaires</b>. Developed and implemented questionnaires of about 300 university students and staff, achieving response rates from 47% to 91% across multiple studies.
-- <b>Engineered Web Applications and Dashboards</b>. Utilized R and Tableau to streamline and automate the processes of data extraction and visualization of student-level data accessed from the university’s Oracle server.
+- <b>Engineered Web Applications and Dashboards</b>. Used R and Tableau to streamline and automate the processes of data extraction and visualization of student-level data accessed from the university’s Oracle server.
 - <b>Spearheaded Research Initiatives</b>. Developed statistical models that identified weaknesses and gaps in student retention strategies, contributing to a 3% to 5% increase in continuance rates for specific at-risk groups.
-- <b>Studied the Impact of Student Services</b>. Utilized qualitative, quantitative, and mixed-methods approaches to study the impact of academic advising and engagement initiatives on student persistence, progression, retention, and completion/graduation.
+- <b>Studied the Impact of Student Services</b>. Applied qualitative, quantitative, and mixed-methods approaches to study the impact of academic advising and engagement initiatives on student persistence, progression, retention, and completion/graduation.
 
 </div>
 
@@ -212,7 +211,7 @@ N/A
 
 2024
 
-Dey, K., Rahman, M.T., <b>Roy, A.</b>, Pyrialakou, V.D., Martinelli, D., Fraustino, J.D., Deskins, J, Rambo-Hernandez, K.E., & Plein, L.C. <https://doi.org/10.1061/JCEECD/EIENG-1976>
+Dey, K., Rahman, M.T., <b>Roy, A.</b>, Pyrialakou, V.D., Martinelli, D., Fraustino, J.D., Deskins, J, Rambo-Hernandez, K.E., & Plein, L.C. <https://doi.org/10.1061/JCEECD.EIENG-1976>
 
 ### Teaching science via computational thinking? Enabling future science teachers’ access to computational thinking.
 
@@ -370,7 +369,7 @@ Current - 2023
 - Conducted process, monitoring, and impact evaluations at the program level.
 - Designed and validated survey tools, evaluating the experiences of more than 50 participants.
 - Generated two comprehensive internal evaluation documents and prepared an evaluation proposal aimed at federal funding renewal.
-- Utilized a mixed-methods design to independently analyze both longitudinal and cross-sectional data, focusing on the smoking cessation efforts of mothers and the experiences of new or distant caretakers/fathers.
+- Employed a mixed-methods design to independently analyze both longitudinal and cross-sectional data, focusing on the smoking cessation efforts of mothers and the experiences of new or distant caretakers/fathers.
 
 </div>
 
@@ -411,12 +410,12 @@ Current - 2022
 
 <div class="concise">
 
-- Analyzed extensive datasets using both frequentist and Bayesian methodologies, guiding the direction and activities of eight distinct programs.
 - Authored quarterly reports as well as internal and external annual evaluation documents, disseminated both in print and through interactive formats developed in Rmarkdown.
 - Crafted over 100 data visualizations and developed over four Shiny applications for internal and public data exploration, including research collaborations using social network analysis, grant activities pulled from the NCBI API crossed with WVCTSI grant numbers, and dissemination of result and changes in practice within and beyond West Virginia.
 - Designed and disseminated tailored Qualtrics surveys enhanced with HTML, CSS, and JavaScript, reaching an audience of over 5,000 individuals.
-- Led local and multi-site, multi-cluster evaluation studies that influenced five core medical research and community engagement units.
-- Mentored six aspiring graduate students in social data science, steering them through successful research endeavors.
+- Led local and multi-site, multi-cluster evaluation studies for five core medical research and community engagement units.
+- Mentored six graduate students in social data science, steering them through successful research endeavors.
+- Published and presented evaluation findings in academic journals and conferences.
 
 </div>
 
@@ -434,9 +433,9 @@ Current - 2022
 
 <div class="concise">
 
-- Developed and distributed two customized interactive surveys using Qualtrics, enhanced with CSS and JavaScript, to gather feedback on programmatic activities from a specific group of 24 students.
-- Spearheaded three distinct evaluative studies focusing on student efficacy, engagement, and motivation.
+- Developed and distributed two customized interactive surveys using Qualtrics, incorporating CSS and JavaScript, to gather feedback on programmatic activities from a specific group of 24 students.
 - Produced an external evaluation summary for federal reporting.
+- Spearheaded three distinct evaluative studies focusing on student efficacy, engagement, and motivation.
 
 </div>
 
@@ -474,7 +473,7 @@ Current - 2022
 <div class="concise">
 
 - Administered in-depth evaluations of five tools designed for assessment and engagement of the deaf and hard of hearing.
-- Conducted a multi-site, multi-cluster evaluation on a large scale for all programmatic activities.
+- Designed and conducted a multi-site evaluation.
 - Produced a detailed external evaluation brief for federal reporting.
 
 </div>
@@ -984,6 +983,6 @@ N/A
 
 <div id="custom-footnote">
 
-Made with    <i style="color:#3365B3; margin-top: 3px; margin-left: -7px; margin-right: -5px;" class="fab fa-r-project"></i>   : <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-html.Rmd" target="&#39;_blank">Source code</a>. Last updated on September 26, 2024
+Made with    <i style="color:#3365B3; margin-top: 3px; margin-left: -7px; margin-right: -5px;" class="fab fa-r-project"></i>   : <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-html.Rmd" target="&#39;_blank">Source code</a>. Last updated on October 14, 2024
 
 </div>

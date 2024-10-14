@@ -3,4 +3,4 @@ title: "Hi, I'm Abhik"
 headless: true
 ---
 
-an accomplished assistant professor, methodologist, and program evaluator with expertise in survey aesthetics, design, and analysis, data visualization, and mixed methods text analysis
+a former assistant professor and current methodologist with expertise in program evaluation, survey design, social networks, data visualization, and mixed methods text analysis

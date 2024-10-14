@@ -41,7 +41,7 @@ Contact Information {#contact}
 - `r fontawesome::fa("fas fa-at", fill = "#e7c9a9")`&nbsp;&nbsp;&nbsp;&nbsp;abhikrroy@protonmail.com
 - `r fontawesome::fa("fab fa-github", fill = "#4183c4")`&nbsp;&nbsp;&nbsp;&nbsp;[github.com/drabhikroy](https://github.com/drabhikroy)
 - `r fontawesome::fa("far fa-window-maximize", fill = "#5cb2b8")`&nbsp;&nbsp;&nbsp;&nbsp;[abhikroyphd.com](https://abhikroyphd.com)
-- `r fontawesome::fa("fas fa-mobile", fill = "#c4becf", margin_left = "2.1px")` &nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:+1 269-615-8771">+1 304-554-9436</a>
+- `r fontawesome::fa("fas fa-mobile", fill = "#c4becf", margin_left = "2.1px")` &nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:+1 812-727-7774">+1 812-727-7774</a>
 - `r fontawesome::fa("fab fa-orcid", fill = "#aecc54")`&nbsp;&nbsp;&nbsp;&nbsp;[0000-0002-7085-8964](https://orcid.org/0000-0002-7085-8964)
 
 
@@ -149,16 +149,13 @@ Indiana University
 Current - 2024
 
 ::: concise
-- <b>Applied Advanced Research Methods</b>. Conducted quantitative and qualitative studies to address complex questions in policy and practice.
-- <b>Built Relationships with Stakeholders</b>. Engaged with funders, partners, and collaborators to align research initiatives and program evaluations with broader study goals.
-- <b>Conducted Data Analysis</b>. Analyzed large educational, survey, and open text data sets, generating insights to drive decision-making and inform strategic initiatives.
-- <b>Created Accessible Data Visualizations</b>. Designed data visualizations using R and Shiny to communicate insights to diverse audiences, improving usability and decision-making across teams.
-- <b>Delivered Presentations and Reports</b>. Presented findings from evaluation studies to a wide range of audiences, including interdisciplinary teams and stakeholders.
-- <b>Developed Competitive Proposals</b>. Led the creation of grant proposals, defining objectives, methodologies, and timelines to secure external funding for key projects.
-- <b>Facilitated Collaborative Efforts</b>. Worked with external partners to align research findings with practical applications and policy development.
-- <b>Led Interdisciplinary Teams</b>. Guided collaborative research efforts to generate innovative solutions and enhance project outcomes.
-- <b>Managed Research and Evaluation Projects</b>. Directed the planning and execution of small to medium-sized research and evaluation projects aligned with project goals.
-- <b>Translated Research into Action</b>. Applied research insights to support policy development and inform the design and evaluation of programs.
+- <b>Applying Advanced Research Methods</b>. Conducting quantitative, qualitative, and mixed-methods studies to address complex academic and policy-related questions.
+- <b>Conducting Data Analysis</b>. Applying statistical, machine learning, and qualitative analysis tools to interpret data, generating insights that advance knowledge and inform evaluation outcomes.
+- <b>Creating Accessible Data Visualizations</b>. Designing clear visualizations with careful consideration of diverse abilities, including different forms of color blindness, to effectively communicate research findings to a wide range of audiences.
+- <b>Developing Competitive Research Proposals</b>. Leading the creation of grant proposals by defining research objectives, methodologies, and timelines to secure external funding.
+- <b>Engaging in Stakeholder Collaboration</b>. Partnering with external collaborators through a participatory approach to connect research findings with practical applications and inform policy development.
+- <b>Leading Research and Evaluation Projects</b>. Directing research and evaluation projects, meeting project goals, budgets, and timelines.
+- <b>Presenting Findings</b>. Developing and delivering presentations of findings, methodologies, and implications to academic and interdisciplinary audiences.
 :::
 
 ### <i>Assistant Professor</i>
@@ -254,11 +251,11 @@ West Virginia University
 
 ::: concise
 - Created over 100 data visualizations and developed four Shiny applications for comprehensive data exploration and research collaboration.
-- Developed and disseminated tailored Qualtrics surveys, enhanced with HTML, CSS, and JavaScript, reaching over 5,000 individuals.
-- Directed local and multi-site evaluation studies, influencing five core medical research and community engagement units.
+- Developed and disseminated tailored Qualtrics surveys, incorporating HTML, CSS, and JavaScript, reaching over 5,000 individuals.
+- Directed local and multi-site evaluation studies for five core medical research and community engagement units.
 - Mentored multiple graduate students in social data science, leading them through successful research projects.
 - Produced quarterly and annual evaluations, disseminating findings in both print and interactive formats via Rmarkdown.
-- Utilized frequentist and Bayesian methods to analyze datasets, guiding the direction of eight programs.
+- Published and presented research on WVCTSI programs in academic journals and at conferences.
 :::
 
 Disclaimer {#disclaimer style="width: calc(var(--content-width) - var(--sidebar-width)); padding-left: var(--sidebar-horizontal-padding);"}
