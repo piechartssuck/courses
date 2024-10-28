@@ -1,7 +1,7 @@
 ---
 title: "Abhik Ranjan Roy"
 author: Abhik Ranjan Roy
-date: "2024-10-14"
+date: "2024-10-27"
 output:
   pagedown::html_resume:
     self_contained: true
@@ -208,7 +208,7 @@ Current - 2023
 - Conducted process, monitoring, and impact evaluations at the program level.
 - Designed and validated survey tools, evaluating the experiences of more than 50 participants.
 - Generated two comprehensive internal evaluation documents and prepared an evaluation proposal aimed at federal funding renewal.
-- Implemented a mixed-methods study of longitudinal and cross-sectional data on smoking cessation in mothers and caretaker experiences.
+- Conducted a comparative mixed-methods study examining the experiences of mothers participating in two distinct smoking cessation programs.
 
 </div>
 
@@ -239,7 +239,7 @@ West Virginia University
 
 <div class="concise">
 
-- Created over 100 data visualizations and developed four Shiny applications for comprehensive data exploration and research collaboration.
+- Created over 100 data visualizations and developed four Shiny applications for comprehensive data exploration and reporting.
 - Developed and disseminated tailored Qualtrics surveys, incorporating HTML, CSS, and JavaScript, reaching over 5,000 individuals.
 - Directed local and multi-site evaluation studies for five core medical research and community engagement units.
 - Mentored multiple graduate students in social data science, leading them through successful research projects.
@@ -250,10 +250,11 @@ West Virginia University
 
 ## Disclaimer
 
+<br>
 <sup><a href="#custom-footnote"><a></sup>
 
 <div id="custom-footnote">
 
-Made with    <i style="color:#3365B3; margin-top: 3px; margin-left: -7px; margin-right: -5px;" class="fab fa-r-project"></i>   : <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-html.Rmd" target="&#39;_blank">Source code</a>. Last updated on October 14, 2024
+Made with    <i style="color:#3365B3; margin-top: 2px; margin-left: -7px; margin-right: -5px;" class="fab fa-r-project"></i>   : <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-html.Rmd" target="&#39;_blank">Source code</a>. Last updated on October 27, 2024
 
 </div>

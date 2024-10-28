@@ -213,7 +213,7 @@ Current - 2023
 - Conducted process, monitoring, and impact evaluations at the program level.
 - Designed and validated survey tools, evaluating the experiences of more than 50 participants.
 - Generated two comprehensive internal evaluation documents and prepared an evaluation proposal aimed at federal funding renewal.
-- Implemented a mixed-methods study of longitudinal and cross-sectional data on smoking cessation in mothers and caretaker experiences.
+- Conducted a comparative mixed-methods study examining the experiences of mothers participating in two distinct smoking cessation programs.
 :::
 
 </div>
@@ -250,7 +250,7 @@ West Virginia University
 2022 - 2017
 
 ::: concise
-- Created over 100 data visualizations and developed four Shiny applications for comprehensive data exploration and research collaboration.
+- Created over 100 data visualizations and developed four Shiny applications for comprehensive data exploration and reporting.
 - Developed and disseminated tailored Qualtrics surveys, incorporating HTML, CSS, and JavaScript, reaching over 5,000 individuals.
 - Directed local and multi-site evaluation studies for five core medical research and community engagement units.
 - Mentored multiple graduate students in social data science, leading them through successful research projects.
