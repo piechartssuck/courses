@@ -1,7 +1,7 @@
 ---
 title: "Abhik Ranjan Roy"
 author: Abhik Ranjan Roy
-date: "2024-10-27"
+date: "2025-01-07"
 output:
   pagedown::html_resume:
     self_contained: true
@@ -142,7 +142,7 @@ Indiana University
 
   Bloomington, IN
 
-Current - 2024
+2025 - 2024
 
 <div class="concise">
 
@@ -255,4 +255,4 @@ West Virginia University
 
 ## Disclaimer
 
-Made with    <i style="color:#3365B3; margin-top: 3px; margin-left: -7px; margin-right: -5px;" class="fab fa-r-project"></i>   : <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-html.Rmd" target="&#39;_blank">Source code</a>. Last updated on October 27, 2024
+Made with    <i style="color:#3365B3; margin-top: 3px; margin-left: -7px; margin-right: -5px;" class="fab fa-r-project"></i>   : <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-html.Rmd" target="&#39;_blank">Source code</a>. Last updated on January 07, 2025
