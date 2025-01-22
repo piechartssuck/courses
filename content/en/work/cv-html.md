@@ -1,7 +1,7 @@
 ---
 title: "Abhik Ranjan Roy"
 author: Abhik Ranjan Roy
-date: "2025-01-07"
+date: "2025-01-22"
 output:
   pagedown::html_resume:
     self_contained: true
@@ -130,13 +130,13 @@ Indiana University
 
 <div class="concise">
 
-- <b>Applying Advanced Research Methods</b>. Conducting quantitative, qualitative, and mixed-methods studies to address complex academic and policy-related questions.
-- <b>Conducting Data Analysis</b>. Applying statistical, machine learning, and qualitative analysis tools to interpret data, generating insights that advance knowledge and inform evaluation outcomes.
-- <b>Creating Accessible Data Visualizations</b>. Designing clear visualizations with careful consideration of diverse abilities, including different forms of color blindness, to effectively communicate research findings to a wide range of audiences.
-- <b>Developing Competitive Research Proposals</b>. Leading the creation of grant proposals by defining research objectives, methodologies, and timelines to secure external funding.
-- <b>Engaging in Stakeholder Collaboration</b>. Partnering with external collaborators through a participatory approach to connect research findings with practical applications and inform policy development.
-- <b>Leading Research and Evaluation Projects</b>. Directing research and evaluation projects, meeting project goals, budgets, and timelines.
-- <b>Presenting Findings</b>. Developing and delivering presentations of findings, methodologies, and implications to academic and interdisciplinary audiences.
+- <b>Applied Advanced Research Methods</b>. Utilized statistical, machine learning, and qualitative analysis tools to interpret data, generated insights that advanced knowledge and informed evaluation outcomes.
+- <b>Communicated Results</b>. Developed and presented findings, methodologies, and implications to stakeholders and other interdisciplinary groups.
+- <b>Conducted Data Analysis</b>. Applied statistical, machine learning, and qualitative analysis tools to interpret data, generated findings that advanced knowledge and supported evaluation outcomes.
+- <b>Created Accessible Data Visualizations</b>. Designed accessible visualizations with thoughtful consideration of diverse abilities, including colorblindness, to effectively communicate research findings to diverse groups.
+- <b>Developing Competitive Research Proposals</b>. Authored grant proposals by establishing research objectives, designing methodologies, and outlining timelines to secure external funding.
+- <b>Engaged in Stakeholder Collaboration</b>. Partnered with external collaborators using a participatory approach to align research findings with practical applications and guided policy development.
+- <b>Led Research and Evaluation Projects</b>. Directed research and evaluation projects, met project goals, managed budgets, and adhered to timelines.
 
 </div>
 
@@ -150,14 +150,14 @@ West Virginia University
 
 <div class="concise">
 
-- <b>Authored Peer-Reviewed Publications</b>. Published over 10 articles in high-impact journals, contributing to advancements in program evaluation, research methodologies, and applied social science.
-- <b>Developed Automated Systems for Data Collection and Analysis</b>. Established automated systems to streamline data collection, cleaning, and analysis processes, improving efficiency and accuracy across multiple research projects.
-- <b>Designed and Launched Innovative Surveys</b>. Created and implemented interactive, web-based surveys using HTML, CSS, and JavaScript on the Qualtrics platform, generating over 7,000 responses across multiple projects and studies.
-- <b>Directed and Participated in Evaluations</b>. Contributed to 12 program evaluations, including serving as the lead evaluator on multiple federally funded grants.
-- <b>Extracted, Analyzed, and Visualized Data</b>. Processed and visualized data from internal research and remote sources, creating over 20 interactive visualizations using RMarkdown and Shiny for academic and stakeholder dissemination.
-- <b>Mentored Graduate Students</b>. Guided three Master’s students and one PhD student through the successful completion of their research projects, advancing their professional development.
-- <b>Presented at National Academic Conferences</b>. Delivered presentations at over 20 academic conferences, with a majority being national-level events, sharing research findings with a broad academic audience.
-- <b>Taught Research and Methods-Based Courses</b>. Instructed over 500 students in evaluation, research methods, measurement, and survey design, focusing on practical, analytical skills in data science.
+- <b>Authored Peer-Reviewed Publications</b>. Published over 10 articles in high-impact journals, advanced knowledge in program evaluation, research methodologies, and applied social sciences.
+- <b>Developed Automated Systems for Data Collection and Analysis</b>. Established automated systems for data collection, cleaning, and analysis, improved efficiency and accuracy across multiple research projects.
+- <b>Designed and Administered Surveys</b>. Created and deployed interactive web-based surveys using HTML, CSS, and JavaScript on the Qualtrics platform, generating over 7,000 responses for various projects and studies.
+- <b>Extracted, Analyzed, and Visualized Data</b>. Processed and visualized data from internal research and remote sources, produced over 20 interactive visualizations using RMarkdown and Shiny for dissemination to academic and interdisciplinary groups.
+- <b>Led and Participated in Evaluations</b>. Contributed to 12 program evaluations and served as lead evaluator on several federally funded grants.
+- <b>Mentored Graduate Students</b>. Advised three Master’s students and one PhD student, guided them through successful degree completion, and supported their professional growth.
+- <b>Presented at National Conferences</b>. Shared research findings at over 20 academic conferences, with the majority at national-level events, reaching diverse groups.
+- <b>Taught Research and Methods-Based Courses</b>. Instructed over 500 students in evaluation, research methods, measurement, and survey design, emphasized practical and analytical skills in data science.
 
 </div>
 
@@ -171,139 +171,114 @@ University of Kansas
 
 <div class="concise">
 
-- <b>Administered Tailored Evaluations</b>. Conducted needs assessments and led participatory evaluations, particularly those focused on empowerment, for multiple non-academic units.
-- <b>Created an Evaluation Model for Academic Advising</b>. Combined a Delphi study with academic advisors, mixed-methods research with student interviews and surveys, and survival analysis of student retention data to develop a comprehensive evaluation model for academic advising.
-- <b>Developed and Implemented Questionnaires</b>. Developed and implemented questionnaires of about 300 university students and staff, achieving response rates from 47% to 91% across multiple studies.
-- <b>Engineered Web Applications and Dashboards</b>. Used R and Tableau to streamline and automate the processes of data extraction and visualization of student-level data accessed from the university’s Oracle server.
-- <b>Spearheaded Research Initiatives</b>. Developed statistical models that identified weaknesses and gaps in student retention strategies, contributing to a 3% to 5% increase in continuance rates for specific at-risk groups.
-- <b>Studied the Impact of Student Services</b>. Applied qualitative, quantitative, and mixed-methods approaches to study the impact of academic advising and engagement initiatives on student persistence, progression, retention, and completion/graduation.
+- <b>Analyzed the Impact of Student Services</b>. Conducted qualitative and quantitative analysis to assess the effect of advising and engagement initiatives on student retention and graduation outcomes.
+- <b>Built Web Applications and Dashboards</b>. Automated data extraction and visualization using R and Tableau, improving access and reporting for student-level data from the university’s Oracle server.
+- <b>Conducted Research to Improve Retention</b>. Developed statistical models that identified gaps in student retention strategies, contributing to a 3% to 5% increase in retention rates for at-risk groups.
+- <b>Designed and Executed Questionnaires</b>. Created and implemented surveys for approximately 300 students and staff, achieving response rates between 47% and 91% across various projects.
+- <b>Developed an Evaluation Model for Advising</b>. Constructed a comprehensive evaluation model by integrating a Delphi study, mixed-methods research, and survival analysis of student retention data.
+- <b>Led Tailored Evaluations</b>. Conducted needs assessments and led participatory evaluations for non-academic units, focusing on data-driven insights and stakeholder empowerment.
 
 </div>
 
-## <i class="fa-solid fa-file-text-o" data-fa-mask="fa-solid fa-comment" style="background:white"></i> Select Publications
+## <i class="fa-solid fa-file-text-o" data-fa-mask="fa-solid fa-comment" style="background:white"></i> Publications
 
-### Experiences and Perceptions of Engineering Students Towards Cross-Disciplinary Course Using Sentiment Analysis
+### Dey, K., Rahman, M. T., <b>Roy, A.</b>, Pyrialakou, V. D., Martinelli, D., Fraustino, J. D., Deskins, J., Rambo-Hernandez, K. E., & Plein, L. C. (2024). Experiences and perceptions of engineering students towards a cross-disciplinary course using sentiment analysis. <i>Journal of Civil Engineering Education, 150</i>(3). <https://doi.org/10.1061/jceecd.eieng-1976>
 
-*Journal of Civil Engineering Education*
+N/A
 
 N/A
 
 2024
 
-Dey, K., Rahman, M.T., <b>Roy, A.</b>, Pyrialakou, V.D., Martinelli, D., Fraustino, J.D., Deskins, J, Rambo-Hernandez, K.E., & Plein, L.C. <https://doi.org/10.1061/JCEECD.EIENG-1976>
+### Kale, U., Kooken, A., Yuan, J., & <b>Roy, A.</b> (2023). Teaching science via computational thinking? Enabling future science teachers’ access to computational thinking. <i>Contemporary Issues in Technology and Teacher Education, 23</i>(3). https://citejournal.org/volume-23/issue-3-23/science/teaching-science-via-computational-thinking-enabling-future-science-teachers-access-to-computational-thinking
 
-### Teaching science via computational thinking? Enabling future science teachers’ access to computational thinking.
-
-*Contemporary Issues in Technology and Teacher Education*
+N/A
 
 N/A
 
 2023
 
-Kale U., Kooken, A., Yuan, J., & <b>Roy, A.</b> <https://citejournal.org/volume-23/issue-3-23/science/teaching-science-via-computational-thinking-enabling-future-science-teachers-access-to-computational-thinking>
-
-### Program evaluation standards for utility facilitate stakeholder internalization of evaluative thinking in the West Virginia Clinical Translational Science Institute.
-
-*Journal of Multidisciplinary Evaluation*
+### Curtis, R., <b>Roy, A.</b>, Lewis, N., Dooty, E. N., & Mikalik, T. (2023). Program evaluation standards for utility facilitate stakeholder internalization of evaluative thinking in the West Virginia Clinical Translational Science Institute. <i>Journal of MultiDisciplinary Evaluation, 19</i>(43), 49–65. https://doi.org/10.56645/jmde.v19i43.831
 
 N/A
 
-2023
+N/A
 
-Curtis, R., <b>Roy, A.</b>, Lewis, N., Dooty, E. N., & Mikalik, T.
-<https://journals.sfu.ca/jmde/index.php/jmde_1/article/view/831>
+N/A
 
-### Thinking processes in code.org: A relational analysis approach to computational thinking computer science education.
+### Kale, U., Yuan, J., & <b>Roy, A.</b> (2022). Thinking processes in Code.org: A relational analysis approach to computational thinking. <i>Computer Science Education, 33</i>(4), 545–566. https://doi.org/10.1080/08993408.2022.2145549
 
-*Computer Science Education*
+N/A
 
 N/A
 
 2022
 
-Kale, U., Yuan, J., & <b>Roy, A.</b> <https://doi.org/10.1080/08993408.2022.2145549>
+### <b>Roy, A.</b>, & Rambo-Hernandez, K. E. (2021). There’s so much to do and not enough time to do it! A case for sentiment analysis to derive meaning from open text using student reflections of engineering activities. <i>American Journal of Evaluation, 42</i>(4), 559–576. https://doi.org/10.1177/1098214020962576
 
-### There’s so much to do and not enough time to do it! A case for sentiment analysis to derive meaning from open text using student reflections of engineering activities.
-
-*American Journal of Evaluation, 42* (4), 559–576.
+N/A
 
 N/A
 
 2021
 
-<b>Roy, A.</b>, & Rambo-Hernandez, K.E. <https://doi.org/10.1177/1098214020962576>
+### Kale, U., <b>Roy, A.</b>, & Yuan, J. (2020). To design or to integrate? Instructional design versus technology integration in developing learning interventions. <i>Educational Technology Research and Development, 68</i>(2473–2504). https://doi.org/10.1007/s11423-020-09771-8
 
-### To design or to integrate? Instructional design versus technology integration in developing learning interventions.
-
-*Education Tech Research Dev 68*, 2473–2504.
+N/A
 
 N/A
 
 2020
 
-Kale, U., <b>Roy, A.</b> & Yuan, J. <https://doi.org/10.1007/s11423-020-09771-8>
-
-### Using interactive theater to promote inclusive behaviors in teams for first-year engineering students: A sustainable approach.
-
-*Development of A Holistic Cross-Disciplinary Project Course Experience as a Research Platform for the Professional Formation of Engineers.*
+### Rambo-Hernandez, K. E., <b>Roy, A.</b>, Morris, M. L., Hensel, R. A. M., Schwartz, J. C., Atadero, R. A., & Paguyo, C. (2018, April). Using interactive theater to promote inclusive behaviors in teams for first-year engineering students: A sustainable approach. Paper presented at the 2018 CoNECD - The Collaborative Network for Engineering and Computing Diversity Conference, Crystal City, Virginia. https://doi.org/10.18260/1-2–29592
 
 N/A
-
-2020
-
-Dey, K.C., & Rahman, M.T., & Pyrialakou, V.D., & Martinelli, D., & Rambo-Hernandez, K.E., & Fraustino, J.D., & Deskins, J., & Plein, L.C., & <b>Roy, A.R.</b> <https://peer.asee.org/29592>
-
-### General chemistry student attitudes and success with use of online homework: Traditional-Responsive versus Adaptive-Responsive.
-
-*Journal of Chemical Education, 95* (5), 691-699.
 
 N/A
 
 2018
 
-Richard-Babb, M., Curtis, R., Ratcliff, B., <b>Roy, A.R.</b>, & Mikalik, T. <https://doi.org/10.1021/acs.jchemed.7b00829>
-
-### To go virtual or not to go virtual, that is the question: A comparative study of face-to-face versus virtual laboratories in a physical science course.
-
-*Journal of College Science Teaching, 48* (2), 59-67.
+### Richards-Babb, M., Curtis, R., Ratcliff, B., <b>Roy, A.</b>, & Mikalik, T. (2018). General chemistry student attitudes and success with use of online homework: Traditional-responsive versus adaptive-responsive. <i>Journal of Chemical Education, 95</i>(5), 691–699. https://doi.org/10.1021/acs.jchemed.7b00829
 
 N/A
 
-2018
+N/A
 
-Miller, T.A., Carver, J.S., & <b>Roy, A.R.</b> [https://www.jstor.org/stable/26616271](https://doi.org/10.1021/acs.jchemed.7b00829)
+N/A
 
-### Reasoning-and-proving in algebra: The case of two reform-oriented U.S. textbooks.
+### Miller, T. A., Carver, J. S., & <b>Roy, A.</b> (2018). To go virtual or not to go virtual, that is the question: A comparative study of face-to-face versus virtual laboratories in a physical science course. <i>Journal of College Science Teaching, 48</i>(2), 59–67. https://www.jstor.org/stable/26616271
 
-*International Journal of Educational Research 64.*, 92-106
+N/A
+
+N/A
+
+N/A
+
+### Davis, J. D., Smith, D. O., <b>Roy, A. R.</b>, & Bilgic, Y. K. (2014). Reasoning-and-proving in algebra: The case of two reform-oriented U.S. textbooks. <i>International Journal of Educational Research, 64</i>, 92–106. doi:10.1016/j.ijer.2013.06.012
+
+N/A
 
 N/A
 
 2014
 
-Davis, J.D., Smith, D.O., <b>Roy, A.R.</b>, & Bilgic, Y. K. [https://doi.org/10.1016/j.ijer.2013.06.012](https://doi.org/10.1021/acs.jchemed.7b00829)
+### <b>Roy, A. R.</b>, Hobson, K. A., & Coryn, C. L. S. (2012). What’s in a Scriven number? <i>Journal of MultiDisciplinary Evaluation, 8</i>(19), 41–45. https://doi.org/10.56645/jmde.v8i19.372
 
-### What’s in a Scriven number?
-
-*Journal of MultiDisciplinary Evaluation, 8* (19), 41-45.
+N/A
 
 N/A
 
 2012
 
-<b>Roy, A.R.</b>, Hobson, K.A., & Coryn, C.L.S. [https://doi.org/10.56645/jmde.v8i19.372](https://doi.org/10.1021/acs.jchemed.7b00829)
-
 ## <i class="fa-solid fa-book" data-fa-mask="fa-solid fa-comment" style="background:white"></i> Book Chapters
 
-### Social network analysis: Finding meaning in connections.
-
-*Nova Science Publishers, Inc.*
+### <b>Roy, A. R.</b> (2017). Social network analysis: Finding meaning in connections. In T. C. Ahern (Ed.), <i>Social media</i>. Hauppauge, NY: Nova Science.
 
 N/A
 
-2014
+N/A
 
-<b>Roy, A.R.</b> 978-1-53612-734-8
+2017
 
 ## <i class="fa-solid fa-file-text-o" data-fa-mask="fa-solid fa-comment" style="background:white"></i> Grants
 
@@ -391,7 +366,7 @@ Current - 2022
 
 - Authored quarterly reports as well as internal and external annual evaluation documents, disseminated both in print and through interactive formats developed in Rmarkdown.
 - Crafted over 100 data visualizations and developed over four Shiny applications for internal and public data exploration, including research collaborations using social network analysis, grant activities pulled from the NCBI API crossed with WVCTSI grant numbers, and dissemination of result and changes in practice within and beyond West Virginia.
-- Designed and disseminated tailored Qualtrics surveys enhanced with HTML, CSS, and JavaScript, reaching an audience of over 5,000 individuals.
+- Designed and disseminated tailored Qualtrics surveys customized with HTML, CSS, and JavaScript, reaching an audience of over 5,000 individuals.
 - Led local and multi-site, multi-cluster evaluation studies for five core medical research and community engagement units.
 - Mentored six graduate students in social data science, steering them through successful research endeavors.
 - Published and presented evaluation findings in academic journals and conferences.
@@ -960,4 +935,4 @@ N/A
 
 Made with    <i style="color:#3365B3; margin-left: -7px; margin-right: -5px;" class="fab fa-r-project"></i>   : <a href="https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-html.Rmd" target="&#39;_blank">Source code</a>
 
-Last updated on January 07, 2025
+Last updated on January 22, 2025

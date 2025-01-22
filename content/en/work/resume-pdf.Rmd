@@ -147,13 +147,13 @@ Indiana University
 2025 - 2024
 
 ::: concise
-- <b>Applying Advanced Research Methods</b>. Conducting quantitative, qualitative, and mixed-methods studies to address complex academic and policy-related questions.
-- <b>Conducting Data Analysis</b>. Applying statistical, machine learning, and qualitative analysis tools to interpret data, generating insights that advance knowledge and inform evaluation outcomes.
-- <b>Creating Accessible Data Visualizations</b>. Designing clear visualizations with careful consideration of diverse abilities, including different forms of color blindness, to effectively communicate research findings to a wide range of audiences.
-- <b>Developing Competitive Research Proposals</b>. Leading the creation of grant proposals by defining research objectives, methodologies, and timelines to secure external funding.
-- <b>Engaging in Stakeholder Collaboration</b>. Partnering with external collaborators through a participatory approach to connect research findings with practical applications and inform policy development.
-- <b>Leading Research and Evaluation Projects</b>. Directing research and evaluation projects, meeting project goals, budgets, and timelines.
-- <b>Presenting Findings</b>. Developing and delivering presentations of findings, methodologies, and implications to academic and interdisciplinary audiences.
+- <b>Applied Advanced Research Methods</b>. Utilized statistical, machine learning, and qualitative analysis tools to interpret data, generated insights that advanced knowledge and informed evaluation outcomes.
+- <b>Communicated Results</b>. Developed and presented findings, methodologies, and implications to stakeholders and other interdisciplinary groups.
+- <b>Conducted Data Analysis</b>. Applied statistical, machine learning, and qualitative analysis tools to interpret data, generated findings that advanced knowledge and supported evaluation outcomes.
+- <b>Created Accessible Data Visualizations</b>. Designed accessible visualizations with thoughtful consideration of diverse abilities, including colorblindness, to effectively communicate research findings to diverse groups.
+- <b>Developing Competitive Research Proposals</b>. Authored grant proposals by establishing research objectives, designing methodologies, and outlining timelines to secure external funding.
+- <b>Engaged in Stakeholder Collaboration</b>. Partnered with external collaborators using a participatory approach to align research findings with practical applications and guided policy development.
+- <b>Led Research and Evaluation Projects</b>. Directed research and evaluation projects, met project goals, managed budgets, and adhered to timelines.
 :::
 
 ### <i>Assistant Professor</i>
@@ -165,14 +165,14 @@ West Virginia University
 2023 - 2016
 
 ::: concise
-- <b>Authored Peer-Reviewed Publications</b>. Published over 10 articles in high-impact journals, contributing to advancements in program evaluation, research methodologies, and applied social science.
-- <b>Developed Automated Systems for Data Collection and Analysis</b>. Established automated systems to streamline data collection, cleaning, and analysis processes, improving efficiency and accuracy across multiple research projects.
-- <b>Designed and Launched Innovative Surveys</b>. Created and implemented interactive, web-based surveys using HTML, CSS, and JavaScript on the Qualtrics platform, generating over 7,000 responses across multiple projects and studies.
-- <b>Directed and Participated in Evaluations</b>. Contributed to 12 program evaluations, including serving as the lead evaluator on multiple federally funded grants.
-- <b>Extracted, Analyzed, and Visualized Data</b>. Processed and visualized data from internal research and remote sources, creating over 20 interactive visualizations using RMarkdown and Shiny for academic and stakeholder dissemination.
-- <b>Mentored Graduate Students</b>. Guided three Master’s students and one PhD student through the successful completion of their research projects, advancing their professional development.
-- <b>Presented at National Academic Conferences</b>. Delivered presentations at over 20 academic conferences, with a majority being national-level events, sharing research findings with a broad academic audience.
-- <b>Taught Research and Methods-Based Courses</b>. Instructed over 500 students in evaluation, research methods, measurement, and survey design, focusing on practical, analytical skills in data science.
+- <b>Authored Peer-Reviewed Publications</b>. Published over 10 articles in high-impact journals, advanced knowledge in program evaluation, research methodologies, and applied social sciences.
+- <b>Developed Automated Systems for Data Collection and Analysis</b>. Established automated systems for data collection, cleaning, and analysis, improved efficiency and accuracy across multiple research projects.
+- <b>Designed and Administered Surveys</b>. Created and deployed interactive web-based surveys using HTML, CSS, and JavaScript on the Qualtrics platform, generating over 7,000 responses for various projects and studies.
+- <b>Extracted, Analyzed, and Visualized Data</b>. Processed and visualized data from internal research and remote sources, produced over 20 interactive visualizations using RMarkdown and Shiny for dissemination to stakeholder and other interdisciplinary groups.
+- <b>Led and Participated in Evaluations</b>. Contributed to 12 program evaluations and served as lead evaluator on several federally funded grants.
+- <b>Mentored Graduate Students</b>. Advised three Master’s students and one PhD student, guided them through successful degree completion, and supported their professional growth.
+- <b>Presented at National Conferences</b>. Shared research findings at over 20 conferences, with the majority at national-level events, reaching diverse groups.
+- <b>Taught Research and Methods-Based Courses</b>. Instructed over 500 students in evaluation, research methods, measurement, and survey design, emphasized practical and analytical skills in data science.
 :::
 
 ### <i>Data Analyst</i>
@@ -187,8 +187,8 @@ University of Kansas
 - <b>Analyzed the Impact of Student Services</b>. Conducted qualitative and quantitative analysis to assess the effect of advising and engagement initiatives on student retention and graduation outcomes.
 - <b>Built Web Applications and Dashboards</b>. Automated data extraction and visualization using R and Tableau, improving access and reporting for student-level data from the university’s Oracle server.
 - <b>Conducted Research to Improve Retention</b>. Developed statistical models that identified gaps in student retention strategies, contributing to a 3% to 5% increase in retention rates for at-risk groups.
-- <b>Designed and Executed Questionnaires</b>. Developed and implemented surveys for approximately 300 students and staff, achieving response rates between 47% and 91% across various projects.
-- <b>Developed an Evaluation Model for Advising</b>. Created a comprehensive evaluation model by integrating a Delphi study, mixed-methods research, and survival analysis of student retention data.
+- <b>Designed and Executed Questionnaires</b>. Created and implemented surveys for approximately 300 students and staff, achieving response rates between 47% and 91% across various projects.
+- <b>Developed an Evaluation Model for Advising</b>. Constructed a comprehensive evaluation model by integrating a Delphi study, mixed-methods research, and survival analysis of student retention data.
 - <b>Led Tailored Evaluations</b>. Conducted needs assessments and led participatory evaluations for non-academic units, focusing on data-driven insights and stakeholder empowerment.
 :::
 

@@ -1,0 +1,200 @@
+---
+title: "Abhik Ranjan Roy"
+author: Abhik Ranjan Roy
+date: "`r Sys.Date()`"
+output:
+  pagedown::html_resume:
+    self_contained: true
+    paged-footnotes: true
+    mathjax: "https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    css: ["updatedaes.css", "resume"]
+weight: NULL
+---
+
+```{css, echo=FALSE}
+.pagedjs_page:not(:first-of-type) {
+  --sidebar-width: 0rem;
+  --sidebar-background-color: #ffffff;
+  --main-width: calc(var(--content-width) - var(--sidebar-width));
+  --decorator-horizontal-margin: 0.2in;
+}
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(magrittr)
+library(tidyverse)
+library(fontawesome)
+```
+
+
+Aside
+================================================================================
+
+
+Contact Information {#contact}
+--------------------------------------------------------------------------------
+
+- `r fontawesome::fa("fas fa-at", fill = "#e7c9a9")`&nbsp;&nbsp;&nbsp;&nbsp;abhikrroy@protonmail.com
+- `r fontawesome::fa("fab fa-github", fill = "#4183c4")`&nbsp;&nbsp;&nbsp;&nbsp;[github.com/drabhikroy](https://github.com/drabhikroy)
+- `r fontawesome::fa("far fa-window-maximize", fill = "#5cb2b8")`&nbsp;&nbsp;&nbsp;&nbsp;[abhikroyphd.com](https://abhikroyphd.com)
+- `r fontawesome::fa("fas fa-mobile", fill = "#c4becf", margin_left = "2.1px")` &nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:+1 812-727-7774">+1 812-727-7774</a>
+- `r fontawesome::fa("fab fa-orcid", fill = "#aecc54")`&nbsp;&nbsp;&nbsp;&nbsp;[0000-0002-7085-8964](https://orcid.org/0000-0002-7085-8964)
+
+
+Expertise {#skills}
+--------------------------------------------------------------------------------
+
+- <b>Data visualization</b>
+
+- <b>Markup using</b> $\LaTeX$
+
+- <b>Program evaluations integrating both traditional and machine learning methods</b>
+
+- <b>Quantitative, qualitative, and mixed method studies</b>
+
+- <i style="color:#3365B3; margin-left: -7px; margin-right: -5px;" class="fab fa-r-project fa-lg"></i> <b>programming</b>
+
+- <b>Social network analysis</b>
+
+- <b>Survey design, administration, and research</b>
+
+- <b>Statistical modeling and analysis</b>
+
+- <b>Text analytics</b>
+
+- <b>Web application development and static/dynamic reporting using</b>
+<div class="holder">
+
+<div class="left">
+<img src='img/blogdown-logo.png' alt='Blogdown hex' width='70%'>
+</div>
+
+<div class="middle">
+<img src='img/rmarkdown.png' alt='Rmarkdown hex' width='70%'>
+</div>
+
+<div class="right">
+<img src='img/shiny-logo.png' alt='Shiny hex' width='70%'>
+</div>
+</div>
+
+Main
+================================================================================
+
+Dr. Abhik Roy {#title}
+--------------------------------------------------------------------------------
+
+<i class="fa-solid fa-file-text-o" data-fa-mask="fa-solid fa-comment" style="background:white"></i> Publications {data-icon=NULL}
+--------------------------------------------------------------------------------
+
+### Dey, K., Rahman, M. T., <b>Roy, A.</b>, Pyrialakou, V. D., Martinelli, D., Fraustino, J. D., Deskins, J., Rambo-Hernandez, K. E., \& Plein, L. C. (2024). Experiences and perceptions of engineering students towards a cross-disciplinary course using sentiment analysis. <i>Journal of Civil Engineering Education, 150</i>(3). [https://doi.org/10.1061/jceecd.eieng-1976](https://doi.org/10.1061/jceecd.eieng-1976)
+
+N/A
+
+N/A
+
+2024
+
+### Kale, U., Kooken, A., Yuan, J., & <b>Roy, A.</b> (2023). Teaching science via computational thinking? Enabling future science teachers’ access to computational thinking. <i>Contemporary Issues in Technology and Teacher Education, 23</i>(3). https://citejournal.org/volume-23/issue-3-23/science/teaching-science-via-computational-thinking-enabling-future-science-teachers-access-to-computational-thinking
+
+N/A
+
+N/A
+
+2023
+
+### Curtis, R., <b>Roy, A.</b>, Lewis, N., Dooty, E. N., & Mikalik, T. (2023). Program evaluation standards for utility facilitate stakeholder internalization of evaluative thinking in the West Virginia Clinical Translational Science Institute. <i>Journal of MultiDisciplinary Evaluation, 19</i>(43), 49–65. https://doi.org/10.56645/jmde.v19i43.831
+
+N/A
+
+N/A
+
+N/A
+
+### Kale, U., Yuan, J., & <b>Roy, A.</b> (2022). Thinking processes in Code.org: A relational analysis approach to computational thinking. <i>Computer Science Education, 33</i>(4), 545–566. https://doi.org/10.1080/08993408.2022.2145549
+
+N/A
+
+N/A
+
+2022
+
+### <b>Roy, A.</b>, & Rambo-Hernandez, K. E. (2021). There’s so much to do and not enough time to do it! A case for sentiment analysis to derive meaning from open text using student reflections of engineering activities. <i>American Journal of Evaluation, 42</i>(4), 559–576. https://doi.org/10.1177/1098214020962576
+
+N/A
+
+N/A
+
+2021
+
+### Kale, U., <b>Roy, A.</b>, & Yuan, J. (2020). To design or to integrate? Instructional design versus technology integration in developing learning interventions. <i>Educational Technology Research and Development, 68</i>(2473–2504). https://doi.org/10.1007/s11423-020-09771-8
+
+N/A
+
+N/A
+
+2020
+
+### Rambo-Hernandez, K. E., <b>Roy, A.</b>, Morris, M. L., Hensel, R. A. M., Schwartz, J. C., Atadero, R. A., & Paguyo, C. (2018, April). Using interactive theater to promote inclusive behaviors in teams for first-year engineering students: A sustainable approach. Paper presented at the 2018 CoNECD - The Collaborative Network for Engineering and Computing Diversity Conference, Crystal City, Virginia. https://doi.org/10.18260/1-2–29592
+
+N/A
+
+N/A
+
+2018
+
+### Richards-Babb, M., Curtis, R., Ratcliff, B., <b>Roy, A.</b>, & Mikalik, T. (2018). General chemistry student attitudes and success with use of online homework: Traditional-responsive versus adaptive-responsive. <i>Journal of Chemical Education, 95</i>(5), 691–699. https://doi.org/10.1021/acs.jchemed.7b00829
+
+N/A
+
+N/A
+
+N/A
+
+
+### Miller, T. A., Carver, J. S., & <b>Roy, A.</b> (2018). To go virtual or not to go virtual, that is the question: A comparative study of face-to-face versus virtual laboratories in a physical science course. <i>Journal of College Science Teaching, 48</i>(2), 59–67. https://www.jstor.org/stable/26616271
+
+N/A
+
+N/A
+
+N/A
+
+
+### Davis, J. D., Smith, D. O., <b>Roy, A. R.</b>, & Bilgic, Y. K. (2014). Reasoning-and-proving in algebra: The case of two reform-oriented U.S. textbooks. <i>International Journal of Educational Research, 64</i>, 92–106. doi:10.1016/j.ijer.2013.06.012
+
+N/A
+
+N/A
+
+2014
+
+
+### <b>Roy, A. R.</b>, Hobson, K. A., & Coryn, C. L. S. (2012). What’s in a Scriven number? <i>Journal of MultiDisciplinary Evaluation, 8</i>(19), 41–45. https://doi.org/10.56645/jmde.v8i19.372
+
+N/A
+
+N/A
+
+2012
+
+
+<i class="fa-solid fa-book" data-fa-mask="fa-solid fa-comment" style="background:white"></i> Book Chapters {data-icon=NULL}
+--------------------------------------------------------------------------------
+
+### <b>Roy, A. R.</b> (2017). Social network analysis: Finding meaning in connections. In T. C. Ahern (Ed.), <i>Social media</i>. Hauppauge, NY: Nova Science.
+
+N/A
+
+N/A
+
+2017
+
+
+Disclaimer {#disclaimer style="width: calc(var(--content-width) - var(--sidebar-width)); padding-left: var(--sidebar-horizontal-padding);"}
+--------------------------------------------------------------------------------
+
+Made with &nbsp;&nbsp;&nbsp;<i style="color:#3365B3; margin-left: -7px; margin-right: -5px;" class="fab fa-r-project"></i>&nbsp;&nbsp;&nbsp;: [Source code](https://github.com/drabhikroy/Courses/blob/iam/content/en/work/resume-html.Rmd){target='_blank}
+
+Last updated on `r format(Sys.Date(), format="%B %d, %Y")`
